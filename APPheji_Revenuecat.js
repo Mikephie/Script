@@ -10,15 +10,15 @@ Revenuecat解锁合集，已解锁APP及下载地址请见说明：https://githu
 hostname = api.revenuecat.com
 
 */
-const guding = {};
-const guding6 = JSON.parse(typeof $response != "undefined" && $response.body || null);
+const mikephie = {};
+const mikephie76 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 if (typeof $response == "undefined") {
   delete $request.headers["x-revenuecat-etag"];
   delete $request.headers["X-RevenueCat-ETag"];
-  guding.headers = $request.headers;
-} else if (guding6 && guding6.subscriber) {
-  guding6.subscriber.subscriptions = guding6.subscriber.subscriptions || {};
-  guding6.subscriber.entitlements = guding6.subscriber.entitlements || {};
+  mikephie.headers = $request.headers;
+} else if (mikephie76 && mikephie76.subscriber) {
+  mikephie76.subscriber.subscriptions = mikephie76.subscriber.subscriptions || {};
+  mikephie76.subscriber.entitlements = mikephie76.subscriber.entitlements || {};
   var headers = {};
   for (var key in $request.headers) {
   const reg = /^[a-z]+$/;
@@ -150,13 +150,13 @@ if (typeof $response == "undefined") {
   for (const i in UAMappings) {
     if (new RegExp(`^${i}`, 'i').test(UA)) {
       const { name, id } = UAMappings[i];
-      guding6.subscriber.subscriptions = {};
-      guding6.subscriber.subscriptions[id] = data;
-      guding6.subscriber.entitlements[name] = JSON.parse(JSON.stringify(data));
-      guding6.subscriber.entitlements[name].product_identifier = id;
+      mikephie76.subscriber.subscriptions = {};
+      mikephie76.subscriber.subscriptions[id] = data;
+      mikephie76.subscriber.entitlements[name] = JSON.parse(JSON.stringify(data));
+      mikephie76.subscriber.entitlements[name].product_identifier = id;
       break;
     }
   }
-  guding.body = JSON.stringify(guding6);
+  mikephie.body = JSON.stringify(mikephie76);
 }
-$done(guding);
+$done(mikephie);
