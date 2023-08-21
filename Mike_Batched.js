@@ -8,7 +8,7 @@
 
 [rewrite_local]
 
-^https:\/\/api\.adapty\.io\/api\/.+\/sdk\/analytics\/profiles\/(.*?)\/ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Batched.js
+^https:\/\/api\.adapty\.io\/api\/.+\/sdk\/analytics\/profiles\/(.*?)\/ url script-response-body https://github.com/Mikephie/Script/blob/main/Mike_Batched.js
 
 [mitm]
 
@@ -17,9 +17,9 @@ hostname = api.adapty.io
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var mikephie = JSON.parse($response.body);
 
-chxm1023.data = {
+mikephie.data = {
     "type" : "adapty_analytics_profile",
     "id" : "150ffc20-2126-43bb-ad24-c62c881e4c35",
     "attributes" : {
@@ -82,4 +82,4 @@ chxm1023.data = {
   }
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(mikephie)});
