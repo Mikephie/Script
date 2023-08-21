@@ -2,28 +2,27 @@
 
 项目名称：iTranslate 翻译
 下载地址：https://t.cn/A6p2IR1g
-脚本作者：chxm1023
-电报频道：https://t.me/chxm1023
+脚本作者：mikephie
+电报频道：https://t.me/mikephie
 使用声明：⚠️仅供参考，🈲转载与售卖！
 使用说明：进入App出现付费按[恢复购买]
 
 **************************************
 
 [rewrite_local]
-^https?:\/\/ssl-api\.itranslateapp\.com\/accounts\/.+\/(subscriptions\/verify|marketing\/consent\/status) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/itranslate.js
-
+^https?:\/\/ssl-api\.itranslateapp\.com\/accounts\/.+\/(subscriptions\/verify|marketing\/consent\/status) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_iTranslate.js
 [mitm]
 hostname = ssl-api.itranslateapp.com
 
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var mikephie = JSON.parse($response.body);
 const vip = '/subscriptions/verify';
 const active = '/marketing/consent/status';
 
 if ($request.url.indexOf(vip) != -1){
-  chxm1023.licenses = [
+  mikephie.licenses = [
     {
       "product_id" : "com.itranslate.pro.yearly",
       "bundle_id" : "com.outerspaceapps.itranslate",
@@ -36,9 +35,9 @@ if ($request.url.indexOf(vip) != -1){
 }
 
 if ($request.url.indexOf(active) != -1){
-  chxm1023 ={
+  mikephie ={
   "is_active" : true
   };
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(mikephie)});
