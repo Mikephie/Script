@@ -8,7 +8,7 @@
 
 [rewrite_local]
 
-https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Pandora.js
+https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_Pandora.js
 
 [mitm]
 
@@ -17,9 +17,9 @@ hostname = buy.itunes.apple.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var mikephie = JSON.parse($response.body);
 
-    chxm1023 = {
+    mikephie = {
   "receipt" : {
     "receipt_type" : "Production",
     "app_item_id" : 1470560916,
@@ -46,4 +46,4 @@ var chxm1023 = JSON.parse($response.body);
   "environment" : "Production"
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(mikephie)});
