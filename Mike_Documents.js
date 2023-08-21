@@ -8,7 +8,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh url script-request-body Documents.js
+^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_Documents.js
 
 [mitm]
 hostname = license.pdfexpert.com
