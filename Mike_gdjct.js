@@ -14,7 +14,7 @@
 
 ^https:\/\/appss\.rhinoxlab\.com\/%0Aapp\/account\/getAccountInfo
 
- https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/zjzgqb.js
+https://raw.githubusercontent.com/Mikephie/Script/main/Mike_gdjct.js
 
 [mitm]
 
