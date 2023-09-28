@@ -12,9 +12,7 @@
 
 [rewrite_local]
 
-^https:\/\/appss\.rhinoxlab\.com\/app\/account\/getAccountInfo url script-response-body
-
-https://raw.githubusercontent.com/Mikephie/Script/main/Mike_gdjct.js
+^https:\/\/appss\.rhinoxlab\.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_gdjct.js
 
 [mitm]
 
