@@ -11,7 +11,7 @@
 
 [rewrite_local]
 
-https://ea.blademaster.club/api/log url script-response-body cycc.js
+^https:\/\/ea\.blademaster\.club\/api\/log url script-response-body cycc.js
 
 [mitm] 
 
