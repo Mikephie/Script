@@ -1,12 +1,3 @@
-/******************************
-
-脚本名称:   cycc
-下载地址：商店
-脚本作者：Mikephie
-更新时间：2023年10月8日 18:40
-问题反馈：TG
-使用声明：⚠️此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
-
 */*************************************
 
 项目名称：AXS-去广告
@@ -22,8 +13,8 @@
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/InfoPage url reject dict
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight url reject-200
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/highlight url reject-200
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/555ad.js
-^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/InfoPage url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/555ad.js
+^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_axs.js
+^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/InfoPage url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_axs.js
 
 [mitm]
 hostname = m-station.axs.com.sg, m-station2.axs.com.sg
