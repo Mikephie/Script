@@ -10,9 +10,9 @@
 
 [rewrite_local]
 
+^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight url reject-200
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage url reject-dict
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/InfoPage url reject-dict
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight url reject-200
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/highlight url reject-200
 
 [mitm]
