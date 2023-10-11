@@ -12,7 +12,7 @@
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage url reject dict
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/InfoPage url reject dict
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight url reject-200
-^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/highlight url reject-200
+^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/highlight url reject-200 url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_axs.js
 
 [mitm]
 hostname = m-station.axs.com.sg, m-station2.axs.com.sg
