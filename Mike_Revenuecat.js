@@ -148,7 +148,7 @@ else if(ua.indexOf('HTTPBot') != -1) {//httpbot
 else if(ua.indexOf('audiomack') != -1) {//Audiomack
 	obj['subscriber']['entitlements']['Premium1']=ddgksf2021;
 }
-else if(ua.indexOf('server_bee') != -1) {//server_bee
+#else if(ua.indexOf('server_bee') != -1) {//server_bee
 	obj['subscriber']['entitlements']['Pro']=mikephie;
 }
 else if(ua.indexOf('simple-') != -1) {//NotBoring
