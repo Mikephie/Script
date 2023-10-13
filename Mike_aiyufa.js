@@ -9,7 +9,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/revenuecat-cn\.fastools\.cn\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_aiyufa
+^https?:\/\/revenuecat-cn\.fastools\.cn\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_aiyufa.js
 ^https?:\/\/revenuecat-cn\.fastools\.cn\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/Mike_aiyufa.js 
 
 [mitm]
