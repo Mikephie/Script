@@ -149,7 +149,7 @@ else if(ua.indexOf('audiomack') != -1) {//Audiomack
 	obj['subscriber']['entitlements']['Premium1']=ddgksf2021;
 }
 else if(ua.indexOf('server_bee') != -1) {//server_bee
-	obj['subscriber']['entitlements']['Pro']=ddgksf2021;
+	obj['subscriber']['entitlements']['Pro']=mikephie;
 }
 else if(ua.indexOf('simple-') != -1) {//NotBoring
 	obj['subscriber']['entitlements']['patron']=ddgksf2021;
