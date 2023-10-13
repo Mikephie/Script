@@ -21,27 +21,41 @@ hostname = revenuecat-cn.fastools.cn
 var mikephie = JSON.parse($response.body);
 
     objc = {
-  "request_date_ms" : 1697112590937,
-  "request_date" : "2023-10-12T12:09:50Z",
+  "request_date_ms" : 1697167014903,
+  "request_date" : "2023-10-13T03:16:54Z",
   "subscriber" : {
     "non_subscriptions" : {
 
     },
-    "first_seen" : "2023-10-12T12:09:21Z",
-    "original_application_version" : null,
+    "first_seen" : "2023-10-13T01:26:39Z",
+    "original_application_version" : "1",
     "other_purchases" : {
 
     },
     "management_url" : null,
-    "subscriptions" : {igrammar_199_1y_v1
-
+    "subscriptions" : {
+      "igrammar_199_1y_v1" : {
+        "store" : "app_store",
+        "purchase_date" : "2023-06-06T06:06:06Z",
+        "ownership_type" : "PURCHASED",
+        "original_purchase_date" : "2023-06-06T06:06:06Z",
+        "expires_date" : "6666-06-06T06:06:06Z"
+      }
     },
-    "entitlements" : {Pro
-
+    "entitlements" : {
+      "pro" : {
+        "store" : "app_store",
+        "purchase_date" : "2023-06-06T06:06:06Z",
+        "ownership_type" : "PURCHASED",
+        "original_purchase_date" : "2023-06-06T06:06:06Z",
+        "platform_product_identifier" : "igrammar_199_1y_v1",
+          "identifier" : "$rc_annual",
+        "expires_date" : "6666-06-06T06:06:06Z"
+      }
     },
-    "original_purchase_date" : null,
-    "original_app_user_id" : "$RCAnonymousID:f670374782da4d8ba2b9edb07cda243c",
-    "last_seen" : "2023-10-12T12:09:21Z"
+    "original_purchase_date" : "2023-10-13T01:23:38Z",
+    "original_app_user_id" : "$RCAnonymousID: f670374782da4d8ba2b9edb07cda243c",
+    "last_seen" : "2023-10-13T01:26:39Z"
   }
 }
 
