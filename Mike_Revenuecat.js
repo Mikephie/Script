@@ -108,7 +108,7 @@ else if(ua.indexOf('andyworks-calculator') != -1) {//计算器
 else if(ua.indexOf('vibes') != -1) {//vibes
 	obj['subscriber']['entitlements']['patron']=mikephie76;
 }
-else if(ua.indexOf('CountDuck') != -1) {//vibes
+else if(ua.indexOf('CountDuck') != -1) {//CountDuck
 	mikephie76['product_identifier']="Lifetime";
 	obj['subscriber']['entitlements']['premium']=mikephie76;
 	obj['subscriber']['subscriptions']['Lifetime']=mikephie;
@@ -116,7 +116,7 @@ else if(ua.indexOf('CountDuck') != -1) {//vibes
 else{
   obj['subscriber']['entitlements']['pro']=mikephie76;
 }
-else if(ua.indexOf('爱语法') != -1) {//vibes
+else if(ua.indexOf('爱语法') != -1) {//爱语法
 	mikephie76['product_identifier']="igrammar_199_1y_v1";
 	obj['subscriber']['entitlements']['pro']=mikephie76;
 	obj['subscriber']['subscriptions']['annual']=mikephie;
