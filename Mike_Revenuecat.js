@@ -14,7 +14,7 @@ https://raw.githubusercontent.com/Mikephie/Script/main/Mike_xxx.js
 [rewrite_local]
 
 # ～ RevenueCat@mikephie
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://raw.githubusercontent.com/Mikephie/Script/main/Mike_xxx.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://raw.githubusercontent.com/Mikephie/Script/main/Mike_Revenuecat.js
 ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ url request-header (\r\n)X-RevenueCat-ETag:.+(\r\n) request-header $1X-RevenueCat-ETag:$2
 
 [mitm] 
