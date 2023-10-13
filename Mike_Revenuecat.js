@@ -118,12 +118,12 @@ else{
 }
 else if(ua.indexOf('爱语法') != -1) {//vibes
 	mikephie76['product_identifier']="igrammar_199_1y_v1";
-	obj['subscriber']['entitlements']['premium']=mikephie76;
+	obj['subscriber']['entitlements']['pro']=mikephie76;
 	obj['subscriber']['subscriptions']['annual']=mikephie;
 }
 else{
-  obj['subscriber']['entitlements']['pro']=mikephie76;
-		obj['subscriber']['subscriptions']['igrammar_199_1y_v1']=mikephie;
+  obj['subscriber']['entitlements']['premium']=mikephie76;
+		obj['subscriber']['subscriptions']['annual']=mikephie;
 }
 
 $done({body: JSON.stringify(obj)});
