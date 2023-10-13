@@ -10,7 +10,7 @@
 > UpdateTime        2023-10-14
 > Suitable          自行观看“# > ”注释内容，解锁是暂时的，购买也不是永久的[订阅、跑路]
 > Attention         如需引用请注明出处，谢谢合作！
-> ScriptURL         https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
+> ScriptURL         https://raw.githubusercontent.com/Mikephie/Script/main/Mike_Revenuecat.js 
 
 # ========解锁列表======== #
 # > 01 白云天气
@@ -69,7 +69,7 @@ https://apps.apple.com/cn/app/id1549657742
 [rewrite_local]
 
 # ～ RevenueCat@ddgksf2013
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://raw.githubusercontent.com/Mikephie/Script/main/Mike_Revenuecat.js 
 ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ url request-header (\r\n)X-RevenueCat-ETag:.+(\r\n) request-header $1X-RevenueCat-ETag:$2
 
 [mitm]
