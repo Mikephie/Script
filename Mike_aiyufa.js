@@ -10,53 +10,38 @@
 
 [rewrite_local]
 
-^https?:\/\/revenuecat-cn\.fastools\.cn\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_aiyufa.js 
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_aiyufa.js 
 
 [mitm]
-hostname = revenuecat-cn.fastools.cn
+
+hostname= api.revenuecat.com
 
 *************************************/
 
 
 var mikephie = JSON.parse($response.body);
 
-    objc = {
-  "request_date_ms" : 1697167014903,
-  "request_date" : "2023-10-13T03:16:54Z",
-  "subscriber" : {
-    "non_subscriptions" : {
+    objc = const mikephie = {};
+const mikephie76 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 
-    },
-    "first_seen" : "2023-10-13T01:26:39Z",
-    "original_application_version" : "1",
-    "other_purchases" : {
+const name = "pro";
+const appid = "igrammar_199_1y_v1";
 
-    },
-    "management_url" : null,
-    "subscriptions" : {
-      "igrammar_199_1y_v1" : {
-        "store" : "app_store",
-        "purchase_date" : "2023-06-06T06:06:06Z",
-        "ownership_type" : "PURCHASED",
-        "original_purchase_date" : "2023-06-06T06:06:06Z",
-        "expires_date" : "6666-06-06T06:06:06Z"
-      }
-    },
-    "entitlements" : {
-      "pro" : {
-        "store" : "app_store",
-        "purchase_date" : "2023-06-06T06:06:06Z",
-        "ownership_type" : "PURCHASED",
-        "original_purchase_date" : "2023-06-06T06:06:06Z",
-        "platform_product_identifier" : "igrammar_199_1y_v1",
-          "identifier" : "$rc_annual",
-        "expires_date" : "6666-06-06T06:06:06Z"
-      }
-    },
-    "original_purchase_date" : "2023-10-13T01:23:38Z",
-    "original_app_user_id" : "$RCAnonymousID: f670374782da4d8ba2b9edb07cda243c",
-    "last_seen" : "2023-10-13T01:26:39Z"
-  }
+if (typeof $response == "undefined") {
+  delete $request.headers["x-revenuecat-etag"];
+  delete $request.headers["X-RevenueCat-ETag"];
+  mikephie.headers = $request.headers;
+} else if (mikephie76 && mikephie76.subscriber) {
+  mikephie76.subscriber.subscriptions = mikephie76.subscriber.subscriptions || {};
+  mikephie76.subscriber.entitlements = mikephie76.subscriber.entitlements || {};
+  const data = {
+	"product_identifier": (appid),
+	"expires_date": "2088-08-08T08:08:08Z",
+	"purchase_date": "2023-08-08T08:08:08Z"
+	};
+  mikephie76.subscriber.entitlements[(name)] = (data);
+  mikephie76.subscriber.subscriptions[(appid)] = {  ...data,	"Author": "mikephie",	"Telegram": "https://t.me/mikephie",	"warning": "仅供学习，禁止转载或售卖",	"original_purchase_date": "2023-08-08T08:08:08Z",	"store": "app_store",	"ownership_type": "PURCHASED"};
+  mikephie.body = JSON.stringify(mikephie76);
 }
 
 $done({body : JSON.stringify(mikephie)});
