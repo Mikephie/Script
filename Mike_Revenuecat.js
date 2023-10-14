@@ -174,7 +174,7 @@ else if(ua.indexOf('IPTVUltra') != -1) {//vibes
 else{
   obj['subscriber']['entitlements']['pro']=ddgksf2021;
 }
-else if(ua.indexOf('$CFBundleDisplayName') != -1) {//爱语法
+else if(ua.indexOf('namme') != -1) {//爱语法
 	obj['subscriber']['entitlements']['premium']=ddgksf2021;
 }
 else{
