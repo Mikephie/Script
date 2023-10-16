@@ -1,16 +1,11 @@
 /***********************************
 
 > ScriptName        RevenueCat多合一脚本[墨鱼版]
-> Author            @ddgksf2013
-> ForHelp           若有屏蔽广告的需求，可公众号后台回复APP名称
-> WechatID          墨鱼手记
-> TgChannel         https://t.me/ddgksf2021
-> Contribute        https://t.me/ddgksf2013_bot
-> Feedback          📮 ddgksf2013@163.com 📮
-> UpdateTime        2023-10-14
-> Suitable          自行观看“# > ”注释内容，解锁是暂时的，购买也不是永久的[订阅、跑路]
+> Author            @
+> UpdateTime        2023-10-16
+> Suitable          自行观看"# > "注释内容，解锁是暂时的，购买也不是永久的[订阅、跑路]
 > Attention         如需引用请注明出处，谢谢合作！
-> ScriptURL         https://raw.githubusercontent.com/Mikephie/Script/main/Mike_Revenuecat.js 
+> ScriptURL         https://
 
 # ========解锁列表======== #
 # > 01 白云天气
@@ -65,11 +60,17 @@ https://apps.apple.com/cn/app/id1661440185
 https://apps.apple.com/cn/app/id6457201223
 # > 26 iptv-ultra
 https://apps.apple.com/cn/app/id1549657742
+# > 27 happy-days
+https://apps.apple.com/cn/app/id1564858029
+# > 28 chatai[非国区]
+https://apps.apple.com/us/app/id1661016696
+# > 29 aptv[旧版V1.25]
+https://apps.apple.com/us/app/id1630403500
 
 [rewrite_local]
 
-# ～ RevenueCat@ddgksf2013
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://raw.githubusercontent.com/Mikephie/Script/main/Mike_Revenuecat.js 
+# ～ RevenueCat@mikephie
+^https://raw.githubusercontent.com/Mikephie/Script/main/Mike_Revenuecat.js
 ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ url request-header (\r\n)X-RevenueCat-ETag:.+(\r\n) request-header $1X-RevenueCat-ETag:$2
 
 [mitm]
@@ -81,98 +82,108 @@ hostname=api.revenuecat.com
 
 
 
-//固定头部, tg频道：https://t.me/ddgksf2021
+//固定头部, tg频道：https://t.me/mikephie8
 
 var ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
-var cuttlefish = {"Attention":"恭喜你抓到元数据！由墨鱼分享，请勿售卖或分享他人！","request_date_ms":1662599120248,"request_date":"2022-09-08T01:05:20Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{},"entitlements":{},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:ddgksf2013","last_seen":"2022-09-08T01:04:03Z"}};
-var ddgksf2013={"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"2099-12-18T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"};
-var ddgksf2021={"grace_period_expires_date":null,"purchase_date":"2022-09-08T01:04:17Z","product_identifier":"ddgksf2013_1y_128","expires_date":"2099-12-18T01:04:17Z"};
+var cuttlefish = {"Attention":"恭喜你抓到元数据！由墨鱼分享，请勿售卖或分享他人！","request_date_ms":1662599120248,"request_date":"2022-09-08T01:05:20Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-09-08T01:04:03Z","original_application_version":"8","other_purchases":{},"management_url":"https://apps.apple.com/account/subscriptions","subscriptions":{},"entitlements":{},"original_purchase_date":"2022-09-07T13:05:43Z","original_app_user_id":"$RCAnonymousID:mikephie","last_seen":"2022-09-08T01:04:03Z"}};
+var mikephie={"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"normal","expires_date":"2088-08-08T01:04:17Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-09-08T01:04:18Z","purchase_date":"2022-09-08T01:04:17Z","store":"app_store"};
+var mikephie8={"grace_period_expires_date":null,"purchase_date":"2022-09-08T01:04:17Z","product_identifier":"mikephie_1y_128","expires_date":"2088-08-08T01:04:17Z"};
 var obj = JSON.parse(JSON.stringify(cuttlefish));
-ddgksf2021['product_identifier']="com.ddgksf2013.premium.yearly";
-obj['subscriber']['subscriptions']['com.ddgksf2013.premium.yearly']=ddgksf2013;
+mikephie8['product_identifier']="com.mikephie.premium.yearly";
+obj['subscriber']['subscriptions']['com.mikephie.premium.yearly']=mikephie;
 
 //动态ID分配
 if(ua.indexOf('%E8%BD%A6%E7%A5%A8%E7%A5%A8') != -1) {//车票票
- obj['subscriber']['entitlements']['vip+watch_vip']=ddgksf2021;
+ obj['subscriber']['entitlements']['vip+watch_vip']=mikephie8;
 }
 else if(ua.indexOf('totowallet') != -1) {//图图记账
-	ddgksf2021['product_identifier']="com.ziheng.totowallet.yearly";
-	obj['subscriber']['entitlements']['all']=ddgksf2021;
-	obj['subscriber']['subscriptions']['com.ziheng.totowallet.yearly']=ddgksf2013;
+	mikephie8['product_identifier']="com.ziheng.totowallet.yearly";
+	obj['subscriber']['entitlements']['all']=mikephie8;
+	obj['subscriber']['subscriptions']['com.ziheng.totowallet.yearly']=mikephie;
 }
 else if(ua.indexOf('Aphrodite') != -1) {//Aphrodite
-	obj['subscriber']['entitlements']['all']=ddgksf2021;
+	obj['subscriber']['entitlements']['all']=mikephie8;
 }
 else if(ua.indexOf('apollo') != -1) {//apollo
-	obj['subscriber']['entitlements']['all']=ddgksf2021;
+	obj['subscriber']['entitlements']['all']=mikephie8;
 }
 else if(ua.indexOf('widget_art') != -1) {//widget_art
-	obj['subscriber']['entitlements']['all']=ddgksf2021;	
+	obj['subscriber']['entitlements']['all']=mikephie8;	
 }
 else if(ua.indexOf('OneBox') != -1) {//pandora
-  obj['subscriber']['entitlements']['all']=ddgksf2021;
+  obj['subscriber']['entitlements']['all']=mikephie8;
 }
 else if(ua.indexOf('Spark') != -1) {//spark
-	obj['subscriber']['entitlements']['premium']=ddgksf2021;	
+	obj['subscriber']['entitlements']['premium']=mikephie8;	
 }
 else if(ua.indexOf('Pillow') != -1) {//pillow
-	obj['subscriber']['entitlements']['premium']=ddgksf2021;
+	obj['subscriber']['entitlements']['premium']=mikephie8;
 }
 else if(ua.indexOf('1Blocker') != -1) {//1Blocker
-	obj['subscriber']['entitlements']['premium']=ddgksf2021;
+	obj['subscriber']['entitlements']['premium']=mikephie8;
 }
 else if(ua.indexOf('VSCO') != -1) {//VSCO
-	obj['subscriber']['entitlements']['membership']=ddgksf2021;
+	obj['subscriber']['entitlements']['membership']=mikephie8;
 }
 else if(ua.indexOf('UTC') != -1) {//花样文字
-	obj['subscriber']['entitlements']['Entitlement.Pro']=ddgksf2021;	
+	obj['subscriber']['entitlements']['Entitlement.Pro']=mikephie8;	
 }
 else if(ua.indexOf('%E8%AC%8E%E5%BA%95%E9%BB%91%E8%86%A0') != -1) {//谜底黑胶
-	obj['subscriber']['entitlements']['Entitlement.Pro']=ddgksf2021;	
+	obj['subscriber']['entitlements']['Entitlement.Pro']=mikephie8;	
 }
 else if(ua.indexOf('%E8%AC%8E%E5%BA%95%E6%99%82%E9%90%98') != -1) {//谜底时钟
-	obj['subscriber']['entitlements']['Entitlement.Pro']=ddgksf2021;
+	obj['subscriber']['entitlements']['Entitlement.Pro']=mikephie8;
 }
 else if(ua.indexOf('OffScreen') != -1) {//OffScreen
-	obj['subscriber']['entitlements']['Entitlement.Pro']=ddgksf2021;	
+	obj['subscriber']['entitlements']['Entitlement.Pro']=mikephie8;	
 }
 else if(ua.indexOf('ScannerPro') != -1) {//Scanner Pro
-	obj['subscriber']['entitlements']['plus']=ddgksf2021;
+	obj['subscriber']['entitlements']['plus']=mikephie8;
 }
 else if(ua.indexOf('WhiteCloud') != -1) {//WhiteCloud
-	obj['subscriber']['entitlements']['allaccess']=ddgksf2021;
+	obj['subscriber']['entitlements']['allaccess']=mikephie8;
 }
 else if(ua.indexOf('HTTPBot') != -1) {//httpbot
-  obj['subscriber']['entitlements']['pro']=ddgksf2021;
+  obj['subscriber']['entitlements']['pro']=mikephie8;
 }
 else if(ua.indexOf('audiomack') != -1) {//Audiomack
-	obj['subscriber']['entitlements']['Premium1']=ddgksf2021;
+	obj['subscriber']['entitlements']['Premium1']=mikephie8;
 }
-#else if(ua.indexOf('server_bee') != -1) {//server_bee
-	obj['subscriber']['entitlements']['Pro']=mikephie;
+else if(ua.indexOf('server_bee') != -1) {//server_bee
+	obj['subscriber']['entitlements']['Pro']=mikephie8;
 }
 else if(ua.indexOf('simple-') != -1) {//NotBoring
-	obj['subscriber']['entitlements']['patron']=ddgksf2021;
+	obj['subscriber']['entitlements']['patron']=mikephie8;
 }
 else if(ua.indexOf('streaks') != -1) {//习惯
-	obj['subscriber']['entitlements']['patron']=ddgksf2021;
+	obj['subscriber']['entitlements']['patron']=mikephie8;
 }
 else if(ua.indexOf('andyworks-calculator') != -1) {//计算器
-	obj['subscriber']['entitlements']['patron']=ddgksf2021;
+	obj['subscriber']['entitlements']['patron']=mikephie8;
 }
 else if(ua.indexOf('vibes') != -1) {//vibes
-	obj['subscriber']['entitlements']['patron']=ddgksf2021;
+	obj['subscriber']['entitlements']['patron']=mikephie8;
 }
 else if(ua.indexOf('CountDuck') != -1) {//vibes
-	ddgksf2021['product_identifier']="Lifetime";
-	obj['subscriber']['entitlements']['premium']=ddgksf2021;
-	obj['subscriber']['subscriptions']['Lifetime']=ddgksf2013;
+	mikephie8['product_identifier']="Lifetime";
+	obj['subscriber']['entitlements']['premium']=mikephie8;
+	obj['subscriber']['subscriptions']['Lifetime']=mikephie;
 }
 else if(ua.indexOf('IPTVUltra') != -1) {//vibes
-	obj['subscriber']['entitlements']['premium']=ddgksf2021;
+	obj['subscriber']['entitlements']['premium']=mikephie8;
+}
+else if(ua.indexOf('Happy%3ADays') != -1) {//HappyDays
+	mikephie8['product_identifier']="happy_999_lifetime";
+	obj['subscriber']['entitlements']['pro']=mikephie8;
+	obj['subscriber']['subscriptions']['happy_999_lifetime']=mikephie;
+}
+else if(ua.indexOf('ChatGPTApp') != -1) {//chat-ai-ask-chatbot-assistant
+	obj['subscriber']['entitlements']['Advanced']=mikephie8;
+}
+else if(ua.indexOf('APTV') != -1) {//APTV
+	obj['subscriber']['entitlements']['pro']=mikephie8;	
 }
 else{
-  obj['subscriber']['entitlements']['pro']=ddgksf2021;
+  obj['subscriber']['entitlements']['pro']=mikephie8;
 }
-
 $done({body: JSON.stringify(obj)});
