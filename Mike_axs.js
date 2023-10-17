@@ -15,17 +15,13 @@
 [rewrite_local]
 
 # ======= 去水印 ======= #
-if (typeof $response == "undefined") {
-  delete $request.headers["etag"];
-  delete $request.headers["ETag"];
-  chxm1023.headers = $request.headers;
-}
 ^https?:\/\/.*\.pipix\.com\/bds\/(feed\/stream|comment\/cell_reply|cell\/cell_comment|cell\/detail|ward\/list|user\/favorite|user\/cell_coment|user\/cell_userfeed|user\/publish_list) url script-response-body https://gist.githubusercontent.com/ddgksf2013/bb1dadbd32f67c68772caebcc70b0a33/raw/pipixia.adblock.js
 # ======= 去广告 ======= #
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight url reject-200
+
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage url reject-dict
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/InfoPage url reject-dict
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/highlight url reject-200
+^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight url reject-200
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/UtilsWeb url reject-200
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/UtilsWeb url reject-200
 
