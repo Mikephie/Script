@@ -14,8 +14,6 @@
           
 [rewrite_local]
 
-# ======= 去水印 ======= #
-^https?:\/\/.*\.pipix\.com\/bds\/(feed\/stream|comment\/cell_reply|cell\/cell_comment|cell\/detail|ward\/list|user\/favorite|user\/cell_coment|user\/cell_userfeed|user\/publish_list) url script-response-body https://gist.githubusercontent.com/ddgksf2013/bb1dadbd32f67c68772caebcc70b0a33/raw/pipixia.adblock.js
 # ======= 去广告 ======= #
 
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/MastercardPromo2023_16_31Oct\/popup\.php\?Info_ID=I00306&Channel_ID=4&Device_ID=is0607557bfb15a6 url reject-200
