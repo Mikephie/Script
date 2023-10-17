@@ -18,6 +18,7 @@
 ^https?:\/\/.*\.pipix\.com\/bds\/(feed\/stream|comment\/cell_reply|cell\/cell_comment|cell\/detail|ward\/list|user\/favorite|user\/cell_coment|user\/cell_userfeed|user\/publish_list) url script-response-body https://gist.githubusercontent.com/ddgksf2013/bb1dadbd32f67c68772caebcc70b0a33/raw/pipixia.adblock.js
 # ======= 去广告 ======= #
 
+^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/popupCategoryProcess\.php url reject-200
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/CIMB_PersonalLoan_Oct2023\/css\/custom\.css url reject-200
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/MastercardPromo2023_16_31Oct\/css\/custom\.css url reject-200
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage url reject-200
