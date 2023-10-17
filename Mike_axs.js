@@ -19,7 +19,7 @@
 # ======= 去广告 ======= #
 
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/CIMB_PersonalLoan_Oct2023\/css\/custom\.css url reject-200
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/CIMB_PersonalLoan_Oct2023\/css\/custom\.css url reject-200
+^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/MastercardPromo2023_16_31Oct\/css\/custom\.css url reject-200
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage url reject-200
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/InfoPage url reject-200
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/highlight url reject-dict
