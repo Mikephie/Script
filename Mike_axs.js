@@ -17,6 +17,7 @@
 # ======= 去广告 ======= #
 
 ^https?:\/\/*\.sg\/AXSMobile\/InfoPage\/.+ url reject-img
+^https?:\/\/*2\.sg\/AXSMobile\/InfoPage\/.+ url reject-img
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/highlight url reject-img
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight url reject-img
 
