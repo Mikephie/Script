@@ -16,21 +16,15 @@
 
 # ======= 去广告 ======= #
 
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/MastercardPromo2023_16_31Oct\/popup\.php\?Info_ID=I00306&Channel_ID=4&Device_ID=is0607557bfb15a6 url reject-200
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/InfoPageProcess\.php url reject-200
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/popupCategoryProcess\.php url reject-200
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/CIMB_PersonalLoan_Oct2023\/css\/custom\.css url reject-200
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/MastercardPromo2023_16_31Oct\/css\/custom\.css url reject-200
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage url reject-200
-^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/InfoPage url reject-200
+^https?:\/\/*\.sg\/AXSMobile\/InfoPage\/.+ url reject-img
 ^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/highlight url reject-dict
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight url reject-dict
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/UtilsWeb url reject-dict
-^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/UtilsWeb url reject-dict
+
+
 
 [mitm]
  
 
-hostname = m-station.axs.com.sg, m-station2.axs.com.sg
+hostname = m-station*.axs.com.sg
 
 ***********************************/
