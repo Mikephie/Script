@@ -17,9 +17,9 @@
 # ======= 去广告 ======= #
 
 ^https?:\/\/*\.sg\/AXSMobile\/InfoPage\/.+ url reject-img
-^https?:\/\/*2\.sg\/AXSMobile\/InfoPage\/.+ url reject-img
-^https?:\/\/*\.sg\/AXSMobile\/highlight url reject-img
-^https?:\/\/*2\.sg\/AXSMobile\/highlight url reject-img
+
+
+
 
 
 
