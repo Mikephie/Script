@@ -1,20 +1,239 @@
-/*
+var myDate = new Date(); // 创建一个表示当前时间的 Date 对象
+var data_time = myDate.toLocaleDateString(); // 获取当前日期的字符串表示
 
-项目名称：CAD快速看图
-下载地址：https://t.cn/A60VKj9S
-脚本作者：@ios151
-使用声明：本人共享token 请勿随意删除“快看云盘”里面的图纸 否则删库
-使用方法：账号：baby 密码：1
+function sleep(d) {
+  for (var t = Date.now(); Date.now() - t <= d;); // 使程序暂停执行一段时间
+}
 
-[rewrite_local]
-^https?:\/\/cad\.glodon\.com\/(account|authorize\/query|alipay\/auth) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/cad.js
+function log(message) {
+  console.log(message); // 打印消息到控制台
+  // TODO: 将日志写入文件
+}
 
+var tokenColumn = "A"; // 设置列号变量为 "A"
+var signInColumn = "B"; // 设置列号变量为 "B"
+var rewardColumn = "C"; // 设置列号变量为 "C"
+var emailColumn = "F"; // 设置列号变量为 "F"
+var sendEmailColumn = "G"; // 设置列号变量为 "G"
+var resultColumn = "J"; // 设置列号变量为 "J"
 
-[MITM]
-hostname = cad.glodon.com
+for (let row = 2; row <= 20; row++) { // 循环遍历从第 2 行到第 20 行的数据
+  var refresh_token = Application.Range(tokenColumn + row).Text; // 获取指定单元格的值
+  var sflq = Application.Range(signInColumn + row).Text; // 获取指定单元格的值
+  var sflqReward = Application.Range(rewardColumn + row).Text; // 获取指定单元格的值
+  var jsyx = Application.Range(emailColumn + row).Text; // 获取指定单元格的值
+  var sendEmail = Application.Range(sendEmailColumn + row).Text; // 获取指定单元格的值
+  var customEmailResult = Application.Range(resultColumn + row).Text; // 获取指定单元格的值
 
-*/
+  var emailConfigured = Application.Range("J1").Text; // 获取指定单元格的值
+  var zdy_host = Application.Range("J2").Text; // 获取指定单元格的值
+  var zdy_post = parseInt(Application.Range("J3").Text); // 获取指定单元格的值并转换为整数
+  var zdy_username = Application.Range("J4").Text; // 获取指定单元格的值
+  var zdy_pasd = Application.Range("J5").Text; // 获取指定单元格的值
 
-var version_='jsjiami.com.v7';var r=b;(function(c,d,e,f,g,h,i){return c=c>>0x5,h='hs',i='hs',function(j,k,l,m,n){var q=b;m='tfi',h=m+h,n='up',i+=n,h=l(h),i=l(i),l=0x0;var o=j();while(!![]&&--f+k){try{m=parseInt(q(0x113,'*#XF'))/0x1+parseInt(q(0x116,'wHls'))/0x2*(-parseInt(q(0x10f,'K2UC'))/0x3)+parseInt(q(0xf9,'D8l)'))/0x4+parseInt(q(0x102,'5W%j'))/0x5*(parseInt(q(0xfe,'sV54'))/0x6)+-parseInt(q(0x119,'K2UC'))/0x7*(parseInt(q(0x104,'XOOs'))/0x8)+parseInt(q(0x100,'zwOx'))/0x9*(parseInt(q(0x117,'DMRK'))/0xa)+parseInt(q(0x10a,'2be('))/0xb;}catch(p){m=l;}finally{n=o[h]();if(c<=f)l?g?m=n:g=n:l=n;else{if(l==g['replace'](/[kxNBXRLQtJHVWqhKwSMfFC=]/g,'')){if(m===k){o['un'+h](n);break;}o[i](n);}}}}}(e,d,function(j,k,l,m,n,o,p){return k='\x73\x70\x6c\x69\x74',j=arguments[0x0],j=j[k](''),l='\x72\x65\x76\x65\x72\x73\x65',j=j[l]('\x76'),m='\x6a\x6f\x69\x6e',(0x13613d,j[m](''));});}(0x1780,0xb4bb5,a,0xbe),a)&&(version_=a);var body=$response[r(0xfa,'F7IQ')],baby=JSON[r(0x101,'ZL1P')](body);const vip1=r(0x10e,'zBk5'),vip2=r(0x11a,'Z$)j'),vip3=r(0xf8,'gtdH');if($request[r(0x114,')31P')][r(0xfd,'*#XF')](vip1)!=-0x1){var requestData={'data':{'platformNumber':'1','appId':'1108096074','spaceId':'7080056040259444'},'code':0x0},responseData={'body':{'cadToken':'761b03f5-c01e-4e66-97dc-cc1fd2011d4f','loginIdentity':'1689926495150','userinfo':{'id':'7054044042028241822','email':r(0x118,'XOOs'),'mobile':'1','globalId':r(0x10d,'21S['),'gender':null,'birthday':null,'verified':!![],'emailVerified':!![],'mobileVerified':!![],'enterpriseUser':![]}},'code':0x1};function handleRequest(c){return responseData;};var response=handleRequest(requestData);body=JSON[r(0x106,']JWj')](response);}function b(c,d){var e=a();return b=function(f,g){f=f-0xf8;var h=e[f];if(b['SkFUSm']===undefined){var i=function(n){var o='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var p='',q='';for(var r=0x0,s,t,u=0x0;t=n['charAt'](u++);~t&&(s=r%0x4?s*0x40+t:t,r++%0x4)?p+=String['fromCharCode'](0xff&s>>(-0x2*r&0x6)):0x0){t=o['indexOf'](t);}for(var v=0x0,w=p['length'];v<w;v++){q+='%'+('00'+p['charCodeAt'](v)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(q);};var m=function(n,o){var p=[],q=0x0,r,t='';n=i(n);var u;for(u=0x0;u<0x100;u++){p[u]=u;}for(u=0x0;u<0x100;u++){q=(q+p[u]+o['charCodeAt'](u%o['length']))%0x100,r=p[u],p[u]=p[q],p[q]=r;}u=0x0,q=0x0;for(var v=0x0;v<n['length'];v++){u=(u+0x1)%0x100,q=(q+p[u])%0x100,r=p[u],p[u]=p[q],p[q]=r,t+=String['fromCharCode'](n['charCodeAt'](v)^p[(p[u]+p[q])%0x100]);}return t;};b['EoxXqL']=m,c=arguments,b['SkFUSm']=!![];}var j=e[0x0],k=f+j,l=c[k];return!l?(b['doDAll']===undefined&&(b['doDAll']=!![]),h=b['EoxXqL'](h,g),c[k]=h):h=l,h;},b(c,d);}$request[r(0x115,'K2UC')][r(0x108,'@*tt')](vip2)!=-0x1&&(baby={'endDate':r(0x105,'Pr5f'),'code':'1'},body=JSON[r(0x10c,'Et0[')](baby));function a(){var s=(function(){return[version_,'qkjLVwsJfKjxiHamKiW.cCoFBmJ.vCQ7SRMtXhHN==','W7nSW50UWPrJW5BcKCoaWO7dHCk9','nJmh','lmknWPm','xZpdNwxdTSokW4tcVSogW6e','WPxcVSonaCoVW5SUWRq','k8oywfxcRmkpW6dcNhKgWOe','yCohW4ZcHaagaxpdMxpcVmoPW4G','vSoPeSkned06f8kaW6ZdR8ot','W5CEWRe','W4WLiYFdSSoLWQddPSkVW7hdSCklWQ7dV8kCWQi','WRGPi8oPWRFcPctcLSkqBCozFa'].concat((function(){return['WO0nzt8','WRhdL8oAWQj7EWb/W7Obcr3dIa','wL7dLmkbe3RdRCkew3C8W40','WQGXWO14W5uuW5W','WPnBW68dW6hdLhDBWOhcQSod','qCkWtCoxu2T0CmkPW6JdJ8oPrq','W5JdM8o+pCopWOpcM8oaW7z7WOWGWPi','WQXwwSk9W6a','WROEWOZcSutdKHhdN8o1WPC','n8khlmkpp8kgW4n7WOm','CComvexcGCkvW4e','WRG5W7/dImk/W7JdI8kJWQldJuefWPT2WOOhEe7cKq','WOLqWOvKjMO0g8kM'].concat((function(){return['E8kSzSkswc5vv8o1AG','W7BdLSonwmk9ywq','W5fWzglcQmk4W6pdQ8kVW7ZcVCkXWRa','W6xdHapdGWG/jgWbp8kADWi','WQnhWQbjW6hcTgDc','W6RdJ8oqvmkdWO/cOGfv','gmk8narYW7ZdQWJcOmoRWQ1FvSoPvSkMWPZcKvO','WR0wWQHqW6ZcTwPr','AmohW4ZdKhr/r2RdOW','W60pg8kPW4ldPmk3tWG','WRKuWOhcSGxcGX/dQSouWRqaWOC','WQycWPCbeqldRa'];}()));}()));}());a=function(){return s;};return a();};$request[r(0x11b,'sV54')][r(0x112,'XD51')](vip3)!=-0x1&&(baby={'endDate':'5201-03-14\x2019:57:57','code':'1'},body=JSON[r(0x103,'vqNJ')](baby));$done({'body':body});var version_ = 'jsjiami.com.v7';
+  if (sflq == "是") { // 如果“是否签到”为“是”
+    if (refresh_token != "") { // 如果刷新令牌不为空
+      // 发起网络请求-获取token
+      let data = HTTP.post("https://auth.aliyundrive.com/v2/account/token",
+        JSON.stringify({
+          "grant_type": "refresh_token",
+          "refresh_token": refresh_token
+        })
+      );
+      data = data.json(); // 将响应数据解析为 JSON 格式
+      var access_token = data['access_token']; // 获取访问令牌
+      var phone = data["user_name"]; // 获取用户名
 
-$done({body});
+      if (access_token == undefined) { // 如果访问令牌未定义
+        log("单元格【" + tokenColumn + row + "】内的token值错误，程序执行失败，请重新复制正确的token值");
+        continue; // 跳过当前行的后续操作
+      }
+
+      try {
+        var access_token2 = 'Bearer ' + access_token; // 构建包含访问令牌的请求头
+        // 签到
+        let data2 = HTTP.post("https://member.aliyundrive.com/v1/activity/sign_in_list",
+          JSON.stringify({ "_rx-s": "mobile" }),
+          { headers: { "Authorization": access_token2 } }
+        );
+        data2 = data2.json(); // 将响应数据解析为 JSON 格式
+        var signin_count = data2['result']['signInCount']; // 获取签到次数
+
+        var logMessage = "账号：" + phone + " - 签到成功，本月累计签到 " + signin_count + " 天";
+        var rewardMessage = "";
+
+        if (sflqReward == "是") { // 如果“是否领取奖励”为“是”
+          if (sflq == "是") { // 如果“是否签到”为“是”
+            try {
+              // 领取奖励
+              let data3 = HTTP.post(
+                "https://member.aliyundrive.com/v1/activity/sign_in_reward?_rx-s=mobile",
+                JSON.stringify({ "signInDay": signin_count }),
+                { headers: { "Authorization": access_token2 } }
+              );
+              data3 = data3.json(); // 将响应数据解析为 JSON 格式
+              var rewardName = data3["result"]["name"]; // 获取奖励名称
+              var rewardDescription = data3["result"]["description"]; // 获取奖励描述
+              rewardMessage = " " + rewardName + " - " + rewardDescription;
+            } catch (error) {
+              if (error.response && error.response.data && error.response.data.error) {
+                var errorMessage = error.response.data.error; // 获取错误信息
+                if (errorMessage.includes(" - 今天奖励已领取")) {
+                  rewardMessage = " - 今天奖励已领取";
+                  log("账号：" + phone + " - " + rewardMessage);
+                } else {
+                  log("账号：" + phone + " - 奖励领取失败：" + errorMessage);
+                }
+              } else {
+                log("账号：" + phone + " - 奖励领取失败");
+              }
+            }
+          } else {
+            rewardMessage = " - 奖励待领取";
+          }
+        } else {
+          rewardMessage = " - 奖励待领取";
+        }
+
+        log(logMessage + rewardMessage);
+
+        if (sendEmail == "是") { // 如果“是否发送邮件”为“是”
+          try {
+            let mailer;
+            if (customEmailResult == "是") { // 如果“是否自定义邮箱”为“是”
+              var customEmail = Application.Range(resultColumn + row).Text; // 获取指定单元格的值
+              if (emailConfigured === "是") { // 如果配置了自定义邮箱
+                mailer = SMTP.login({
+                  host: zdy_host,
+                  port: zdy_post,
+                  username: zdy_username,
+                  password: zdy_pasd,
+                  secure: true
+                });
+                mailer.send({
+                  from: "阿里云盘签到<" + zdy_username + ">",
+                  to: customEmail,
+                  subject: "阿里云盘签到通知 - " + data_time,
+                  text: logMessage + rewardMessage
+                });
+              } else { // 如果未配置自定义邮箱，默认使用示例邮箱
+                mailer = SMTP.login({
+                  host: "smtp.163.com",
+                  port: 465,
+                  username: "fs8484848@163.com",
+                  password: "QADSEMPKDHDAVWVD",
+                  secure: true
+                });
+                mailer.send({
+                  from: "阿里云盘签到<fs8484848@163.com>",
+                  to: customEmail,
+                  subject: "阿里云盘签到通知 - " + data_time,
+                  text: logMessage + rewardMessage
+                });
+              }
+              log("账号：" + phone + " - 已发送邮件至：" + customEmail);
+            } else { // 如果“是否自定义邮箱”为“否”
+              if (emailConfigured === "是") { // 如果配置了自定义邮箱
+                mailer = SMTP.login({
+                  host: zdy_host,
+                  port: zdy_post,
+                  username: zdy_username,
+                  password: zdy_pasd,
+                  secure: true
+                });
+                mailer.send({
+                  from: "阿里云盘签到<" + zdy_username + ">",
+                  to: jsyx,
+                  subject: "阿里云盘签到通知 - " + data_time,
+                  text: logMessage + rewardMessage
+                });
+              } else { // 如果未配置自定义邮箱，默认使用示例邮箱
+                mailer = SMTP.login({
+                  host: "smtp.163.com",
+                  port: 465,
+                  username: "fs8484848@163.com",
+                  password: "QADSEMPKDHDAVWVD",
+                  secure: true
+                });
+                mailer.send({
+                  from: "阿里云盘签到<fs8484848@163.com>",
+                  to: jsyx,
+                  subject: "阿里云盘签到通知 - " + data_time,
+                  text: logMessage + rewardMessage
+                });
+              }
+              log("账号：" + phone + " - 已发送邮件至：" + jsyx);
+            }
+          } catch (error) {
+            log("账号：" + phone + " - 发送邮件失败：" + error);
+          }
+        }
+      } catch {
+        log("单元格【" + tokenColumn + row + "】内的token签到失败");
+        continue; // 跳过当前行的后续操作
+      }
+    } else {
+      log("账号：" + phone + " 不签到");
+    }
+  }
+}
+
+var currentDate = new Date(); // 创建一个表示当前时间的 Date 对象
+var currentDay = currentDate.getDate(); // 获取当前日期的天数
+var lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate(); // 获取当月的最后一天的日期
+
+if (currentDay === lastDayOfMonth) { // 如果当前日期是当月的最后一天
+  for (let row = 2; row <= 20; row++) { // 循环遍历从第 2 行到第 20 行的数据
+    var sflq = Application.Range(signInColumn + row).Text; // 获取指定单元格的值
+    var sflqReward = Application.Range(rewardColumn + row).Text; // 获取指定单元格的值
+
+    if (sflq === "是" && sflqReward === "是") { // 如果“是否签到”和“是否领取奖励”均为“是”
+      var refresh_token = Application.Range(tokenColumn + row).Text; // 获取指定单元格的值
+      var jsyx = Application.Range(emailColumn + row).Text; // 获取指定单元格的值
+      var phone = "账号：" + phone; // 构建账号信息字符串
+
+      if (refresh_token !== "") { // 如果刷新令牌不为空
+        // 发起网络请求-获取token
+        let data = HTTP.post("https://auth.aliyundrive.com/v2/account/token",
+          JSON.stringify({
+            "grant_type": "refresh_token",
+            "refresh_token": refresh_token
+          })
+        );
+        data = data.json(); // 将响应数据解析为 JSON 格式
+        var access_token = data['access_token']; // 获取访问令牌
+
+        if (access_token === undefined) { // 如果访问令牌未定义
+          log("单元格【" + tokenColumn + row + "】内的token值错误，程序执行失败，请重新复制正确的token值");
+          continue; // 跳过当前行的后续操作
+        }
+
+        try {
+          var access_token2 = 'Bearer ' + access_token; // 构建包含访问令牌的请求头
+          // 领取奖励
+          let data4 = HTTP.post(
+            "https://member.aliyundrive.com/v1/activity/sign_in_reward?_rx-s=mobile",
+            JSON.stringify({ "signInDay": lastDayOfMonth }),
+            { headers: { "Authorization": access_token2 } }
+          );
+          data4 = data4.json(); // 将响应数据解析为 JSON 格式
+          var claimStatus = data4["result"]["status"]; // 获取奖励状态
+          var day = lastDayOfMonth; // 获取最后一天的日期
+
+          if (claimStatus === "CLAIMED") {
+            log("账号：" + phone + " - 第 " + day + " 天奖励领取成功");
+          } else {
+            log("账号：" + phone + " - 第 " + day + " 天奖励领取失败");
+          }
+        } catch {
+          log("单元格【" + tokenColumn + row + "】内的token签到失败");
+          continue; // 跳过当前行的后续操作
+        }
+      } else {
+        log("账号：" + phone + " 不签到");
+      }
+    }
+  }
+
+  log("自动领取未领取奖励完成。");
+}
