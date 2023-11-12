@@ -11,7 +11,7 @@
 
 [rewrite_local]
 
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_watch.js
+^https:\/\/api\.adapty\.io\/api\/v1\/sdk\/in-apps\/apple\/receipt\/validate url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_watch.js
 
 [mitm] 
 
