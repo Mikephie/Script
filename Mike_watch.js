@@ -11,7 +11,7 @@
 
 [rewrite_local]
 
-^https:\/\/api\.adapty\.io\/api\/v1\/sdk\/in-apps\/apple\/receipt\/validate url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_watch.js
+https://api.adapty.io/api/v1/sdk/in-apps/apple/receipt/validate/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_watch.js
 
 [mitm] 
 
@@ -131,5 +131,5 @@ var mikephie = JSON.parse($response.body);
   }
 }
 
-$done({ body: JSON.stringify(mikephie) });
+$done({body : JSON.stringify(mikephie)});
 
