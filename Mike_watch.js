@@ -19,9 +19,30 @@ hostname = api.adapty.io
 
 *******************************/
 
-var mikephie = JSON.parse($response.body);
+/******************************
 
-    mikephie = {
+脚本名称: FaceAi
+下载地址：商店
+脚本作者：Mikephie
+更新时间：2023年11月12日 23:23
+问题反馈：TG
+使用声明：⚠️此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
+
+*******************************
+
+[rewrite_local]
+
+https://api.adapty.io/api/v1/sdk/in-apps/apple/receipt/validate/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_watch.js
+
+[mitm] 
+
+hostname = api.adapty.io
+
+*******************************/
+
+var objc = JSON.parse($response.body);
+
+    objc = {
   "data" : {
     "type" : "adapty_inapps_apple_receipt_validation_result",
     "id" : "56f3b1e3-be6d-47d5-a94d-baf97cca4f1e",
@@ -131,5 +152,5 @@ var mikephie = JSON.parse($response.body);
   }
 }
 
-$done({body : JSON.stringify(mikephie)});
+$done({body : JSON.stringify(objc)});
 
