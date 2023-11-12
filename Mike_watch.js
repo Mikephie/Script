@@ -1,26 +1,5 @@
 /******************************
 
-脚本名称: watch
-下载地址：商店
-脚本作者：Mikephie
-更新时间：12 Nov 2023 at 20:47
-问题反馈：TG
-使用声明：⚠️此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
-
-*******************************
-
-[rewrite_local]
-
-https://api.adapty.io/api/v1/sdk/in-apps/apple/receipt/validate/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/Mike_watch.js
-
-[mitm] 
-
-hostname = api.adapty.io
-
-*******************************/
-
-/******************************
-
 脚本名称: FaceAi
 下载地址：商店
 脚本作者：Mikephie
