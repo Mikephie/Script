@@ -15,7 +15,7 @@
 
 [mitm] 
 
-hostname = buy.itunes.apple.com
+hostname = api.adapty.io
 
 *******************************/
 
