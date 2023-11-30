@@ -10,21 +10,6 @@
 force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [Script]
-Reddit = type=http-response,pattern=^https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,timeout=30,script-path=reddit.js
+Reddit = type=http-response,pattern=^https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/Mike_reddit.js
 [MITM]
 hostname = %APPEND%, gql.reddit.com, gql-fed.reddit.com
-② reddit.js
-
-let body;
-try {
-  if (/"(isNsfw|AdPost|AdMetadataCell|adPayload)"/.test($response.body)) {
-    body = $response.body.replace(
-      /(")(isNsfw|AdPost|AdMetadataCell|adPayload)(")/gi,
-      '$1_$2$3'
-    );
-  }
-} catch (e) {
-  console.log(e);
-} finally {
-  $done(body ? { body } : {});
-}
