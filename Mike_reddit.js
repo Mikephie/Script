@@ -13,6 +13,3 @@ try {
 } finally {
   $done(body ? { body } : {});
 }
-
-[MITM]
-hostname = %APPEND%, gql.reddit.com, gql-fed.reddit.com
