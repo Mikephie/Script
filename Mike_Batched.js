@@ -1,85 +1,47 @@
-/*************************************
+#Surge #模块 #Reddit 过滤推广, 关 NSFW 提示(非暴力替换版)
 
-项目名称：Batched-多量图片编辑器 解锁订阅
-下载地址：https://t.cn/A69YGbhk
-使用声明：仅供学习与交流，请勿转载与贩卖！⚠️
+🤔 目前 🎈Loon 纯 TUN 模式使用该脚本会导致各种加载缓慢/失败 请先关闭纯 TUN 模式
 
-**************************************
+小脚本小模块就不放 GitHub 了
 
-[rewrite_local]
+① reddit.sgmodule
+#!name=Reddit
+#!desc=过滤推广, 关 NSFW 提示 @xream
 
-^https:\/\/api\.adapty\.io\/api\/.+\/sdk\/analytics\/profiles\/(.*?)\/ url script-response-body https://github.com/Mikephie/Script/blob/main/Mike_Batched.js
+[General]
 
-[mitm]
+force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
-hostname = api.adapty.io
+[Script]
+Reddit = type=http-response,pattern=^https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,timeout=30,script-path=reddit.js
+[MITM]
+hostname = %APPEND%, gql.reddit.com, gql-fed.reddit.com
+② reddit.js
 
-*************************************/
-
-
-var mikephie = JSON.parse($response.body);
-
-mikephie.data = {
-    "type" : "adapty_analytics_profile",
-    "id" : "150ffc20-2126-43bb-ad24-c62c881e4c35",
-    "attributes" : {
-      "app_id" : "56eb457c-6ad4-40aa-9b29-ea29e10e3505",
-      "total_revenue_usd" : 0,
-      "customer_user_id" : null,
-      "subscriptions" : {
-        "com.advasoft.batched.premium_year_3days_trial_60usd" : {
-          "vendor_transaction_id" : "490001271881589",
-          "billing_issue_detected_at" : null,
-          "is_lifetime" : false,
-          "store" : "app_store",
-          "vendor_product_id" : "com.advasoft.batched.premium_year_3days_trial_60usd",
-          "vendor_original_transaction_id" : "490001271881589",
-          "will_renew" : true,
-          "renewed_at" : "2023-01-23T09:09:08.000000+0000",
-          "cancellation_reason" : null,
-          "active_promotional_offer_id" : null,
-          "active_promotional_offer_type" : null,
-          "unsubscribed_at" : null,
-          "is_active" : true,
-          "activated_at" : "2023-01-23T09:09:09.000000+0000",
-          "is_refund" : false,
-          "is_in_grace_period" : false,
-          "active_introductory_offer_type" : "free_trial",
-          "expires_at" : "2099-09-09T09:09:09.000000+0000",
-          "starts_at" : null,
-          "is_sandbox" : false
-        }
-      },
-      "promotional_offer_eligibility" : false,
-      "custom_attributes" : {
-
-      },
-      "profile_id" : "150ffc20-2126-43bb-ad24-c62c881e4c35",
-      "paid_access_levels" : {
-        "premium" : {
-          "id" : "premium",
-          "is_lifetime" : false,
-          "vendor_product_id" : "com.advasoft.batched.premium_year_3days_trial_60usd",
-          "active_promotional_offer_type" : null,
-          "cancellation_reason" : null,
-          "billing_issue_detected_at" : null,
-          "unsubscribed_at" : null,
-          "expires_at" : "2099-09-09T09:09:09.000000+0000",
-          "will_renew" : true,
-          "is_active" : true,
-          "active_promotional_offer_id" : null,
-          "is_in_grace_period" : false,
-          "activated_at" : "2023-01-23T09:09:09.000000+0000",
-          "renewed_at" : "2023-01-23T09:09:08.000000+0000",
-          "is_refund" : false,
-          "active_introductory_offer_type" : "free_trial",
-          "store" : "app_store",
-          "starts_at" : null
-        }
-      },
-      "introductory_offer_eligibility" : false,
-      "non_subscriptions" : null
+let body;
+try {
+  body = JSON.parse($response.body.replace(/"isNsfw":true/g, '"isNsfw":false'))
+  if (body.data?.children?.commentsPageAds) {
+    body.data.children.commentsPageAds = []
+  } 
+  for (const [k, v] of Object.entries(body.data)) {
+    if (v?.elements?.edges) {
+      body.data[k].elements.edges = v.elements.edges.filter(
+        i =>
+          !['AdPost'].includes(i?.node?.__typename) &&
+          !i?.node?.cells?.some(j => j?.__typename === 'AdMetadataCell') &&
+          !i?.node?.adPayload
+      );
+    }
   }
-};
 
-$done({body : JSON.stringify(mikephie)});
+  
+} catch (e) {
+  console.log(e);
+} finally {
+  $done(body ? { body: JSON.stringify(body) } : {});
+}
+
+相关: 如何使用 Gist 创建私有脚本/模块
+
+另一个版本: 暴力替换版(有点 bug)
