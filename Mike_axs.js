@@ -16,7 +16,7 @@
 
 # ======= 去广告 ======= #
 
-^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage\/.*)|(highlight\/.*) url reject-200
+^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage\/.*|highlight\/.*) url reject-200
 
 
 
