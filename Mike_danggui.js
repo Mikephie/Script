@@ -15,7 +15,7 @@
 # ======= 去广告 ======= #
 
 
-^https:\/\/user-service-api\.danggui\.cc\/v1\/user\/banner url reject-dic
+^https:\/\/user-service-api\.danggui\.cc\/v1\/user\/banner url reject
 
 [mitm]
 
