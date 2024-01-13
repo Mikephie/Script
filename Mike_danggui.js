@@ -1,4 +1,4 @@
-> 应用名称： danggui
+> 应用名称： Mike_danggui
 > 下载地址：http://t.cn/Air8PM5k
 > 脚本作者：@Mikephie
 > 解锁说明：去广告+去水印
@@ -15,7 +15,7 @@
 # ======= 去广告 ======= #
 
 
-^https:\/\/user-service-api\.danggui\.cc\/v1\/user\/banner url reject-dict
+^https:\/\/user-service-api\.danggui\.cc\/v1\/user\/banner url reject-dic
 
 [mitm]
 
