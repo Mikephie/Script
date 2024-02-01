@@ -1,10 +1,10 @@
 #!name=🌸Sakura樱花交流会
 #!author=@Sliverkiss
 
-/每日汇率监控
-cron "0 8 * * ?" script-path=https://raw.githubusercontent.com/Mikephie/Task/main/hljk.js, timeout=300, tag=新币汇率监控
+//新币汇率监控
+cron "0 8 * * ?" script-path=https://raw.githubusercontent.com/Mikephie/Task/main/hljk.js, timeout=60, tag=新币汇率监控, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql_logo.png
 //酷我音乐
-cron "30 10,20 * * *" script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/kuwo.js, timeout=300, tag=🎵酷我音乐, img-url=https://raw.githubusercontent.com/deezertidal/private/main/icons/kuwosvip.png
+cron "30 10,20 * * *" script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/kuwo.js, timeout=60, tag=🎵酷我音乐, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Music.png
 //Boxjs恢复
 cron "5 10 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js, timeout=60, tag=Bojs恢复
 //Boxjs备份
@@ -12,4 +12,4 @@ cron "0 10 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/
 //TestFlight自动加入
 cron "0 * * * *" script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js, timeout=60, tag=TestFlight自动加入
 //阿里云任务
-cron "0 7,11 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, tag=阿里云任务
+cron "0 7,11 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, tag=阿里云任务, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/softlyx/ALiYun.png
