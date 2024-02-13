@@ -1,0 +1,18 @@
+#!desc=AXS
+#!author=Mike
+#!icon=
+name: AXS
+desc: AXS去广告
+http:
+   mitm:
+       - "m-station2.axs.com.sg"
+   script:
+       - match: https: \/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage\/.*|highlight\/.*)
+       - name: axs
+       - type: response
+       - require body: true
+       - timeout: 10
+script-providers:
+    axs:
+       url: https://raw.githubusercontent.com/Mikephie/Script/main/Mike_axs.js
+    interval: 86400
