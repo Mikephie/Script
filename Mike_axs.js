@@ -6,7 +6,7 @@
 
 #!author=mike
 
-#!icon=> 重写地址：https://raw.githubusercontent.com/Mikephie/Script/main/Mike_axs.js
+#!icon=https://raw.githubusercontent.com/Mikephie/Script/main/Mike_axs.js
 
 
 
