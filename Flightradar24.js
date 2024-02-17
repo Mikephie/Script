@@ -4,7 +4,7 @@
 > 解锁说明：去广告+去水印
 > 更新时间：17 Feb 2024 at 18:13
 > 特别提醒：如需转载请注明出处，谢谢合作！
-> 重写地址：https://raw.githubusercontent.com/Mikephie/Script/main/Mike_Flightradar24.js
+> 重写地址：https://raw.githubusercontent.com/Mikephie/Script/main/Flightradar24.js
 > 特别说明：⚠️⚠️⚠️本脚本仅供学习交流使用，禁止转载售卖⚠️⚠️⚠️
           
           
