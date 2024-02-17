@@ -1,4 +1,4 @@
-> 应用名称：Mike_Flightradar24
+> 应用名称：Flightradar24
 > 下载地址：http://t.cn/Air8PM5k
 > 脚本作者：@Mikephie
 > 解锁说明：去广告+去水印
@@ -12,9 +12,7 @@
 
 # > Flightradar24@ddgksf2013
 ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) url script-echo-response https://github.com/ddgksf2013/dev/raw/main/flightradar24.js
-# > 极简汇率☆解锁会员权限（2023-12-30）@ddgksf2013
-^https?:\/\/explorer\.tratao\.com\/api\/client\/xtool\/vip url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/JiJianHuiLvProCrack.js
 
 [mitm]
-hostname = mobile.flightradar24.com, explorer.tratao.com
+hostname = mobile.flightradar24.com
 
