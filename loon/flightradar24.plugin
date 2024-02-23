@@ -1,0 +1,10 @@
+#!name=flightradar24
+#!desc=flightradar24黄金会员
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1041.png
+
+[Script]
+# > Flightradar24@ddgksf2013
+http-request ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) script-path=http://script.hub/convert/_start_/https://github.com/ddgksf2013/dev/raw/main/flightradar24.js/_end_/flightradar24.js?type=qx-script&target=loon-script&wrap_response=true, timeout=60, tag=flightradar24
+
+[MITM]
+hostname = mobile.flightradar24.com
