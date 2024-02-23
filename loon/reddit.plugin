@@ -1,0 +1,12 @@
+#!name=Reddit
+#!desc=过滤推广, 关 NSFW 提示 @xream
+#!icon=https://raw.githubusercontent.com/Mikephie/Script/main/loon/reddit.png
+
+[General]
+force-http-engine-hosts = gql.reddit.com, gql-fed.reddit.com
+
+[Script]
+http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/reddit.js, requires-body=true, timeout=30, tag=Reddit
+
+[MITM]
+hostname = gql.reddit.com, gql-fed.reddit.com
