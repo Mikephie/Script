@@ -64,7 +64,7 @@ if (typeof $response == "undefined") {
   const app = '1';
   const UAMappings = {
     'StarDiary':{ name: 'pro', id: 'com.gsdyx.StarDiary.nonConsumable.forever'},
-    'FaceMa':{ name: 'pro access', id: 'Pro_Month_FaceMa'},
+    'FaceMa':{ name: 'premium', id: 'Pro_Lifetime'},
     'CountDuck':{ name: 'premium', id: 'Lifetime'},
     'StarFocus':{ name: 'pro', id: 'com.gsdyx.StarFocus.nonConsumable.forever'},
     'Context_iOS':{ name: 'pro', id: 'ctx_3y_sspai_preorder_angel'},
