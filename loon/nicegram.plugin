@@ -1,0 +1,9 @@
+#!name=Nicegram
+#!desc=Nicegram
+#!icon=https://raw.githubusercontent.com/Mikephie/Script/main/loon/nicegram.png
+
+[Script]
+http-response https://nicegram.cloud/api/v6/telegram/auth|user|info script-path=nicegram.js, requires-body=true, timeout=60, tag=nicegram
+
+[MITM]
+hostname = nicegram.cloud
