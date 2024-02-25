@@ -1,0 +1,11 @@
+#!name=Photoroom
+#!desc=Photoroom一次性解锁🔓+去Header
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1063.png
+
+[Script]
+http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/PhotoRoom.js, requires-body=true, timeout=60, tag=PhotoRoom
+
+http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/PhotoRoom.js, timeout=60, tag=PhotoRoom
+
+[MITM]
+hostname = api.revenuecat.com
