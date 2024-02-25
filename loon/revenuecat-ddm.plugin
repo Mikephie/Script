@@ -2,9 +2,6 @@
 #!desc=Revenuecat合集
 #!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1073.png
 
-[Rewrite]
-^https?:\/\/app-measurement\.com\/config\/app - reject
-^https?:\/\/firestore\.googleapis\.com - reject
 
 [Script]
 http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=true, timeout=60, tag=Reheji
@@ -12,4 +9,4 @@ http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?
 http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, timeout=60, tag=Reheji
 
 [MITM]
-hostname = api.revenuecat.com, app-measurement.com, firestore.googleapis.com
+hostname = api.revenuecat.com
