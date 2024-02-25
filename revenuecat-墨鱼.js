@@ -40,6 +40,7 @@ const mapping = {
   'LUTCamera': ['ProVersion', 'com.uzero.funforcam.monthlysub'],
   'totowallet': ['all', 'com.ziheng.totowallet.yearly'],
   'Aphrodite': ['all'],
+  'AnkiPro': ['Premium', 'com.ankipro.app.lifetime'],
   'apollo': ['all'],
   'widget_art': ['all'],
   'OneBox': ['all'],
