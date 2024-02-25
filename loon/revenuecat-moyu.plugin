@@ -1,12 +1,14 @@
 #!name=Revenuecat🦑
-#!desc=revenuecat合集
+#!desc=今天也要吸猫猫吖 https://appraven.net/collection/77299969
+#!author=𝐝𝐝𝐠𝐤𝐬𝐟𝟐𝟎𝟏𝟑
 #!icon=https://raw.githubusercontent.com/Mikephie/Script/main/loon/moyu.png
+#!tgchannel=https://t.me/ddgksf2021
 
 [Script]
 # ～ RevenueCat@ddgksf2013
-http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path=http://script.hub/convert/_start_/https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js/_end_/revenuecat.js?type=qx-script&target=loon-script&wrap_response=true, requires-body=true, timeout=60, tag=revenuecat
+http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body=true, timeout=60, tag=RevenueCatVip
 
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js/_end_/deleteHeader.js?type=qx-script&target=loon-script&wrap_response=true, timeout=60, tag=deleteHeader
+http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js, timeout=60, tag=RevenueCatDeleteHeader
 
 [MITM]
 hostname = api.revenuecat.com
