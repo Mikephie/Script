@@ -2,12 +2,13 @@
 #!desc=Flightradar24 & Grammarly & 扫描全能王Pro 
 #!icon=https://raw.githubusercontent.com/Mikephie/Script/main/loon/moyu.png
 
+
 [Script]
 # ✅ Flightradar24
 http-request ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/Mikephie/Script/main/flightradar24code.js/_end_/flightradar24code.js?type=qx-script&target=loon-script&wrap_response=true, timeout=60, tag=flightradar24code
 
 # ✅ Grammarly解锁订阅
-^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/grammarlypremiumcrack.js
+http-response ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/Mikephie/Script/main/grammarlypremiumcrack.js/_end_/grammarlypremiumcrack.js?type=qx-script&target=loon-script&wrap_response=true, requires-body=true, timeout=60, tag=grammarlypremiumcrack
 
 # ✅ 扫描全能王
 http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/Mikephie/Script/main/camscannerprocode.js/_end_/camscannerprocode.js?type=qx-script&target=loon-script&wrap_response=true, requires-body=true, timeout=60, tag=camscannerprocode
