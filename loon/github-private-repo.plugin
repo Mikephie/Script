@@ -8,4 +8,4 @@
 hostname = raw.githubusercontent.com, gist.githubusercontent.com
 
 [Script]
-http-request ^https?:\/\/(raw|gist)\.githubusercontent.com, script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js, requires-body=0 tag=Github Private
+http-request ^https?:\/\/(raw|gist)\.githubusercontent\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/loon/github-private-repo.plugin, requires-body=0, tag=Github Private
