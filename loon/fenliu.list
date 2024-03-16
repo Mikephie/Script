@@ -1,0 +1,19 @@
+
+# Circuit Route
+
+DOMAIN,firebaselogging-pa.googleapis
+DOMAIN,firestore.googleapis.com
+
+# PandaPub Fenliu
+
+DOMAIN,pandafan.pub
+DOMAIN,widget.intercom.io
+DOMAIN,api-iam.intercom.io
+
+# 4D King v2
+
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,applvn.com
+DOMAIN-SUFFIX,firebasedynamiclinks.googleapis.com
+DOMAIN-SUFFIX,firebaselogging.googleapis.com
+DOMAIN-SUFFIX,firebaseremoteconfig.googleapis.com
