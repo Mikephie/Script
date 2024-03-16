@@ -1,0 +1,20 @@
+#分流
+
+# Circuit Route
+
+HOST, firebaselogging-pa.googleapis, DIRECT
+HOST, firestore.googleapis.com, DIRECT
+
+# PandaPub
+
+HOST, pandafan.pub, DIRECT
+HOST, widget.intercom.io, DIRECT
+HOST, api-iam.intercom.io, DIRECT
+
+# 4D King v2
+
+HOST-SUFFIX, applovin.com, DIRECT
+HOST-SUFFIX, applvn.com, DIRECT
+HOST-SUFFIX, firebasedynamiclinks.googleapis.com, DIRECT
+HOST-SUFFIX, firebaselogging.googleapis.com, DIRECT
+HOST-SUFFIX, firebaseremoteconfig.googleapis.com, DIRECT
