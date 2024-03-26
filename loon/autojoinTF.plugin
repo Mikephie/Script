@@ -1,0 +1,11 @@
+#!name=AutoJoinTF
+#!desc=AutoJoinTF
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/TestFlight.png
+
+[Script]
+http-request ^https:\/\/testflight\.apple\.com\/(v3\/accounts\/.*[^\/accept]|join\/[A-Za-z0-9]+)$ script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js, timeout=60, tag=AutoJoinTF
+
+cron "0/5 * * * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js, timeout=60, tag=TF监控自动加入, img-url=https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png
+
+[MITM]
+hostname = testflight.apple.com
