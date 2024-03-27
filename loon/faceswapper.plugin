@@ -1,0 +1,10 @@
+#!name=FaceSwapper
+#!desc=FaceSwapper
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/faceswapper.png
+
+[Script]
+http-response ^https?:\/\/api-sgp\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceSwapper.js, requires-body=true, timeout=60, tag=FaceSwapper
+
+[MITM]
+hostname = api-sgp.facereplacerext.com
+
