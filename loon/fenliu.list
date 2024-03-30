@@ -3,7 +3,7 @@
 
 DOMAIN,firebaselogging-pa.googleapis
 DOMAIN,firestore.googleapis.com
-
+DOMAIN,firestore.googleapis.com
 # PandaPub Fenliu
 
 DOMAIN,pandafan.pub
