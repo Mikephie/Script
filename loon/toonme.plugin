@@ -1,0 +1,10 @@
+#!name=ToonMe
+#!desc=Guding
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/toonme.png
+
+[Script]
+http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Guding88/Script/main/ToonMe.js, requires-body=true, timeout=60, tag=ToonMe
+
+[MITM]
+hostname = purchases.ws.pho.to
+
