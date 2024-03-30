@@ -1,0 +1,10 @@
+#!name=FaceLab
+#!desc=FaceLab
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/facelab.png
+
+[Script]
+http-response ^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js, requires-body=true, timeout=60, tag=FaceLab
+
+[MITM]
+hostname = subscription-api.lyrebirdstudio.net
+
