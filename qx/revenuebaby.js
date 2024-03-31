@@ -60,14 +60,6 @@ if (typeof $response == "undefined") {
     delete $request.headers[key];
     }
   }
-  
-//排除已禁止MITM的APP
-const forbid = ['Fileball', 'APTV'];
-
-if (forbid.some(appName => (ua && ua.includes(appName)) || (requestBody && requestBody.includes(appName)))) {
-  console.log('发现禁止MITM的APP，已停止运行脚本！\n叮当猫の分享频道: https://t.me/chxm1023');
-  $done({});
-}
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
