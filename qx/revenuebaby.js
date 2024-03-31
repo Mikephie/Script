@@ -111,7 +111,7 @@ if (typeof $response == "undefined") {
     
         //以下内容来自叮当猫（@chxm1023）
     'PhotoRoom': { name: 'pro', id: 'com.background.pro.yearly', cm: 'sja' },  //PhotoRoom
-   
+   	'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int', cm: 'sjb' },  //Drops外语
 
 
     
