@@ -109,9 +109,12 @@ if (typeof $response == "undefined") {
     'Liftbear':{ name: 'Pro', id: 'liftbear_2399_1y'},
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
     
-#叮当猫
-
+        //以下内容来自叮当猫（@chxm1023）
     'PhotoRoom': { name: 'pro', id: 'com.background.pro.yearly', cm: 'sja' },  //PhotoRoom
+   
+
+
+    
     
     };
 
