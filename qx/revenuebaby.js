@@ -60,6 +60,14 @@ if (typeof $response == "undefined") {
     delete $request.headers[key];
     }
   }
+  
+//排除已禁止MITM的APP
+const forbid = ['Fileball', 'APTV'];
+
+if (forbid.some(appName => (ua && ua.includes(appName)) || (requestBody && requestBody.includes(appName)))) {
+  console.log('发现禁止MITM的APP，已停止运行脚本！\n叮当猫の分享频道: https://t.me/chxm1023');
+  $done({});
+}
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
@@ -112,7 +120,8 @@ if (typeof $response == "undefined") {
         //以下内容来自叮当猫（@chxm1023）
     'PhotoRoom': { name: 'pro', id: 'com.background.pro.yearly', cm: 'sja' },  //PhotoRoom
     'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int', cm: 'sjb' },  //Drops外语
-
+    'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month', cm: 'sja' },  //花样文字
+    'OneScreen': { name: 'pro', id: 'onescreen_lifetime', cm: 'sjb' },  //OneScreen截图带壳
 
     
     
