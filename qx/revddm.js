@@ -46,14 +46,15 @@ const bundle = {
 //识别UA
 const list = {
 	
-	#ios baby
-	
-	'PDF%20Viewer':{ name: 'sub.pro', id: 'com.pspdfkit.viewer.sub.pro.yearly'},  //2024.3.21
-    'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},  //2024.3.2
-    'FaceMa':{ name: 'Pro access', id: 'Pro_Lifetime'},  //Facema
-    'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},  //MadeYu
-    'clica':{ name: 'pro', id: 'clica.vip.year'},  //clica
+	# ios baby
 
+        'PDF%20Viewer':{ name: 'sub.pro', id: 'com.pspdfkit.viewer.sub.pro.yearly'},//2024.3.21
+        'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},//2024.3.2
+        'FaceMa':{ name: 'Pro access', id: 'Pro_Lifetime'},//Facemo
+        'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},//
+        'clica':{ name: 'pro', id: 'clica.vip.year'},//
+
+	# chxm1023
 
 	'Shapy': { name: 'premium', id: 'com.blake.femalefitness.subscription.yearly', cm: 'sja' },  //Shapy-健身
 	'Carbon-iOS': { name: 'pro', id: 'carbon.unlockall', cm: 'sjb' },  //Carbon-碳
