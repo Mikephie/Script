@@ -1,6 +1,7 @@
 # Citibank
 HOST-SUFFIX,smetrics.citibank.com.sg
 HOST-SUFFIX,glassboxdigital.io
+HOST-SUFFIX,omtrdc.net
 
 # Circuit Route
 HOST,firebaselogging-pa.googleapis
