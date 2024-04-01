@@ -1,6 +1,7 @@
 # Citibank
 DOMAIN-SUFFIX,smetrics.citibank.com.sg
 DOMAIN-SUFFIX,glassboxdigital.io
+DOMAIN-SUFFIX,omtrdc.net
 
 # Circuit Route
 DOMAIN,firebaselogging-pa.googleapis
