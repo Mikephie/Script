@@ -1,3 +1,8 @@
+# Telco
+DOMAIN-SUFFIX,M1.com.sg
+DOMAIN-SUFFIX,singtel.como
+DOMAIN-SUFFIX,starhub.com
+
 # Citibank
 DOMAIN-SUFFIX,smetrics.citibank.com.sg
 DOMAIN-SUFFIX,glassboxdigital.io
