@@ -1,20 +1,19 @@
-#分流
+# Citibank
+HOST-SUFFIX,smetrics.citibank.com.sg
+HOST-SUFFIX,glassboxdigital.io
 
 # Circuit Route
+HOST,firebaselogging-pa.googleapis
+HOST-SUFFIX,firestore.googleapis.com
 
-HOST, firebaselogging-pa.googleapis, DIRECT
-HOST, firestore.googleapis.com, DIRECT
-
-# PandaPub
-
-HOST, pandafan.pub, DIRECT
-HOST, widget.intercom.io, DIRECT
-HOST, api-iam.intercom.io, DIRECT
+# PandaPub Fenliu
+HOST,pandafan.pub
+HOST,widget.intercom.io
+HOST,api-iam.intercom.io
 
 # 4D King v2
-
-HOST-SUFFIX, applovin.com, DIRECT
-HOST-SUFFIX, applvn.com, DIRECT
-HOST-SUFFIX, firebasedynamiclinks.googleapis.com, DIRECT
-HOST-SUFFIX, firebaselogging.googleapis.com, DIRECT
-HOST-SUFFIX, firebaseremoteconfig.googleapis.com, DIRECT
+HOST-SUFFIX,applovin.com
+HOST-SUFFIX,applvn.com
+HOST-SUFFIX,firebasedynamiclinks.googleapis.com
+HOST-SUFFIX,firebaselogging.googleapis.com
+HOST-SUFFIX,firebaseremoteconfig.googleapis.com
