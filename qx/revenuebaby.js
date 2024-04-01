@@ -2,19 +2,6 @@
 
 项目名称：revenuecat合集 （此合集只包含10.5及以后的软件）
 软件版本：均适配2023.9.8最新 （每一个下载地址对应一个UAMappings）
-下载地址：星锤日记 https://is.gd/R5KqD4
-下载地址：倒数鸭  https://is.gd/rETAhp
-下载地址：星垂专注 https://is.gd/rEG9H5
-下载地址：Context https://is.gd/splCnF
-下载地址： Vision-个人OKR目标管理 https://t.cn/A6OxXNxK
-下载地址：Structured-每日计划 https://t.cn/A6cWhz4X
-下载地址：cookie记账 
-下载地址：倒数鸭 
-下载地址：HTTPBOT 2022.2.1 作者zoo
-下载地址：Mypianist 2.08
-下载地址：TouchRetouch 5.1.12
-下载地址：Appspree https://t.cn/A6otfeAc 3.1
-下载地址：Persona 1.824
 下载地址：WordSwag 4.56
 下载地址：AnkiPro 1.22.1
 下载地址：SmartAI 
@@ -114,6 +101,7 @@ if (typeof $response == "undefined") {
     'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int', cm: 'sjb' },  //Drops外语
     'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month', cm: 'sja' },  //花样文字
     'OneScreen': { name: 'pro', id: 'onescreen_lifetime', cm: 'sjb' },  //OneScreen截图带壳
+    'IDM': { name: 'premium', id: 'sub_yearly_idm', cm: 'sjb' },  //IDM
 
     
     
