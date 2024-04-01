@@ -1,3 +1,8 @@
+# Telco
+HOST-SUFFIX,M1.com.sg
+HOST-SUFFIX,singtel.como
+HOST-SUFFIX,starhub.com
+
 # Citibank
 HOST-SUFFIX,smetrics.citibank.com.sg
 HOST-SUFFIX,glassboxdigital.io
