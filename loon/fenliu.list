@@ -1,16 +1,17 @@
+# Citibank
+DOMAIN-SUFFIX,smetrics.citibank.com.sg
+DOMAIN-SUFFIX,glassboxdigital.io
 
 # Circuit Route
-
 DOMAIN,firebaselogging-pa.googleapis
-DOMAIN,firestore.googleapis.com
-# PandaPub Fenliu
+DOMAIN-SUFFIX,firestore.googleapis.com
 
+# PandaPub Fenliu
 DOMAIN,pandafan.pub
 DOMAIN,widget.intercom.io
 DOMAIN,api-iam.intercom.io
 
 # 4D King v2
-
 DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,applvn.com
 DOMAIN-SUFFIX,firebasedynamiclinks.googleapis.com
