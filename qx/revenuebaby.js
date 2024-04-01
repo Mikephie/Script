@@ -102,6 +102,7 @@ if (typeof $response == "undefined") {
     'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month', cm: 'sja' },  //花样文字
     'OneScreen': { name: 'pro', id: 'onescreen_lifetime', cm: 'sjb' },  //OneScreen截图带壳
     'IDM': { name: 'premium', id: 'sub_yearly_idm', cm: 'sjb' },  //IDM
+    'Whisper': { name: 'premium', id: 'whisperai_80_y', cm: 'sjb' },  //Whisper
 
     
     
