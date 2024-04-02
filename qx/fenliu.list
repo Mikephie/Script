@@ -18,8 +18,8 @@ HOST,widget.intercom.io
 HOST,api-iam.intercom.io
 
 # 4D King v2
-HOST-SUFFIX,applovin.com
-HOST-SUFFIX,applvn.com
+;HOST-SUFFIX,applovin.com
+;HOST-SUFFIX,applvn.com
 HOST-SUFFIX,firebasedynamiclinks.googleapis.com
 HOST-SUFFIX,firebaselogging.googleapis.com
 HOST-SUFFIX,firebaseremoteconfig.googleapis.com
