@@ -1,0 +1,16 @@
+#!name=revenueddm
+#!desc=revenueddm
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1016.png
+
+[Rewrite]
+^https?:\/\/app-measurement\.com\/config\/app - reject
+^https?:\/\/firestore\.googleapis\.com - reject
+
+[Script]
+http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueddm.js, requires-body=true, timeout=60, tag=revenueddm
+
+http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueddm.js, timeout=60, tag=revenueddm
+
+[MITM]
+hostname = api.revenuecat.com, app-measurement.com, firestore.googleapis.com
+
