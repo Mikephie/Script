@@ -18,6 +18,14 @@ hostname = api.revenuecat.com
 
 ************************************/
 
+//排除已禁止MITM的APP
+const forbid = ['Fileball', 'APTV'];
+
+if (forbid.some(appName => (ua && ua.includes(appName)) || (requestBody && requestBody.includes(appName)))) {
+  console.log('发现禁止MITM的APP，已停止运行脚本！\n叮当猫の分享频道: https://t.me/chxm1023');
+  $done({});
+}
+
 const Q = {};
 const Q1 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 if (typeof $response == "undefined") {
