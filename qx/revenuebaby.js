@@ -85,7 +85,7 @@ if (typeof $response == "undefined") {
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
     
         //以下内容来自叮当猫（@chxm1023）
-    'mizframa': { name: 'premium', id: 'mf_20_lifetime2', cm: 'sjb' },  //Mizframa v2.2
+    'mizframa': { name: 'premium', id: 'mf_20_lifetime2', cm: 'sjb' },  //Mizframa v2.0
     'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime', cm: 'sjb' },  //CareServer-服务器监控
     'ShellBean':{ name: 'pro', id: 'com.ningle.shellbean.subscription.year', cm: 'sja' },  //Shellbean
     'PhotoRoom': { name: 'pro', id: 'com.background.pro.yearly', cm: 'sja' },  //PhotoRoom
