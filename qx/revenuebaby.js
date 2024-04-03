@@ -2,17 +2,6 @@
 
 项目名称：revenuecat合集 （此合集只包含10.5及以后的软件）
 软件版本：均适配2023.9.8最新 （每一个下载地址对应一个UAMappings）
-下载地址：WordSwag 4.56
-下载地址：AnkiPro 1.22.1
-下载地址：SmartAI 
-下载地址：AI Chat 
-下载地址：‎AI Type
-下载地址：TextMask
-下载地址：Music Mate
-下载地址：Langster https://too.st/7aW 同作者5个软件 
-下载地址：muse 同作者2个软件
-下载地址：Funexpected 
-下载地址：中国法律
 使用声明：⚠️仅供参考，🈲️转载与售卖！
 
 **************************************
@@ -55,7 +44,6 @@ if (typeof $response == "undefined") {
     'FaceMa':{ name: 'Pro access', id: 'Pro_Lifetime'},//Facemo
     'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},//
     'clica':{ name: 'pro', id: 'clica.vip.year'},//
-
     'StarDiary':{ name: 'pro', id: 'com.gsdyx.StarDiary.nonConsumable.forever'},
     'CountDuck':{ name: 'premium', id: 'Lifetime'},
     'StarFocus':{ name: 'pro', id: 'com.gsdyx.StarFocus.nonConsumable.forever'},
@@ -97,6 +85,8 @@ if (typeof $response == "undefined") {
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
     
         //以下内容来自叮当猫（@chxm1023）
+    'mizframa': { name: 'premium', id: 'mf_20_lifetime2', cm: 'sjb' },  //Mizframa v2.2
+    'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime', cm: 'sjb' },  //CareServer-服务器监控
     'ShellBean':{ name: 'pro', id: 'com.ningle.shellbean.subscription.year', cm: 'sja' },  //Shellbean
     'PhotoRoom': { name: 'pro', id: 'com.background.pro.yearly', cm: 'sja' },  //PhotoRoom
     'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int', cm: 'sjb' },  //Drops外语
