@@ -94,7 +94,7 @@ if (typeof $response == "undefined") {
     
         //以下内容来自叮当猫（@chxm1023）
     'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime', cm: 'sjb' },  //CareServer-服务器监控
-    'ShellBean':{ name: 'pro', id: 'com.ningle.shellbean.subscription.year', cm: 'sja' },  //Shellbean
+    'ShellBean':{ name: 'pro', id: 'com.ningle.shellbean.subscription.year', },  //Shellbean
     'PhotoRoom': { name: 'pro', id: 'com.background.pro.yearly', cm: 'sja' },  //PhotoRoom
     'ScannerPro': { name: 'plus', id: 'com.chxm1024.premium.yearly', cm: 'sja' },  //Scanner Pro-文档扫描
     'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int', cm: 'sjb' },  //Drops外语
