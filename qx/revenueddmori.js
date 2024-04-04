@@ -239,6 +239,10 @@ const list = {
 	'totowallet': { name: 'all', id: 'com.ziheng.totowallet.onetimepurchase', cm: 'sjb' },  //图图记账
 	'1Blocker': { name: 'premium', id: 'blocker.ios.iap.lifetime', cm: 'sjb' },  //1Blocker-广告拦截
 	'VSCO': { name: 'pro', id: 'vscopro_global_5999_annual_7D_free', cm: 'sja' }  //VSCO-照片与视频编辑
+	'FaceMa': { name: 'Pro access', id: 'Pro_Lifetime', cm: 'sja' },  //FaceMa
+	'ShellBean': { name: 'Pro', id: 'com.ningle.shellbean.subscription.year', cm: 'sjb' },  //ShellBean
+	'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade', cm: 'sjb' },  //Currency
+	'MadeYu': { name: 'pro_plus', id: 'my_1499_1000', cm: 'sjb' },  //MadeYu
 };
 
 try {
