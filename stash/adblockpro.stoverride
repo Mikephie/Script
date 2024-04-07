@@ -1,0 +1,23 @@
+name: |-
+  adblockpro
+desc: |-
+  adblockpro
+icon: |-
+  https://raw.githubusercontent.com/Mikephie/icons/main/loon/adblockpro.png
+
+http:
+
+  mitm:
+    - "api.adblockpro.app"
+
+  script:
+    - match: ^https:\/\/api\.adblockpro\.app\/verify
+      name: "adblockpro_4"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "adblockpro_4":
+    url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js
+    interval: 86400
