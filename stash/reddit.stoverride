@@ -1,16 +1,25 @@
-name: "Reddit"
-desc: "过滤推广, 关 subreddit 的 NSFW 提示 @xream"
+name: |-
+  Reddit去广告
+desc: |-
+  过滤应用内推广，阻止NSFW提示。
+author: |-
+  xream
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1053.png
+
 http:
-  script:
-    - match: ^https?:\/\/gql\.reddit\.com
-      name: "Reddit_3"
-      type: response
-      timeout: 30
-      require-body: true
-      max-size: 3145728
+
   mitm:
-    - "gql.reddit.com, gql-fed.reddit.com"
+    - "gql.reddit.com"
+    - "gql-fed.reddit.com"
+
+  script:
+    - match: ^https?:\/\/gql(-fed)?\.reddit\.com
+      name: "移除广告_4"
+      type: response
+      require-body: true
+
 script-providers:
-  "Reddit_3":
-    url: https://raw.githubusercontent.com/Mikephie/Script/main/reddit.js
+  "移除广告_4":
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Reddit/Reddit_remove_ads.js
     interval: 86400
