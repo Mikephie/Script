@@ -1,0 +1,23 @@
+name: |-
+  ToonMe
+desc: |-
+  Guding
+icon: |-
+  https://raw.githubusercontent.com/Mikephie/icons/main/loon/toonme.png
+
+http:
+
+  mitm:
+    - "purchases.ws.pho.to"
+
+  script:
+    - match: ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt
+      name: "ToonMe_4"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "ToonMe_4":
+    url: https://raw.githubusercontent.com/Guding88/Script/main/ToonMe.js
+    interval: 86400
