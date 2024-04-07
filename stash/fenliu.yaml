@@ -1,0 +1,19 @@
+# 规则名称:Mike
+# 规则统计:15
+
+payload:
+DOMAIN-KEYWORD,stream-link
+DOMAIN-SUFFIX,m1.com.sg
+DOMAIN-SUFFIX,singtel.com
+DOMAIN-SUFFIX,starhub.com
+DOMAIN-SUFFIX,smetrics.citibank.com.sg
+DOMAIN-SUFFIX,glassboxdigital.io
+DOMAIN-SUFFIX,omtrdc.net
+DOMAIN,firebaselogging-pa.googleapis
+DOMAIN-SUFFIX,firestore.googleapis.com
+DOMAIN,pandafan.pub
+DOMAIN,widget.intercom.io
+DOMAIN,api-iam.intercom.io
+DOMAIN-SUFFIX,firebasedynamiclinks.googleapis.com
+DOMAIN-SUFFIX,firebaselogging.googleapis.com
+DOMAIN-SUFFIX,firebaseremoteconfig.googleapis.com
