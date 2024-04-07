@@ -9,7 +9,7 @@ http:
       require-body: true
       max-size: 3145728
   mitm:
-    - "gql.reddit.com"
+    - "gql.reddit.com, gql-fed.reddit.com"
 script-providers:
   "Reddit_3":
     url: https://raw.githubusercontent.com/Mikephie/Script/main/reddit.js
