@@ -1,0 +1,16 @@
+name: "Reddit"
+desc: "过滤推广, 关 subreddit 的 NSFW 提示 @xream"
+http:
+  script:
+    - match: ^https?:\/\/gql\.reddit\.com
+      name: "Reddit_3"
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+  mitm:
+    - "gql.reddit.com"
+script-providers:
+  "Reddit_3":
+    url: https://raw.githubusercontent.com/Mikephie/Script/main/reddit.js
+    interval: 86400
