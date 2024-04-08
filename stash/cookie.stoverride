@@ -1,0 +1,69 @@
+name: Cookie
+desc: 贴吧 阿里云盘 喜马拉雅 微付金币
+openUrl: http://boxjs.com/项目地址/
+author: 作者
+homepage: https://github.com/主页/
+manual: https://github.com/项目地址/
+icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+category: 签到
+
+
+http:
+  mitm:
+    - "tieba.baidu.com"
+    - "auth.alipan.com,auth.aliyundrive.com"
+    - "*.ximalaya.com"
+    - "payapp.weixin.qq.com"
+
+  script:
+    - match: https?:\/\/tieba\.baidu\.com\/?.？
+      name: TiaBa
+      type: request
+      require-body: true
+      timeout: 10
+      argument: ''
+      debug: false
+      binary-mode: false
+      max-size: 1048576
+
+    - match: https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token
+      name: AliYunPan
+      type: request
+      require-body: true
+      timeout: 10
+      argument: ''
+      debug: false
+      binary-mode: false
+      max-size: 1048576
+
+    - match: https?:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/app-skin-service\/skin\/
+      name: XiMaLaYa
+      type: request
+      require-body: false
+      timeout: 10
+      argument: ''
+      debug: false
+      binary-mode: false
+      max-size: 1048576
+
+    - match: https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login
+      name: 微付金币
+      type: response
+      require-body: true
+
+script-providers:
+  TiaBa:
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
+    interval: 86400
+
+  AliYunPan:
+    url: https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+    interval: 86400
+
+  XiMaLaYa:
+    url: https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/xmly.js
+    interval: 86400
+
+  微付金币:
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
+    interval: 86400
