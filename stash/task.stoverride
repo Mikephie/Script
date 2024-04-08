@@ -9,6 +9,10 @@ category: 签到
 
 cron:
   script:
+    - name: 每日汇率
+      cron: '0 8,9 * * ?'
+      timeout: 60
+
     - name: TiaBa
       cron: '11 12 * * *'
       timeout: 60
@@ -30,6 +34,10 @@ cron:
       timeout: 60
 
 script-providers:
+  每日汇率:
+    url: https://raw.githubusercontent.com/Mikephie/Task/main/hljk.js
+    interval: 86400
+
   TiaBa:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
     interval: 86400
