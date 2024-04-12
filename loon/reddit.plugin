@@ -1,6 +1,6 @@
 #!name=Reddit
 #!desc=过滤推广, 关 NSFW 提示 @xream
-#!icon=https://raw.githubusercontent.com/Mikephie/Script/main/loon/reddit.png
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/reddit.png
 
 [General]
 force-http-engine-hosts = gql.reddit.com, gql-fed.reddit.com
