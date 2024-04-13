@@ -1,0 +1,11 @@
+#!name=caiyuntianqi
+#!desc=彩云天气
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/caiyun.png
+
+[Script]
+http-response ^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyuntianqi
+
+http-request ^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60, tag=caiyuntianqi
+
+[MITM]
+hostname = *.cyapi.cn, *.caiyunapp.com 
