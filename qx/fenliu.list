@@ -7,9 +7,9 @@ HOST-keyword,stream-link
 #HOST-SUFFIX,starhub.com
 
 # Citibank
-HOST-SUFFIX,smetrics.citibank.com.sg
-HOST-SUFFIX,glassboxdigital.io
-HOST-SUFFIX,omtrdc.net
+#HOST-SUFFIX,smetrics.citibank.com.sg
+#HOST-SUFFIX,glassboxdigital.io
+#HOST-SUFFIX,omtrdc.net
 
 # Circuit Route
 HOST,firebaselogging-pa.googleapis
