@@ -18,7 +18,7 @@ dns:
                           # 默认DNS服务器，支持udp/tcp/dot/doh/doq
 
 # > 订阅信息展示
-subscribe-url: 
+subscribe-url: http://fbapiv1.fbsublink.com/flydsubal/48cuguvfhi9x4tbw?clash=1&extend=1&overseas=1 # 🧸
 
 # > 远程服务器
 proxy-providers:
