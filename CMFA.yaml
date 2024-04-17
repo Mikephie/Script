@@ -91,7 +91,7 @@ i: &i {type: http, behavior: ipcidr, interval: 86400}
 ###结束
 
 proxy-providers:
-  Subscribe: {<<: *p, path: ./proxy-providers/Sub.yaml, url: http://your-service-provider}
+  Subscribe: {<<: *p, path: ./proxy-providers/Sub.yaml, url: http://fbapiv1.fbsublink.com/flydsubal/48cuguvfhi9x4tbw?clash=1&extend=1&overseas=1}
     # 在此将"http://your-service-provider"替换为你的机场订阅，推荐使用base64或者node list
     # Sub-Store生成的链接,可以直接替换上述url引号中的部分,具体见Sub-Store教程         
                
