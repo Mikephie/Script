@@ -71,7 +71,7 @@ proxy-providers:
     <<: *a1
     url: https://t.me/ddgksf2021.yaml
     # URL后面填写格式1[单一订阅]: 直接填写你的机场Clash订阅[推荐此种方式，避免订阅泄露]
-    # URL后面填写格式2[多个订阅]：https://api.nexconvert.com/sub?target=clash&url2=https://getconf.oss-accelerate.aliyuncs.com/clash/138399/l0138253|https://fbapiv1.fbsublink.com/flydsubal/48cuguvfhi9x4tbw?sub=2&extend=1&overseas=1&emoji=true&list=true&new_name=true&udp=false
+     URL后面填写格式2[多个订阅]：https://api.nexconvert.com/sub?target=clash&url2=https://getconf.oss-accelerate.aliyuncs.com/clash/138399/l0138253|https://fbapiv1.fbsublink.com/flydsubal/48cuguvfhi9x4tbw?sub=2&extend=1&overseas=1&emoji=true&list=true&new_name=true&udp=false
     path: ./proxy_providers/tmp.yaml
     
 proxies: null
