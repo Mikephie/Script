@@ -92,11 +92,11 @@ proxies: null
 
 # 代理订阅
 proxy-providers:
-  飞鸟:
+  matrix:
     type: http
     url: "https://fbapiv1.fbsublink.com/flydsubal/48cuguvfhi9x4tbw?sub=2&extend=1&overseas=1" # 🧸
     interval: 3600
-  海龟:
+    海龟:
     type: http
     url: "https://getconf.oss-accelerate.aliyuncs.com/clash/138399/l0138253" # 🧸
     interval: 3600
