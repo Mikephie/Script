@@ -254,7 +254,7 @@ proxy-groups:
 
     - name: "英国节点"
     type: url-test
-    filter: "英国|英|UK|🇬🇧|(?i)England"
+    filter: "英国|英|UK|🇬🇧|(?i)United Kingdom"
     use: 
       - mike
     url: "https://cp.cloudflare.com/generate_204"
