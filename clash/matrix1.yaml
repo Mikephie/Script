@@ -303,6 +303,7 @@ proxy-groups:
 # 本地规则
 rules:
   - RULE-SET, 规则修正, DIRECT
+  - RULE-SET, Fenliu, DIRECT
   - RULE-SET, 广告拦截, REJECT
   - RULE-SET, Alibaba, DIRECT
   - RULE-SET, 港台番剧, 港台番剧
@@ -324,6 +325,13 @@ rule-providers:
     type: http
     path: ./Ruleset/Unbreak.yaml
     url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml
+
+ Fenliu: 
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./Ruleset/Fenliu.yaml
+    url: https://raw.githubusercontent.com/Mikephie/Script/main/clash/Fenliu.yaml
 
   广告拦截: 
     behavior: domain
