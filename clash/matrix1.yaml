@@ -372,7 +372,7 @@ rule-providers:
     interval: 86400
     type: http
     path: ./Ruleset/StreamingCN.yaml
-    url: https://raw.githubusercontent.com/飞鸟phie/Script/main/clash/海归media.yaml
+    url: https://raw.githubusercontent.com/mikephie/Script/main/clash/chinamedia.yaml
 
   全球加速: 
     behavior: classical
