@@ -244,6 +244,38 @@ proxy-groups:
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
 
+    - name: "马来西亚节点"
+    type: url-test
+    filter: "马来西亚|MY|🇲🇾|(?i)Malaysia"
+    use: 
+      - mike
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+
+    - name: "英国节点"
+    type: url-test
+    filter: "英国|英|UK|🇬🇧|(?i)England"
+    use: 
+      - mike
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+    
+  - name: "阿根廷节点"
+    type: url-test
+    filter: "阿根廷|AR|🇦🇷|(?i)Argentina"
+    use: 
+      - mike
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+ 
+  - name: "土耳其节点"
+    type: url-test
+    filter: "土耳其|TR|🇹🇷|(?i)Turkey"
+    use: 
+      - mike
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+
   - name: "回国节点"
     type: url-test
     filter: "中转|直连"
