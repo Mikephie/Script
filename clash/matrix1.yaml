@@ -87,16 +87,16 @@ proxies: null
 
 # 代理订阅
 proxy-providers:
-  飞鸟:
+  mike:
     type: http
     url: "http://fbapiv1.fbsublink.com/flydsubal/48cuguvfhi9x4tbw?clash=1&extend=1&overseas=1" 
     interval: 3600
-    path: ./Server/飞鸟.yaml
+    path: ./Server/mike.yaml
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
       interval: 600    
-  海归:
+  china:
     type: http
     url: "https://getconf.oss-accelerate.aliyuncs.com/clash/138399/l0138253"
     interval: 3600
@@ -112,7 +112,7 @@ proxy-groups:
   - name: "自行选择"
     type: select
     use:
-      - 飞鸟
+      - mike
       - china
 
   - name: "苹果服务"
@@ -208,7 +208,7 @@ proxy-groups:
   - name: "自动选择"
     type: url-test
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
 
@@ -216,7 +216,7 @@ proxy-groups:
     type: url-test
     filter: "香港|港|HK|🇭🇰|(?i)Hong"
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
 
@@ -224,7 +224,7 @@ proxy-groups:
     type: url-test
     filter: "台湾|台|TW|🇹🇼|(?i)Taiwan"
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
 
@@ -232,7 +232,7 @@ proxy-groups:
     type: url-test
     filter: "日本|日|JP|🇯🇵|(?i)Japan"
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
 
@@ -240,7 +240,7 @@ proxy-groups:
     type: url-test
     filter: "韩国|韩|KR|🇰🇷|(?i)Korea"
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
     
@@ -248,7 +248,7 @@ proxy-groups:
     type: url-test
     filter: "新加坡|狮|SG|🇸🇬|(?i)Singapore"
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
  
@@ -256,7 +256,7 @@ proxy-groups:
     type: url-test
     filter: "美国|美|US|🇺🇸|(?i)States"
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
 
@@ -264,7 +264,7 @@ proxy-groups:
     type: url-test
     filter: "马来西亚|MY|🇲🇾|(?i)Malaysia"
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
 
@@ -272,7 +272,7 @@ proxy-groups:
     type: url-test
     filter: "英国|英|UK|🇬🇧|(?i)United Kingdom"
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
     
@@ -280,7 +280,7 @@ proxy-groups:
     type: url-test
     filter: "阿根廷|AR|🇦🇷|(?i)Argentina"
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
  
@@ -288,7 +288,7 @@ proxy-groups:
     type: url-test
     filter: "土耳其|TR|🇹🇷|(?i)Turkey"
     use: 
-      - 飞鸟
+      - mike
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
 
@@ -296,7 +296,7 @@ proxy-groups:
     type: url-test
     filter: "中转|直连"
     use: 
-      - 海归
+      - china
     url: "https://cp.cloudflare.com/generate_204"
     interval: 1800
 
@@ -372,7 +372,7 @@ rule-providers:
     interval: 86400
     type: http
     path: ./Ruleset/StreamingCN.yaml
-    url: https://raw.githubusercontent.com/飞鸟phie/Script/main/clash/chinamedia.yaml
+    url: https://raw.githubusercontent.com/mikephie/Script/main/clash/chinamedia.yaml
 
   全球加速: 
     behavior: classical
