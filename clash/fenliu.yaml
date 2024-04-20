@@ -1,0 +1,26 @@
+# 规则名称:Fenliu
+# 规则统计:xxx
+
+payload:
+  # Stream-link.org
+  - DOMAIN-KEYWORD,stream-link
+  # Telco
+  - DOMAIN-SUFFIX,pstatp.com
+  - DOMAIN-SUFFIX,m1.com.sg
+  - DOMAIN-SUFFIX,singtel.com
+  - DOMAIN-SUFFIX,starhub.com
+  # Citibank
+  - DOMAIN-SUFFIX,smetrics.citibank.com.sg
+  - DOMAIN-SUFFIX,glassboxdigital.io
+  - DOMAIN-SUFFIX,omtrdc.net
+  # PandaPub Fenliu
+  - DOMAIN,pandafan.pub
+  - DOMAIN,widget.intercom.io
+  - DOMAIN,api-iam.intercom.io
+  # 4D King v2
+  - DOMAIN-SUFFIX,firebasedynamiclinks.googleapis.com
+  - DOMAIN-SUFFIX,firebaselogging.googleapis.com
+  - DOMAIN-SUFFIX,firebaseremoteconfig.googleapis.com
+
+
+
