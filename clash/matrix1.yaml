@@ -326,7 +326,7 @@ rule-providers:
     path: ./Ruleset/Unbreak.yaml
     url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml
 
- Fenliu: 
+  Fenliu: 
     behavior: classical
     interval: 86400
     type: http
