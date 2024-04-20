@@ -303,7 +303,7 @@ proxy-groups:
 # 本地规则
 rules:
   - RULE-SET, 规则修正, DIRECT
-  - RULE-SET, Fenliu, DIRECT
+  - RULE-SET, Fenliu, 全球加速
   - RULE-SET, 广告拦截, REJECT
   - RULE-SET, Alibaba, DIRECT
   - RULE-SET, 港台番剧, 港台番剧
