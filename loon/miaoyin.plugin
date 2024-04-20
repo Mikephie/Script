@@ -1,0 +1,10 @@
+#!name=miaoyin
+#!desc=妙音合集
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1007.png
+
+[Script]
+#课程题库
+http-response https://gx\.miaoyin\.cn/(dailySentence/token/selectAllDailySentenceList|discipleGauge/token/findDiscipleGaugeList|exiconNew/user/exiconInfo|courseIdiom/token/findCourseIdiomList) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/miaoyin.js, requires-body=true, timeout=60, tag=miaoyin
+
+[MITM]
+hostname = gx.miaoyin.cn
