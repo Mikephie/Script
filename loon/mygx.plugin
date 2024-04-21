@@ -1,0 +1,10 @@
+#!name=mygx
+#!desc=mygx
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1061.png
+
+[Script]
+#课程题库
+http-response https://gx\.miaoyin\.cn/(direct/token/(selectVideoClassCatalogueList|selectVideoClassDetails)|course/queryAiCourseCatalogue|user(token/info|VipEquity/token/findNewUserVipInfoV3)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mygx.js, requires-body=true, timeout=60, tag=mygx
+
+[MITM]
+hostname = gx.miaoyin.cn
