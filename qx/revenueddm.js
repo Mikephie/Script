@@ -250,7 +250,9 @@ const list = {
   '1Blocker': { name: 'premium', id: 'blocker.ios.iap.lifetime', cm: 'sjb' },  //1Blocker-广告拦截
   'VSCO': { name: 'pro', id: 'vscopro_global_5999_annual_7D_free', cm: 'sja' }  //VSCO-照片与视频编辑
   'ShellBean':{ name: 'pro', id: 'com.ningle.shellbean.subscription.year'},  //Shellbean
-  'Spark':{ name: 'premium', id: 'spark_5999_1y_1w0',  //Spark
+  'Spark':{ name: 'premium', id: 'spark_5999_1y_1w0',},  //Spark
+  'FaceMa':{ name: 'Pro access', id: 'Pro_Lifetime'},  //Facemo
+  'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},  //MadeYu
 };
 
 if (typeof $response == "undefined") {
