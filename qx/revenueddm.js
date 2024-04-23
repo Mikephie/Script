@@ -252,7 +252,7 @@ const list = {
   'FaceMa': { name: 'Pro access', id: 'Pro_Lifetime'}  //Facemo
   'MadeYu': { name: 'pro_plus', id: 'my_549_1m_400'}  //MadeYu
   'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'}  //Currency
-  'VOX':{ name: 'VOX Premium', id: 'com.coppertino.VoxMobile.AU.Loop1_v8'}  //20.24.4.22
+  'VOX': { name: 'VOX Premium', id: 'com.coppertino.VoxMobile.AU.Loop1_v8'}  //20.24.4.22
 };
 
 if (typeof $response == "undefined") {
