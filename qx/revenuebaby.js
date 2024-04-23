@@ -2,29 +2,45 @@
 
 项目名称：revenuecat合集 （此合集只包含10.5及以后的软件）
 软件版本：均适配2023.9.8最新 （每一个下载地址对应一个UAMappings）
+下载地址：星锤日记 https://is.gd/R5KqD4
+下载地址：倒数鸭  https://is.gd/rETAhp
+下载地址：星垂专注 https://is.gd/rEG9H5
+下载地址：Context https://is.gd/splCnF
+下载地址： Vision-个人OKR目标管理 https://t.cn/A6OxXNxK
+下载地址：Structured-每日计划 https://t.cn/A6cWhz4X
+下载地址：cookie记账 
+下载地址：倒数鸭 
+下载地址：HTTPBOT 2022.2.1 作者zoo
+下载地址：Mypianist 2.08
+下载地址：TouchRetouch 5.1.12
+下载地址：Appspree https://t.cn/A6otfeAc 3.1
+下载地址：Persona 1.824
+下载地址：WordSwag 4.56
+下载地址：AnkiPro 1.22.1
+下载地址：SmartAI 
+下载地址：AI Chat 
+下载地址：‎AI Type
+下载地址：TextMask
+下载地址：Music Mate
+下载地址：Langster https://too.st/7aW 同作者5个软件 
+下载地址：muse 同作者2个软件
+下载地址：Funexpected 
+下载地址：中国法律
 使用声明：⚠️仅供参考，🈲️转载与售卖！
 
 **************************************
 
 [rewrite_local]
 #修改
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenuebaby.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
 #清理
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenuebaby.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
 
 
 [mitm] 
 hostname = api.revenuecat.com
 
 ************************************/
-
-//排除已禁止MITM的APP
-const forbid = ['Fileball', 'APTV'];
-
-if (forbid.some(appName => (ua && ua.includes(appName)) || (requestBody && requestBody.includes(appName)))) {
-  console.log('发现禁止MITM的APP，已停止运行脚本！\n叮当猫の分享频道: https://t.me/chxm1023');
-  $done({});
-}
 
 const Q = {};
 const Q1 = JSON.parse(typeof $response != "undefined" && $response.body || null);
@@ -47,11 +63,15 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
+    'VOX':{ name: 'VOX Premium', id: 'com.coppertino.VoxMobile.AU.Loop1_v8'},//20.24.4.22
     'PDF%20Viewer':{ name: 'sub.pro', id: 'com.pspdfkit.viewer.sub.pro.yearly'},//2024.3.21
     'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},//2024.3.2
     'FaceMa':{ name: 'Pro access', id: 'Pro_Lifetime'},//Facemo
     'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},//
     'clica':{ name: 'pro', id: 'clica.vip.year'},//
+    'FoJiCam':{ name: 'Pro', id: 'com.uzero.cn.fojicam.life2'},//2024.4.9
+    'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},//2024.4.9
+
     'StarDiary':{ name: 'pro', id: 'com.gsdyx.StarDiary.nonConsumable.forever'},
     'CountDuck':{ name: 'premium', id: 'Lifetime'},
     'StarFocus':{ name: 'pro', id: 'com.gsdyx.StarFocus.nonConsumable.forever'},
@@ -92,21 +112,7 @@ if (typeof $response == "undefined") {
     'Liftbear':{ name: 'Pro', id: 'liftbear_2399_1y'},
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
     
-        //以下内容来自叮当猫（@chxm1023）
-    'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime', cm: 'sjb' },  //CareServer-服务器监控
-    'ShellBean':{ name: 'pro', id: 'com.ningle.shellbean.subscription.year', },  //Shellbean
-    'PhotoRoom': { name: 'pro', id: 'com.background.pro.yearly', cm: 'sja' },  //PhotoRoom
-    'ScannerPro': { name: 'plus', id: 'com.chxm1024.premium.yearly', cm: 'sja' },  //Scanner Pro-文档扫描
-    'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int', cm: 'sjb' },  //Drops外语
-    'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month', cm: 'sja' },  //花样文字
-    'OneScreen': { name: 'pro', id: 'onescreen_lifetime', cm: 'sjb' },  //OneScreen截图带壳
-    'IDM': { name: 'premium', id: 'sub_yearly_idm', cm: 'sjb' },  //IDM
-    'Whisper': { name: 'all_features', id: 'whisperai_80_y', cm: 'sjb' },  //Whisper
-
-            //以下内容用旧版（@chxm1023）
-    'Grow': { name: 'grow.pro', id: 'grow_lifetime', cm: 'sjb' },  //Grow-健康运动
-    'Spark': { name: 'premium', id: 'spark_5999_1y_1w0', cm: 'sja' },  //Spark_Mail-邮箱管理
-    'mizframa': { name: 'premium', id: 'mf_20_lifetime2', cm: 'sjb' },  //Mizframa v2.0
+    
     
     };
 
