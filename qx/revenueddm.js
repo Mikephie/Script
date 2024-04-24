@@ -42,6 +42,7 @@ const bundle = {
 //识别UA
 const list = {
   'ip_tv_react_native': { name: 'Single', id: 'opus.lifetime'},  //Opus-IPTV
+  'Airmail': { name: 'Airmail Premium', id: 'Airmail_iOS_Yearly_P'},  //Airmail
 };
 
 if (typeof $response == "undefined") {
