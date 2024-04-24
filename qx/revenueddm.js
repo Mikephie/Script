@@ -43,7 +43,7 @@ const bundle = {
 const list = {
   'ScreenRecordCase': { name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra', cm: 'sjb' },  //屏幕套壳
   'opusvpn': { name: 'pro', id: 'yearly_discount', cm: 'sja' },  //Opus-VPN
-  'Airmail': { name: 'Airmail Premium', id: 'Airmail_iOS_Yearly_P', cm: 'sjb' },  //Airmail
+  'Airmail': { name: 'Airmail Premium', id: 'Airmail_iOS_Yearly_P' },  //Airmail
 };
 
 if (typeof $response == "undefined") {
