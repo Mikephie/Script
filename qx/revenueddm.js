@@ -16,7 +16,7 @@
 ^https?:\/\/firestore\.googleapis\.com url reject
 
 [mitm]
-hostname = api.revenuecat.com, app-measurement.com, firestore.googleapis.com
+hostname = api.revenuecat.com
 
 *************************************/
 
