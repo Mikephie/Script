@@ -12,8 +12,8 @@ HOST-keyword,stream-link
 #HOST-SUFFIX,omtrdc.net
 
 # Circuit Route
-HOST,firebaselogging-pa.googleapis
-HOST-SUFFIX,firestore.googleapis.com
+;HOST,firebaselogging-pa.googleapis
+;HOST-SUFFIX,firestore.googleapis.com
 
 # PandaPub Fenliu
 HOST,pandafan.pub
