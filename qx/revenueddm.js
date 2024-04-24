@@ -41,7 +41,8 @@ const bundle = {
 
 //识别UA
 const list = {
-  'ip_tv_react_native': { name: 'Single', id: 'opus.lifetime'},  //Opus-IPTV
+  'ScreenRecordCase': { name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra', cm: 'sjb' },  //屏幕套壳
+  'opusvpn': { name: 'pro', id: 'yearly_discount', cm: 'sja' },  //Opus-VPN
   'Airmail': { name: 'Airmail Premium', id: 'Airmail_iOS_Yearly_P'},  //Airmail
 };
 
