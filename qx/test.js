@@ -172,9 +172,11 @@ if (typeof $response == "undefined") {
 
     //以下内容来自卑鄙的Baby（@Yu9191）
     'Spark':{ name: 'premium', id: 'spark_5999_1y_1w0'},
+    'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},
     'WeeklyNote':{ name: 'org.zrey.weeklynote', id: 'org.zrey.weeklynote.flash_lifetime'},//周周记
     'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},
     'FruitMinder':{ name: 'Premium', id: 'com.bartozo.FruitMinder.lifetime'},  //FruitMinder-水果提醒
+    //'ScreenRecordCase': { name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra', cm: 'sjb' },  //屏幕套壳
 
 
     
