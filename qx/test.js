@@ -197,3 +197,5 @@ if (typeof $response == "undefined") {
     }
   }
   guding.body = JSON.stringify(guding6);
+}
+$done(guding);
