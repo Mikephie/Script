@@ -174,6 +174,7 @@ if (typeof $response == "undefined") {
     'Spark':{ name: 'premium', id: 'spark_5999_1y_1w0'},
     'WeeklyNote':{ name: 'org.zrey.weeklynote', id: 'org.zrey.weeklynote.flash_lifetime'},//周周记
     'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},
+    'FruitMinder':{ name: 'Premium', id: 'com.bartozo.FruitMinder.lifetime'},  //FruitMinder-水果提醒
 
 
     
