@@ -1,6 +1,6 @@
-#!name=APPheji_RevenueCatguding
+#!name=APPheji_RevenueCat🪱guding
 #!desc=APPheji_RevenueCat
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1043.png
+#!icon=https://raw.githubusercontent.com/Guding88/iCon/main/png/Guding.png
 
 [Script]
 http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body=true, timeout=60, tag=APPheji_Revenuecat
