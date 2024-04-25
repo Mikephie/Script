@@ -7,9 +7,9 @@
 ^https?:\/\/firestore\.googleapis\.com - reject
 
 [Script]
-http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueddm.js, requires-body=true, timeout=60, tag=revenueddm
+http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=true, timeout=60, tag=revenueddm
 
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueddm.js, timeout=60, tag=revenueddm
+http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, timeout=60, tag=revenueddm
 
 [MITM]
 hostname = api.revenuecat.com, app-measurement.com, firestore.googleapis.com
