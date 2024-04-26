@@ -183,22 +183,22 @@ if (typeof $response == "undefined") {
     
   };
   const data = {
-    "expires_date": "6666-06-06T06:06:06Z",
-    "original_purchase_date": "2023-06-06T06:06:06Z",
-    "purchase_date": "2023-06-06T06:06:06Z",
+    "expires_date": "2088-08-08T08:08:08",
+    "original_purchase_date": "2023-09-01T11:00:00Z",
+    "purchase_date": "2023-09-01T11:00:00Z",
     "ownership_type": "PURCHASED",
     "store": "app_store"
   };
   for (const i in UAMappings) {
     if (new RegExp(`^${i}`, 'i').test(UA)) {
       const { name, id } = UAMappings[i];
-      guding6.subscriber.subscriptions = {};
-      guding6.subscriber.subscriptions[id] = data;
-      guding6.subscriber.entitlements[name] = JSON.parse(JSON.stringify(data));
-      guding6.subscriber.entitlements[name].product_identifier = id;
+      Mikephie1.subscriber.subscriptions = {};
+      Mikephie1.subscriber.subscriptions[id] = data;
+      Mikephie1.subscriber.entitlements[name] = JSON.parse(JSON.stringify(data));
+      Mikephie1.subscriber.entitlements[name].product_identifier = id;
       break;
     }
   }
-  guding.body = JSON.stringify(guding6);
+  Mikephie.body = JSON.stringify(Mikephie1);
 }
-$done(guding);
+$done(Mikephie);
