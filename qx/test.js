@@ -176,7 +176,7 @@ if (typeof $response == "undefined") {
     'WeeklyNote':{ name: 'org.zrey.weeklynote', id: 'org.zrey.weeklynote.flash_lifetime'},//周周记
     'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},
     'FruitMinder':{ name: 'Premium', id: 'com.bartozo.FruitMinder.lifetime'},  //FruitMinder-水果提醒
-    'opusvpn': { name: 'pro', id: 'yearly_discount', cm: 'sja' },
+    //'opusvpn': { name: 'pro', id: 'yearly_discount', cm: 'sja' },
 
     
     
