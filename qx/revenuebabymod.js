@@ -52,10 +52,10 @@ if (typeof $response == "undefined") {
     'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},//
     'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},//2024.4.9
     'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year'}, 
-    'CountDuck':{ name: 'premium', id: 'Lifetime'},
+    'PhotoRoom':{ name: 'pro', id: 'com.background.pro.yearly'},
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
     'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},
-    'PhotoRoom':{ name: 'pro', id: 'com.background.pro.yearly'},
+    'CountDuck':{ name: 'premium', id: 'Lifetime'},
     
     
     
