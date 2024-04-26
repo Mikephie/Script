@@ -48,11 +48,11 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
+    'PhotoRoom': { name: 'business', id: 'com.background.business.yearly' },
     'PDF%20Viewer':{ name: 'sub.pro', id: 'com.pspdfkit.viewer.sub.pro.yearly'},//2024.3.21
     'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},//
     'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},//2024.4.9
     'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year'}, 
-    'PhotoRoom':{ name: 'business', id: 'com.background.business.yearly'},
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
     'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},
     'CountDuck':{ name: 'premium', id: 'Lifetime'},
