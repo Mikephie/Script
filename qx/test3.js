@@ -4,8 +4,8 @@ TG群组：https://t.me/GudingChat
 Revenuecat解锁合集，已解锁APP及下载地址请见说明：https://github.com/Guding88/Script/blob/main/Readme.md
 
 [rewrite_local]
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/test2.js
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/test2.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/test3.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/test3.js
 
 [MITM]
 hostname = api.revenuecat.com
@@ -175,8 +175,8 @@ if (typeof $response == "undefined") {
     'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Pro'},
     'WeeklyNote':{ name: 'org.zrey.weeklynote', id: 'org.zrey.weeklynote.flash_lifetime'},//周周记
     'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},
-    'opusvpn':{ name: 'pro', id: 'yearly_discount'},  //FruitMinder-水果提醒
-    //'opusvpn': { name: 'pro', id: 'yearly_discount', cm: 'sja' },
+    'ip_tv_react_native':{ name: 'Single', id: 'opus.lifetime'},  //FruitMinder-水果提醒
+    //'ip_tv_react_native': { name: 'Single', id: 'opus.lifetime', cm: 'sjb' },  //Opus-IPTV
 
     
     
