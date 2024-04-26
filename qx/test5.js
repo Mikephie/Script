@@ -10,6 +10,9 @@ Revenuecat解锁合集，已解锁APP及下载地址请见说明：https://githu
 [MITM]
 hostname = api.revenuecat.com
 
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+^https:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+
 */
 const guding = {};
 const guding6 = JSON.parse(typeof $response != "undefined" && $response.body || null);
