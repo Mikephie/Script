@@ -41,13 +41,10 @@ if (typeof $response == "undefined") {
   const app = '1';
   const UAMappings = {
     'PDF%20Viewer':{ name: 'sub.pro', id: 'com.pspdfkit.viewer.sub.pro.yearly'},//2024.3.21
-    'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},//2024.3.2
     'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},//
     'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},//2024.4.9
     'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year'}, 
     'CountDuck':{ name: 'premium', id: 'Lifetime'},
-    'windiary':{ name: 'Pro', id: 'windiary_1799_lt'},
-    'Liftbear':{ name: 'Pro', id: 'liftbear_2399_1y'},
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
     
     
