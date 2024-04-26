@@ -54,6 +54,8 @@ if (typeof $response == "undefined") {
     'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year'}, 
     'CountDuck':{ name: 'premium', id: 'Lifetime'},
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
+    'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},
+    'PhotoRoom':{ name: 'pro', id: 'com.background.pro.yearly'},
     
     
     
