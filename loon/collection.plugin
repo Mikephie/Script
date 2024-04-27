@@ -9,36 +9,36 @@
 
 [Script]
 
-# iTunes合集
+# > iTunes合集
 http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body=true, tag=iTunes合集
 
-# Revenuecat合集
+# > Revenuecat合集
 http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenuebabymod2.js, requires-body=true, tag=Revenuecat合集
 http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenuebabymod2.js, tag=Revenuecat清缓存
 
-# 咪咕视频
-http-response ^https?:\/\/(play|dis).*miguvideo.com\/(play|dis)(url|play)\/.*$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgsp.js, requires-body=true, tag=咪咕视频
-http-request ^https?:\/\/play.miguvideo.com\/playurl\/v1\/play\/playurl\?2Kvivid=true?.*=true$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgspck.js, tag=咪咕视频清缓存
+# > 咪咕视频Vip会员
+http-response ^https?:\/\/(play|dis).*miguvideo.com\/(play|dis)(url|play)\/.*$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgsp.js, requires-body=true,  tag=mgsp
+http-request ^https?:\/\/play.miguvideo.com\/playurl\/v1\/play\/playurl\?2Kvivid=true?.*=true$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgspck.js, tag=mgspck
 
-# 美图秀秀
+# > 美图秀秀
 http-response ^https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js, requires-body=true, tag=美图秀秀
 
 # Filmix
 http-response ^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, tag=Filmix
 
-# Wallcraft-动态壁纸
+# > Wallcraft-动态壁纸
 http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, tag=Wallcraft-动态壁纸
 
-# 壁纸
+# > 壁纸
 http-response ^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, tag=壁纸
 
-# AdblockPro
+# > AdblockPro
 http-response ^https:\/\/api\.adblockpro\.app\/verify script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, requires-body=true, tag=AdblockPro
 
-# ToonMe
+# > ToonMe
 http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, tag=ToonMe
 
-# 易截图2
+# > 易截图2
 http-response ^https?:\/\/(jietu6|1jietu)\.com\/apiv2\/user script-path=https://raw.githubusercontent.com/Guding88/Script/main/yijietu2.js, requires-body=true, tag=易截图2
 
 
