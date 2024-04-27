@@ -30,8 +30,8 @@ http-response ^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users script-path=ht
 # Wallcraft-动态壁纸
 http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, tag=Wallcraft-动态壁纸
 
-# Prisma&Lensa
-http-response ^https?:\/\/(api|appapi)\.neuralprisma\.com\/receipt\/ios\/status\/(prisma|lensa) script-path=https://raw.githubusercontent.com/Guding88/Script/main/Prisma.js, requires-body=true, tag=Prisma&Lensa
+# 壁纸
+http-response ^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account script-path=https://raw.githubusercontent.com/Guding88/Script/main/Prisma.js, requires-body=true, tag=壁纸
 
 # Todo清单
 http-response ^https?:\/\/www\.evestudio\.cn\/todoList\/getDetailUser script-path=https://raw.githubusercontent.com/Guding88/Script/main/Todoqingdan.js, requires-body=true, tag=Todo清单
