@@ -5,6 +5,10 @@
 #!homepage=https://github.com/Guding88/Script/blob/main/Readme.md
 #!icon=https://raw.githubusercontent.com/Guding88/iCon/main/png/Guding.png
 
+[Rewrite]
+# > 咪咕视频开屏广告
+^https://.*miguvideo\.com/request/sdk - reject-200
+
 [Script]
 
 # iTunes合集
@@ -17,9 +21,6 @@ http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipt
 # 咪咕视频
 http-response ^https?:\/\/(play|dis).*miguvideo.com\/(play|dis)(url|play)\/.*$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgsp.js, requires-body=true, tag=咪咕视频
 http-request ^https?:\/\/play.miguvideo.com\/playurl\/v1\/play\/playurl\?2Kvivid=true?.*=true$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgspck.js, tag=咪咕视频清缓存
-[Rewrite]
-# > 开屏广告
-^https://.*miguvideo\.com/request/sdk - reject-200
 
 # 美图秀秀
 http-response ^https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js, requires-body=true, tag=美图秀秀
@@ -34,7 +35,7 @@ http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|pro
 http-response ^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, tag=壁纸
 
 # AdblockPro
-http-response ^https?:\/\/www\.evestudio\.cn\/todoList\/getDetailUser script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, requires-body=true, tag=AdblockPro
+http-response ^https:\/\/api\.adblockpro\.app\/verify script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, requires-body=true, tag=AdblockPro
 
 # ToonMe
 http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, tag=ToonMe
