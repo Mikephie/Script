@@ -22,7 +22,7 @@ http-request ^https?:\/\/play.miguvideo.com\/playurl\/v1\/play\/playurl\?2Kvivid
 ^https://.*miguvideo\.com/request/sdk - reject-200
 
 # Cubox
-http-response ^https?:\/\/cubox\.(cc|pro)\/c\/api\/userInfo script-path=https://raw.githubusercontent.com/Guding88/Script/main/Cubox.js, requires-body=true, tag=Cubox
+http-response ^https?:\/\/cubox\.(cc|pro)\/c\/api\/userInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js, requires-body=true, tag=Cubox
 
 # NFC Scanner Tool for iPhone
 http-response ^https?:\/\/api\.qonversion\.io\/v1\/user\/init script-path=https://raw.githubusercontent.com/Guding88/Script/main/NFC.js, requires-body=true, tag=NFC
