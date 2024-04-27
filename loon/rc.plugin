@@ -27,7 +27,7 @@ http-response ^https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)) script-path=htt
 # Filmix
 http-response ^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, tag=Filmix
 
-# PocketLists
+# Wallcraft-动态壁纸
 http-response ^https?:\/\/pocketlists\.com\/api\/v1\/pocketlists.me.get script-path=https://raw.githubusercontent.com/Guding88/Script/main/PocketLists.js, requires-body=true, tag=PocketLists
 
 # Prisma&Lensa
