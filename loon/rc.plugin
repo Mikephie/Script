@@ -15,7 +15,7 @@ http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receip
 http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/rc.js, tag=Revenuecat清缓存
 
 # CountThings from Photos
-http-response ^https?:\/\/my\.countingthings\.com\/api\/v2.0\/users\/GetUserAndSubscription script-path=https://raw.githubusercontent.com/Guding88/Script/main/CountThings.js, requires-body=true, tag=CountThings
+http-response ^https?:\/\/my\.countingthings\.com\/api\/v2.0\/users\/GetUserAndSubscription script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgsp.js, requires-body=true, tag=CountThings
 
 # Cubox
 http-response ^https?:\/\/cubox\.(cc|pro)\/c\/api\/userInfo script-path=https://raw.githubusercontent.com/Guding88/Script/main/Cubox.js, requires-body=true, tag=Cubox
