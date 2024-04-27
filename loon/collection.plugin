@@ -33,8 +33,8 @@ http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|pro
 # 壁纸
 http-response ^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, tag=壁纸
 
-# Todo清单
-http-response ^https?:\/\/www\.evestudio\.cn\/todoList\/getDetailUser script-path=https://raw.githubusercontent.com/Guding88/Script/main/Todoqingdan.js, requires-body=true, tag=Todo清单
+# AdblockPro
+http-response ^https?:\/\/www\.evestudio\.cn\/todoList\/getDetailUser script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, requires-body=true, tag=AdblockPro
 
 # ToonMe
 http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, tag=ToonMe
