@@ -46,7 +46,7 @@ if (typeof $response == "undefined") {
     }
   }
   var UA = $request.headers['user-agent'];
-  const app = '1';
+  const app = 'mk';
   const UAMappings = {
     'PhotoRoom': { name: 'business', id: 'com.background.business.yearly' },
     'PDF%20Viewer':{ name: 'sub.pro', id: 'com.pspdfkit.viewer.sub.pro.yearly'},//2024.3.21
