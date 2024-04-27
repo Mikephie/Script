@@ -37,7 +37,7 @@ http-response ^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account scri
 http-response ^https?:\/\/www\.evestudio\.cn\/todoList\/getDetailUser script-path=https://raw.githubusercontent.com/Guding88/Script/main/Todoqingdan.js, requires-body=true, tag=Todo清单
 
 # ToonMe
-http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Guding88/Script/main/ToonMe.js, requires-body=true, tag=ToonMe
+http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, tag=ToonMe
 
 # 易截图2
 http-response ^https?:\/\/(jietu6|1jietu)\.com\/apiv2\/user script-path=https://raw.githubusercontent.com/Guding88/Script/main/yijietu2.js, requires-body=true, tag=易截图2
