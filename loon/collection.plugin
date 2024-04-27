@@ -28,7 +28,7 @@ http-response ^https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)) script-path=htt
 http-response ^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, tag=Filmix
 
 # Wallcraft-动态壁纸
-http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$ script-path=https://raw.githubusercontent.com/Guding88/Script/main/PocketLists.js, requires-body=true, tag=PocketLists
+http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, tag=Wallcraft-动态壁纸
 
 # Prisma&Lensa
 http-response ^https?:\/\/(api|appapi)\.neuralprisma\.com\/receipt\/ios\/status\/(prisma|lensa) script-path=https://raw.githubusercontent.com/Guding88/Script/main/Prisma.js, requires-body=true, tag=Prisma&Lensa
