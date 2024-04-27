@@ -49,7 +49,7 @@ http-response ^https?:\/\/(jietu6|1jietu)\.com\/apiv2\/user script-path=https://
 
 [MITM]
 
-hostname = buy.itunes.apple.com,api.revenuecat.com,*.miguvideo.com,api.xiuxiu.meitu.com,appv2.filmix.com.cn,
+hostname = buy.itunes.apple.com,api.revenuecat.com,*.miguvideo.com,api.xiuxiu.meitu.com,appv2.filmix.com.cn,leancloud.emotionwp.com,
 
 
 
