@@ -23,10 +23,12 @@ hostname=api.revenuecat.com
 
 // ========= 动态 ID ========= //
 const mapping = {
+  'ShellBean': ['pro'],
   'CountDuck': ['premium'],
   'ScreenRecordCase': ['Premium'],
   'OneBox': ['all'],
   'Spark': ['premium'],
+  
 
 };
 
