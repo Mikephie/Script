@@ -48,16 +48,18 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = 'mk';
   const UAMappings = {
-    'PhotoRoom': { name: 'business', id: 'com.background.business.yearly' },
+    'IDM': { name: 'premium', id: 'sub_yearly_idm' },  //IDM-下载
+    'Whisper': { name: 'all_features', id: 'whisperai_80_y' },  //Whisper
+    'PhotoRoom': { name: 'pro', id: 'com.background.pro.yearly' },  //PhotoRoom
     'PDF%20Viewer':{ name: 'sub.pro', id: 'com.pspdfkit.viewer.sub.pro.yearly'},//2024.3.21
-    'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},//
-    'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},//2024.4.9
-    'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year'}, 
-    'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
-    'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},
-    'CountDuck':{ name: 'premium', id: 'Lifetime'},
+    'MadeYu':{ name: 'pro_plus', id: 'my_549_1m_400'},  //MadeYu
+    'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},  //CareServer
+    'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year'},  //ShellBean
+    'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},  //Currency
+    'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},  //ScreenRecordCase
+    'CountDuck':{ name: 'premium', id: 'Lifetime'},  //CountDuck
     
-    
+  
     
     };
 
