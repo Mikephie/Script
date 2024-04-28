@@ -56,7 +56,7 @@ if (typeof $response == "undefined") {
     'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},  //CareServer
     'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year'},  //ShellBean
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},  //Currency
-    'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},  //ScreenRecordCase
+    'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},  //ScreenCase
     'CountDuck':{ name: 'premium', id: 'Lifetime'},  //CountDuck
     
   
