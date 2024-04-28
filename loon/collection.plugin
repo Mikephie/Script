@@ -13,8 +13,8 @@
 http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body=true, tag=iTunes合集
 
 # > Revenuecat合集
-http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueddm.js, requires-body=true, tag=Revenuecat合集
-http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueddm.js, tag=Revenuecat清缓存
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenuebabymod2.js, requires-body=true, tag=Revenuecat合集
+http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenuebabymod2.js, tag=Revenuecat清缓存
 
 # > 咪咕视频Vip会员
 http-response ^https?:\/\/(play|dis).*miguvideo.com\/(play|dis)(url|play)\/.*$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgsp.js, requires-body=true, timeout=60, tag=mgsp
