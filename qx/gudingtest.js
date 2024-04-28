@@ -149,7 +149,7 @@ if (typeof $response == "undefined") {
     'Uio':{ name: 'PRO', id: 'com.daya.Uio.quarterly'},
     'Snipd':{ name: 'premium', id: 'snipd_premium_1y_7199_trial_2w_v2'},
     //'Cuto':{ name: 'cutopro', id: 'com.potatsolab.cuto.pro'},
-    'CountDuck':{ name: 'premium', id: 'Lifetime'},
+    //'CountDuck':{ name: 'premium', id: 'Lifetime'},
     'tiimo':{ name: 'full_access', id: 'lifetime.iap'},
     'Subtrack':{ name: 'pro', id: 'com.mohitnandwani.subtrack.subtrackpro.family'},
     'Aphrodite':{ name: 'all', id: 'com.ziheng.aphrodite.lifetime'},
@@ -178,7 +178,7 @@ if (typeof $response == "undefined") {
     'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},
     
     //群友发的，不知道从谁那摘出来的
-    'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},
+    //'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},
 
 
     
