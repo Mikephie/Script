@@ -23,13 +23,16 @@ hostname=api.revenuecat.com
 
 // ========= 动态 ID ========= //
 const mapping = {
+  'IDM': ['premium'],
+  'Whisper': ['all_features'],
+  'MagicTiles3': ['VIP'],
   'ShellBean': ['pro'],
   'CountDuck': ['premium'],
   'ScreenRecordCase': ['Premium'],
   'OneBox': ['all'],
   'Spark': ['premium'],
   
-
+  
 };
 
 // =========    固定部分  ========= // 
