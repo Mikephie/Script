@@ -64,7 +64,7 @@ http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=ht
 # hostname = *.miguvideo.com
 http-response ^https?:\/\/(play|dis).*miguvideo.com\/(play|dis)(url|play)\/.*$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgsp.js, requires-body=true, tag=咪咕视频Vip会员
 
-http-request ^https?:\/\/play.miguvideo.com\/playurl\/v1\/play\/playurl\?2Kvivid=true?.*=true$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgspck.js, tag=咪咕视频Vip会员
+http-request ^https?:\/\/play.miguvideo.com\/playurl\/v1\/play\/playurl\?2Kvivid=true?.*=true$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgspck.js, requires-body=false, tag=咪咕视频Vip会员
 
 #************************************#
 # 绘影字幕
