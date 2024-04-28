@@ -149,7 +149,7 @@ if (typeof $response == "undefined") {
     'Uio':{ name: 'PRO', id: 'com.daya.Uio.quarterly'},
     'Snipd':{ name: 'premium', id: 'snipd_premium_1y_7199_trial_2w_v2'},
     //'Cuto':{ name: 'cutopro', id: 'com.potatsolab.cuto.pro'},
-    //'CountDuck':{ name: 'premium', id: 'Lifetime'},
+    'CountDuck':{ name: 'premium', id: 'Lifetime'},
     'tiimo':{ name: 'full_access', id: 'lifetime.iap'},
     'Subtrack':{ name: 'pro', id: 'com.mohitnandwani.subtrack.subtrackpro.family'},
     'Aphrodite':{ name: 'all', id: 'com.ziheng.aphrodite.lifetime'},
@@ -168,7 +168,7 @@ if (typeof $response == "undefined") {
     'Langster':{ name: 'Premium', id: 'com.langster.universal.lifetime'},
     'AudioPlayer':{ name: 'Pro', id: 'xyz.lijun.www.AudioPlayer.premium.newuser'},
     'FoJiCam':{ name: 'ProVersionLifeTime', id: 'com.uzero.cn.fojicam.life1'},
-    //'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},
+    'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},
     'Ask':{ name: 'Perplexity Pro', id: 'pro_200_yr_1w_new'},
 
 
@@ -178,8 +178,10 @@ if (typeof $response == "undefined") {
     'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},
     
     //群友发的，不知道从谁那摘出来的
-    //'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},
-
+    'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},
+    'IDM':{ name: 'premium', id: 'sub_yearly_idm'},
+    'Whisper':{ name: 'all_features', id: 'whisperai_80_y'},
+            
 
     
     
