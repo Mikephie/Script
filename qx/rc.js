@@ -20,10 +20,19 @@ hostname=api.revenuecat.com
 
 ***********************************/
 
+//排除已禁止MITM的APP
+const forbiddenApps = ['Fileball', 'APTV'];
+const forbiddenAppFound = forbiddenApps.find(appName => (ua && ua.includes(appName)) || ($request.body && $request.body.includes(appName)));
+if (forbiddenAppFound) {
+  console.log(`发现禁止MITM的APP: ${forbiddenAppFound}，已停止运行脚本！\n叮当猫の分享频道: https://t.me/chxm1023`);
+  $done({});
+}
+
 
 // ========= 动态 ID ========= //
 const mapping = {
-  'IDM': ['premium'], 
+  'CountDuck': ['premium'],
+  'IDM': ['premium'],
   'Whisper': ['all_features'],
   'Airmail': ['Airmail Premium'],
   'ShellBoxKit': ['pro'],
@@ -35,7 +44,6 @@ const mapping = {
   'ScannerPro': ['plus'],
   'MagicTiles3': ['VIP'],
   'ShellBean': ['pro'],
-  'CountDuck': ['premium'],
   'ScreenRecordCase': ['Premium'],
   'OneBox': ['all'],
   'Spark': ['premium'],
