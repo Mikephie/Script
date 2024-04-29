@@ -23,8 +23,16 @@ hostname=api.revenuecat.com
 
 // ========= 动态 ID ========= //
 const mapping = {
-  'IDM': ['premium'],
+  'IDM': ['premium'], 
   'Whisper': ['all_features'],
+  'Airmail': ['Airmail Premium'],
+  'ShellBoxKit': ['pro'],
+  'PhotoRoom': ['pro'],
+  'PDF%20Viewer': ['sub.pro'],
+  'Drops': ['premium'],
+  'UTC': ['Entitlement.Pro'],
+  'Anybox': ['pro'],
+  'ScannerPro': ['plus'],
   'MagicTiles3': ['VIP'],
   'ShellBean': ['pro'],
   'CountDuck': ['premium'],
@@ -32,7 +40,8 @@ const mapping = {
   'OneBox': ['all'],
   'Spark': ['premium'],
   
-  
+
+
 };
 
 // =========    固定部分  ========= // 
