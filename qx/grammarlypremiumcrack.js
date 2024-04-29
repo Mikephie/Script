@@ -12,7 +12,7 @@
 *******************************
 [rewrite_local]
 # > Grammarly解锁订阅
-^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrammarlyPremiumCrack.js
+^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js
 
 [mitm] 
 hostname = subscription.grammarly.com
