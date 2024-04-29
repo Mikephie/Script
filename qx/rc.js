@@ -31,7 +31,7 @@ if (forbiddenAppFound) {
 
 // ========= 动态 ID ========= //
 const mapping = {
-  'CountDuck': ['premium'],
+  'CountDuck': ['premium', 'Lifetime'],
   'IDM': ['premium'],
   'Whisper': ['all_features'],
   'Airmail': ['Airmail Premium'],
