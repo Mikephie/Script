@@ -1,11 +1,23 @@
-#!name=Reddit
-#!desc=过滤推广, 关 NSFW 提示 @xream
+let body;
+try {
+  body = JSON.parse($response.body.replace(/"isNsfw":true/g, '"isNsfw":false'))
+  if (body.data?.children?.commentsPageAds) {
+    body.data.children.commentsPageAds = []
+  } 
+  for (const [k, v] of Object.entries(body.data)) {
+    if (v?.elements?.edges) {
+      body.data[k].elements.edges = v.elements.edges.filter(
+        i =>
+          !['AdPost'].includes(i?.node?.__typename) &&
+          !i?.node?.cells?.some(j => j?.__typename === 'AdMetadataCell') &&
+          !i?.node?.adPayload
+      );
+    }
+  }
 
-[General]
-
-force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
-
-[Script]
-Reddit = type=http-response,pattern=^https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/reddit.js
-[MITM]
-hostname = %APPEND%, gql.reddit.com, gql-fed.reddit.com
+  
+} catch (e) {
+  console.log(e);
+} finally {
+  $done(body ? { body: JSON.stringify(body) } : {});
+}
