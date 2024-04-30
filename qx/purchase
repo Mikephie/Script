@@ -1,8 +1,0 @@
-iPadOS 17.4.1 (21E236) NE v1.5.0-build830 42.76MB
-
-Logs:
-
-200
-
-{"request_date":"2024-04-24T05:04:46Z","request_date_ms":1713935086837,"subscriber":{"entitlements":{"pro":{"expires_date":"2024-05-01T05:02:41Z","grace_period_expires_date":null,"product_identifier":"com.ningle.shellbean.subscription.year","purchase_date":"2024-04-24T05:02:41Z"}},"first_seen":"2024-04-24T02:48:24Z","last_seen":"2024-04-24T02:48:24Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:7e8aed112e644adf8860e7a6b0c36d8c","original_application_version":"43","original_purchase_date":"2024-02-10T13:20:52Z","other_purchases":{},"subscriptions":{"com.ningle.shellbean.subscription.year":{"auto_resume_date":null,"billing_issues_detected_at":null,"expires_date":"2024-05-01T05:02:41Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2024-04-24T05:02:42Z","ownership_type":"PURCHASED","period_type":"trial","purchase_date":"2024-04-24T05:02:41Z","refunded_at":null,"store":"app_store","store_transaction_id":"300001816687635","unsubscribe_detected_at":null}}}}
-
