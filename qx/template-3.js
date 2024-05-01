@@ -23,7 +23,7 @@ const Mikephie = {};
 const Mikephie76 = JSON.parse(typeof $response!= "undefined" && $response.body || null);
 
 const name = "Pro";
-const appid = "pro_student_0926";
+const appid = "ShellBoxKit.Lifetime";
 
 if (typeof $response == "undefined") {
   delete $request.headers["x-revenuecat-etag"];
