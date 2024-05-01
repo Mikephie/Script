@@ -30,9 +30,10 @@ if (forbiddenAppFound) {
 
 
 // ========= 动态 ID ========= //
-//const mapping = {
+const mapping = {
   //'CountDuck': ['premium', 'Lifetime'],
-  //'CountDuck': ['premium', 'Lifetime'],  //倒数鸭
+  'ScreenRecordCase': ['Premium', 'me.fandong.ScreenRecordCase.Ultra']   //屏幕套壳
+  'CountDuck': ['premium', 'Lifetime'],  //倒数鸭
   //'IDM': ['premium'],
   //'Whisper': ['all_features'],
   //'Airmail': ['Airmail Premium'],
@@ -51,11 +52,11 @@ if (forbiddenAppFound) {
   
   
   //以下内容来自叮当猫（@chxm1023）
-const mapping = {  
+//const mapping = {  
   'ShellBean': ['pro'],  
   'MagicTiles3': ['VIP', 'com.pianoidols.vipsub.year.06']   //MagicTiles3-音乐游戏
   'Airmail': ['Airmail Premium', 'Airmail_iOS_Yearly_P']   //Airmail
-  'ScreenRecordCase': ['Premium', 'me.fandong.ScreenRecordCase.Ultra']   //屏幕套壳
+  //'ScreenRecordCase': ['Premium', 'me.fandong.ScreenRecordCase.Ultra']   //屏幕套壳
   'opusvpn': ['pro', 'yearly_discount']   //Opus-VPN
   'ip_tv_react_native': ['Single', 'opus.lifetime']   //Opus-IPTV
   'Atomic': ['pro', 'ht_lifetime1']   //Atomic
@@ -91,7 +92,7 @@ const mapping = {
   'reader': ['vip2', 'com.valo.reader.vip2.year']   //读不舍手
   'StarFocus': ['pro', 'com.gsdyx.StarFocus.nonConsumable.forever']   //星垂专注
   'StarDiary': ['pro', 'com.gsdyx.StarDiary.nonConsumable.forever']   //星垂日记
-  'CountDuck': ['premium', 'Lifetime']   //倒数鸭
+  //'CountDuck': ['premium', 'Lifetime']   //倒数鸭
   'wordswag': ['pro', 'Pro_Launch_Monthly']   //WordSwag
   'LockFlow': ['unlimited_access', 'lf_00.00_lifetime']   //LockFlow-锁屏启动
   'TextMask': ['pro', 'tm_lifetime']   //TextMask
