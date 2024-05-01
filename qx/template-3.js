@@ -22,7 +22,7 @@ hostname = api.revenuecat.com
 const Mikephie = {};
 const Mikephie76 = JSON.parse(typeof $response!= "undefined" && $response.body || null);
 
-const name = "pro";
+const name = "Lifetime";
 const appid = "ShellBoxKit.Lifetime";
 
 if (typeof $response == "undefined") {
