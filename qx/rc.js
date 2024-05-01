@@ -31,11 +31,11 @@ if (forbiddenAppFound) {
 
 // ========= 动态 ID ========= //
 const mapping = {
+  'ShellBoxKit': ['pro', 'ShellBoxKit.Lifetime'],   //CareServer-服务器监控
   'ScreenRecordCase': ['Premium', 'me.fandong.ScreenRecordCase.Ultra'],   //屏幕套壳
   'CountDuck': ['premium', 'Lifetime'],  //倒数鸭
   'IDM': ['premium', 'sub_yearly_idm'],   //IDM-下载
   'Whisper': ['all_features', 'whisperai_80_y'],   //Whisper
-  'ShellBoxKit': ['pro', 'ShellBoxKit.Lifetime'],   //CareServer-服务器监控
   'PhotoRoom': ['pro', 'com.background.pro.yearly'],   //PhotoRoom
   'Drops': ['premium', 'forever_unlimited_time_discounted_80_int'],   //Drops外语
   //'Airmail': ['Airmail Premium'],
