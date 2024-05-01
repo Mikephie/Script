@@ -23,7 +23,7 @@ const mikephie = {};
 const mikephie8 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 
 const name = "pro";
-const appid = "WaifuArt.Lifetime";
+const appid = "ShellBoxKit.Lifetime";
 
 if (typeof $response == "undefined") {
   delete $request.headers["x-revenuecat-etag"];
