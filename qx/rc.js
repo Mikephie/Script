@@ -30,7 +30,7 @@ if (forbiddenAppFound) {
 
 
 // ========= 动态 ID ========= //
-const mapping = {
+//const mapping = {
   //'CountDuck': ['premium', 'Lifetime'],
   //'CountDuck': ['premium', 'Lifetime'],  //倒数鸭
   //'IDM': ['premium'],
@@ -44,14 +44,15 @@ const mapping = {
   //'Anybox': ['pro'],
   //'ScannerPro': ['plus'],
   //'MagicTiles3': ['VIP'],
-  'ShellBean': ['pro'],
+  //'ShellBean': ['pro'],
   //'ScreenRecordCase': ['Premium'],
   //'OneBox': ['all'],
   //'Spark': ['premium'],
   
   
   //以下内容来自叮当猫（@chxm1023）
-  
+const mapping = {  
+  'ShellBean': ['pro'],  
   'MagicTiles3': ['VIP', 'com.pianoidols.vipsub.year.06']   //MagicTiles3-音乐游戏
   'Airmail': ['Airmail Premium', 'Airmail_iOS_Yearly_P']   //Airmail
   'ScreenRecordCase': ['Premium', 'me.fandong.ScreenRecordCase.Ultra']   //屏幕套壳
