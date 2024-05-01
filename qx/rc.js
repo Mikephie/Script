@@ -49,7 +49,13 @@ const mapping = {
   'OneBox': ['all'],
   'Spark': ['premium'],
   
-
+  
+  //以下内容来自卑鄙的Baby（@Yu9191）
+  
+  'ShellBean': ['pro'],
+  'ScreenRecordCase': ['Premium'],
+  'OneBox': ['all'],
+  'Spark': ['premium'],
 
 };
 // 2099-12-18T01:04:17Z
