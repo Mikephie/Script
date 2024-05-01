@@ -41,8 +41,8 @@ const bundle = {
 //识别UA
 const list = {
   'MagicTiles3': { name: 'VIP', id: 'com.pianoidols.vipsub.year.06', cm: 'sja' },  //MagicTiles3-音乐游戏
-  'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime' },  //CareServer-服务器监控
-  //'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime', cm: 'sjb' },  //CareServer-服务器监控
+  //'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime' },  //CareServer-服务器监控
+  'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime', cm: 'sjb' },  //CareServer-服务器监控
 
 const chxm1023 = {};
 const chxm1024 = JSON.parse(typeof $response != "undefined" && $response.body || null);
