@@ -24,7 +24,7 @@ hostname = api.revenuecat.com
 var objc = JSON.parse($response.body);
 
     objc = {
-  "request_date_ms": 1696509937149,
+  "request_date_ms": 1714686943375,
   "request_date": "2023-10-05T12:45:37Z",
   "subscriber": {
     "non_subscriptions": {
