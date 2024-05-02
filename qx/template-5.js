@@ -19,34 +19,47 @@ hostname = api.revenuecat.com
 
 *************************************/
 
-const mikephie = {};
-const mikephie8 = JSON.parse(typeof $response != "undefined" && $response.body || null);
-
-const name = "pro";
-const appid = "ShellBoxKit.Lifetime";
-
+const Q = {};
+const Q1 = JSON.parse(typeof $response!= "undefined" && $response.body || null);
 if (typeof $response == "undefined") {
   delete $request.headers["x-revenuecat-etag"];
   delete $request.headers["X-RevenueCat-ETag"];
-  mikephie.headers = $request.headers;
-} else if (mikephie8 && mikephie8.subscriber) {
-  mikephie8.subscriber.subscriptions = mikephie8.subscriber.subscriptions || {};
-  mikephie8.subscriber.entitlements = mikephie8.subscriber.entitlements || {};
+  Q.headers = $request.headers;
+} else if (Q1 && Q1.subscriber) {
+  Q1.subscriber.subscriptions = Q1.subscriber.subscriptions || {};
+  Q1.subscriber.entitlements = Q1.subscriber.entitlements || {};
+  var headers = {};
+  for (var key in $request.headers) {
+    const reg = /^[a-z]+$/;
+    if (key === "User-Agent" &&!reg.test(key)) {
+      var lowerkey = key.toLowerCase();
+      $request.headers[lowerkey] = $request.headers[key];
+      delete $request.headers[key];
+    }
+  }
+  var UA = $request.headers['user-agent'];
+  const app = '1';
+  const UAMappings = {
+    'PhotoRoom': { name: 'business', id: 'com.background.business.yearly' },
+    'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime' }
+  };
   const data = {
-    "product_identifier": appid,
-    "purchase_date": "2022-09-09T09:09:09Z"
+    "expires_date": "2099-12-31T12:00:00Z",
+    "original_purchase_date": "2023-09-01T11:00:00Z",
+    "purchase_date": "2023-09-01T11:00:00Z",
+    "ownership_type": "PURCHASED",
+    "store": "app_store"
   };
-  mikephie8.subscriber.entitlements[name] = data;
-  mikephie8.subscriber.subscriptions[appid] = {  
-    ...data,
-    "Author": "mikephie",
-    "Telegram": "https://t.me/mikephie",
-    "warning": "仅供学习，禁止转载或售卖",
-    "original_purchase_date": "2022-09-09T09:09:09Z",
-    "store": "app_store",
-    "ownership_type": "PURCHASED"
-  };
-  mikephie.body = JSON.stringify(mikephie8);
+  for (const i in UAMappings) {
+    if (new RegExp(`^${i}`, 'i').test(UA)) {
+      const { name, id } = UAMappings[i];
+      Q1.subscriber.subscriptions = {};
+      Q1.subscriber.subscriptions[id] = data;
+      Q1.subscriber.entitlements[name] = JSON.parse(JSON.stringify(data));
+      Q1.subscriber.entitlements[name].product_identifier = id;
+      break;
+    }
+  }
+  Q.body = JSON.stringify(Q1);
 }
-
-$done(mikephie);
+$done(Q);
