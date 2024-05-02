@@ -1,0 +1,74 @@
+GET https://api.revenuecat.com/v1/subscribers/$RCAnonymousID%3A27e47831e5e7431fb7d9e76384938a42
+
+{
+'Accept-Encoding' : 'gzip, deflate, br',
+'X-Platform-Version' : 'Version 17.4.1 (Build 21E236)',
+'Host' : 'api.revenuecat.com',
+'Connection' : 'keep-alive',
+'X-Observer-Mode-Enabled' : 'false',
+'X-Version' : '4.31.6',
+'User-Agent' : 'ShellBoxKit/22 CFNetwork/1494.0.7 Darwin/23.4.0',
+'Content-Type' : 'application/json',
+'X-Apple-Device-Identifier' : 'BA0FE14D-6327-41D9-A0EC-F555486A11D0',
+'Accept-Language' : 'zh-SG,zh-CN;q=0.9,zh-Hans;q=0.8',
+'X-Headers-Hash' : 'X-Is-Sandbox:sha256:fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa',
+'X-Client-Version' : '1.12',
+'X-RevenueCat-ETag' : '',
+'Authorization' : 'Bearer appl_UEUpznyHgWeoFjkkiwfVCLvbOQV',
+'X-Platform' : 'iOS',
+'X-Platform-Flavor' : 'native',
+'X-Storefront' : 'MYS',
+'Accept' : '*/*',
+'X-Client-Build-Version' : '22',
+'X-Nonce' : 'vVV0pkj/n6gCe21w',
+'X-Client-Bundle-ID' : 'com.jump.ShellBoxKit',
+'X-Is-Sandbox' : 'false',
+'X-StoreKit2-Enabled' : 'false'
+}
+
+
+
+
+
+HTTP/1.1 200 OK
+Date: Thu, 02 May 2024 21:55:43 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+server: envoy
+x-revenuecat-etag: f5999f602592d9e6
+access-control-allow-origin: *
+access-control-expose-headers: X-Request-Id
+x-revenuecat-request-time: 1714686943375
+x-signature: Sjl81rWh/SKBX8ln3ZpDpeRHXBE4mPV9URb2EdabBUSiTQAAIdwcoAZapTeog28woK0SAdDapF6jcPCng+Nvd4jRtvk+SDVuNt8vR7IE/dXVZD1z3mpQ10LMNdlfcBW7ta1hD3EwN0ucFT3Bf8NUclEzc+dXDq43BL90q0M4ez5BB6vHB8msCH7b1VwAdaCkveTGWiIlQNTMF6TlVC0ihoSRGSXpE4VDHsE/sAZ8k9vE068K
+x-amzn-trace-id: Root=1-66340bdf-7036319a094e102c210dcc4f
+x-envoy-upstream-service-time: 5
+content-encoding: gzip
+vary: Accept-Encoding
+x-request-id: f6725b46-302e-4c58-a0c7-31ed304f9a7a
+
+{
+  "request_date_ms" : 1714686943375,
+  "request_date" : "2024-05-02T21:55:43Z",
+  "subscriber" : {
+    "non_subscriptions" : {
+
+    },
+    "first_seen" : "2024-05-02T21:53:23Z",
+    "original_application_version" : null,
+    "other_purchases" : {
+
+    },
+    "management_url" : null,
+    "subscriptions" : {
+
+    },
+    "entitlements" : {
+
+    },
+    "original_purchase_date" : null,
+    "original_app_user_id" : "$RCAnonymousID:27e47831e5e7431fb7d9e76384938a42",
+    "last_seen" : "2024-05-02T21:53:23Z"
+  }
+}
+

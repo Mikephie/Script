@@ -1,0 +1,75 @@
+GET https://api.revenuecat.com/v1/subscribers/$RCAnonymousID%3A27e47831e5e7431fb7d9e76384938a42/offerings
+
+{
+'Accept-Encoding' : 'gzip, deflate, br',
+'X-Platform-Version' : 'Version 17.4.1 (Build 21E236)',
+'Host' : 'api.revenuecat.com',
+'Connection' : 'keep-alive',
+'X-Observer-Mode-Enabled' : 'false',
+'X-Version' : '4.31.6',
+'User-Agent' : 'ShellBoxKit/22 CFNetwork/1494.0.7 Darwin/23.4.0',
+'Content-Type' : 'application/json',
+'X-Apple-Device-Identifier' : 'BA0FE14D-6327-41D9-A0EC-F555486A11D0',
+'Accept-Language' : 'zh-SG,zh-CN;q=0.9,zh-Hans;q=0.8',
+'X-Client-Version' : '1.12',
+'X-RevenueCat-ETag' : '',
+'Authorization' : 'Bearer appl_UEUpznyHgWeoFjkkiwfVCLvbOQV',
+'X-Platform' : 'iOS',
+'X-Platform-Flavor' : 'native',
+'X-Storefront' : 'MYS',
+'Accept' : '*/*',
+'X-Client-Build-Version' : '22',
+'X-Client-Bundle-ID' : 'com.jump.ShellBoxKit',
+'X-Is-Sandbox' : 'false',
+'X-StoreKit2-Enabled' : 'false'
+}
+
+
+
+
+
+HTTP/1.1 200 OK
+Date: Thu, 02 May 2024 21:55:43 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+server: envoy
+access-control-allow-origin: *
+access-control-expose-headers: X-Request-Id
+x-revenuecat-etag: a62122ca079b6b56
+x-revenuecat-request-time: 1714686943105
+x-signature: Sjl81rWh/SKBX8ln3ZpDpeRHXBE4mPV9URb2EdabBUSiTQAAIdwcoAZapTeog28woK0SAdDapF6jcPCng+Nvd4jRtvk+SDVuNt8vR7IE/dXVZD1z3mpQ10LMNdlfcBW7ta1hD7IaJy/joU0wABo0YiksrYpt5RkTSctO/czjww8qipuZjlJFpZ0g3WJYdbkwC65u2sWpdtSCIEuyfIDex0d3aEba0okcupzSXfxYY8Q/ZakD
+x-amzn-trace-id: Root=1-66340bdf-0afca05418ac00437412f9c8
+x-envoy-upstream-service-time: 10
+content-encoding: gzip
+vary: Accept-Encoding
+x-request-id: 78d65bdb-0fa7-4d2c-9d18-78204e537d6e
+
+{
+  "placements" : {
+    "fallback_offering_id" : "ssh_month_via"
+  },
+  "offerings" : [
+    {
+      "metadata" : null,
+      "description" : "The standerts",
+      "identifier" : "ssh_month_via",
+      "packages" : [
+        {
+          "platform_product_identifier" : "ShellBoxKit.Month",
+          "identifier" : "$rc_monthly"
+        },
+        {
+          "platform_product_identifier" : "ShellBoxKit.Year",
+          "identifier" : "$rc_annual"
+        },
+        {
+          "platform_product_identifier" : "ShellBoxKit.Lifetime",
+          "identifier" : "$rc_lifetime"
+        }
+      ]
+    }
+  ],
+  "current_offering_id" : "ssh_month_via"
+}
+
