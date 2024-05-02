@@ -35,8 +35,8 @@ var objc = JSON.parse($response.body);
     },
     "management_url": "https:\/\/apps.apple.com\/account\/subscriptions",
     "subscriptions": {
-      "forever_unlimited_time_discounted_80_int": {
-        "original_purchase_date": "2023-10-05T12:43:01Z",
+      "ShellBoxKit.Lifetime": {
+        "original_purchase_date": "2024-05-02T21:53:23Z",
         "expires_date": "2099-10-12T12:43:00Z",
         "is_sandbox": false,
         "refunded_at": null,
@@ -44,7 +44,7 @@ var objc = JSON.parse($response.body);
         "unsubscribe_detected_at": null,
         "grace_period_expires_date": null,
         "period_type": "trial",
-        "purchase_date": "2023-10-05T12:43:00Z",
+        "purchase_date": "2024-05-02T21:53:23Z",
         "billing_issues_detected_at": null,
         "ownership_type": "PURCHASED",
         "store": "app_store",
@@ -54,12 +54,12 @@ var objc = JSON.parse($response.body);
     "entitlements": {
       "pro": {
         "grace_period_expires_date": null,
-        "purchase_date": "2023-10-05T12:43:00Z",
+        "purchase_date": "2024-05-02T21:53:23Z",
         "product_identifier": "ShellBoxKit.Lifetime",
         "expires_date": "2099-10-12T12:43:00Z"
       }
     },
-    "original_purchase_date": "2023-10-05T12:38:34Z",
+    "original_purchase_date": "2024-05-02T21:53:23Z",
     "original_app_user_id": "$$RCAnonymousID:27e47831e5e7431fb7d9e76384938a42",
     "last_seen": "2024-05-02T21:53:23Z"
   }
