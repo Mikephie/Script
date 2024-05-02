@@ -61,7 +61,7 @@ var objc = JSON.parse($response.body);
     },
     "original_purchase_date": "2023-10-05T12:38:34Z",
     "original_app_user_id": "$$RCAnonymousID:27e47831e5e7431fb7d9e76384938a42",
-    "last_seen": "2023-10-05T12:43:47Z"
+    "last_seen": "2024-05-02T21:53:23Z"
   }
 }
 
