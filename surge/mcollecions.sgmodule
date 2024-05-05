@@ -1,0 +1,52 @@
+#!name=APP解锁合集
+#!desc=Mikephie
+
+[Script]
+#************************************#
+# AdblockPro
+# hostname = api.adblockpro.app
+AdblockPro = type=http-response,pattern=^https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js
+
+#************************************#
+# Grammarly
+# hostname = subscription.grammarly.com
+Grammarly = type=http-response,pattern=^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js
+
+#************************************#
+# 扫描全能王
+# hostname = ap*.intsig.net
+扫描全能王 = type=http-response,pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/camscanner.js
+
+#************************************#
+# 美图秀秀
+# hostname = api.xiuxiu.meitu.com
+美图秀秀 = type=http-response,pattern=^https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js
+
+#************************************#
+# Filmix
+# hostname = appv2.filmix.com.cn
+Filmix = type=http-response,pattern=^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
+
+#************************************#
+# ToonMe
+# hostname = purchases.ws.pho.to
+ToonMe = type=http-response,pattern=^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js
+
+#************************************#
+# Wallcraft-动态壁纸
+# hostname = billing-ios.wallpaperscraft.com
+Wallcraft = type=http-response,pattern=^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js
+
+#************************************#
+# 壁纸 - 精选高清墙纸图片和背景主题
+# hostname = leancloud.emotionwp.com
+壁纸 = type=http-response,pattern=^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
+
+#************************************#
+# FaceLab
+# hostname = subscription-api.lyrebirdstudio.net
+FaceLab = type=http-response,pattern=^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js
+
+#************************************#
+[MITM]
+hostname = -buy.itunes.apple.com, api.revenuecat.com, api.adblockpro.app, appv2.filmix.com.cn, api.xiuxiu.meitu.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, 
