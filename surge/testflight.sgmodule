@@ -1,0 +1,10 @@
+#!name=TestFlight
+#!desc=作者MCdasheng
+
+[Script]
+TestFlight = type=cron, cronexp="30 10,20 * * *", script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js, timeout=60, wake-system=1
+
+获取cookie = type=http-request, pattern=^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$, script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TF_appIds.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% testflight.apple.com
