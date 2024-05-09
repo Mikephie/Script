@@ -1,5 +1,6 @@
 #Mike
 
+USER-AGENT,KWPlayer,ChinaMedia
 USER-AGENT,NeteaseMusic,ChinaMedia
 USER-AGENT,NeteaseMusic*,ChinaMedia
 USER-AGENT,网易云音乐,ChinaMedia
@@ -89,6 +90,7 @@ DOMAIN-SUFFIX,v.iask.com,ChinaMedia
 DOMAIN-SUFFIX,tv.weibo.com,ChinaMedia
 DOMAIN-SUFFIX,www.yinyuetai.com,ChinaMedia
 DOMAIN-SUFFIX,www.kugou.com,ChinaMedia
+DOMAIN-SUFFIX,kuwo.cn,ChinaMedia
 DOMAIN-SUFFIX,www.kuwo.cn,ChinaMedia
 DOMAIN-SUFFIX,antiserver.kuwo.cn,ChinaMedia
 DOMAIN-SUFFIX,ipcheck.kuwo.cn,ChinaMedia
@@ -99,7 +101,7 @@ DOMAIN-SUFFIX,vdn.live.cntv.cn,ChinaMedia
 DOMAIN-SUFFIX,cctv1.vtime.cntv.cloudcdn.net,ChinaMedia
 DOMAIN-SUFFIX,cctv5.vtime.cntv.cloudcdn.net,ChinaMedia
 DOMAIN-SUFFIX,cctv5plus.vtime.cntv.cloudcdn.net,ChinaMedia
-DOMAIN-SUFFIX,cctv13.vtime.cntv.cloudcdn.net,ChinaMedia
+DOMAIN-SUFFIX,cctv13.vtimet.cntv.cloudcdn.net,ChinaMedia
 DOMAIN-SUFFIX,sports1pull.live.wscdns.com,ChinaMedia
 DOMAIN-SUFFIX,vip.sports.cntv.cn,ChinaMedia
 DOMAIN-SUFFIX,www.youku.com,ChinaMedia
