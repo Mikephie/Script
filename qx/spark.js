@@ -66,7 +66,7 @@ var chxm1023 = JSON.parse($response.body);
         "period_type": "trial",
         "store": "app_store",
         "ownership_type": "PURCHASED",
-        "expires_date": "2099-09-09T09:09:09Z",
+        "expires_date": "2088-08-08T08:08:08Z",
         "warning": "仅供学习，禁止转载或售卖",
         "original_purchase_date": "2023-09-09T09:09:09Z",
         "purchase_date": "2023-09-09T09:09:09Z",
@@ -75,7 +75,7 @@ var chxm1023 = JSON.parse($response.body);
     },
     "entitlements": {
       "premium": {
-        "expires_date": "2099-09-09T09:09:09Z",
+        "expires_date": "2088-08-08T08:08:08Z",
         "product_identifier": "spark_5999_1y_1w0",
         "purchase_date": "2023-09-09T09:09:09Z"
       },
