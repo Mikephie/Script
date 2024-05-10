@@ -1,0 +1,9 @@
+#!name=sparkmac
+#!desc=sparkmac
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1028.png
+
+[Script]
+http-response https://api.revenuecat.com/v1/(receipts|subscribers)/* script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/spark.js, requires-body=true, timeout=60, tag=spark
+
+[MITM]
+hostname = api.revenuecat.com
