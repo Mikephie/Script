@@ -19,9 +19,9 @@ hostname = api.revenuecat.com
 
 *******************************/
 
-var chxm1023 = JSON.parse($response.body);
+var mikephie = JSON.parse($response.body);
 
-    chxm1023 = {
+    mikephie = {
   "request_date_ms": 1715290303654,
   "request_date": "2024-05-09T21:31:43Z",
   "subscriber": {
@@ -61,7 +61,7 @@ var chxm1023 = JSON.parse($response.body);
         "auto_resume_date": null
       },
       "spark_5999_1y_1w0": {
-        "Author": "chxm1023",
+        "Author": "mikephie",
         "store_transaction_id": "4900066666666666",
         "period_type": "trial",
         "store": "app_store",
@@ -70,7 +70,7 @@ var chxm1023 = JSON.parse($response.body);
         "warning": "仅供学习，禁止转载或售卖",
         "original_purchase_date": "2023-09-09T09:09:09Z",
         "purchase_date": "2023-09-09T09:09:09Z",
-        "Telegram": "https:\/\/t.me\/chxm1023"
+        "Telegram": "https:\/\/t.me\/mikephie"
       }
     },
     "entitlements": {
@@ -92,4 +92,4 @@ var chxm1023 = JSON.parse($response.body);
   }
 }
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(mikephie)});
