@@ -77,8 +77,8 @@ payload:
   - DOMAIN-SUFFIX,v.iask.com
   - DOMAIN-SUFFIX,tv.weibo.com
   - DOMAIN-SUFFIX,www.yinyuetai.com
-  - DOMAIN-SUFFIX,www.kugou.com
-  - DOMAIN-SUFFIX,www.kuwo.cn
+  - DOMAIN-SUFFIX,kugou.com
+  - DOMAIN-SUFFIX,kuwo.cn
   - DOMAIN-SUFFIX,antiserver.kuwo.cn
   - DOMAIN-SUFFIX,ipcheck.kuwo.cn
   - DOMAIN-SUFFIX,live.g3proxy.lecloud.com
