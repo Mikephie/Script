@@ -76,7 +76,7 @@ var chxm1023 = JSON.parse($response.body);
     "entitlements": {
       "premium": {
         "expires_date": "2088-08-08T08:08:08Z",
-        "product_identifier": "spark_5999_1y_1w0",
+        "product_identifier": "spark_desktop_5999_1y_1w0",
         "purchase_date": "2023-09-09T09:09:09Z"
       },
       "free-sws": {
