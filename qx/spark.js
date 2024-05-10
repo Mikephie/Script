@@ -40,7 +40,7 @@ var chxm1023 = JSON.parse($response.body);
     "first_seen": "2023-10-19T10:37:33Z",
     "original_application_version": "3.9.3.303",
     "other_purchases": {
-      "spark_openai_tokens_1xt": {
+      "spark_openai_tokens_4xt": {
         "purchase_date": "2024-05-08T08:08:10Z"
       }
     },
