@@ -16,7 +16,7 @@ hostname = rdp.duetdisplay.com
 var objc = JSON.parse($response.body);
 
     objc = {
-  "success": true,
+  "success": true,"hasStripeAccount": true,
   "products": [
     {
       "vendor": "stripe",
@@ -28,7 +28,6 @@ var objc = JSON.parse($response.body);
       "inTrial": true
     }
   ],
-  "hasStripeAccount": true
 }
 
 $done({body : JSON.stringify(objc)});
