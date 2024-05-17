@@ -24,7 +24,7 @@ var objc = JSON.parse($response.body);
       "subscriptionId": 2193526,
       "purchaseDate": "2024-05-14T02:41:27Z",
       "cancelled": false,
-      "expiresDate": "2088-08-08T19:47:22Z",
+      "expiresDate": "2088-05-21T02:41:27Z",
       "inTrial": true
     }
   ],
