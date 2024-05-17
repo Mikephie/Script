@@ -28,7 +28,7 @@ var objc = JSON.parse($response.body);
       "inTrial": true
     }
   ],
-  "hasStripeAccount": false
+  "hasStripeAccount": true
 }
 
 $done({body : JSON.stringify(objc)});
