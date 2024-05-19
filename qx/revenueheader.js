@@ -34,9 +34,9 @@ if (forbiddenAppFound) {
 
 //识别UA
 const list = {
-  'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus', cm: 'sja' },  //Currency-汇率查询
-  'TripMemo': { name: 'pro', id: 'com.ningle.dailytracker.lifetime', cm: 'sjb' },  //旅行迹
-  'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever', cm: 'sjb' },  //ShellBean-SSH终端服/Linux监控
+  'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus' },  //Currency-汇率查询
+  'TripMemo': { name: 'pro', id: 'com.ningle.dailytracker.lifetime' },  //旅行迹
+  'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year' },  //ShellBean-SSH终端服/Linux监控
 
 
 }
