@@ -10,7 +10,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueheader.js
 
 [mitm]
 hostname = api.revenuecat.com
@@ -18,9 +18,9 @@ hostname = api.revenuecat.com
 *************************************/
 
 
-const chxm1024 = {};
+const mikephie76 = {};
 const headers = $request.headers;
-const chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body || null);
+const mikephie = JSON.parse(typeof $response != "undefined" && $response.body || null);
 const ua = headers['User-Agent'] || headers['user-agent'];
 const bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
