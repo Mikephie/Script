@@ -33,11 +33,32 @@ if (forbiddenAppFound) {
 }
 
 //识别UA
-const list = {
+  var UA = $request.headers['user-agent'];
+  const app = '1';
+  const UAMappings = {
   'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus' },  //Currency-汇率查询
   'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever' },  //ShellBean-SSH终端服/Linux监控
   'ShellBoxKit': { name: 'ssh_pro', id: 'ShellBoxKit.Year' },  //CareServer-服务器监控
 
-}
+    };
 
+  const data = {
+    "expires_date": "2088-08-08T08:08:08Z",
+    "original_purchase_date": "2024-05-19T02:15:35Z",
+    "purchase_date": "2024-05-19T02:15:35Z",
+    "ownership_type": "PURCHASED",
+    "store": "app_store"
+  };
+  for (const i in UAMappings) {
+    if (new RegExp(`^${i}`, 'i').test(UA)) {
+      const { name, id } = UAMappings[i];
+      mikephie76.subscriber.subscriptions = {};
+      mikephie76.subscriber.subscriptions[id] = data;
+      mikephie76.subscriber.entitlements[name] = JSON.parse(JSON.stringify(data));
+      mikephie76.subscriber.entitlements[name].product_identifier = id;
+      break;
+    }
+  }
+  mikephie.body = JSON.stringify(mikephie76);
+}
 $done(mikephie76)
