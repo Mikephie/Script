@@ -53,7 +53,7 @@ var mikephie = JSON.parse($response.body);
       }
     },
     "entitlements" : {
-      "ssh_pro" : {
+      "pro" : {
         "grace_period_expires_date" : null,
         "purchase_date" : "2024-05-19T06:06:25Z",
         "product_identifier" : "ShellBoxKit.Lifetime",
