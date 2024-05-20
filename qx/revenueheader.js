@@ -1,14 +1,5 @@
 /*************************************
 
-项目名称：Revenuecat 系列解锁合集
-下载地址：https://too.st/CollectionsAPP
-更新日期：2024-05-18
-脚本作者：chxm1023
-电报频道：https://t.me/chxm1023
-使用声明：⚠️仅供参考，🈲转载与售卖！
-
-**************************************
-
 [rewrite_local]
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueheader.js
 
@@ -32,23 +23,48 @@ if (forbiddenAppFound) {
   $done({});
 }
 
-//识别UA
-  var UA = $request.headers['user-agent'];
-  const app = '1';
-  const UAMappings = {
-  'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus' },  //Currency-汇率查询
-  'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever' },  //ShellBean-SSH终端服/Linux监控
-  'ShellBoxKit': { name: 'ssh_pro', id: 'ShellBoxKit.Year' },  //CareServer-服务器监控
 
-    };
+const mikephie = {};
+const mikephie76 = JSON.parse(typeof $response != "undefined" && $response.body || null);
+
+if (typeof $response == "undefined") {
+  delete $request.headers["x-revenuecat-etag"];
+  delete $request.headers["X-RevenueCat-ETag"];
+  mikephie.headers = $request.headers;
+} else if (mikephie76 && mikephie76.subscriber) {
+  mikephie76.subscriber.subscriptions = mikephie76.subscriber.subscriptions || {};
+  mikephie76.subscriber.entitlements = mikephie76.subscriber.entitlements || {};
+
+  var headers = {};
+  for (var key in $request.headers) {
+    const reg = /^[a-z]+$/;
+    if (key === "User-Agent" && !reg.test(key)) {
+      var lowerkey = key.toLowerCase();
+      $request.headers[lowerkey] = $request.headers[key];
+      delete $request.headers[key];
+    }
+  }
+
+  var UA = $request.headers['user-agent'];
+  const app = 'YourAppNameHere'; // Replace 'YourAppNameHere' with your app name
+
+  const UAMappings = {
+    'CountDuck':{ name: 'premium', id: 'Lifetime'},,
+    'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever' },  //ShellBean-SSH终端服/Linux监控
+    'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
+    'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},//2024.4.9
+
+    // Add more mappings as needed
+  };
 
   const data = {
-    "expires_date": "2088-08-08T08:08:08Z",
-    "original_purchase_date": "2024-05-19T02:15:35Z",
-    "purchase_date": "2024-05-19T02:15:35Z",
+    "expires_date": "2099-12-31T12:00:00Z",
+    "original_purchase_date": "2023-09-01T11:00:00Z",
+    "purchase_date": "2023-09-01T11:00:00Z",
     "ownership_type": "PURCHASED",
     "store": "app_store"
   };
+
   for (const i in UAMappings) {
     if (new RegExp(`^${i}`, 'i').test(UA)) {
       const { name, id } = UAMappings[i];
@@ -59,6 +75,8 @@ if (forbiddenAppFound) {
       break;
     }
   }
+
   mikephie.body = JSON.stringify(mikephie76);
 }
-$done(mikephie76)
+
+$done(mikephie);
