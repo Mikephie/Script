@@ -45,7 +45,7 @@ if (typeof $response == "undefined") {
     'clica':{ name: 'pro', id: 'clica.vip.year'},//
     'FoJiCam':{ name: 'Pro', id: 'com.uzero.cn.fojicam.life2'},//2024.4.9
     'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},//2024.4.9
-    'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever' },
+    'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year' },
     'StarDiary':{ name: 'pro', id: 'com.gsdyx.StarDiary.nonConsumable.forever'},
     'CountDuck':{ name: 'premium', id: 'Lifetime'},
     'StarFocus':{ name: 'pro', id: 'com.gsdyx.StarFocus.nonConsumable.forever'},
