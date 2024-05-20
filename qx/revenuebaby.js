@@ -1,11 +1,3 @@
-/*************************************
-
-项目名称：revenuecat合集 （此合集只包含10.5及以后的软件）
-软件版本：均适配2023.9.8最新 （每一个下载地址对应一个UAMappings）
-
-使用声明：⚠️仅供参考，🈲️转载与售卖！
-
-**************************************
 
 [rewrite_local]
 #修改
@@ -40,6 +32,11 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
+    'FretTrainer':{ name: 'pro', id: 'frettrainer.sub.yearly.pro'},//5.7
+    '%E9%B2%B8%E8%90%BD%E6%96%87%E6%A1%88':{ name: 'vip', id: 'jl_year'},//2024.5.6
+    'PeachTree':{ name: 'GoldMember', id: 'LifetimeGoldMembership'},//2024.5.5
+    'No%20Fusion':{ name: 'LivePhoto', id: 'com.grey.livephoto.reference.price'},//2024.5.5
+    'mark_cup':{ name: 'premiun', id: '202403180021'},//20.24.5.4
     'VOX':{ name: 'VOX Premium', id: 'com.coppertino.VoxMobile.AU.Loop1_v8'},//20.24.4.22
     'PDF%20Viewer':{ name: 'sub.pro', id: 'com.pspdfkit.viewer.sub.pro.yearly'},//2024.3.21
     'Text%20Workflow':{ name: 'pro', id: 'tw_99_1m'},//2024.3.2
@@ -48,7 +45,7 @@ if (typeof $response == "undefined") {
     'clica':{ name: 'pro', id: 'clica.vip.year'},//
     'FoJiCam':{ name: 'Pro', id: 'com.uzero.cn.fojicam.life2'},//2024.4.9
     'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},//2024.4.9
-    'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year'}, 
+    'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever' },
     'StarDiary':{ name: 'pro', id: 'com.gsdyx.StarDiary.nonConsumable.forever'},
     'CountDuck':{ name: 'premium', id: 'Lifetime'},
     'StarFocus':{ name: 'pro', id: 'com.gsdyx.StarFocus.nonConsumable.forever'},
