@@ -50,7 +50,7 @@ if (typeof $response == "undefined") {
 
   const UAMappings = {
     'CountDuck':{ name: 'premium', id: 'Lifetime'},,
-    'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever' },  //ShellBean-SSH终端服/Linux监控
+    'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.subscription.year' },  //ShellBean-SSH终端服/Linux监控
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
     'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},//2024.4.9
 
