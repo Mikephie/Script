@@ -1,52 +1,56 @@
-#!name=APP解锁合集
-#!desc=Mikephie
+#!name=Mikephie自用合集
+#!desc=APP解锁合集
+#!category=🛠️ APP解锁
+
+[General]
+force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [Script]
-#************************************#
-# AdblockPro
+# hostname = api.revenuecat.com, firestore.googleapis.com
+miketest = type=http-response, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/miketest.js, requires-body=true, max-size=-1, timeout=60
+
+miketest = type=http-request, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/miketest.js, timeout=60
+
+# hostname = buy.itunes.apple.com
+iTunes = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body=true, max-size=-1, timeout=60
+
+# hostname = gql.reddit.com, gql-fed.reddit.com
+reddit = type=http-response, pattern=https?:\/\/gql(-fed)?\.reddit\.com, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js, requires-body=true, max-size=-1, timeout=60
+
+# hostname = rdp.duetdisplay.com
+DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/users/validateReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js, requires-body=true, max-size=-1, timeout=60
+
 # hostname = api.adblockpro.app
-AdblockPro = type=http-response,pattern=^https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js
+adblockpro = type=http-response, pattern=https:\/\/api\.adblockpro\.app\/verify, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
-# Grammarly
 # hostname = subscription.grammarly.com
-Grammarly = type=http-response,pattern=^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js
+grammarlypremiumcrack = type=http-response, pattern=https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
-# 扫描全能王
 # hostname = ap*.intsig.net
-扫描全能王 = type=http-response,pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/camscanner.js
+camscanner = type=http-response, pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/camscanner.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
-# 美图秀秀
+# hostname = *.cyapi.cn, *.caiyunapp.com
+caiyuntianqi = type=http-response, pattern=https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
+
+caiyuntianqi = type=http-request, pattern=https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60
+
 # hostname = api.xiuxiu.meitu.com
-美图秀秀 = type=http-response,pattern=^https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js
+mtxx = type=http-response, pattern=https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
-# Filmix
 # hostname = appv2.filmix.com.cn
-Filmix = type=http-response,pattern=^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
+filmix = type=http-response, pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
-# ToonMe
-# hostname = purchases.ws.pho.to
-ToonMe = type=http-response,pattern=^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js
-
-#************************************#
-# Wallcraft-动态壁纸
 # hostname = billing-ios.wallpaperscraft.com
-Wallcraft = type=http-response,pattern=^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js
+wall = type=http-response, pattern=https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
-# 壁纸 - 精选高清墙纸图片和背景主题
 # hostname = leancloud.emotionwp.com
-壁纸 = type=http-response,pattern=^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
+bizhi = type=http-response, pattern=https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
-# FaceLab
+# hostname = purchases.ws.pho.to
+toonme = type=http-response, pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, max-size=-1, timeout=60
+
 # hostname = subscription-api.lyrebirdstudio.net
-FaceLab = type=http-response,pattern=^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js
+FaceLab = type=http-response, pattern=https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
 [MITM]
-hostname = -buy.itunes.apple.com, api.revenuecat.com, api.adblockpro.app, appv2.filmix.com.cn, api.xiuxiu.meitu.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, 
+hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, -buy.itunes.apple.com, api.adblockpro.app, appv2.filmix.com.cn, api.xiuxiu.meitu.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net
