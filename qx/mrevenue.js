@@ -16,7 +16,7 @@ hostname = api.revenuecat.com
 const mikephie = {};
 const mikephie76 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 
-// New code: Check for forbidden apps
+// 排除已禁止MITM的APP
 const forbiddenApps = ['Fileball', 'APTV'];
 const ua = $request.headers['User-Agent'];
 const forbiddenAppFound = forbiddenApps.find(appName => (ua && ua.includes(appName)) || ($request.body && $request.body.includes(appName)));
@@ -57,9 +57,9 @@ if (typeof $response == "undefined") {
     'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month' },  //花样文字
   };
   const data = {
-    "expires_date": "6666-06-06T06:06:06Z",
-    "original_purchase_date": "2023-06-06T06:06:06Z",
-    "purchase_date": "2023-06-06T06:06:06Z",
+    "expires_date": "2088-08-08T08:08:08Z",
+    "original_purchase_date": "2023-08-08T08:08:08Z",
+    "purchase_date": "2023-08-08T08:08:08Z",
     "ownership_type": "PURCHASED",
     "store": "app_store"
   };
