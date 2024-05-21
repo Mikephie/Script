@@ -12,10 +12,18 @@ Revenuecat解锁合集，已解锁APP及下载地址请见说明：https://githu
 [MITM]
 hostname = api.revenuecat.com
 
-
 */
 const mikephie = {};
 const mikephie76 = JSON.parse(typeof $response != "undefined" && $response.body || null);
+
+// New code: Check for forbidden apps
+const forbiddenApps = ['Fileball', 'APTV'];
+const ua = $request.headers['User-Agent'];
+const forbiddenAppFound = forbiddenApps.find(appName => (ua && ua.includes(appName)) || ($request.body && $request.body.includes(appName)));
+if (forbiddenAppFound) {
+  console.log(`发现禁止MITM的APP: ${forbiddenAppFound}，已停止运行脚本！\n叮当猫の分享频道: https://t.me/chxm1023`);
+  $done({});
+}
 
 if (typeof $response == "undefined") {
   delete $request.headers["x-revenuecat-etag"];
@@ -26,28 +34,27 @@ if (typeof $response == "undefined") {
   mikephie76.subscriber.entitlements = mikephie76.subscriber.entitlements || {};
   var headers = {};
   for (var key in $request.headers) {
-  const reg = /^[a-z]+$/;
-  if (key === "User-Agent" && !reg.test(key)) {
-    var lowerkey = key.toLowerCase();
-    $request.headers[lowerkey] = $request.headers[key];
-    delete $request.headers[key];
+    const reg = /^[a-z]+$/;
+    if (key === "User-Agent" && !reg.test(key)) {
+      var lowerkey = key.toLowerCase();
+      $request.headers[lowerkey] = $request.headers[key];
+      delete $request.headers[key];
     }
   }
   var UA = $request.headers['user-agent'];
   const app = 'gd';
   const UAMappings = {
-    'ShellBean':{ name: 'pro', id: 'com.ningle.shellbean.iap.forever'},  //服务器监控
-    'CountDuck':{ name: 'premium', id: 'Lifetime'},  //倒数鸭
-    'ScreenRecordCase':{ name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra'},  //手机壳套图
-    'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus'},  //汇率转换
-    'Spark':{ name: 'premium', id: 'spark_5999_1y_1w0'},  //邮箱
-    'ShellBoxKit':{ name: 'pro', id: 'ShellBoxKit.Lifetime'},  //服务器监控
-    'IDM':{ name: 'premium', id: 'sub_yearly_idm'},  //IDM-下载
-    'Whisper':{ name: 'all_features', id: 'whisperai_80_y'},  //Whisper AI
-		'PhotoRoom': { name: 'business', id: 'com.background.business.yearly' },  //图像编辑
-		'Drops':{ name: 'premium', id: 'forever_unlimited_time_discounted_80_int'},  //Drops外语
-		'UTC':{ name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month'},  //花样文字
-    
+    'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever' },  //服务器监控
+    'CountDuck': { name: 'premium', id: 'Lifetime' },  //倒数鸭
+    'ScreenRecordCase': { name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra' },  //手机壳套图
+    'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus' },  //汇率转换
+    'Spark': { name: 'premium', id: 'spark_5999_1y_1w0' },  //邮箱
+    'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime' },  //服务器监控
+    'IDM': { name: 'premium', id: 'sub_yearly_idm' },  //IDM-下载
+    'Whisper': { name: 'all_features', id: 'whisperai_80_y' },  //Whisper AI
+    'PhotoRoom': { name: 'business', id: 'com.background.business.yearly' },  //图像编辑
+    'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int' },  //Drops外语
+    'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month' },  //花样文字
   };
   const data = {
     "expires_date": "6666-06-06T06:06:06Z",
