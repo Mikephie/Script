@@ -7,9 +7,9 @@ force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [Script]
 # hostname = api.revenuecat.com, firestore.googleapis.com
-miketest = type=http-response, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/miketest.js, requires-body=true, max-size=-1, timeout=60
+mrevenue = type=http-response, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, requires-body=true, max-size=-1, timeout=60
 
-miketest = type=http-request, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/miketest.js, timeout=60
+mrevenue = type=http-request, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, timeout=60
 
 # hostname = buy.itunes.apple.com
 iTunes = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body=true, max-size=-1, timeout=60
