@@ -11,10 +11,9 @@ force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 revenuecat1 = type=http-response,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
 revenuecat2 = type=http-request,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js,script-update-interval=0
 
-mrevenue type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
-
+# iTunes解锁系列
 # hostname = buy.itunes.apple.com
-iTunes type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
+iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
 
 # hostname = gql.reddit.com, gql-fed.reddit.com
 reddit type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/gql(-fed)?\.reddit\.com, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js
