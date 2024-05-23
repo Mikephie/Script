@@ -2,9 +2,6 @@
 #!desc=APP解锁合集
 #!category=🛠️ APP解锁
 
-[General]
-force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
-
 [Script]
 # Revenuecat解锁系列
 # hostname = api.revenuecat.com
