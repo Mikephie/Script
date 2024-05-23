@@ -3,7 +3,7 @@
 #!category=🛠️ APP解锁
 
 [General]
-#force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
+force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [Script]
 # hostname = api.revenuecat.com, firestore.googleapis.com
