@@ -33,8 +33,9 @@ http-response https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipt
 
 http-request https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, timeout=60, tag=mrevenue
 
+# iTunes解锁系列
 # hostname = buy.itunes.apple.com
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body=true, timeout=60, tag=iTunes
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body=true, tag=iTunes解锁系列
 
 # hostname = gql.reddit.com, gql-fed.reddit.com
 http-response https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js, requires-body=true, timeout=60, tag=reddit
