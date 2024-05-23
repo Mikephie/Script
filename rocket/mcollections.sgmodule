@@ -1,5 +1,6 @@
-#!name=mcollections
-#!desc=mcollections
+#!name=Mikephie自用合集
+#!desc=APP解锁合集
+#!category=🛠️ APP解锁
 
 [General]
 force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
