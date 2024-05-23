@@ -17,6 +17,19 @@ force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 # 酷我音乐_添加已购音乐
 ^https?:\/\/.*\.kuwo\.cn\/music\.pay\?uid\=\d+ http://musicpay.kuwo.cn/music.pay?uid=2 302
 
+[Map Local]
+# 彩云天气去广告
+^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# 酷我听书_Blockad
+https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 酷我听书_Blockad
+https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# iScreen小组件-辅助解锁
+^https?:\/\/pay\.kuso\.xyz\/pay\/pay-check data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+#FT中文网AD
+^https?:\/\/ftmailbox\.cn\/ad_impression\/.+ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+
 [Script]
 # hostname = api.revenuecat.com, firestore.googleapis.com
 mrevenue = type=http-response, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, requires-body=true, max-size=-1, timeout=60
