@@ -27,7 +27,7 @@ https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
 # > 开屏广告
 ^https://.*miguvideo\.com/request/sdk - reject-200
 # > 电影猎手开屏广告
-^https://.*miguvideo\.com/request/sdk - reject-200
+^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config\?pack - reject-dict
 
 [Script]
 # hostname = api.revenuecat.com, firestore.googleapis.com
