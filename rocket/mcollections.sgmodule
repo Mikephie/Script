@@ -36,7 +36,7 @@ caiyuntianqi = type=http-request, pattern=^https?:\/\/(api|wrapper)\.(cyapi|caiy
 mtxx = type=http-response, pattern=^https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = appv2.filmix.com.cn
-filmix type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
+filmix = type=http-response, pattern=^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = billing-ios.wallpaperscraft.com
 wall type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js
