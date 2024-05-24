@@ -29,9 +29,8 @@ camscanner = type=http-response, pattern=^https:\/\/(api|api-cs)\.intsig\.net\/p
 camscanner = type=http-response, pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/camscanner.js, requires-body=true, max-size=0
 
 # hostname = *.cyapi.cn, *.caiyunapp.com
-caiyuntianqi type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js
-
-caiyuntianqi type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js
+caiyuntianqi = type=http-response, pattern=^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
+caiyuntianqi = type=http-request, pattern=^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60
 
 # hostname = api.xiuxiu.meitu.com
 mtxx type=http-response,requires-body=1,max-size=0,pattern=https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js
