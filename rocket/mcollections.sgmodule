@@ -39,7 +39,7 @@ mtxx = type=http-response, pattern=^https?://(api|h5).xiuxiu.meitu.com/(?!(v1/fe
 filmix = type=http-response, pattern=^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = billing-ios.wallpaperscraft.com
-wall type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js
+wall = type=http-response, pattern=^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = leancloud.emotionwp.com
 bizhi type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
