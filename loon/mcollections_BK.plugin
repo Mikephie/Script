@@ -19,14 +19,10 @@ force-http-engine-hosts = gql.reddit.com, gql-fed.reddit.com
 ^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
 ^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ - reject
 ^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/Ad - reject
-
-#************************************#
 # 酷我听书广告
 #************************************#
 https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright - reject-dict
 https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
-
-#************************************#
 # 酷我音乐添加已购音乐
 #************************************#
 ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ header http://musicpay.kuwo.cn/music.pay?uid=2
@@ -37,7 +33,7 @@ https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
 ^https?:\/\/pay\.kuso\.xyz\/pay\/pay-check - reject-200
 
 #************************************#
-# 开屏广告
+# 咪咕，电影猎手，去开屏广告
 #************************************#
 ^https://.*miguvideo\.com/request/sdk - reject-200
 ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config\?pack - reject-dict
@@ -61,7 +57,7 @@ http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=ht
 # Reddit 解锁系列
 #************************************#
 # hostname = gql.reddit.com, gql-fed.reddit.com
-http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js, requires-body=true, timeout=60, tag=reddit
+http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js, requires-body=true, timeout=60, tag=Reddit
 
 #************************************#
 # Duet Display 解锁系列
@@ -111,19 +107,19 @@ http-response ^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users script-path=ht
 # Wallpaperscraft 解锁系列
 #************************************#
 # hostname = billing-ios.wallpaperscraft.com
-http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, timeout=60, tag=wall
+http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, timeout=60, tag=Wallpaperscraft
 
 #************************************#
 # Bizhi 解锁系列
 #************************************#
 # hostname = leancloud.emotionwp.com
-http-response ^https?:\/\/leancloud\.emotionwp\.com\/.*\/classes\/wpf_account script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, timeout=60, tag=bizhi
+http-response ^https?:\/\/leancloud\.emotionwp\.com\/.*\/classes\/wpf_account script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, timeout=60, tag=Bizhi
 
 #************************************#
 # ToonMe 解锁系列
 #************************************#
 # hostname = purchases.ws.pho.to
-http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, timeout=60, tag=toonme
+http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, timeout=60, tag=ToonMe
 
 #************************************#
 # FaceLab 解锁系列
@@ -143,7 +139,7 @@ http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path=ht
 # hostname = isi.*.g*.com*
 http-response ^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js, requires-body=true, timeout=60, tag=goodnotes6
 
-http-request ^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js, requires-body=false, timeout=60, tag=goodnotes
+http-request ^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js, requires-body=false, timeout=60, tag=GoodNotes
 
 #************************************#
 # Replica 解锁系列
