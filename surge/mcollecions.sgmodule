@@ -66,8 +66,11 @@ grammarlypremiumcrack = type=http-response, pattern=https?:\/\/subscription\.gra
 #caiyuntianqi = type=http-response, pattern=https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
 #caiyuntianqi = type=http-request, pattern=https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60
 
+# 美图秀秀
+# hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
+美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
 # hostname = api.xiuxiu.meitu.com
-mtxx = type=http-response, pattern=https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js, requires-body=true, max-size=-1, timeout=60
+#mtxx = type=http-response, pattern=https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = appv2.filmix.com.cn
 filmix = type=http-response, pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, max-size=-1, timeout=60
