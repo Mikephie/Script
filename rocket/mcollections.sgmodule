@@ -19,7 +19,7 @@ reddit type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/gql(-fed
 DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/users/validateReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = api.adblockpro.app
-adblockpro type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.adblockpro\.app\/verify, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js
+adblockpro = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = subscription.grammarly.com
 grammarlypremiumcrack type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js
