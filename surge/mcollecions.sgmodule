@@ -36,56 +36,72 @@ mrevenue = type=http-response, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(sub
 
 mrevenue = type=http-request, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, timeout=60
 
+#************************************#
 # iTunes解锁系列
 # hostname = buy.itunes.apple.com
 iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
 
+#************************************#
+# Reddit
 # hostname = gql.reddit.com, gql-fed.reddit.com
-reddit = type=http-response, pattern=https?:\/\/gql(-fed)?\.reddit\.com, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js, requires-body=true, max-size=-1, timeout=60
+Reddit = type=http-response,pattern=https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js
 
+#************************************#
+# DuetDisplayPro
 # hostname = rdp.duetdisplay.com
-DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/users/validateReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js, requires-body=true, max-size=-1, timeout=60
+DuetDisplayPro = type=https://rdp.duetdisplay.com/v1/users/validateReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js 
 
+#************************************#
+# Adblock Pro
 # hostname = api.adblockpro.app
-adblockpro = type=http-response, pattern=https:\/\/api\.adblockpro\.app\/verify, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js, requires-body=true, max-size=-1, timeout=60
+Adblock Pro = type=https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js
 
+#************************************#
+# Grammarly
 # hostname = subscription.grammarly.com
-grammarlypremiumcrack = type=http-response, pattern=https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js, requires-body=true, max-size=-1, timeout=60
+Grammarly = type=https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js 
 
+#************************************#
 # 扫描全能王
 # hostname = *.camscanner.com, *.intsig.net
 扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
-# hostname = ap*.intsig.net
-#camscanner = type=http-response, pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/camscanner.js, requires-body=true, max-size=-1, timeout=60
 
+#************************************#
 # 彩云天气
 # hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
 彩云天气-SVIP会员 = type=http-response,pattern=^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
 彩云天气-SVIP地图 = type=http-request,pattern=^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
 
-# hostname = *.cyapi.cn, *.caiyunapp.com
-#caiyuntianqi = type=http-response, pattern=https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
-#caiyuntianqi = type=http-request, pattern=https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60
-
+#************************************#
 # 美图秀秀
 # hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
 美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
-# hostname = api.xiuxiu.meitu.com
-#mtxx = type=http-response, pattern=https?://(api|h5).xiuxiu.meitu.com/(?!(v1/feed/)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mtxx.js, requires-body=true, max-size=-1, timeout=60
 
-# hostname = appv2.filmix.com.cn
-filmix = type=http-response, pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, max-size=-1, timeout=60
+#************************************#
+# Filmix
+# hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
+Filmix = type=http-response,pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
 
+#************************************#
+# Wall
 # hostname = billing-ios.wallpaperscraft.com
-wall = type=http-response, pattern=https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, max-size=-1, timeout=60
+wall = type=http-response,pattern=https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js
 
+#************************************#
+# Bizhi
 # hostname = leancloud.emotionwp.com
-bizhi = type=http-response, pattern=https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, max-size=-1, timeout=60
+Bizhi = type=http-response,pattern=https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
 
+#************************************#
+# ToonMe
 # hostname = purchases.ws.pho.to
-toonme = type=http-response, pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, max-size=-1, timeout=60
+ToonMe = type=http-response,pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js
 
-# hostname = subscription-api.lyrebirdstudio.net
+#************************************#
+# FaceLab
+# hostname = type=http-response,pattern=https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js 
+
+subscription-api.lyrebirdstudio.net
 FaceLab = type=http-response, pattern=https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js, requires-body=true, max-size=-1, timeout=60
 
 # Notability
