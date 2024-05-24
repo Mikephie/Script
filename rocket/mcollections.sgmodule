@@ -46,7 +46,7 @@ wall = type=http-response, pattern=^https?:\/\/billing-ios\.wallpaperscraft\.com
 bizhi = type=http-response, pattern=^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = purchases.ws.pho.to
-toonme type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js
+toonme = type=http-response, pattern=^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = subscription-api.lyrebirdstudio.net
 FaceLab type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js
