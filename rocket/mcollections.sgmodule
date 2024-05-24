@@ -25,7 +25,8 @@ adblockpro = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify
 grammarlypremiumcrack = type=http-response, pattern=^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js, requires-body=true, max-size=-1, timeout=60
 
 # hostname = ap*.intsig.net
-camscanner type=http-response,requires-body=1,max-size=0,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/camscanner.js
+camscanner = type=http-response, pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/camscanner.js, requires-body=true, max-size=-1, timeout=60
+camscanner = type=http-response, pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/camscanner.js, requires-body=true, max-size=0
 
 # hostname = *.cyapi.cn, *.caiyunapp.com
 caiyuntianqi type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js
