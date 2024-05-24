@@ -108,6 +108,7 @@ FaceLab = type=http-response, pattern=https?:\/\/subscription-api\.lyrebirdstudi
 # hostname = notability.com
 Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
 
+#************************************#
 # gg
 # hostname = isi.*.g*.com*
 gg = type=http-response,pattern=^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js
