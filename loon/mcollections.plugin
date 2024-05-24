@@ -81,5 +81,9 @@ http-response https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt s
 # hostname = subscription-api.lyrebirdstudio.net
 http-response https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js, requires-body=true, timeout=60, tag=FaceLab
 
+# Notability
+# hostname = notability.com
+http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js, requires-body=true, tag=Notability
+
 [MITM]
 hostname = gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, rdp.duetdisplay.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, spclient.wg.spotify.com， app-v1.ecoliving168.com
