@@ -14,7 +14,7 @@ iTunes = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verify
 
 # Reddit
 # hostname = gql.reddit.com, gql-fed.reddit.com
-Reddit = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/gql(-fed)?\.reddit\.com, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js
+Reddit = type=http-response, pattern=^https?:\/\/gql(-fed)?\.reddit\.com, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Reddit/Reddit_remove_ads.js, requires-body=true
 
 # DuetDisplayPro
 # hostname = rdp.duetdisplay.com
