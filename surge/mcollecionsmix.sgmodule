@@ -31,7 +31,7 @@
 #************************************#
 # Link = https://apps.apple.com/ng/app/invitation-maker-flyer-creator/id1354806829
 # hostname = cn.invit.vip
-^https?:\/\/cn\.invit\.vip\/users\/info url script-response-body https://raw.githubusercontent.com/Rnik666/YJTJS/main/DZQTZZ.js
+DZQTZZ = type=http-response, pattern=^https?:\/\/cn\.invit\.vip\/users\/info, script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/DZQTZZ.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 微商海报-海报制作&搞定海报设计（永久会员） V1.3.8 @GieGie777
