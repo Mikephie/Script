@@ -154,7 +154,7 @@ http-response ^https?:\/\/api\.apphud\.com\/v1\/subscriptions script-path=https:
 http-response ^https?:\/\/baimiao\.uzero\.cn\/api\/.+\/(appLaunchWithUser|getAnnouncement|checkLoginClient) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/baimiao.js, requires-body=true, timeout=60, tag=白描
 
 #************************************#
-# 白描 解锁系列
+# 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
 #************************************#
 # hostname = appss.baomingding.com
 http-response ^https?:\/\/baimiao\.uzero\.cn\/api\/.+\/(appLaunchWithUser|getAnnouncement|checkLoginClient) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/baimiao.js, requires-body=true, timeout=60, tag=白描
