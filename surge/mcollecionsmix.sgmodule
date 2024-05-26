@@ -24,7 +24,7 @@
 #************************************#
 # Link = https://apps.apple.com/ng/app/%E8%B5%B7%E5%90%8D%E6%9C%89%E7%A6%8F-%E5%AE%9D%E5%AE%9D%E5%8F%96%E5%90%8D%E5%AD%97%E8%BD%AF%E4%BB%B6/id1447841037
 # hostname = www.qimingyoufu.cn
-^https?:\/\/www\.qimingyoufu\.cn\/v01\/user-info url script-response-body https://raw.githubusercontent.com/Rnik666/YJTJS/main/QMYF.js
+QMYF = type=http-response, pattern=^https?:\/\/www\.qimingyoufu\.cn\/v01\/user-info, script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/QMYF.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 电子请柬制作 解锁VIP @Rnik666
