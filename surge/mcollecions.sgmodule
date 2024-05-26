@@ -145,5 +145,15 @@ Replica-屏幕镜像 = type=http-response,pattern=^https?:\/\/api\.apphud\.com\/
 # hostname = appss.baomingding.com
 试卷扫描 = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/sjsm.js, requires-body=true, max-size=-1, timeout=60
 
+#************************************#
+# 彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员） V1.1.1 @GieGie777
+# hostname = appss.baomingding.com
+cdsp = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/cdsp.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
+# 作业批改-家长辅导作业工具（永久会员） V2.1.1 @GieGie777
+# hostname = appss.rhinoxlab.com
+zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/zypg.js, requires-body=true, max-size=-1, timeout=60
+
 [MITM]
-hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, rdp.duetdisplay.com, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, spclient.wg.spotify.com, app-v1.ecoliving168.com, appss.baomingding.com
+hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, rdp.duetdisplay.com, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, spclient.wg.spotify.com, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com
