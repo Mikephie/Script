@@ -9,39 +9,32 @@ force-http-engine-hosts = gql.reddit.com, gql-fed.reddit.com
 [URL Rewrite]
 #************************************#
 # 彩云天气广告
-#************************************#
 ^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
 ^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get - reject-200
 
 #************************************#
 # 酷我音乐广告
-#************************************#
 ^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
 ^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ - reject
 ^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/Ad - reject
 # 酷我听书广告
-#************************************#
 https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright - reject-dict
 https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
 # 酷我音乐添加已购音乐
-#************************************#
 ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ header http://musicpay.kuwo.cn/music.pay?uid=2
 
 #************************************#
 # iScreen小组件辅助解锁
-#************************************#
 ^https?:\/\/pay\.kuso\.xyz\/pay\/pay-check - reject-200
 
 #************************************#
 # 咪咕，电影猎手，去开屏广告
-#************************************#
 ^https://.*miguvideo\.com/request/sdk - reject-200
 ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config\?pack - reject-dict
 
 [Script]
 #************************************#
 # Revenuecat 解锁系列
-#************************************#
 # hostname = api.revenuecat.com
 http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, requires-body=true, timeout=60, tag=mrevenue
 
@@ -49,43 +42,36 @@ http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipt
 
 #************************************#
 # iTunes 解锁系列
-#************************************#
 # hostname = buy.itunes.apple.com
 http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body=true, tag=iTunes解锁系列
 
 #************************************#
 # Reddit 解锁系列
-#************************************#
 # hostname = gql.reddit.com, gql-fed.reddit.com
 http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js, requires-body=true, timeout=60, tag=Reddit
 
 #************************************#
 # Duet Display 解锁系列
-#************************************#
 # hostname = rdp.duetdisplay.com
 http-response ^https?:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js, requires-body=true, timeout=60, tag=DuetDisplayPro
 
 #************************************#
 # AdBlock Pro 解锁系列
-#************************************#
 # hostname = api.adblockpro.app
 http-response ^https?:\/\/api\.adblockpro\.app\/verify script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js, requires-body=true, timeout=60, tag=adblockpro
 
 #************************************#
 # Grammarly 解锁系列
-#************************************#
 # hostname = subscription.grammarly.com
 http-response ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js, requires-body=true, timeout=60, tag=grammarlypremiumcrack
 
 #************************************#
 # 扫描全能王 解锁系列
-#************************************#
 # hostname = *.camscanner.com, *.intsig.net
 http-response ^https?:\/\/.*\.(intsig\.net|camscanner\.com) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js, requires-body=true, timeout=60, tag=全能扫描王
 
 #************************************#
 # 彩云天气 解锁系列
-#************************************#
 # hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
 http-response ^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=true, timeout=60, tag=彩云天气-SVIP会员
 
@@ -93,49 +79,41 @@ http-request ^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satel
 
 #************************************#
 # 美图秀秀 解锁系列
-#************************************#
 # hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
 http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js, requires-body=true, timeout=60, tag=美图秀秀
 
 #************************************#
 # Filmix 解锁系列
-#************************************#
 # hostname = appv2.filmix.com.cn
 http-response ^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, timeout=60, tag=filmix
 
 #************************************#
 # Wallpaperscraft 解锁系列
-#************************************#
 # hostname = billing-ios.wallpaperscraft.com
 http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, timeout=60, tag=Wallpaperscraft
 
 #************************************#
 # Bizhi 解锁系列
-#************************************#
 # hostname = leancloud.emotionwp.com
 http-response ^https?:\/\/leancloud\.emotionwp\.com\/.*\/classes\/wpf_account script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, timeout=60, tag=Bizhi
 
 #************************************#
 # ToonMe 解锁系列
-#************************************#
 # hostname = purchases.ws.pho.to
 http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, timeout=60, tag=ToonMe
 
 #************************************#
 # FaceLab 解锁系列
-#************************************#
 # hostname = subscription-api.lyrebirdstudio.net
 http-response ^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js, requires-body=true, timeout=60, tag=FaceLab
 
 #************************************#
 # Notability 解锁系列
-#************************************#
 # hostname = notability.com
 http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js, requires-body=true, timeout=60, tag=Notability
 
 #************************************#
 # GoodNotes 解锁系列
-#************************************#
 # hostname = isi.*.g*.com*
 http-response ^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js, requires-body=true, timeout=60, tag=goodnotes6
 
@@ -143,21 +121,29 @@ http-request ^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\
 
 #************************************#
 # Replica 解锁系列
-#************************************#
 # hostname = api.apphud.com
 http-response ^https?:\/\/api\.apphud\.com\/v1\/subscriptions script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/replica.js, requires-body=true, timeout=60, tag=Replica-屏幕镜像
 
 #************************************#
 # 白描 解锁系列
-#************************************#
 # hostname = baimiao.uzero.cn
 http-response ^https?:\/\/baimiao\.uzero\.cn\/api\/.+\/(appLaunchWithUser|getAnnouncement|checkLoginClient) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/baimiao.js, requires-body=true, timeout=60, tag=白描
 
 #************************************#
 # 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
-#************************************#
 # hostname = appss.baomingding.com
 http-response ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/sjsm.js, requires-body=true, timeout=60, tag=sjsm
+
+#************************************#
+# 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
+# hostname = appss.baomingding.com
+http-response ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/sjsm.js, requires-body=true, timeout=60, tag=sjsm
+
+#************************************#
+# 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
+# hostname = appss.baomingding.com
+http-response ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/sjsm.js, requires-body=true, timeout=60, tag=sjsm
+
 
 [MITM]
 hostname = gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, rdp.duetdisplay.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com
