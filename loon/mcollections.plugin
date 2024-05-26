@@ -140,7 +140,7 @@ http-response ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo 
 http-response ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/sjsm.js, requires-body=true, timeout=60, tag=sjsm
 
 #************************************#
-# 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
+# 彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员）
 # hostname = appss.baomingding.com
 http-response ^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/cdsp.js, requires-body=true, timeout=60, tag=cdsp
 
