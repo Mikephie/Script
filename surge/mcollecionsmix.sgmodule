@@ -38,7 +38,7 @@
 #************************************#
 # Link = https://apps.apple.com/ng/app/%E5%BE%AE%E5%95%86%E6%B5%B7%E6%8A%A5-%E6%B5%B7%E6%8A%A5%E5%88%B6%E4%BD%9C-%E6%90%9E%E5%AE%9A%E6%B5%B7%E6%8A%A5%E8%AE%BE%E8%AE%A1/id1353658626
 # hostname = api-poster.ycase.cn
-^https?:\/\/api-poster.ycase.cn\/(web\/display\?subject|api\/user\/info|api\/User\/home) url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/wshb.js
+wshb = type=http-response, pattern=^https?:\/\/api-poster.ycase.cn\/(web\/display\?subject|api\/user\/info|api\/User\/home), script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/wshb.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员） V1.1.1 @GieGie777
