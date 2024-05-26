@@ -56,4 +56,4 @@
 
 
 [MITM]
-hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, rdp.duetdisplay.com, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, spclient.wg.spotify.com, app-v1.ecoliving168.com, appss.baomingding.com
+hostname = kkyun.com, poster.leminet.cn, www.qimingyoufu.cn, cn.invit.vip， api-poster.ycase.cn，appss.baomingding.com， appss.rhinoxlab.com
