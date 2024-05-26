@@ -56,4 +56,4 @@ zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\
 
 
 [MITM]
-hostname = hostname = %APPEND% appss.rhinoxlab.com, kkyun.com, poster.leminet.cn, www.qimingyoufu.cn, cn.invit.vip，api-poster.ycase.cn，appss.baomingding.com
+hostname = %APPEND% appss.rhinoxlab.com, kkyun.com, poster.leminet.cn, www.qimingyoufu.cn, cn.invit.vip，api-poster.ycase.cn，appss.baomingding.com
