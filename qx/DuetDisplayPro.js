@@ -19,7 +19,7 @@ var objc = JSON.parse($response.body);
   "success": true,"hasStripeAccount": false,
   "products": [
     {
-      "vendor": "stripe",
+      "vendor": "apple",
       "product": "duetProAnnual",
       "subscriptionId": 2193526,
       "purchaseDate": "2024-05-14T02:41:27Z",
