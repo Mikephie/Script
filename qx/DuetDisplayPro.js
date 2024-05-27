@@ -16,18 +16,19 @@ hostname = rdp.duetdisplay.com
 var objc = JSON.parse($response.body);
 
     objc = {
-  "success": true,"hasStripeAccount": false,
+  "success": true,
   "products": [
     {
       "vendor": "apple",
-      "product": "duetProAnnual",
-      "subscriptionId": 2193526,
-      "purchaseDate": "2024-05-14T02:41:27Z",
+      "product": "DuetStudio",
+      "subscriptionId": 434779,
+      "purchaseDate": "2024-05-27T04:25:43Z",
       "cancelled": false,
-      "expiresDate": "2088-05-21T02:41:27Z",
+      "expiresDate": "2088-06-03T04:23:21Z",
       "inTrial": true
     }
   ],
+  "hasStripeAccount": false
 }
 
 $done({body : JSON.stringify(objc)});
