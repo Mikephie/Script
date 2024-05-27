@@ -20,7 +20,7 @@ var objc = JSON.parse($response.body);
   "products": [
     {
       "vendor": "apple",
-      "product": "DuetProAnnual",
+      "product": "DuetAirAnnual",
       "subscriptionId": 391961,
       "purchaseDate": "2023-11-14T19:47:25Z",
       "cancelled": false,
