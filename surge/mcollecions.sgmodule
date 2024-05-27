@@ -6,8 +6,10 @@
 force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [URL Rewrite]
+#************************************#
 # 彩云天气去广告
 ^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
+#************************************#
 # 酷我音乐_AdBlock
 ^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
 # 酷我音乐_AdBlock
@@ -18,8 +20,10 @@ force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 ^https?:\/\/.*\.kuwo\.cn\/music\.pay\?uid\=\d+ http://musicpay.kuwo.cn/music.pay?uid=2 302
 
 [Map Local]
+#************************************#
 # 彩云天气去广告
 ^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+#************************************#
 # 酷我听书_Blockad
 https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 酷我听书_Blockad
@@ -31,6 +35,8 @@ https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright data="https://ra
 
 
 [Script]
+#************************************#
+# RevenueCat解锁系列
 # hostname = api.revenuecat.com, firestore.googleapis.com
 mrevenue = type=http-response, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, requires-body=true, max-size=-1, timeout=60
 
@@ -38,104 +44,87 @@ mrevenue = type=http-request, pattern=https?:\/\/api\.revenuecat\.com\/v1\/(subs
 
 #************************************#
 # iTunes解锁系列
-#************************************#
 # hostname = buy.itunes.apple.com
 iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
 
 #************************************#
 # Reddit
-#************************************#
 # hostname = gql.reddit.com, gql-fed.reddit.com
 Reddit = type=http-response,pattern=https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js
 
 #************************************#
 # DuetDisplayPro
-#************************************#
 # hostname = rdp.duetdisplay.com
 DuetDisplayPro = type=https://rdp.duetdisplay.com/v1/users/validateReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js 
 
 #************************************#
 # Adblock Pro
-#************************************#
 # hostname = api.adblockpro.app
 Adblock Pro = type=https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js
 
 #************************************#
 # Grammarly
-#************************************#
 # hostname = subscription.grammarly.com
 Grammarly = type=https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js 
 
 #************************************#
 # 扫描全能王
-#************************************#
 # hostname = *.camscanner.com, *.intsig.net
 扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
 
 #************************************#
 # 彩云天气
-#************************************#
 # hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
 彩云天气-SVIP会员 = type=http-response,pattern=^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
 彩云天气-SVIP地图 = type=http-request,pattern=^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
 
 #************************************#
 # 美图秀秀
-#************************************#
 # hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
 美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
 
 #************************************#
 # Filmix
-#************************************#
 # hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
 Filmix = type=http-response,pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
 
 #************************************#
 # Wallcraft-动态壁纸
-#************************************#
 # hostname = billing-ios.wallpaperscraft.com
 Wallcraft壁纸 = type=http-response,pattern=https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js
 
 #************************************#
 # 壁纸-需登录
-#************************************#
 # hostname = leancloud.emotionwp.com
 壁纸 = type=http-response,pattern=https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
 
 #************************************#
 # ToonMe
-#************************************#
 # hostname = purchases.ws.pho.to
 ToonMe = type=http-response,pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js
 
 #************************************#
 # FaceLab
-#************************************#
 # hostname = type=http-response,pattern=https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js 
 
 #************************************#
 # Notability
-#************************************#
 # hostname = notability.com
 Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
 
 #************************************#
 # gg
-#************************************#
 # hostname = isi.*.g*.com*
 gg = type=http-response,pattern=^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js
 ggg = type=http-request,pattern=^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js
 
 #************************************#
 # Replica-屏幕镜像
-#************************************#
 # hostname = api.apphud.com
 Replica-屏幕镜像 = type=http-response,pattern=^https?:\/\/api\.apphud\.com\/v1\/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/replica.js
 
 #************************************#
 # 白描
-#************************************#
 # hostname = baimiao.uzero.cn
 白描 = type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/.+\/(appLaunchWithUser|getAnnouncement|checkLoginClient),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/baimiao.js
 
