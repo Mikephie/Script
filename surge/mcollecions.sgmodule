@@ -53,9 +53,9 @@ iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyR
 Reddit = type=http-response,pattern=https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js
 
 #************************************#
-# DuetDisplayPro
+# DuetDisplay
 # hostname = rdp.duetdisplay.com
-DuetDisplayPro = type=https://rdp.duetdisplay.com/v1/users/validateReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js 
+DuetDisplayPro = type=https://rdp.duetdisplay.com/v1/users/validateReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplay.js 
 
 #************************************#
 # Adblock Pro
