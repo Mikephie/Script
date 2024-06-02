@@ -1,6 +1,9 @@
 # Stream-link.org
 DOMAIN-KEYWORD,stream-link
 
+# Spotify
+DOMAIN,wl.spotify.com
+
 # Telco
 DOMAIN-SUFFIX,m1.com.sg
 DOMAIN-SUFFIX,singtel.com

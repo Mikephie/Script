@@ -1,6 +1,9 @@
 # Stream-link.org
 HOST-keyword,stream-link
 
+# Spotify
+HOST,wl.spotify.com
+
 # Telco
 #HOST-SUFFIX,m1.com.sg
 #HOST-SUFFIX,singtel.com
