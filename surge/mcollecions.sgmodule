@@ -35,6 +35,12 @@ https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright data="https://ra
 
 
 [Script]
+
+#************************************#
+# DuetDisplayPro
+# hostname = rdp.duetdisplay.com
+DuetDisplayPro = type=https://rdp.duetdisplay.com/v1/users/validateReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js
+
 #************************************#
 # Revenuecat解锁系列
 # hostname = api.revenuecat.com
