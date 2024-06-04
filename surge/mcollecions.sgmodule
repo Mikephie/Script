@@ -37,11 +37,6 @@ https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright data="https://ra
 [Script]
 
 #************************************#
-# DuetDisplayPro
-# hostname = rdp.duetdisplay.com
-DuetDisplayPro = type=https://rdp.duetdisplay.com/v1/users/validateReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js
-
-#************************************#
 # Revenuecat解锁系列
 # hostname = api.revenuecat.com
 revenuecat1 = type=http-response,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
@@ -60,7 +55,7 @@ Reddit = type=http-response,pattern=https?:\/\/gql(-fed)?\.reddit\.com,requires-
 #************************************#
 # DuetDisplayPro
 # hostname = rdp.duetdisplay.com
-DuetDisplayPro = type=https://rdp.duetdisplay.com/v1/users/validateReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js
+DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/users/validateReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # Adblock Pro
