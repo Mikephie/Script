@@ -7,13 +7,13 @@ payload:
   # Spotify
   - DOMAIN,wl.spotify.com
   # Telco
-  - DOMAIN-SUFFIX,m1.com.sg
-  - DOMAIN-SUFFIX,singtel.com
-  - DOMAIN-SUFFIX,starhub.com
+  - DOMAIN-KEYWORD,m1.com.sg
+  - DOMAIN-KEYWORD,singtel.com
+  - DOMAIN-KEYWORD,starhub.com
   # Citibank
-  - DOMAIN-SUFFIX,smetrics.citibank.com.sg
-  - DOMAIN-SUFFIX,glassboxdigital.io
-  - DOMAIN-SUFFIX,omtrdc.net
+  - DOMAIN-KEYWORD,citibank.com.sg
+  #- DOMAIN-SUFFIX,glassboxdigital.io
+  #- DOMAIN-SUFFIX,omtrdc.net
   # Panda Pub
   - DOMAIN,pandafan.pub
   - DOMAIN,widget.intercom.io
