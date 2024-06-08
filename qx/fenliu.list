@@ -5,12 +5,12 @@ HOST-keyword,stream-link
 HOST,wl.spotify.com
 
 # Telco
-#HOST-SUFFIX,m1.com.sg
-#HOST-SUFFIX,singtel.com
-#HOST-SUFFIX,starhub.com
+HOST-keyword,m1.com.sg
+HOST-keyword,singtel.com
+HOST-keyword,starhub.com
 
 # Citibank
-#HOST-SUFFIX,smetrics.citibank.com.sg
+HOST-keyword,citibank.com.sg
 #HOST-SUFFIX,glassboxdigital.io
 #HOST-SUFFIX,omtrdc.net
 
