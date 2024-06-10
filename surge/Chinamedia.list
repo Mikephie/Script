@@ -6,6 +6,7 @@ PROCESS-NAME,*bili-universal*,Proxy
 PROCESS-NAME,com.tencent.qqmusic,Proxy
 PROCESS-NAME,com.tencent.qqlive,Proxy
 PROCESS-NAME,com.netease.cloudmusic,Proxy
+USER-AGENT,KWPlayer,Proxy
 USER-AGENT,NeteaseMusic,Proxy
 USER-AGENT,NeteaseMusic*,Proxy
 USER-AGENT,网易云音乐,Proxy
