@@ -1,3 +1,5 @@
+# Mike
+
 PROCESS-NAME,*Netease*,Proxy
 PROCESS-NAME,*QIYIVideo*,Proxy
 PROCESS-NAME,*Youku*,Proxy
@@ -5,17 +7,25 @@ PROCESS-NAME,*QQ*,Proxy
 PROCESS-NAME,*bili-universal*,Proxy
 PROCESS-NAME,com.tencent.qqmusic,Proxy
 PROCESS-NAME,com.tencent.qqlive,Proxy
-PROCESS-NAME,com.netease.cloudmusic,Proxy
-USER-AGENT,KWPlayer,Proxy
-USER-AGENT,网易云音乐,Proxy
+PROCESS-NAME,com.netease.cloudmusic
 USER-AGENT,*QQ*,Proxy
 
+# KuwoMusic
+USER-AGENT,KWPlayer
+DOMAIN-SUFFIX,www.kuwo.cn,Proxy
+DOMAIN-SUFFIX,antiserver.kuwo.cn,Proxy
+DOMAIN-SUFFIX,ipcheck.kuwo.cn,Proxy
+DOMAIN-SUFFIX,mobi.kuwo.cn,Proxy
+DOMAIN-SUFFIX,nmobi.kuwo.cn,Proxy
+
 # NeteaseMusic
-DOMAIN-SUFFIX,music.126.net
-DOMAIN-SUFFIX,music.163.com
 USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90
 USER-AGENT,NeteaseMusic
 USER-AGENT,NeteaseMusic*
+USER-AGENT,网易云音乐
+DOMAIN-SUFFIX,music.126.net
+DOMAIN-SUFFIX,music.163.com
+DOMAIN-SUFFIX,netease.com,Proxy
 
 # douyin
 USER-AGENT,Aweme*,Proxy
@@ -40,9 +50,6 @@ DOMAIN-SUFFIX,shuzilm.cn,Proxy
 
 # Accelerate .cn sites
 DOMAIN-SUFFIX,baidu.com,Proxy
-DOMAIN-SUFFIX,126.net,Proxy
-DOMAIN-SUFFIX,163.com,Proxy
-DOMAIN-SUFFIX,netease.com,Proxy
 DOMAIN-KEYWORD,youku,Proxy
 DOMAIN-KEYWORD,kugou,Proxy
 DOMAIN-SUFFIX,iqiyi.com,Proxy
@@ -102,9 +109,6 @@ DOMAIN-SUFFIX,v.iask.com,Proxy
 DOMAIN-SUFFIX,tv.weibo.com,Proxy
 DOMAIN-SUFFIX,www.yinyuetai.com,Proxy
 DOMAIN-SUFFIX,www.kugou.com,Proxy
-DOMAIN-SUFFIX,www.kuwo.cn,Proxy
-DOMAIN-SUFFIX,antiserver.kuwo.cn,Proxy
-DOMAIN-SUFFIX,ipcheck.kuwo.cn,Proxy
 DOMAIN-SUFFIX,live.g3proxy.lecloud.com,Proxy
 DOMAIN-SUFFIX,ip.apps.cntv.cn,Proxy
 DOMAIN-SUFFIX,vdn.apps.cntv.cn,Proxy
@@ -146,8 +150,6 @@ DOMAIN-SUFFIX,data.bilibili.com,Proxy
 DOMAIN-SUFFIX,ip2.kugou.com,Proxy
 DOMAIN-SUFFIX,ip.kugou.com,Proxy
 DOMAIN-SUFFIX,client.api.ttpod.com,Proxy
-DOMAIN-SUFFIX,mobi.kuwo.cn,Proxy
-DOMAIN-SUFFIX,nmobi.kuwo.cn,Proxy
 DOMAIN-SUFFIX,mobilefeedback.kugou.com,Proxy
 DOMAIN-SUFFIX,tingapi.ting.baidu.com,Proxy
 DOMAIN-SUFFIX,music.baidu.com,Proxy
