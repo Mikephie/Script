@@ -7,11 +7,15 @@ PROCESS-NAME,com.tencent.qqmusic,Proxy
 PROCESS-NAME,com.tencent.qqlive,Proxy
 PROCESS-NAME,com.netease.cloudmusic,Proxy
 USER-AGENT,KWPlayer,Proxy
-USER-AGENT,NeteaseMusic,Proxy
-USER-AGENT,NeteaseMusic*,Proxy
 USER-AGENT,网易云音乐,Proxy
 USER-AGENT,*QQ*,Proxy
 
+# NeteaseMusic
+DOMAIN-SUFFIX,music.126.net
+DOMAIN-SUFFIX,music.163.com
+USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90
+USER-AGENT,NeteaseMusic
+USER-AGENT,NeteaseMusic*
 
 # douyin
 USER-AGENT,Aweme*,Proxy
