@@ -141,8 +141,8 @@ zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\
 AppRaven = type=http-response, pattern=https://appraven.net/appraven/graphql, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# AppRaven 限免App查看
-# hostname = appraven.net
+# 全局扫描-图片转文字&全能扫描仪&拍照识别花草（永久会员）
+# hostname = sm.szsszykj.com
 AppRaven = type=http-response, pattern=https://appraven.net/appraven/graphql, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, max-size=-1, timeout=60
 
 
