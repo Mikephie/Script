@@ -150,9 +150,9 @@ http-response https://appraven.net/appraven/graphql script-path=https://raw.gith
 
 #************************************#
 # AppRaven 限免App查看
-# hostname = appraven.net
+# hostname = sm.szsszykj.com
 http-response https://appraven.net/appraven/graphql script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, timeout=60, tag=AppRaven
 
 
 [MITM]
-hostname = gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, rdp.duetdisplay.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net
+hostname = gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, rdp.duetdisplay.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com
