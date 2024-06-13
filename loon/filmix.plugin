@@ -3,8 +3,7 @@
 #!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/filmix.png
 
 [Script]
-http-response ^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/filmix.js, requires-body=true, timeout=60, tag=filmix
+http-response ^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, timeout=60, tag=filmix
 
 [MITM]
 hostname = appv2.filmix.com.cn
-
