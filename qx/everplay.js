@@ -11,7 +11,7 @@
 
 [rewrite_local]
 
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body itunestest.js
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/everplay.js
 
 [mitm] 
 
@@ -40,7 +40,7 @@ var mikephie = JSON.parse($response.body);
         "is_trial_period": "false",
         "original_transaction_id": "300001884619144",
         "purchase_date": "2024-06-14 12:33:20 Etc\/GMT",
-        "product_id": "om.zhangchao.AudioPlayer.subscription.oneWeek",
+        "product_id": "om.zhangchao.AudioPlayer.subscription.oneYear",
         "original_purchase_date_pst": "2024-06-14 05:33:21 America\/Los_Angeles",
         "in_app_ownership_type": "PURCHASED",
         "original_purchase_date_ms": "1718368401000",
@@ -65,9 +65,9 @@ var mikephie = JSON.parse($response.body);
   },
   "pending_renewal_info": [
     {
-      "product_id": "om.zhangchao.AudioPlayer.subscription.oneWeek",
+      "product_id": "om.zhangchao.AudioPlayer.subscription.oneYear",
       "original_transaction_id": "300001884619144",
-      "auto_renew_product_id": "om.zhangchao.AudioPlayer.subscription.oneWeek",
+      "auto_renew_product_id": "om.zhangchao.AudioPlayer.subscription.oneYear",
       "auto_renew_status": "1"
     }
   ],
@@ -76,20 +76,20 @@ var mikephie = JSON.parse($response.body);
     {
       "quantity": "1",
       "purchase_date_ms": "1718368400000",
-      "expires_date": "2024-06-21 12:33:20 Etc\/GMT",
-      "expires_date_pst": "2024-06-21 05:33:20 America\/Los_Angeles",
+      "expires_date": "2088-08-08 08:08:08 Etc\/GMT",
+      "expires_date_pst": "2088-08-08 08:08:08 America\/Los_Angeles",
       "is_in_intro_offer_period": "false",
       "transaction_id": "300001884619144",
       "is_trial_period": "false",
       "original_transaction_id": "300001884619144",
       "purchase_date": "2024-06-14 12:33:20 Etc\/GMT",
-      "product_id": "om.zhangchao.AudioPlayer.subscription.oneWeek",
+      "product_id": "om.zhangchao.AudioPlayer.subscription.oneYear",
       "original_purchase_date_pst": "2024-06-14 05:33:21 America\/Los_Angeles",
       "in_app_ownership_type": "PURCHASED",
       "subscription_group_identifier": "20431945",
       "original_purchase_date_ms": "1718368401000",
       "web_order_line_item_id": "300000898767225",
-      "expires_date_ms": "1718973200000",
+      "expires_date_ms": "3742762088000",
       "purchase_date_pst": "2024-06-14 05:33:20 America\/Los_Angeles",
       "original_purchase_date": "2024-06-14 12:33:21 Etc\/GMT"
     }
@@ -99,4 +99,3 @@ var mikephie = JSON.parse($response.body);
   
 
 $done({body : JSON.stringify(mikephie)});
-
