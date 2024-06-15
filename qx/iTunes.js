@@ -49,7 +49,7 @@ var uaProductMapping = {
   'Subscriptions': {product_id: 'com.touchbits.subscriptions.iap.pro.yearly'},  //订阅通
   'TimeCut': {product_id: 'com.floatcamellia.hfrslowmotion.forevervip'},  //TimeCut
   'imgplay': {product_id: 'me.imgbase.imgplay.subscriptionYearly'},  //imgPlay
-  'Ever%20Play': {product_id: 'me.imgbase.imgplay.subscriptionYearly'},  //imgPlay
+  'Ever%20Play': {product_id: 'com.zhangchao.AudioPlayer.subscription.oneYear'},  //EverPlay
 
 
 
