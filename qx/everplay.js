@@ -77,7 +77,7 @@ var mikephie = JSON.parse($response.body);
       "quantity": "1",
       "purchase_date_ms": "1718368400000",
       "expires_date": "2024-06-21 12:33:20 Etc\/GMT",
-      "expires_date_pst": "2024-06-21 05:33:20 America\/Los_Angeles",
+      "expires_date_pst": "2088-06-21 05:33:20 America\/Los_Angeles",
       "is_in_intro_offer_period": "false",
       "transaction_id": "300001884619144",
       "is_trial_period": "false",
@@ -89,7 +89,7 @@ var mikephie = JSON.parse($response.body);
       "subscription_group_identifier": "20431945",
       "original_purchase_date_ms": "1718368401000",
       "web_order_line_item_id": "300000898767225",
-      "expires_date_ms": "1718973200000",
+      "expires_date_ms": "3738630800000",
       "purchase_date_pst": "2024-06-14 05:33:20 America\/Los_Angeles",
       "original_purchase_date": "2024-06-14 12:33:21 Etc\/GMT"
     }
