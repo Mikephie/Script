@@ -50,7 +50,7 @@ var uaProductMapping = {
   'TimeCut': {product_id: 'com.floatcamellia.hfrslowmotion.forevervip'},  //TimeCut
   'imgplay': {product_id: 'me.imgbase.imgplay.subscriptionYearly'},  //imgPlay
   'Ever%20Play': {product_id: 'om.zhangchao.AudioPlayer.subscription.oneWeek'},  //EverPlay
-  'intolive': {product_id: 'me.imgbase.intolive.proSubYearly'},  //imgPlay
+  'intolive': {product_id: 'me.imgbase.intolive.proSubYearly'},  //intolive-实况壁纸制作器
 
 
 
