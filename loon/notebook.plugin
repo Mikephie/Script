@@ -1,0 +1,19 @@
+#!name=Notebook
+#!desc= 订阅解锁🔓
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1028.png
+
+[Script]
+# VIP 订阅
+http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_expired_plans=true script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-subs.js, requires-body=true, timeout=60, tag=notebook-subs
+
+# 100G 空间
+http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-storage.js, requires-body=true, timeout=60, tag=notebook-storage
+
+# VIP 多项权益
+http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template&platform=ios script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-all.js, requires-body=true, timeout=60, tag=notebook-all
+
+# Token
+http-response ^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-token.js, requires-body=true, timeout=60, tag=notebook-token
+
+[MITM]
+hostname = notebook.zoho.com
