@@ -50,6 +50,7 @@ if (typeof $response == "undefined") {
     'IDM': { name: 'premium', id: 'sub_yearly_idm' },  //IDM-下载
     'Whisper': { name: 'all_features', id: 'whisperai_80_y' },  //Whisper AI
     'PhotoRoom': { name: 'business', id: 'com.background.business.yearly' },  //图像编辑
+    'TouchRetouchBasic': { name: 'premium', id: 'tr5_yearlysubsc_20dlrs_1' },  //图像移除
     'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int' },  //Drops外语
     'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month' },  //花样文字
   };
