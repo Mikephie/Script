@@ -51,7 +51,7 @@ var uaProductMapping = {
   'imgplay': {product_id: 'me.imgbase.imgplay.subscriptionYearly'},  //imgPlay
   'Ever%20Play': {product_id: 'om.zhangchao.AudioPlayer.subscription.oneWeek'},  //EverPlay
   'intolive': {product_id: 'me.imgbase.intolive.proSubYearly'},  //intolive-实况壁纸制作器
-  'PhotosSorter': {product_id: 'me.imgbase.intolive.proSubYearly'},  //intolive-实况壁纸制作器
+  'PhotosSorter': {product_id: 'sorter.pro.ipa'},  //intolive-实况壁纸制作器
 
 
 };
