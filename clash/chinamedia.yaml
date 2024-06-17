@@ -1,8 +1,22 @@
 # 规则名称:StreamingCN 国内媒体
-# 规则统计:252
+# 规则统计:269
 
 payload:
-  - DOMAIN,apiintl.biliapi.net
+  - USER-AGENT,*QQ*
+  - USER-AGENT,KWPlayer
+  - DOMAIN-SUFFIX,www.kuwo.cn
+  - DOMAIN-SUFFIX,antiserver.kuwo.cn
+  - DOMAIN-SUFFIX,ipcheck.kuwo.cn
+  - DOMAIN-SUFFIX,mobi.kuwo.cn
+  - DOMAIN-SUFFIX,nmobi.kuwo.cn
+  - USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90
+  - USER-AGENT,NeteaseMusic
+  - USER-AGENT,NeteaseMusic*
+  - USER-AGENT,网易云音乐
+  - DOMAIN-SUFFIX,music.126.net
+  - DOMAIN-SUFFIX,music.163.com
+  - DOMAIN-SUFFIX,netease.com
+  - USER-AGENT,Aweme*
   - DOMAIN-SUFFIX,pstatp.com
   - DOMAIN-SUFFIX,douyinstatic.com
   - DOMAIN-SUFFIX,snssdk.com
@@ -12,13 +26,12 @@ payload:
   - DOMAIN-SUFFIX,bytedance.com
   - DOMAIN-SUFFIX,zhibo.tv
   - DOMAIN-SUFFIX,growingio.com
+  - USER-AGENT,*Ximalaya*
+  - USER-AGENT,*ximalaya*
   - DOMAIN-SUFFIX,ximalaya.com
   - DOMAIN-SUFFIX,xmcdn.com
   - DOMAIN-SUFFIX,shuzilm.cn
   - DOMAIN-SUFFIX,baidu.com
-  - DOMAIN-SUFFIX,126.net
-  - DOMAIN-SUFFIX,163.com
-  - DOMAIN-SUFFIX,netease.com
   - DOMAIN-KEYWORD,youku
   - DOMAIN-KEYWORD,kugou
   - DOMAIN-SUFFIX,iqiyi.com
@@ -77,10 +90,7 @@ payload:
   - DOMAIN-SUFFIX,v.iask.com
   - DOMAIN-SUFFIX,tv.weibo.com
   - DOMAIN-SUFFIX,www.yinyuetai.com
-  - DOMAIN-SUFFIX,kugou.com
-  - DOMAIN-SUFFIX,kuwo.cn
-  - DOMAIN-SUFFIX,antiserver.kuwo.cn
-  - DOMAIN-SUFFIX,ipcheck.kuwo.cn
+  - DOMAIN-SUFFIX,www.kugou.com
   - DOMAIN-SUFFIX,live.g3proxy.lecloud.com
   - DOMAIN-SUFFIX,ip.apps.cntv.cn
   - DOMAIN-SUFFIX,vdn.apps.cntv.cn
@@ -122,8 +132,6 @@ payload:
   - DOMAIN-SUFFIX,ip2.kugou.com
   - DOMAIN-SUFFIX,ip.kugou.com
   - DOMAIN-SUFFIX,client.api.ttpod.com
-  - DOMAIN-SUFFIX,mobi.kuwo.cn
-  - DOMAIN-SUFFIX,nmobi.kuwo.cn
   - DOMAIN-SUFFIX,mobilefeedback.kugou.com
   - DOMAIN-SUFFIX,tingapi.ting.baidu.com
   - DOMAIN-SUFFIX,music.baidu.com
@@ -134,6 +142,7 @@ payload:
   - DOMAIN-SUFFIX,internal.check.duokanbox.com
   - DOMAIN-SUFFIX,ppi.api.pptv.com
   - DOMAIN-SUFFIX,openapi.youku.com
+  # IP-CIDR rules
   - IP-CIDR,43.129.255.106/32
   - IP-CIDR,182.254.116.117/32
   - IP-CIDR,122.72.82.31/32
@@ -255,3 +264,12 @@ payload:
   - IP-CIDR,59.111.19.33/32,no-resolve
   - IP-CIDR,59.111.21.14/31,no-resolve
   - IP-CIDR,59.111.238.29/32,no-resolve
+  # Process-Name
+  - PROCESS-NAME,*Netease*
+  - PROCESS-NAME,*QIYIVideo*
+  - PROCESS-NAME,*Youku*
+  - PROCESS-NAME,*QQ*
+  - PROCESS-NAME,*bili-universal*
+  - PROCESS-NAME,com.tencent.qqmusic
+  - PROCESS-NAME,com.tencent.qqlive
+  - PROCESS-NAME,com.netease.cloudmusic  
