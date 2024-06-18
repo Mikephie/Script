@@ -22,6 +22,9 @@ payload:
   - DOMAIN-SUFFIX,wechat.com
   - DOMAIN-SUFFIX,weixin.com
   - DOMAIN-SUFFIX,weiyun.com
+  - DOMAIN-SUFFIX,v.qq.com
+  - DOMAIN-SUFFIX,video.qq.com
+  - DOMAIN-SUFFIX,y.qq.com  
 # Old  
   - USER-AGENT,*QQ*
   - USER-AGENT,KWPlayer
