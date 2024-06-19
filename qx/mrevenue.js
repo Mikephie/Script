@@ -54,7 +54,7 @@ if (typeof $response == "undefined") {
     'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int' },  //Drops外语
     'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month' },  //花样文字
     'EraseIt': { name: 'ProVersionLifeTime', id: 'com.uzero.cn.eraseit.premium1.fromyear' },  //Smoothrase-AI擦除照片 
-    'DHWaterMarkManager': { name: 'Vip', id: 'tech.miidii.MDClock.subscription.month' },  //花样文字
+    'DHWaterMarkManager': { name: 'Vip', id: 'lifetimeVIP_001' },  //花样文字
     
   };
   const data = {
