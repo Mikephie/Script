@@ -55,7 +55,7 @@ if (typeof $response == "undefined") {
     'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month' },  //花样文字
     'EraseIt': { name: 'ProVersionLifeTime', id: 'com.uzero.cn.eraseit.premium1.fromyear' },  //Smoothrase-AI擦除照片 
     'DHWaterMarkManager': { name: 'Vip', id: 'lifetimeVIP_001' },  //水印熊
-    '%E8%B5%84%E6%BA%90%E6%90%AC%E8%BF%90%E5%A4%A7%E5%B8%88': { name: 'SaveTikYoutu_common', id: 'lifetimeVIP_001' },  //水印熊
+    '%E8%B5%84%E6%BA%90%E6%90%AC%E8%BF%90%E5%A4%A7%E5%B8%88': { name: 'SaveTikYoutu_common', id: 'LifetimeSubscription' },  //水印熊
     
   };
   const data = {
