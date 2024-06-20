@@ -11,7 +11,7 @@
 
 [rewrite_local]
 
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/everplay.js
+^https?:\/\/kkyun\.com\/api\/accounts\/user? url script-response-body https://raw.githubusercontent.com/Rnik666/666/main/66LS.js
 
 [mitm] 
 
