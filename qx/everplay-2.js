@@ -15,7 +15,7 @@
 
 [mitm] 
 
-hostname = buy.itunes.apple.com
+hostname = kkyun.com
 
 *******************************/
 
