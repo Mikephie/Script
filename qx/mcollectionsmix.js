@@ -36,7 +36,7 @@
 #************************************#
 # 边框水印大师 @Rnik666
 # Link = https://apps.apple.com/cn/app/%E8%BE%B9%E6%A1%86%E6%B0%B4%E5%8D%B0%E5%A4%A7%E5%B8%88-%E7%9B%B8%E6%9C%BA%E5%8F%82%E6%95%B0%E6%B0%B4%E5%8D%B0%E7%A5%9E%E5%99%A8%E6%B7%BB%E5%8A%A0%E6%91%84%E5%BD%B1%E8%BE%B9%E6%A1%86/id1673694497
-# hostname = appss.baomingding.com
+# hostname = photoby.hasmash.com
 ^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent url script-response-body https://raw.githubusercontent.com/Rnik666/666/main/DS1.js
 ^https?:\/\/photoby\.hasmash\.com\/auth\/member url script-response-body https://raw.githubusercontent.com/Rnik666/666/main/DS2.js
 
@@ -48,4 +48,4 @@
 
 
 [MITM]
-hostname = kkyun.com, poster.leminet.cn, www.qimingyoufu.cn, cn.invit.vip， api-poster.ycase.cn，appss.baomingding.com， appss.rhinoxlab.com
+hostname = kkyun.com, poster.leminet.cn, www.qimingyoufu.cn, cn.invit.vip, photoby.hasmash.com
