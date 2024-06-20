@@ -35,7 +35,7 @@
 
 #************************************#
 # 彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员） V1.1.1 @GieGie777
-# Link = https://apps.apple.com/ng/app/%E5%BD%A9%E8%B1%86%E8%A7%86%E9%A2%91%E6%B0%B4%E5%8D%B0%E5%AE%9D-%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E6%B0%B4%E5%8D%B0%E5%A4%84%E7%90%86%E4%B8%93%E5%AE%B6/id1670051783
+# Link = https://apps.apple.com/cn/app/%E8%BE%B9%E6%A1%86%E6%B0%B4%E5%8D%B0%E5%A4%A7%E5%B8%88-%E7%9B%B8%E6%9C%BA%E5%8F%82%E6%95%B0%E6%B0%B4%E5%8D%B0%E7%A5%9E%E5%99%A8%E6%B7%BB%E5%8A%A0%E6%91%84%E5%BD%B1%E8%BE%B9%E6%A1%86/id1673694497
 # hostname = appss.baomingding.com
 ^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/cdsp.js
 
