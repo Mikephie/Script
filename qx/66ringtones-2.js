@@ -10,11 +10,11 @@
 *******************************
 
 [rewrite_local]
-^https?:\/\/kkyun\.com\/api\/accounts\/user? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones.js
+^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones.js
 
 [mitm] 
 hostname = kkyun.com
-
+ url reject-dict
 *******************************/
 
 var mikephie = JSON.parse($response.body);
