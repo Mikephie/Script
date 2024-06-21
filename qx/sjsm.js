@@ -26,10 +26,10 @@ var mikephie = JSON.parse($response.body);
   "success" : true,
   "result" : {
     "dataId" : "10171672668831233491",
-    "remainTimeSeconds" : 0,
+    "remainTimeSeconds" : 88888,
     "realnameStatus" : "NO",
     "appleUserEmail" : "mikephiemy@gmail.com",
-    "wordage" : 0,
+    "wordage" : 88888888,
     "freeFlag" : "NO",
     "inviteCode" : "QPHMUFX8",
     "vipGroupInfos" : [
@@ -47,7 +47,7 @@ var mikephie = JSON.parse($response.body);
     "nickname" : "Mikephie",
     "email" : "mikephiemy@gmail.com",
     "headImg" : "https://boniuapp.rhinox.cn/common/head/1599546812784.png",
-    "times" : 0
+    "times" : 88888888
   },
   "returnCode" : "200",
   "timeOut" : false
