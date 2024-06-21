@@ -1,6 +1,6 @@
 /******************************
 
-脚本名称: 66铃声 解锁VIP
+脚本名称: ringtonemaker 解锁VIP
 下载地址：商店
 脚本作者：Mikephie
 更新时间：2024年6月15日 15:56
@@ -10,10 +10,10 @@
 *******************************
 
 [rewrite_local]
-^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones.js
+^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/ringtonemaker.js
 
 [mitm] 
-hostname = kkyun.com
+hostname = clip.tto321.cn
 
 *******************************/
 
