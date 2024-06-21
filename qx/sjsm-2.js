@@ -28,35 +28,8 @@ var mikephie = JSON.parse($response.body);
     "realnameStatus" : "NO",
     "appleUserEmail" : "mikephiemy@gmail.com",
     "freeFlag" : "NO",
-    "wordage" : 0,
+    "wordage" : 88888888,
     "inviteCode" : "uP2rEjVh",
-    "vipGroupInfos" : [
-
-    ],
-    "autoPay" : "NO",
-    "type" : "NORMAL",
-    "times" : 0,
-    "dataId" : "10171615389361166950",
-    "registerTime" : "2024-05-20 05:24:54",
-    "nickname" : "Mikephie",
-    "email" : "mikephiemy@gmail.com",
-    "headImg" : "https://boniuapp.rhinox.cn/common/head/1599546812784.png",
-    "remainTimeSeconds" : 0
-  },
-  "returnCode" : "200",
-  "timeOut" : false
-}
-
-$done({body : JSON.stringify(mikephie)});
-
-{
-  "success" : true,
-  "result" : {
-    "headImg" : "https://zdimg.lifeweek.com.cn/app/20230410/16811146599505136.jpg",
-    "dataId" : "00000000000000000000",
-    "wordage" : 7777777,
-    "mobile" : "https://t.me/GieGie777",
-    "inviteCode" : "000000",
     "vipGroupInfos" : [
       {
         "groupType" : "TYPE_ONE",
@@ -65,14 +38,18 @@ $done({body : JSON.stringify(mikephie)});
       }
     ],
     "type" : "VIP",
-    "vipExpireTime" : "2777-07-07 07:07:07",
-    "vipExpireDays" : 99999999,
-    "registerTime" : "2022-09-09 03:20:32",
-    "nickname" : "https://t.me/GieGie777",
-    "remainTimeSeconds" : 99999,
-    "realnameStatus" : "NO",
-    "times" : 77777777
+    "vipExpireTime" : "2088-08-08 08:08:08",
+    "vipExpireDays" : 88888888,
+    "times" : 88888888,
+    "dataId" : "10171615389361166950",
+    "registerTime" : "2024-05-20 05:24:54",
+    "nickname" : "Mikephie",
+    "email" : "mikephiemy@gmail.com",
+    "headImg" : "https://boniuapp.rhinox.cn/common/head/1599546812784.png",
+    "remainTimeSeconds" : 88888
   },
   "returnCode" : "200",
   "timeOut" : false
 }
+
+$done({body : JSON.stringify(mikephie)});
