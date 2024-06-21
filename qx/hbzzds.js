@@ -11,7 +11,7 @@
 
 [rewrite_local] 
  
-^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbzzds.js
+^https:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbzzds.js
 
 [MITM]
 hostname = poster.leminet.cn
