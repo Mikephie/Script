@@ -27,7 +27,7 @@ hostname = poster.leminet.cn
     "username" : "Mikephie",
     "endpoint" : "oss-us-west-1",
     "no" : 23110111,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE1MzI2MTIsInJvbGUiOjAsInVpZCI6MTc3MDExMX0.lglVbwP76K8UofGRt7iNPwLgRj-J1zct8w_KT4HRt2U",
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjowLCJleHAiOjE3MTg5ODUzNTIsInJvbGUiOjAsInVpZCI6MTc2NTIxNH0.lGeXRcKi759yQXwD5aUEJus1UgpEZeMJ6k47XzMeBZ0",
     "vip" : true,
     "vip_expire" : 4092610661000
   }
