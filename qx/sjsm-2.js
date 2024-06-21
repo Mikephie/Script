@@ -25,22 +25,29 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "success" : true,
   "result" : {
-    "freeFlag" : "YES",
+    "dataId" : "10171672668831233491",
+    "remainTimeSeconds" : 0,
+    "realnameStatus" : "NO",
+    "appleUserEmail" : "mikephiemy@gmail.com",
     "wordage" : 0,
-    "mobile" : "17157858185",
-    "inviteCode" : "jPnhRwiS",
+    "freeFlag" : "YES",
+    "inviteCode" : "QPHMUFX8",
     "vipGroupInfos" : [
-
+      {
+        "groupType" : "TYPE_ONE",
+        "vipType" : "VIP",
+        "autoPay" : "NO"
+      }
     ],
     "autoPay" : "NO",
-    "type" : "NORMAL",
-    "times" : 0,
-    "dataId" : "10171901002866188283",
-    "registerTime" : "2024-06-22 06:47:09",
+    "type" : "VIP",
+    "vipExpireTime" : "2025-06-24 14:49:29",
+    "vipExpireDays" : 365,
+    "registerTime" : "2024-05-26 20:31:28",
     "nickname" : "Mikephie",
-    "remainTimeSeconds" : 0,
+    "email" : "mikephiemy@gmail.com",
     "headImg" : "https://boniuapp.rhinox.cn/common/head/1599546812784.png",
-    "realnameStatus" : "NO"
+    "times" : 0
   },
   "returnCode" : "200",
   "timeOut" : false
