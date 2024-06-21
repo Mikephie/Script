@@ -22,32 +22,17 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "status" : 1,
   "user" : {
-    "userid" : "468807",
-    "avatar" : "https://avatar.account.idaddy.cn/avatar/inner4/image/240514/c33ac566.jpg",
+    "userid" : "469132",
+    "avatar" : "https://kkyun.com/ring/image/1718938895.jpeg",
     "is_vip" : true,
     "nickname" : "Mikephie🎖",
     "invited_count" : 0,
     "vip_name" : "永久VIP",
     "vip_status" : "已解锁",
-    "invitation_code" : "Rnik666",
+    "invitation_code" : "Mikephie",
     "sex" : 0
   }
 }
   
 
 $done({body : JSON.stringify(mikephie)});
-
-{
-  "status" : 1,
-  "user" : {
-    "userid" : "469132",
-    "avatar" : "https://kkyun.com/ring/image/1718938895.jpeg",
-    "is_vip" : true,
-    "nickname" : "t.me/GieGie777",
-    "invited_count" : 0,
-    "vip_name" : "开启所有高级功能",
-    "vip_status" : "2999-09-09",
-    "invitation_code" : "469132",
-    "sex" : 0
-  }
-}
