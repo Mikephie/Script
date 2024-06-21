@@ -14,7 +14,7 @@
 
 [mitm] 
 hostname = kkyun.com
- url reject-dict
+
 *******************************/
 
 var mikephie = JSON.parse($response.body);
