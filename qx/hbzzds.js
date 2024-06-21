@@ -16,7 +16,11 @@
 [MITM]
 hostname = poster.leminet.cn
 
-{
+
+
+var mikephie = JSON.parse($response.body);
+
+    mikephie = {
   "success" : true,
   "data" : {
     "guest" : false,
@@ -32,3 +36,6 @@ hostname = poster.leminet.cn
     "vip_expire" : 4092610661000
   }
 }
+  
+
+$done({body : JSON.stringify(mikephie)});
