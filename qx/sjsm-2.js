@@ -30,7 +30,7 @@ var mikephie = JSON.parse($response.body);
     "realnameStatus" : "NO",
     "appleUserEmail" : "mikephiemy@gmail.com",
     "wordage" : 0,
-    "freeFlag" : "YES",
+    "freeFlag" : "NO",
     "inviteCode" : "QPHMUFX8",
     "vipGroupInfos" : [
       {
