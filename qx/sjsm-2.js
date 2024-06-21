@@ -17,9 +17,9 @@
 [mitm] 
 hostname = appss.baomingding.com
 *
-*
-*/
-{
+var mikephie = JSON.parse($response.body);
+
+    mikephie = {
   "success" : true,
   "result" : {
     "headImg" : "https://zdimg.lifeweek.com.cn/app/20230410/16811146599505136.jpg",
@@ -46,3 +46,4 @@ hostname = appss.baomingding.com
   "returnCode" : "200",
   "timeOut" : false
 }
+
