@@ -22,7 +22,7 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "msg" : "OK",
   "data" : {
-    "uid" : 1001229,
+    "uid" : 永久VIP,
     "userName" : "Mikephie",
     "wordRemain" : 88888,
     "payType" : 1,
