@@ -15,7 +15,7 @@
 ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js
 
 [mitm] 
-hostname = appss.baomingding.com
+hostname = appss.rhinoxlab.com
 
 *******************************/
 
