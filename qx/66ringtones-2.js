@@ -1,6 +1,6 @@
 /******************************
 
-脚本名称: 66铃声 解锁VIP
+脚本名称: Ever Play 解锁VIP
 下载地址：商店
 脚本作者：Mikephie
 更新时间：2024年6月15日 15:56
@@ -20,22 +20,36 @@ hostname = kkyun.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "success" : true,
-  "data" : {
-    "id" : 1770111,
-    "vip" : true,
-    "join_at" : 1716719701,
-    "admin" : true,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE2NTI4MjksInJvbGUiOjAsInVpZCI6MTc3MDExMX0.l6QdgQK3utZCUP0eF3VJOrziAXK_Iqjd1eHBYYzK6os",
-    "username" : "Mikephie",
-    "no" : 23110111,
-    "biz" : "",
-    "endpoint" : "oss-us-west-1",
-    "guest" : false,
-    "role" : 1,
-    "vip_expire" : 4092610661000
-  }
+  "header" : {
+    "sdk_version" : "4.0.2",
+    "is_pirated" : "NO",
+    "language" : "zh-Hans-SG",
+    "country" : "SG",
+    "app_version" : "0",
+    "sdk_type" : "iOS",
+    "oid" : "142823e6fabeac37d23d675e90b97f9ae0c10437",
+    "channel" : "App Store",
+    "resolution" : "2796*1290",
+    "app_store_version" : "5.1.10",
+    "os" : "iOS",
+    "short_version" : "5.1.10",
+    "package_name" : "com.zhangchao.AudioPlayer",
+    "req_time" : "1719061634.475868",
+    "access" : "WiFi",
+    "carrier" : "--",
+    "idfv" : "5F866B54-5E88-48A0-855A-7F1C00123221",
+    "timezone" : "8",
+    "os_version" : "17.5.1",
+    "device_model" : "iPhone16,2",
+    "is_jailbroken" : "NO",
+    "display_name" : "",
+    "push_switch" : "true",
+    "appkey" : "5a325412f29d984dba000167",
+    "umid" : "f73a7447a887db8df5106f342aac52"
+  },
+  "tags" : "subscribed_purchased",
+  "device_token" : "40a757d4bb3a05201b4bfb3781ebe8878c30a727ea9ea4039e9d8e3a94d310b8"
 }
-  
+
 
 $done({body : JSON.stringify(mikephie)});
