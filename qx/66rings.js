@@ -7,11 +7,10 @@
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
  
-[rewrite_local]
-^https?:\/\/ifttt\.com\/api\/v3\/graph url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js
+^https:\/\/kkyun\.com\/api\/accounts\/user\? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66rings.js
 
 [MITM]
-hostname = 
+hostname = kkyun.com
 
 *******************************/
 
@@ -23,7 +22,7 @@ var mikephie = JSON.parse($response.body);
     "userid": "469132",
     "is_vip": true,
     "avatar": "https://kkyun.com/ring/image/1718938895.jpeg",
-    "nickname": "****",
+    "nickname": "Mikephie",
     "invited_count": 0,
     "vip_status": "轻松玩转铃声音视频",
     "vip_name": "开启所有高级功能",
