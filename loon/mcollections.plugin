@@ -153,6 +153,20 @@ http-response https://appraven.net/appraven/graphql script-path=https://raw.gith
 # hostname = sm.szsszykj.com
 http-response ^https?:\/\/sm.szsszykj.com\/api\/user\/vip script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, timeout=60, tag=qjsm
 
+#************************************#
+# 全局扫描-图片转文字&全能扫描仪&拍照识别花草（永久会员）
+# hostname = sm.szsszykj.com
+http-response ^https?:\/\/sm.szsszykj.com\/api\/user\/vip script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, timeout=60, tag=qjsm
+
+#************************************#
+# 全局扫描-图片转文字&全能扫描仪&拍照识别花草（永久会员）
+# hostname = sm.szsszykj.com
+http-response ^https?:\/\/sm.szsszykj.com\/api\/user\/vip script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, timeout=60, tag=qjsm
+
+#************************************#
+# 全局扫描-图片转文字&全能扫描仪&拍照识别花草（永久会员）
+# hostname = sm.szsszykj.com
+http-response ^https?:\/\/sm.szsszykj.com\/api\/user\/vip script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, timeout=60, tag=qjsm
 
 [MITM]
 hostname = gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, rdp.duetdisplay.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com
