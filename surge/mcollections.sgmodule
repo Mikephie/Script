@@ -152,7 +152,7 @@ notebook = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/v
 
 #************************************#
 # Notebook （永久会员）
-# hostname = notebook.zoho.com
+# hostname = clip.tto321.cn
 notebook = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
