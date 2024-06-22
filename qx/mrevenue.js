@@ -57,6 +57,7 @@ if (typeof $response == "undefined") {
     'DHWaterMarkManager': { name: 'Vip', id: 'lifetimeVIP_001' },  //水印熊
     '%E8%B5%84%E6%BA%90%E6%90%AC%E8%BF%90%E5%A4%A7%E5%B8%88': { name: 'SaveTikYoutu_common', id: 'LifetimeSubscription' },  //资源搬运大师
     'Yosum': { name: 'Premium', id: 'yosum_999_1year', cm: 'sja' },  //Yosum
+    'iplayTV':{ name: 'com.ll.btplayer.12', id: 'com.ll.btplayer.12', cm: 'sjb'},//ntplayer
     
     
   };
