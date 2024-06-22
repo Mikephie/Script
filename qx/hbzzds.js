@@ -38,18 +38,3 @@ var mikephie = JSON.parse($response.body);
   
 
 $done({body : JSON.stringify(mikephie)});
-
-var ios = JSON.parse($response.body);
-
-ios.success = true;
-ios.code = 200;
-ios.message = "请求成功";
-ios.data.healthTestResult = 1;
-ios.data.isLogin = true;
-ios.data.isVip = true;
-//ios.data.deviceId = "add deviceId if needed";
-ios.data.nickName = "add your username here";
-//ios.data.userId = "userId here if needed";
-ios.data.remindType = 0;
-
-$done({ body: JSON.stringify(ios) });
