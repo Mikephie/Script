@@ -38,3 +38,21 @@ var mikephie = JSON.parse($response.body);
   
 
 $done({body : JSON.stringify(mikephie)});
+
+{
+  "success" : true,
+  "data" : {
+    "id" : 1770111,
+    "vip" : true,
+    "join_at" : 1716719701,
+    "admin" : true,
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE2NTI4MjksInJvbGUiOjAsInVpZCI6MTc3MDExMX0.l6QdgQK3utZCUP0eF3VJOrziAXK_Iqjd1eHBYYzK6os",
+    "username" : "Mikephie",
+    "no" : 23110111,
+    "biz" : "",
+    "endpoint" : "oss-us-west-1",
+    "guest" : false,
+    "role" : 1,
+    "vip_expire" : 4092610661000
+  }
+}
