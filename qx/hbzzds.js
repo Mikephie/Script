@@ -22,26 +22,6 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "success" : true,
   "data" : {
-    "guest" : false,
-    "admin" : true,
-    "id" : 1766214,
-    "role" : 1,
-    "join_at" : 1716393343,
-    "username" : "Rnik666",
-    "endpoint" : "oss-cn-hangzhou",
-    "no" : 23105214,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjowLCJleHAiOjE3MTg5ODUzNTIsInJvbGUiOjAsInVpZCI6MTc2NTIxNH0.lGeXRcKi759yQXwD5aUEJus1UgpEZeMJ6k47XzMeBZ0",
-    "vip" : true,
-    "vip_expire" : 4092610661000
-  }
-}
-  
-
-$done({body : JSON.stringify(mikephie)});
-
-{
-  "success" : true,
-  "data" : {
     "id" : 1770111,
     "vip" : true,
     "join_at" : 1716719701,
@@ -56,3 +36,6 @@ $done({body : JSON.stringify(mikephie)});
     "vip_expire" : 4092610661000
   }
 }
+  
+
+$done({body : JSON.stringify(mikephie)});
