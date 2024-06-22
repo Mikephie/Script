@@ -151,14 +151,14 @@ qjsm = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, 
 notebook = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# Notebook （永久会员）
+# Ringtonemaker （永久会员）
 # hostname = clip.tto321.cn
 ringtonemaker = type=http-response, pattern=^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ringtonemaker.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# Notebook （永久会员）
+# PikPak （永久会员）
 # hostname = api-drive.mypikpak.com
-notebook = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook.js, requires-body=true, max-size=-1, timeout=60
+pikpak = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
 hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com，appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com
