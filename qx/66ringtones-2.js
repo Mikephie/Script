@@ -9,7 +9,7 @@
 
 *******************************
 
-[rewrite_local]^https:\/\/msg\.umengcloud\.com\/tag\/add url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones-2.js
+[rewrite_local]^https:\/\/msg\.umengcloud\.com\/tag\/add url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones-2.js
 
 [mitm] 
 hostname = msg.umengcloud.com
