@@ -146,8 +146,8 @@ AppRaven = type=http-response, pattern=https://appraven.net/appraven/graphql, sc
 qjsm = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# 66ringtones（永久会员）
-# hostname = kkyun.com
+# Notebook （永久会员）
+# hostname = notebook.zoho.com
 66ringtones = type=http-response, pattern=^https?:\/\/kkyun\.com\/api\/accounts\/user?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
