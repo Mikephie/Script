@@ -20,7 +20,7 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "data" : {
     "me" : {
-      "login" : "Rnik666🎖",
+      "login" : "Mikephie🎖",
       "is_admin" : false,
       "can_view_p_f_s" : true,
       "next_onboarding_step" : "goals",
@@ -58,7 +58,7 @@ var mikephie = JSON.parse($response.body);
           "permitted" : true
         }
       },
-      "email" : "rnik666@gmail.com",
+      "email" : "mikephiemy@gmail.com",
       "alerts_push_notification_setting" : true,
       "applet_quota_slots_remaining" : 999,
       "is_platform_partner_subscriber" : true,
