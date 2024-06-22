@@ -9,11 +9,10 @@
 
 *******************************
 
-[rewrite_local]
-^https?:\/\/kkyun\.com\/api\/accounts\/user? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones.js
+[rewrite_local]^https:\/\/msg\.umengcloud\.com\/tag\/add^https?:\/\/kkyun\.com\/api\/accounts\/user? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones-2.js
 
 [mitm] 
-hostname = kkyun.com
+hostname = msg.umengcloud.com
 
 *******************************/
 
