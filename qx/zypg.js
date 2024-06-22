@@ -28,6 +28,7 @@ var mikephie = JSON.parse($response.body);
     "headImg" : "https://zdimg.lifeweek.com.cn/app/20230410/16811146599505136.jpg",
     "dataId" : "00000000000000000000",
     "wordage" : 88888888,
+    "appleUserEmail" : "mikephiemy@gmail.com",
     "mobile" : "88888888",
     "inviteCode" : "000000",
     "vipGroupInfos" : [
