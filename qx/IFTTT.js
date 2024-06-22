@@ -24,8 +24,8 @@ var mikephie = JSON.parse($response.body);
       "is_admin" : false,
       "can_view_p_f_s" : true,
       "next_onboarding_step" : "goals",
-      "created_at" : "2024-06-22 04:45:24 -0700",
-      "id" : "31684150",
+      "created_at" : "2024-06-22 06:39:01 -0700",
+      "id" : "31684456",
       "is_newsletter_subscriber" : true,
       "is_platform_developer" : false,
       "normalized_user_tier" : "Pro",
@@ -60,7 +60,7 @@ var mikephie = JSON.parse($response.body);
       },
       "email" : "mikephiemy@gmail.com",
       "alerts_push_notification_setting" : true,
-      "applet_quota_slots_remaining" : 999,
+      "applet_quota_slots_remaining" : 88888,
       "is_platform_partner_subscriber" : true,
       "send_alerts" : true,
       "unlimited_applet_enables" : true,
@@ -71,9 +71,9 @@ var mikephie = JSON.parse($response.body);
 
       ],
       "time_zone" : {
-        "id" : "Asia/Shanghai",
+        "id" : "Asia/Singapore",
         "formatted_offset" : "+08:00",
-        "name" : "Beijing"
+        "name" : "Singapore"
       },
       "is_beta_subscriber" : true,
       "tier" : "pro",
