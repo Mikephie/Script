@@ -10,10 +10,10 @@
 *******************************
 
 [rewrite_local]
-^https:\/\/msg\.umengcloud\.com\/tag\/add url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones-1.js
+^https?:\/\/ifttt\.com\/api\/v3\/graph url script-response-body https://raw.githubusercontent.com/Rnik666/YJTJS/main/IFTTT.js
 
-[mitm] 
-hostname = msg.umengcloud.com
+[MITM]
+hostname = ifttt.com
 
 *******************************/
 
