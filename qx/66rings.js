@@ -12,3 +12,25 @@
 
 [MITM]
 hostname = photoby.hasmash.com
+
+*******************************/
+
+var mikephie = JSON.parse($response.body);
+
+    mikephie = {
+  "status" : 1,
+  "user" : {
+    "userid" : "469132",
+    "avatar" : "https://kkyun.com/ring/image/1718938895.jpeg",
+    "is_vip" : true,
+    "nickname" : "Mikephie🎖",
+    "invited_count" : 0,
+    "vip_name" : "永久VIP",
+    "vip_status" : "已解锁",
+    "invitation_code" : "Mikephie",
+    "sex" : 0
+  }
+}
+  
+
+$done({body : JSON.stringify(mikephie)});
