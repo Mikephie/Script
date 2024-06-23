@@ -1,34 +1,18 @@
 /*        
-        ➪：脚本名称:   ring66 更新时间 ：23 Jun 2024 at 01:04
+        ➪：脚本名称: 边框水印大师 更新时间 ：23 Jun 2024 at 01:04
 
         ★：解锁永久🆅🅸🅿
 
         𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
- 
-^https:\/\/kkyun\.com\/api\/accounts\/user\? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66rings.js
+
+[rewrite_local] 
+
+#^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent url script-response-body https://raw.githubusercontent.com/Rnik666/666/main/DS1.js
+
+^https?:\/\/photoby\.hasmash\.com\/auth\/member url script-response-body https://raw.githubusercontent.com/Rnik666/666/main/DS2.js
+
 
 [MITM]
-hostname = kkyun.com
-
-*******************************/
-
-var mikephie = JSON.parse($response.body);
-
-    mikephie = {
-  "status": 1,
-  "user": {
-    "userid": "469132",
-    "is_vip": true,
-    "avatar": "https://kkyun.com/ring/image/1718938895.jpeg",
-    "nickname": "Mikephie",
-    "invited_count": 0,
-    "vip_status": "轻松玩转铃声音视频",
-    "vip_name": "开启所有高级功能",
-    "invitation_code": "469132",
-    "sex": 0
-  }
-}
-
-$done({body : JSON.stringify(mikephie)});
+hostname = photoby.hasmash.com
