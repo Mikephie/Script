@@ -40,10 +40,36 @@ var mikephie = JSON.parse($response.body);
         "nickname": "VIP User",
         "times": 10000001,
         "headImg": "https://example.com/headimg.jpg",
-        "dataId": "123456"
+        "dataId": "00000000000000000000"
     },
-    "returnCode": 0,
+    "returnCode": 200,
     "timeOut": false
 }
 
 $done({body : JSON.stringify(mikephie)});
+
+{
+    "success": true,
+    "result": {
+        "remainTimeSeconds": 100991,
+        "realnameStatus": 'NO',
+        "wordage": 776241,
+        "mobile": "https://t.me/GieGie777",
+        "inviteCode": "decoded_invite_code",
+        "vipGroupInfos": [{
+            "groupType": "decoded_group_type",
+            "vipType": "decoded_vip_type",
+            "autoPay": "NO"
+        }],
+        "type": "decoded_type",
+        "vipExpireTime": "decoded_vip_expire_time",
+        "vipExpireDays": 10000000,
+        "registerTime": "decoded_register_time",
+        "nickname": "https://t.me/GieGie777",
+        "times": 7777777,
+        "headImg": "decoded_head_img",
+        "dataId": "00000000000000000000"
+    },
+    "returnCode": "200",
+    "timeOut": false
+}
