@@ -23,53 +23,31 @@ hostname = appss.baomingding.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-        "remainTimeSeconds": 100000,
-        "realnameStatus": "NO",
-        "wordage": 5000001,
-        "mobile": "1234567890",
-        "inviteCode": "VIPCODE",
-        "vipGroupInfos": [{
-            "groupType": "VIP",
-            "vipType": "Permanent",
-            "autoPay": "NO"
-        }],
-        "type": "VIP",
-        "vipExpireTime": "2099-12-31",
-        "vipExpireDays": 99999,
-        "registerTime": "2024-01-01",
-        "nickname": "VIP User",
-        "times": 10000001,
-        "headImg": "https://example.com/headimg.jpg",
-        "dataId": "00000000000000000000"
-    },
-    "returnCode": 200,
-    "timeOut": false
+  "success" : true,
+  "result" : {
+    "headImg" : "https://zdimg.lifeweek.com.cn/app/20230410/16811146599505136.jpg",
+    "dataId" : "00000000000000000000",
+    "wordage" : 7777777,
+    "mobile" : "https://t.me/GieGie777",
+    "inviteCode" : "000000",
+    "vipGroupInfos" : [
+      {
+        "groupType" : "TYPE_ONE",
+        "vipType" : "VIP",
+        "autoPay" : "NO"
+      }
+    ],
+    "type" : "VIP",
+    "vipExpireTime" : "2777-07-07 07:07:07",
+    "vipExpireDays" : 99999999,
+    "registerTime" : "2022-09-09 03:20:32",
+    "nickname" : "https://t.me/GieGie777",
+    "remainTimeSeconds" : 99999,
+    "realnameStatus" : "NO",
+    "times" : 77777777
+  },
+  "returnCode" : "200",
+  "timeOut" : false
 }
 
 $done({body : JSON.stringify(mikephie)});
-
-{
-    "success": true,
-    "result": {
-        "remainTimeSeconds": 100991,
-        "realnameStatus": 'NO',
-        "wordage": 776241,
-        "mobile": "https://t.me/GieGie777",
-        "inviteCode": "decoded_invite_code",
-        "vipGroupInfos": [{
-            "groupType": "decoded_group_type",
-            "vipType": "decoded_vip_type",
-            "autoPay": "NO"
-        }],
-        "type": "decoded_type",
-        "vipExpireTime": "decoded_vip_expire_time",
-        "vipExpireDays": 10000000,
-        "registerTime": "decoded_register_time",
-        "nickname": "https://t.me/GieGie777",
-        "times": 7777777,
-        "headImg": "decoded_head_img",
-        "dataId": "00000000000000000000"
-    },
-    "returnCode": "200",
-    "timeOut": false
-}
