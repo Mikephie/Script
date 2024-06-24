@@ -27,6 +27,7 @@ var mikephie = JSON.parse($response.body);
   "result" : {
     "headImg" : "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
     "dataId" : "00000000000000000000",
+    "appleUserEmail" : "mikephiemy@gmail.com",
     "wordage" : 7777777,
     "mobile" : "Mikephie",
     "inviteCode" : "000000",
