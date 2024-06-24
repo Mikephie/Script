@@ -12,7 +12,7 @@
 
 [rewrite_local]
 # >彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员）
-^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/cdsp.js
+^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js
 
 [mitm] 
 hostname = appss.baomingding.com
