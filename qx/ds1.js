@@ -8,7 +8,7 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local] 
-^https?:\/\/photoby\.hasmash\.com\/auth\/member url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds1.js
+^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds1.js
 
 [MITM]
 hostname = photoby.hasmash.com
@@ -23,17 +23,18 @@ var mikephie = JSON.parse($response.body);
         'id': 13706739,
         'pageName': '首页',
         'elementId': '付费点击',
-        'uid': 'decoded value for uid',
-        'iosOrAnd': 'decoded value for iosOrAnd',
-        'version': 'decoded value for version',
+        'uid': 'efe376d39b4f4385a45cb19ae0c8c13b',
+        'iosOrAnd': 'ios',
+        'version': '1.6.8',
         'isVip': 1,
         'isCN': 1,
         'deviceId': '26242316-0D4E-4F0F-A1B2-1FE5A99E68BC',
-        'deviceType': 'decoded value for deviceType',
-        'pageTitle': 'decoded value for pageTitle',
+        'deviceType': 'iPhone 15 Pro Max',
+        'pageTitle': '',
         'elementPosition': '',
         'elementContent': '付费页面',
-        'ip': 'decoded value for ip'
+        'ip': '138.75.199.125'
+        'vipTime': '2099-09-09 12:17:41'
     },
     'code': '00000'
 }
