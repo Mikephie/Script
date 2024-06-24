@@ -1,16 +1,14 @@
-/******************************
+/*        
+        ➪：脚本名称: 边框水印大师 更新时间 ：23 Jun 2024 at 01:04
 
-脚本名称: 66铃声 解锁VIP
-下载地址：商店
-脚本作者：Mikephie
-更新时间：2024年6月15日 15:56
-问题反馈：TG
-使用声明：⚠️此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
+        ★：解锁永久🆅🅸🅿
 
-*******************************
+        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones.js
+^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/kkyun.js
 
 [mitm] 
 hostname = kkyun.com
