@@ -28,8 +28,8 @@ var mikephie = JSON.parse($response.body);
     "nickname" : "Mikephie🎖",
     "invited_count" : 0,
     "vip_name" : "永久VIP",
-    "vip_status" : "已解锁",
-    "invitation_code" : "Mikephie",
+    "vip_status" : "2088-08-08",
+    "invitation_code" : "469132",
     "sex" : 0
   }
 }
