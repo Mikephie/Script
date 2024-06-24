@@ -23,33 +23,27 @@ hostname = appss.baomingding.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "success" : true,
-  "result" : {
-    "realnameStatus" : "NO",
-    "appleUserEmail" : "mikephiemy@gmail.com",
-    "freeFlag" : "NO",
-    "wordage" : 88888888,
-    "inviteCode" : "uP2rEjVh",
-    "vipGroupInfos" : [
-      {
-        "groupType" : "TYPE_ONE",
-        "vipType" : "VIP",
-        "autoPay" : "NO"
-      }
-    ],
-    "type" : "VIP",
-    "vipExpireTime" : "2088-08-08 08:08:08",
-    "vipExpireDays" : 88888888,
-    "times" : 88888888,
-    "dataId" : "10171615389361166950",
-    "registerTime" : "2024-05-20 05:24:54",
-    "nickname" : "Mikephie",
-    "email" : "mikephiemy@gmail.com",
-    "headImg" : "https://boniuapp.rhinox.cn/common/head/1599546812784.png",
-    "remainTimeSeconds" : 88888
-  },
-  "returnCode" : "200",
-  "timeOut" : false
+        "remainTimeSeconds": 100000,
+        "realnameStatus": "NO",
+        "wordage": 5000001,
+        "mobile": "1234567890",
+        "inviteCode": "VIPCODE",
+        "vipGroupInfos": [{
+            "groupType": "VIP",
+            "vipType": "Permanent",
+            "autoPay": "NO"
+        }],
+        "type": "VIP",
+        "vipExpireTime": "2099-12-31",
+        "vipExpireDays": 99999,
+        "registerTime": "2024-01-01",
+        "nickname": "VIP User",
+        "times": 10000001,
+        "headImg": "https://example.com/headimg.jpg",
+        "dataId": "123456"
+    },
+    "returnCode": 0,
+    "timeOut": false
 }
 
 $done({body : JSON.stringify(mikephie)});
