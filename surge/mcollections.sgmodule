@@ -167,5 +167,21 @@ ringtonemaker = type=http-response, pattern=^http:\/\/clip\.tto321\.cn\/v1\/api\
 # hostname = api-drive.mypikpak.com
 pikpak = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak.js, requires-body=true, max-size=-1, timeout=60
 
+#************************************#
+# PikPak （永久会员）
+# hostname = kkyun.com
+kkyun = type=http-response, pattern=^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kkyun.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
+# PikPak （永久会员）
+# hostname = photoby.hasmash.com
+ds1 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds1.js, requires-body=true, max-size=-1, timeout=60
+ds2 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/auth\/member, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds2.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
+# PikPak （永久会员）
+# hostname = ifttt.com
+IFTTT = type=http-response, pattern=^https?:\/\/ifttt\.com\/api\/v3\/graph, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, max-size=-1, timeout=60
+
 [MITM]
-hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com，appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com
+hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com，appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, ifttt.com
