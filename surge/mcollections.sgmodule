@@ -173,7 +173,7 @@ pikpak = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v
 kkyun = type=http-response, pattern=^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kkyun.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# PikPak （永久会员）
+# 边框水印大师（ 永久会员 ）
 # hostname = photoby.hasmash.com
 ds1 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds1.js, requires-body=true, max-size=-1, timeout=60
 ds2 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/auth\/member, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds2.js, requires-body=true, max-size=-1, timeout=60
