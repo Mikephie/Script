@@ -11,8 +11,8 @@
 *******************************
 
 [rewrite_local]
-# >试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
-^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp-3.js
+# >彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员）
+^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/cdsp.js
 
 [mitm] 
 hostname = appss.baomingding.com
