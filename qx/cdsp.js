@@ -28,7 +28,7 @@ var mikephie = JSON.parse($response.body);
     "headImg" : "https://zdimg.lifeweek.com.cn/app/20230410/16811146599505136.jpg",
     "dataId" : "00000000000000000000",
     "wordage" : 7777777,
-    "mobile" : "https://t.me/GieGie777",
+    "mobile" : "Mikephie",
     "inviteCode" : "000000",
     "vipGroupInfos" : [
       {
@@ -37,11 +37,11 @@ var mikephie = JSON.parse($response.body);
         "autoPay" : "NO"
       }
     ],
-    "type" : "VIP",
+    "type" : "FOREVER",
     "vipExpireTime" : "2777-07-07 07:07:07",
-    "vipExpireDays" : 99999999,
+    "vipExpireDays" : 9999,
     "registerTime" : "2022-09-09 03:20:32",
-    "nickname" : "https://t.me/GieGie777",
+    "nickname" : "Mikephie",
     "remainTimeSeconds" : 99999,
     "realnameStatus" : "NO",
     "times" : 77777777
