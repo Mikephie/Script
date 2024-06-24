@@ -1,12 +1,27 @@
-// Parse the JSON response
-var Rnik = JSON.parse($response.body);
+/*        
+        ➪：脚本名称: 边框水印大师 更新时间 ：23 Jun 2024 at 01:04
 
-// Modify the parsed object
-Rnik = {
+        ★：解锁永久🆅🅸🅿
+
+        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
+
+[rewrite_local] 
+^https?:\/\/photoby\.hasmash\.com\/auth\/member url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds1.js
+
+[MITM]
+hostname = photoby.hasmash.com
+
+*******************************/
+
+var mikephie = JSON.parse($response.body);
+
+    mikephie = {
     'message': '成功!',
     'result': {
         'id': 13706739,
-        'pageName': 'decoded value for pageName',
+        'pageName': '首页',
         'elementId': '付费点击',
         'uid': 'decoded value for uid',
         'iosOrAnd': 'decoded value for iosOrAnd',
@@ -21,9 +36,7 @@ Rnik = {
         'ip': 'decoded value for ip'
     },
     'code': '00000'
-};
+}
+  
 
-// Stringify the modified object and send it as the response
-$done({
-    'body': JSON.stringify(Rnik)
-});
+$done({body : JSON.stringify(mikephie)});
