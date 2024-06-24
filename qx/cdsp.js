@@ -43,6 +43,7 @@ var mikephie = JSON.parse($response.body);
     "vipExpireDays" : 99999999,
     "registerTime" : "2022-09-09 03:20:32",
     "nickname" : "Mikephie",
+    "email" : "mikephiemy@gmail.com",
     "remainTimeSeconds" : 99999,
     "realnameStatus" : "NO",
     "times" : 77777777
