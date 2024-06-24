@@ -26,7 +26,7 @@ var mikephie = JSON.parse($response.body);
   "success" : true,
   "result" : {
     "headImg" : "https://zdimg.lifeweek.com.cn/app/20230410/16811146599505136.jpg",
-    "dataId" : "00000000000000000000",
+    "dataId" : "10171615389362566952",
     "wordage" : 7777777,
     "mobile" : "Mikephie",
     "inviteCode" : "000000",
