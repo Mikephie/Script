@@ -31,7 +31,27 @@ var mikephie = JSON.parse($response.body);
     "vip_status" : "2088-08-08",
     "invitation_code" : "469132",
     "sex" : 0
-  }
+  },
+  "splash_flow" : [
+    "bu",
+    "kk"
+  ],
+  "is_trial" : true,
+  "apple_id" : "1594114573",
+  "message" : "正常启动",
+  "ad_show" : true,
+  "need_upgrade" : false,
+  "show_extracting_video" : true,
+  "banner_ad_show" : false,
+  "is_review" : false,
+  "flow" : [
+    "bu",
+    "gad"
+  ],
+  "wechat_number" : "q952180288",
+  "status" : "1",
+  "current_build" : "11"
+  
 }
   
 
