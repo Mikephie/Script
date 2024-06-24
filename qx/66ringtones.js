@@ -23,7 +23,7 @@ var mikephie = JSON.parse($response.body);
   "status" : 1,
   "user" : {
     "userid" : "469132",
-    "avatar" : "https://kkyun.com/ring/image/1718938895.jpeg",
+    "avatar" : "https://ibb.co/ypx6sxL",
     "is_vip" : true,
     "nickname" : "Mikephie🎖",
     "invited_count" : 0,
