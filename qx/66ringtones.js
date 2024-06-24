@@ -10,7 +10,7 @@
 *******************************
 
 [rewrite_local]
-^https?:\/\/kkyun\.com\/api\/accounts\/user? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones.js
+^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/66ringtones.js
 
 [mitm] 
 hostname = kkyun.com
