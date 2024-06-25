@@ -28,7 +28,7 @@ var mikephie = JSON.parse($response.body);
     "no" : 23110111,
     "biz" : "",
     "endpoint" : "oss-us-west-1",
-    "guest" : false,
+    "guest" : true,
     "role" : 1,
     "vip_expire" : 3742762088000
   }
