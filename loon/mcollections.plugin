@@ -136,7 +136,7 @@ http-response ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo 
 #************************************#
 # 作业批改-家长辅导作业工具（永久会员）
 # hostname = appss.rhinoxlab.com
-http-response https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/zypg.js, requires-body=true, timeout=60, tag=zypg
+http-response https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, timeout=60, tag=zypg
 
 #************************************#
 # 彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员）
