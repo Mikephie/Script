@@ -32,7 +32,7 @@ var mikephie = JSON.parse($response.body);
     "no" : 23110111,
     "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE4ODgyMzAsInJvbGUiOjAsInVpZCI6MTc3MDExMX0.BaifbBXKIbnehWoMu2O4gOimn3pafRpIXhyCFmVoaoI",
     "vip" : true,
-    "vip_expire" : 4092566400
+    "vip_expire" : 3742762088000
   }
 }
   
