@@ -141,7 +141,7 @@ http-response https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo scrip
 #************************************#
 # 彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员）
 # hostname = appss.baomingding.com
-http-response ^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/cdsp.js, requires-body=true, timeout=60, tag=cdsp
+http-response ^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js, requires-body=true, timeout=60, tag=cdsp
 
 #************************************#
 # AppRaven 限免App查看
