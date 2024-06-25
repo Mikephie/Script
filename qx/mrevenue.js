@@ -58,6 +58,8 @@ if (typeof $response == "undefined") {
     '%E8%B5%84%E6%BA%90%E6%90%AC%E8%BF%90%E5%A4%A7%E5%B8%88': { name: 'SaveTikYoutu_common', id: 'LifetimeSubscription' },  //资源搬运大师
     'Yosum': { name: 'Premium', id: 'yosum_999_1year' },  //Yosum
     'iplayTV': { name: 'com.ll.btplayer.12', id: 'com.ll.btplayer.12' },  //ntplayer
+    'TQBrowser': { name: 'pro_lt', id: 'com.tk.client.lifetime' },  //Teak浏览器
+    
   };
   const data = {
     "expires_date": "2088-08-08T08:08:08Z",
