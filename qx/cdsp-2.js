@@ -8,11 +8,11 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-# >彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员）
-^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js
+# >作业批改-家长辅导作业工具（永久会员）
+https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/zypg.js
 
 [mitm] 
-hostname = appss.baomingding.com
+hostname = appss.rhinoxlab.com
 
 *******************************/
 
