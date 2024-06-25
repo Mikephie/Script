@@ -9,7 +9,7 @@
 
 [rewrite_local] 
 
-^https?:\/\/poster\.leminet\.cn\/v01\/(login|profile).*$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg-2.js
+^https?:\/\/poster\.leminet\.cn\/v01\/login url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg-2.js
 
 [MITM]
 hostname = poster.leminet.cn
