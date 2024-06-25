@@ -9,7 +9,7 @@
 
 [rewrite_local] 
 
-^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Rnik666/YJTJS/main/HBZZDS.js
+^https?:\/\/poster\.leminet\.cn\/v01\/(login|profile).*$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg-2.js
 
 [MITM]
 hostname = poster.leminet.cn
@@ -18,32 +18,20 @@ var mikephie = JSON.parse($response.body);
 
     mikephie = {
   "success" : true,
-  "result" : {
-    "headImg" : "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
-    "dataId" : "00000000000000000000",
-    "appleUserEmail" : "mikephiemy@gmail.com",
-    "wordage" : 7777777,
-    "mobile" : "Mikephie",
-    "inviteCode" : "000000",
-    "vipGroupInfos" : [
-      {
-        "groupType" : "TYPE_ONE",
-        "vipType" : "VIP",
-        "autoPay" : "NO"
-      }
-    ],
-    "type" : "VIP", 
-    "vipExpireTime" : "2088-08-08 08:08:08",
-    "vipExpireDays" : 99999999,
-    "registerTime" : "2022-09-09 03:20:32",
-    "nickname" : "Mikephie",
-    "email" : "mikephiemy@gmail.com",
-    "remainTimeSeconds" : 99999,
-    "realnameStatus" : "NO",
-    "times" : 77777777
-  },
-  "returnCode" : "200",
-  "timeOut" : false
+  "data" : {
+    "id" : 1770111,
+    "vip" : true,
+    "join_at" : 1716719701,
+    "admin" : true,
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE4ODg2OTMsInJvbGUiOjAsInVpZCI6MTc3MDExMX0.8BWU1wZeaUBJQMNhZER7IC7ig9tCFhfEO4OCZ1EM5DY",
+    "username" : "Mikephie",
+    "no" : 23110111,
+    "biz" : "",
+    "endpoint" : "oss-us-west-1",
+    "guest" : false,
+    "role" : 1,
+    "vip_expire" : 3742762088000
+  }
 }
 
 $done({body : JSON.stringify(mikephie)});
