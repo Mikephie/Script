@@ -1,16 +1,20 @@
-/*
-海报制作大师
-解锁永久VIP
-@Rnik666
+*************************************/
+/*        
+        ➪：脚本名称: 海报制作大师 （永久会员）
+
+        ★：解锁永久🆅🅸🅿
+
+        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
 
 [rewrite_local] 
-
 ^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbzzds.js
+
 
 [MITM]
 hostname = poster.leminet.cn
 
-*************************************/
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 
 var mikephie = JSON.parse($response.body);
@@ -18,17 +22,18 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "success" : true,
   "data" : {
-    "guest" : false,
-    "admin" : false,
     "id" : 1770111,
-    "role" : 1,
-    "join_at" : 1716719701,
-    "username" : "Rnik666🎖",
-    "endpoint" : "oss-us-west-1",
-    "no" : 23110111,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE4ODgyMzAsInJvbGUiOjAsInVpZCI6MTc3MDExMX0.BaifbBXKIbnehWoMu2O4gOimn3pafRpIXhyCFmVoaoI",
     "vip" : true,
-    "vip_expire" : 4092566400
+    "join_at" : 1716719701,
+    "admin" : true,
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE4ODg2OTMsInJvbGUiOjAsInVpZCI6MTc3MDExMX0.8BWU1wZeaUBJQMNhZER7IC7ig9tCFhfEO4OCZ1EM5DY",
+    "username" : "Mikephie",
+    "no" : 23110111,
+    "biz" : "",
+    "endpoint" : "oss-us-west-1",
+    "guest" : true,
+    "role" : 1,
+    "vip_expire" : 3742762088000
   }
 }
   
