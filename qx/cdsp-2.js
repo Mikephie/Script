@@ -9,7 +9,7 @@
 
 [rewrite_local]
 # >作业批改-家长辅导作业工具（永久会员）
-https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/zypg.js
+https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp-2.js
 
 [mitm] 
 hostname = appss.rhinoxlab.com
