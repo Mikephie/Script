@@ -7,12 +7,15 @@
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local] 
-
-^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/abc.js
+[rewrite_local]
+^https:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/abc.js
 
 [MITM]
 hostname = poster.leminet.cn
+
+
+*******************************/
+
 
 var mikephie = JSON.parse($response.body);
 
