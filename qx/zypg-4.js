@@ -9,7 +9,7 @@
 
 [rewrite_local] 
 
-^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg-4.js
+^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/test-4.js
 
 [MITM]
 hostname = poster.leminet.cn
@@ -19,17 +19,25 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "success" : true,
   "data" : {
-    "id" : 1770111,
-    "vip" : true,
+    "guest" : false,
+    "admin" : false,
+    "role" : 0,
     "join_at" : 1716719701,
-    "admin" : true,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE4ODg2OTMsInJvbGUiOjAsInVpZCI6MTc3MDExMX0.8BWU1wZeaUBJQMNhZER7IC7ig9tCFhfEO4OCZ1EM5DY",
-    "username" : "Mikephie",
-    "no" : 23110111,
-    "biz" : "",
     "endpoint" : "oss-us-west-1",
-    "guest" : true,
-    "role" : 1,
+    "no" : 23110111,
+    "id" : 1163222,
+    "phone" : "",
+    "balance" : 888888,
+    "is_guest" : 0,
+    "avatar" : "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
+    "city_id" : 0,
+    "group_id" : 1,
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjE5ODY3MjQsInN0YXR1cyI6MSwidXNlcl9pZCI6MTE2MzIyMn0.QcqjpzCLTJ3f1bP_TH1yzxqHqRTCTAOoamnsoyUuOIk",
+    "username" : "Mikephie",
+    "is_admin" : 0,
+    "email" : "mikephiemy@gmail.com",
+    "untried" : false,
+    "vip" : true,
     "vip_expire" : 3742762088000
   }
 }
