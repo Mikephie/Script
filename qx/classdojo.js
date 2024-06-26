@@ -33,7 +33,7 @@ var mikephie = JSON.parse($response.body);
     "subscriptions" : {
       "com.classdojo.storekit.afterschool.annual" : {
         "original_purchase_date" : "2024-06-26T05:21:56Z",
-        "expires_date" : "2024-07-03T05:21:54Z",
+        "expires_date" : "2088-08-08T08:08:08Z",
         "is_sandbox" : false,
         "refunded_at" : null,
         "store_transaction_id" : "300001899476419",
