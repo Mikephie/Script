@@ -8,6 +8,8 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
  
 [rewrite_local]
+https://payments.classdojo.com/v1/subscribers/5dc2e328587d3dcf1bee91e0
+
 ^https:\/\/payments\.classdojo\.com\/v1\/receipts url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js
 
 [mitm]
