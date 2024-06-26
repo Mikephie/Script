@@ -9,7 +9,7 @@
 
 [rewrite_local] 
 
-^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/test-4.js
+^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/abc.js
 
 [MITM]
 hostname = poster.leminet.cn
