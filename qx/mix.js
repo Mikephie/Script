@@ -16,14 +16,13 @@
 # >电子请柬制作 - 婚礼宝宝满月邀请函视频制作vip 3.1.8
 # >婚礼精选-结婚电子请柬和请帖制作 vip 8.0.5
 # >海报制作大师 - 设计logo、邀请函请柬等图片编辑软件3.3.4
-^https?:\/\/(cn.invit.vip|www.lovewith.me|poster.leminet.cn)\/(users\/info|golove\/v05\/profile|v01\/profile) url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/dzqj.js
+^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mix.js
 
 [mitm] 
 hostname = cn.invit.vip,www.lovewith.me,poster.leminet.cn
 *
 *
 */
-
 
 
 
