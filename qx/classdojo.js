@@ -8,10 +8,10 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
  
 [rewrite_local]
-^https?:\/\/ifttt\.com\/api\/v3\/graph url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js
+^https:\/\/payments\.classdojo\.com\/v1\/receipts url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js
 
-[MITM]
-hostname = 
+[mitm]
+hostname = payments.classdojo.com
 
 *******************************/
 
@@ -52,7 +52,7 @@ var mikephie = JSON.parse($response.body);
         "grace_period_expires_date" : null,
         "purchase_date" : "2024-06-26T05:21:54Z",
         "product_identifier" : "com.classdojo.storekit.afterschool.annual",
-        "expires_date" : "2024-07-03T05:21:54Z"
+        "expires_date" : "2088-08-08T08:08:08Z"
       }
     },
     "original_purchase_date" : "2024-06-26T05:21:56Z",
