@@ -24,6 +24,3 @@ payload:
   - DOMAIN-SUFFIX,firebasedynamiclinks.googleapis.com
   - DOMAIN-SUFFIX,firebaselogging.googleapis.com
   - DOMAIN-SUFFIX,firebaseremoteconfig.googleapis.com
-
-
-
