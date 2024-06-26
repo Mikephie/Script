@@ -22,12 +22,6 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "success" : true,
   "data" : {
-    "guest" : false,
-    "admin" : false,
-    "role" : 0,
-    "join_at" : 1716719701,
-    "endpoint" : "oss-us-west-1",
-    "no" : 23110111,
     "id" : 1163222,
     "phone" : "",
     "balance" : 888888,
@@ -40,7 +34,6 @@ var mikephie = JSON.parse($response.body);
     "is_admin" : 0,
     "email" : "mikephiemy@gmail.com",
     "untried" : false,
-    "vip" : true,
     "vip_expire" : 3742762088000
   }
 }
