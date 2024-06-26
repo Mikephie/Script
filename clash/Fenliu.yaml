@@ -2,6 +2,8 @@
 # 规则统计:13
 
 payload:
+  # Gov SG
+  - DOMAIN-KEYWORD,gov.sg
   # Streamlink org
   - DOMAIN-KEYWORD,stream-link
   # Spotify
