@@ -20,21 +20,18 @@ hostname = poster.leminet.cn
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "success" : true,
+  "msg" : "操作成功",
   "data" : {
-    "id" : 1770111,
-    "vip" : true,
-    "join_at" : 1716719701,
-    "admin" : true,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE4ODg2OTMsInJvbGUiOjAsInVpZCI6MTc3MDExMX0.8BWU1wZeaUBJQMNhZER7IC7ig9tCFhfEO4OCZ1EM5DY",
-    "username" : "Mikephie",
-    "no" : 23110111,
-    "biz" : "",
-    "endpoint" : "oss-us-west-1",
-    "guest" : true,
-    "role" : 1,
-    "vip_expire" : 3742762088000
-  }
+    "userId" : "88888888",
+    "avatar" : "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
+    "nickname" : "Mikephie",
+    "vipLevel" : 2,
+    "isForeverVip" : true,
+    "accountSourceType" : 1,
+    "memberStatus" : 1,
+    "memberExpireTime" : 3742762088000
+  },
+  "code" : 0
 }
 
 $done({body : JSON.stringify(mikephie)});
