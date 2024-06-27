@@ -181,12 +181,12 @@ ds2 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/auth\/membe
 #************************************#
 # 婚礼精选 （永久会员）
 # hostname = www.lovewith.me
-IFTTT = type=http-response, pattern=^https?:\/\/ifttt\.com\/api\/v3\/graph, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, max-size=-1, timeout=60
+hljx = type=http-response, pattern=^https:\/\/www\.lovewith\.me\/golove\/v05\/profile, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 高定素材大师（永久会员）
 # hostname = apps-api.lingege.cn
-IFTTT = type=http-response, pattern=^https?:\/\/ifttt\.com\/api\/v3\/graph, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, max-size=-1, timeout=60
+gdscds = type=http-response, pattern=^https?:\/\/apps-api.lingege.cn\/user\/getUserInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/gdscds.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # IFTTT（永久会员）
