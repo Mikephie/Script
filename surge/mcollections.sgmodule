@@ -184,7 +184,7 @@ ds2 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/auth\/membe
 IFTTT = type=http-response, pattern=^https?:\/\/ifttt\.com\/api\/v3\/graph, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# IFTTT（永久会员）
+# 高定素材大师（永久会员）
 # hostname = ifttt.com
 IFTTT = type=http-response, pattern=^https?:\/\/ifttt\.com\/api\/v3\/graph, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, max-size=-1, timeout=60
 
