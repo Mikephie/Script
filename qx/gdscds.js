@@ -1,5 +1,5 @@
 /*        
-        ➪：脚本名称: 海报制作大师 （永久会员）
+        ➪：脚本名称: 高定素材大师（永久会员）
 
         ★：解锁永久🆅🅸🅿
 
@@ -7,12 +7,12 @@
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local] 
+[rewrite_local]
+# >高定素材大师（永久会员）需要登录！
+^https?:\/\/apps-api.lingege.cn\/user\/getUserInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/gdscds.js
 
-^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg-3.js
-
-[MITM]
-hostname = poster.leminet.cn
+[mitm] 
+hostname = apps-api.lingege.cn
 
 *******************************/
 
