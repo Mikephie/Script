@@ -20,19 +20,17 @@ hostname = poster.leminet.cn
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "success" : true,
+  "status" : "1",
+  "info" : "成功",
   "data" : {
-    "guest" : false,
-    "admin" : false,
-    "id" : 1770111,
-    "role" : 0,
-    "join_at" : 1716719701,
-    "username" : "Mikephie",
-    "endpoint" : "oss-us-west-1",
-    "no" : 23110111,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE5ODIwNTYsInJvbGUiOjAsInVpZCI6MTc3MDExMX0.fuOgfmp7T_liHQq_6iWYdENuYJLSX5VxHlts6t7GHbo",
-    "vip" : true,
-    "vip_expire" : 3742762088000
+    "sex" : "未知",
+    "phone" : "1",
+    "username" : "Rnik666🎖",
+    "user_id" : "539279",
+    "headimgurl" : "https://pavo.elongstatic.com/i/ori/1uG8Yb8CUWA.png",
+    "vip_status" : "1",
+    "vip_expiration" : "2999-09-09",
+    "token" : "rk36l7e9ptanK4KkcmmO8UBHmqdLQouH"
   }
 }
 
