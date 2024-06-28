@@ -8,7 +8,7 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https?:\/\/api-poster\.ycase\.cn\/api\/User\/home url script-response-body https://raw.githubusercontent.com/Rnik666/666/main/WS1.js
+^https?:\/\/api-poster\.ycase\.cn\/api\/User\/home url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb2.js
 
 [MITM]
 hostname = poster.leminet.cn
@@ -29,10 +29,10 @@ var mikephie = JSON.parse($response.body);
     "id" : "1",
     "userinfo" : {
       "phone" : "17157858185",
-      "username" : "Rnik666🎖",
-      "headimgurl" : "https://pavo.elongstatic.com/i/ori/1uG8Yb8CUWA.png",
+      "username" : "Mikephie🎖",
+      "headimgurl" : "https://i.ibb.co/G2zzXBr/IMG-1275.jpg",
       "vip_status" : "1",
-      "vip_expiration" : "2999-09-09",
+      "vip_expiration" : "2088-08-08",
       "token" : "rk36l7e9ptanK4KkcmmO8UBHmqdLQouH",
       "gold_balance" : 0
     }
