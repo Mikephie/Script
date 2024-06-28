@@ -34,7 +34,7 @@ var mikephie = JSON.parse($response.body);
       "vip_status" : "1",
       "vip_expiration" : "2088-08-08",
       "token" : "rk36l7e9ptanK4KkcmmO8UBHmqdLQouH",
-      "gold_balance" : 0
+      "gold_balance" : 888888
     }
   }
 }
