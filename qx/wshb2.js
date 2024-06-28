@@ -20,9 +20,23 @@ hostname = poster.leminet.cn
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "message" : "恭喜你",
-  "success" : true,
-  "code" : 0
+  "status" : 1,
+  "info" : "成功",
+  "data" : {
+    "collection" : [
+
+    ],
+    "id" : "1",
+    "userinfo" : {
+      "phone" : "17157858185",
+      "username" : "Rnik666🎖",
+      "headimgurl" : "https://pavo.elongstatic.com/i/ori/1uG8Yb8CUWA.png",
+      "vip_status" : "1",
+      "vip_expiration" : "2999-09-09",
+      "token" : "rk36l7e9ptanK4KkcmmO8UBHmqdLQouH",
+      "gold_balance" : 0
+    }
+  }
 }
 
 $done({body : JSON.stringify(mikephie)});
