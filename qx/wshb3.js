@@ -11,7 +11,7 @@
 ^https?:\/\/api-poster\.ycase\.cn\/web\/display url script-response-body https://raw.githubusercontent.com/Rnik666/666/main/WS2.js
 
 [MITM]
-hostname = poster.leminet.cn
+hostname = api-poster.ycase.cn
 
 
 *******************************/
