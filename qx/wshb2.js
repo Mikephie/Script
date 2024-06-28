@@ -8,7 +8,7 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https:\/\/poster\.leminet\.cn\/v02\/export url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/abc-2.js
+^https?:\/\/api-poster\.ycase\.cn\/api\/User\/home url script-response-body https://raw.githubusercontent.com/Rnik666/666/main/WS1.js
 
 [MITM]
 hostname = poster.leminet.cn
