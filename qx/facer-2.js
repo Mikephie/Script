@@ -7,8 +7,7 @@
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local]
-^https:\/\/api\.facer\.io\/parse\/functions\/getStoreSections\?includeUserLists=true url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/facer.js
+^https:\/\/www\.facer\.io\/parse\/functions\/fetchUser url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/facer-2.js
 
 [mitm]
 hostname = api.facer.io
