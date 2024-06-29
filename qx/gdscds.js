@@ -30,8 +30,9 @@ var mikephie = JSON.parse($response.body);
     "accountSourceType" : 1,
     "memberStatus" : 1,
     "memberExpireTime" : 3742762088000
-    "memberExpireTimeStr":"2088-08-08 08:08:08",
-    "memberStatusStr":"已开通",
+    "memberExpireTimeStr": "2088-08-08 08:08:08",
+    "memberStatusStr": "已开通",
+    "remainNum": 9999,
 
   },
   "code" : 0
