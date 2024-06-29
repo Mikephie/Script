@@ -9,7 +9,7 @@
 
 [rewrite_local]
 # >高定素材大师（永久会员）需要登录！
-^https?:\/\/apps-api.lingege.cn\/user\/getUserInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/gdscds.js
+^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/(public\/login.*|getUserInfo) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/gdscds.js
 
 [mitm] 
 hostname = apps-api.lingege.cn
