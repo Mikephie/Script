@@ -9,7 +9,7 @@
 
 [rewrite_local]
 # >雅俗共赏/高定素材大师（永久会员）需要登录！
-^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/(public\/login.*|getUserInfo) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/gdscds.js
+^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/(public\/login.*|getUserInfo) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js
 
 [mitm] 
 hostname = apps-api.lianaishouce.cn, apps-api.lingege.cn
