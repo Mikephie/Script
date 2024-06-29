@@ -21,7 +21,7 @@ var mikephie = JSON.parse($response.body);
   "status" : 1,
   "user" : {
     "userid" : "469132",
-    "avatar" : "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
+    "avatar" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
     "is_vip" : true,
     "nickname" : "Mikephie🎖",
     "invited_count" : 0,
@@ -51,6 +51,6 @@ var mikephie = JSON.parse($response.body);
   "current_build" : "11"
   
 }
-  
+
 
 $done({body : JSON.stringify(mikephie)});

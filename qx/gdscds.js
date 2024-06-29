@@ -23,7 +23,7 @@ var mikephie = JSON.parse($response.body);
   "msg" : "操作成功",
   "data" : {
     "userId" : "88888888",
-    "avatar" : "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
+    "avatar" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
     "nickname" : "Mikephie",
     "vipLevel" : 2,
     "isForeverVip" : true,

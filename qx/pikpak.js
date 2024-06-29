@@ -23,7 +23,7 @@ var mikephie = JSON.parse($response.body);
 
     mikephie = {
   "data" : {
-    "expire" : "2088-11-29T10:58:16+08:00",
+    "expire" : "2088-08-08T08:08:08+08:00",
     "status" : "ok",
     "restricted" : {
       "result" : false,
@@ -47,7 +47,7 @@ var mikephie = JSON.parse($response.body);
     "vipItem" : [
       {
         "status" : "ok",
-        "expire" : "2088-11-29T10:58:16+08:00",
+        "expire" : "2088-08-08T08:08:08+08:00",
         "type" : "regional",
         "description" : "区域会员",
         "surplus_day" : 88888

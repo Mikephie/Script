@@ -26,7 +26,7 @@ var mikephie = JSON.parse($response.body);
     "phone" : "",
     "balance" : 888888,
     "is_guest" : 0,
-    "avatar" : "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
+    "avatar" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
     "city_id" : 0,
     "group_id" : 1,
     "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjE5ODY3MjQsInN0YXR1cyI6MSwidXNlcl9pZCI6MTE2MzIyMn0.QcqjpzCLTJ3f1bP_TH1yzxqHqRTCTAOoamnsoyUuOIk",
