@@ -1,5 +1,5 @@
 /*        
-        ➪：脚本名称: 微商海报大师 （永久会员）
+        ➪：脚本名称: Facer （永久会员）
 
         ★：解锁永久🆅🅸🅿
 
@@ -8,10 +8,10 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https?:\/\/api-poster\.ycase\.cn\/web\/display url script-response-body https://raw.githubusercontent.com/Rnik666/666/main/WS2.js
+^https:\/\/api\.facer\.io\/parse\/functions\/getStoreSections\?includeUserLists=true url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/facer.js
 
-[MITM]
-hostname = api-poster.ycase.cn
+[mitm]
+hostname = api.facer.io
 
 
 *******************************/
