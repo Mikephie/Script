@@ -46,6 +46,7 @@ else if = {
     "remainNum" : 8888,
     "vipLevel" : 4,
     "userId" : "88888888",
+    "avatar" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
     "memberStatus" : 1,
     "accountSourceType" : 3,
     "sexStr" : "未知",
