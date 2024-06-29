@@ -28,7 +28,7 @@ var mikephie = JSON.parse($response.body);
     "vipLevel" : 4,
     "isForeverVip" : true,
     "accountSourceType" : 1,
-    "memberStatus" : 已开通,
+    "memberStatus" : 1,
     "memberExpireTime" : 3742762088000
   },
   "code" : 0
