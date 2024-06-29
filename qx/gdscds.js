@@ -12,7 +12,7 @@
 ^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/(public\/login.*|getUserInfo) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/gdscds.js
 
 [mitm] 
-hostname = apps-api.lingege.cn
+hostname = apps-api.lianaishouce.cn, apps-api.lingege.cn
 
 *******************************/
 
