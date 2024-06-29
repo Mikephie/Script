@@ -34,7 +34,7 @@ var mikephie = JSON.parse($response.body);
     "memberStatusStr": "已开通",
     "remainNum": 9999,
  
- else if = {
+else if = {
   "msg" : "操作成功",
   "data" : {
     "memberExpireTimeStr" : "2088-08-08 08:08:08",
