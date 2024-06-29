@@ -25,7 +25,7 @@ var mikephie = JSON.parse($response.body);
     "userId" : "88888888",
     "avatar" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
     "nickname" : "Mikephie",
-    "vipLevel" : 2,
+    "vipLevel" : 4,
     "isForeverVip" : true,
     "accountSourceType" : 1,
     "memberStatus" : 已开通,
