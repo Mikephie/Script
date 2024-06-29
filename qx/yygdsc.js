@@ -34,10 +34,28 @@ var mikephie = JSON.parse($response.body);
     "memberStatusStr": "已开通",
     "remainNum": 9999,
  
- else if {
-    
- 
-  },
+ else if = {
+  "msg" : "操作成功",
+  "data" : {
+    "memberExpireTimeStr" : "2088-08-08 08:08:08",
+    "accountSourceTypeEnumStr" : "苹果",
+    "memberExpireTime" : 3742762088000,
+    "statusStr" : "正常",
+    "sex" : 0,
+    "memberStatusStr" : "已开通",
+    "remainNum" : 8888,
+    "vipLevel" : 4,
+    "userId" : "88888888",
+    "memberStatus" : 1,
+    "accountSourceType" : 3,
+    "sexStr" : "未知",
+    "isForeverVip" : true,
+    "registerTime" : "2024-06-27 12:08:30",
+    "nickname" : "Mikephie",
+    "email" : "mikephiemy@gmail.com",
+    "status" : 0
+  }
+ }
   "code" : 0
 }
 
