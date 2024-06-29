@@ -22,17 +22,24 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "msg" : "操作成功",
   "data" : {
-    "userId" : "88888888",
-    "avatar" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
-    "nickname" : "Mikephie",
+    "memberExpireTimeStr" : "2099-09-09 09:09:09",
+    "accountSourceTypeEnumStr" : "苹果",
+    "memberExpireTime" : 4092599349000,
+    "statusStr" : "正常",
+    "sex" : 0,
+    "memberStatusStr" : "已开通",
+    "remainNum" : 9999,
     "vipLevel" : 4,
-    "isForeverVip" : true,
-    "accountSourceType" : 1,
+    "userId" : "20131317557131",
     "memberStatus" : 1,
-    "memberExpireTime" : 3742762088000
-    "memberExpireTimeStr": "2088-08-08 08:08:08",
-    "memberStatusStr": "已开通",
-    "remainNum": 9999,
+    "accountSourceType" : 3,
+    "avatar" : "default",
+    "sexStr" : "未知",
+    "isForeverVip" : true,
+    "registerTime" : "2024-06-29 01:42:26",
+    "nickname" : "苹果用户-32820d9a8945",
+    "email" : "mikephiemy@gmail.com",
+    "status" : 0
  
 else if = {
   "msg" : "操作成功",
