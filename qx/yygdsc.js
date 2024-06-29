@@ -40,9 +40,7 @@ var mikephie = JSON.parse($response.body);
     "nickname" : "Mikephie",
     "email" : "mikephiemy@gmail.com",
     "status" : 0
- 
-  }
- }
+  },
   "code" : 0
 }
 
