@@ -10,7 +10,7 @@
 ^https:\/\/www\.facer\.io\/parse\/functions\/fetchUser url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/facer-2.js
 
 [mitm]
-hostname = api.facer.io
+hostname = www.facer.io
 
 
 *******************************/
