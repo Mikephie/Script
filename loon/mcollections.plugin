@@ -195,6 +195,12 @@ http-response ^https:\/\/www\.lovewith\.me\/golove\/v05\/profile script-path=htt
 http-response ^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/getUserInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js, requires-body=true, timeout=60, tag=yygdsc
 
 #************************************#
+# 微商海报大师 （永久会员）
+# hostname = ifttt.com
+http-response ^https?:\/\/api-poster\.ycase\.cn\/api\/user\/info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb1.js, requires-body=true, timeout=60, tag=wshb1
+http-response ^https?:\/\/api-poster\.ycase\.cn\/api\/User\/home script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb2.js, requires-body=true, timeout=60, tag=wshb2
+
+#************************************#
 # IFTTT（永久会员）
 # hostname = ifttt.com
 http-response ^https?:\/\/ifttt\.com\/api\/v3\/graph script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, timeout=60, tag=IFTTT
