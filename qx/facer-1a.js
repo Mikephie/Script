@@ -19,43 +19,11 @@ hostname = www.facer.io
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "appleId" : "000213.8fc1454c279c424b85965abf30adce0c.1143",
-  "createdAt" : "2024-06-27T11:43:49.756Z",
-  "updatedAt" : "2024-06-29T14:20:14.204Z",
-  "file" : {
-    "__type" : "File",
-    "name" : "30bf8d4c173349f99b90cf4c2e579a0e_avatar.jpg",
-    "url" : "https://cdn.facer.io/original/30bf8d4c173349f99b90cf4c2e579a0e_avatar.jpg"
-  },
-  "lastLoginType" : "apple",
-  "fileName" : "IMG_1287.jpeg",
-  "currentWatchface" : {
-    "__type" : "Pointer",
-    "className" : "Watchface",
-    "objectId" : "zwg8pBMYXW"
-  },
-  "__type" : "Object",
-  "className" : "_User",
-  "sessionToken" : "r:424b3501-f81d-42f5-9321-64e4389d5849",
-  "rolesArray" : [
-    "All Access"
-  ],
-  "followingCount" : 3,
-  "username" : "mikephiemy@gmail.com",
-  "objectId" : "HMEOUskSHv",
-  "ACL" : {
-    "HMEOUskSHv" : {
-      "write" : true,
-      "read" : true
-    }
-  },
-  "watchfaces" : {
-    "__type" : "Relation",
-    "className" : "Watchface"
-  },
-  "email" : "mikephiemy@gmail.com",
-  "displayName" : "mikephiemy",
-  "ssoOnly" : true
+  "_ClientVersion" : "js4.1.0",
+  "_InstallationId" : "4058947d-67e5-4432-bcf3-a98bf3615359",
+  "_SessionToken" : "r:424b3501-f81d-42f5-9321-64e4389d5849",
+  "_method" : "GET",
+  "_ApplicationId" : "hEuoCWhpPbhupDK19f3FKb4YuMu8jxwyZlBgoeBc"
 }
  
 $done({body : JSON.stringify(mikephie)});
