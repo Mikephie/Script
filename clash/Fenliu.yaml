@@ -21,6 +21,7 @@ payload:
   - DOMAIN,widget.intercom.io
   - DOMAIN,api-iam.intercom.io
   # 4D King
+  - DOMAIN-SUFFIX,firebaseinstallations.googleapis.com
   - DOMAIN-SUFFIX,firebasedynamiclinks.googleapis.com
   - DOMAIN-SUFFIX,firebaselogging.googleapis.com
   - DOMAIN-SUFFIX,firebaseremoteconfig.googleapis.com
