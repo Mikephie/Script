@@ -184,9 +184,9 @@ ds2 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/auth\/membe
 hljx = type=http-response, pattern=^https:\/\/www\.lovewith\.me\/golove\/v05\/profile, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# 高定素材大师（永久会员）
+# >雅俗共赏/高定素材大师（永久会员）需要登录！
 # hostname = apps-api.lingege.cn
-gdscds = type=http-response, pattern=^https?:\/\/apps-api.lingege.cn\/user\/getUserInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/gdscds.js, requires-body=true, max-size=-1, timeout=60
+yygdsc = type=http-response, pattern=^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/getUserInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # IFTTT（永久会员）
