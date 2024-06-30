@@ -190,9 +190,10 @@ http-response ^https?:\/\/photoby\.hasmash\.com\/auth\/member script-path=https:
 # hostname = www.lovewith.me
 http-response ^https:\/\/www\.lovewith\.me\/golove\/v05\/profile script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, timeout=60, tag=hljx
 
-# >高定素材大师（永久会员）需要登录！
+# >雅俗共赏/高定素材大师（永久会员）需要登录！
 # hostname = apps-api.lingege.cn
-http-response ^https?:\/\/apps-api.lingege.cn\/user\/getUserInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/gdscds.js, requires-body=true, timeout=60, tag=gdscds
+
+http-response ^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/getUserInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js, requires-body=true, timeout=60, tag=yygdsc
 
 #************************************#
 # IFTTT（永久会员）
