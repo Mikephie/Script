@@ -4,9 +4,6 @@
 [rewrite_local] 
 ^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions url script-response-body notebook-2.js
 
-[mitm]
-
-hostname = notebook.zoho.com url script-response-body notebook-2.js
 
 [MITM]
 hostname = notebook.zoho.com
