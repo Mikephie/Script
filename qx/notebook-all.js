@@ -4,13 +4,6 @@
 [rewrite_local] 
 ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template&platform=ios url script-response-body notebook-3.js
 
-[mitm]
-
-hostname = notebook.zoho.com url reject-dict
-
-[mitm]
-
-hostname = notebook.zoho.com url script-response-body notebook-2.js
 
 [MITM]
 hostname = notebook.zoho.com
