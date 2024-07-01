@@ -30,8 +30,8 @@ var mikephie = JSON.parse($response.body);
       "purchase_time" : 1717644792301
     }
   ]
-
-      "feature_template" : [
+  
+  "feature_template" : [
     {
       "feature_name" : "AUDIO_CARD",
       "feature_id" : "com.zoho.notebook.audiocard",
@@ -82,6 +82,183 @@ var mikephie = JSON.parse($response.body);
     {
       "feature_name" : "FLIGHT_CARD",
       "feature_id" : "com.zoho.notebook.flight_card",
+      "feature_meta_data" : [
+        {
+          "end_date" : 3742762088000,
+          "grace_period" : 999160000000,
+          "source" : "PAID",
+          "type" : "PRIMARY",
+          "start_date" : 1717644792301
+        }
+      ]
+    },
+    {
+      "feature_name" : "EMAIL_IN",
+      "feature_id" : "com.zoho.notebook.email_in",
+      "feature_meta_data" : [
+        {
+          "end_date" : 3742762088000,
+          "grace_period" : 999160000000,
+          "source" : "PAID",
+          "type" : "PRIMARY",
+          "start_date" : 1717644792301
+        }
+      ]
+    },
+    {
+      "feature_name" : "CUSTOM_RECURRING_REMINDER",
+      "feature_id" : "com.zoho.notebook.reminder.custom",
+      "feature_meta_data" : [
+        {
+          "end_date" : 3742762088000,
+          "grace_period" : 999160000000,
+          "source" : "PAID",
+          "type" : "PRIMARY",
+          "start_date" : 1717644792301
+        }
+      ]
+    },
+    {
+      "feature_name" : "PREMIUM_COVERS",
+      "feature_id" : "com.zoho.notebook.covers.premium",
+      "feature_meta_data" : [
+        {
+          "end_date" : 3742762088000,
+          "grace_period" : 999160000000,
+          "source" : "PAID",
+          "type" : "PRIMARY",
+          "start_date" : 1717644792301
+        }
+      ]
+    },
+    {
+      "feature_name" : "NOTECARD",
+      "feature_id" : "com.zoho.notebook.notecard",
+      "feature_meta_data" : [
+        {
+          "end_date" : 3742762088000,
+          "limits" : [
+            {
+              "value" : "100",
+              "applied_for" : "NOTE",
+              "name" : "VERSIONS",
+              "unit" : "RESOURCES"
+            },
+            {
+              "value" : "209715200",
+              "applied_for" : "NOTE",
+              "name" : "MAX_SIZE",
+              "unit" : "BYTES"
+            },
+            {
+              "value" : "1073741824",
+              "applied_for" : "NOTE",
+              "name" : "MAX_FILE_SIZE",
+              "unit" : "BYTES"
+            }
+          ],
+          "source" : "PAID",
+          "type" : "PRIMARY",
+          "start_date" : 1717644792301,
+          "grace_period" : 999160000000
+        }
+      ]
+    },
+    {
+      "feature_name" : "STORAGE",
+      "feature_id" : "com.zoho.notebook.storage",
+      "feature_meta_data" : [
+        {
+          "end_date" : 3742762088000,
+          "limits" : [
+            {
+              "value" : "107374182400",
+              "name" : "MAX_SIZE",
+              "unit" : "BYTES",
+              "user_type" : "INDIVIDUAL_USER"
+            }
+          ],
+          "source" : "PAID",
+          "type" : "PRIMARY",
+          "start_date" : 1717644792301,
+          "grace_period" : 999160000000
+        }
+      ]
+    },
+    {
+      "feature_name" : "PHONE_SUPPORT",
+      "feature_id" : "com.zoho.notebook.support.phone_call",
+      "feature_meta_data" : [
+        {
+          "end_date" : 3742762088000,
+          "grace_period" : 999160000000,
+          "source" : "PAID",
+          "type" : "PRIMARY",
+          "start_date" : 1717644792301
+        }
+      ]
+    },
+    {
+      "feature_name" : "NOTEBOOK_SHARING",
+      "feature_id" : "com.zoho.notebook.sharing",
+      "feature_meta_data" : [
+        {
+          "end_date" : 3742762088000,
+          "limits" : [
+            {
+              "value" : "CO_OWNER",
+              "applied_for" : "NOTEBOOK",
+              "name" : "PERMISSION",
+              "unit" : "STRING"
+            },
+            {
+              "value" : "CO_OWNER",
+              "applied_for" : "COLLECTION",
+              "name" : "PERMISSION",
+              "unit" : "STRING"
+            },
+            {
+              "value" : "CO_OWNER",
+              "applied_for" : "NOTECARD",
+              "name" : "PERMISSION",
+              "unit" : "STRING"
+            },
+            {
+              "value" : "WRITE_DELETE",
+              "applied_for" : "NOTEBOARD",
+              "name" : "PERMISSION",
+              "unit" : "STRING"
+            },
+            {
+              "value" : "READ_WRITE",
+              "applied_for" : "WHITEBOARD",
+              "name" : "PERMISSION",
+              "unit" : "STRING"
+            }
+          ],
+          "source" : "PAID",
+          "type" : "PRIMARY",
+          "start_date" : 1717644792301,
+          "grace_period" : 999160000000
+        }
+      ]
+    },
+    {
+      "supported_platforms" : [
+        "android",
+        "ios",
+        "macos"
+      ],
+      "feature_id" : "com.zoho.notebook.table.scan",
+      "feature_name" : "SCAN_TABLE",
+      "feature_meta_data" : [
+        {
+          "end_date" : 3742762088000,
+          "grace_period" : 999160000000,
+          "source" : "PAID",
+          "type" : "PRIMARY",
+          "start_date" : 1717644792301
+        }
       ]
     },
     {
@@ -225,7 +402,6 @@ var mikephie = JSON.parse($response.body);
       ]
     }
   ]
- }
 }
 
 $done({body : JSON.stringify(mikephie)});
