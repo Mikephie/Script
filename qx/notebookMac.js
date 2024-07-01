@@ -2,7 +2,7 @@
      @Mike
 
 [rewrite_local] 
-^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment url script-response-body notebookMac.js
+^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebookMac.js
 
 [MITM]
 hostname = notebook.zoho.com
