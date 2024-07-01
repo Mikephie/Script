@@ -13,7 +13,7 @@
 [MITM]
 hostname = api-poster.ycase.cn
 
-
+#"token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE5ODIwNTYsInJvbGUiOjAsInVpZCI6MTc3MDExMX0.fuOgfmp7T_liHQq_6iWYdENuYJLSX5VxHlts6t7GHbo",
 *******************************/
 
 
@@ -30,7 +30,6 @@ var mikephie = JSON.parse($response.body);
     "username" : "Mikephie",
     "endpoint" : "oss-us-west-1",
     "no" : 23110111,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjoxLCJleHAiOjE3MjE5ODIwNTYsInJvbGUiOjAsInVpZCI6MTc3MDExMX0.fuOgfmp7T_liHQq_6iWYdENuYJLSX5VxHlts6t7GHbo",
     "vip" : true,
     "vip_expire" : 3742762088000
   }
