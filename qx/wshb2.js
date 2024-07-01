@@ -13,7 +13,7 @@
 [MITM]
 hostname = poster.leminet.cn
 
-
+#"token" : "rk36l7e9ptanK4KkcmmO8UBHmqdLQouH",
 *******************************/
 
 
@@ -33,7 +33,6 @@ var mikephie = JSON.parse($response.body);
       "headimgurl" : "https://i.ibb.co/G2zzXBr/IMG-1275.jpg",
       "vip_status" : "1",
       "vip_expiration" : "2088-08-08",
-      "token" : "rk36l7e9ptanK4KkcmmO8UBHmqdLQouH",
       "gold_balance" : 888888
     }
   }
