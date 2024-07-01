@@ -24,7 +24,7 @@ var mikephie = JSON.parse($response.body);
   "info" : "成功",
   "data" : {
     "sex" : "未知",
-    "phone" : "1",
+    "phone" : "88888888",
     "username" : "Mikephie🎖",
     "user_id" : "539279",
     "headimgurl" : "https://i.ibb.co/G2zzXBr/IMG-1275.jpg",
