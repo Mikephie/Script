@@ -16,11 +16,11 @@ p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www
 proxy-providers:
   provider1:
     <<: *p
-    url: ""
+    url: "http://fbapiv1.fbsublink.com/flydsubal/48cuguvfhi9x4tbw?clash=1&extend=1&overseas=1"
 
   provider2:
     <<: *p
-    url: ""
+    url: "https://getconf.oss-accelerate.aliyuncs.com/clash/138399/l0138253"
 
 # 全局配置
 # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
