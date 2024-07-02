@@ -59,7 +59,7 @@ if (typeof $response == "undefined") {
     'Yosum': { name: 'Premium', id: 'yosum_999_1year' },  //Yosum
     'iplayTV': { name: 'com.ll.btplayer.12', id: 'com.ll.btplayer.12' },  //ntplayer
     'TQBrowser': { name: 'pro_lt', id: 'com.tk.client.lifetime' },  //Teak浏览器
-    'TQBrowser': { name: 'pro_lt', id: 'mf_20_1m_0_0' },  //Teak浏览器
+    'Mizframe': { name: 'premium', id: 'mf_20_lifetime2' },  //Mizframe
     
   };
   const data = {
