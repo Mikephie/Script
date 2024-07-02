@@ -8,7 +8,7 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https:\/\/nom\.telemetrydeck\.com\/api\/v1\/apps\/206A447E-7A67-4C16-80B9-99D67E802625\/signals\/multiple\/ url script-response-body  https://raw.githubusercontent.com/Mikephie/Script/main/qx/mizframanom.js
+^https:\/\/nom\.telemetrydeck\.com\/api\/v1\/apps\/206A447E-7A67-4C16-80B9-99D67E802625\/signals\/multiple\/ url script-request-body  https://raw.githubusercontent.com/Mikephie/Script/main/qx/mizframanom.js
 
 [mitm]
 hostname = nom.telemetrydeck.com
