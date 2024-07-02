@@ -11,7 +11,7 @@
 ^https:\/\/api\.revenuecat\.com\/v1\/receipts url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mizframaq.js
 
 [mitm]
-hostname = api.revenuecat.com
+hostname = nom.telemetrydeck.com
 
 *******************************/
 
