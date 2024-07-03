@@ -18,61 +18,91 @@ hostname = nom.telemetrydeck.com
 
 var mikephie = JSON.parse($response.body);
 
-    mikephie = {
+    mikephie = [
+  {
     "appID" : "206A447E-7A67-4C16-80B9-99D67E802625",
     "payload" : [
-      "architecture:arm64",
-      "duration:1.71 seconds",
-      "locale:en_SG",
-      "systemVersion:iOS 17.5.1",
       "majorSystemVersion:iOS 17",
-      "buildNumber:17",
-      "revenuecatUserId:$RCAnonymousID:a22f076a706f4713badfdc68d8fa2c8e",
-      "modelName:iPhone16,2",
-      "isSimulator:false",
-      "appVersion:2.6",
       "telemetryClientVersion:SwiftClient 1.3.0",
       "targetEnvironment:native",
-      "isTestFlight:false",
       "majorMinorSystemVersion:iOS 17.5",
+      "isTestFlight:false",
+      "buildNumber:17",
+      "packageId:$rc_monthly",
       "isAppStore:false",
-      "isDebug:false",
+      "platform:iOS",
       "operatingSystem:iOS",
-      "platform:iOS"
+      "revenuecatUserId:$RCAnonymousID:5f15e69d93144d23981ba7aebfda923d",
+      "isDebug:false",
+      "isSimulator:false",
+      "appVersion:2.6",
+      "modelName:iPad16,6",
+      "systemVersion:iOS 17.5.1",
+      "architecture:arm64",
+      "locale:en_SG"
     ],
-    "sessionID" : "093156A0-AA6E-4670-9ED5-5AE577D85B85",
-    "isTestMode" : "false",
-    "clientUser" : "c107166a7d65df33cce3a43ef88be2d531fc7b7572c604f97d1db80abcc8f608",
-    "receivedAt" : "2024-07-02T05:44:10+0000",
-    "type" : "load_mockups"
+    "sessionID" : "0E6988AF-19DF-4A08-90DA-C0178715D891",
+    "type" : "purchase",
+    "clientUser" : "ee9ccde2ad726e8f398da76203926dc800be5afa672c0dea7ef3e222597ec983",
+    "receivedAt" : "2024-07-03T01:17:28+0000",
+    "isTestMode" : "false"
   },
   {
     "appID" : "206A447E-7A67-4C16-80B9-99D67E802625",
     "payload" : [
+      "isDebug:false",
+      "architecture:arm64",
+      "operatingSystem:iOS",
+      "plan_text:Monthly Premium",
+      "revenuecatUserId:$RCAnonymousID:5f15e69d93144d23981ba7aebfda923d",
+      "systemVersion:iOS 17.5.1",
+      "majorSystemVersion:iOS 17",
+      "targetEnvironment:native",
+      "isAppStore:false",
+      "telemetryClientVersion:SwiftClient 1.3.0",
       "isSimulator:false",
-      "revenuecatUserId:$RCAnonymousID:a22f076a706f4713badfdc68d8fa2c8e",
+      "buildNumber:17",
+      "majorMinorSystemVersion:iOS 17.5",
+      "isTestFlight:false",
+      "locale:en_SG",
+      "platform:iOS",
+      "appVersion:2.6",
+      "modelName:iPad16,6"
+    ],
+    "sessionID" : "0E6988AF-19DF-4A08-90DA-C0178715D891",
+    "receivedAt" : "2024-07-03T01:17:32+0000",
+    "clientUser" : "ee9ccde2ad726e8f398da76203926dc800be5afa672c0dea7ef3e222597ec983",
+    "type" : "view_info",
+    "isTestMode" : "false"
+  },
+  {
+    "appID" : "206A447E-7A67-4C16-80B9-99D67E802625",
+    "payload" : [
+      "isDebug:false",
       "isTestFlight:false",
       "majorMinorSystemVersion:iOS 17.5",
       "majorSystemVersion:iOS 17",
-      "buildNumber:17",
-      "architecture:arm64",
-      "telemetryClientVersion:SwiftClient 1.3.0",
-      "operatingSystem:iOS",
-      "plan_text:Monthly Premium",
-      "appVersion:2.6",
-      "systemVersion:iOS 17.5.1",
-      "locale:en_SG",
       "targetEnvironment:native",
-      "platform:iOS",
+      "architecture:arm64",
+      "locale:en_SG",
+      "packageId:$rc_monthly",
+      "buildNumber:17",
+      "operatingSystem:iOS",
+      "revenuecatUserId:$RCAnonymousID:5f15e69d93144d23981ba7aebfda923d",
+      "isSimulator:false",
+      "appVersion:2.6",
+      "modelName:iPad16,6",
       "isAppStore:false",
-      "modelName:iPhone16,2",
-      "isDebug:false"
+      "platform:iOS",
+      "telemetryClientVersion:SwiftClient 1.3.0",
+      "systemVersion:iOS 17.5.1"
     ],
-    "sessionID" : "093156A0-AA6E-4670-9ED5-5AE577D85B85",
-    "type" : "view_info",
-    "clientUser" : "c107166a7d65df33cce3a43ef88be2d531fc7b7572c604f97d1db80abcc8f608",
-    "receivedAt" : "2024-07-02T05:44:11+0000",
-    "isTestMode" : "false"
+    "isTestMode" : "false",
+    "receivedAt" : "2024-07-03T01:17:37+0000",
+    "clientUser" : "ee9ccde2ad726e8f398da76203926dc800be5afa672c0dea7ef3e222597ec983",
+    "sessionID" : "0E6988AF-19DF-4A08-90DA-C0178715D891",
+    "type" : "purchase"
   }
+]
 
 $done({body : JSON.stringify(mikephie)});
