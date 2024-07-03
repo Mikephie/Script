@@ -203,9 +203,14 @@ http-response ^https?:\/\/api-poster\.ycase\.cn\/api\/user\/info script-path=htt
 http-response ^https?:\/\/api-poster\.ycase\.cn\/api\/User\/home script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb2.js, requires-body=true, timeout=60, tag=wshb2
 
 #************************************#
+# classdojo （永久会员）
+# hostname = payments.classdojo.com
+^https:\/\/payments\.classdojo\.com\/v1\/subscribers\/5dc2e328587d3dcf1bee91e0 url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js
+
+#************************************#
 # IFTTT（永久会员）
 # hostname = ifttt.com
 http-response ^https?:\/\/ifttt\.com\/api\/v3\/graph script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, timeout=60, tag=IFTTT
 
 [MITM]
-hostname = gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, ifttt.com
+hostname = gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, ifttt.com
