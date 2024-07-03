@@ -198,8 +198,8 @@ wshb2 = type=http-response, pattern=^https?:\/\/api-poster\.ycase\.cn\/api\/User
 
 #************************************#
 # IFTTT（永久会员）
-# hostname = ifttt.com
-IFTTT = type=http-response, pattern=^https?:\/\/ifttt\.com\/api\/v3\/graph, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, max-size=-1, timeout=60
+# hostname = payments.classdojo.com
+classdojo = type=http-response, pattern=^https:\/\/payments\.classdojo\.com\/v1\/subscribers\/5dc2e328587d3dcf1bee91e0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # IFTTT（永久会员）
