@@ -35,7 +35,7 @@ var mikephie = JSON.parse($response.body);
     "subscriptions" : {
       "mf_20_1m_0_0" : {
         "original_purchase_date" : "2024-07-02T04:40:27Z",
-        "expires_date" : "2088-08-02T04:40:26Z",
+        "expires_date" : "2024-08-02T04:40:26Z",
         "is_sandbox" : false,
         "refunded_at" : null,
         "store_transaction_id" : "150001850550669",
@@ -54,7 +54,7 @@ var mikephie = JSON.parse($response.body);
         "grace_period_expires_date" : null,
         "purchase_date" : "2024-07-02T04:40:26Z",
         "product_identifier" : "mf_20_1m_0_0",
-        "expires_date" : "2088-08-02T04:40:26Z"
+        "expires_date" : "2024-08-02T04:40:26Z"
       }
     },
     "original_purchase_date" : "2023-11-16T23:40:29Z",
