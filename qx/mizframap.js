@@ -19,13 +19,13 @@ hostname = api.revenuecat.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "request_date_ms" : 1719969456672,
-  "request_date" : "2024-07-03T01:17:36Z",
+  "request_date_ms" : 1719991696568,
+  "request_date" : "2024-07-03T07:28:16Z",
   "subscriber" : {
     "non_subscriptions" : {
 
     },
-    "first_seen" : "2024-02-27T11:59:11Z",
+    "first_seen" : "2023-12-28T23:04:17Z",
     "original_application_version" : "14",
     "other_purchases" : {
 
@@ -34,7 +34,7 @@ var mikephie = JSON.parse($response.body);
     "subscriptions" : {
       "mf_20_1m_0_0" : {
         "original_purchase_date" : "2024-07-02T04:40:27Z",
-        "expires_date" : "2024-08-02T04:40:26Z",
+        "expires_date" : "2088-08-02T04:40:26Z",
         "is_sandbox" : false,
         "refunded_at" : null,
         "store_transaction_id" : "150001850550669",
@@ -53,12 +53,12 @@ var mikephie = JSON.parse($response.body);
         "grace_period_expires_date" : null,
         "purchase_date" : "2024-07-02T04:40:26Z",
         "product_identifier" : "mf_20_1m_0_0",
-        "expires_date" : "2024-08-02T04:40:26Z"
+        "expires_date" : "2088-08-02T04:40:26Z"
       }
     },
     "original_purchase_date" : "2023-11-16T23:40:29Z",
-    "original_app_user_id" : "$RCAnonymousID:5f15e69d93144d23981ba7aebfda923d",
-    "last_seen" : "2024-07-02T04:39:09Z"
+    "original_app_user_id" : "$RCAnonymousID:f2cc84fcea87421d8455c880e00b2f30",
+    "last_seen" : "2024-07-03T03:39:10Z"
   }
 }
 
