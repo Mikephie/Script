@@ -205,7 +205,7 @@ http-response ^https?:\/\/api-poster\.ycase\.cn\/api\/User\/home script-path=htt
 #************************************#
 # classdojo （永久会员）
 # hostname = payments.classdojo.com
-^https:\/\/payments\.classdojo\.com\/v1\/subscribers\/5dc2e328587d3dcf1bee91e0 url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js
+http-response ^https:\/\/payments\.classdojo\.com\/v1\/subscribers\/5dc2e328587d3dcf1bee91e0 script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js, requires-body=true, timeout=60, tag=classdojo
 
 #************************************#
 # IFTTT（永久会员）
