@@ -7,7 +7,7 @@
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-^https:\/\/www\.facer\.io\/parse\/users\/me url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/facer-1a.js
+^https:\/\/www\.facer\.io\/parse\/sessions\/me url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/facer-1a.js
 
 [mitm]
 hostname = www.facer.io
