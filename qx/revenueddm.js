@@ -54,7 +54,7 @@ if (typeof $response == "undefined") {
     for (const i in src) {
       const test = src === list ? ua : bundle_id;
       if (new RegExp(`^${i}`, `i`).test(test)) {
-        data = { "purchase_date": "2023-09-09T09:09:09Z", "expires_date": "2099-09-09T09:09:09Z" };
+        data = { "purchase_date": "2023-08-08T08:08:08Z", "expires_date": "2088-08-08T08:08:08Z" };
         ids = src[i].id;
         name = src[i].name;
         break;
@@ -62,7 +62,7 @@ if (typeof $response == "undefined") {
     }
   }
   if (!name || !ids) {
-    data = { "purchase_date": "2023-09-09T09:09:09Z", "expires_date": "2088-08-08T08:08:08Z" };
+    data = { "purchase_date": "2023-08-08T08:08:08Z", "expires_date": "2088-08-08T08:08:08Z" };
     name = 'pro';
     ids = 'com.mikephie.pro';
   }
@@ -71,7 +71,7 @@ if (typeof $response == "undefined") {
     "Author": "mikephie",
     "Telegram": "https://t.me/mikephie",
     "warning": "仅供学习，禁止转载或售卖",
-    "original_purchase_date": "2023-09-09T09:09:09Z",
+    "original_purchase_date": "2023-08-08T08:08:08Z",
     "store_transaction_id": "4900066666666666",
     "period_type": "trial",
     "store": "app_store",
