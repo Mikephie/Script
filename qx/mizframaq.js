@@ -8,10 +8,11 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https:\/\/api\.revenuecat\.com\/v1\/receipts url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mizframaq.js
+^https:\/\/mizframa\.foxfortmobile\.com\/api\/get_export_params url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mizframaq.js
 
 [mitm]
-hostname = api.revenuecat.com
+
+hostname = mizframa.foxfortmobile.com
 
 *******************************/
 
