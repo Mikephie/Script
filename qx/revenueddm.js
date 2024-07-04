@@ -38,7 +38,7 @@ const list = {
   'OneGrow': { name: 'pro', id: 'com.onenicetech.OneGrow.Lifetime' },  //OneGrow-儿童身高成长测量
   '%E6%97%B6%E9%97%B4%E8%AE%B0%E5%BD%95': { name: 'pro', id: 'com.bapaws.Hours.lifetime' },  //时间记录
   'PianoTrainer': { name: 'pro_subscription', id: 'pianotrainer.sub.yearly.pro' },  //Pianolytics-学习钢琴
-  'mizframa': { name: 'premium', id: 'mf_20_lifetime2' },  //Mizframa
+  'mizframa': { name: 'premium', id: 'mf_20_1m_0_0' },  //Mizframa
   'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus' },  //Currency-汇率查询
 };
 
