@@ -19,11 +19,15 @@ hostname = www.facer.io
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "_ClientVersion" : "js4.1.0",
-  "_InstallationId" : "4058947d-67e5-4432-bcf3-a98bf3615359",
-  "_SessionToken" : "r:424b3501-f81d-42f5-9321-64e4389d5849",
-  "_method" : "GET",
-  "_ApplicationId" : "hEuoCWhpPbhupDK19f3FKb4YuMu8jxwyZlBgoeBc"
+  "createdAt" : "2024-07-04T01:50:11.139Z",
+  "sessionToken" : "r:24219225-f3f7-4af5-867d-e5d67b780059",
+  "objectId" : "yo5ZYNiz4i",
+  "updatedAt" : "2024-07-04T01:50:11.139Z",
+  "user" : {
+    "__type" : "Pointer",
+    "className" : "_User",
+    "objectId" : "HMEOUskSHv"
+  }
 }
  
 $done({body : JSON.stringify(mikephie)});
