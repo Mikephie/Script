@@ -11,7 +11,7 @@
 *******************************
 
 [rewrite_local]
-^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak.js
+^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js
 
 [mitm] 
 hostname = api-drive.mypikpak.com
@@ -22,37 +22,19 @@ hostname = api-drive.mypikpak.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "data" : {
-    "expire" : "2088-08-08T08:08:08+08:00",
-    "status" : "ok",
-    "restricted" : {
-      "result" : false,
-      "content" : {
-        "color" : "",
-        "text" : "",
-        "deepLink" : ""
-      },
-      "learnMore" : {
-        "color" : "",
-        "text" : "",
-        "deepLink" : ""
-      }
-    },
-    "extUserInfo" : {
-      "userRegion" : "regional"
-    },
-    "user_id" : "ZUNcGmFMxgvtLSD8",
-    "type" : "platinum",
-    "fee_record" : "no_record",
-    "vipItem" : [
-      {
-        "status" : "ok",
-        "expire" : "2088-08-08T08:08:08+08:00",
-        "type" : "regional",
-        "description" : "区域会员",
-        "surplus_day" : 88888
-      }
-    ]
+  "expires_at" : "",
+  "kind" : "drive#about",
+  "quotas" : {
+
+  },
+  "quota" : {
+    "limit" : "60995116277760",
+    "is_unlimited" : false,
+    "usage" : "886332430160",
+    "kind" : "drive#quota",
+    "usage_in_trash" : "34808825695",
+    "play_times_limit" : "-1",
+    "play_times_usage" : "0"
   }
 }
 
