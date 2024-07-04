@@ -18,91 +18,57 @@ hostname = nom.telemetrydeck.com
 
 var mikephie = JSON.parse($response.body);
 
-    mikephie = [
-  {
-    "appID" : "206A447E-7A67-4C16-80B9-99D67E802625",
-    "payload" : [
-      "majorSystemVersion:iOS 17",
-      "telemetryClientVersion:SwiftClient 1.3.0",
-      "targetEnvironment:native",
-      "majorMinorSystemVersion:iOS 17.5",
-      "isTestFlight:false",
-      "buildNumber:17",
-      "packageId:$rc_monthly",
-      "isAppStore:false",
-      "platform:iOS",
-      "operatingSystem:iOS",
-      "revenuecatUserId:$RCAnonymousID:5f15e69d93144d23981ba7aebfda923d",
-      "isDebug:false",
-      "isSimulator:false",
-      "appVersion:2.6",
-      "modelName:iPad16,6",
-      "systemVersion:iOS 17.5.1",
-      "architecture:arm64",
-      "locale:en_SG"
-    ],
-    "sessionID" : "0E6988AF-19DF-4A08-90DA-C0178715D891",
-    "type" : "purchase",
-    "clientUser" : "ee9ccde2ad726e8f398da76203926dc800be5afa672c0dea7ef3e222597ec983",
-    "receivedAt" : "2024-07-03T01:17:28+0000",
-    "isTestMode" : "false"
-  },
-  {
-    "appID" : "206A447E-7A67-4C16-80B9-99D67E802625",
-    "payload" : [
-      "isDebug:false",
-      "architecture:arm64",
-      "operatingSystem:iOS",
-      "plan_text:Monthly Premium",
-      "revenuecatUserId:$RCAnonymousID:5f15e69d93144d23981ba7aebfda923d",
-      "systemVersion:iOS 17.5.1",
-      "majorSystemVersion:iOS 17",
-      "targetEnvironment:native",
-      "isAppStore:false",
-      "telemetryClientVersion:SwiftClient 1.3.0",
-      "isSimulator:false",
-      "buildNumber:17",
-      "majorMinorSystemVersion:iOS 17.5",
-      "isTestFlight:false",
-      "locale:en_SG",
-      "platform:iOS",
-      "appVersion:2.6",
-      "modelName:iPad16,6"
-    ],
-    "sessionID" : "0E6988AF-19DF-4A08-90DA-C0178715D891",
-    "receivedAt" : "2024-07-03T01:17:32+0000",
-    "clientUser" : "ee9ccde2ad726e8f398da76203926dc800be5afa672c0dea7ef3e222597ec983",
-    "type" : "view_info",
-    "isTestMode" : "false"
-  },
-  {
-    "appID" : "206A447E-7A67-4C16-80B9-99D67E802625",
-    "payload" : [
-      "isDebug:false",
-      "isTestFlight:false",
-      "majorMinorSystemVersion:iOS 17.5",
-      "majorSystemVersion:iOS 17",
-      "targetEnvironment:native",
-      "architecture:arm64",
-      "locale:en_SG",
-      "packageId:$rc_monthly",
-      "buildNumber:17",
-      "operatingSystem:iOS",
-      "revenuecatUserId:$RCAnonymousID:5f15e69d93144d23981ba7aebfda923d",
-      "isSimulator:false",
-      "appVersion:2.6",
-      "modelName:iPad16,6",
-      "isAppStore:false",
-      "platform:iOS",
-      "telemetryClientVersion:SwiftClient 1.3.0",
-      "systemVersion:iOS 17.5.1"
-    ],
-    "isTestMode" : "false",
-    "receivedAt" : "2024-07-03T01:17:37+0000",
-    "clientUser" : "ee9ccde2ad726e8f398da76203926dc800be5afa672c0dea7ef3e222597ec983",
-    "sessionID" : "0E6988AF-19DF-4A08-90DA-C0178715D891",
-    "type" : "purchase"
+    mikephie = {
+  "request_date_ms" : 1720058680102,
+  "request_date" : "2024-07-04T02:04:40Z",
+  "subscriber" : {
+    "non_subscriptions" : {
+
+    },
+    "first_seen" : "2023-12-28T23:04:17Z",
+    "original_application_version" : "14",
+    "other_purchases" : {
+
+    },
+    "management_url" : "https://apps.apple.com/account/subscriptions",
+    "subscriptions" : {
+      "mf_20_1m_0_0" : {
+        "original_purchase_date" : "2024-07-02T04:40:27Z",
+        "expires_date" : "2024-08-02T04:40:26Z",
+        "is_sandbox" : false,
+        "refunded_at" : null,
+        "store_transaction_id" : "150001850550669",
+        "unsubscribe_detected_at" : "2024-07-02T05:47:47Z",
+        "grace_period_expires_date" : null,
+        "period_type" : "normal",
+        "purchase_date" : "2024-07-02T04:40:26Z",
+        "billing_issues_detected_at" : null,
+        "ownership_type" : "PURCHASED",
+        "store" : "app_store",
+        "auto_resume_date" : null
+      },
+      "mf_20_lifetime2" : {
+        "Author" : "chxm1023",
+        "store_transaction_id" : "4900066666666666",
+        "period_type" : "trial",
+        "store" : "app_store",
+        "ownership_type" : "PURCHASED",
+        "warning" : "仅供学习，禁止转载或售卖",
+        "original_purchase_date" : "2023-09-09T09:09:09Z",
+        "purchase_date" : "2023-09-09T09:09:09Z",
+        "Telegram" : "https://t.me/chxm1023"
+      }
+    },
+    "entitlements" : {
+      "premium" : {
+        "product_identifier" : "mf_20_lifetime2",
+        "purchase_date" : "2023-09-09T09:09:09Z"
+      }
+    },
+    "original_purchase_date" : "2023-11-16T23:40:29Z",
+    "original_app_user_id" : "$RCAnonymousID:f2cc84fcea87421d8455c880e00b2f30",
+    "last_seen" : "2024-07-03T03:39:10Z"
   }
-]
+}
 
 $done({body : JSON.stringify(mikephie)});

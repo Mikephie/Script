@@ -53,7 +53,7 @@ var mikephie = JSON.parse($response.body);
       "premium" : {
         "grace_period_expires_date" : null,
         "purchase_date" : "2024-07-02T04:40:26Z",
-        "product_identifier" : "mf_20_1m_0_0",
+        "product_identifier" : "mf_20_lifetime2",
         "expires_date" : "2024-08-02T04:40:26Z"
       }
     },
