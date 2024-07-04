@@ -11,7 +11,7 @@
 *******************************
 
 [rewrite_local]
-^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak.js
+^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/allSubscriptionStatus url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-sub.js
 
 [mitm] 
 hostname = api-drive.mypikpak.com
