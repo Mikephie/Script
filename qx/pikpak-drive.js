@@ -11,7 +11,7 @@
 *******************************
 
 [rewrite_local]
-^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/about\?space= url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js
+^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/(about\?|about\?space=) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js
 
 [mitm] 
 hostname = api-drive.mypikpak.com
