@@ -79,7 +79,7 @@ if (typeof $response == "undefined") {
     "Telegram": "https://t.me/mikephie",
     "warning": "仅供学习，禁止转载或售卖",
     "original_purchase_date": "2023-08-08T08:08:08Z",
-    "store_transaction_id": "4900066666666666",
+    "store_transaction_id": "150001850550669",
     "period_type": "trial",
     "store": "app_store",
     "ownership_type": "PURCHASED"
