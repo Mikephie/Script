@@ -30,6 +30,12 @@ if (forbiddenAppFound) {
 
 //识别bundle_id
 const bundle = {
+	'io.innerpeace.yiye': { name: 'Premium', id: 'io.innerpeace.yiye.lifetime.forYearly', cm: 'sja' },  //言外笔记
+	'com.skysoft.removalfree': { name: 'Pro', id: 'com.skysoft.removalfree.subscription.newyearly', cm: 'sja' }  //图片消除
+}
+
+//识别UA
+const list = {
     'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever' },  //服务器监控
     'CountDuck': { name: 'premium', id: 'Lifetime' },  //倒数鸭
     'ScreenRecordCase': { name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra' },  //手机壳套图
