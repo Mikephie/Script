@@ -62,7 +62,7 @@ if (typeof $response == "undefined") {
     }
   }
   if (!name || !ids) {
-    data = { "purchase_date": "2023-09-09T09:09:09Z", "expires_date": "2099-09-09T09:09:09Z" };
+    data = { "purchase_date": "2023-09-09T09:09:09Z", "expires_date": "2088-08-08T08:08:08Z" };
     name = 'pro';
     ids = 'com.mikephie.pro';
   }
