@@ -53,14 +53,14 @@ var mikephie = JSON.parse($response.body);
     "interval" : ""
   },
   "apple" : {
-    "subscribed" : false,
-    "status" : "",
-    "product" : "",
+    "subscribed" : true,
+    "status" : "active",
+    "product" : "sub.year",
     "purchased" : false,
     "past_due_deadline" : "",
     "pay_type" : "",
-    "region" : "",
-    "interval" : ""
+    "region" : "regional",
+    "interval" : "year"
   },
   "payment_service" : {
     "subscribed" : false,
