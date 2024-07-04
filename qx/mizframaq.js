@@ -11,7 +11,6 @@
 ^https:\/\/mizframa\.foxfortmobile\.com\/api\/get_export_params url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mizframaq.js
 
 [mitm]
-
 hostname = mizframa.foxfortmobile.com
 
 *******************************/
