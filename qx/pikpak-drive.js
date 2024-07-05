@@ -28,11 +28,11 @@ var mikephie = JSON.parse($response.body);
 
   },
   "quota" : {
-    "limit" : "64425116277760",
+    "limit" : "64495116277760",
     "is_unlimited" : false,
-    "usage" : "886332430160",
+    "usage" : "1296313090663",
     "kind" : "drive#quota",
-    "usage_in_trash" : "0",
+    "usage_in_trash" : "34808825695",
     "play_times_limit" : "-1",
     "play_times_usage" : "0"
   }
