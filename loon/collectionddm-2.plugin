@@ -1,0 +1,223 @@
+#!name=Mikephie自用合集
+#!desc=🛠️ APP解锁合集
+#!author = Mike
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/he.png
+
+[General]
+force-http-engine-hosts = gql.reddit.com, gql-fed.reddit.com
+
+[URL Rewrite]
+#************************************#
+# 彩云天气广告
+^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
+^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get - reject-200
+
+#************************************#
+# 酷我音乐广告
+^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
+^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ - reject
+^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/Ad - reject
+# 酷我听书广告
+https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright - reject-dict
+https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
+# 酷我音乐添加已购音乐
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ header http://musicpay.kuwo.cn/music.pay?uid=2
+
+#************************************#
+# iScreen小组件辅助解锁
+^https?:\/\/pay\.kuso\.xyz\/pay\/pay-check - reject-200
+
+#************************************#
+# 咪咕，电影猎手，去开屏广告
+^https://.*miguvideo\.com/request/sdk - reject-200
+^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config\?pack - reject-dict
+
+[Script]
+#************************************#
+# Revenuecat解锁系列
+# hostname = api.revenuecat.com
+http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, requires-body=true, tag=Revenuecat解锁系列
+http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, requires-body=false, tag=mrevenue
+
+#************************************#
+# iTunes 解锁系列
+# hostname = buy.itunes.apple.com
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/iTunes.js, requires-body=true, tag=iTunes解锁系列
+
+#************************************#
+# Reddit 解锁系列
+# hostname = gql.reddit.com, gql-fed.reddit.com
+http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js, requires-body=true, timeout=60, tag=Reddit
+
+#************************************#
+# Duet Display 解锁系列
+# hostname = rdp.duetdisplay.com
+http-response ^https?:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js, requires-body=true, timeout=60, tag=DuetDisplayPro
+
+#************************************#
+# AdBlock Pro 解锁系列
+# hostname = api.adblockpro.app
+http-response ^https?:\/\/api\.adblockpro\.app\/verify script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js, requires-body=true, timeout=60, tag=adblockpro
+
+#************************************#
+# Grammarly 解锁系列
+# hostname = subscription.grammarly.com
+http-response ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js, requires-body=true, timeout=60, tag=grammarlypremiumcrack
+
+#************************************#
+# 扫描全能王 解锁系列
+# hostname = *.camscanner.com, *.intsig.net
+http-response ^https?:\/\/.*\.(intsig\.net|camscanner\.com) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js, requires-body=true, timeout=60, tag=全能扫描王
+
+#************************************#
+# 彩云天气 解锁系列
+# hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
+http-response ^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=true, timeout=60, tag=彩云天气-SVIP会员
+
+http-request ^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=false, timeout=60, tag=彩云天气-SVIP地图
+
+#************************************#
+# 美图秀秀 解锁系列
+# hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
+http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js, requires-body=true, timeout=60, tag=美图秀秀
+
+#************************************#
+# Filmix 解锁系列
+# hostname = appv2.filmix.com.cn
+http-response ^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, timeout=60, tag=filmix
+
+#************************************#
+# Wallpaperscraft 解锁系列
+# hostname = billing-ios.wallpaperscraft.com
+http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, timeout=60, tag=Wallpaperscraft
+
+#************************************#
+# Bizhi 解锁系列
+# hostname = leancloud.emotionwp.com
+http-response ^https?:\/\/leancloud\.emotionwp\.com\/.*\/classes\/wpf_account script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, timeout=60, tag=Bizhi
+
+#************************************#
+# ToonMe 解锁系列
+# hostname = purchases.ws.pho.to
+http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js, requires-body=true, timeout=60, tag=ToonMe
+
+#************************************#
+# FaceLab 解锁系列
+# hostname = subscription-api.lyrebirdstudio.net
+http-response ^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js, requires-body=true, timeout=60, tag=FaceLab
+
+#************************************#
+# Notability 解锁系列
+# hostname = notability.com
+http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js, requires-body=true, timeout=60, tag=Notability
+
+#************************************#
+# GoodNotes 解锁系列
+# hostname = isi.*.g*.com*
+http-response ^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js, requires-body=true, timeout=60, tag=goodnotes6
+
+http-request ^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js, requires-body=false, timeout=60, tag=GoodNotes
+
+#************************************#
+# Replica 解锁系列
+# hostname = api.apphud.com
+http-response ^https?:\/\/api\.apphud\.com\/v1\/subscriptions script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/replica.js, requires-body=true, timeout=60, tag=Replica-屏幕镜像
+
+#************************************#
+# 白描 解锁系列
+# hostname = baimiao.uzero.cn
+http-response ^https?:\/\/baimiao\.uzero\.cn\/api\/.+\/(appLaunchWithUser|getAnnouncement|checkLoginClient) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/baimiao.js, requires-body=true, timeout=60, tag=白描
+
+#************************************#
+# 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
+# hostname = appss.baomingding.com
+http-response ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/sjsm.js, requires-body=true, timeout=60, tag=sjsm
+
+#************************************#
+# 作业批改-家长辅导作业工具（永久会员）
+# hostname = appss.rhinoxlab.com
+http-response https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, timeout=60, tag=zypg
+
+#************************************#
+# 彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员）
+# hostname = appss.baomingding.com
+http-response ^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js, requires-body=true, timeout=60, tag=cdsp
+
+#************************************#
+# AppRaven 限免App查看
+# hostname = appraven.net
+http-response https://appraven.net/appraven/graphql script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, timeout=60, tag=AppRaven
+
+#************************************#
+# 全局扫描-图片转文字&全能扫描仪&拍照识别花草（永久会员）
+# hostname = sm.szsszykj.com
+http-response ^https?:\/\/sm.szsszykj.com\/api\/user\/vip script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, timeout=60, tag=qjsm
+
+#************************************#
+# Notebook（永久会员）
+# hostname = notebook.zoho.com
+# VIP 订阅
+http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_expired_plans=true script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-subs.js, requires-body=true, timeout=60, tag=notebook-subs
+http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_purchase_platform=false script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebookMac1.js, requires-body=true, timeout=60, tag=notebookMac1
+# 100G 空间
+http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-storage.js, requires-body=true, timeout=60, tag=notebook-storage
+# VIP 多项权益
+http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template&platform=ios script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-all.js, requires-body=true, timeout=60, tag=notebook-all
+http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebookMac2.js, requires-body=true, timeout=60, tag=notebookMac2
+# Token
+#http-response ^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-token.js, requires-body=true, timeout=60, tag=notebook-token
+
+#************************************#
+# Ringtonemaker（永久会员）
+# hostname = clip.tto321.cn
+http-response ^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ringtonemaker.js, requires-body=true, timeout=60, tag=ringtonemaker
+
+#************************************#
+# PikPak （永久会员）
+# hostname = api-drive.mypikpak.com
+#VIP Info
+http-response ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vip.js, requires-body=true, timeout=60, tag=pikpak-vip
+#VIP Subs
+http-response ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/allSubscriptionStatus script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-sub.js, requires-body=true, timeout=60, tag=pikpak-sub
+#VIP Drive Info
+http-response ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/space\/list\?type=space script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vipdrive.js, requires-body=true, timeout=60, tag=pikpak-vipdrive
+# Non-VIP Drive Info
+#http-response ^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/(about\?|about\?space=) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js, requires-body=true, timeout=60, tag=pikpak-drive
+
+#************************************#
+# 66Ringtones 抖抖去水印（ kkyun组合-永久会员 ）
+# hostname = kkyun.com
+http-response ^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kkyun.js, requires-body=true, timeout=60, tag=kkyun
+
+#************************************#
+# 边框水印大师（ 永久会员 ）
+# hostname = photoby.hasmash.com
+http-response ^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds1.js, requires-body=true, timeout=60, tag=ds1
+http-response ^https?:\/\/photoby\.hasmash\.com\/auth\/member script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds2.js, requires-body=true, timeout=60, tag=ds2
+
+# 婚礼精选 （永久会员）
+# hostname = www.lovewith.me
+http-response ^https:\/\/www\.lovewith\.me\/golove\/v05\/profile script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, timeout=60, tag=hljx
+
+# >雅俗共赏/高定素材大师（永久会员）需要登录！
+# hostname = apps-api.lianaishouce.cn, apps-api.lingege.cn
+http-response ^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/getUserInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js, requires-body=true, timeout=60, tag=yygdsc
+
+#************************************#
+# 微商海报大师 （永久会员）
+# hostname = api-poster.ycase.cn
+http-response ^https?:\/\/api-poster\.ycase\.cn\/api\/user\/info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb1.js, requires-body=true, timeout=60, tag=wshb1
+http-response ^https?:\/\/api-poster\.ycase\.cn\/api\/User\/home script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb2.js, requires-body=true, timeout=60, tag=wshb2
+
+#************************************#
+# classdojo （永久会员）
+# hostname = payments.classdojo.com
+http-response ^https:\/\/payments\.classdojo\.com\/v1\/subscribers\/5dc2e328587d3dcf1bee91e0 script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js, requires-body=true, timeout=60, tag=classdojo
+
+#************************************#
+# IFTTT（永久会员）
+# hostname = ifttt.com
+http-response ^https?:\/\/ifttt\.com\/api\/v3\/graph script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, timeout=60, tag=IFTTT
+
+[MITM]
+hostname = gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, pan.baidu.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, ifttt.com
