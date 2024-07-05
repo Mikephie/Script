@@ -49,7 +49,7 @@ var mikephie = JSON.parse($response.body);
         "status" : "ok",
         "expire" : "2088-08-08T08:08:08+08:00",
         "type" : "regional",
-        "description" : "全球会员",
+        "description" : "Regional Premium",
         "surplus_day" : 88888
       }
     ]
