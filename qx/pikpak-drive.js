@@ -30,9 +30,9 @@ var mikephie = JSON.parse($response.body);
   "quota" : {
     "limit" : "64495116277760",
     "is_unlimited" : false,
-    "usage" : "1296313090663",
+    "usage" : "",
     "kind" : "drive#quota",
-    "usage_in_trash" : "34808825695",
+    "usage_in_trash" : "",
     "play_times_limit" : "-1",
     "play_times_usage" : "0"
   }
