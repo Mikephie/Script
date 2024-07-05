@@ -4,7 +4,7 @@
 
 
 [rewrite_local]
-^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/ccc.js
+^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/space\/list\?type=space url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/ccc.js
 
 [mitm] 
 hostname = api-drive.mypikpak.com
