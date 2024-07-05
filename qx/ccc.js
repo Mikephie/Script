@@ -9,6 +9,11 @@
 [mitm] 
 hostname = api-drive.mypikpak.com
 
+#"expire": "2088-08-08T08:08:08+08:00",
+        "type": "regional",
+        "description": "区域会员",
+        "surplus_day": 88888
+
 */
 
 
@@ -20,11 +25,11 @@ function modifyObject(obj) {
             if (typeof obj[key] === 'object' && obj[key] !== null) {
                 modifyObject(obj[key]);
             } else {
-                if (key === 'minimum_tier') {
-                    obj[key] = "pro";
+                if (key === 'expire') {
+                    obj[key] = "2088-08-08T08:08:08+08:00";
                 }
-                if (key === 'is_promotions_subscriber') {
-                    obj[key] = false;
+                if (key === 'surplus_day') {
+                    obj[key] = 88888;
                 }
                 if (key === 'permitted') {
                     obj[key] = true;
@@ -41,7 +46,7 @@ function modifyObject(obj) {
     if (obj.hasOwnProperty('user_subscriptions')) {
         obj['user_subscriptions'] = [
             {
-                "expires_at": "2099-09-29 23:23:02 -0700",
+                "expire": "2088-08-08T08:08:08+08:00",
                 "id": "651718",
                 "status": "active",
                 "payment_type": "apple",
