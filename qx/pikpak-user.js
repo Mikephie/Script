@@ -11,7 +11,7 @@
 ^https:\/\/user\.mypikpak\.com\/v1\/user\/me url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-user.js
 
 [mitm] 
-hostname = api-drive.mypikpak.com
+hostname = user.mypikpak.com
 
 *******************************/
 
