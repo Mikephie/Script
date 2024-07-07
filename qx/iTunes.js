@@ -44,7 +44,6 @@ var uaProductMapping = {
   'UCamera': {product_id: '644377109922'},  //最美证件照
   'com.pocket.photo': {product_id: 'com.pocket.photo.yearly'},  //一寸证件照
   'HashPhotos': {product_id: 'com.kobaltlab.HashPhotos.iap.allinone.free'},  //HashPhotos
-  'Picsew': {product_id: 'com.sugarmo.ScrollClip.pro',bundle_id: 'com.sugarmo.ScrollClip'},  //Picsew截长图3.9.4版本
   'AllMyBatteries': {product_id: 'https://t.me/Guding88'},
   'Subscriptions': {product_id: 'com.touchbits.subscriptions.iap.pro.yearly'},  //订阅通
   'TimeCut': {product_id: 'com.floatcamellia.hfrslowmotion.forevervip'},  //TimeCut
