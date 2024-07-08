@@ -32,9 +32,9 @@ var mikephie = JSON.parse($response.body);
     },
     "management_url" : "https://apps.apple.com/account/subscriptions",
     "subscriptions" : {
-      "mf_20_1m_0_0" : {
+      "mf_20_lifetime2" : {
         "original_purchase_date" : "2024-07-02T04:40:27Z",
-        "expires_date" : "2024-08-02T04:40:26Z",
+        "expires_date" : "2088-08-02T04:40:26Z",
         "is_sandbox" : false,
         "refunded_at" : null,
         "store_transaction_id" : "150001850550669",
