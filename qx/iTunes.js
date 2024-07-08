@@ -52,7 +52,7 @@ var uaProductMapping = {
   'intolive': {product_id: 'me.imgbase.intolive.proSubYearly'},  //intolive-实况壁纸制作器
   'PhotosSorter': {product_id: 'sorter.pro.ipa'},  //Sorter-相册整理
   'OneExtractor': {product_id: 'com.OneExtractor.Video.Forever'},  //视频提取器
-  'OneExtractor': {product_id: 'com.OneExtractor.Video.Forever'},  //视频提取器
+  'OneExtractor': {product_id: 'com.xfuse.ProVision'},  //视频提取器
 
 };
 var receipt = {
