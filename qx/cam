@@ -3,3 +3,8 @@ https://d82.intsig.net/sync/query_storage?token=CDEE7BEFFAE9475E3h992ASS&
 {
   "storage" : "0/10947133440"
 }
+
+
+https://api-cs.intsig.net/purchase/cs/query_property?app_type=CamScanner_IP_FREE&client_app=CamScanner_IP_FREE%406.68.0.2407042257&country=sg&cs_ept_d=YgvDZ8SY8LGPoiikDxBTdw8vs13ojhJgyORVGX4X2RkOppl012e79Q8AeopjFre1&first_install_version=6.50.0&language=zh-cn&property_id=cs_vip%7Cfax%7Cpoints%7Cocr_count%7CCamScanner_BookMode%7Cpdfword_count%7CCamScanner_RoadMap&sign=c1976e4640c8f5ba0b58310e535cdcac&time_zone=8&token=CDEE7BEFFAE9475E3h992ASS&trans_flag=0&
+
+
