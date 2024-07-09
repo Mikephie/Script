@@ -53,6 +53,7 @@ var uaProductMapping = {
   'PhotosSorter': {product_id: 'sorter.pro.ipa'},  //Sorter-相册整理
   'OneExtractor': {product_id: 'com.OneExtractor.Video.Forever'},  //视频提取器
   'Xfuse': {product_id: 'com.xfuse.ProVision'},  //磁力宅播放器
+  'Boom': {product_id: 'com.globaldelight.iBoom.LifetimeDiscountPack'},  //Boom
 
 };
 var receipt = {
