@@ -10,12 +10,14 @@
 [rewrite_local]
 ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/space\/list\?type=space url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-all
 .js
+^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/(about\?|about\?space=) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js
 
 [mitm] 
 hostname = api-drive.mypikpak.com
 
 *******************************/
-
+"expires_at" : "2088-08-08T08:08:08+08:00",
+"sub" : "ZUNcGmFMxgvtLSD8",
 
 let body = JSON.parse($response.body);
 
@@ -25,8 +27,8 @@ function modifyObject(obj) {
             if (typeof obj[key] === 'object' && obj[key] !== null) {
                 modifyObject(obj[key]);
             } else {
-                if (key === 'minimum_tier') {
-                    obj[key] = "pro";
+                if (key === 'expires_at') {
+                    obj[key] = "2088-08-08T08:08:08+08:00";
                 }
                 if (key === 'is_promotions_subscriber') {
                     obj[key] = false;
@@ -37,8 +39,8 @@ function modifyObject(obj) {
                 if (key === 'tier') {
                     obj[key] = "pro";
                 }
-                if (key === 'normalized_user_tier') {
-                    obj[key] = "pro";
+                if (key === 'sub') {
+                    obj[key] = "ZUNcGmFMxgvtLSD8";
                 }
             }
         }
