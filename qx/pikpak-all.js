@@ -18,7 +18,10 @@ hostname = api-drive.mypikpak.com
 *******************************/
 "expires_at" : "2088-08-08T08:08:08+08:00",
 "sub" : "ZUNcGmFMxgvtLSD8",
-
+"expire": "2088-08-08T08:08:08+08:00",
+"surplus_day": 88888
+"sub_status" : true,
+"vip_status" : "ok",
 let body = JSON.parse($response.body);
 
 function modifyObject(obj) {
@@ -30,14 +33,14 @@ function modifyObject(obj) {
                 if (key === 'expires_at') {
                     obj[key] = "2088-08-08T08:08:08+08:00";
                 }
-                if (key === 'is_promotions_subscriber') {
-                    obj[key] = false;
+                if (key === 'expire') {
+                    obj[key] = "2088-08-08T08:08:08+08:00";
                 }
                 if (key === 'permitted') {
                     obj[key] = true;
                 }
-                if (key === 'tier') {
-                    obj[key] = "pro";
+                if (key === 'surplus_day') {
+                    obj[key] = 88888;
                 }
                 if (key === 'sub') {
                     obj[key] = "ZUNcGmFMxgvtLSD8";
@@ -48,11 +51,10 @@ function modifyObject(obj) {
     if (obj.hasOwnProperty('user_subscriptions')) {
         obj['user_subscriptions'] = [
             {
-                "expires_at": "2099-09-29 23:23:02 -0700",
-                "id": "651718",
-                "status": "active",
-                "payment_type": "apple",
-                "plan_id": "pro"
+                "vip_status": "ok",
+                "sub_status": "true",
+                "expires_at" : "2088-08-08T08:08:08+08:00",
+                "user_id": "ZUNcGmFMxgvtLSD8"
             }
         ];
     }
