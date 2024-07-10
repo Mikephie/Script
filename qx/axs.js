@@ -18,4 +18,4 @@ hostname=m-station2.axs.com.sg
 
 
 
-^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage\/.*|highlight\/.*) url reject-dict
+^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage\/.*|highlight\/.*) url reject-img
