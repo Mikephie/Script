@@ -16,7 +16,7 @@ hostname = appraven.net
 var body = $response.body;
 
 body = body.replace(/"isSVIP" : 0, '"isSVIP" : 1');
-body = body.replace(/"hasInAppPurchases":false/g,'"hasInAppPurchases":true');
+body = body.replace(/"isVIP" : 0, '"isVIP" : 1');
 body = body.replace(/"youOwn":false/g,
 '"youOwn":true');
 body = body.replace(/"arcade":false/g,
