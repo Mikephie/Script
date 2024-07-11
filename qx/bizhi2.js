@@ -6,7 +6,7 @@ AppRaven
 [rewrite_local]
 
 
-^https:\/\/leancloud\.emotionwp\.com\/1\.1\/batch\/save url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi2.js
+^https:\/\/leancloud\.emotionwp\.com\/1\.1\/batch\/save url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi2.js
 
 [mitm] 
 
@@ -29,7 +29,7 @@ var mikephie = JSON.parse($response.body);
         "vipType" : "month",
         "svipEndTimeFormat" : "1970-01-01",
         "svipType" : "none",
-        "vipEndTime" : 1723374820,
+        "vipEndTime" : 3742767660,
         "__internalId" : "6559d56eb87b3b5ada6602a7"
       }
     }
