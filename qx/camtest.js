@@ -39,7 +39,7 @@ var mikephie = JSON.parse($response.body);
       "loginType": 3,
       "downloadCount": 0,
       "objectId": "6559d56eb87b3b5ada6602a7",
-      "coin": 999880,
+      "coin": 999999,
       "vipEndTimeFormat": "2088-08-08",
       "warmStartCount": 7,
       "coldStartCount": 0,
