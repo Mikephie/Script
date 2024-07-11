@@ -20,7 +20,7 @@ body = body.replace(/"isVIP" : 0, '"isVIP" : 1');
 body = body.replace(/"vipEndTimeFormat" : "2024-08-11",
 '"vipEndTimeFormat" : "2088-08-08",');
 body = body.replace(/"vipEndTime" : 1723374820,
-'"vipEndTime" : 1723374820,');
+'"vipEndTime" : 3742767660,');
 
 body = body.replace(/"preorder":false/g,
 '"preorder":true');
