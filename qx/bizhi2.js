@@ -6,10 +6,11 @@ AppRaven
 [rewrite_local]
 
 
-https://appraven.net/appraven/graphql url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js
+^https:\/\/leancloud\.emotionwp\.com\/1\.1\/batch\/save url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi2.js
+
 [mitm] 
 
-hostname = appraven.net
+hostname = leancloud.emotionwp.com
 
 **/
 
