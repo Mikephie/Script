@@ -78,7 +78,7 @@ http-request ^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satel
 
 #************************************#
 # 美图秀秀 解锁系列
-# hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
+# hostname = mobile.flightradar24.com, api-*.meitu.com
 http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js, requires-body=true, timeout=60, tag=美图秀秀
 
 #************************************#
