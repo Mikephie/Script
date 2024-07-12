@@ -35,7 +35,7 @@ var mikephie = JSON.parse($response.body);
     "isActive" : true,
     "hasConsented" : true,
     "localeCode" : "en_GB",
-    "name" : "Mikephie",
+    "name" : "ddgksf2013",
     "typeSource" : "gmail",
     "subscriptions" : {
       "0" : {
@@ -51,7 +51,7 @@ var mikephie = JSON.parse($response.body);
     "tokenLogin" : "",
     "accessToken" : "",
     "publicKey" : null,
-    "identity" : "Mikephie",
+    "identity" : "ddgksf2013",
     "isLoggedin" : true,
     "accountType" : "subscriber",
     "isAnonymousAccount" : false,
