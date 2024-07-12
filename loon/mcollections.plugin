@@ -77,9 +77,9 @@ http-response ^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)
 http-request ^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=false, timeout=60, tag=彩云天气-SVIP地图
 
 #************************************#
-# 美图秀秀 解锁系列
+# Flightradar24 解锁系列
 # hostname = mobile.flightradar24.com
-http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js, requires-body=true, timeout=60, tag=美图秀秀
+^https://mobile.flightradar24.com/mobile/(user-session|subscribe) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js
 
 #************************************#
 # Filmix 解锁系列
