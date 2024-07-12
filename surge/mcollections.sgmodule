@@ -72,7 +72,7 @@ grammarlypremiumcrack = type=http-response, pattern=^https?:\/\/subscription\.gr
 #************************************#
 # Flightradar24 解锁系列
 # hostname = mobile.flightradar24.com
-^https://mobile.flightradar24.com/mobile/(user-session|subscribe) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js
+flightradar24 = type=http-response, pattern=^https://mobile.flightradar24.com/mobile/(user-session|subscribe), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # Filmix
