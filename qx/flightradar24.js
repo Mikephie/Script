@@ -1,5 +1,5 @@
 /*        
-        ➪：脚本名称: 婚礼精选 （永久会员）
+        ➪：脚本名称: flightradar24 （永久会员）
 
         ★：解锁永久🆅🅸🅿
 
@@ -8,7 +8,7 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 # > Flightradar24@ddgksf2013
-^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) url script-echo-response https://github.com/ddgksf2013/dev/raw/main/flightradar24.js
+^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) url script-echo-response https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js
 
 [mitm]
 hostname = mobile.flightradar24.com
@@ -19,22 +19,139 @@ hostname = mobile.flightradar24.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
+  "status" : "success",
+  "responseCode" : 100,
+  "accessToken" : "",
+  "message" : "Subscription has been successfully created",
+  "msg" : "Subscription has been successfully created",
+  "userData" : {
+    "oAuthId" : null,
+    "idUser" : 10350270,
+    "dateExpires" : 4667755225,
+    "subscriptionKey" : "wNxX9JZxf9BafW5nXRHZQ-BMCAnO5b68Vzl9MxETIgQ",
+    "countryCode" : null,
+    "dateLastLogin" : "2022-10-23 16:18:03",
+    "oAuthType" : null,
+    "isActive" : true,
+    "hasConsented" : true,
+    "localeCode" : "en_GB",
+    "name" : "Mikephie",
+    "typeSource" : "gmail",
+    "subscriptions" : {
+      "0" : {
+        "typeSubscription" : "annual",
+        "sku" : "subscription.premium.gold.annual",
+        "originalBillingPeriod" : 365,
+        "typePlatform" : "ios",
+        "typeStatus" : "active",
+        "name" : "Gold",
+        "dateExpires" : 4667755225
+      }
+    },
+    "tokenLogin" : "",
+    "accessToken" : "",
+    "publicKey" : null,
+    "identity" : "Mikephie",
+    "isLoggedin" : true,
+    "accountType" : "subscriber",
+    "isAnonymousAccount" : false,
+    "hasPassword" : false,
+    "features" : {
+      "app.ios" : "enabled",
+      "map.info.flight.ems.mach" : "enabled",
+      "map.layer.ndb.alt.high" : "enabled",
+      "map.filters.max" : 25,
+      "user.fleets.max.aircraft" : 1000,
+      "map.layer.atc" : "enabled",
+      "map.info.flight.ground-speed" : "enabled",
+      "map.view.list" : "enabled",
+      "map.info.flight.track" : "enabled",
+      "map.info.flight.ems.tas" : "enabled",
+      "map.layer.waypoints" : "enabled",
+      "map.layer.weather.auradar" : "enabled",
+      "map.info.flight.airspace" : "enabled",
+      "map.info.aircraft.type" : "enabled",
+      "history.playback.flight.days" : 365,
+      "history.playback.global.days" : 365,
+      "map.data.delaystats" : "enabled",
+      "user.fleets.max" : 3,
+      "map.data.flarm" : "enabled",
+      "map.info.flight.ems.ias" : "enabled",
+      "map.layer.weather.radar.global" : "enabled",
+      "support.platform" : "Limited",
+      "map.view.3d.basic" : 3,
+      "map.info.aircraft.msn" : "enabled",
+      "map.data.satellite" : "enabled",
+      "support.level" : "Yes",
+      "map.info.flight.ems.wind" : "enabled",
+      "map.layer.ndb.charts" : "enabled",
+      "map.view.radar" : "enabled",
+      "history.flight.days" : 365,
+      "map.view.multi" : "enabled",
+      "map.info.aircraft.code" : "enabled",
+      "map.widgets.last_clicked_flights" : "enabled",
+      "map.info.flight.calibrated-altitude" : "enabled",
+      "user.alerts.max" : 25,
+      "map.layer.tracks.oceanic" : "enabled",
+      "map.info.airport.arrivals" : "enabled",
+      "map.info.flight.ems.oat" : "enabled",
+      "map.view.delay" : "enabled",
+      "map.layer.weather.naradar" : "enabled",
+      "map.widgets.bookmarks.max" : 25,
+      "user.sessions.max" : 3,
+      "map.info.airport.departures" : "enabled",
+      "map.info.aircraft" : "full",
+      "map.data.ads-b" : "enabled",
+      "history.playback.days" : 365,
+      "map.data.mlat" : "enabled",
+      "map.view.3d" : "enabled",
+      "map.info.flight.position" : "enabled",
+      "adverts" : "disabled",
+      "map.view.fullscreen" : "enabled",
+      "map.layer.ndb.alt.low" : "enabled",
+      "map.layer.weather.satellite" : "enabled",
+      "map.layer.weather.volcano" : "enabled",
+      "app.android" : "enabled",
+      "map.data.faa" : "enabled",
+      "user.users" : 1,
+      "usage.rights" : "Private",
+      "map.search" : "enabled",
+      "map.timeout.mins" : -1,
+      "map.info.flight.squawk" : "enabled",
+      "map.layer.weather" : "enabled",
+      "map.info.flight" : "full",
+      "history.aircraft.days" : 365,
+      "map.info.aircraft.registration" : "enabled",
+      "map.tracking.live" : "enabled",
+      "map.layer.navdata" : "enabled",
+      "history.flight.kml" : 25,
+      "map.info.flight.ems" : "enabled",
+      "map.info.flight.vertical-speed" : "enabled",
+      "map.widgets.bookmarks" : "enabled",
+      "map.labels.rows" : 4,
+      "map.status.flight" : "enabled",
+      "map.info.aircraft.age" : "enabled",
+      "map.info.flight.ems.alt.gps" : "enabled",
+      "map.layer.ndb" : "enabled",
+      "map.info.airport.onground.hours" : 720,
+      "map.layer.vor" : "enabled",
+      "map.view.fleet.onground" : 1,
+      "map.layer.weather.radar" : "enabled",
+      "user.bookmarks.max" : 25
+    },
+    "oAuth" : null
+  },
+  "transactions" : {
+    "20001133865890" : {
+      "status" : "valid",
+      "match" : "self",
+      "expires" : 4667755225000,
+      "started" : 1666542025000
+    }
+  },
+  "response_code" : 100,
   "success" : true,
-  "data" : {
-    "id" : 1163222,
-    "phone" : "",
-    "balance" : 888888,
-    "is_guest" : 0,
-    "avatar" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
-    "city_id" : 0,
-    "group_id" : 1,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjE5ODY3MjQsInN0YXR1cyI6MSwidXNlcl9pZCI6MTE2MzIyMn0.QcqjpzCLTJ3f1bP_TH1yzxqHqRTCTAOoamnsoyUuOIk",
-    "username" : "Mikephie",
-    "is_admin" : 0,
-    "email" : "mikephiemy@gmail.com",
-    "untried" : false,
-    "vip_expire" : 3742762088000
-  }
+  "token" : ""
 }
 
 $done({body : JSON.stringify(mikephie)});
