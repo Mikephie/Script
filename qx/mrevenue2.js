@@ -3,8 +3,8 @@
 Revenuecat解锁合集
 
 [rewrite_local]
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue2.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue2.js
 
 [MITM]
 hostname = api.revenuecat.com
@@ -13,14 +13,11 @@ hostname = api.revenuecat.com
 const mikephie = {};
 const mikephie76 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 
-// 排除已禁止MITM的APP
-const forbiddenApps = ['Fileball', 'APTV'];
-const ua = $request.headers['User-Agent'];
-const forbiddenAppFound = forbiddenApps.find(appName => (ua && ua.includes(appName)) || ($request.body && $request.body.includes(appName)));
-if (forbiddenAppFound) {
-  console.log(`发现禁止MITM的APP: ${forbiddenAppFound}，已停止运行脚本！\n叮当猫の分享频道: https://t.me/chxm1023`);
-  $done({});
-}
+// List of excluded apps (user-agents)
+const excludedApps = [
+  'APTV',  // APTV
+  'Fileball'   // Fileball
+];
 
 if (typeof $response == "undefined") {
   delete $request.headers["x-revenuecat-etag"];
@@ -29,7 +26,8 @@ if (typeof $response == "undefined") {
 } else if (mikephie76 && mikephie76.subscriber) {
   mikephie76.subscriber.subscriptions = mikephie76.subscriber.subscriptions || {};
   mikephie76.subscriber.entitlements = mikephie76.subscriber.entitlements || {};
-  var headers = {};
+  
+  // Normalize headers
   for (var key in $request.headers) {
     const reg = /^[a-z]+$/;
     if (key === "User-Agent" && !reg.test(key)) {
@@ -38,6 +36,7 @@ if (typeof $response == "undefined") {
       delete $request.headers[key];
     }
   }
+  
   var UA = $request.headers['user-agent'];
   const app = 'gd';
   const UAMappings = {
@@ -60,7 +59,6 @@ if (typeof $response == "undefined") {
     'iplayTV': { name: 'com.ll.btplayer.12', id: 'com.ll.btplayer.12' },  //ntplayer
     'TQBrowser': { name: 'pro_lt', id: 'com.tk.client.lifetime' },  //Teak浏览器
     'mizframa': { name: 'premium', id: 'mf_20_1m_0_0' },  //Mizframe
-    
   };
   const data = {
     "expires_date": "2088-08-08T08:08:08Z",
@@ -69,16 +67,23 @@ if (typeof $response == "undefined") {
     "ownership_type": "PURCHASED",
     "store": "app_store"
   };
-  for (const i in UAMappings) {
-    if (new RegExp(`^${i}`, 'i').test(UA)) {
-      const { name, id } = UAMappings[i];
-      mikephie76.subscriber.subscriptions = {};
-      mikephie76.subscriber.subscriptions[id] = data;
-      mikephie76.subscriber.entitlements[name] = JSON.parse(JSON.stringify(data));
-      mikephie76.subscriber.entitlements[name].product_identifier = id;
-      break;
+
+  // Check if the current user-agent is in the excluded list
+  let isExcluded = excludedApps.some(excludedApp => new RegExp(`^${excludedApp}`, 'i').test(UA));
+  
+  if (!isExcluded) {
+    for (const i in UAMappings) {
+      if (new RegExp(`^${i}`, 'i').test(UA)) {
+        const { name, id } = UAMappings[i];
+        mikephie76.subscriber.subscriptions = {};
+        mikephie76.subscriber.subscriptions[id] = data;
+        mikephie76.subscriber.entitlements[name] = JSON.parse(JSON.stringify(data));
+        mikephie76.subscriber.entitlements[name].product_identifier = id;
+        break;
+      }
     }
   }
+  
   mikephie.body = JSON.stringify(mikephie76);
 }
 $done(mikephie);
