@@ -6,41 +6,34 @@ Revenuecat解锁合集
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
 
-[MITM]
+[mitm]
 hostname = api.revenuecat.com
 
-*/
-const mikephie = {};
-const mikephie76 = JSON.parse(typeof $response != "undefined" && $response.body || null);
+*************************************/
 
-// 排除已禁止MITM的APP
+
+const mikephie76 = {};
+const headers = $request.headers;
+const mikephie = JSON.parse(typeof $response != "undefined" && $response.body || null);
+const ua = headers['User-Agent'] || headers['user-agent'];
+const bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
+
+//排除已禁止MITM的APP
 const forbiddenApps = ['Fileball', 'APTV'];
-const ua = $request.headers['User-Agent'];
 const forbiddenAppFound = forbiddenApps.find(appName => (ua && ua.includes(appName)) || ($request.body && $request.body.includes(appName)));
 if (forbiddenAppFound) {
-  console.log(`发现禁止MITM的APP: ${forbiddenAppFound}，已停止运行脚本！\n叮当猫の分享频道: https://t.me/chxm1023`);
+  console.log(`发现禁止MITM的APP: ${forbiddenAppFound}，已停止运行脚本！\nMikephieの分享频道: https://t.me/mikephie`);
   $done({});
 }
 
-if (typeof $response == "undefined") {
-  delete $request.headers["x-revenuecat-etag"];
-  delete $request.headers["X-RevenueCat-ETag"];
-  mikephie.headers = $request.headers;
-} else if (mikephie76 && mikephie76.subscriber) {
-  mikephie76.subscriber.subscriptions = mikephie76.subscriber.subscriptions || {};
-  mikephie76.subscriber.entitlements = mikephie76.subscriber.entitlements || {};
-  var headers = {};
-  for (var key in $request.headers) {
-    const reg = /^[a-z]+$/;
-    if (key === "User-Agent" && !reg.test(key)) {
-      var lowerkey = key.toLowerCase();
-      $request.headers[lowerkey] = $request.headers[key];
-      delete $request.headers[key];
-    }
-  }
-  var UA = $request.headers['user-agent'];
-  const app = 'gd';
-  const UAMappings = {
+//识别bundle_id
+const bundle = {
+	'io.innerpeace.yiye': { name: 'Premium', id: 'io.innerpeace.yiye.lifetime.forYearly' },  //言外笔记
+	'com.skysoft.removalfree': { name: 'Pro', id: 'com.skysoft.removalfree.subscription.newyearly' }  //图片消除
+}
+
+//识别UA
+const list = {
     'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever' },  //服务器监控
     'CountDuck': { name: 'premium', id: 'Lifetime' },  //倒数鸭
     'ScreenRecordCase': { name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra' },  //手机壳套图
@@ -59,26 +52,47 @@ if (typeof $response == "undefined") {
     'Yosum': { name: 'Premium', id: 'yosum_999_1year' },  //Yosum
     'iplayTV': { name: 'com.ll.btplayer.12', id: 'com.ll.btplayer.12' },  //ntplayer
     'TQBrowser': { name: 'pro_lt', id: 'com.tk.client.lifetime' },  //Teak浏览器
-    'mizframa': { name: 'premium', id: 'mf_20_1m_0_0' },  //Mizframe
-    
-  };
-  const data = {
-    "expires_date": "2088-08-08T08:08:08Z",
-    "original_purchase_date": "2023-08-08T08:08:08Z",
-    "purchase_date": "2023-08-08T08:08:08Z",
-    "ownership_type": "PURCHASED",
-    "store": "app_store"
-  };
-  for (const i in UAMappings) {
-    if (new RegExp(`^${i}`, 'i').test(UA)) {
-      const { name, id } = UAMappings[i];
-      mikephie76.subscriber.subscriptions = {};
-      mikephie76.subscriber.subscriptions[id] = data;
-      mikephie76.subscriber.entitlements[name] = JSON.parse(JSON.stringify(data));
-      mikephie76.subscriber.entitlements[name].product_identifier = id;
-      break;
+    'mizframa': { name: 'premium', id: 'mf_20_lifetime2' },  //Mizframe
+};
+
+if (typeof $response == "undefined") {
+  delete headers["x-revenuecat-etag"];
+  delete headers["X-RevenueCat-ETag"];
+  mikephie76.headers = headers;
+} else if (mikephie && mikephie.subscriber) {
+  mikephie.subscriber.subscriptions = mikephie.subscriber.subscriptions || {};
+  mikephie.subscriber.entitlements = mikephie.subscriber.entitlements || {};
+  let name, ids, data;
+  for (const src of [list, bundle]) {
+    for (const i in src) {
+      const test = src === list ? ua : bundle_id;
+      if (new RegExp(`^${i}`, `i`).test(test)) {
+        data = { "purchase_date": "2023-08-08T08:08:08Z", "expires_date": "2088-08-08T08:08:08Z" };
+        ids = src[i].id;
+        name = src[i].name;
+        break;
+      }
     }
   }
-  mikephie.body = JSON.stringify(mikephie76);
+  if (!name || !ids) {
+    data = { "purchase_date": "2023-08-08T08:08:08Z", "expires_date": "2088-08-08T08:08:08Z" };
+    name = 'pro';
+    ids = 'com.mikephie.pro';
+  }
+  mikephie.subscriber.entitlements[name] = Object.assign({}, data, { product_identifier: ids });
+  const subData = Object.assign({}, data, {
+    "Author": "mikephie",
+    "Telegram": "https://t.me/mikephie",
+    "warning": "仅供学习，禁止转载或售卖",
+    "original_purchase_date": "2023-08-08T08:08:08Z",
+    "store_transaction_id": "150001850550669",
+    "period_type": "trial",
+    "store": "app_store",
+    "ownership_type": "PURCHASED"
+  });
+  mikephie.subscriber.subscriptions[ids] = subData;
+  mikephie76.body = JSON.stringify(mikephie);
+  console.log('已操作成功🎉🎉🎉\nMikephieの分享频道: https://t.me/mikephie');
 }
-$done(mikephie);
+
+$done(mikephie76);
