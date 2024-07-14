@@ -211,7 +211,7 @@ classdojo = type=http-response, pattern=^https:\/\/payments\.classdojo\.com\/v1\
 #************************************#
 # Emby(解锁播放权限)
 # hostname = mb3admin.com
-embycrack = type=http-request, pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey), script-path=https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/embycrack.js, timeout=60
+embycrack = type=http-request, pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/embycrack.js, timeout=60
 
 #************************************#
 # IFTTT（永久会员）
