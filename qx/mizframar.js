@@ -9,7 +9,7 @@
 
 [rewrite_local] 
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mizframar.js
-#^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
+
 
 [mitm]
 hostname = api.revenuecat.com
@@ -20,8 +20,8 @@ hostname = api.revenuecat.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "request_date_ms" : 1719991696568,
-  "request_date" : "2024-07-03T07:28:16Z",
+  "request_date_ms" : 1720955724808,
+  "request_date" : "2024-07-14T11:15:24Z",
   "subscriber" : {
     "non_subscriptions" : {
 
@@ -33,9 +33,9 @@ var mikephie = JSON.parse($response.body);
     },
     "management_url" : "https://apps.apple.com/account/subscriptions",
     "subscriptions" : {
-      "mf_20_lifetime2" : {
+      "mf_20_1m_0_0" : {
         "original_purchase_date" : "2024-07-02T04:40:27Z",
-        "expires_date" : "2024-08-02T04:40:26Z",
+        "expires_date" : "2088-08-02T04:40:26Z",
         "is_sandbox" : false,
         "refunded_at" : null,
         "store_transaction_id" : "150001850550669",
@@ -53,13 +53,13 @@ var mikephie = JSON.parse($response.body);
       "premium" : {
         "grace_period_expires_date" : null,
         "purchase_date" : "2024-07-02T04:40:26Z",
-        "product_identifier" : "mf_20_lifetime2",
-        "expires_date" : "2024-08-02T04:40:26Z"
+        "product_identifier" : "mf_20_1m_0_0",
+        "expires_date" : "2088-08-02T04:40:26Z"
       }
     },
     "original_purchase_date" : "2023-11-16T23:40:29Z",
     "original_app_user_id" : "$RCAnonymousID:f2cc84fcea87421d8455c880e00b2f30",
-    "last_seen" : "2024-07-03T03:39:10Z"
+    "last_seen" : "2024-07-14T07:38:51Z"
   }
 }
 
