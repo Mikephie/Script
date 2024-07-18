@@ -1,0 +1,11 @@
+#!name=AXS Payment
+#!desc=AXS Payment 去广告
+#!author=mike
+#!icon=https://raw.githubusercontent.com/Mikephie/Script/main/Mike_axs.js
+#!homepage=https://mike
+
+[Map Local]
+https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage|highlight)\/[A-Za-z0-9_\/?.=&-]+ data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% m-station2.axs.com.sg
