@@ -5,7 +5,9 @@
 #!homepage=https://mike
 
 [Rewrite]
-^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage\/.*|highlight\/.*) - reject-200
+
+https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage|highlight)\/[A-Za-z0-9_\/?.=&-]+ url reject-200
+
 
 [MITM]
 hostname = m-station2.axs.com.sg

@@ -16,6 +16,4 @@ hostname=m-station2.axs.com.sg
 
 
 
-
-
-^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage\/.*|highlight\/.*) url reject-200
+https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage|highlight)\/[A-Za-z0-9_\/?.=&-]+ url reject-200
