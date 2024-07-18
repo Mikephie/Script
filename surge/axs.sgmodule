@@ -2,7 +2,7 @@
 #!desc=AXS Payment 去广告
 #!author=mike
 #!icon=https://raw.githubusercontent.com/Mikephie/Script/main/Mike_axs.js
-#!category=🛠️ APP解锁
+#!category=🛠️ No Ads
 
 [Map Local]
 https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage|highlight)\/[A-Za-z0-9_\/?.=&-]+ data-type=text data=" " status-code=200
