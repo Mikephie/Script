@@ -13,36 +13,57 @@ hostname= mb3admin.com
 
 */
 
-var mikephie = JSON.parse($response.body);
+var url = $request.url;
 
-    mikephie = {
-  "space": [
-  ],
-  "has_more": false,
-  "base": {
-    "sub_status": true,
-    "assets": "10T",
-    "upload": {
-      "assets": 0,
-      "total_assets": 0,
-      "size": 0
-    },
-    "expire_time": "2024-11-29T10:58:16+08:00",
-    "download": {
-      "assets": 0,
-      "total_assets": 0,
-      "size": 0
-    },
-    "size": 10995116277760,
-    "vip_status": "ok",
-    "user_id": "ZUNcGmFMxgvtLSD8",
-    "offline": {
-      "assets": 0,
-      "total_assets": 0,
-      "size": 0
-    },
-    "info": ""
-  }
+const myStatus = "HTTP/1.1 200 OK";
+const myHeaders = {
+    "Crack": "KS", 
+    "Access-Control-Allow-Origin": "*", 
+    "Access-Control-Allow-Headers": "*", 
+    "Access-Control-Allow-Method": "*", 
+    "Access-Control-Allow-Credentials": "true"
+};
+
+
+if (url.indexOf('/admin/service/registration/validateDevice') != -1) {
+  obj = {
+      "cacheExpirationDays": 365,
+      "message": "Device Valid",
+      "resultCode": "GOOD"
+	};
+} else if (url.indexOf('/admin/service/appstore/register') != -1) {
+  obj = {
+      "featId":"",
+      "registered":true,
+      "expDate":"2099-09-09",
+      "key":""
+	};
+} else if (url.indexOf('/admin/service/registration/validate') != -1) {
+	obj = {
+      "featId":"",
+      "registered":true,
+      "expDate":"2099-09-09",
+      "key":""
+	};
+} else if (url.indexOf('/admin/service/registration/getStatus') != -1){
+	obj = {
+      "planType":"Cracked",
+      "deviceStatus":"",
+      "subscriptions":[]
+	};
+} else if (url.indexOf('/admin/service/supporter/retrievekey') != -1){
+	obj = {
+      "Success":false,
+      "ErrorMessage":"Supporter not found"
+	};
 }
 
-$done({body : JSON.stringify(mikephie)});
+myData = JSON.stringify(obj);
+
+const myResponse = {
+    status: myStatus,
+    headers: myHeaders, // Optional.
+    body: myData // Optional.
+};
+
+$done(myResponse);
