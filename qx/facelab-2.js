@@ -1,5 +1,5 @@
 /*        
-        ➪：脚本名称:   Faceswap 更新时间 ：19 Jul 2024 at 10:09
+        ➪：脚本名称:   FaceSwapper解锁VIP 更新时间 ：19 Jul 2024 at 10:09
 
         ★：解锁永久🆅🅸🅿
 
