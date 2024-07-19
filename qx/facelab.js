@@ -1,26 +1,23 @@
-/*************************************
+/*        
+        ➪：脚本名称:   FaceSwapper解锁VIP 更新时间 ：19 Jul 2024 at 10:09
 
-项目名称：FaceLab
-下载地址：https://t.cn/A6YSUpWY
-更新日期：2024-02-19
-脚本作者：chxm1023
-电报频道：https://t.me/chxm1023
-使用声明：⚠️仅供参考，🈲转载与售卖！
+        ★：解锁永久🆅🅸🅿
 
-**************************************
+        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
+ 
 [rewrite_local]
-^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js
+^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/FaceLab.js
 
 [mitm]
 hostname = subscription-api.lyrebirdstudio.net
 
-*************************************/
+*******************************/
 
+var mikephie = JSON.parse($response.body);
 
-var chxm1023 = JSON.parse($response.body);
-
-chxm1023 = {
+    mikephie = {
   "data" : {
     "app_id" : "com.lyrebirdstudio.facelab",
     "quantity" : 1,
@@ -42,4 +39,4 @@ chxm1023 = {
   }
 };
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(mikephie)});
