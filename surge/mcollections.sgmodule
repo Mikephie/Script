@@ -100,6 +100,11 @@ ToonMe = type=http-response,pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/
 FaceLab = type=http-response, pattern=^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/FaceLab.js, requires-body=true, max-size=-1, timeout=60 
 
 #************************************#
+# FaceSwapper 解锁系列
+# hostname = api-*.facereplacerext.com
+^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceSwapper.js
+
+#************************************#
 # Notability
 # hostname = notability.com
 Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
