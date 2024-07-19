@@ -97,7 +97,7 @@ ToonMe = type=http-response,pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/
 #************************************#
 # FaceLab
 # hostname = subscription-api.lyrebirdstudio.net
-FaceLab = type=http-response, pattern=^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js, requires-body=true, max-size=-1, timeout=60 
+FaceLab = type=http-response, pattern=^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/FaceLab.js, requires-body=true, max-size=-1, timeout=60 
 
 #************************************#
 # Notability
