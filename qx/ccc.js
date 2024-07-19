@@ -4,10 +4,12 @@
 
 
 [rewrite_local]
-^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/space\/list\?type=space url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/ccc.js
 
-[mitm] 
-hostname = api-drive.mypikpak.com
+^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/embycrack.js
+
+[mitm]
+
+hostname= mb3admin.com
 
 */
 
