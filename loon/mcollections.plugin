@@ -104,7 +104,7 @@ http-response ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt 
 #************************************#
 # FaceLab 解锁系列
 # hostname = subscription-api.lyrebirdstudio.net
-http-response ^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceLab.js, requires-body=true, timeout=60, tag=FaceLab
+http-response ^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/faceLab.js, requires-body=true, timeout=60, tag=FaceLab
 
 #************************************#
 # FaceSwapper 解锁系列
