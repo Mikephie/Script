@@ -1,0 +1,33 @@
+/*        
+        ➪：脚本名称:   Faceswap 更新时间 ：19 Jul 2024 at 10:09
+
+        ★：解锁永久🆅🅸🅿
+
+        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
+ 
+[rewrite_local]
+^https?:\/\/ifttt\.com\/api\/v3\/graph url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js
+
+[MITM]
+hostname = 
+
+*******************************/
+
+var mikephie = JSON.parse($response.body);
+
+    mikephie = [{
+  "startTime" : 1703477754000,
+  "orderId" : "340001399999999",
+  "isTrialPeriod" : true,
+  "endTime" : 4092599349000,
+  "productId" : "73_premium_normal_yearly",
+  "productType" : 3,
+  "orderStatus" : 1,
+  "autoRenewStatus" : true,
+  "originalOrderId" : "340001399999999",
+  "sign" : "c5e5450b552ac10149dcd7d4625b1ad2"
+}];
+
+$done({body : JSON.stringify(mikephie)});
