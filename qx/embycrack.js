@@ -1,5 +1,5 @@
 /*        
-        ➪：脚本名称: 彩豆视频水印宝 （永久会员）
+        ➪：脚本名称: Embycrack （永久会员）
 
         ★：解锁永久🆅🅸🅿
 
@@ -9,13 +9,13 @@
 
 [rewrite_local]
 
-^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/embycrack.js
+^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycrack.js
 
 [mitm]
 
 hostname= mb3admin.com
-
-*/
+ 
+**************************************/
 
 var url = $request.url;
 
