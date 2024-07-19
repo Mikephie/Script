@@ -102,7 +102,7 @@ FaceLab = type=http-response, pattern=^https?:\/\/subscription-api\.lyrebirdstud
 #************************************#
 # FaceSwapper 解锁系列
 # hostname = api-*.facereplacerext.com
-^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceSwapper.js
+faceSwapper = type=http-response, pattern=^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceSwapper.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # Notability
