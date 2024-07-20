@@ -22,7 +22,7 @@ var mikephie = JSON.parse($response.body);
     "app_id" : "com.lyrebirdstudio.facelab",
     "quantity" : 1,
     "start_date" : 1708187889000,
-    "end_date" : 4092599349000,
+    "end_date" : 3742762088000,
     "created_at" : 1708187892597,
     "user_id" : "A59BD623FE0349588C87C655BAA880B1",
     "type" : "Auto-Renewable Subscription",
