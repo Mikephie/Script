@@ -7,7 +7,12 @@
 
 
 [Script] 
+
 #************************************#
 # IFTTT（永久会员）
 # hostname = ifttt.com
 {{{IFTTT}}} = type=http-response, pattern=^https?:\/\/ifttt\.com\/api\/v3\/graph, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, max-size=-1, timeout=60
+
+
+[MITM]
+hostname = %APPEND% ifttt.com
