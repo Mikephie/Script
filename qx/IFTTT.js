@@ -32,7 +32,7 @@ var mikephie = JSON.parse($response.body);
       "prompt_first_time_feedback" : "not_yet",
       "profile_username" : null,
       "profile_image_url" : null,
-      "applet_quota_slots_total" : 2,
+      "applet_quota_slots_total" : -1,
       "profile_provider" : null,
       "marketing_push_notification_setting" : true,
       "user_subscriptions" : [
