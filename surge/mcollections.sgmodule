@@ -1,6 +1,8 @@
 #!name=Mikephie自用合集
 #!desc=APP解锁合集
 #!category=🛠️ APP解锁
+#!arguments=IFTTT:开关
+#!arguments-desc=[参数设置]\n⓵ 脚本: 默认开启脚本,如需关闭需修改此参数#
 
 [General]
 force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
@@ -222,7 +224,7 @@ embycrack = type=http-request, pattern=^https:\/\/mb3admin\.com\/admin\/service(
 #************************************#
 # IFTTT（永久会员）
 # hostname = ifttt.com
-IFTTT = type=http-response, pattern=^https?:\/\/ifttt\.com\/api\/v3\/graph, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, max-size=-1, timeout=60
+{{{IFTTT}}} = type=http-response, pattern=^https?:\/\/ifttt\.com\/api\/v3\/graph, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/IFTTT.js, requires-body=true, max-size=-1, timeout=60
 
 
 [MITM]
