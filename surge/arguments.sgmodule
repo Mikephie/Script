@@ -1,7 +1,7 @@
 #!name=test arguments
 #!desc=arguments
 #!category=Third Party Module
-#!arguments=IFTTT_Disable
+#!arguments=IFTTT:开关
 
 #!arguments-desc=[参数设置]\n⓵ 脚本: 默认开启单订阅,如需关闭多订阅需修改此参数
 
