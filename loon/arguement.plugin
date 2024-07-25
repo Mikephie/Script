@@ -5,13 +5,13 @@
 #!keyword = 插件管理, 可莉
 #!homepage = https://github.com/luestr/ProxyResource/tree/main/Tool/Loon/Plugin
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Switch.png
-#!select = 默认开, Bitbucket - 四网直连
+#!select =  默认开, 是, 否
 #!date = 2024-04-21 02:37:51
 
 
 [Script]
 http-request ^https:\/\/bitbucket\.org\/luestr\/proxyresource\/raw\/main\/ script-path = https://raw.githubusercontent.com/luestr/ProxyResource/main/Resource/Script/Switch_repository_source/Switch_repository_source.js, tag = 默认开
-#http-request ^https:\/\/bitbucket\.org\/luestr\/proxyresource\/raw\/main\/ script-path = https://raw.githubusercontent.com/luestr/ProxyResource/main/Resource/Script/Switch_repository_source/Switch_repository_source.js, tag = Bitbucket换源
+
 
 [Mitm]
 hostname = gitlab.com, raw.githubusercontent.com, bitbucket.org
