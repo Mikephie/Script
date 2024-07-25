@@ -1,48 +1,17 @@
-#!name = 网易云音乐去广告
-#!desc = 过滤网易云音乐广告，并允许自定义界面。
-#!openUrl = https://apps.apple.com/app/id590338362
-#!author = Keywos
-#!keyword = 去广告, Keywos
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/NeteaseCloudMusic.png
-#!date = 22024-06-12 02:09:03
-#!select = 隐藏漫游标签, 是, 否
-#!select = 隐藏动态标签, 是, 否
-#!select = 隐藏推荐标签, 是, 否
-#!select = 隐藏发现标签, 是, 否
-#!select = 隐藏首页问候语, 是, 否
-#!select = 隐藏首页排行榜, 是, 否
-#!select = 隐藏首页每日推荐, 是, 否
-#!select = 隐藏首页推荐歌单, 是, 否
-#!select = 隐藏首页最近常听, 是, 否
-#!select = 隐藏首页雷达歌单, 是, 否
-#!select = 隐藏首页音乐合伙人, 是, 否
-#!select = 隐藏首页推荐专属歌单, 是, 否
-#!select = 隐藏首页你的专属歌单, 是, 否
-
+#!name = 可莉仓库源切换
+#!desc = 用于切换可莉仓库源的插件，以便能够在直连的情况下也能更新仓库资源。此插件和GitHub加速类插件冲突，不可同时启用。可在Bitbucket、GitLab和GitHub平台之间切换可莉的仓库源。
+#!openUrl = 
+#!author = 可莉🅥
+#!keyword = 插件管理, 可莉
+#!homepage = https://github.com/luestr/ProxyResource/tree/main/Tool/Loon/Plugin
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Switch.png
+#!select = 默认开, Bitbucket - 四网直连
+#!date = 2024-04-21 02:37:51
 
 
 [Script]
-# mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区 乐迷、星评等级 关注 等 图标去除
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_mian
-
-# tab
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_tab
-
-# 推荐 | home | 主页
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_home
-
-# 发现
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_fx
-
-# effect
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_effect
-
-# 我的 MyPageBar ad
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_mybarad
-
-# 显示未关注你
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_foll
+http-request ^https:\/\/bitbucket\.org\/luestr\/proxyresource\/raw\/main\/ script-path = https://raw.githubusercontent.com/luestr/ProxyResource/main/Resource/Script/Switch_repository_source/Switch_repository_source.js, tag = 默认开
+#http-request ^https:\/\/bitbucket\.org\/luestr\/proxyresource\/raw\/main\/ script-path = https://raw.githubusercontent.com/luestr/ProxyResource/main/Resource/Script/Switch_repository_source/Switch_repository_source.js, tag = Bitbucket换源
 
 [Mitm]
-hostname = interface.music.163.com, interface?.music.163.com, ipv4.music.163.com
+hostname = gitlab.com, raw.githubusercontent.com, bitbucket.org
