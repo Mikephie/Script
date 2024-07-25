@@ -35,7 +35,7 @@ for (var key in $request.headers) {
 var UA = $request.headers['user-agent'];
 var uaProductMapping = {
   'ScreenRecord': {product_id: 'https://t.me/mikephie'},
-  'NYMF': {product_id: 'com.nymf.app.premium_year'},  //Nymf艺术照片
+  'iVCam': {product_id: 'ivcam.full'},  //iVCam
   'ChickAlarmClock': {product_id: 'Pro_M01'},  //小鸡专注
   'TWWeatherMajor': {product_id: 'com.highonemob.weather.base.w'},
   'ProKnockOut': {product_id: 'com.knockout.SVIP.50off'},  //ProKnockOut
