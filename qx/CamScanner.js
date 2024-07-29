@@ -10,7 +10,7 @@
 
 [rewrite_local]
 
-^https:\/\/.*\.(intsig\.net|camscanner\.com) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/CamScanner.js
+^https:\/\/.*\.(intsig\.net|camscanner\.com) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/CamScanner.js
 
 [mitm]
 
@@ -41,18 +41,18 @@ const vip = {
         "level" : 1,
         "next_score" : 600,
         "start_score" : 1,
-        "create_time" : 0
+        "create_time" : 1722228783
       },
       "nxt_renew_tm" : "4092599349",
       "last_payment_method" : "appstore",
-      "grade" : 2,
+      "grade" : 4,
       "svip" : 1,
       "expiry" : 4092599349,
       "pending" : 0,
       "level_info" : {
         "level" : 1,
         "end_days" : 30,
-        "days" : 1
+        "days" : 14
       },
       "inherited_flag" : 0,
       "group2_paid" : 0
@@ -113,7 +113,7 @@ chxm1023.data.data = {
       ],
       "transfer" : [
         {
-          "balance" : -1,
+          "balance" : 99999,
           "item" : "CamScanner_ExcelRecoginze"
         },
         {
