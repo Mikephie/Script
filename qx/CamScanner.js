@@ -69,6 +69,7 @@ chxm1023.data["immt_expy_points"] = "99999";
 chxm1023.data["ocr_balance"] = 99999;
 chxm1023.data["no_login_ocr_balance"] = "99999";
 chxm1023.data["CamScanner_RoadMap"] = 100000;
+chxm1023.data["CamScanner_ExcelRecoginze"] = 99999;
 }
 
 if ($request.url.indexOf(vipb) != -1){
