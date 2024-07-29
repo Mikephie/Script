@@ -8,11 +8,12 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-# >彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员）
-^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js
 
-[mitm] 
-hostname = appss.baomingding.com
+^https:\/\/api-cs\.intsig\.net\/purchase\/cs\/query_property\?app_type=CamScanner_IP_FREE&client_app=CamScanner_IP_FREE%406\.69\.1\.2407252158&country=sg&cs_ept_d=YgvDZ8SY8LGPoiikDxBTdw8vs13ojhJgyORVGX4X2RkOppl012e79Q8AeopjFre1&first_install_version=6\.50\.0&language=zh-cn&property_id=cs_vip%7Cfax%7Cpoints%7Cocr_count%7CCamScanner_BookMode%7Cpdfword_count%7CCamScanner_RoadMap&sign url script-response-body
+
+[mitm]
+
+hostname = api-cs.intsig.net
 
 *******************************/
 
