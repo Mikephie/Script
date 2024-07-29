@@ -28,7 +28,7 @@ const vip = {
       "ms_first_pay" : 0,
       "vip_type" : "svip",
       "auto_renewal" : true,
-      "in_trial" : 1,
+      "in_trial" : 0,
       "members_page" : 0,
       "pc_vip" : 1,
       "renew_type" : "year",
@@ -37,10 +37,10 @@ const vip = {
       "initial_tm" : "4092599349",
       "product_id" : "com.intsig.camscanner.premiums.oneyear.autorenewable.free.test1",
       "vip_level_info" : {
-        "score" : 0,
-        "level" : 0,
-        "next_score" : 1,
-        "start_score" : 0,
+        "score" : 9,
+        "level" : 1,
+        "next_score" : 600,
+        "start_score" : 1,
         "create_time" : 0
       },
       "nxt_renew_tm" : "4092599349",
