@@ -27,7 +27,7 @@ var mikephie = JSON.parse($response.body);
         "svipEndTime" : 0,
         "vipType" : "month",
         "isSVIP" : true,
-        "svipType" : "none",
+        "svipType" : "month",
         "vipEndTime" : 3742767660,
         "__internalId" : "0GCpsOGHMc2wwEJWVwFaCxC"
       },
