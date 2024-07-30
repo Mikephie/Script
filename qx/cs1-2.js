@@ -23,6 +23,8 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "ret" : "0",
   "data" : {
+    "fax_balance" : "0",
+    "used_points" : "0",
     "psnl_vip_property" : {
       "group1_paid" : 1,
       "ms_first_pay" : 0,
@@ -38,34 +40,32 @@ var mikephie = JSON.parse($response.body);
         "score" : 9,
         "level" : 1,
         "create_time" : 1722228783,
-        "start_score" : 1,
-        "next_score" : 600
+        "next_score" : 600,
+        "start_score" : 1
       },
       "level_info" : {
         "level" : 1,
-        "days" : 14,
-        "end_days" : 30
+        "end_days" : 30,
+        "days" : 14
       },
       "grade" : 4,
       "last_payment_method" : "webshop",
       "nxt_renew_tm" : 0,
       "svip" : 0,
-      "expiry" : 1722765490,
+      "expiry" : 3742762088000,
       "pending" : 0,
       "inherited_flag" : 0,
       "group2_paid" : 0
     },
-    "used_points" : "0",
-    "fax_balance" : "0",
-    "login_ocr_balance" : 4,
     "points" : "0",
+    "login_ocr_balance" : 4,
     "pdfword_balance" : "100000",
     "bookmode_balance" : 100000,
     "immt_expy_points" : "0",
+    "ocr_balance" : 990,
     "no_login_ocr_balance" : 2,
-    "ocr_balance" : 991,
-    "server_time" : "1722254811",
-    "CamScanner_RoadMap" : 499
+    "server_time" : "1722301854",
+    "CamScanner_RoadMap" : 500
   }
 }
 
