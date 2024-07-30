@@ -6,7 +6,7 @@ AppRaven
 [rewrite_local]
 
 
-^https:\/\/leancloud\.emotionwp\.com\/1\.1\/batch\/save url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi2-2.js
+^https:\/\/leancloud\.emotionwp\.com\/1\.1\/batch\/save url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi2-3.js
 
 [mitm] 
 
