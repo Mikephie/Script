@@ -66,7 +66,7 @@ var mikephie = JSON.parse($response.body);
       "productIds": [
         25652
       ],
-      ""goodsId": 66003,
+      "goodsId": 66003,
       "isRecommend": 0,
       "platformGoodsType": "sub",
       "subscriptionType": "annually"
