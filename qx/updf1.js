@@ -64,7 +64,7 @@ var mikephie = JSON.parse($response.body);
       "giveawayExpireMonth": 0,
       "isShowExpireTime": false,
       "productIds": [
-        25651
+        25652
       ],
       "goodsId": 65988,
       "isRecommend": 0,
