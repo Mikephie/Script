@@ -19,17 +19,25 @@ hostname = api.updf.com
 
 var mikephie = JSON.parse($response.body);
 
-    mikephie = {
-  "msg": "操作已成功。",
+    mikephie = 
+  "msg": "成功",
   "data": {
-    "base_info": {
-      "used_size": 138036,
-      "is_open": 1,
-      "total_size": 10737418240,
-      "auto_sync": 1
+    "userInfo": {
+      "companyUser": false,
+      "industry": "",
+      "headerImg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
+      "uid": 5513495,
+      "phone": "",
+      "color": "#FF8080",
+      "nickName": "mike phie",
+      "companyName": "",
+      "role": 0,
+      "account": "",
+      "email": "mikephiemy@gmail.com",
+      "country": "SG"
     }
   },
   "code": 200
 }
- 
+
 $done({body : JSON.stringify(mikephie)});
