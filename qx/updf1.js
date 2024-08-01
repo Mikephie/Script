@@ -62,7 +62,7 @@ var mikephie = JSON.parse($response.body);
       "giveawayExpireMonth": 0,
       "isShowExpireTime": false,
       "productIds": [
-        25647
+        25651
       ],
       "canRenewal": false
     }
