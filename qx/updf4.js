@@ -8,12 +8,11 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https:\/\/apis\.updf\.com\/v1\/drive\/user\/info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/updf2.js
+^https:\/\/api\.updf\.com\/v1\/user\/getUserInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/updf4.js
 
 [mitm]
 
-hostname = apis.updf.com 
-
+hostname = api.updf.com 
 
 *******************************/
 
