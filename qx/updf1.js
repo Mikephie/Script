@@ -43,6 +43,10 @@ var mikephie = JSON.parse($response.body);
         25645,
         25646
       ],
+      "goodsId": 65987,
+      "isRecommend": 0,
+      "platformGoodsType": "inapp",
+      "subscriptionType": "lifetime"
       "canRenewal": false
     },
     {
