@@ -21,53 +21,79 @@ hostname = api.updf.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "msg": "成功",
-  "data": [
+  "msg" : "成功",
+  "data" : [
     {
-      "expireTime": -1,
-      "canChangePlan": false,
-      "planId": 309476,
-      "productVersions": {
+      "expireTime" : -1,
+      "canChangePlan" : false,
+      "planId" : 440262,
+      "productVersions" : {
+
       },
-      "canSubscription": false,
-      "subscriptionType": "lifetime",
-      "platformGoodsId": [
+      "canSubscription" : false,
+      "subscriptionType" : "lifetime",
+      "platformGoodsId" : [
+        "PNiOS00010004"
       ],
-      "giveawayCanUse": false,
-      "nextPayTime": 0,
-      "isShowNextPayTime": false,
-      "giveawayExpireMonth": 0,
-      "isShowExpireTime": false,
-      "productIds": [
+      "giveawayCanUse" : false,
+      "nextPayTime" : 0,
+      "isShowNextPayTime" : false,
+      "giveawayExpireMonth" : 0,
+      "isShowExpireTime" : false,
+      "productIds" : [
         25646,
         25643,
         25644,
         25645
       ],
-      "canRenewal": false
+      "canRenewal" : false
     },
     {
-      "expireTime": -1,
-      "canChangePlan": false,
-      "planId": 309477,
-      "productVersions": {
+      "expireTime" : -1,
+      "canChangePlan" : false,
+      "planId" : 440263,
+      "productVersions" : {
+
       },
-      "canSubscription": false,
-      "subscriptionType": "lifetime",
-      "platformGoodsId": [
+      "canSubscription" : false,
+      "subscriptionType" : "lifetime",
+      "platformGoodsId" : [
+        "PNiOS00010004"
       ],
-      "giveawayCanUse": false,
-      "nextPayTime": 0,
-      "isShowNextPayTime": false,
-      "giveawayExpireMonth": 0,
-      "isShowExpireTime": false,
-      "productIds": [
+      "giveawayCanUse" : false,
+      "nextPayTime" : 0,
+      "isShowNextPayTime" : false,
+      "giveawayExpireMonth" : 0,
+      "isShowExpireTime" : false,
+      "productIds" : [
         25647
       ],
-      "canRenewal": false
+      "canRenewal" : false
+    },
+    {
+      "expireTime" : 1725199724,
+      "canChangePlan" : true,
+      "planId" : 440258,
+      "productVersions" : {
+
+      },
+      "canSubscription" : false,
+      "subscriptionType" : "monthly",
+      "platformGoodsId" : [
+        "MSiOS00010004"
+      ],
+      "giveawayCanUse" : false,
+      "nextPayTime" : 1725199724,
+      "isShowNextPayTime" : true,
+      "giveawayExpireMonth" : 0,
+      "isShowExpireTime" : false,
+      "productIds" : [
+        25648
+      ],
+      "canRenewal" : false
     }
   ],
-  "code": 200
+  "code" : 200
 }
  
 $done({body : JSON.stringify(mikephie)});
