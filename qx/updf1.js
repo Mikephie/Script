@@ -66,6 +66,10 @@ var mikephie = JSON.parse($response.body);
       "productIds": [
         25651
       ],
+      "goodsId": 65988,
+      "isRecommend": 0,
+      "platformGoodsType": "sub",
+      "subscriptionType": "annually"
       "canRenewal": false
     }
   ],
