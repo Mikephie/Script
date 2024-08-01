@@ -31,8 +31,7 @@ var mikephie = JSON.parse($response.body);
       },
       "canSubscription": false,
       "subscriptionType": "lifetime",
-      "platformGoodsId": [
-      ],
+      "platformGoodsId": 65987,
       "giveawayCanUse": false,
       "nextPayTime": 0,
       "isShowNextPayTime": false,
