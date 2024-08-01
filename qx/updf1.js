@@ -38,12 +38,12 @@ var mikephie = JSON.parse($response.body);
       "giveawayExpireMonth": 0,
       "isShowExpireTime": false,
       "productIds": [
-        25643,
-        25644,
+        25646,
         25645,
-        25646
+        25644,
+        25643
       ],
-      "goodsId": 65987,
+      "goodsId": 65908,
       "isRecommend": 0,
       "platformGoodsType": "inapp",
       "subscriptionType": "lifetime"
