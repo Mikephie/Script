@@ -19,13 +19,13 @@ hostname = api.updf.com
 
 var mikephie = JSON.parse($response.body);
 
-    mikephie = 
+    mikephie = {
   "msg": "成功",
   "data": {
     "userInfo": {
       "companyUser": false,
       "industry": "",
-      "headerImg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
+      "headerImg": "https:\/\/lh3.googleusercontent.com\/a\/AAcHTtegVjNAu9ti_apfI4T3Vg2SSsBUGDJK4nYFhF8_3dVUiX0u=s96-c",
       "uid": 5513495,
       "phone": "",
       "color": "#FF8080",
