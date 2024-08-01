@@ -33,7 +33,7 @@ var mikephie = JSON.parse($response.body);
       "companyName": "",
       "role": 0,
       "account": "",
-      "email": "mikephie@gmail.com",
+      "email": "mikephiemy@gmail.com",
       "country": "SG"
     }
   },
