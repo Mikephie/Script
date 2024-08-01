@@ -22,11 +22,49 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "msg": "操作已成功。",
   "data": {
-    "base_info": {
-      "used_size": 138036,
-      "is_open": 1,
-      "total_size": 10737418240,
-      "auto_sync": 1
+    "ai_reply": {
+      "expireTime": 3742762088000,
+      "PlanId": 0,
+      "parentOrderId": 0,
+      "uid": 0,
+      "productType": 0,
+      "subscriptionId": 0,
+      "updatedAt": 0,
+      "currentMonthStartTime": 0,
+      "type": 0,
+      "codeId": 0,
+      "cancelTime": 0,
+      "nextPayTime": 0,
+      "used": 0,
+      "orderId": 0,
+      "createdAt": 0,
+      "currentMonthExpireTime": 0
+    },
+    "ai_vip": 1,
+    "unlimited_ai_vip": 1,
+    "usage": {
+      "file_size": 2147483648,
+      "file_nums": -1,
+      "chat_nums": -1,
+      "file_pages": 1000
+    },
+    "free": {
+      "file_size": 2147483648,
+      "file_nums": -1,
+      "chat_nums": -1,
+      "file_pages": 1000
+    },
+    "pro": {
+      "file_size": 2147483648,
+      "file_nums": 100,
+      "chat_nums": 1000,
+      "file_pages": 1000
+    },
+    "unlimited": {
+      "file_size": 2147483648,
+      "file_nums": -1,
+      "chat_nums": -1,
+      "file_pages": 1000
     }
   },
   "code": 200
