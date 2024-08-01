@@ -31,7 +31,8 @@ var mikephie = JSON.parse($response.body);
       },
       "canSubscription": false,
       "subscriptionType": "lifetime",
-      "platformGoodsId": "PNmacOS00040007",
+      "platformGoodsId": [
+      ],
       "giveawayCanUse": false,
       "nextPayTime": 0,
       "isShowNextPayTime": false,
@@ -39,14 +40,10 @@ var mikephie = JSON.parse($response.body);
       "isShowExpireTime": false,
       "productIds": [
         25646,
-        25645,
+        25643,
         25644,
-        25643
+        25645
       ],
-      "goodsId": 65908,
-      "isRecommend": 0,
-      "platformGoodsType": "inapp",
-      "subscriptionType": "lifetime"
       "canRenewal": false
     },
     {
@@ -57,19 +54,16 @@ var mikephie = JSON.parse($response.body);
       },
       "canSubscription": false,
       "subscriptionType": "lifetime",
-      "platformGoodsId": "PNmacOS00040007",
+      "platformGoodsId": [
+      ],
       "giveawayCanUse": false,
       "nextPayTime": 0,
       "isShowNextPayTime": false,
       "giveawayExpireMonth": 0,
       "isShowExpireTime": false,
       "productIds": [
-        25652
+        25647
       ],
-      "goodsId": 66003,
-      "isRecommend": 0,
-      "platformGoodsType": "sub",
-      "subscriptionType": "annually"
       "canRenewal": false
     }
   ],
