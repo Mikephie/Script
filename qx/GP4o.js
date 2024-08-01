@@ -9,7 +9,7 @@
 
 [rewrite_local] 
 https://nichousha.sjrjyffs.top/api/img/aiSketch url script-request-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/GTP4ohd.js
-https://nichousha.sjrjyffs.top/api/app/user/getCurrentInfo url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/GTP4o.js
+https://nichousha.sjrjyffs.top/api/app/user/getCurrentInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4o.js
 
 [mitm]
 hostname = nichousha.sjrjyffs.top
