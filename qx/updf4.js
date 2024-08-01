@@ -26,14 +26,14 @@ var mikephie = JSON.parse($response.body);
       "companyUser": false,
       "industry": "",
       "headerImg": "https:\/\/lh3.googleusercontent.com\/a\/AAcHTtegVjNAu9ti_apfI4T3Vg2SSsBUGDJK4nYFhF8_3dVUiX0u=s96-c",
-      "uid": 5513495,
+      "uid": 8888888,
       "phone": "",
       "color": "#FF8080",
       "nickName": "mike phie",
       "companyName": "",
       "role": 0,
       "account": "",
-      "email": "mikephie@gmail.com",
+      "email": "mikephiemy@gmail.com",
       "country": "SG"
     }
   },
