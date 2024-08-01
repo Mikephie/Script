@@ -71,19 +71,19 @@ var mikephie = JSON.parse($response.body);
       "canRenewal" : false
     },
     {
-      "expireTime" : 1725199724,
+      "expireTime" : 3742762088000,
       "canChangePlan" : true,
       "planId" : 440258,
       "productVersions" : {
 
       },
       "canSubscription" : false,
-      "subscriptionType" : "monthly",
+      "subscriptionType" : "annually",
       "platformGoodsId" : [
-        "MSiOS00010004"
+        "ASiOS000100012"
       ],
       "giveawayCanUse" : false,
-      "nextPayTime" : 1725199724,
+      "nextPayTime" : 3742762088000,
       "isShowNextPayTime" : true,
       "giveawayExpireMonth" : 0,
       "isShowExpireTime" : false,
