@@ -7,10 +7,11 @@
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-^https:\/\/www\.facer\.io\/parse\/functions\/startSubscription url script-response-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/facer-3h.js
+^https:\/\/api\.updf\.com\/v1\/user\/planList url script-response-body
 
 [mitm]
-hostname = www.facer.io
+
+hostname = api.updf.com
 
 
 *******************************/
