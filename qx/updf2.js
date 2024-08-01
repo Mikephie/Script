@@ -21,52 +21,15 @@ hostname = apis.updf.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "msg": "成功",
-  "data": [
-    {
-      "expireTime": -1,
-      "canChangePlan": false,
-      "planId": 309476,
-      "productVersions": {
-      },
-      "canSubscription": false,
-      "subscriptionType": "lifetime",
-      "platformGoodsId": [
-      ],
-      "giveawayCanUse": false,
-      "nextPayTime": 0,
-      "isShowNextPayTime": false,
-      "giveawayExpireMonth": 0,
-      "isShowExpireTime": false,
-      "productIds": [
-        25646,
-        25643,
-        25644,
-        25645
-      ],
-      "canRenewal": false
-    },
-    {
-      "expireTime": -1,
-      "canChangePlan": false,
-      "planId": 309477,
-      "productVersions": {
-      },
-      "canSubscription": false,
-      "subscriptionType": "lifetime",
-      "platformGoodsId": [
-      ],
-      "giveawayCanUse": false,
-      "nextPayTime": 0,
-      "isShowNextPayTime": false,
-      "giveawayExpireMonth": 0,
-      "isShowExpireTime": false,
-      "productIds": [
-        25647
-      ],
-      "canRenewal": false
+  "msg": "操作已成功。",
+  "data": {
+    "base_info": {
+      "used_size": 138036,
+      "is_open": 1,
+      "total_size": 10737418240,
+      "auto_sync": 1
     }
-  ],
+  },
   "code": 200
 }
  
