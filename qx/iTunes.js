@@ -55,7 +55,7 @@ var uaProductMapping = {
   'Xfuse': {product_id: 'com.xfuse.ProVision'},  //磁力宅播放器
   'Boom': {product_id: 'com.globaldelight.iBoom.LifetimeDiscountPack'},  //Boom
   'FastPlayer': {product_id: 'VideoPlayer_ProVersion'},  //万能播放器
-  'FastPlayer': {product_id: 'Scanner_Subscibe_Permanent'},  //万能扫描王
+  'com.BertonYc.ScannerOCR': {product_id: 'Scanner_Subscibe_Permanent'},  //万能扫描王
   #'%E4%B8%87%E8%83%BD%E6%89%AB%E6%8F%8F%E7%8E%8B': {product_id: 'Scanner_Subscibe_Permanent'},  //万能扫描王
 
 };
