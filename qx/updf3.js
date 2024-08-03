@@ -56,9 +56,9 @@ var mikephie = JSON.parse($response.body);
     },
     "unlimited": {
       "file_size": 2147483648,
-      "file_nums": -1,
-      "chat_nums": -1,
-      "file_pages": 1000
+      "file_nums": 9999,
+      "chat_nums": 9999,
+      "file_pages": 9999
     },
     "pro": {
       "file_size": 2147483648,
