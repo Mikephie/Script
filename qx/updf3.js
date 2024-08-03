@@ -24,7 +24,7 @@ var mikephie = JSON.parse($response.body);
   "data": {
     "ai_vip": 1,
     "ai_reply": {
-      "expireTime": 1725199724,
+      "expireTime": 3742762088000,
       "PlanId": 440258,
       "parentOrderId": 425652,
       "productType": 0,
@@ -39,7 +39,7 @@ var mikephie = JSON.parse($response.body);
       "used": 1,
       "orderId": 425652,
       "createdAt": 1722521330,
-      "currentMonthExpireTime": 1725199730
+      "currentMonthExpireTime": 3742762088006
     },
     "unlimited_ai_vip": 0,
     "usage": {
@@ -62,8 +62,8 @@ var mikephie = JSON.parse($response.body);
     },
     "pro": {
       "file_size": 2147483648,
-      "file_nums": 100,
-      "chat_nums": 1000,
+      "file_nums": -1,
+      "chat_nums": -1,
       "file_pages": 1000
     }
   },
