@@ -20,35 +20,41 @@ hostname = apis.updf.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "msg": "操作已成功。",
+  "msg": "Operation successful.",
   "data": {
+    "ai_vip": 1,
     "ai_reply": {
-      "expireTime": 3742762088000,
-      "PlanId": 0,
-      "parentOrderId": 0,
-      "uid": 0,
+      "expireTime": 1725199724,
+      "PlanId": 440258,
+      "parentOrderId": 425652,
       "productType": 0,
-      "subscriptionId": 0,
-      "updatedAt": 0,
-      "currentMonthStartTime": 0,
+      "uid": 6608126,
+      "subscriptionId": 5268,
+      "updatedAt": 1722523884,
+      "currentMonthStartTime": 1722521330,
       "type": 0,
       "codeId": 0,
-      "cancelTime": 0,
+      "cancelTime": 1722523884,
       "nextPayTime": 0,
-      "used": 0,
-      "orderId": 0,
-      "createdAt": 0,
-      "currentMonthExpireTime": 0
+      "used": 1,
+      "orderId": 425652,
+      "createdAt": 1722521330,
+      "currentMonthExpireTime": 1725199730
     },
-    "ai_vip": 1,
-    "unlimited_ai_vip": 1,
+    "unlimited_ai_vip": 0,
     "usage": {
-      "file_size": 2147483648,
-      "file_nums": -1,
-      "chat_nums": -1,
-      "file_pages": 1000
+      "file_size": 0,
+      "file_nums": 1,
+      "chat_nums": 1,
+      "file_pages": 0
     },
     "free": {
+      "file_size": 10485760,
+      "file_nums": 3,
+      "chat_nums": 30,
+      "file_pages": 100
+    },
+    "unlimited": {
       "file_size": 2147483648,
       "file_nums": -1,
       "chat_nums": -1,
@@ -58,12 +64,6 @@ var mikephie = JSON.parse($response.body);
       "file_size": 2147483648,
       "file_nums": 100,
       "chat_nums": 1000,
-      "file_pages": 1000
-    },
-    "unlimited": {
-      "file_size": 2147483648,
-      "file_nums": -1,
-      "chat_nums": -1,
       "file_pages": 1000
     }
   },
