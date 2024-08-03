@@ -49,22 +49,22 @@ var mikephie = JSON.parse($response.body);
       "file_pages": 0
     },
     "free": {
-      "file_size": 10485760,
+      "file_size": 2147483648,
       "file_nums": 3,
       "chat_nums": 30,
       "file_pages": 100
     },
     "unlimited": {
       "file_size": 2147483648,
-      "file_nums": 9999,
-      "chat_nums": 9999,
-      "file_pages": 9999
-    },
-    "pro": {
-      "file_size": 2147483648,
       "file_nums": -1,
       "chat_nums": -1,
       "file_pages": 1000
+    },
+    "pro": {
+      "file_size": 2147483648,
+      "file_nums": 9999,
+      "chat_nums": 9999,
+      "file_pages": 2888
     }
   },
   "code": 200
