@@ -21,12 +21,12 @@ hostname = apis.updf.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "msg": "操作已成功。",
+  "msg": "Operation successful.",
   "data": {
     "base_info": {
-      "used_size": 138036,
+      "used_size": 2600677,
       "is_open": 1,
-      "total_size": 10737418240,
+      "total_size": 12884901888,
       "auto_sync": 1
     }
   },
