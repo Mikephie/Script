@@ -37,7 +37,7 @@
         "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/KKTV.png",
         "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/KKTV.png"
       ],
-      "script": "https://raw.githubusercontent.com/General74110/Config/master/Script/Task/Kuwomusic.js"
+      "script": "https://raw.githubusercontent.com/Mikephie/Task/main/kuwotimes.js"
     },
     {
       "id": "QQreader",
@@ -98,7 +98,7 @@
           "desc": "多个 SID 用 @ 分隔"
         }
       ],
-      "script": "https://raw.githubusercontent.com/General74110/Config/master/Script/Task/kuwo.js",
+      "script": "https://raw.githubusercontent.com/Mikephie/Task/main/kuwocoin.js",
       "author": "@General℡",
       "repo": "https://github.com/General74110",
       "icons": [
