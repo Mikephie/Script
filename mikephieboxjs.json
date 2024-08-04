@@ -98,7 +98,7 @@
           "desc": "多个 SID 用 @ 分隔"
         }
       ],
-      "script": "https://raw.githubusercontent.com/Mikephie/Task/main/kuwocoin.js",
+      "script": "https://raw.githubusercontent.com/Mikephie/Task/main/kuwotimes.js",
       "author": "@General℡",
       "repo": "https://github.com/General74110",
       "icons": [
