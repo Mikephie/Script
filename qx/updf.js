@@ -1,16 +1,23 @@
-/*
-^https:\/\/api\.updf\.com\/v1\/user\/planList
-^https:\/\/apis\.updf\.com\/v1\/ai\/chat\/usage
+/*        
+        ➪：脚本名称: UPDF （永久会员）
 
-(api|apis).updf.com
-*/
+        ★：解锁永久🆅🅸🅿
+
+        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
+
+[rewrite_local]
+^https:\/\/api\.updf\.com\/v1\/user\/planList url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/updf1.js
+
+[mitm]
+
+hostname = api.updf.com
 
 
+var mikephie = JSON.parse($response.body);
 
-
-let body = JSON.parse($response.body);
-
-function modifyObject(obj) {
+mikephie = {
     for (let key in obj) {
         if (obj.hasOwnProperty(key)) {
             if (typeof obj[key] === 'object' && obj[key] !== null) {
@@ -28,5 +35,5 @@ function modifyObject(obj) {
 
 
 modifyObject(body);
-
-$done({ body: JSON.stringify(body) });
+ 
+$done({body : JSON.stringify(mikephie)});
