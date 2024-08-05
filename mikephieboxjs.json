@@ -7,7 +7,7 @@
   "apps": [
     {
       "id": "kuwotimes",
-      "name": "酷我音乐时长",
+      "name": "酷我时长",
       "keys": [
         "kw_loginUid",
         "kw_loginSid"
@@ -74,7 +74,7 @@
     },
     {
       "id": "kuwocoins",
-      "name": "酷我音乐金币",
+      "name": "酷我金币",
       "keys": [
         "kw_loginUid",
         "kw_loginSid"
