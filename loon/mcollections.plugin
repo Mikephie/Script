@@ -67,7 +67,7 @@ http-response ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ s
 #************************************#
 # 扫描全能王 解锁系列
 # hostname = *.camscanner.com, *.intsig.net
-http-response ^https?:\/\/.*\.(intsig\.net|camscanner\.com) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js, requires-body=true, timeout=60, tag=全能扫描王
+#http-response ^https?:\/\/.*\.(intsig\.net|camscanner\.com) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js, requires-body=true, timeout=60, tag=全能扫描王
 
 #************************************#
 # 彩云天气 解锁系列

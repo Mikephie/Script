@@ -63,7 +63,7 @@ grammarlypremiumcrack = type=http-response, pattern=^https?:\/\/subscription\.gr
 #************************************#
 # 扫描全能王
 # hostname = *.camscanner.com, *.intsig.net
-扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
+#扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
 
 #************************************#
 # 彩云天气
