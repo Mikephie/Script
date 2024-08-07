@@ -124,7 +124,7 @@ var mikephie = JSON.parse($response.body);
           "item": "CamScanner_Patting"
         },
         {
-          "balance": 1,
+          "balance": 888,
           "item": "CamScanner_Profile_Card_Format"
         },
         {
