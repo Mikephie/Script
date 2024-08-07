@@ -11,7 +11,7 @@
 使用声明：此脚本仅供学习与交流，请在下载使用24小时内删除！请勿在中国大陆转载与贩卖！
 *******************************
 
-^https:\/\/v3\.camscanner\.com\/app\/getPrivilegeItem url script-response-body
+^https:\/\/v3\.camscanner\.com\/app\/getPrivilegeItem url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/csitems.js
 
 [mitm]
 
@@ -24,53 +24,133 @@ hostname = v3.camscanner.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "ret": "0",
   "data": {
-    "psnl_vip_property": {
-      "group1_paid": 1,
-      "ms_first_pay": 0,
-      "vip_type": "svip",
-      "auto_renewal": true,
-      "in_trial": 0,
-      "pc_vip": 0,
-      "renew_type": "month",
-      "renew_method": "appstore",
-      "ys_first_pay": 1,
-      "initial_tm": "1721815096",
-      "vip_level_info": {
-        "score": 160,
-        "level": 1,
-        "create_time": 1722968688,
-        "next_score": 600,
-        "start_score": 1
-      },
-      "google_play": "1",
-      "grade": 1,
-      "nxt_renew_tm": "1725647083",
-      "product_id": "com.intsig.camscanner.premiums.onemonth.autorenewable.free",
-      "svip": 1,
-      "expiry": 1725695160,
-      "pending": 0,
-      "level_info": {
-        "level": 1,
-        "days": 11,
-        "end_days": 30
-      },
-      "inherited_flag": 1,
-      "last_payment_method": "appstore",
-      "group2_paid": 0
-    },
-    "fax_balance": "88",
-    "used_points": "0",
-    "points": "8888",
-    "login_ocr_balance": 8888,
-    "pdfword_balance": 100004,
-    "bookmode_balance": 100000,
-    "immt_expy_points": "0",
-    "ocr_balance": 8888,
-    "no_login_ocr_balance": 8888,
-    "server_time": "1722979511",
-    "CamScanner_RoadMap": 500
+    "ret": 0,
+    "err": "",
+    "data": {
+      "transfer": [
+        {
+          "balance": -1,
+          "item": "CamScanner_ExcelRecoginze"
+        },
+        {
+          "balance": 497,
+          "item": "CamScanner_RoadMap"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_Pdf2ppt"
+        },
+        {
+          "balance": 950,
+          "item": "CamScanner_CloudOCR"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_RoadMap_Excel"
+        }
+      ],
+      "document": [
+        {
+          "balance": -1,
+          "item": "CamScanner_Pic2pdf"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_PdfCompress"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_PdfEncrypt"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_FileMerge"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_PdfExtract"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_PdfWatermark"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_PdfSign"
+        },
+        {
+          "balance": 1000,
+          "item": "CamScanner_Intellect_Erase"
+        },
+        {
+          "balance": 800,
+          "item": "CamScanner_AIImageFilter"
+        }
+      ],
+      "other": [
+        {
+          "balance": 500,
+          "item": "CamScanner_Translation"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_DirNum"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_IP_REMOVEAD"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_PingTu"
+        },
+        {
+          "balance": 800,
+          "item": "CamScanner_Points"
+        },
+        {
+          "balance": 800,
+          "item": "CamScanner_Fax_Balance"
+        }
+      ],
+      "scaner": [
+        {
+          "balance": 998,
+          "item": "CamScanner_ImageRestore"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_Patting"
+        },
+        {
+          "balance": 1,
+          "item": "CamScanner_Profile_Card_Format"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_BookMode"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_CertMode"
+        },
+        {
+          "balance": -1,
+          "item": "CamScanner_HDScan"
+        },
+        {
+          "balance": 950,
+          "item": "CamScanner_CloudOCR"
+        }
+      ],
+      "pure": [
+        {
+          "balance": -1,
+          "item": "CamScanner_IP_REMOVEAD"
+        }
+      ]
+    }
   }
 }
 
