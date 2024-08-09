@@ -57,7 +57,7 @@ var uaProductMapping = {
   'FastPlayer': {product_id: 'VideoPlayer_ProVersion'},  //万能播放器
   'com.BertonYc.ScannerOCR': {product_id: 'Scanner_Subscibe_Permanent'},  //万能扫描王
   'TextExtractionOCR': {product_id: 'Scanner_Subscibe_Permanent'},  //万能扫描王
-  #'%E4%B8%87%E8%83%BD%E6%89%AB%E6%8F%8F%E7%8E%8B': {product_id: '1447870163oneMonthNew'},  //Text Extract
+  #'%E4%B8%87%E8%83%BD%E6%89%AB%E6%8F%8F%E7%8E%8B': {product_id: '1447870163oneMonthNew'},  //文字提取
 
 };
 var receipt = {
