@@ -34,7 +34,7 @@ var mikephie = JSON.parse($response.body);
           "item": "CamScanner_ExcelRecoginze"
         },
         {
-          "balance": 497,
+          "balance": -1,
           "item": "CamScanner_RoadMap"
         },
         {
@@ -42,7 +42,7 @@ var mikephie = JSON.parse($response.body);
           "item": "CamScanner_Pdf2ppt"
         },
         {
-          "balance": 950,
+          "balance": -1,
           "item": "CamScanner_CloudOCR"
         },
         {
@@ -80,17 +80,17 @@ var mikephie = JSON.parse($response.body);
           "item": "CamScanner_PdfSign"
         },
         {
-          "balance": 1000,
+          "balance": -1,
           "item": "CamScanner_Intellect_Erase"
         },
         {
-          "balance": 800,
+          "balance": -1,
           "item": "CamScanner_AIImageFilter"
         }
       ],
       "other": [
         {
-          "balance": 500,
+          "balance": -1,
           "item": "CamScanner_Translation"
         },
         {
@@ -106,17 +106,17 @@ var mikephie = JSON.parse($response.body);
           "item": "CamScanner_PingTu"
         },
         {
-          "balance": 800,
+          "balance": 999,
           "item": "CamScanner_Points"
         },
         {
-          "balance": 800,
+          "balance": 999,
           "item": "CamScanner_Fax_Balance"
         }
       ],
       "scaner": [
         {
-          "balance": 998,
+          "balance": 999,
           "item": "CamScanner_ImageRestore"
         },
         {
@@ -124,7 +124,7 @@ var mikephie = JSON.parse($response.body);
           "item": "CamScanner_Patting"
         },
         {
-          "balance": 888,
+          "balance": 999,
           "item": "CamScanner_Profile_Card_Format"
         },
         {
@@ -140,7 +140,7 @@ var mikephie = JSON.parse($response.body);
           "item": "CamScanner_HDScan"
         },
         {
-          "balance": 950,
+          "balance": 999,
           "item": "CamScanner_CloudOCR"
         }
       ],
