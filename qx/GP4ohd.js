@@ -17,19 +17,9 @@ hostname = nichousha.sjrjyffs.top
 *******************************/
 
 
-var mikephie = JSON.parse($response.body);
-
-    mikephie = {
-  "msg": "ok",
-  "data": {
-    "vipStatus": "1",
-    "id": "1818946794591789058",
-    "vipLabel": "1",
-    "nickname": "尾号tAI_Mikephie",
-    "imgNum": 888888,
-    "avatar": "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
-  },
-  "code": 200
+if ($request.url.includes('api/img/aiSketch')) {
+    let body = $request.body.replace(/("taskParameter"\s*:\s*)"\d+"/, '$1"0"');
+    $done({ body: body });
+} else {
+    $done({});
 }
-  
-$done({body : JSON.stringify(mikephie)});
