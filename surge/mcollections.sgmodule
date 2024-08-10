@@ -224,7 +224,7 @@ embycrack = type=http-request, pattern=^https:\/\/mb3admin\.com\/admin\/service(
 #************************************#
 # GP4o（永久会员）
 # hostname = nichousha.sjrjyffs.top
-GTP4ohd = type=http-request, pattern=https://nichousha.sjrjyffs.top/api/img/aiSketch, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/GTP4ohd.js, requires-body=true, max-size=-1, timeout=60
+GTP4ohd = type=http-request, pattern=https://nichousha.sjrjyffs.top/api/img/aiSketch, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4ohd.js, requires-body=true, max-size=-1, timeout=60
 GP4o = type=http-response, pattern=https://nichousha.sjrjyffs.top/api/app/user/getCurrentInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4o.js, requires-body=true, max-size=-1, timeout=60
 
  
