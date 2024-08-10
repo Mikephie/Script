@@ -57,7 +57,7 @@ http-response ^https?:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt scri
 #************************************#
 # AdBlock Pro 解锁系列
 # hostname = api.adblockpro.app
-http-response ^https?:\/\/api\.adblockpro\.app\/verify script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js, requires-body=true, timeout=60, tag=adblockpro
+http-response ^https?:\/\/api\.adblockpro\.app\/verify script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, requires-body=true, timeout=60, tag=adblockpro
 
 #************************************#
 # Grammarly 解锁系列

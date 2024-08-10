@@ -53,7 +53,7 @@ DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/user
 #************************************#
 # Adblock Pro
 # hostname = api.adblockpro.app
-Adblock Pro = type=https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js
+Adblock Pro = type=https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js
 
 #************************************#
 # Grammarly
