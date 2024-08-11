@@ -18,39 +18,58 @@ hostname = api.revenuecat.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "status" : 1,
-  "user" : {
-    "userid" : "469132",
-    "avatar" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
-    "is_vip" : true,
-    "nickname" : "Mikephie🎖",
-    "invited_count" : 0,
-    "vip_name" : "永久VIP",
-    "vip_status" : "2088-08-08",
-    "invitation_code" : "469132",
-    "sex" : 0
-  },
-  "splash_flow" : [
-    "bu",
-    "kk"
-  ],
-  "is_trial" : true,
-  "apple_id" : "1594114573",
-  "message" : "正常启动",
-  "ad_show" : true,
-  "need_upgrade" : false,
-  "show_extracting_video" : true,
-  "banner_ad_show" : false,
-  "is_review" : false,
-  "flow" : [
-    "bu",
-    "gad"
-  ],
-  "wechat_number" : "q952180288",
-  "status" : "1",
-  "current_build" : "11"
-  
+  "request_date_ms": 1723342275278,
+  "request_date": "2024-08-11T02:11:15Z",
+  "subscriber": {
+    "non_subscriptions": {
+      "spark_openai_tokens_1xt": [
+        {
+          "id": "80b88cbbc5",
+          "is_sandbox": false,
+          "purchase_date": "2024-05-08T08:08:10Z",
+          "original_purchase_date": "2024-05-08T08:08:10Z",
+          "store": "app_store",
+          "store_transaction_id": "150001777189185"
+        }
+      ]
+    },
+    "first_seen": "2023-10-19T10:37:33Z",
+    "original_application_version": "3.9.3.303",
+    "other_purchases": {
+      "spark_openai_tokens_1xt": {
+        "purchase_date": "2024-05-08T08:08:10Z"
+      }
+    },
+    "management_url": null,
+    "subscriptions": {
+      "spark_5999_1y_1w0": {
+        "store": "app_store",
+        "purchase_date": "2023-08-08T08:08:08Z",
+        "ownership_type": "PURCHASED",
+        "original_purchase_date": "2023-08-08T08:08:08Z",
+        "expires_date": "2088-08-08T08:08:08Z"
+      }
+    },
+    "entitlements": {
+      "premium": {
+        "store": "app_store",
+        "purchase_date": "2023-08-08T08:08:08Z",
+        "ownership_type": "PURCHASED",
+        "original_purchase_date": "2023-08-08T08:08:08Z",
+        "product_identifier": "spark_5999_1y_1w0",
+        "expires_date": "2088-08-08T08:08:08Z"
+      },
+      "free-sws": {
+        "grace_period_expires_date": null,
+        "purchase_date": "2023-10-19T10:37:33Z",
+        "product_identifier": "rc_promo_free-sws_lifetime",
+        "expires_date": "2223-09-01T10:37:33Z"
+      }
+    },
+    "original_purchase_date": "2024-04-22T13:51:50Z",
+    "original_app_user_id": "8PNqxsNs34SUe82",
+    "last_seen": "2024-08-10T01:38:58Z"
+  }
 }
-
 
 $done({body : JSON.stringify(mikephie)});
