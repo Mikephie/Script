@@ -3,12 +3,9 @@ AppRaven
 
 
 
-[rewrite_local]
+^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_account\? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi2-3.js
 
-
-^https:\/\/leancloud\.emotionwp\.com\/1\.1\/batch\/save url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi2-3.js
-
-[mitm] 
+[mitm]
 
 hostname = leancloud.emotionwp.com
 
@@ -17,22 +14,48 @@ hostname = leancloud.emotionwp.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "requests" : [
+  "results": [
     {
-      "path" : "/1.1/classes/statistics_buyvip",
-      "body" : {
-        "userId" : "",
-        "receipt" : "{\n    environment = Production;\n    \"latest_receipt\" = \"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\";\n    \"latest_receipt_info\" =     (\n                {\n            \"expires_date\" = \"2024-08-11 11:13:40 Etc/GMT\";\n            \"expires_date_ms\" = 1723374820000;\n            \"expires_date_pst\" = \"2024-08-11 04:13:40 America/Los_Angeles\";\n            \"in_app_ownership_type\" = PURCHASED;\n            \"is_in_intro_offer_period\" = false;\n            \"is_trial_period\" = false;\n            \"original_purchase_date\" = \"2024-07-11 11:13:42 Etc/GMT\";\n            \"original_purchase_date_ms\" = 1720696422000;\n            \"original_purchase_date_pst\" = \"2024-07-11 04:13:42 America/Los_Angeles\";\n            \"original_transaction_id\" = 150001863101469;\n            \"product_id\" = \"com.chowjoe.wp2free.month\";\n            \"purchase_date\" = \"2024-07-11 11:13:40 Etc/GMT\";\n            \"purchase_date_ms\" = 1720696420000;\n            \"purchase_date_pst\" = \"2024-07-11 04:13:40 America/Los_Angeles\";\n            quantity = 1;\n            \"subscription_group_identifier\" = 20751310;\n            \"transaction_id\" = 150001863101469;\n            \"web_order_line_item_id\" = 150000856635846;\n        }\n    );\n    \"pending_renewal_info\" =     (\n                {\n            \"auto_renew_product_id\" = \"com.chowjoe.wp2free.month\";\n            \"auto_renew_status\" = 0;\n            \"original_transaction_id\" = 150001863101469;\n            \"product_id\" = \"com.chowjoe.wp2free.month\";\n        }\n    );\n    receipt =     {\n        \"adam_id\" = 953753168;\n        \"app_item_id\" = 953753168;\n        \"application_version\" = 4611;\n        \"bundle_id\" = \"com.chowjoe.wp2free\";\n        \"download_id\" = 503633433472109160;\n        \"in_app\" =         (\n                        {\n                \"expires_date\" = \"2024-08-11 11:13:40 Etc/GMT\";\n                \"expires_date_ms\" = 1723374820000;\n                \"expires_date_pst\" = \"2024-08-11 04:13:40 America/Los_Angeles\";\n                \"in_app_ownership_type\" = PURCHASED;\n                \"is_in_intro_offer_period\" = false;\n                \"is_trial_period\" = false;\n                \"original_purchase_date\" = \"2024-07-11 11:13:42 Etc/GMT\";\n                \"original_purchase_date_ms\" = 1720696422000;\n                \"original_purchase_date_pst\" = \"2024-07-11 04:13:42 America/Los_Angeles\";\n                \"original_transaction_id\" = 150001863101469;\n                \"product_id\" = \"com.chowjoe.wp2free.month\";\n                \"purchase_date\" = \"2024-07-11 11:13:40 Etc/GMT\";\n                \"purchase_date_ms\" = 1720696420000;\n                \"purchase_date_pst\" = \"2024-07-11 04:13:40 America/Los_Angeles\";\n                quantity = 1;\n                \"transaction_id\" = 150001863101469;\n                \"web_order_line_item_id\" = 150000856635846;\n            }\n        );\n        \"original_application_version\" = 4600;\n        \"original_purchase_date\" = \"2024-07-11 14:01:16 Etc/GMT\";\n        \"original_purchase_date_ms\" = 1720706476000;\n        \"original_purchase_date_pst\" = \"2024-07-11 07:01:16 America/Los_Angeles\";\n        \"receipt_creation_date\" = \"2024-07-30 12:37:32 Etc/GMT\";\n        \"receipt_creation_date_ms\" = 1722343052000;\n        \"receipt_creation_date_pst\" = \"2024-07-30 05:37:32 America/Los_Angeles\";\n        \"receipt_type\" = Production;\n        \"request_date\" = \"2024-07-30 12:37:33 Etc/GMT\";\n        \"request_date_ms\" = 1722343053387;\n        \"request_date_pst\" = \"2024-07-30 05:37:33 America/Los_Angeles\";\n        \"version_external_identifier\" = 867783869;\n    };\n    status = 0;\n}",
-        "isVIP" : true,
-        "svipEndTime" : 3742767660,
-        "vipType" : "month",
-        "isSVIP" : true,
-        "svipType" : "month",
-        "vipEndTime" : 3742767660,
-        "__internalId" : "0GCpsOGHMc2wwEJWVwFaCxC"
-      },
-      "method" : "POST",
-      "new" : true
+      "nickName": "Mikephie",
+      "svipType": "year_pro",
+      "isVIP": 1,
+      "sex": "1",
+      "vipEndTime": 0,
+      "favCount": 0,
+      "createdAt": "2023-11-19T09:29:18.937Z",
+      "vipType": "none",
+      "svipEndTimeFormat": "2088-08-08",
+      "svipEndTime": 3742762088000,
+      "updatedAt": "2024-08-11T07:23:01.886Z",
+      "loginType": 3,
+      "downloadCount": 3,
+      "objectId": "6559d56eb87b3b5ada6602a7",
+      "coin": -15.999,
+      "vipEndTimeFormat": "1970-01-01",
+      "warmStartCount": 20,
+      "isSVIP": 1,
+      "coldStartCount": 0,
+      "headImageUrl": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
+      "userId": "000213.21970f036fd0454a99d29d8cebe086cd.0929"
+    },
+    {
+      "coin": 888888,
+      "updatedAt": "2023-11-19T09:35:30.531Z",
+      "vipEndTime": 0,
+      "sex": "1",
+      "isSVIP": 0,
+      "favCount": 0,
+      "warmStartCount": 0,
+      "userId": "000213.21970f036fd0454a99d29d8cebe086cd.0929",
+      "loginType": 3,
+      "nickName": "Mikephie",
+      "isVIP": 0, 
+      "headImageUrl": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
+      "downloadCount": 0,
+      "objectId": "6559d6e271280637ee6efd63",
+      "createdAt": "2023-11-19T09:35:30.531Z",
+      "svipEndTime": 0,
+      "coldStartCount": 0
     }
   ]
 }
