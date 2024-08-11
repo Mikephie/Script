@@ -58,6 +58,7 @@ var uaProductMapping = {
   'com.BertonYc.ScannerOCR': {product_id: 'Scanner_Subscibe_Permanent'},  //万能扫描王
   'darkWeb': {product_id: 'dforce_unlock_all_functions'},  //DForce-Safari扩展
   'VideoHelper': {product_id: 'vip_service'},  //媒关系
+  'VideoHelper': {product_id: 'vip_service'},  //媒关系
   
   
   
