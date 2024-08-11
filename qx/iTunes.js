@@ -41,7 +41,7 @@ var uaProductMapping = {
   'ProKnockOut': {product_id: 'com.knockout.SVIP.50off'},  //ProKnockOut
   'Prettya': {product_id: 'com.floatcamellia.prettyup.onetimepurchase'},  //PrettyUp视频P图
   'Dial': {product_id: '2104'},  //T9拨号
-  'UCamera': {product_id: '644377109922'},  //最美证件照
+  'UCamera': {product_id: '644377109928'},  //最美证件照
   'com.pocket.photo': {product_id: 'com.pocket.photo.yearly'},  //一寸证件照
   'HashPhotos': {product_id: 'com.kobaltlab.HashPhotos.iap.allinone.free'},  //HashPhotos
   'AllMyBatteries': {product_id: 'https://t.me/Guding88'},
