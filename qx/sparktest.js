@@ -8,10 +8,10 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/kkyun.js
-
-[mitm] 
-hostname = kkyun.com
+^https:\/\/api\.revenuecat\.com\/v1\/subscribers\/8PNqxsNs34SUe82 url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/sparktest.js
+ 
+[mitm]
+hostname = api.revenuecat.com
 
 *******************************/
 
