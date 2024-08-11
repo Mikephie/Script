@@ -1,7 +1,7 @@
 #!name=Mikephie自用合集
 #!desc=🛠️ APP解锁合集
 #!author = Mike
-#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/he.png
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/heji.gif
 
 [General]
 force-http-engine-hosts = gql.reddit.com, gql-fed.reddit.com
