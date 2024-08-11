@@ -56,7 +56,7 @@ var uaProductMapping = {
   'Boom': {product_id: 'com.globaldelight.iBoom.LifetimeDiscountPack'},  //Boom
   'FastPlayer': {product_id: 'VideoPlayer_ProVersion'},  //万能播放器
   'com.BertonYc.ScannerOCR': {product_id: 'Scanner_Subscibe_Permanent'},  //万能扫描王
-  'FastPlayer': {product_id: 'VideoPlayer_ProVersion'},  //万能播放器
+  'darkWeb': {product_id: 'VideoPlayer_ProVersion'},  //万能播放器
   'com.BertonYc.ScannerOCR': {product_id: 'Scanner_Subscibe_Permanent'},  //万能扫描王
   
   
