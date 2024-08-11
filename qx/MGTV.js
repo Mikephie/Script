@@ -8,7 +8,7 @@ https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
 [rewrite_local]
 ^http[s]?:\/\/mobile\.api\.mgtv\.com\/v[0-9]\/(playlist|video\/album|video\/relative|video\/list).*$ url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgtv1.js
 https://mobile-stream.api.mgtv.com/v1/video/source? url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/MGTV.js
-https://nuc.api.mgtv.com/GetUserInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgtv.js
+https://nuc.api.mgtv.com/GetUserInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mgtv2.js
 https://mobile-stream.api.mgtv.com/v1/video/source url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/MGTV.js
 #港区
 ^https://mobile.api.mgtv.com/v8/video/getSource url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/MGTV.js
