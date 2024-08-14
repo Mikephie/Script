@@ -59,7 +59,7 @@ var uaProductMapping = {
   'darkWeb': {product_id: 'dforce_unlock_all_functions'},  //DForce-Safari扩展
   'VideoHelper': {product_id: 'vip_service'},  //媒关系
   'qxwp%20copy': {product_id: 'com.chowjoe.wp2free.year.pro'},  //WP壁纸
-  'qxwp%20copy': {product_id: 'com.jiancent.calligraphymaster.lifetime'},  //WP壁纸
+  'PhimCiaj': {product_id: 'com.jiancent.calligraphymaster.lifetime'},  //WP壁纸
   
   
   
