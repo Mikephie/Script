@@ -11,10 +11,10 @@
  
 
 [rewrite_local]
-^https:\/\/api\.weilaizhushou\.com\/base\/user\/vip\/getUserVip url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js
+^https:\/\/api\.alohaprofile\.com\/v1\/profile_info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js
 
 [mitm]
-hostname = api.weilaizhushou.com
+hostname = api.alohaprofile.com
 
 *************************************/
 
