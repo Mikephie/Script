@@ -19,22 +19,11 @@ hostname = api.alohaprofile.com
 *************************************/
 
 var body = $response.body;
-
-function baby(obj) {
-    return {
-    "end_of_premium": 3742762088000,
-    "is_premium": true,
-    "_end_of_premium": "2088-08-08 08:08:08",
-};
-}
-
 var obj = JSON.parse(body);
 
-if (url.includes('/profile_info')) {
-    if (obj.data.hasOwnProperty('profile_info')) {
-        obj.data.profile_info = [baby(obj)];
-    }
-}
+obj.profile.is_premium = true,
+obj.profile.end_of_premium = 3742762088000,
+obj.profile._end_of_premium = "2088-08-08 08:08:08"
 
 body = JSON.stringify(obj);
-$done({ body, url });
+$done({body});
