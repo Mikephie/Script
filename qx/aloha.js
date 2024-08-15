@@ -21,7 +21,6 @@ hostname = api.alohaprofile.com
 var mikephie = JSON.parse($response.body);
 
 mikephie.data = {
-  ...mikephie.data,
     "end_of_premium": 3742762088000,
     "is_premium": true,
     "_end_of_premium": "2088-08-08 08:08:08",
