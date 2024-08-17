@@ -11,7 +11,7 @@
 ^https?:\/\/photoby\.hasmash\.com\/auth\/member url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds2.js
 
 [MITM]
-hostname = photoby.hasmash.com
+hostname = h5.hunbei.com
 
 *******************************/
 
