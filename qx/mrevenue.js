@@ -65,6 +65,7 @@ if (typeof $response == "undefined") {
     'TQBrowser': { name: 'pro_lt', id: 'com.tk.client.lifetime' },  // Teak浏览器
     'Python3IDE': { name: 'pro', id: 'python3ide_six_month' },  // Python3IDE
     'CallAnnie': { name: 'ai.animato.callannie.entitlement.pro0', id: 'ai.animato.callannie.proyearly1' },  //CallAnnie
+    'CallAnnie': { name: 'ai.animato.callannie.entitlement.pro0', id: 'ai.animato.callannie.proyearly1' },  //CallAnnie
   };
   const data = {
     "expires_date": "2088-08-08T08:08:08Z",
