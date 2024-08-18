@@ -66,6 +66,7 @@ if (typeof $response == "undefined") {
     'Python3IDE': { name: 'pro', id: 'python3ide_six_month' },  // Python3IDE
     'CallAnnie': { name: 'ai.animato.callannie.entitlement.pro0', id: 'ai.animato.callannie.proyearly1' },  //CallAnnie
     'WiseMate':{ name: 'vip_no_free_entitlement', id: 'wiseart.ai.ios.week.nofree'},  //WiseArt AI
+    'mizframa': { name: 'premium', id: 'mf_20_1m_0_0' },  //Mizframe
   };
   const data = {
     "expires_date": "2088-08-08T08:08:08Z",
