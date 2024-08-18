@@ -240,7 +240,7 @@ felotk = type=http-request, pattern=^https?:\/\/translator.felo.me\/api\/transla
 
 #************************************#
 # 婚贝请柬 （永久会员）
-# hostname = h5.hunbei.com
+# hostname = api.alohaprofile.com
 hbqj = type=http-response, pattern=^https:\/\/h5\.hunbei\.com\/m\/member\/getUserInfo\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbqj.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
