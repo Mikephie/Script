@@ -33,8 +33,8 @@ var mikephie = {
       {
         "quantity": "1",
         "purchase_date_ms": "1723964066000",
-        "expires_date": "2024-08-25 06:54:26 Etc\/GMT",
-        "expires_date_pst": "2024-08-24 23:54:26 America\/Los_Angeles",
+        "expires_date": "2088-08-08 08:08:08 Etc\/GMT",
+        "expires_date_pst": "2088-08-08 08:08:08 America\/Los_Angeles",
         "is_in_intro_offer_period": "false",
         "transaction_id": "150001917107638",
         "is_trial_period": "false",
@@ -45,7 +45,7 @@ var mikephie = {
         "in_app_ownership_type": "PURCHASED",
         "original_purchase_date_ms": "1723964067000",
         "web_order_line_item_id": "150000878800928",
-        "expires_date_ms": "1724568866000",
+        "expires_date_ms": "3742762088000",
         "purchase_date_pst": "2024-08-17 23:54:26 America\/Los_Angeles",
         "original_purchase_date": "2024-08-18 06:54:27 Etc\/GMT"
       }
@@ -76,8 +76,8 @@ var mikephie = {
     {
       "quantity": "1",
       "purchase_date_ms": "1723964066000",
-      "expires_date": "2024-08-25 06:54:26 Etc\/GMT",
-      "expires_date_pst": "2024-08-24 23:54:26 America\/Los_Angeles",
+      "expires_date": "2088-08-08 08:08:08 Etc\/GMT",
+      "expires_date_pst": "2088-08-08 08:08:08 America\/Los_Angeles",
       "is_in_intro_offer_period": "false",
       "transaction_id": "150001917107638",
       "is_trial_period": "false",
@@ -89,7 +89,7 @@ var mikephie = {
       "subscription_group_identifier": "21448931",
       "original_purchase_date_ms": "1723964067000",
       "web_order_line_item_id": "150000878800928",
-      "expires_date_ms": "1724568866000",
+      "expires_date_ms": "3742762088000",
       "purchase_date_pst": "2024-08-17 23:54:26 America\/Los_Angeles",
       "original_purchase_date": "2024-08-18 06:54:27 Etc\/GMT"
     }
