@@ -74,16 +74,16 @@ var receipt = {
   "transaction_id": "888888888888888",
   "is_trial_period": "false",
   "original_transaction_id": "888888888888888",
-  "purchase_date": "2024-08-08 08:08:08 Etc\/GMT",
+  "purchase_date": "2024-04-24 04:24:04 Etc\/GMT",
   "product_id": "https://t.me/mikephie",
-  "original_purchase_date_pst": "2024-08-08 08:08:08 America\/Los_Angeles",
+  "original_purchase_date_pst": "2024-04-24 04:24:04 America\/Los_Angeles",
   "in_app_ownership_type": "PURCHASED",
   "subscription_group_identifier": "20431945",
   "original_purchase_date_ms": "1713903844000",
   "web_order_line_item_id": "888888888888888",
   "expires_date_ms": "3742762088000",
-  "purchase_date_pst": "2024-08-08 08:08:08 America\/Los_Angeles",
-  "original_purchase_date": "2024-08-08 08:08:08 Etc\/GMT"
+  "purchase_date_pst": "2024-04-24 04:24:04 America\/Los_Angeles",
+  "original_purchase_date": "2024-04-24 04:24:04 Etc\/GMT"
 }
 var renewal = {
   "expiration_intent": "1",
