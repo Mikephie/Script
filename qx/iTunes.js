@@ -61,7 +61,6 @@ var uaProductMapping = {
   'qxwp%20copy': {product_id: 'com.chowjoe.wp2free.year.pro'},  //WP壁纸
   'PhimCiaj': {product_id: 'com.jiancent.calligraphymaster.lifetime'},  //WP壁纸
   'WiseMate': {product_id: 'wiseart.ai.ios.week.nofree'},  //WiseMate AI
-  'mizframa': {product_id: 'mf_20_1m_0_0'},  //Mizframa
   
   
   
