@@ -1,11 +1,11 @@
 /*        
              ➪：脚本名称:   aloha 
             
-        ꫛꫀꪝ  ：2024年8月15日 16:37
+     ꫛꫀꪝ  ：2024年8月15日 16:37
 
-             ★：解锁永久🆅🅸🅿
+            ★：解锁永久🆅🅸🅿
 
-            𖣘：🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+           𖣘：🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
  
@@ -18,12 +18,14 @@ hostname = api.alohaprofile.com
 
 *************************************/
 
-var body = $response.body;
-var obj = JSON.parse(body);
+var mikephie = JSON.parse($response.body);
 
-obj.profile.is_premium = true,
-obj.profile.end_of_premium = 3742762088000,
-obj.profile._end_of_premium = "2088-08-08 08:08:08"
+mikephie.profile = {
+  ...mikephie.profile,
+  "is_premium": true,
+  "end_of_premium": 3742762088,
+  "email": "888@gmail.com",
+  "_end_of_premium": "2088-08-08 08:08:08.000"
+};
 
-body = JSON.stringify(obj);
-$done({body});
+$done({body: JSON.stringify(mikephie)});
