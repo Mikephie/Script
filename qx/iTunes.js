@@ -67,7 +67,7 @@ var uaProductMapping = {
 };
 var receipt = {
   "quantity": "1",
-  "purchase_date_ms": "1713903844000",
+  "purchase_date_ms": "1723075688000",
   "expires_date": "2088-08-08 08:08:08 Etc\/GMT",
   "expires_date_pst": "2088-08-08 08:08:08 America\/Los_Angeles",
   "is_in_intro_offer_period": "false",
@@ -79,7 +79,7 @@ var receipt = {
   "original_purchase_date_pst": "2024-08-08 08:08:08 America\/Los_Angeles",
   "in_app_ownership_type": "PURCHASED",
   "subscription_group_identifier": "20431945",
-  "original_purchase_date_ms": "1713903844000",
+  "original_purchase_date_ms": "1723075688000",
   "web_order_line_item_id": "888888888888888",
   "expires_date_ms": "3742762088000",
   "purchase_date_pst": "2024-08-08 08:08:08 America\/Los_Angeles",
