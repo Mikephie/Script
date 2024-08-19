@@ -19,3 +19,8 @@ headers["x-session-token"]= "W8/2V0+wmiRFVZeZLmMT5ryPzVO/eona6S2tV2i2Dz29mrrHUQw
 $done({headers})
 
 This is to change session token
+
+
+This is the url you need
+
+^https?:\/\/translator\.felo\.me\/api\/(translation\/thirdToken\?token_channel|user\/plan)
