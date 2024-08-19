@@ -9,7 +9,7 @@ headers['User-Id'] = '6608126';
 headers['Product-Id'] = '25644';
 headers['Sub-Pid'] = '9200300000';
 headers['Device-Name'] = 'iPhone 15 Pro Max';
-headers['User-Agent'] = 'iPhone 15 Pro Max';
+headers['User-Agent'] = 'UPDF';
 headers['Authorization'] = 'Basic dXBkZl9pb3NfdjE6aTQwRGNsZiRzMF9kbWxYOXo0RiZkYzk5eEdtNWc0eHE=';
 headers['Device-Id'] = 'A3DED37B-5EA3-4C3F-A807-8DEB6B2C2011';
 
