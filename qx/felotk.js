@@ -19,7 +19,9 @@ hostname = accounts.felo.me,translator.felo.me
 let headers = $request.headers;
 headers.Cookie = "_vide9";
 headers.Authorization = "_vide9";
-headers.deviceid = "_vide9";
+headers.deviceid = "E31E20EC-2CA0-4296-A782-72618A81E3
+A2
+";
 $done({
   "headers": headers
 });
