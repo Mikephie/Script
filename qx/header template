@@ -7,3 +7,8 @@ headers['User-Agent'] = 'a';
 headers['MConfig-Info'] = 'u';
 
 $done({ headers });
+
+
+
+
+headers['Cookie'] = 'session_id=abc123xyz; Expires=Mon, 19 Aug 2024 23:59:59 GMT;';
