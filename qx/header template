@@ -5,7 +5,9 @@ let headers = $request.headers;
 headers['Cookie'] = 'session_id=abc123xyz;';
 headers['X-Token'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVaWQiOjY2MDgxMjYsIm4iOiJNWSIsInAiOiI1NTUzNGI1ZmRhMzlhM2VlNWU2YjRiMGQzMjU1YmZlZjk1NjAxODkwYWZkODA3MDkiLCJjIjpudWxsLCJCdWZmZXJUaW1lIjo4NjQwMCwiZXhwIjoxNzI1MTM5NDM1LCJpc3MiOiJxbVBsdXMiLCJuYmYiOjE3MjI1NDY0MzV9.lqUnRvl6q384WB7n-zJy44xl-ch4o2iS-BEyatrGyL0';
 headers['Product-Id'] = '25644';
-headers['Authorization'] = 'u';
+headers['Product-Id'] = '25644';
+headers['Product-Id'] = '25644';
+headers['Authorization'] = 'Basic dXBkZl9pb3NfdjE6aTQwRGNsZiRzMF9kbWxYOXo0RiZkYzk5eEdtNWc0eHE=';
 headers['Device-Id'] = 'A3DED37B-5EA3-4C3F-A807-8DEB6B2C2011';
 
 $done({ headers });
