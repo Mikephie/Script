@@ -17,7 +17,11 @@ hostname = accounts.felo.me,translator.felo.me
 *******************************/
 
 let headers = $request.headers;
-headers.Cookie = "_vide9";
+headers.Cookie = "_c1sk=18n2vvp%7C1724042597250%7C3%7C
+1%7Cx. clarity.ms%2Fcollect; _ga=GA1.1.113889
+7123.1724042524; _ga_70F8QP140X=GS1.1.172404
+2523.1.1.1724042596.0.0.0; _clck=1wv7x8j%7C2
+%7Cfog%7C0%7C1692";
 headers.Authorization = "_vide9";
 headers.deviceid = "E31E20EC-2CA0-4296-A782-72618A81E3
 A2
