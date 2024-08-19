@@ -4,7 +4,7 @@ let headers = $request.headers;
 
 headers['Cookie'] = 'session_id=abc123xyz;';
 headers['X-Token'] = 'a';
-headers['Device-Id'] = 'u';
+headers['Authorization'] = 'u';
 headers['Device-Id'] = 'u';
 
 $done({ headers });
