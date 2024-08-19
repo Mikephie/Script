@@ -1,0 +1,9 @@
+Here’s the template 
+
+let headers = $request.headers;
+
+headers['Cookie'] = 'session_id=abc123xyz;';
+headers['User-Agent'] = 'a';
+headers['MConfig-Info'] = 'u';
+
+$done({ headers });
