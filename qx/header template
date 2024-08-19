@@ -12,3 +12,10 @@ $done({ headers });
 
 
 headers['Cookie'] = 'session_id=abc123xyz; Expires=Mon, 19 Aug 2024 23:59:59 GMT;';
+
+
+let headers = $request.headers
+headers["x-session-token"]= "W8/2V0+wmiRFVZeZLmMT5ryPzVO/eona6S2tV2i2Dz29mrrHUQwjUUjTwiMntr1DPSfdvZQjyla5mBkpG5KIkCplcF1qoIZaT4Z2zxodkxk6lMowrkFUiJMTRT9CZY7kawvpm90OnBUrLa5oFcvLk/YFizLNxqXysC7KxyEsplL7VG5dO52TZPB3lBFwS/WUQf6PKw2EklUajojt56rkIg==";
+$done({headers})
+
+This is to change session token
