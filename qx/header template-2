@@ -1,18 +1,24 @@
 // Assume you have existing headers
 let headers = new Headers({
-  "Content-Type": "application/json",
-  "deviceId": "original-device-id",
-  "Accept-Encoding": "gzip, deflate, br",
-  "Connection": "keep-alive",
-  "User-Agent": "iPhone",
-  "Authorization": "original-authorization-token",
-  "Accept-Language": "zh-SG, zh-CN; q=0.9, zh-Hans; q=0.8",
-  "appVersionId": "204"
+  scheme: https
+  path: /api/translation/thirdToken?token_channel=MS
+  authority: translator.felo.me
+  method: GET
+  cookie: _clsk=1e3ji69%7C1723606564421%7C1%7C1%7Cw.clarity.ms%2Fcollect; _ga_70F8QP140X=GS1.1.1723606552.4.1.1723606558.0.0.0; _ga=GA1.1.347029008.1723476322; _clck=8lm7fs%7C2%7Cfob%7C0%7C1685
+  accept: */*
+  deviceid: 902C611A-A12A-4D48-9DEF-562EF8155908
+  content-type: application/json
+  appversionid: 204
+  appversion: 3.1.2
+  user-agent: iPhone
+  accept-language: en-SG,en-GB;q=0.9,en;q=0.8
+  authorization: qq_60cabdacf608480aa95663ab8f0f1ab5__
+accept-encoding: gzip, deflate, br
 });
 
 // Modify only the headers you want to change
-headers.set("deviceId", "0C1DC5DE-D11A-4A9F-8BC2-166203065DF1");
-headers.set("Authorization", "MH_cb441e4a99794eabb6526d358f88ef_");
+headers.set("cookie", "_clsk=1e3ji69%7C1723606564421%7C1%7C1%7Cw.clarity.ms%2Fcollect; _ga_70F8QP140X=GS1.1.1723606552.4.1.1723606558.0.0.0; _ga=GA1.1.347029008.1723476322; _clck=8lm7fs%7C2%7Cfob%7C0%7C1685");
+headers.set("authorization", "qq_60cabdacf608480aa95663ab8f0f1ab5__");
 
 // Use the modified headers in your fetch request
 fetch(url, {
