@@ -11,11 +11,12 @@
 使用声明：此脚本仅供学习与交流，请在下载使用24小时内删除！请勿在中国大陆转载与贩卖！
 *******************************
 [rewrite_local]
-# > 壁纸 - 精选高清墙纸图片和背景主题Vip&Svip
-^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/camtest.js
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/camtest.js
 
-[mitm] 
-hostname = leancloud.emotionwp.com
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/camtestk.js
+
+[mitm]
+hostname = ap*.intsig.net
 *
 *
 */
