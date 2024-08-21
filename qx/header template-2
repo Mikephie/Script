@@ -1,0 +1,24 @@
+// Assume you have existing headers
+let headers = new Headers({
+  "Content-Type": "application/json",
+  "deviceId": "original-device-id",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "User-Agent": "iPhone",
+  "Authorization": "original-authorization-token",
+  "Accept-Language": "zh-SG, zh-CN; q=0.9, zh-Hans; q=0.8",
+  "appVersionId": "204"
+});
+
+// Modify only the headers you want to change
+headers.set("deviceId", "0C1DC5DE-D11A-4A9F-8BC2-166203065DF1");
+headers.set("Authorization", "MH_cb441e4a99794eabb6526d358f88ef_");
+
+// Use the modified headers in your fetch request
+fetch(url, {
+  method: "GET", // or "POST"
+  headers: headers,
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Fetch error:', error));
