@@ -23,50 +23,55 @@ hostname = leancloud.emotionwp.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "results": [
-    {
-      "nickName": "MikephieMY",
-      "isVIP": 1,
-      "svipType": "month",
-      "sex": "1",
-      "vipEndTime": 32493852612,
-      "createdAt": "2023-11-19T09:29:18.937Z",
-      "favCount": 0,
-      "vipType": "month",
-      "svipEndTimeFormat": "1970-01-01",
-      "svipEndTime": 32493852612,
-      "updatedAt": "2024-07-11T12:07:39.644Z",
-      "loginType": 3,
-      "downloadCount": 0,
-      "objectId": "6559d56eb87b3b5ada6602a7",
-      "coin": 999999,
-      "vipEndTimeFormat": "2088-08-08",
-      "warmStartCount": 7,
-      "coldStartCount": 0,
-      "isSVIP": 1,
-      "headImageUrl": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
-      "userId": "000213.21970f036fd0454a99d29d8cebe086cd.0929"
+  "ret": "0",
+  "data": {
+    "fax_balance": "0",
+    "used_points": "1",
+    "psnl_vip_property": {
+      "group1_paid": 1,
+      "ms_first_pay": 0,
+      "vip_type": "vip",
+      "in_trial": 0,
+      "auto_renewal": true,
+      "pc_vip": 0,
+      "renew_type": "month",
+      "renew_method": "appstore",
+      "ys_first_pay": 1,
+      "is_trial_guide": "1",
+      "google_play": "1",
+      "vip_level_info": {
+        "score": 160,
+        "level": 1,
+        "next_score": 600,
+        "start_score": 1,
+        "create_time": 1722968688
+      },
+      "grade": 1,
+      "level_info": {
+        "days": 10,
+        "end_days": 30,
+        "level": 1
+      },
+      "last_payment_method": "appstore",
+      "nxt_renew_tm": "1725647083",
+      "svip": 0,
+      "expiry": 1725954305,
+      "pending": 0,
+      "initial_tm": 1721665901,
+      "inherited_flag": 1,
+      "product_id": "com.intsig.camscanner.premiums.onemonth.autorenewable.free",
+      "group2_paid": 0
     },
-    {
-      "coin": 0,
-      "updatedAt": "2023-11-19T09:35:30.531Z",
-      "vipEndTime": 0,
-      "sex": "1",
-      "isSVIP": 0,
-      "favCount": 0,
-      "warmStartCount": 0,
-      "userId": "000213.21970f036fd0454a99d29d8cebe086cd.0929",
-      "loginType": 3,
-      "nickName": "壁纸用户",
-      "isVIP": 0,
-      "headImageUrl": "http:\/\/emotion.emotionwp.com\/profile_head.png",
-      "objectId": "6559d6e271280637ee6efd63",
-      "downloadCount": 0,
-      "createdAt": "2023-11-19T09:35:30.531Z",
-      "svipEndTime": 0,
-      "coldStartCount": 0
-    }
-  ]
+    "login_ocr_balance": 4,
+    "points": "1000",
+    "pdfword_balance": 100003,
+    "bookmode_balance": 100000,
+    "immt_expy_points": "0",
+    "ocr_balance": 891,
+    "no_login_ocr_balance": 2,
+    "server_time": "1724247268",
+    "CamScanner_RoadMap": 499
+  }
 }
 
 $done({body : JSON.stringify(mikephie)});
