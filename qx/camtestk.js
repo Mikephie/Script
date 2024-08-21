@@ -22,9 +22,9 @@ hostname = ap*.intsig.net
 */
  
 let headers = $request.headers;
-headers.cookie = "_clsk=1e3ji69%7C1723606564421%7C1%7C1%7Cw.clarity.ms%2Fcollect; _ga_70F8QP140X=GS1.1.1723606552.4.1.1723606558.0.0.0; _ga=GA1.1.347029008.1723476322; _clck=8lm7fs%7C2%7Cfob%7C0%7C1685";
-headers.authorization = "qq_60cabdacf608480aa95663ab8f0f1ab5__";
-headers.deviceid = "902C611A-A12A-4D48-9DEF-562EF8155908";
+headers.x-is-token = "FA0D8D871DD849EBfL9Tg9dg";
+headers.x-is-request-id = "60183A71-FA36-4B58-AC37-744D57657E21";
+headers.x-is-cs-ept-d = "YgvDZ8SY8LGPoiikDxBTdw8vs13ojhJgyORVGX4X2RkOppl012e79Q8AeopjFre1";
 $done({
   "headers": headers
 });
