@@ -23,9 +23,9 @@ hostname = accounts.felo.me,translator.felo.me
 
 
 let headers = $request.headers;
-headers.cookie = "_clsk=1e3ji69%7C1723606564421%7C1%7C1%7Cw.clarity.ms%2Fcollect; _ga_70F8QP140X=GS1.1.1723606552.4.1.1723606558.0.0.0; _ga=GA1.1.347029008.1723476322; _clck=8lm7fs%7C2%7Cfob%7C0%7C1685";
-headers.authorization = "qq_60cabdacf608480aa95663ab8f0f1ab5__";
-headers.deviceid = "902C611A-A12A-4D48-9DEF-562EF8155908";
+headers.cookie = "_ga_70F8QP140X=GS1.1.1724042084.1.1.1724043549.0.0.0;_ga=GA1.1.105923526.1724042084;_clck=4v9odi%7C2%7Cfog%7C0%7C1692";
+headers.authorization = "5C_1dde26d1dd4d4311ad0f36dbb552a5fb__";
+headers.deviceid = "F7051164-776A-451F-90E3-2ADF9E1AF7C9";
 $done({
   "headers": headers
 });
