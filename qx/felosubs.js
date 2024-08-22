@@ -45,8 +45,8 @@ var mikephie = JSON.parse($response.body);
         "deduction_type": "DURATIONS",
         "user_id": "1823835292198371329",
         "product_item_type": "TRANSLATOR_DURATIONS",
-        "total": 5999999995,
-        "balance": 5999999995,
+        "total": 5333333328,
+        "balance": 5333333328,
         "user_product_total_id": "1823835294030647298"
       }
     ]
