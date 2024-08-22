@@ -61,7 +61,7 @@ var uaProductMapping = {
   'qxwp%20copy': {product_id: 'com.chowjoe.wp2free.year.pro'},  //WP壁纸
   'PhimCiaj': {product_id: 'com.jiancent.calligraphymaster.lifetime'},  //WP壁纸
   'WiseMate': {product_id: 'wiseart.ai.ios.week.nofree'},  //WiseMate AI
-  'it.beatcode.CodeSnippet': {product_id: 'it.beatcode.codesnippetpro.annualSubscription'},  //Code Snippet
+  'it.beatcode.CodeSnippet': {product_id: 'it.beatcode.codesnippetpro.annualSubscription'},  //CodeSnippet
   
   
   
