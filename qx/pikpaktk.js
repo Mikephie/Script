@@ -11,7 +11,7 @@
 
 [rewrite_local]
 #TK
-^https:\/\/(api-drive|user)\.mypikpak\.com\/(vip\/v1\/(allSubscriptionStatus|vip\/info|space\/list\?type=space)|v1\/user\/me)$ url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpaktk.js
+^https:\/\/(api-drive|user)\.mypikpak\.com\/(vip\/v1\/(allSubscriptionStatus|vip\/info|space\/list\?type=space)|v1\/user\/me)$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpaktk.js
 
 [mitm] 
 hostname = *.mypikpak.com
