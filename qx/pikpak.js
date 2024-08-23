@@ -10,6 +10,8 @@
 *******************************/
 
 [rewrite_local]
+#TK
+^https:\/\/(api-drive|user)\.mypikpak\.com\/(vip\/v1\/(allSubscriptionStatus|vip\/info|space\/list\?type=space)|v1\/user\/me)$ url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpaktk.js
 #User Info
 ^https:\/\/user\.mypikpak\.com\/v1\/user\/me url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-user.js
 #VIP Info
@@ -19,8 +21,8 @@
 #VIP Drive Info
 ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/space\/list\?type=space url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vipdrive.js
 # Non-VIP Drive Info
-^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/(about\?|about\?space=) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js
+#^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/(about\?|about\?space=) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js
 
 
 [mitm] 
-hostname = api-drive.mypikpak.com, user.mypikpak.com
+hostname = *.mypikpak.com
