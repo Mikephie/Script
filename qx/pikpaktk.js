@@ -1,6 +1,6 @@
 let obj = JSON.parse($response.body); 
 
-  obj.proEndDate = "3030-03-03T00:00:00.000+0000";  
+  obj.expire = "3030-03-03T00:00:00.000+0000";  
   
   obj.pro = true;
   obj.teamPro = true;
