@@ -37,7 +37,7 @@ var mikephie = JSON.parse($response.body);
       "total_assets" : 0,
       "size" : 0
     },
-    "size" : 10995116277760,
+    "size" : 16492674416640,
     "vip_status" : "ok",
     "user_id" : "ZUNcGmFMxgvtLSD8",
     "offline" : {
