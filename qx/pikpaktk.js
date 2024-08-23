@@ -1,6 +1,13 @@
-let headers = $request.headers;
-headers.x-client-version-code = "1076";
-headers.x-client-id = "YcrttD06T9PikqAY";
-$done({
-  headers: headers
-});
+let obj = JSON.parse($response.body); 
+
+  obj.proEndDate = "3030-03-03T00:00:00.000+0000";  
+  
+  obj.pro = true;
+  obj.teamPro = true;
+ obj.activeTeamUser =  true;
+  obj.teamUser = true;
+ obj.freetrail = true;
+  
+$done({body: JSON.stringify(obj)});
+
+https:\/\/ticktick\.com\/api\/v2\/user\/status
