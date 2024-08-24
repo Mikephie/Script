@@ -63,7 +63,7 @@ var uaProductMapping = {
   'WiseMate': {product_id: 'wiseart.ai.ios.week.nofree'},  //WiseMate AI
   'CodeSnippet': {product_id: 'it.beatcode.codesnippetpro.annualSubscription'},  //CodeSnippet
   'VDIT': {product_id: 'me.imgbase.videoday.profeaturesYearly'},  //VDIT-视频转换
-  'OXNotchLockPets': {product_id: 'me.imgbase.videoday.profeaturesYearly'},  //VDIT-视频转换
+  'OXNotchLockPets': {product_id: 'Notchweekvip'},  //VDIT-视频转换
   
   
 };
