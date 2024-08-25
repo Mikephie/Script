@@ -6,10 +6,10 @@
 使用方法：手动观看一次，提示获取成功✅即可食用|可多账号获取
 获取完参数请手动关闭重写
 [rewrite_local]
-^https:\/\/.+\/emby\/Sessions\/Playing\/Stopped url script-request-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Emby.js
-
+^https:\/\/.+\/emby\/Sessions\/Playing\/Stopped url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/EmbyVIP.js
+ 
 [task_local]
-35 22 15,30 * * https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Emby.js, tag=Emby自动观看, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/emby.png, enabled=true
+35 22 15,30 * * https://raw.githubusercontent.com/Mikephie/Script/main/qx/EmbyVIP.js, tag=Emby自动观看, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/emby.png, enabled=true
 
 [MITM]
 hostname = -*.fileball.app, *
