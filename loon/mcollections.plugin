@@ -181,13 +181,13 @@ http-response ^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo script-path=h
 # PikPak （永久会员）
 # hostname = api-drive.mypikpak.com
 #VIP Info
-http-response ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vip.js, requires-body=true, timeout=60, tag=pikpak-vip
+#http-response ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vip.js, requires-body=true, timeout=60, tag=pikpak-vip
 #VIP Subs
-http-response ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/allSubscriptionStatus script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-sub.js, requires-body=true, timeout=60, tag=pikpak-sub
+#http-response ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/allSubscriptionStatus script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-sub.js, requires-body=true, timeout=60, tag=pikpak-sub
 #VIP Drive Info
-http-response ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/space\/list\?type=space script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vipdrive.js, requires-body=true, timeout=60, tag=pikpak-vipdrive
+#http-response ^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/space\/list\?type=space script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vipdrive.js, requires-body=true, timeout=60, tag=pikpak-vipdrive
 # Non-VIP Drive Info
-http-response ^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/(about\?|about\?space=) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js, requires-body=true, timeout=60, tag=pikpak-drive
+#http-response ^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/(about\?|about\?space=) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js, requires-body=true, timeout=60, tag=pikpak-drive
 
 #************************************#
 # 66Ringtones 抖抖去水印（ kkyun组合-永久会员 ）

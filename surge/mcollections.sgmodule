@@ -176,11 +176,11 @@ ringtonemaker = type=http-response, pattern=^http:\/\/clip\.tto321\.cn\/v1\/api\
 # PikPak （永久会员）
 # hostname = api-drive.mypikpak.com
 #VIP Info
-pikpak-vip = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vip.js, requires-body=true, max-size=-1, timeout=60
+#pikpak-vip = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vip.js, requires-body=true, max-size=-1, timeout=60
 #VIP Subs
-pikpak-sub = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/allSubscriptionStatus, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-sub.js, requires-body=true, max-size=-1, timeout=60
+#pikpak-sub = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/allSubscriptionStatus, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-sub.js, requires-body=true, max-size=-1, timeout=60
 #VIP Drive Info
-pikpak-vipdrive = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/space\/list\?type=space, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vipdrive.js, requires-body=true, max-size=-1, timeout=60
+#pikpak-vipdrive = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/space\/list\?type=space, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vipdrive.js, requires-body=true, max-size=-1, timeout=60
 # Non-VIP Drive Info
 #pikpak-drive = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/(about\?|about\?space=), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js, requires-body=true, max-size=-1, timeout=60
 
