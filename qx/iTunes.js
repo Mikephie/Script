@@ -64,7 +64,7 @@ var uaProductMapping = {
   'CodeSnippet': {product_id: 'it.beatcode.codesnippetpro.annualSubscription'},  //CodeSnippet
   'VDIT': {product_id: 'me.imgbase.videoday.profeaturesYearly'},  //VDIT-视频转换
   'OXNotchLockPets': {product_id: 'Notchweekvip'},  //Notch 壁纸
-  'AllMyBatteries': {product_id: 'easycall_week13243'},  //EasyCallTalkMe 来电秀
+  'AllMyBatteries': {product_id: 'AllMyBatteries_Ultimate'},  //AllMyBatteries 来电秀
   
 };
 var receipt = {
