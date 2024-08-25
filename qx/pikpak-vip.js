@@ -19,36 +19,37 @@ hostname = api-drive.mypikpak.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "data": {
-    "expire": "2088-08-08T08:08:08+08:00",
-    "ext_type": "",
-    "status": "ok",
-    "restricted": {
-      "result": false,
-      "content": {
-        "color": "",
-        "text": "",
-        "deepLink": ""
+  "data" : {
+    "expire" : "2025-11-29T10:58:16+08:00",
+    "ext_type" : "",
+    "status" : "ok",
+    "restricted" : {
+      "result" : false,
+      "content" : {
+        "color" : "",
+        "text" : "",
+        "deepLink" : ""
       },
-      "learnMore": {
-        "color": "",
-        "text": "",
-        "deepLink": ""
+      "learnMore" : {
+        "color" : "",
+        "text" : "",
+        "deepLink" : ""
       }
     },
-    "extUserInfo": {
-      "userRegion": "regional"
+    "extUserInfo" : {
+      "userRegion" : "regional"
     },
-    "user_id": "ZUNcGmFMxgvtLSD8",
-    "type": "platinum",
-    "fee_record": "no_record",
-    "vipItem": [
+    "user_id" : "ZUNcGmFMxgvtLSD8",
+    "kind" : 2,
+    "fee_record" : "no_record",
+    "type" : "platinum",
+    "vipItem" : [
       {
-        "status": "ok",
-        "expire": "2088-08-08T08:08:08+08:00",
-        "type": "regional",
-        "description": "区域会员",
-        "surplus_day": 88888
+        "status" : "ok",
+        "expire" : "2025-11-29T10:58:16+08:00",
+        "type" : "regional",
+        "description" : "区域会员",
+        "surplus_day" : 461
       }
     ]
   }
