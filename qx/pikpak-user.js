@@ -13,8 +13,7 @@
 [mitm] 
 hostname = user.mypikpak.com
 
-*******************************/
-
+*******************************/ 
 
 var mikephie = JSON.parse($response.body);
 
@@ -23,6 +22,7 @@ var mikephie = JSON.parse($response.body);
   "password" : "SET",
   "sub" : "ZUNcGmFMxgvtLSD8",
   "created_at" : "2023-11-02T08:21:46.572570191Z",
+  "picture" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
   "email" : "4pbhqkfbzx@privaterelay.appleid.com",
   "providers" : [
     {
