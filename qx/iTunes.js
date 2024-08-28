@@ -66,7 +66,7 @@ var uaProductMapping = {
   'OXNotchLockPets': {product_id: 'Notchweekvip'},  //Notch 壁纸
   'AllMyBatteries': {product_id: 'AllMyBatteries_Ultimate'},  //AllMyBatteries 电池监控🔋
   'Packet': {product_id: 'com.aaaalab.nepacket.iap.full'},  //  HTTPS抓包
-  
+  'Packet': {product_id: 'com.aaaalab.nepacket.iap.full'},  //  HTTPS抓包
 };
 var receipt = {
   "quantity": "1",
