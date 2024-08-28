@@ -66,7 +66,7 @@ var uaProductMapping = {
   'OXNotchLockPets': {product_id: 'Notchweekvip'},  //Notch 壁纸
   'AllMyBatteries': {product_id: 'AllMyBatteries_Ultimate'},  //AllMyBatteries 电池监控🔋
   'Packet': {product_id: 'com.aaaalab.nepacket.iap.full'},  //  HTTPS抓包
-  'EarthSpirit': {product_id: 'Facey_Forever'},  //  HTTPS抓包
+  'EarthSpirit': {product_id: 'Facey_Forever'},  //  Facey-专业彩妆P图神器
 };
 var receipt = {
   "quantity": "1",
