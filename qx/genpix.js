@@ -6,10 +6,11 @@ AppRaven
 [rewrite_local]
 
 
-https://appraven.net/appraven/graphql url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js
-[mitm] 
+^https:\/\/apiv2\.vivipic\.com\/get-tx-info url script-response-body
 
-hostname = appraven.net
+[mitm]
+
+hostname = apiv2.vivipic.com
 
 **/
 
