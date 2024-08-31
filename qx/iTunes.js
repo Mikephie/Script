@@ -65,9 +65,10 @@ var uaProductMapping = {
   'VDIT': {product_id: 'me.imgbase.videoday.profeaturesYearly'},  //VDIT-视频转换
   'OXNotchLockPets': {product_id: 'Notchweekvip'},  //Notch 壁纸
   'AllMyBatteries': {product_id: 'AllMyBatteries_Ultimate'},  //AllMyBatteries 电池监控🔋
-  'Packet': {product_id: 'com.aaaalab.nepacket.iap.full'},  /HTTPS抓包
+  'Packet': {product_id: 'com.aaaalab.nepacket.iap.full'},  //HTTPS抓包
   'EarthSpirit': {product_id: 'Facey_Forever'},  //  Facey-专业彩妆P图神器
   'com.alphamobiletech.bodyApp': {product_id: 'Bodyapp_Forever'},  //Bodyapp-身材修图软件
+  
 };
 var receipt = {
   "quantity": "1",
