@@ -67,6 +67,8 @@ var uaProductMapping = {
     {product_id: 'Facey_Forever'},
     {product_id: 'Bodyapp_Forever'}
   ],
+  
+  
 };
 
 function createReceipt(product_id) {
