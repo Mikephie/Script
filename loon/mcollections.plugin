@@ -8,9 +8,8 @@ force-http-engine-hosts = gql.reddit.com, gql-fed.reddit.com
 
 [URL Rewrite]
 #************************************#
-# 彩云天气广告
-^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
-^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get - reject-200
+# 普通版彩云天气广告
+^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather - reject-dict
 
 #************************************#
 # 酷我音乐广告
