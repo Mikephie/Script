@@ -67,9 +67,18 @@ grammarlypremiumcrack = type=http-response, pattern=^https?:\/\/subscription\.gr
 
 #************************************#
 # 彩云天气
-# hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
-彩云天气-SVIP会员 = type=http-response,pattern=^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
-彩云天气-SVIP地图 = type=http-request,pattern=^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
+# hostname = *.cyapi.cn
+# 赏叶赏花
+caiyun = type=http-response, pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, max-size=-1, timeout=60
+
+# 解锁vip
+caiyun = type=http-response, pattern=^https:\/\/biz\.cyapi\.cn\/v2\/user, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, max-size=-1, timeout=60
+
+# 卫星云图 48小时预报
+caiyun = type=http-request, pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, timeout=60
+
+# 7.20.0版本显示VIP
+caiyun = type=http-response, pattern=^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # Flightradar24 解锁系列
