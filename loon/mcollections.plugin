@@ -72,16 +72,16 @@ http-response ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ s
 # 彩云天气 解锁系列
 # hostname = *.cyapi.cn
 # 赏叶赏花
-http-response ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, timeout=60, tag=caiyun
+http-response ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyun
 
 # 解锁vip
-http-response ^https:\/\/biz\.cyapi\.cn\/v2\/user script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, timeout=60, tag=caiyun
+http-response ^https:\/\/biz\.cyapi\.cn\/v2\/user script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyun
 
 # 卫星云图 48小时预报
-http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, timeout=60, tag=caiyun
+http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60, tag=caiyun
 
 # 7.20.0版本显示VIP
-http-response ^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$ script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, timeout=60, tag=caiyun
+http-response ^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyun
 
 #************************************#
 # Flightradar24 解锁系列
