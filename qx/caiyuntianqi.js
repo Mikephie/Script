@@ -1,78 +1,72 @@
-/*************************************
+/*
+彩云天气
 
-项目名称：彩云天气-净化/解锁SVIP
-下载地址：https://t.cn/A66d95hV
-更新日期：2024-04-12
-脚本作者：chxm1023
-电报频道：https://t.me/chxm1023
-使用声明：⚠️仅供参考，🈲转载与售卖！
-
-**************************************
-
+====================================
 [rewrite_local]
-^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js
-^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js
+# 普通版广告
+^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather url reject-dict
+# 赏叶赏花
+^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+# 解锁vip
+^https:\/\/biz\.cyapi\.cn\/v2\/user url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+# 卫星云图 48小时预报
+^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+# 7.20.0版本显示VIP
+^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$ url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
 
 [mitm]
-hostname = *.cyapi.cn, *.caiyunapp.com
-
-*************************************/
-
-
-const chxm1024 = {};
-const chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body || null);
-const url = $request.url;
-const adUrl = /(activity\?app_name|operation\/banners)/;
-const tcUrl = /conditions/;
-const vipUrl = /https:\/\/biz\.(cyapi\.cn|caiyunapp\.com)\/p\/v\d\/vip_info/;
-const userUrl = /https:\/\/biz\.(cyapi\.cn|caiyunapp\.com)\/v\d\/user\?app_name/;
-const syUrl = /trial_card\/info/;
-const qyUrl = /entries/;
-const peUrl = /privileges/;
-const topUrl = /operation\/homefeatures/;
-
-if (typeof $response == "undefined") {
-  chxm1024.headers = $request.headers;
-  chxm1024.headers['device-token'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjoiNjViYzc1NzAwYTBkNTYwMDFiZmJkODhjIiwidXNlcl9pZCI6IjVmODNhMDY3MTk5NzZmMDAxNWEyNTRiNiIsInZlcnNpb24iOjIsImV4cCI6MTcwOTQ4MjAwMCwidmlwX2V4cGlyZWRfYXQiOjAsImlzcyI6IndlYXRoZXIiLCJpYXQiOjE3MDY4OTAwMDAsInN2aXBfZXhwaXJlZF9hdCI6MTcxNDMyMTgxMiwicHJpbWFyeSI6dHJ1ZX0.v41eOWgj4FmMMYLygupRLeE2hC8KW_HltSsdFk03oP4';
-} else {
-  switch (true) {
-    case adUrl.test(url):
-      chxm1023.status = "ok";
-      chxm1023.activities = [{"items":[{}]}];
-      chxm1023.data = [];
-      break;
-    case tcUrl.test(url):
-      chxm1023.actions = [];
-      chxm1023.popups = [];
-      break;
-    case vipUrl.test(url):
-      chxm1023.vip = {  ...chxm1023.vip,
-  "expires_time" : "4092599349",  "is_auto_renewal" : true  };
-      chxm1023.svip =  {  ...chxm1023.svip,  "expires_time" : "4092599349",  "is_auto_renewal" : true  };
-      chxm1023.show_upcoming_renewal = false;
-      break;
-    case userUrl.test(url):
-      chxm1023.result = { ...chxm1023.result,  is_vip: true,  vip_expired_at: 4092599349,  svip_given: 1,  is_xy_vip: true,  xy_svip_expire: 4092599349,  wt: {  ...chxm1023.result.wt,  vip: {  ...chxm1023.result.wt.vip,  "expired_at" : 0,  "enabled" : true,  "svip_apple_expired_at" : 4092599349,  "is_auto_renewal" : true,  "svip_expired_at" : 4092599349    },    svip_given: 1,  },  is_phone_verified: true,  vip_take_effect: 1,  is_primary: true,  xy_vip_expire: 4092599349,  svip_expired_at: 4092599349,  svip_take_effect: 1,  vip_type: "s",  };
-      break;
-    case syUrl.test(url):
-      chxm1023.receive_status = 0;
-      chxm1023.vip_type = "svip";
-      chxm1023.activated_at = 1712600671;
-      chxm1023.vip_duration = "999";
-      chxm1023.expired_at = 4092599349;
-      chxm1023.has_valid_card = 0;
-      break;
-    case qyUrl.test(url):
-      chxm1023["entries"] = [{  "url" : "https://t.me/chxm1023",  "id" : 1,  "name" : "叮当猫",  "type" : 1,  "pos" : 2  }];
-      break;
-    case peUrl.test(url):
-      chxm1023["privileges"] = [{  "vip_type" : "svip",  "subscription_chat_quota" : 999  }];
-      break;
-    case topUrl.test(url):
-      chxm1023["data"] = [{  "badge_type" : "",  "title" : "叮当猫",  "url" : "https://t.me/chxm1023",  "feature_type" : "",  "avatar" : "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ddm2.png"  },...chxm1023.data];
-      break;
-    }
-  chxm1024.body = JSON.stringify(chxm1023);
+hostname = *.cyapi.cn
+====================================
+ */
+var huihui = {},
+    url = $request.url;
+if (url.includes("/v2/user")) {
+    let obj = JSON.parse($response.body);
+    obj.result.is_vip = !0,
+        obj.result.svip_expired_at = 3742732800,
+        obj.result.vip_type = "s",
+        huihui.body = JSON.stringify(obj)
 }
+if (/v1\/(satellite|nafp\/origin_images)/g.test(url)) {
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNWY1YmZjNTdkMmM2ODkwMDE0ZTI2YmI4Iiwic3ZpcF9leHBpcmVkX2F0IjoxNzA1MzMxMTY2LjQxNjc3MSwidmlwX2V4cGlyZWRfYXQiOjB9.h_Cem89QarTXxVX9Z_Wt-Mak6ZHAjAJqgv3hEY6wpps';
+    huihui.headers = $request.headers;
+    huihui.headers['device-token'] = token;
+    if (compareVersions(huihui.headers.version, '7.1.9') > 0) {
+        huihui.headers.Authorization = 'Bearer ' + token;
+    }
+}
+if(url.includes('v1/activity')){
+	let body = $response.body
+    body = '{"status":"ok","activities":[{"items":[]}]}';
+	huihui.body = body;
+}
+if (url.includes('/user_detail')) {
+    const obj = JSON.parse($response.body);
+    obj.vip_info.svip.is_auto_renewal = true;
+    obj.vip_info.svip.expires_time = '3742732800';
+    huihui.body = JSON.stringify(obj)
+}
+$done(huihui);
 
-$done(chxm1024);
+function compareVersions(t,r){const e=t.split(".").map(Number),n=r.split(".").map(Number);for(let t=0;t<Math.max(e.length,n.length);t++){const r=e[t]||0,i=n[t]||0;if(r>i)return 1;if(r<i)return-1}return 0}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNWY1YmZjNTdkMmM2ODkwMDE0ZTI2YmI4Iiwic3ZpcF9leHBpcmVkX2F0IjoxNzA1MzMxMTY2LjQxNjc3MSwidmlwX2V4cGlyZWRfYXQiOjB9.h_Cem89QarTXxVX9Z_Wt-Mak6ZHAjAJqgv3hEY6wppslet //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNWY1YmZjNTdkMmM2ODkwMDE0ZTI2YmI4Iiwic3ZpcF9leHBpcmVkX2F0IjoxNjc0MjI3MTY2LjQxNjc3MSwidmlwX2V4cGlyZWRfYXQiOjB9.wbgfCRp3W9zEvzEYsiWxerta4G-d-b0qlYCcilevOKY
