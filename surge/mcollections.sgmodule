@@ -9,9 +9,6 @@ force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [URL Rewrite]
 #************************************#
-# 彩云天气去广告
-^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
-#************************************#
 # 酷我音乐_AdBlock
 ^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
 # 酷我音乐_AdBlock
@@ -23,6 +20,9 @@ force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [Map Local]
 #************************************#
+# 彩云天气普通版广告
+^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather data-type=text data="{}" status-code=200
+
 #电影猎手开屏
 ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config\?pack url reject-dict.json"
 
