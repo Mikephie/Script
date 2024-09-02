@@ -40,10 +40,11 @@ func = {
       "giveawayExpireMonth": 0,
       "isShowExpireTime": false,
       "productIds": [
-        25646,
         25643,
         25644,
-        25645
+        25645,
+        25646,
+        25647
       ],
       "canRenewal": false
     },
@@ -64,10 +65,11 @@ func = {
       "giveawayExpireMonth": 0,
       "isShowExpireTime": true,
       "productIds": [
-        25646,
         25643,
         25644,
-        25645
+        25645,
+        25646,
+        25647
       ],
       "canRenewal": true
     },
@@ -78,9 +80,9 @@ func = {
       "productVersions": {
       },
       "canSubscription": false,
-      "subscriptionType": "monthly",
+      "subscriptionType": "annually",
       "platformGoodsId": [
-        "MSiOS00010004"
+        "ASiOS000100012"
       ],
       "giveawayCanUse": false,
       "nextPayTime": 0,
@@ -88,7 +90,7 @@ func = {
       "giveawayExpireMonth": 0,
       "isShowExpireTime": true,
       "productIds": [
-        25648
+        66008
       ],
       "canRenewal": true
     }
