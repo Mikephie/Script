@@ -18,20 +18,22 @@ hostname = api.updf.com
 *******************************/
 
 
-var mikephie = JSON.parse($response.body);
+var func = JSON.parse($response.body);
 
-    mikephie = {
-  "msg": "成功",
+func = {
+
+ "msg": "Successful",
   "data": [
     {
       "expireTime": -1,
       "canChangePlan": false,
-      "planId": 309476,
+      "planId": 440262,
       "productVersions": {
       },
       "canSubscription": false,
       "subscriptionType": "lifetime",
       "platformGoodsId": [
+        "PNiOS00010004"
       ],
       "giveawayCanUse": false,
       "nextPayTime": 0,
@@ -47,49 +49,53 @@ var mikephie = JSON.parse($response.body);
       "canRenewal": false
     },
     {
-      "expireTime": -1,
-      "canChangePlan": false,
-      "planId": 309477,
+      "expireTime": 1725199724,
+      "canChangePlan": true,
+      "planId": 440263,
       "productVersions": {
       },
       "canSubscription": false,
       "subscriptionType": "lifetime",
       "platformGoodsId": [
+        "PNiOS00010004"
       ],
       "giveawayCanUse": false,
       "nextPayTime": 0,
       "isShowNextPayTime": false,
       "giveawayExpireMonth": 0,
-      "isShowExpireTime": false,
+      "isShowExpireTime": true,
       "productIds": [
-        25647
+        25646,
+        25643,
+        25644,
+        25645
       ],
-      "canRenewal" : false
+      "canRenewal": true
     },
     {
-      "expireTime" : 3742762088000,
-      "canChangePlan" : true,
-      "planId" : 440258,
-      "productVersions" : {
-
+      "expireTime": 1725199724,
+      "canChangePlan": true,
+      "planId": 440258,
+      "productVersions": {
       },
-      "canSubscription" : false,
-      "subscriptionType" : "annually",
-      "platformGoodsId" : [
-        "ASiOS000100012"
+      "canSubscription": false,
+      "subscriptionType": "monthly",
+      "platformGoodsId": [
+        "MSiOS00010004"
       ],
-      "giveawayCanUse" : false,
-      "nextPayTime" : 3742762088000,
-      "isShowNextPayTime" : true,
-      "giveawayExpireMonth" : 0,
-      "isShowExpireTime" : false,
-      "productIds" : [
+      "giveawayCanUse": false,
+      "nextPayTime": 0,
+      "isShowNextPayTime": false,
+      "giveawayExpireMonth": 0,
+      "isShowExpireTime": true,
+      "productIds": [
         25648
       ],
-      "canRenewal" : false
+      "canRenewal": true
     }
   ],
-  "code" : 200
-}
- 
-$done({body : JSON.stringify(mikephie)});
+  "code": 200
+
+};
+
+$done({body: JSON.stringify(func)});
