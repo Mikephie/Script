@@ -2,9 +2,9 @@
      @Mike
 
 [rewrite_local] 
-^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_(expired_plans|purchase_platform)=(true|false) url script-response-body notebook.js
-^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions url script-response-body notebook.js
-^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken url script-response-body notebook.js
+^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_(expired_plans|purchase_platform)=(true|false) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebooktest.js
+^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebooktest.js
+^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebooktest.js
 
 [MITM]
 hostname = notebook.zoho.com, sdk-apptics.zoho.com
