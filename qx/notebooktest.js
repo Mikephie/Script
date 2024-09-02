@@ -2,19 +2,17 @@
      @Mike
 
 [rewrite_local] 
-^https://notebook.zoho.com/api/v1/userprofile/accounts/payment?action=get_current_plan_detail&include_(expired_plans|purchase_platform)=(true|false) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebooktest.js
-^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebooktest.js
-^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebooktest.js
+^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_(expired_plans|purchase_platform)=(true|false) url script-response-body notebook.js
+^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions url script-response-body notebook.js
+^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken url script-response-body notebook.js
 
 [MITM]
-hostname = notebook.zoho.com
+hostname = notebook.zoho.com, sdk-apptics.zoho.com
 */
 
-var mikephie;
-var url = $request.url;
+var mikephie = JSON.parse($response.body);
 
-if (url.includes("api/v1/userprofile/accounts/payment?action=get_current_plan_detail")) {
-    mikephie = JSON.parse($response.body);
+if ($request.url.indexOf("/userprofile/accounts/payment") !== -1) {
     mikephie = {
         "code": 200,
         "status": "Success",
@@ -36,8 +34,7 @@ if (url.includes("api/v1/userprofile/accounts/payment?action=get_current_plan_de
             }
         ]
     };
-} else if (url.includes("/api/v1/payments/feature/consumptions")) {
-    mikephie = JSON.parse($response.body);
+} else if ($request.url.indexOf("/payments/feature/consumptions") !== -1) {
     mikephie = {
         "code": 200,
         "status": "Success",
@@ -57,12 +54,11 @@ if (url.includes("api/v1/userprofile/accounts/payment?action=get_current_plan_de
             }
         ]
     };
-} else if (url.includes("/sdk/api/apptics/v1/app/bearertoken")) {
-    mikephie = JSON.parse($response.body);
+} else if ($request.url.indexOf("/apptics/v1/app/bearertoken") !== -1) {
     mikephie = {
         "result": "success",
         "data": {
-            "anon_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uVG9rZW4iOiJBaENKcWRmUnpVWVJwM2VFZlNmdmZ6MEV0bFlJal9ROUF1WEp0V3pqTEFHY1JpVDZNMlI3a0FnSlJGR2dLc24wY3c4S182NUZwbzdLZElldWphajdoZkFVZUVWSmxqZDFWTEtLeFI0QTFLWjdJYjdMZV94UHhFQ0xubEYtUTNpQkotQzIwN0w5MTBQMGRyb0lrWURsWWJwZmpadHZWQ2Ita213bTB0UWk5XzhPajROaHpWRDY1R2tET3IzMFIyUWJScGU3U1FkZ1RDaFNxUHE5SlZBTXBCV2ZHVy1YT3d2cnN1SHpZUFhEdnJvNVJXTDRsWEtyZEFrUE5MTWcyTG11X2U4OWtFeDRyNkRQZE9kVmtESF84M1FPM0VBUjQ5SVJJb3JvTDE3d25Ma3Q3dkRuc1V5RnVoMm5VMFQ3MWl6QjBrUDVWSGtWTG9rSVUxMGdJQV9oUGciLCJpc3MiOiJhcHB0aWNzIiwiZXhwIjoxNzE3NjYwMTQzfQ.idzajvRjSlbVTs7gGr6v3oU2Pvdkl-PUap9UWVtYz9UPq33k93-q6MFtGYjwQ4v5nhZ3NHRHWRK511j45aAhMmmi1ugBmb1fsJWTctt-KIt7S_X7vt-LX4s9NHLKltjYp3NddToVc_pH10QMg430mv27vLy9rrCrXktveZFF-3mW1wRq7qgWXpSXBdK51wX_SM-_Bq7qHY6kdP_R5nt5b7Tke5KaAE3Z0o4FPgn0PusphzQw2F6t4VU0mZaXrdLNOTDp5-aYLAcZsSZ-Fm_qPJS6KtO0GFxPxLmBgiuMWMKVM4aq4Yw-HIP7acoollO1KXDPyTBGFjXAPaDWFn04ZQ"
+            "anon_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9..."
         }
     };
 }
