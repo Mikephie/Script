@@ -80,7 +80,7 @@ var mikephie = JSON.parse($response.body);
       "canSubscription" : false,
       "subscriptionType" : "annually",
       "platformGoodsId" : [
-        "ASiOS000100012"
+        "UMiOS00010001"
       ],
       "giveawayCanUse" : false,
       "nextPayTime" : 3742762088000,
