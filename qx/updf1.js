@@ -78,7 +78,7 @@ var mikephie = JSON.parse($response.body);
 
       },
       "canSubscription" : false,
-      "subscriptionType" : "annually",
+      "subscriptionType" : "monthly",
       "platformGoodsId" : [
         "UMiOS00010001"
       ],
