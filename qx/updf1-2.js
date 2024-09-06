@@ -20,19 +20,17 @@ hostname = *.updf.com
 var func = JSON.parse($response.body);
 
 func = {
-
- "msg": "Successful",
+  "msg": "成功",
   "data": [
     {
       "expireTime": -1,
       "canChangePlan": false,
-      "planId": 440262,
+      "planId": 309476,
       "productVersions": {
       },
       "canSubscription": false,
       "subscriptionType": "lifetime",
       "platformGoodsId": [
-        "PNiOS00010004"
       ],
       "giveawayCanUse": false,
       "nextPayTime": 0,
@@ -40,59 +38,53 @@ func = {
       "giveawayExpireMonth": 0,
       "isShowExpireTime": false,
       "productIds": [
+        25646,
         25643,
         25644,
-        25645,
-        25646,
-        25647
+        25645
       ],
       "canRenewal": false
     },
     {
-      "expireTime": 1725199724,
-      "canChangePlan": true,
-      "planId": 440263,
+      "expireTime": -1,
+      "canChangePlan": false,
+      "planId": 309477,
       "productVersions": {
       },
       "canSubscription": false,
       "subscriptionType": "lifetime",
       "platformGoodsId": [
-        "PNiOS00010004"
       ],
       "giveawayCanUse": false,
       "nextPayTime": 0,
       "isShowNextPayTime": false,
       "giveawayExpireMonth": 0,
-      "isShowExpireTime": true,
+      "isShowExpireTime": false,
       "productIds": [
-        25643,
-        25644,
-        25645,
-        25646,
         25647
       ],
-      "canRenewal": true
+      "canRenewal": false
     },
     {
-      "expireTime": 1725199724,
+      "expireTime": 1728196100,
       "canChangePlan": true,
-      "planId": 440258,
+      "planId": 451411,
       "productVersions": {
       },
       "canSubscription": false,
-      "subscriptionType": "annually",
+      "subscriptionType": "monthly",
       "platformGoodsId": [
-        "ASiOS000100012"
+        "UMiOS00010001"
       ],
       "giveawayCanUse": false,
-      "nextPayTime": 0,
-      "isShowNextPayTime": false,
+      "nextPayTime": 1728196100,
+      "isShowNextPayTime": true,
       "giveawayExpireMonth": 0,
-      "isShowExpireTime": true,
+      "isShowExpireTime": false,
       "productIds": [
-        66008
+        25652
       ],
-      "canRenewal": true
+      "canRenewal": false
     }
   ],
   "code": 200
