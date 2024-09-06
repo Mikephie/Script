@@ -66,18 +66,18 @@ func = {
       "canRenewal": false
     },
     {
-      "expireTime": 1728196100,
+      "expireTime": 1757140100,
       "canChangePlan": true,
       "planId": 451411,
       "productVersions": {
       },
       "canSubscription": false,
-      "subscriptionType": "monthly",
+      "subscriptionType": "yearly",
       "platformGoodsId": [
         "UMiOS00010001"
       ],
       "giveawayCanUse": false,
-      "nextPayTime": 1728196100,
+      "nextPayTime": 1757140100,
       "isShowNextPayTime": true,
       "giveawayExpireMonth": 0,
       "isShowExpireTime": false,
