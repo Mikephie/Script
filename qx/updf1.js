@@ -73,7 +73,7 @@ var mikephie = JSON.parse($response.body);
     {
       "expireTime" : 3742762088000,
       "canChangePlan" : true,
-      "planId" : 440258,
+      "planId" : 451411,
       "productVersions" : {
 
       },
@@ -88,7 +88,7 @@ var mikephie = JSON.parse($response.body);
       "giveawayExpireMonth" : 0,
       "isShowExpireTime" : false,
       "productIds" : [
-        25648
+        25652
       ],
       "canRenewal" : false
     }
