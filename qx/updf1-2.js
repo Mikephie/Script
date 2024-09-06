@@ -74,7 +74,7 @@ func = {
       "canSubscription": false,
       "subscriptionType": "yearly",
       "platformGoodsId": [
-        "UMiOS00010001"
+        "UAiOS00010002"
       ],
       "giveawayCanUse": false,
       "nextPayTime": 1757140100,
