@@ -28,9 +28,8 @@ const yearlyid = `${bundle_id}.yearly`;
 const yearlysubscription = `${bundle_id}.yearlysubscription`;
 
 const list = {
-  'Period': { id: "com.hanchongzan.book.vip", ids: "some_ids" }, //闪电记账
-  // ... 省略其他项目
-  'StandbyWidget': { id: "com.standby.idream.year.68", ids: "standbyus.nonconsume.missingyou" }, //StandBy_Us-情侣定位
+  'com.iuuapp.audiomaker': [{product_id: 'com.iuuapp.audiomaker.cloud.year', ids: 'com.iuuapp.audiomaker.removeads'}],  //音频剪辑
+  
 };
 
 // 更新内购数据变量
@@ -58,7 +57,7 @@ const receipt = {
     "original_purchase_date": "2024-08-08 08:08:08 Etc/GMT"
 };
 
-const expirestime = { "expires_date": "2099-09-09 09:09:09 Etc/GMT", "expires_date_pst": "2099-09-09 06:06:06 America/Los_Angeles", "expires_date_ms": "4092599349000" };
+const expirestime = { "expires_date": "2024-08-08 08:08:08 Etc/GMT", "expires_date_pst": "2024-08-08 08:08:08 America/Los_Angeles", "expires_date_ms": "3742762088000" };
 let anchor = false;
 let data;
 
@@ -90,7 +89,7 @@ if (!anchor) {
   data = [Object.assign({}, receipt, expirestime)];
   mikephie["receipt"]["in_app"] = data;
   mikephie["latest_receipt_info"] = data;
-  mikephie["pending_renewal_info"] = [{ "product_id": yearlyid, "original_transaction_id": "490001314520000", "auto_renew_product_id": yearlyid, "auto_renew_status": "1" }];
+  mikephie["pending_renewal_info"] = [{ "product_id": yearlyid, "original_transaction_id": "888888888888888", "auto_renew_product_id": yearlyid, "auto_renew_status": "1" }];
   console.log('很遗憾未能识别出UA或bundle_idn但已使用备用方案操作成功🎉🎉🎉n叮当猫の分享频道: https://t.me/chxm1023');
 }
 
