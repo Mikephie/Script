@@ -68,8 +68,8 @@ var uaProductMapping = {
     {product_id: 'Bodyapp_Forever'}  //Bodyapp-身材修图软件
   ],
   'PhotoCollagePro': [{product_id: 'PHOTABLE_PREMIUM'}],  //Photable-腹肌P图神器
-  'com.iuuapp.audiomaker': [{product_id: 'com.iuuapp.audiomaker.cloud.year'}],  //Photable-腹肌P图神器
-  'com.iuuapp.audiomaker': { cm: 'timed', hx: 'hxpda', id: "com.iuuapp.audiomaker.cloud.year", ids: "com.iuuapp.audiomaker.removeads", latest: "chxm1023" },  //音频剪辑
+  'com.iuuapp.audiomaker': [{product_id: 'com.iuuapp.audiomaker.cloud.year', ids: 'com.iuuapp.audiomaker.removeads'}],  //音频剪辑
+  
 };
 
 function createReceipt(product_id) {
