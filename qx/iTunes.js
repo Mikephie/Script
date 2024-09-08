@@ -69,10 +69,9 @@ var uaProductMapping = {
   ],
   'PhotoCollagePro': [{product_id: 'PHOTABLE_PREMIUM'}],  //Photable-腹肌P图神器
   'com.iuuapp.audiomaker': [{product_id: 'com.iuuapp.audiomaker.cloud.year', ids: 'com.iuuapp.audiomaker.removeads'}],  //音频剪辑
-  
 };
 
-function createReceipt(product_id) {
+function createReceipt(product_id, ids) {
   return {
     "quantity": "1",
     "purchase_date_ms": "1723075688000",
@@ -84,6 +83,7 @@ function createReceipt(product_id) {
     "original_transaction_id": "888888888888888",
     "purchase_date": "2024-08-08 08:08:08 Etc/GMT",
     "product_id": product_id,
+    "ids": ids,  // 将ids添加到收据对象中
     "original_purchase_date_pst": "2024-08-08 08:08:08 America/Los_Angeles",
     "in_app_ownership_type": "PURCHASED",
     "subscription_group_identifier": "20431945",
@@ -117,16 +117,15 @@ for (var uaKey in uaProductMapping) {
       var product_id = productInfo.product_id;
       var ids = productInfo.ids; // 获取ids
       
-      // 创建收据
-      var receiptData = createReceipt(product_id);
-      receiptData.ids = ids; // 将ids添加到收据中
+      // 创建收据并包含ids
+      var receiptData = createReceipt(product_id, ids);
 
       mikephie76.receipt.in_app.push(receiptData);
       mikephie76.latest_receipt_info.push(receiptData);
       mikephie.pending_renewal_info.push(createRenewal(product_id));
     });
     
-    break;
+    break; // 找到匹配的uaKey后退出循环
   }
 }
 
