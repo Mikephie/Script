@@ -76,22 +76,22 @@ function createReceipt(product_id) {
   return {
     "quantity": "1",
     "purchase_date_ms": "1723075688000",
-    "expires_date": "2088-08-08 08:08:08 Etc\/GMT",
-    "expires_date_pst": "2088-08-08 08:08:08 America\/Los_Angeles",
+    "expires_date": "2088-08-08 08:08:08 Etc/GMT",
+    "expires_date_pst": "2088-08-08 08:08:08 America/Los_Angeles",
     "is_in_intro_offer_period": "false",
     "transaction_id": "888888888888888",
     "is_trial_period": "false",
     "original_transaction_id": "888888888888888",
-    "purchase_date": "2024-08-08 08:08:08 Etc\/GMT",
+    "purchase_date": "2024-08-08 08:08:08 Etc/GMT",
     "product_id": product_id,
-    "original_purchase_date_pst": "2024-08-08 08:08:08 America\/Los_Angeles",
+    "original_purchase_date_pst": "2024-08-08 08:08:08 America/Los_Angeles",
     "in_app_ownership_type": "PURCHASED",
     "subscription_group_identifier": "20431945",
     "original_purchase_date_ms": "1723075688000",
     "web_order_line_item_id": "888888888888888",
     "expires_date_ms": "3742762088000",
-    "purchase_date_pst": "2024-08-08 08:08:08 America\/Los_Angeles",
-    "original_purchase_date": "2024-08-08 08:08:08 Etc\/GMT"
+    "purchase_date_pst": "2024-08-08 08:08:08 America/Los_Angeles",
+    "original_purchase_date": "2024-08-08 08:08:08 Etc/GMT"
   };
 }
 
@@ -115,8 +115,14 @@ for (var uaKey in uaProductMapping) {
     
     productInfoArray.forEach(productInfo => {
       var product_id = productInfo.product_id;
-      mikephie76.receipt.in_app.push(createReceipt(product_id));
-      mikephie76.latest_receipt_info.push(createReceipt(product_id));
+      var ids = productInfo.ids; // 获取ids
+      
+      // 创建收据
+      var receiptData = createReceipt(product_id);
+      receiptData.ids = ids; // 将ids添加到收据中
+
+      mikephie76.receipt.in_app.push(receiptData);
+      mikephie76.latest_receipt_info.push(receiptData);
       mikephie.pending_renewal_info.push(createRenewal(product_id));
     });
     
