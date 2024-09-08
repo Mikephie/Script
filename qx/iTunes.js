@@ -64,8 +64,8 @@ var uaProductMapping = {
   'AllMyBatteries': [{product_id: 'AllMyBatteries_Ultimate'}],  //AllMyBatteries 电池监控🔋
   'Packet': [{product_id: 'com.aaaalab.nepacket.iap.full'}],  //HTTPS抓包
   'EarthSpirit': [
-    {product_id: 'Facey_Forever'},
-    {product_id: 'Bodyapp_Forever'}
+    {product_id: 'Facey_Forever'},  
+    {product_id: 'Bodyapp_Forever'}  //Bodyapp-身材修图软件
   ],
   
   
