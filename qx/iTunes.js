@@ -13,7 +13,7 @@
 **************
 
 [rewrite_local]
-^https?://buy.itunes.apple.com/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
+^https?://buy.itunes.apple.com/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/iTunes.js
 
 [mitm]
 hostname = buy.itunes.apple.com
@@ -28,13 +28,13 @@ const yearlyid = `${bundle_id}.yearly`;
 const yearlysubscription = `${bundle_id}.yearlysubscription`;
 
 const list = {
-  'com.iuuapp.audiomaker': [{product_id: 'com.iuuapp.audiomaker.cloud.year', ids: 'com.iuuapp.audiomaker.removeads'}],  //音频剪辑
-  
+  'Period': { id: "com.hanchongzan.book.vip", ids: "some_ids" }, //闪电记账
+  // ... 省略其他项目
+  'StandbyWidget': { id: "com.standby.idream.year.68", ids: "standbyus.nonconsume.missingyou" }, //StandBy_Us-情侣定位
 };
 
 // 更新内购数据变量
-const product_id = "your_product_id"; // 根据需要提供 product_id 的值
-const ids = "your_ids"; // 根据需要提供 ids 的值
+const product_id = "your_product_id"; // 替换为实际的 product_id 值
 
 const receipt = {
     "quantity": "1",
@@ -47,7 +47,7 @@ const receipt = {
     "original_transaction_id": "888888888888888",
     "purchase_date": "2024-08-08 08:08:08 Etc/GMT",
     "product_id": product_id,
-    "ids": ids,
+    "ids": "some_ids", // 这里使用一个实际的 ids 值
     "original_purchase_date_pst": "2024-08-08 08:08:08 America/Los_Angeles",
     "in_app_ownership_type": "PURCHASED",
     "subscription_group_identifier": "20431945",
@@ -58,7 +58,7 @@ const receipt = {
     "original_purchase_date": "2024-08-08 08:08:08 Etc/GMT"
 };
 
-const expirestime = { "expires_date": "2024-08-08 08:08:08 Etc/GMT", "expires_date_pst": "2024-08-08 08:08:08 America/Los_Angeles", "expires_date_ms": "3742762088000" };
+const expirestime = { "expires_date": "2099-09-09 09:09:09 Etc/GMT", "expires_date_pst": "2099-09-09 06:06:06 America/Los_Angeles", "expires_date_ms": "4092599349000" };
 let anchor = false;
 let data;
 
@@ -66,20 +66,19 @@ let data;
 for (const i in list) {
   const regex = new RegExp(`^${i}`, `i`);
   if (regex.test(ua) || regex.test(bundle_id)) {
-    const { id, ids, latest } = list[i];
-    const receiptdata = Object.assign({}, receipt, { "product_id": id });
+    const { id, ids } = list[i];
+    const receiptdata = Object.assign({}, receipt, { "product_id": id, "ids": ids }); // 添加 ids
 
     // 处理数据
     data = [
-      Object.assign({}, receiptdata, expirestime, { "product_id": ids || id })  // 使用ids，若没有则使用id
+      Object.assign({}, receiptdata, expirestime)  // 直接使用 receiptdata
     ];
 
     // 处理核心收尾
     mikephie["receipt"]["in_app"] = data;
     mikephie["latest_receipt_info"] = data;
-    mikephie["pending_renewal_info"] = [{ "product_id": id, "original_transaction_id": "888888888888888", "auto_renew_product_id": id, "auto_renew_status": "1" }];
-    mikephie["latest_receipt"] = latest;
-
+    mikephie["pending_renewal_info"] = [{ "product_id": id, "original_transaction_id": "490001314520000", "auto_renew_product_id": id, "auto_renew_status": "1" }];
+    
     anchor = true;
     console.log('恭喜您，已操作成功🎉🎉🎉n叮当猫の分享频道: https://t.me/chxm1023');
     break;
@@ -91,9 +90,8 @@ if (!anchor) {
   data = [Object.assign({}, receipt, expirestime)];
   mikephie["receipt"]["in_app"] = data;
   mikephie["latest_receipt_info"] = data;
-  mikephie["pending_renewal_info"] = [{ "product_id": yearlyid, "original_transaction_id": "888888888888888", "auto_renew_product_id": yearlyid, "auto_renew_status": "1" }];
-  mikephie["latest_receipt"] = "mikephie";
-  console.log('很遗憾未能识别出UA或bundle_idn但已使用备用方案操作成功🎉🎉🎉n叮当猫の分享频道: https://t.me/mikephie');
+  mikephie["pending_renewal_info"] = [{ "product_id": yearlyid, "original_transaction_id": "490001314520000", "auto_renew_product_id": yearlyid, "auto_renew_status": "1" }];
+  console.log('很遗憾未能识别出UA或bundle_idn但已使用备用方案操作成功🎉🎉🎉n叮当猫の分享频道: https://t.me/chxm1023');
 }
 
 mikephie["Telegram"] = "https://t.me/chxm1023";
