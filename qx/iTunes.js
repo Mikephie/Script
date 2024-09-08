@@ -67,7 +67,7 @@ var uaProductMapping = {
     {product_id: 'Facey_Forever'},  //Facey-专业彩妆P图神器
     {product_id: 'Bodyapp_Forever'}  //Bodyapp-身材修图软件
   ],
-  'Packet': [{product_id: 'PHOTABLE_PREMIUM'}],  //Photable-腹肌P图神器
+  'PhotoCollagePro': [{product_id: 'PHOTABLE_PREMIUM'}],  //Photable-腹肌P图神器
   
   
 };
