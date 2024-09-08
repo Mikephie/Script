@@ -28,9 +28,8 @@ const yearlyid = `${bundle_id}.yearly`;
 const yearlysubscription = `${bundle_id}.yearlysubscription`;
 
 const list = {
-  'Period': { id: "com.hanchongzan.book.vip", latest: "mikephie" }, //闪电记账
-  // ... 省略其他项目
-  'StandbyWidget': { id: "com.standby.idream.year.68", ids: "standbyus.nonconsume.missingyou", latest: "mikephie" }, //StandBy_Us-情侣定位
+  'com.iuuapp.audiomaker': [{product_id: 'com.iuuapp.audiomaker.cloud.year', ids: 'com.iuuapp.audiomaker.removeads'}],  //音频剪辑
+  
 };
 
 // 更新内购数据变量
