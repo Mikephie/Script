@@ -79,7 +79,7 @@ for (const i in list) {
     mikephie["pending_renewal_info"] = [{ "product_id": id, "original_transaction_id": "490001314520000", "auto_renew_product_id": id, "auto_renew_status": "1" }];
     
     anchor = true;
-    console.log('恭喜您，已操作成功🎉🎉🎉n叮当猫の分享频道: https://t.me/chxm1023');
+    console.log('恭喜您，已操作成功🎉🎉🎉n叮当猫の分享频道: https://t.me/mikephie');
     break;
   }
 }
@@ -90,10 +90,10 @@ if (!anchor) {
   mikephie["receipt"]["in_app"] = data;
   mikephie["latest_receipt_info"] = data;
   mikephie["pending_renewal_info"] = [{ "product_id": yearlyid, "original_transaction_id": "888888888888888", "auto_renew_product_id": yearlyid, "auto_renew_status": "1" }];
-  console.log('很遗憾未能识别出UA或bundle_idn但已使用备用方案操作成功🎉🎉🎉n叮当猫の分享频道: https://t.me/chxm1023');
+  console.log('很遗憾未能识别出UA或bundle_idn但已使用备用方案操作成功🎉🎉🎉n叮当猫の分享频道: https://t.me/mikephie');
 }
 
-mikephie["Telegram"] = "https://t.me/chxm1023";
+mikephie["Telegram"] = "https://t.me/mikephie";
 mikephie["warning"] = "仅供学习，禁止转载或售卖";
 
 $done({ body: JSON.stringify(mikephie) });
