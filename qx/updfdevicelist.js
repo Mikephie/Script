@@ -11,7 +11,7 @@
  
 
 [rewrite_local]
-https:\/\/api\.updf\.com\/v1\/user\/(?:multiBindPersonalDevice|getPersonalDeviceList)
+https:\/\/api\.updf\.com\/v1\/user\/(?:multiBindPersonalDevice|getPersonalDeviceList) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/updfdevicelist.js
 
 [mitm]
 hostname = *.updf.com
