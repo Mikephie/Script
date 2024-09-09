@@ -11,10 +11,10 @@
  
 
 [rewrite_local]
-^https:\/\/api\.weilaizhushou\.com\/base\/user\/vip\/getUserVip url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/updfdevicelist.js
+https:\/\/api\.updf\.com\/v1\/user\/(?:multiBindPersonalDevice|getPersonalDeviceList)
 
 [mitm]
-hostname = api.weilaizhushou.com
+hostname = *.updf.com
 
 *************************************/
 
