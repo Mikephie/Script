@@ -66,7 +66,7 @@ if (typeof $response == "undefined") {
     'Python3IDE': { name: 'pro', id: 'python3ide_six_month' },  // Python3IDE
     'CallAnnie': { name: 'ai.animato.callannie.entitlement.pro0', id: 'ai.animato.callannie.proyearly1' },  //CallAnnie
     'VideoToLive':{ name: 'Premium', id: 'video_to_live_premium'},  //VideoToLive
-    'Themy':{ name: 'fonts_premium', id: 'lifetime'},  //ElonAI
+    'Themy':{ name: 'fonts_premium', id: 'lifetime'},  //Fonts-微信字体
     'BabyCare':{ name: 'pro', id: 'KiddoKeeper_38_LifeTime'},  //小守护
   };
   const data = {
