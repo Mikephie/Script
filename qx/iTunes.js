@@ -1,128 +1,208 @@
-/*************************************
+// iTunes-系列解锁合集（合并版）
+// 更新日期：2024-09-10
+// 脚本作者：mikephie (重构与合并由 AI 辅助)
+// 电报频道：https://t.me/mikephie
 
-项目名称：iTunes-系列解锁合集
-更新日期：2024-6-08
-使用声明：⚠️仅供参考，🈲转载与售卖！
-使用说明：如果脚本无效，请先排除是否脚本冲突
-特别说明：此脚本可能会导致App Store无法登录ID
-解决方法：关[MITM][脚本][代理工具]方法选一即可
+const EXPIRES_DATE_MS = "3742762088000";   // 2088-08-08 08:08:08 GMT
+const EXPIRATION_DATE = "2088-08-08 08:08:08 Etc/GMT";
+const PURCHASE_DATE_MS = "1723075688000";  // 2024-08-08 08:08:08 GMT
+const PURCHASE_DATE = "2024-08-08 08:08:08 Etc/GMT";
+const TRANSACTION_ID = "300002000603223";
 
-**************************************
-
-[rewrite_local]
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/iTunes.js
-
-[mitm]
-hostname = buy.itunes.apple.com
-
-*************************************/
-
-var mikephie = {};
-var mikephie76 = JSON.parse(typeof $response != "undefined" && $response.body || null);
-var headers = {};
-for (var key in $request.headers) {
-  const reg = /^[a-z]+$/;
-  if (key === "User-Agent" && !reg.test(key)) {
-    var lowerkey = key.toLowerCase();
-    $request.headers[lowerkey] = $request.headers[key];
-    delete $request.headers[key];
-  }
-}
-var UA = $request.headers['user-agent'];
-var uaProductMapping = {
-  'ScreenRecord': [{product_id: 'https://t.me/mikephie'}],
-  'iVCam': [{product_id: 'ivcam.full'}],  //iVCam
-  'ChickAlarmClock': [{product_id: 'Pro_M01'}],  //小鸡专注
-  'TWWeatherMajor': [{product_id: 'com.highonemob.weather.base.w'}],
-  'ProKnockOut': [{product_id: 'com.knockout.SVIP.50off'}],  //ProKnockOut
-  'Prettya': [{product_id: 'com.floatcamellia.prettyup.onetimepurchase'}],  //PrettyUp视频P图
-  'Dial': [{product_id: '2104'}],  //T9拨号
-  'UCamera': [{product_id: '644377109928'}],  //最美证件照
-  'com.pocket.photo': [{product_id: 'com.pocket.photo.yearly'}],  //一寸证件照
-  'HashPhotos': [{product_id: 'com.kobaltlab.HashPhotos.iap.allinone.free'}],  //HashPhotos
-  'AllMyBatteries': [{product_id: 'https://t.me/Guding88'}],
-  'Subscriptions': [{product_id: 'com.touchbits.subscriptions.iap.pro.yearly'}],  //订阅通
-  'TimeCut': [{product_id: 'com.floatcamellia.hfrslowmotion.forevervip'}],  //TimeCut
-  'imgplay': [{product_id: 'me.imgbase.imgplay.subscriptionYearly'}],  //imgPlay
-  'Ever%20Play': [{product_id: 'om.zhangchao.AudioPlayer.subscription.oneWeek'}],  //EverPlay
-  'intolive': [{product_id: 'me.imgbase.intolive.proSubYearly'}],  //intolive-实况壁纸制作器
-  'PhotosSorter': [{product_id: 'sorter.pro.ipa'}],  //Sorter-相册整理
-  'OneExtractor': [{product_id: 'com.OneExtractor.Video.Forever'}],  //视频提取器
-  'Xfuse': [{product_id: 'com.xfuse.ProVision'}],  //磁力宅播放器
-  'Boom': [{product_id: 'com.globaldelight.iBoom.LifetimeDiscountPack'}],  //Boom
-  'FastPlayer': [{product_id: 'VideoPlayer_ProVersion'}],  //万能播放器
-  'com.BertonYc.ScannerOCR': [{product_id: 'Scanner_Subscibe_Permanent'}],  //万能扫描王
-  'darkWeb': [{product_id: 'dforce_unlock_all_functions'}],  //DForce-Safari扩展
-  'VideoHelper': [{product_id: 'vip_service'}],  //媒关系
-  'qxwp%20copy': [{product_id: 'com.chowjoe.wp2free.year.pro'}],  //WP壁纸
-  'PhimCiaj': [{product_id: 'com.jiancent.calligraphymaster.lifetime'}],  //WP壁纸
-  'WiseMate': [{product_id: 'wiseart.ai.ios.week.nofree'}],  //WiseMate AI
-  'CodeSnippet': [{product_id: 'it.beatcode.codesnippetpro.annualSubscription'}],  //CodeSnippet
-  'VDIT': [{product_id: 'me.imgbase.videoday.profeaturesYearly'}],  //VDIT-视频转换
-  'com.tinymediapower.livephotowallpapers': [{product_id: 'livewp_group_d_year'}],  //VDIT-视频转换
-  'OXNotchLockPets': [{product_id: 'Notchweekvip'}],  //Notch 壁纸
-  'AllMyBatteries': [{product_id: 'AllMyBatteries_Ultimate'}],  //AllMyBatteries 电池监控🔋
-  'Packet': [{product_id: 'com.aaaalab.nepacket.iap.full'}],  //HTTPS抓包
-  'EarthSpirit': [
-    {product_id: 'Facey_Forever'},  //Facey-专业彩妆P图神器
-    {product_id: 'Bodyapp_Forever'}  //Bodyapp-身材修图软件
-  ],
-  'PhotoCollagePro': [{product_id: 'PHOTABLE_PREMIUM'}],  //Photable-腹肌P图神器
-  'com.iuuapp.audiomaker': [{product_id: 'com.iuuapp.audiomaker.cloud.year', ids: 'com.iuuapp.audiomaker.removeads'}],  //音频剪辑
+const appList = {
+  // 第一个脚本的应用列表
+  'ScreenRecord': { method: 'v1', product_id: 'https://t.me/mikephie' },
+  'iVCam': { method: 'v1', product_id: 'ivcam.full' },
+  'ChickAlarmClock': { method: 'v1', product_id: 'Pro_M01' },
+  'TWWeatherMajor': { method: 'v1', product_id: 'com.highonemob.weather.base.w' },
+  'ProKnockOut': { method: 'v1', product_id: 'com.knockout.SVIP.50off' },
+  'Prettya': { method: 'v1', product_id: 'com.floatcamellia.prettyup.onetimepurchase' },
+  'Dial': { method: 'v1', product_id: '2104' },
+  'UCamera': { method: 'v1', product_id: '644377109928' },
+  'com.pocket.photo': { method: 'v1', product_id: 'com.pocket.photo.yearly' },
+  'HashPhotos': { method: 'v1', product_id: 'com.kobaltlab.HashPhotos.iap.allinone.free' },
+  'AllMyBatteries': { method: 'v1', product_id: 'https://t.me/Guding88' },
+  'Subscriptions': { method: 'v1', product_id: 'com.touchbits.subscriptions.iap.pro.yearly' },
+  'TimeCut': { method: 'v1', product_id: 'com.floatcamellia.hfrslowmotion.forevervip' },
+  'imgplay': { method: 'v1', product_id: 'me.imgbase.imgplay.subscriptionYearly' },
+  'Ever%20Play': { method: 'v1', product_id: 'om.zhangchao.AudioPlayer.subscription.oneWeek' },
+  'intolive': { method: 'v1', product_id: 'me.imgbase.intolive.proSubYearly' },
+  'PhotosSorter': { method: 'v1', product_id: 'sorter.pro.ipa' },
+  'OneExtractor': { method: 'v1', product_id: 'com.OneExtractor.Video.Forever' },
+  'Xfuse': { method: 'v1', product_id: 'com.xfuse.ProVision' },
+  'Boom': { method: 'v1', product_id: 'com.globaldelight.iBoom.LifetimeDiscountPack' },
+  'FastPlayer': { method: 'v1', product_id: 'VideoPlayer_ProVersion' },
+  'com.BertonYc.ScannerOCR': { method: 'v1', product_id: 'Scanner_Subscibe_Permanent' },
+  'darkWeb': { method: 'v1', product_id: 'dforce_unlock_all_functions' },
+  'VideoHelper': { method: 'v1', product_id: 'vip_service' },
+  'qxwp%20copy': { method: 'v1', product_id: 'com.chowjoe.wp2free.year.pro' },
+  'PhimCiaj': { method: 'v1', product_id: 'com.jiancent.calligraphymaster.lifetime' },
+  'WiseMate': { method: 'v1', product_id: 'wiseart.ai.ios.week.nofree' },
+  'CodeSnippet': { method: 'v1', product_id: 'it.beatcode.codesnippetpro.annualSubscription' },
+  'VDIT': { method: 'v1', product_id: 'me.imgbase.videoday.profeaturesYearly' },
+  'com.tinymediapower.livephotowallpapers': { method: 'v1', product_id: 'livewp_group_d_year' },
+  'OXNotchLockPets': { method: 'v1', product_id: 'Notchweekvip' },
+  'AllMyBatteries': { method: 'v1', product_id: 'AllMyBatteries_Ultimate' },
+  'Packet': { method: 'v1', product_id: 'com.aaaalab.nepacket.iap.full' },
   
+  // 第二个脚本的应用列表
+  'IconChange': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "iconeryearvip", latest: "mikephie" },
+  'life.journal.diary': { method: 'v2', cm: 'timeb', hx: 'hxpbda', id: "life.journal.diary.lifetime", latest: "mikephie" },
+  'com.floatcamellia.motionninja': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "com.floatcamellia.motionninja.yearlyvip", latest: "mikephie" },
+  'com.iuuapp.audiomaker': { method: 'v2', cm: 'timed', hx: 'hxpbda', id: "com.iuuapp.audiomaker.cloud.year", ids: "com.iuuapp.audiomaker.removeads", latest: "mikephie" },
+  'com.alphamobiletech.bodyApp': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "Bodyapp_Forever", latest: "mikephie" },
+  'com.alphamobiletech.facey': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "Facey_Forever", latest: "mikephie" },
+  // 注意：有些应用在两个列表中都出现了，这里保留了第二个脚本的版本
 };
 
-function createReceipt(product_id) {
+function createReceiptV1(productId) {
   return {
     "quantity": "1",
-    "purchase_date_ms": "1723075688000",
-    "expires_date": "2088-08-08 08:08:08 Etc\/GMT",
-    "expires_date_pst": "2088-08-08 08:08:08 America\/Los_Angeles",
+    "purchase_date_ms": PURCHASE_DATE_MS,
+    "expires_date": EXPIRATION_DATE,
+    "expires_date_pst": EXPIRATION_DATE.replace("Etc/GMT", "America/Los_Angeles"),
     "is_in_intro_offer_period": "false",
-    "transaction_id": "888888888888888",
+    "transaction_id": TRANSACTION_ID,
     "is_trial_period": "false",
-    "original_transaction_id": "888888888888888",
-    "purchase_date": "2024-08-08 08:08:08 Etc\/GMT",
-    "product_id": product_id,
-    "original_purchase_date_pst": "2024-08-08 08:08:08 America\/Los_Angeles",
+    "original_transaction_id": TRANSACTION_ID,
+    "purchase_date": PURCHASE_DATE,
+    "product_id": productId,
+    "original_purchase_date_pst": PURCHASE_DATE.replace("Etc/GMT", "America/Los_Angeles"),
     "in_app_ownership_type": "PURCHASED",
     "subscription_group_identifier": "20431945",
-    "original_purchase_date_ms": "1723075688000",
-    "web_order_line_item_id": "888888888888888",
-    "expires_date_ms": "3742762088000",
-    "purchase_date_pst": "2024-08-08 08:08:08 America\/Los_Angeles",
-    "original_purchase_date": "2024-08-08 08:08:08 Etc\/GMT"
+    "original_purchase_date_ms": PURCHASE_DATE_MS,
+    "web_order_line_item_id": TRANSACTION_ID,
+    "expires_date_ms": EXPIRES_DATE_MS,
+    "purchase_date_pst": PURCHASE_DATE.replace("Etc/GMT", "America/Los_Angeles"),
+    "original_purchase_date": PURCHASE_DATE
   };
 }
 
-function createRenewal(product_id) {
+function createReceiptV2(productId) {
   return {
-    "expiration_intent": "1",
-    "product_id": product_id,
-    "is_in_billing_retry_period": "0",
-    "auto_renew_product_id": product_id,
-    "original_transaction_id": "888888888888888",
-    "auto_renew_status": "0"
+    "quantity": "1",
+    "purchase_date_ms": PURCHASE_DATE_MS,
+    "is_in_intro_offer_period": "false",
+    "transaction_id": TRANSACTION_ID,
+    "is_trial_period": "false",
+    "original_transaction_id": TRANSACTION_ID,
+    "purchase_date": PURCHASE_DATE,
+    "product_id": productId,
+    "original_purchase_date_pst": PURCHASE_DATE.replace("Etc/GMT", "America/Los_Angeles"),
+    "in_app_ownership_type": "PURCHASED",
+    "subscription_group_identifier": "20757857",
+    "original_purchase_date_ms": PURCHASE_DATE_MS,
+    "web_order_line_item_id": "300000952690970",
+    "expires_date_ms": EXPIRES_DATE_MS,
+    "purchase_date_pst": PURCHASE_DATE.replace("Etc/GMT", "America/Los_Angeles"),
+    "original_purchase_date": PURCHASE_DATE,
+    "expires_date": EXPIRATION_DATE,
+    "expires_date_pst": EXPIRATION_DATE.replace("Etc/GMT", "America/Los_Angeles")
   };
 }
 
-for (var uaKey in uaProductMapping) {
-  if (UA && UA.includes(uaKey)) {
-    var productInfoArray = uaProductMapping[uaKey];
-    mikephie76.receipt.in_app = [];
-    mikephie76.latest_receipt_info = [];
-    mikephie.pending_renewal_info = [];
-    
-    productInfoArray.forEach(productInfo => {
-      var product_id = productInfo.product_id;
-      mikephie76.receipt.in_app.push(createReceipt(product_id));
-      mikephie76.latest_receipt_info.push(createReceipt(product_id));
-      mikephie.pending_renewal_info.push(createRenewal(product_id));
-    });
-    
-    break;
-  }
+function processAppV1(appInfo, bundleId) {
+  const { product_id } = appInfo;
+  const receipt = createReceiptV1(product_id);
+  
+  return {
+    "receipt": {
+      "in_app": [receipt]
+    },
+    "latest_receipt_info": [receipt],
+    "pending_renewal_info": [{
+      "product_id": product_id,
+      "original_transaction_id": TRANSACTION_ID,
+      "auto_renew_product_id": product_id,
+      "auto_renew_status": "1"
+    }],
+    "latest_receipt": "mikephie"
+  };
 }
 
-mikephie = mikephie76;
-$done({ body: JSON.stringify(mikephie) });
+function processAppV2(appInfo, bundleId) {
+  const { cm, hx, id, ids, latest } = appInfo;
+  let data;
+
+  switch (cm) {
+    case 'timea':
+      data = [createReceiptV2(id)];
+      break;
+    case 'timeb':
+      data = [{ ...createReceiptV2(id), expires_date: undefined, expires_date_pst: undefined, expires_date_ms: undefined }];
+      break;
+    case 'timec':
+      data = [];
+      break;
+    case 'timed':
+      data = [createReceiptV2(ids), createReceiptV2(id)];
+      break;
+  }
+
+  let response = {
+    "receipt": {
+      "in_app": data
+    },
+    "latest_receipt_info": data,
+    "pending_renewal_info": [{
+      "product_id": id,
+      "original_transaction_id": TRANSACTION_ID,
+      "auto_renew_product_id": id,
+      "auto_renew_status": "1"
+    }],
+    "latest_receipt": latest
+  };
+
+  if (hx.includes('hxpc')) {
+    const xreceipt = {
+      "expires_date_formatted": EXPIRATION_DATE,
+      "expires_date": EXPIRES_DATE_MS,
+      "expires_date_formatted_pst": EXPIRATION_DATE.replace("Etc/GMT", "America/Los_Angeles"),
+      "product_id": id,
+    };
+    response.receipt = { ...response.receipt, ...xreceipt };
+    response.latest_receipt_info = { ...response.receipt, ...xreceipt };
+    response.status = 0;
+    response.auto_renew_status = 1;
+    response.auto_renew_product_id = id;
+  }
+
+  return response;
+}
+
+function main() {
+  const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
+  const originalResponse = JSON.parse($response.body);
+  const bundleId = originalResponse.receipt.bundle_id || originalResponse.receipt.Bundle_Id;
+  
+  let processedResponse = null;
+
+  for (const [appIdentifier, appInfo] of Object.entries(appList)) {
+    if (new RegExp(`^${appIdentifier}`, 'i').test(ua) || new RegExp(`^${appIdentifier}`, 'i').test(bundleId)) {
+      if (appInfo.method === 'v1') {
+        processedResponse = processAppV1(appInfo, bundleId);
+      } else if (appInfo.method === 'v2') {
+        processedResponse = processAppV2(appInfo, bundleId);
+      }
+      console.log('恭喜您，已操作成功🎉🎉🎉\mikephieの分享频道: https://t.me/mikephie');
+      break;
+    }
+  }
+
+  if (!processedResponse) {
+    const yearlyId = `${bundleId}.yearly`;
+    processedResponse = processAppV1({ product_id: yearlyId }, bundleId);
+    console.log('很遗憾未能识别出UA或bundle_id\n但已使用备用方案操作成功🎉🎉🎉\mikephieの分享频道: https://t.me/mikephie');
+  }
+
+  processedResponse = {
+    ...originalResponse,
+    ...processedResponse,
+    "Telegram": "https://t.me/mikephie",
+    "warning": "仅供学习，禁止转载或售卖"
+  };
+
+  $done({ body: JSON.stringify(processedResponse) });
+}
+
+main();
