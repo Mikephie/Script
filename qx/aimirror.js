@@ -1,4 +1,15 @@
-/
+
+/*
+ * AI Mirror
+
+[rewrite_local]
+https://be.aimirror.fun/ user script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/aimirror.js
+
+[mitm]
+hostname = be.aimirror.fun
+*/
+
+
 let body = $response.body;
 let url = $request.url;
 
