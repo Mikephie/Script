@@ -9,7 +9,7 @@ https://be.aimirror.fun/ user script-response-body https://raw.githubusercontent
 hostname = be.aimirror.fun
 */
 
-
+/
 let body = $response.body;
 let url = $request.url;
 
