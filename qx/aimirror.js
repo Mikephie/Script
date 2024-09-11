@@ -3,10 +3,11 @@
  * AI Mirror
 
 [rewrite_local]
-^(https:\/\/be\.aimirror\.fun\/(draw|draw\/process|query_is_vip|users\/video_render_count|query_consumable_quota|users\/discount))/ user script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/aimirror.js
+^(https:\/\/be\.aimirror\.fun\/(draw|draw\/process|query_is_vip|users\/video_render_count|query_consumable_quota|users\/discount)) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/aimirror.js
 
 [mitm]
 hostname = be.aimirror.fun
+ 
 */
 
 /
