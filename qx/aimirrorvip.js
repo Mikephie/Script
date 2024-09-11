@@ -20,11 +20,9 @@ hostname = be.aimirror.fun
 
 let done = false;
 
-if (url.includes("/query_is_vip")) {
-    if (body === 'false') {
-        body = 'true';
-        done = true; // 标记操作已完成
-    }
+if (body === 'false') {
+    body = 'true';
+    done = true; // 标记操作已完成
 }
 
 // 这里你可以根据 done 的状态执行后续逻辑
