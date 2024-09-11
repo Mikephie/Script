@@ -66,8 +66,9 @@ if (typeof $response == "undefined") {
     'Python3IDE': { name: 'pro', id: 'python3ide_six_month' },  // Python3IDE
     'CallAnnie': { name: 'ai.animato.callannie.entitlement.pro0', id: 'ai.animato.callannie.proyearly1' },  //CallAnnie
     'VideoToLive':{ name: 'Premium', id: 'video_to_live_premium'},  //VideoToLive
-    'ElonAI':{ name: 'Premium', id: 'elongpt.yearly_1'},  //ElonAI
+    'Themy':{ name: 'fonts_premium', id: 'lifetime'},  //Fonts-微信字体
     'BabyCare':{ name: 'pro', id: 'KiddoKeeper_38_LifeTime'},  //小守护
+    'Codye': { name: 'lifetime', id: 'com.roadesign.Codyeapp.unlock' },  // 水印熊
   };
   const data = {
     "expires_date": "2088-08-08T08:08:08Z",
