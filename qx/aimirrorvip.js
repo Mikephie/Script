@@ -18,7 +18,7 @@ hostname = be.aimirror.fun
 
 *************************************/
 
-let done = false;
+let body = $response.body;
 
 if (body === 'false') {
     body = 'true';
