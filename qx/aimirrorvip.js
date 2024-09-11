@@ -20,10 +20,8 @@ hostname = be.aimirror.fun
 
 let body = $response.body;
 
-if (body === 'false') {
-    body = 'true';
-    done = true; // 标记操作已完成
-}
+ if (body === 'false') {
+        body = 'true';
 
 // 这里你可以根据 done 的状态执行后续逻辑
 if (done) {
