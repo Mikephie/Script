@@ -23,7 +23,4 @@ let body = $response.body;
  if (body === 'false') {
         body = 'true';
 
-// 这里你可以根据 done 的状态执行后续逻辑
-if (done) {
-    console.log("Body 已更新为 true");
-}
+$done({ body });
