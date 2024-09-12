@@ -16,23 +16,15 @@ hostname = api.adblockpro.app
 
 *******************************/
 
-let jsonObj = {
-  "p": 0,
-  "s": 0,
-  "l": 0,
-  "e": 0,
-  "m": 0,
-  "f": 0
-};
+let body = $response.body;
+let parsedBody = JSON.parse(body);
 
-// 修改值
-jsonObj.p = 1;
-jsonObj.s = 1;
-jsonObj.l = 1;
-jsonObj.e = 1;
-jsonObj.m = 1;
-jsonObj.f = 1;
+// Iterate through the object and change all values of 0 to 1
+for (let key in parsedBody) {
+    if (parsedBody[key] === 0) {
+        parsedBody[key] = 1;
+    }
+}
 
-// 转换为JSON字符串
-let jsonString = JSON.stringify(jsonObj);
-console.log(jsonString);
+body = JSON.stringify(parsedBody);
+$done(body);
