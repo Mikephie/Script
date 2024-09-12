@@ -20,7 +20,6 @@ let jsonObj = {
   "p": 0,
   "s": 0,
   "l": 0,
-  "t": 0,
   "e": 0,
   "m": 0,
   "f": 0
@@ -30,7 +29,6 @@ let jsonObj = {
 jsonObj.p = 1;
 jsonObj.s = 1;
 jsonObj.l = 1;
-jsonObj.t = 1;
 jsonObj.e = 1;
 jsonObj.m = 1;
 jsonObj.f = 1;
