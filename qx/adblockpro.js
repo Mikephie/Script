@@ -17,6 +17,24 @@ hostname = api.adblockpro.app
 *******************************/
  
 
+// Original data (this can contain 0s to be replaced)
+let originalData = {
+  "p": 1,
+  "a": "",
+  "i": 0,  // This will be replaced with 1
+  "x": 1,
+  "b": 274,
+  "r": "",
+  "c": "F8DABB6D",
+  "s": 0,  // This will be replaced with 1
+  "l": 1,
+  "t": 0,  // This will be replaced with 1
+  "e": 1,
+  "m": 1,
+  "f": 0,  // This will be replaced with 1
+  "v": true
+};
+
 // Start with an empty data object
 let data = {};
 
