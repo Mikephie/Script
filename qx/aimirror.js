@@ -6,55 +6,36 @@
 [mitm]
 hostname = be.aimirror.fun
 
+//
+
 let body = $response.body;
 let url = $request.url;
 
 function sendNotification(title, subtitle, message) {
-    if (typeof $notification !== 'undefined') {
+    if (typeof $notification != 'undefined') {
+        // Surge
         $notification.post(title, subtitle, message);
-    } else if (typeof $notify !== 'undefined') {
+    } else if (typeof $notify != 'undefined') {
+        // Quantumult X
         $notify(title, subtitle, message);
     }
 }
 
-// 添加调试日志
-console.log(`AI Mirror Debug: Script triggered for URL: ${url}`);
-console.log(`AI Mirror Debug: Original response body: ${body}`);
-
-try {
-    let obj = JSON.parse(body);
-    
-    if (url.includes("/query_is_vip")) {
-        console.log("AI Mirror Debug: Modifying VIP status");
-        obj = true;
-    } else if (url.includes("/draw")) {
-        console.log("AI Mirror Debug: Modifying draw response");
-        if (typeof obj === 'object' && obj !== null) {
-            obj.is_vip = true;
-        }
-    } else if (url.includes("/users/video_render_count")) {
-        console.log("AI Mirror Debug: Checking video render count");
-        if (obj === 0) {
-            sendNotification("提示", "", "这个视频ai无法解锁，请返回上一个界面");
-        }
-    } else if (url.includes("/query_consumable_quota")) {
-        console.log("AI Mirror Debug: Modifying consumable quota");
-        if (typeof obj === 'object' && obj !== null) {
-            obj.has_quota = true;
-        }
-    } else if (url.includes("/users/discount")) {
-        console.log("AI Mirror Debug: Modifying discount status");
-        if (typeof obj === 'object' && obj !== null) {
-            obj.discount = true;
-        }
+if (url.includes("/query_is_vip")) {
+    if (body === 'false') {
+        body = 'true';  // Set VIP status to true
     }
-    
-    body = JSON.stringify(obj);
-    console.log(`AI Mirror Debug: Modified response body: ${body}`);
-} catch (error) {
-    console.log(`AI Mirror Debug: Error parsing or modifying response: ${error}`);
+} else if (url.includes("/draw")) {
+    body = body.replace(/"is_vip"\s*:\s*false/g, '"is_vip":true');  // Change VIP status in draw results
+} else if (url.includes("/users/video_render_count")) {
+    if (body === '0') {
+        body = '这个没解锁别用了';  // Inform the user that the feature is not unlocked
+        sendNotification("提示", "", "这个视频ai无法解锁，请返回上一个界面");
+    }
+} else if (url.includes("/query_consumable_quota")) {
+    body = body.replace(/"has_quota"\s*:\s*false/g, '"has_quota":true');  // Set quota to true
+} else if (url.includes("/users/discount")) {
+    body = body.replace(/"discount"\s*:\s*false/g, '"discount":true');  // Apply discount
 }
-
-sendNotification("AI Mirror Debug", "脚本执行", `URL: ${url}`);
 
 $done({ body });
