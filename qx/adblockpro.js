@@ -16,23 +16,34 @@ hostname = api.adblockpro.app
 
 *******************************/
  
-var mikephie = JSON.parse($response.body);
+const data = {
+  "p": 1,
+  "a": "",
+  "i": 1,
+  "x": 1,
+  "b": 274,
+  "r": "",
+  "c": "F8DABB6D",
+  "s": 1,
+  "l": 1,
+  "t": 1,
+  "e": 1,
+  "m": 1,
+  "f": 1,
+  "v": true
+};
 
-    mikephie = {
-  "p" : 1,
-  "a" : "",
-  "i" : 1,
-  "x" : 1,
-  "b" : 274,
-  "r" : "",
-  "c" : "F8DABB6D",
-  "s" : 1,
-  "l" : 1,
-  "t" : 1,
-  "e" : 1,
-  "m" : 1,
-  "f" : 1,
-  "v" : true
-}
-
-$done({body : JSON.stringify(mikephie)});
+fetch('https://example.com/api', {
+  method: 'POST', // or 'PUT' depending on the API
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
