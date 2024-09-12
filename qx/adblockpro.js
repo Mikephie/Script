@@ -16,62 +16,17 @@ hostname = api.adblockpro.app
 
 *******************************/
 
-// Original data from the image
-let originalData = {
-  "p": 0,
-  "a": "",
-  "i": 1,
-  "x": 1,
-  "b": 274,
-  "r": "",
-  "c": "F8DABB6D",
-  "s": 0,
-  "l": 0,
-  "t": 1,
-  "e": 0,
-  "m": 0,
-  "f": 0,
-  "v": true
-};
+// Assuming the response body contains a JSON string
+let obj = JSON.parse($response.body);
 
-// Start with an empty data object
-let data = {};
+// Modify the values of certain fields
+obj['p'] = 1;
+obj['s'] = 1;
+obj['l'] = 1;
+obj['t'] = 1;
+obj['e'] = 1;
+obj['m'] = 1;
+obj['f'] = 1;
 
-// Loop through the original data and replace 0 values with 1
-for (let key in originalData) {
-  if (originalData[key] === 0) {
-    data[key] = 1;  // Replace 0 with 1
-  } else {
-    data[key] = originalData[key];  // Keep the original value
-  }
-}
-
-// Function to encode the data as URL-encoded format
-function encodeForUrl(data) {
-  let formBody = [];
-  for (let key in data) {
-    let encodedKey = encodeURIComponent(key);
-    let encodedValue = encodeURIComponent(data[key]);
-    formBody.push(`${encodedKey}=${encodedValue}`);
-  }
-  return formBody.join("&");
-}
-
-// Encode the modified data for URL
-let encodedData = encodeForUrl(data);
-
-// Make the POST request
-fetch('https://api.adblockpro.app/verify', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/x-www-form-urlencoded',
-  },
-  body: encodedData,
-})
-.then(response => response.json())
-.then(responseData => {
-  console.log('Success:', responseData);
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
+// Finalize the response with the modified body
+$done({body: JSON.stringify(obj)});
