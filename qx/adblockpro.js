@@ -17,28 +17,28 @@ hostname = api.adblockpro.app
 *******************************/
  
 
-// Original data (this can contain 0s to be replaced)
+// Original data from the image
 let originalData = {
-  "p": 1,
+  "p": 0,
   "a": "",
-  "i": 0,  // This will be replaced with 1
+  "i": 1,
   "x": 1,
   "b": 274,
   "r": "",
   "c": "F8DABB6D",
-  "s": 0,  // This will be replaced with 1
-  "l": 1,
-  "t": 0,  // This will be replaced with 1
-  "e": 1,
-  "m": 1,
-  "f": 0,  // This will be replaced with 1
+  "s": 0,
+  "l": 0,
+  "t": 1,
+  "e": 0,
+  "m": 0,
+  "f": 0,
   "v": true
 };
 
 // Start with an empty data object
 let data = {};
 
-// Loop through the original data and check for 0 values
+// Loop through the original data and replace 0 values with 1
 for (let key in originalData) {
   if (originalData[key] === 0) {
     data[key] = 1; // Replace 0 with 1
