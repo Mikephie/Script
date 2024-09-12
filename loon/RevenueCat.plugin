@@ -1,7 +1,7 @@
 #!name = RevenueCat🔐APP解锁
 #!desc = RevenueCat解锁系列 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Loon0x00/Loon0x00.github.io/main/static/img/loon.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/revenuecat.png
 
 [Argument]
 appName = input,"RevenueCat🔐APP解锁",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
