@@ -1,3 +1,20 @@
+/*        
+        ➪：脚本名称:   AIMirror 
+
+        ★：解锁永久🆅🅸🅿
+
+        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
+ 
+[rewrite_local]
+^https:\/\/payments\.classdojo\.com\/v1\/receipts url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js
+
+[mitm]
+hostname = payments.classdojo.com
+
+*******************************/
+
 let body = $response.body;
 let url = $request.url;
 
