@@ -68,7 +68,7 @@ if (typeof $response == "undefined") {
     'VideoToLive':{ name: 'Premium', id: 'video_to_live_premium'},  //VideoToLive
     'Themy':{ name: 'fonts_premium', id: 'lifetime'},  //Fonts-微信字体
     'BabyCare':{ name: 'pro', id: 'KiddoKeeper_38_LifeTime'},  //小守护
-    'Codye': { name: 'lifetime', id: 'com.roadesign.Codyeapp.unlock' },  // 水印熊
+    'MenuBox':{ name: 'premium', id: 'com.menubox.premium'},  //MenuBox
   };
   const data = {
     "expires_date": "2088-08-08T08:08:08Z",
