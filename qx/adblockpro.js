@@ -33,7 +33,7 @@ const data = {
   "v": true
 };
 
-fetch('https://example.com/api', {
+fetch('api.adblockpro.app', {
   method: 'POST', // or 'PUT' depending on the API
   headers: {
     'Content-Type': 'application/json',
