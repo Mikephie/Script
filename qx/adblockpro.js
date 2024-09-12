@@ -16,34 +16,18 @@ hostname = api.adblockpro.app
 
 *******************************/
  
-const data = {
-  "p": 1,
-  "a": "",
-  "i": 1,
-  "x": 1,
-  "b": 274,
-  "r": "",
-  "c": "F8DABB6D",
-  "s": 1,
-  "l": 1,
-  "t": 1,
-  "e": 1,
-  "m": 1,
-  "f": 1,
-  "v": true
-};
 
-fetch('api.adblockpro.app', {
-  method: 'POST', // or 'PUT' depending on the API
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(data),
-})
-.then(response => response.json())
-.then(data => {
-  console.log('Success:', data);
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
+// Start with an empty data object
+let data = {};
+
+// Loop through the original data and check for 0 values
+for (let key in originalData) {
+  if (originalData[key] === 0) {
+    data[key] = 1; // Replace 0 with 1
+  } else {
+    data[key] = originalData[key]; // Keep the original value
+  }
+}
+
+// Log the modified data to see the result
+console.log('Updated data:', data);
