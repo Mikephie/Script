@@ -8,10 +8,10 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
  
 [rewrite_local]
-^https:\/\/payments\.classdojo\.com\/v1\/receipts url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js
+^https:\/\/be\.aimirror\.fun\/(query_is_vip|draw|users\/video_render_count|query_consumable_quota|users\/discount) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/aimirror.js
 
-[mitm]
-hostname = payments.classdojo.com
+[MITM]
+hostname = be.aimirror.fun
 
 *******************************/
 
