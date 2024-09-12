@@ -16,17 +16,48 @@ hostname = api.adblockpro.app
 
 *******************************/
 
-// Assuming the response body contains a JSON string
-let obj = JSON.parse($response.body);
+function transformJSON(originalJSON) {
+  // Parse the original JSON string if it's not already an object
+  const original = typeof originalJSON === 'string' ? JSON.parse(originalJSON) : originalJSON;
 
-// Modify the values of certain fields
-obj['p'] = 1;
-obj['s'] = 1;
-obj['l'] = 1;
-obj['t'] = 1;
-obj['e'] = 1;
-obj['m'] = 1;
-obj['f'] = 1;
+  // Create the new object with desired modifications
+  const transformed = {
+    p: 1,
+    a: "",
+    i: 1,
+    x: 1,
+    b: original.b,
+    r: "",
+    c: original.c,
+    s: 1,
+    l: 1,
+    t: 1,
+    e: 1,
+    m: 1,
+    f: 1,
+    v: original.v
+  };
 
-// Finalize the response with the modified body
-$done({body: JSON.stringify(obj)});
+  return transformed;
+}
+
+// Example usage:
+const originalData = {
+  "p": 0,
+  "a": "",
+  "i": 1,
+  "x": 1,
+  "b": 274,
+  "r": "",
+  "c": "F8DABB6D",
+  "s": 0,
+  "l": 0,
+  "t": 1,
+  "e": 0,
+  "m": 0,
+  "f": 0,
+  "v": true
+};
+
+const result = transformJSON(originalData);
+console.log(JSON.stringify(result, null, 2));
