@@ -4,7 +4,7 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/heji.gif
 
 [Argument]
-appName = input,"iTunes🔐APP解锁",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
+appName = input,"Mikephie🔐APP解锁",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
 appCategory = select,"🔐APP","✅签到","🚫广告","🛠️工具",tag=app的分类
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
