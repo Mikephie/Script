@@ -1,10 +1,17 @@
-#!name=Notebook
-#!desc= 订阅解锁🔓
-#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/notebook.png
+#!name = Notebook🔐APP解锁
+#!desc = 办公效率 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/notebook.png
+
+[Argument]
+appName = input,"Notebook",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
+appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
+isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
 [Script]
+
 # VIP 订阅
-http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_expired_plans=true script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-subs.js, requires-body=true, timeout=60, tag=notebook-subs
+http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_expired_plans=true script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-subs.js, requires-body=true, timeout=60, tag=notebook-subs, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
 
 # 100G 空间
 http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-storage.js, requires-body=true, timeout=60, tag=notebook-storage
@@ -14,6 +21,7 @@ http-response ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/pa
 
 # Token
 http-response ^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-token.js, requires-body=true, timeout=60, tag=notebook-token
+
 
 [MITM]
 hostname = notebook.zoho.com
