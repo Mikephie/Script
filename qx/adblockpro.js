@@ -1,12 +1,19 @@
-/*
+/*        
+        ➪：脚本名称:   AdblockPro 
 
-adblockpro 10.7.5
+        ★：解锁永久🆅🅸🅿
 
+        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
+ 
 [rewrite_local]
 ^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js
-[mitm]
+
+[MITM]
 hostname = api.adblockpro.app
-*/
+
+*******************************/
 
 let body = JSON.parse($response.body);
 
