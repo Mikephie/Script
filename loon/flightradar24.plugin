@@ -1,10 +1,16 @@
-#!name=flightradar24
-#!desc=flightradar24黄金会员
-#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/flightradar.png
+#!name = Flightradar24🔐APP解锁
+#!desc = 航班查询 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/flightradar.png
+
+[Argument]
+appName = input,"Flightradar24",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
+appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
+isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
 [Script]
-# > Flightradar24@ddgksf2013
-http-request ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) script-path=http://script.hub/convert/_start_/https://github.com/ddgksf2013/dev/raw/main/flightradar24.js/_end_/flightradar24.js?type=qx-script&target=loon-script&wrap_response=true, timeout=60, tag=flightradar24
+http-request ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) script-path=http://script.hub/convert/_start_/https://github.com/ddgksf2013/dev/raw/main/flightradar24.js/_end_/flightradar24.js?type=qx-script&target=loon-script&wrap_response=true, timeout=60, tag=flightradar24, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+
 
 [MITM]
 hostname = mobile.flightradar24.com
