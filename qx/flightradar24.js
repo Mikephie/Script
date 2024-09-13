@@ -7,7 +7,7 @@
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-^https://mobile.flightradar24.com/mobile/(user-session|subscribe) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js
+^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) url script-echo-response https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js
 
 [mitm]
 hostname = mobile.flightradar24.com
