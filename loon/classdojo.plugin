@@ -1,10 +1,10 @@
-#!name = 边框水印大师🔐APP解锁
-#!desc = 图像制作 - 插件
+#!name = Classdojo🔐APP解锁
+#!desc = 学习效率 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/bksyds.png
 
 [Argument]
-appName = input,"边框水印大师",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
+appName = input,"Classdojo",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
 appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
