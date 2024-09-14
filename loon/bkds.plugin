@@ -1,7 +1,7 @@
 #!name = 边框水印大师🔐APP解锁
 #!desc = 图像制作 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/aimirror.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/bksyds.png
 
 [Argument]
 appName = input,"边框水印大师",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
@@ -13,4 +13,4 @@ http-response ^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent script-path=ht
 http-response ^https?:\/\/photoby\.hasmash\.com\/auth\/member script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds2.js, requires-body=true, timeout=60, tag=ds2
 
 [MITM]
-hostname = photoby.hasmash.com
+hostname = photoby.hasmash.combksy
