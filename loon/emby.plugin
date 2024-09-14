@@ -1,7 +1,7 @@
 #!name = Emby🔐APP解锁
 #!desc = 视频播放 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/hbqj.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/emby.png
 
 [Argument]
 appName = input,"Emby",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
