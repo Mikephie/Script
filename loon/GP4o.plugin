@@ -10,6 +10,7 @@ isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持
 
 [Script]
 http-response https://nichousha.sjrjyffs.top/api/app/user/getCurrentInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4o.js, requires-body=true, timeout=60, tag=GP4o, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+http-request https://nichousha.sjrjyffs.top/api/img/aiSketch script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4ohd.js, requires-body=true, timeout=60, tag=GTP4ohd
 
 
 [MITM]
