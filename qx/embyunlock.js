@@ -3,7 +3,7 @@
 ====================================
 
 # 播放解锁
-^https:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice\? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/embyunlock.js
+^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/Mikephie/Script/main/qx/embyunlock.js
 
 hostname = mb3admin.com
  
