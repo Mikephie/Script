@@ -1,9 +1,9 @@
 {
   "id": "Mikephie",
   "name": "Mikephie 脚本订阅",
-  "author": "@General74110",
+  "author": "@Mikephie",
   "icon": "https://raw.githubusercontent.com/Mikephie/icons/main/icon/mikephie.png",
-  "repo": "https://github.com/General74110",
+  "repo": "https://github.com/Mikephie",
   "apps": [
     {
       "id": "kuwotimes",
@@ -31,8 +31,8 @@
           "desc": "多个 SID 用 @ 分隔"
         }
       ],
-      "author": "@General℡",
-      "repo": "https://github.com/General74110",
+      "author": "@Mikephie℡",
+      "repo": "https://github.com/Mikephie",
       "icons": [
         "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/KKTV.png",
         "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/KKTV.png"
@@ -47,7 +47,7 @@
         "clearCookies"
       ],
       "author": "@General℡",
-      "repo": "https://github.com/General74110",
+      "repo": "https://github.com/Mikephie",
       "icons": [
         "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/QQ.png",
         "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/QQ.png"
@@ -98,9 +98,9 @@
           "desc": "多个 SID 用 @ 分隔"
         }
       ],
-      "script": "https://raw.githubusercontent.com/Mikephie/Task/main/kuwotimes.js",
-      "author": "@General℡",
-      "repo": "https://github.com/General74110",
+      "script": "https://raw.githubusercontent.com/Mikephie/Task/main/kuwocoin.js",
+      "author": "@Mikephie",
+      "repo": "https://github.com/Mikephie",
       "icons": [
         "https://raw.githubusercontent.com/deezertidal/private/main/icons/kuwosvip.png",
         "https://raw.githubusercontent.com/deezertidal/private/main/icons/kuwosvip.png"
