@@ -13,4 +13,4 @@ http-response ^https:\/\/api\.adblockpro\.app\/verify script-path=https://raw.gi
 
 
 [MITM]
-hostname = *.cyapi.cn, *.caiyunapp.com
+hostname = *.cyapi.cn
