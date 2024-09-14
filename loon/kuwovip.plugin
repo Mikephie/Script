@@ -8,6 +8,18 @@ appName = input,"酷我音乐柬",tag=app的名字,desc=填写app的用户名，
 appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
+[Rule]
+# > 通用广告请求@ddgksf2013
+https?:\/\/vip1\.kuwo\.cn\/vip\/activity\/kwMemberDay - reject-200
+# > 屏蔽热词@ddgksf2013
+https?:\/\/hotword\.kuwo\.cn\/hotword\.s - reject-200
+# > 通用广告请求@ddgksf2013
+https?:\/\/vip1\.kuwo\.cn\/vip_adv\/ - reject-200
+# > 通用广告请求@ddgksf2013
+https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/app\/pasterAdvert - reject-200
+# > 应用内弹窗及右下角@ddgksf2013
+^https?:\/\/mobilead\.kuwo\.cn\/ - reject-200
+
 [Script]
 # > 搜索框处理@ddgksf2013
 http-response https?:\/\/searchrecterm\.kuwo\.cn\/recterm\.s script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js, requires-body=true, timeout=60, tag=kuwomusic.vip, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
