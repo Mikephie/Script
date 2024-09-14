@@ -9,26 +9,26 @@
       "id": "kuwotimes",
       "name": "酷我时长",
       "keys": [
-        "kw_loginUid",
-        "kw_loginSid"
+        "Clear",
+        "loginUid"
       ],
-      "desc": "支持多账号，请用 @ 分隔多个 UID 和 SID",
+      "desc": "",
       "settings": [
         {
-          "id": "kw_loginUid",
-          "name": "kw_loginUid",
-          "val": "",
-          "type": "text",
-          "placeholder": "请输入多个 UID，用 @ 分隔",
-          "desc": "多个 UID 用 @ 分隔"
+          "id": "Clear",
+          "name": "清除Cookies",
+          "val": "0",
+          "type": "number",
+          "placeholder": "0为关闭,1为开启",
+          "desc": "清除所有酷我音乐Cookies"
         },
         {
-          "id": "kw_loginSid",
-          "name": "kw_loginSid",
+          "id": "loginUid",
+          "name": "登陆UID",
           "val": "",
           "type": "text",
-          "placeholder": "请输入多个 SID，用 @ 分隔",
-          "desc": "多个 SID 用 @ 分隔"
+          "placeholder": "输入多个账号UID，用&隔开",
+          "desc": "抓取的loginUid，多个UID用&隔开"
         }
       ],
       "author": "@Mikephie℡",
