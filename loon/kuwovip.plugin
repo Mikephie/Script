@@ -1,7 +1,7 @@
 #!name = 酷我音乐🔐APP解锁
 #!desc = 影音媒体 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/hbqj.png
+#!icon = https://raw.githubusercontent.com/deezertidal/private/main/icons/kuwosvip.png
 
 [Argument]
 appName = input,"酷我音乐柬",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
