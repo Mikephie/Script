@@ -8,7 +8,7 @@ appName = input,"酷我音乐柬",tag=app的名字,desc=填写app的用户名，
 appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
-[Rule]
+[Rewrite]
 # > 通用广告请求@ddgksf2013
 https?:\/\/vip1\.kuwo\.cn\/vip\/activity\/kwMemberDay - reject-200
 # > 屏蔽热词@ddgksf2013
