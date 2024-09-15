@@ -1,7 +1,7 @@
 #!name = 微商海报大师🔐APP解锁
 #!desc = 图像制作 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/wallcraft.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/wshb.png
 
 [Argument]
 appName = input,"微商海报大师",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
