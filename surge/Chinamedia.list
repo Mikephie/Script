@@ -11,7 +11,7 @@ USER-AGENT,*Ximalaya*
 USER-AGENT,*ximalaya*
 USER-AGENT,*QQ*
 USER-AGENT,KWPlayer
-USER-AGENT,KWPlayer*
+USER-AGENT,KWPlayer*,
 DOMAIN-SUFFIX,www.kuwo.cn
 DOMAIN-SUFFIX,antiserver.kuwo.cn
 DOMAIN-SUFFIX,ipcheck.kuwo.cn
