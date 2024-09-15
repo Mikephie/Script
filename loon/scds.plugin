@@ -9,8 +9,8 @@ appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app�
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
 [Script]
-http-response ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/sjsm.js, requires-body=true, timeout=60, tag=sjsm, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+http-response ^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/getUserInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js, requires-body=true, timeout=60, tag=yygdsc, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
 
 
 [MITM]
-hostname = appss.baomingding.com
+hostname = apps-api.lianaishouce.cn, apps-api.lingege.cn
