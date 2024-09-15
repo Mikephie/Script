@@ -1,16 +1,19 @@
-#!name = Ringtonemaker🔐APP解锁
+#!name = 66Ringtones🔐APP解锁
 #!desc = 媒体制作 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/ringtonemaker.png
 
 [Argument]
-appName = Ringtonemaker,"全局扫描🔐APP解锁",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
+appName = 66Ringtones,"全局扫描🔐APP解锁",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
 appCategory = select,"🔐APP","✅签到","🚫广告","🛠️工具",tag=app的分类
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
 [Script]
-http-response ^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ringtonemaker.js, requires-body=true, timeout=60, tag=ringtonemaker
+http-response ^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kkyun.js, requires-body=true, timeout=60, tag=kkyun
 
 
 [MITM]
-hostname = clip.tto321.cn
+hostname = kkyun.com
+
+66Ringtones 抖抖去水印（ kkyun组合-永久会员 ）
+# hostname = kkyun.com
