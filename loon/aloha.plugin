@@ -1,7 +1,7 @@
 #!name = Aloha 游览器🔐APP解锁
 #!desc = 工作效率 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/adblockpro.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/aloha.png
 
 [Argument]
 appName = input,"Aloha 游览器",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
