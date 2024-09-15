@@ -1,7 +1,7 @@
 #!name = 66Ringtones🔐APP解锁
 #!desc = 媒体制作 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/ringtonemaker.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/66ringtone.png
 
 [Argument]
 appName = 66Ringtones,"全局扫描🔐APP解锁",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
@@ -14,6 +14,3 @@ http-response ^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$ sc
 
 [MITM]
 hostname = kkyun.com
-
-66Ringtones 抖抖去水印（ kkyun组合-永久会员 ）
-# hostname = kkyun.com
