@@ -1,7 +1,7 @@
 #!name = 全局扫描🔐APP解锁
 #!desc = 工作效率 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/itunes.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/qjsm.png
 
 [Argument]
 appName = input,"全局扫描🔐APP解锁",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
