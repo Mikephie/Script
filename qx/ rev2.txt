@@ -1,548 +1,524 @@
-[
+
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380502473,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "Radio Access Technology" : "5G",
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
-    },
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "id" : 53,
     "$mp_metadata" : {
-      "$mp_event_id" : "4e940758aa5dcfe9",
+      "$mp_event_id" : "ab8a4db657f0d7e6",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 0,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "properties" : {
+      "mp_lib" : "swift",
+      "time" : 1726380502500,
+      "$screen_width" : 430,
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "transactions" : [
+        {
+          "expirationDate" : "2025-09-15T10:46:26.000Z",
+          "productType" : "Auto-Renewable Subscription",
+          "purchaseDate" : "2024-09-15T10:46:26.000Z",
+          "id" : 300002009378559,
+          "originalPurchaseDate" : "2024-09-12T10:46:27.000Z",
+          "productID" : "com.6X.LockLauncher.Pro.Yearly",
+          "environment" : "Production",
+          "originalID" : 300002005391976
+        }
+      ],
+      "$screen_height" : 932,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$manufacturer" : "Apple",
+      "$app_version_string" : "1.7.3",
+      "$had_persisted_distinct_id" : true,
+      "$os_version" : "17.6.1",
+      "$os" : "iOS"
+    },
+    "id" : 36,
+    "event" : "Get Verified Transactions"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "id" : 54,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380502500,
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "Monthly Subscription" : false,
-      "$ios_app_release" : "1.7.3"
+    "properties" : {
+      "isActivationCodePro" : false,
+      "time" : 1726380502510,
+      "mp_lib" : "swift",
+      "$screen_width" : 430,
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "isSubscriptionPro" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "transactions" : [
+        {
+          "expirationDate" : "2025-09-15T10:46:26.000Z",
+          "productType" : "Auto-Renewable Subscription",
+          "purchaseDate" : "2024-09-15T10:46:26.000Z",
+          "id" : 300002009378559,
+          "originalPurchaseDate" : "2024-09-12T10:46:27.000Z",
+          "productID" : "com.6X.LockLauncher.Pro.Yearly",
+          "environment" : "Production",
+          "originalID" : 300002005391976
+        }
+      ],
+      "$screen_height" : 932,
+      "isPro" : true,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$manufacturer" : "Apple",
+      "$app_version_string" : "1.7.3",
+      "$os_version" : "17.6.1",
+      "$had_persisted_distinct_id" : true,
+      "$os" : "iOS"
     },
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
     "$mp_metadata" : {
-      "$mp_event_id" : "223233abfb3ac592",
+      "$mp_event_id" : "fc5bd2508a28b31f",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 1,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "id" : 37,
+    "event" : "Update Customer Product Status"
   },
   {
-    "$unset" : [
-      "Monthly Subscription Expiration Date"
-    ],
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 55,
-    "$time" : 1726380502500,
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+    "id" : 38,
     "$mp_metadata" : {
-      "$mp_event_id" : "b2e3e2f563305889",
+      "$mp_event_id" : "d7502e6617250e4c",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 2,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "properties" : {
+      "time" : 1726380502676,
+      "$screen_width" : 430,
+      "mp_lib" : "swift",
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "transactions" : [
+        {
+          "expirationDate" : "2025-09-15T10:46:26.000Z",
+          "productType" : "Auto-Renewable Subscription",
+          "purchaseDate" : "2024-09-15T10:46:26.000Z",
+          "id" : 300002009378559,
+          "originalPurchaseDate" : "2024-09-12T10:46:27.000Z",
+          "productID" : "com.6X.LockLauncher.Pro.Yearly",
+          "environment" : "Production",
+          "originalID" : 300002005391976
+        }
+      ],
+      "$screen_height" : 932,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$os_version" : "17.6.1",
+      "$app_version_string" : "1.7.3",
+      "$manufacturer" : "Apple",
+      "$had_persisted_distinct_id" : true,
+      "$os" : "iOS"
+    },
+    "event" : "Get Verified Transactions"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380502500,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "Yearly Subscription" : true,
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
-    },
-    "id" : 56,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
     "$mp_metadata" : {
-      "$mp_event_id" : "6663fbe6a583ca2e",
+      "$mp_event_id" : "2d8ae6789fcdc5e1",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 3,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "properties" : {
+      "isActivationCodePro" : false,
+      "mp_lib" : "swift",
+      "$screen_width" : 430,
+      "time" : 1726380502686,
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "isSubscriptionPro" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "transactions" : [
+        {
+          "expirationDate" : "2025-09-15T10:46:26.000Z",
+          "productType" : "Auto-Renewable Subscription",
+          "purchaseDate" : "2024-09-15T10:46:26.000Z",
+          "id" : 300002009378559,
+          "originalPurchaseDate" : "2024-09-12T10:46:27.000Z",
+          "productID" : "com.6X.LockLauncher.Pro.Yearly",
+          "environment" : "Production",
+          "originalID" : 300002005391976
+        }
+      ],
+      "$screen_height" : 932,
+      "isPro" : true,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$os_version" : "17.6.1",
+      "$manufacturer" : "Apple",
+      "$had_persisted_distinct_id" : true,
+      "$app_version_string" : "1.7.3",
+      "$os" : "iOS"
+    },
+    "id" : 39,
+    "event" : "Update Customer Product Status"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380502500,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "Yearly Subscription Expiration Date" : "2025-09-15T10:46:26.000Z",
-      "$ios_app_release" : "1.7.3"
+    "properties" : {
+      "mp_lib" : "swift",
+      "time" : 1726380504131,
+      "$screen_width" : 430,
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "transactions" : [
+        {
+          "expirationDate" : "2025-09-15T10:46:26.000Z",
+          "productType" : "Auto-Renewable Subscription",
+          "purchaseDate" : "2024-09-15T10:46:26.000Z",
+          "id" : 300002009378559,
+          "originalPurchaseDate" : "2024-09-12T10:46:27.000Z",
+          "productID" : "com.6X.LockLauncher.Pro.Yearly",
+          "environment" : "Production",
+          "originalID" : 300002005391976
+        }
+      ],
+      "$screen_height" : 932,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$os_version" : "17.6.1",
+      "$app_version_string" : "1.7.3",
+      "$manufacturer" : "Apple",
+      "$had_persisted_distinct_id" : true,
+      "$os" : "iOS"
     },
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "id" : 57,
+    "id" : 40,
     "$mp_metadata" : {
-      "$mp_event_id" : "b83d93859d42a04b",
+      "$mp_event_id" : "bc19c2473b0716f0",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 4,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "event" : "Get Verified Transactions"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380502510,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$ios_app_release" : "1.7.3",
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "Lifetime Subscription" : false
-    },
-    "id" : 58,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
     "$mp_metadata" : {
-      "$mp_event_id" : "f0ffdb810487a375",
+      "$mp_event_id" : "17825372bd3c5fc3",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 5,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "id" : 41,
+    "properties" : {
+      "time" : 1726380504186,
+      "mp_lib" : "swift",
+      "$screen_width" : 430,
+      "target" : "1",
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "$screen_height" : 932,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$manufacturer" : "Apple",
+      "$app_version_string" : "1.7.3",
+      "$os_version" : "17.6.1",
+      "$had_persisted_distinct_id" : true,
+      "$os" : "iOS"
+    },
+    "event" : "Tab Changed"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 59,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380502510,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "Subscription Pro" : true,
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
+    "properties" : {
+      "isActivationCodePro" : false,
+      "time" : 1726380504249,
+      "$screen_width" : 430,
+      "mp_lib" : "swift",
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "isSubscriptionPro" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "transactions" : [
+        {
+          "expirationDate" : "2025-09-15T10:46:26.000Z",
+          "productType" : "Auto-Renewable Subscription",
+          "purchaseDate" : "2024-09-15T10:46:26.000Z",
+          "id" : 300002009378559,
+          "originalPurchaseDate" : "2024-09-12T10:46:27.000Z",
+          "productID" : "com.6X.LockLauncher.Pro.Yearly",
+          "environment" : "Production",
+          "originalID" : 300002005391976
+        }
+      ],
+      "$screen_height" : 932,
+      "isPro" : true,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$os_version" : "17.6.1",
+      "$app_version_string" : "1.7.3",
+      "$had_persisted_distinct_id" : true,
+      "$manufacturer" : "Apple",
+      "$os" : "iOS"
     },
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+    "id" : 42,
     "$mp_metadata" : {
-      "$mp_event_id" : "d65e30770917827e",
+      "$mp_event_id" : "5645878858ab3905",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 6,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "event" : "Update Customer Product Status"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "Pro" : true,
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
+    "properties" : {
+      "time" : 1726380504468,
+      "mp_lib" : "swift",
+      "$screen_width" : 430,
+      "target" : "2",
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "$screen_height" : 932,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$manufacturer" : "Apple",
+      "$app_version_string" : "1.7.3",
+      "$had_persisted_distinct_id" : true,
+      "$os_version" : "17.6.1",
+      "$os" : "iOS"
     },
-    "id" : 60,
-    "$time" : 1726380502510,
+    "id" : 43,
     "$mp_metadata" : {
-      "$mp_event_id" : "522f27a138dd5781",
+      "$mp_event_id" : "684b91ec54c12ae4",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 7,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "event" : "Tab Changed"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 61,
-    "$time" : 1726380502676,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "Monthly Subscription" : false,
-      "$ios_app_version" : "573",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_release" : "1.7.3"
+    "properties" : {
+      "time" : 1726380504890,
+      "$screen_width" : 430,
+      "mp_lib" : "swift",
+      "target" : "3",
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "$screen_height" : 932,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$os_version" : "17.6.1",
+      "$app_version_string" : "1.7.3",
+      "$had_persisted_distinct_id" : true,
+      "$manufacturer" : "Apple",
+      "$os" : "iOS"
     },
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+    "id" : 44,
     "$mp_metadata" : {
-      "$mp_event_id" : "bae3ce566eabf21b",
+      "$mp_event_id" : "c4961fc16a791751",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 8,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "event" : "Tab Changed"
   },
   {
-    "$unset" : [
-      "Monthly Subscription Expiration Date"
-    ],
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "id" : 62,
-    "$time" : 1726380502676,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+    "id" : 45,
     "$mp_metadata" : {
-      "$mp_event_id" : "0e3df614be7e2d62",
+      "$mp_event_id" : "5e0f1de874e4faa2",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 9,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "properties" : {
+      "mp_lib" : "swift",
+      "time" : 1726380505250,
+      "$screen_width" : 430,
+      "target" : "4",
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "$screen_height" : 932,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$os_version" : "17.6.1",
+      "$app_version_string" : "1.7.3",
+      "$had_persisted_distinct_id" : true,
+      "$manufacturer" : "Apple",
+      "$os" : "iOS"
+    },
+    "event" : "Tab Changed"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 63,
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "Yearly Subscription" : true,
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
+    "properties" : {
+      "time" : 1726380506327,
+      "mp_lib" : "swift",
+      "$screen_width" : 430,
+      "target" : "0",
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "$screen_height" : 932,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$manufacturer" : "Apple",
+      "$app_version_string" : "1.7.3",
+      "$had_persisted_distinct_id" : true,
+      "$os_version" : "17.6.1",
+      "$os" : "iOS"
     },
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380502676,
+    "id" : 46,
     "$mp_metadata" : {
-      "$mp_event_id" : "05dc6acae755e778",
+      "$mp_event_id" : "eeb8e0389d48732d",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 10,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "event" : "Tab Changed"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 64,
-    "$time" : 1726380502676,
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "Yearly Subscription Expiration Date" : "2025-09-15T10:46:26.000Z",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
-    },
+    "id" : 47,
     "$mp_metadata" : {
-      "$mp_event_id" : "3c089ee70e33f0bf",
+      "$mp_event_id" : "c6cbf273527f2a87",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 11,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "properties" : {
+      "time" : 1726380506989,
+      "$screen_width" : 430,
+      "mp_lib" : "swift",
+      "target" : "4",
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "$screen_height" : 932,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$os_version" : "17.6.1",
+      "$manufacturer" : "Apple",
+      "$had_persisted_distinct_id" : true,
+      "$app_version_string" : "1.7.3",
+      "$os" : "iOS"
+    },
+    "event" : "Tab Changed"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380502686,
-    "$set" : {
-      "$ios_app_release" : "1.7.3",
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "Lifetime Subscription" : false
+    "properties" : {
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$had_persisted_distinct_id" : true,
+      "$app_build_number" : "573",
+      "$os_version" : "17.6.1",
+      "$os" : "iOS",
+      "$screen_height" : 932,
+      "$carrier" : "--",
+      "time" : 1726380507681,
+      "mp_lib" : "swift",
+      "$wifi" : true,
+      "$model" : "iPhone16,2",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "$screen_width" : 430,
+      "$manufacturer" : "Apple",
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$radio" : "LTE, NR",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$lib_version" : "4.3.0",
+      "$app_version_string" : "1.7.3"
     },
-    "id" : 65,
+    "id" : 48,
     "$mp_metadata" : {
-      "$mp_event_id" : "3c162781537f9002",
+      "$mp_event_id" : "7ea91538a0c7e12e",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 12,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
+    "event" : "Pro Banner Clicked"
   },
   {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 66,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380502686,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "Subscription Pro" : true,
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
-    },
     "$mp_metadata" : {
-      "$mp_event_id" : "54d1f455e7807c4b",
+      "$mp_event_id" : "d0c3a6c629f7f46e",
       "$mp_session_start_sec" : 1726380502,
       "$mp_session_seq_id" : 13,
       "$mp_session_id" : "f48f84e4567b5693"
     },
-    "$had_persisted_distinct_id" : true
-  },
-  {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 67,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "Pro" : true,
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
+    "properties" : {
+      "time" : 1726380521971,
+      "$screen_width" : 430,
+      "mp_lib" : "swift",
+      "$model" : "iPhone16,2",
+      "$app_build_number" : "573",
+      "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$carrier" : "--",
+      "distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "$wifi" : true,
+      "$ae_session_length" : 19.399999999999999,
+      "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
+      "token" : "429e715f8c5fb2001995a22b7a43ad11",
+      "$screen_height" : 932,
+      "$radio" : "LTE, NR",
+      "$lib_version" : "4.3.0",
+      "$manufacturer" : "Apple",
+      "$app_version_string" : "1.7.3",
+      "$had_persisted_distinct_id" : true,
+      "$os_version" : "17.6.1",
+      "$os" : "iOS"
     },
-    "$time" : 1726380502686,
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$mp_metadata" : {
-      "$mp_event_id" : "875dbb2b7d634a6e",
-      "$mp_session_start_sec" : 1726380502,
-      "$mp_session_seq_id" : 14,
-      "$mp_session_id" : "f48f84e4567b5693"
-    },
-    "$had_persisted_distinct_id" : true
-  },
-  {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 68,
-    "$time" : 1726380504131,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "Monthly Subscription" : false,
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
-    },
-    "$mp_metadata" : {
-      "$mp_event_id" : "922b61f47bb400a0",
-      "$mp_session_start_sec" : 1726380502,
-      "$mp_session_seq_id" : 15,
-      "$mp_session_id" : "f48f84e4567b5693"
-    },
-    "$had_persisted_distinct_id" : true
-  },
-  {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$unset" : [
-      "Monthly Subscription Expiration Date"
-    ],
-    "id" : 69,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380504131,
-    "$mp_metadata" : {
-      "$mp_event_id" : "1a4eaf846ea96084",
-      "$mp_session_start_sec" : 1726380502,
-      "$mp_session_seq_id" : 16,
-      "$mp_session_id" : "f48f84e4567b5693"
-    },
-    "$had_persisted_distinct_id" : true
-  },
-  {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 70,
-    "$time" : 1726380504131,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "Yearly Subscription" : true,
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
-    },
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$mp_metadata" : {
-      "$mp_event_id" : "84e95d284fcf5d05",
-      "$mp_session_start_sec" : 1726380502,
-      "$mp_session_seq_id" : 17,
-      "$mp_session_id" : "f48f84e4567b5693"
-    },
-    "$had_persisted_distinct_id" : true
-  },
-  {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "id" : 71,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "Yearly Subscription Expiration Date" : "2025-09-15T10:46:26.000Z",
-      "$ios_app_version" : "573",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_release" : "1.7.3"
-    },
-    "$time" : 1726380504131,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$mp_metadata" : {
-      "$mp_event_id" : "f2a0bbe81ddf96a8",
-      "$mp_session_start_sec" : 1726380502,
-      "$mp_session_seq_id" : 18,
-      "$mp_session_id" : "f48f84e4567b5693"
-    },
-    "$had_persisted_distinct_id" : true
-  },
-  {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 72,
-    "$time" : 1726380504249,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$ios_app_release" : "1.7.3",
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "Lifetime Subscription" : false
-    },
-    "$mp_metadata" : {
-      "$mp_event_id" : "0d45e697b5f913ae",
-      "$mp_session_start_sec" : 1726380502,
-      "$mp_session_seq_id" : 19,
-      "$mp_session_id" : "f48f84e4567b5693"
-    },
-    "$had_persisted_distinct_id" : true
-  },
-  {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380504249,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "Subscription Pro" : true,
-      "$ios_version" : "17.6.1",
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
-    },
-    "id" : 73,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$mp_metadata" : {
-      "$mp_event_id" : "1ba575f3c4034408",
-      "$mp_session_start_sec" : 1726380502,
-      "$mp_session_seq_id" : 20,
-      "$mp_session_id" : "f48f84e4567b5693"
-    },
-    "$had_persisted_distinct_id" : true
-  },
-  {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 74,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$set" : {
-      "$swift_lib_version" : "4.3.0",
-      "$ios_version" : "17.6.1",
-      "Pro" : true,
-      "$ios_device_model" : "iPhone16,2",
-      "$ios_lib_version" : "4.3.0",
-      "$ios_app_version" : "573",
-      "$ios_app_release" : "1.7.3"
-    },
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380504249,
-    "$mp_metadata" : {
-      "$mp_event_id" : "80f3074f5c2ce4e6",
-      "$mp_session_start_sec" : 1726380502,
-      "$mp_session_seq_id" : 21,
-      "$mp_session_id" : "f48f84e4567b5693"
-    },
-    "$had_persisted_distinct_id" : true
-  },
-  {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 75,
-    "$time" : 1726380521971,
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$add" : {
-      "$ae_total_app_sessions" : 1
-    },
-    "$mp_metadata" : {
-      "$mp_event_id" : "a1220604bbc3adf3",
-      "$mp_session_start_sec" : 1726380502,
-      "$mp_session_seq_id" : 22,
-      "$mp_session_id" : "f48f84e4567b5693"
-    },
-    "$had_persisted_distinct_id" : true
-  },
-  {
-    "$token" : "429e715f8c5fb2001995a22b7a43ad11",
-    "id" : 76,
-    "$distinct_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$time" : 1726380521971,
-    "$user_id" : "$device:FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$device_id" : "FF348FCF-ECB6-47D7-9C79-3380B6895DCB",
-    "$add" : {
-      "$ae_total_app_session_length" : 19.399999999999999
-    },
-    "$mp_metadata" : {
-      "$mp_event_id" : "afd41e400873a7d0",
-      "$mp_session_start_sec" : 1726380502,
-      "$mp_session_seq_id" : 23,
-      "$mp_session_id" : "f48f84e4567b5693"
-    },
-    "$had_persisted_distinct_id" : true
+    "id" : 49,
+    "event" : "$ae_session"
   }
 ]
