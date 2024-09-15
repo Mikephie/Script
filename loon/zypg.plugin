@@ -1,7 +1,7 @@
 #!name = 作业批改🔐APP解锁
 #!desc = 图像制作 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/wshb.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/zypg.png
 
 [Argument]
 appName = input,"作业批改",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
