@@ -1,7 +1,7 @@
 #!name = 雅俗共赏/高定素材大师🔐APP解锁
 #!desc = 影像制作 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/sjsm.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/scds.png
 
 [Argument]
 appName = input,"雅俗共赏/高定素材大师",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
