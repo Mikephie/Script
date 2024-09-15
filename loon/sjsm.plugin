@@ -1,7 +1,7 @@
 #!name = 试卷扫描🔐APP解锁
 #!desc = 图像制作 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/toonme.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/sjsm.png
 
 [Argument]
 appName = input,"试卷扫描",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
@@ -14,7 +14,3 @@ http-response ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo 
 
 [MITM]
 hostname = appss.baomingding.com
-
-# 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
-# hostname = appss.baomingding.com
-http-response ^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/sjsm.js, requires-body=true, timeout=60, tag=sjsm
