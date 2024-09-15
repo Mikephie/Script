@@ -1,10 +1,12 @@
-#!name = Reddit去广告
-#!desc = 过滤应用内推广，阻止NSFW提示。
-#!openUrl = https://apps.apple.com/app/id1064216828
-#!author = xream[https://github.com/xream]
-#!tag = 去广告
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Reddit.png
-#!date = 2024-01-28 16:25:19
+#!name = Reddit🔐APP解锁
+#!desc = 去广告 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/reddit.png
+
+[Argument]
+appName = input,"Reddit",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
+appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
+isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
 [Script]
 http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path = https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js, requires-body=true, tag = 移除广告
