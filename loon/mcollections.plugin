@@ -56,7 +56,7 @@ http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.github
 #************************************#
 # Duet Display 解锁系列
 # hostname = rdp.duetdisplay.com
-http-response ^https?:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DuetDisplayPro.js, requires-body=true, timeout=60, tag=DuetDisplayPro
+http-response ^https?:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/duetdisplaypro.js, requires-body=true, timeout=60, tag=DuetDisplayPro
 
 #************************************#
 # AdBlock Pro 解锁系列
