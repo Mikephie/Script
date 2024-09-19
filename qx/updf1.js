@@ -18,82 +18,78 @@ hostname = api.updf.com
 *******************************/
 
 
-var mikephie = JSON.parse($response.body);
+var func = JSON.parse($response.body);
 
-    mikephie = {
-  "msg" : "成功",
-  "data" : [
+func = {
+  "msg": "成功",
+  "data": [
     {
-      "expireTime" : -1,
-      "canChangePlan" : false,
-      "planId" : 440262,
-      "productVersions" : {
-
+      "expireTime": -1,
+      "canChangePlan": false,
+      "planId": 309476,
+      "productVersions": {
       },
-      "canSubscription" : false,
-      "subscriptionType" : "lifetime",
-      "platformGoodsId" : [
-        "PNiOS00010004"
+      "canSubscription": false,
+      "subscriptionType": "lifetime",
+      "platformGoodsId": [
       ],
-      "giveawayCanUse" : false,
-      "nextPayTime" : 0,
-      "isShowNextPayTime" : false,
-      "giveawayExpireMonth" : 0,
-      "isShowExpireTime" : false,
-      "productIds" : [
+      "giveawayCanUse": false,
+      "nextPayTime": 0,
+      "isShowNextPayTime": false,
+      "giveawayExpireMonth": 0,
+      "isShowExpireTime": false,
+      "productIds": [
         25646,
         25643,
         25644,
         25645
       ],
-      "canRenewal" : false
+      "canRenewal": false
     },
     {
-      "expireTime" : -1,
-      "canChangePlan" : false,
-      "planId" : 440263,
-      "productVersions" : {
-
+      "expireTime": -1,
+      "canChangePlan": false,
+      "planId": 309477,
+      "productVersions": {
       },
-      "canSubscription" : false,
-      "subscriptionType" : "lifetime",
-      "platformGoodsId" : [
-        "PNiOS00010004"
+      "canSubscription": false,
+      "subscriptionType": "lifetime",
+      "platformGoodsId": [
       ],
-      "giveawayCanUse" : false,
-      "nextPayTime" : 0,
-      "isShowNextPayTime" : false,
-      "giveawayExpireMonth" : 0,
-      "isShowExpireTime" : false,
-      "productIds" : [
+      "giveawayCanUse": false,
+      "nextPayTime": 0,
+      "isShowNextPayTime": false,
+      "giveawayExpireMonth": 0,
+      "isShowExpireTime": false,
+      "productIds": [
         25647
       ],
-      "canRenewal" : false
+      "canRenewal": false
     },
     {
-      "expireTime" : 3742762088000,
-      "canChangePlan" : true,
-      "planId" : 451411,
-      "productVersions" : {
-
+      "expireTime": 3742762088,
+      "canChangePlan": true,
+      "planId": 451411,
+      "productVersions": {
       },
-      "canSubscription" : false,
-      "subscriptionType" : "monthly",
-      "platformGoodsId" : [
+      "canSubscription": false,
+      "subscriptionType": "monthly",
+      "platformGoodsId": [
         "UMiOS00010001"
       ],
-      "giveawayCanUse" : false,
-      "nextPayTime" : 3742762088000,
-      "isShowNextPayTime" : true,
-      "giveawayExpireMonth" : 0,
-      "isShowExpireTime" : false,
-      "productIds" : [
+      "giveawayCanUse": false,
+      "nextPayTime": 3742762088,
+      "isShowNextPayTime": true,
+      "giveawayExpireMonth": 0,
+      "isShowExpireTime": false,
+      "productIds": [
         25652
       ],
-      "canRenewal" : false
+      "canRenewal": false
     }
   ],
-  "code" : 200
-}
- 
-$done({body : JSON.stringify(mikephie)});
+  "code": 200
+
+};
+
+$done({body: JSON.stringify(func)});
