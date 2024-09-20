@@ -1,5 +1,5 @@
-#!name = AdblockPro🔐APP
-#!desc = 网页游览 - 模块
+#!name = 彩云天气🔐APP
+#!desc = 天气预测 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/adblock.png
@@ -21,4 +21,4 @@ caiyun = type=http-response, pattern=^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_d
 
 
 [MITM]
-hostname = %APPEND%, api.adblockpro.app
+hostname = %APPEND%, *.cyapi.cn
