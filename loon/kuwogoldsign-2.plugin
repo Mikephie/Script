@@ -11,7 +11,7 @@ cron = input,"0 9,11,13,15,17,19,21 * * *",tag=定时任务时间,desc=定时任
 cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
 
 [Script]
-http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, tag=kuwo.cookie, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, tag=阿里云盘获取cookie, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
 
 cron {cron} script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kuwocoin.js,tag = 酷我音乐金币签到,enable=true
 
