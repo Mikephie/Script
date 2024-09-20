@@ -10,5 +10,4 @@ grammarlypremiumcrack = type=http-response, pattern=^https?:\/\/subscription\.gr
 
 
 [MITM]
-hostname = %APPEND%, api.adblockpro.app
-hostname = %APPEND% mobile.flightradar24.com
+hostname = %APPEND% subscription.grammarly.com
