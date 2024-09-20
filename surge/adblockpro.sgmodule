@@ -2,7 +2,7 @@
 #!desc = 网页游览 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/itunes.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/adblock.png
 #appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
 [Script]
