@@ -10,4 +10,4 @@ iTunes = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verify
 
 
 [MITM]
-hostname = %APPEND%, api.revenuecat.com
+hostname = %APPEND%, buy.itunes.apple.com
