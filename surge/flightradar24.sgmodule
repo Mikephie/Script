@@ -10,4 +10,4 @@ flightradar24 = type=http-response, pattern=^https://mobile.flightradar24.com/mo
 
 
 [MITM]
-hostname = %APPEND%, mobile.flightradar24.com
+hostname = %APPEND% mobile.flightradar24.com
