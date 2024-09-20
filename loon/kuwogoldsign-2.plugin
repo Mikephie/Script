@@ -7,7 +7,7 @@
 appName = input,"阿里云盘签到",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
 appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
-cron = input,"0 9,11,13,15,17,19,21 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cron = input,"0 7,11,17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
 cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
 
 [Script]
