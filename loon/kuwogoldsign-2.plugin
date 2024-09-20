@@ -13,7 +13,7 @@ cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
 [Script]
 http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, tag=阿里云盘获取cookie, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
 
-cron {cron} script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kuwocoin.js,tag = 阿里云盘任务时间,enable=true
+cron {cron} script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js,tag = 阿里云盘任务时间,enable=true
 
 [MITM]
 hostname = auth.alipan.com,auth.aliyundrive.com
