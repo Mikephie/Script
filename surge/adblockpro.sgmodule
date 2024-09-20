@@ -10,4 +10,4 @@ Adblock Pro = type=https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-si
 
 
 [MITM]
-hostname = %APPEND%, buy.itunes.apple.com
+hostname = %APPEND%, api.adblockpro.app
