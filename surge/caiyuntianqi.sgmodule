@@ -21,4 +21,4 @@ caiyun = type=http-response, pattern=^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_d
 
 
 [MITM]
-hostname = %APPEND%, *.cyapi.cn
+hostname = %APPEND% *.cyapi.cn
