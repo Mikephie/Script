@@ -1,6 +1,7 @@
 #!name = Reddit🚫广告
 #!desc = 去广告 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🚫广告
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/reddit.png
 #appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
