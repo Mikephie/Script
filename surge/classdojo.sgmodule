@@ -10,4 +10,4 @@ classdojo = type=http-response, pattern=^https:\/\/payments\.classdojo\.com\/v1\
 
 
 [MITM]
-hostname = %APPEND%, *.cyapi.cn
+hostname = %APPEND%, payments.classdojo.com
