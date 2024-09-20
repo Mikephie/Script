@@ -1,8 +1,8 @@
-#!name = Reddit🔐APP
-#!desc = 去广告 - 插件
+#!name = Revenuecat🔐APP
+#!desc = Revenuecat - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/reddit.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/revenuecat.png
 #appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
 [General]
