@@ -5,12 +5,10 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/revenuecat.png
 #appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
-[General]
-
-force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
-
 [Script]
-Reddit = type=http-response,pattern=^https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js
+revenuecat1 = type=http-response,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
+revenuecat2 = type=http-request,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js,script-update-interval=0
+
 
 [MITM]
-hostname = %APPEND%, gql.reddit.com, gql-fed.reddit.com
+hostname = %APPEND%, api.revenuecat.com
