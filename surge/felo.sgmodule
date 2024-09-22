@@ -10,4 +10,4 @@ felotk = type=http-request, pattern=^https?:\/\/translator.felo.me\/api\/transla
 
 
 [MITM]
-hostname = %APPEND% subscription.grammarly.com
+hostname = %APPEND% accounts.felo.me,translator.felo.me
