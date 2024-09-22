@@ -1,4 +1,4 @@
-#!name = 作业批改🔐APP
+#!name = AppRaven🔐APP
 #!desc = 工作效率 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
@@ -8,4 +8,4 @@ zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\
 
 
 [MITM]
-hostname = %APPEND% appss.rhinoxlab.com
+hostname = %APPEND% appraven.net
