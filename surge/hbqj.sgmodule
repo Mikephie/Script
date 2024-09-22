@@ -4,7 +4,7 @@
 #!category=🔐APP
 
 [Script]
-cdsp = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js, requires-body=true, max-size=-1, timeout=60
+hbqj = type=http-response, pattern=^https:\/\/h5\.hunbei\.com\/m\/member\/getUserInfo\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbqj.js, requires-body=true, max-size=-1, timeout=60
 
 
 [MITM]
