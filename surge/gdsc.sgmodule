@@ -8,4 +8,4 @@ cdsp = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/app\/accou
 
 
 [MITM]
-hostname = %APPEND% appss.baomingding.com
+hostname = %APPEND% apps-api.lianaishouce.cn, apps-api.lingege.cn
