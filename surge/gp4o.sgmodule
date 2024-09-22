@@ -4,7 +4,8 @@
 #!category=🔐APP
 
 [Script]
-classdojo = type=http-response, pattern=^https:\/\/payments\.classdojo\.com\/v1\/subscribers\/5dc2e328587d3dcf1bee91e0$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js, requires-body=true, max-size=-1, timeout=60
+GTP4ohd = type=http-request, pattern=https://nichousha.sjrjyffs.top/api/img/aiSketch, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4ohd.js, requires-body=true, max-size=-1, timeout=60
+GP4o = type=http-response, pattern=https://nichousha.sjrjyffs.top/api/app/user/getCurrentInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4o.js, requires-body=true, max-size=-1, timeout=60
 
 
 [MITM]
