@@ -1,0 +1,13 @@
+#!name = AdblockPro🔐APP
+#!desc = 图像制作 - 模块
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🔐APP
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/bizhi.png
+
+
+[Script]
+Adblock Pro = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, requires-body=true, max-size=-1, timeout=60
+
+
+[MITM]
+hostname = %APPEND% api.adblockpro.app
