@@ -8,4 +8,4 @@ classdojo = type=http-response, pattern=^https:\/\/payments\.classdojo\.com\/v1\
 
 
 [MITM]
-hostname = %APPEND% payments.classdojo.com
+hostname = %APPEND% appss.baomingding.com
