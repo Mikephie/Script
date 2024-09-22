@@ -4,7 +4,7 @@
 #!category=🔐APP
 
 [Script]
-cdsp = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js, requires-body=true, max-size=-1, timeout=60
+yygdsc = type=http-response, pattern=^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/getUserInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js, requires-body=true, max-size=-1, timeout=60
 
 
 [MITM]
