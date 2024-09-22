@@ -1,0 +1,11 @@
+#!name = 试卷扫描🔐APP
+#!desc = 工作效率 - 模块
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🔐APP
+
+[Script]
+sjsm = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/sjsm.js, requires-body=true, max-size=-1, timeout=60
+
+
+[MITM]
+hostname = %APPEND% appss.baomingding.com
