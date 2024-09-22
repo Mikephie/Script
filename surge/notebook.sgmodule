@@ -8,4 +8,4 @@ sjsm = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/\/app\/acc
 
 
 [MITM]
-hostname = %APPEND% appss.baomingding.com
+hostname = %APPEND% notebook.zoho.com
