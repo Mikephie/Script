@@ -4,7 +4,16 @@
 #!category=🔐APP
 
 [Script]
-sjsm = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/sjsm.js, requires-body=true, max-size=-1, timeout=60
+# VIP 订阅
+notebook-subs = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_expired_plans=true, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-subs.js, requires-body=true, max-size=-1, timeout=60
+notebookMac1 = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_purchase_platform=false, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebookMac1.js, requires-body=true, max-size=-1, timeout=60
+# 100G 空间
+notebook-storage = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-storage.js, requires-body=true, max-size=-1, timeout=60
+# VIP 多项权益
+notebook-all = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template&platform=ios, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-all.js, requires-body=true, max-size=-1, timeout=60
+notebookMac2 = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebookMac2.js, requires-body=true, max-size=-1, timeout=60
+# Token
+#notebook-token = type=http-response, pattern=^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-token.js, requires-body=true, max-size=-1, timeout=60
 
 
 [MITM]
