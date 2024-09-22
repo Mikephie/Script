@@ -10,4 +10,4 @@ Wallcraft壁纸 = type=http-response,pattern=https?:\/\/billing-ios\.wallpapersc
 
 
 [MITM]
-hostname = %APPEND% api.adblockpro.app
+hostname = %APPEND% billing-ios.wallpaperscraft.com
