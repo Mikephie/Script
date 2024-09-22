@@ -8,4 +8,4 @@ kkyun = type=http-response, pattern=^https?:\/\/kkyun.com\/api\/(accounts\/user|
 
 
 [MITM]
-hostname = %APPEND% clip.tto321.cn
+hostname = %APPEND% kkyun.com
