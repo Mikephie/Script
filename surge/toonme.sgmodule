@@ -9,4 +9,4 @@ ToonMe = type=http-response,pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/
 
 
 [MITM]
-hostname = %APPEND% subscription-api.lyrebirdstudio.net
+hostname = %APPEND% purchases.ws.pho.to
