@@ -1,0 +1,12 @@
+#!name = Filmix🔐APP
+#!desc = 图像制作 - 模块
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🔐APP
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/facelab.png
+
+[Script]
+Filmix = type=http-response,pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
+
+
+[MITM]
+hostname = %APPEND% appv2.filmix.com.cn
