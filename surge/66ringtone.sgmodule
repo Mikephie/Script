@@ -4,7 +4,7 @@
 #!category=🔐APP
 
 [Script]
-ringtonemaker = type=http-response, pattern=^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ringtonemaker.js, requires-body=true, max-size=-1, timeout=60
+kkyun = type=http-response, pattern=^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kkyun.js, requires-body=true, max-size=-1, timeout=60
 
 
 [MITM]
