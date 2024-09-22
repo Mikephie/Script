@@ -6,7 +6,7 @@
 #appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
 [Script]
-flightradar24 = type=http-response, pattern=^https://mobile.flightradar24.com/mobile/(user-session|subscribe), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js, requires-body=true, max-size=-1, timeout=60
+Filmix = type=http-response,pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
 
 
 [MITM]
