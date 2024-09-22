@@ -3,13 +3,8 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/appraven.png
 
-[Argument]
-appName = input,"AppRaven",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
-appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
-isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
-
 [Script]
-http-response https://appraven.net/appraven/graphql script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, timeout=60, tag=AppRaven, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+http-response https://appraven.net/appraven/graphql script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, timeout=60, tag=AppRaven
 
 
 [MITM]

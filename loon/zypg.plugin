@@ -3,13 +3,8 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/zypg.png
 
-[Argument]
-appName = input,"作业批改",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
-appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
-isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
-
 [Script]
-http-response https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, timeout=60, tag=zypg, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+http-response https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, timeout=60, tag=zypg
 
 
 [MITM]

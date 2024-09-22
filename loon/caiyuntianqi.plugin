@@ -3,14 +3,9 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/caiyun.png
 
-[Argument]
-appName = input,"彩云天气",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
-appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
-isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
-
 [Script]
 # 赏叶赏花
-http-response ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyuno, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+http-response ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyun
 
 # 解锁vip
 http-response ^https:\/\/biz\.cyapi\.cn\/v2\/user script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyun
@@ -20,7 +15,6 @@ http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) 
 
 # 7.20.0版本显示VIP
 http-response ^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyun
-http-response ^https:\/\/api\.adblockpro\.app\/verify script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js, requires-body=true, timeout=60, tag=adblockpro, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
 
 
 [MITM]

@@ -3,13 +3,8 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/faceswapper.png
 
-[Argument]
-appName = input,"FaceSwapper",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
-appCategory = select,"🔐APP","✅签到","🚫广告","🛠️工具",tag=app的分类
-isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
-
 [Script]
-http-response ^https?:\/\/api-sgp\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceSwapper.js, requires-body=true, timeout=60, tag=FaceSwapper, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+http-response ^https?:\/\/api-sgp\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/FaceSwapper.js, requires-body=true, timeout=60, tag=FaceSwapper
 
 
 [MITM]

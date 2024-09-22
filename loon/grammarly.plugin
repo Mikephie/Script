@@ -3,13 +3,8 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/grammarly.png
 
-[Argument]
-appName = input,"Grammarly",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
-appCategory = select,"🔐APP","✅签到","🚫广告","🛠️工具",tag=app的分类
-isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
-
 [Script]
-http-response ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrammarlyPremiumCrack.js,requires-body=1,tag=Grammarly解锁订阅, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+http-response ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrammarlyPremiumCrack.js,requires-body=1,tag=Grammarly解锁订阅
 
 
 [MITM]
