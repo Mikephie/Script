@@ -4,7 +4,7 @@
 #!category=🔐APP
 
 [Script]
-zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, max-size=-1, timeout=60
+AppRaven = type=http-response, pattern=https://appraven.net/appraven/graphql, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, max-size=-1, timeout=60
 
 
 [MITM]
