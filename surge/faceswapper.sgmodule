@@ -9,4 +9,4 @@ FaceLab = type=http-response, pattern=^https?:\/\/subscription-api\.lyrebirdstud
 
 
 [MITM]
-hostname = %APPEND% subscription-api.lyrebirdstudio.net
+hostname = %APPEND% api-*.facereplacerext.com
