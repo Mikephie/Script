@@ -1,4 +1,4 @@
-#!name = 彩豆视频水印宝🔐APP
+#!name = 婚贝请柬🔐APP
 #!desc = 媒体制作 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
@@ -8,4 +8,4 @@ cdsp = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/app\/accou
 
 
 [MITM]
-hostname = %APPEND% appss.baomingding.com
+hostname = %APPEND% h5.hunbei.com
