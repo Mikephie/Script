@@ -4,7 +4,7 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/sdvpn.png
 
 [Script]
-http-response ^http:\/\/.*\.aliyunga0019\.com\/saidun\/version2\/v2_node_protocol url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/sdvpn.js, requires-body=true, timeout=60, tag=sdvpn
+http-response ^http:\/\/.*\.aliyunga0019\.com\/saidun\/version2\/v2_node_protocol script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/sdvpn.js, requires-body=true, timeout=60, tag=sdvpn
 
 
 [MITM]
