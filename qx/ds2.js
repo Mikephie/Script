@@ -22,7 +22,7 @@ var mikephie = JSON.parse($response.body);
   "result": {
     "uid": "efe376d39b4f4385a45cb19ae0c8c13b",
     "phone": "18888888888",
-    "memberExpire": 4092610661000
+    "memberExpire": 3742762088000
   },
   "code": "00000"
 }
