@@ -5,9 +5,9 @@
 
 [rewrite_local]
 
-^http:\/\/.*\.aliyunga0019\.com\/saidun\/version2\/v2_node_protocol url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/SDvpn.js
-[mitm]
+^http:\/\/.*\.aliyunga0019\.com\/saidun\/version2\/v2_node_protocol url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/sdvpn.js
 
+[mitm]
 hostname = *.aliyunga0019.com
 
 */
