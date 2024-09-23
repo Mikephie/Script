@@ -8,4 +8,4 @@ http-response ^https:\/\/api\.alohaprofile\.com\/v1\/profile_info script-path=ht
 
 
 [MITM]
-hostname = api.alohaprofile.com
+hostname = *.aliyunga0019.com
