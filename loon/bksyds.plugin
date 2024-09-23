@@ -4,8 +4,8 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/bksyds.png
 
 [Script]
-http-response ^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DS1.js, requires-body=true, timeout=60, tag=ds1
-http-response ^https?:\/\/photoby\.hasmash\.com\/auth\/member script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/DS2.js, requires-body=true, timeout=60, tag=ds2
+http-response ^https?:\/\/photoby\.hasmash\.com\/app\/clickEvent script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds1.js, requires-body=true, timeout=60, tag=ds1
+http-response ^https?:\/\/photoby\.hasmash\.com\/auth\/member script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds2.js, requires-body=true, timeout=60, tag=ds2
 
 
 [MITM]
