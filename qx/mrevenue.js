@@ -15,7 +15,7 @@ hostname = api.revenuecat.com
 const mikephie = {};
 const mikephie76 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 
-const forbiddenApps = ['Fileball', 'APTV', 'ShellBean', 'Mizframa'];
+const forbiddenApps = ['Fileball', 'APTV', 'ShellBean', 'mizframa'];
 const ua = $request.headers['User-Agent'] || '';
 const body = $request.body || '';
 const forbiddenAppFound = forbiddenApps.some(appName => ua.includes(appName) || body.includes(appName));
