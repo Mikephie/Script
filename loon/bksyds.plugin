@@ -9,4 +9,4 @@ http-response ^https?:\/\/photoby\.hasmash\.com\/auth\/member script-path=https:
 
 
 [MITM]
-hostname = photoby.hasmash.combksy
+hostname = photoby.hasmash.com
