@@ -4,8 +4,8 @@
 #!category=🔐APP
 
 [Script]
-tpzwz = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/tpzwz.js, requires-body=true, max-size=-1, timeout=60
+tpzwz = type=http-response, pattern=http://api\.528529\.com/apple_product/, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/tpzwz.js, requires-body=true, max-size=-1, timeout=60
 
 
 [MITM]
-hostname = %APPEND% appss.rhinoxlab.com
+hostname = %APPEND% api.528529.com
