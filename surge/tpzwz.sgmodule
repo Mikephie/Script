@@ -1,0 +1,11 @@
+#!name = 图片转文字🔐APP
+#!desc = 工作效率 - 模块
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🔐APP
+
+[Script]
+tpzwz = type=http-response, pattern=http://api\.528529\.com/apple_product/, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/tpzwz.js, requires-body=true, max-size=-1, timeout=60
+
+
+[MITM]
+hostname = %APPEND% api.528529.com
