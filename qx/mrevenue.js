@@ -86,7 +86,7 @@ if (typeof $response == "undefined") {
     }
   }
   if (!name || !ids) {
-    data = { "purchase_date": "2024-04-04T04:04:04Z", "expires_date": "2088-08-08T08:08:08Z" };
+    data = { "purchase_date": "2024-04-04T04:04:04Z", "expires_date": "2088-08-08T08:08:08Z" , "grace_period_expires_date": "2088-08-08T08:08:08Z"};
     name = 'pro';
     ids = 'com.mikephie.pro';
   }
