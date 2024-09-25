@@ -45,6 +45,7 @@ const appList = {
   'AllMyBatteries': { method: 'v1', product_id: 'AllMyBatteries_Ultimate' },
   'Packet': { method: 'v1', product_id: 'com.aaaalab.nepacket.iap.full' },
   'PhotoCollagePro': { method: 'v1', product_id: 'PHOTABLE_PREMIUM' },  //Photable-腹肌P图神器
+  'iscreen': { method: 'v1', product_id: 'com.zerone.hidesktop.forever' },  //iscreen
   
   // 第二个脚本的应用列表
   'IconChange': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "iconeryearvip", latest: "mikephie" },
