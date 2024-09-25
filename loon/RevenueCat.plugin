@@ -4,8 +4,8 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/revenuecat.png
 
 [Script]
-http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, requires-body=true, tag=Revenuecat解锁系列
-http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, requires-body=false, tag=mrevenue
+http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, requires-body=true, tag=Revenuecat解锁系列
+http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js, requires-body=false, tag=mrevenue
 
 [MITM]
 hostname = api.revenuecat.com
