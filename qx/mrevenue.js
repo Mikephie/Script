@@ -36,26 +36,27 @@ const list = {
   'CountDuck': { name: 'premium', id: 'Lifetime', cm: 'sjb' },  // 倒数鸭
   'ScreenRecordCase': { name: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra', cm: 'sjb' },  // 手机壳套图
   'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus', cm: 'sja' },  // 汇率转换
-  'Spark': { name: 'premium', id: 'spark_5999_1y_1w0', cm: 'sjb' },  // 邮箱
+  'Spark': { name: 'premium', id: 'spark_5999_1y_1w0', cm: 'sja' },  // 邮箱
   'ShellBoxKit': { name: 'pro', id: 'ShellBoxKit.Lifetime', cm: 'sjb' },  // 服务器监控
-  'IDM': { name: 'premium', id: 'sub_yearly_idm', cm: 'sjb' },  // IDM-下载
-  'Whisper': { name: 'all_features', id: 'whisperai_80_y', cm: 'sjb' },  // Whisper AI
-  'PhotoRoom': { name: 'business', id: 'com.background.business.yearly', cm: 'sjb' },  // 图像编辑
-  'TouchRetouchBasic': { name: 'premium', id: 'tr5_yearlysubsc_20dlrs_1', cm: 'sjb' },  // 图像移除
+  'IDM': { name: 'premium', id: 'sub_yearly_idm', cm: 'sja' },  // IDM-下载
+  'Whisper': { name: 'all_features', id: 'whisperai_80_y', cm: 'sja' },  // Whisper AI
+  'PhotoRoom': { name: 'business', id: 'com.background.business.yearly', cm: 'sja' },  // 图像编辑
+  'TouchRetouchBasic': { name: 'premium', id: 'tr5_yearlysubsc_20dlrs_1', cm: 'sja' },  // 图像移除
   'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int', cm: 'sjb' },  // Drops外语
-  'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month', cm: 'sjb' },  // 花样文字
-  'EraseIt': { name: 'ProVersionLifeTime', id: 'com.uzero.cn.eraseit.premium1.fromyear', cm: 'sjb' },  // Smoothrase-AI擦除照片
+  'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month', cm: 'sja' },  // 花样文字
+  'EraseIt': { name: 'ProVersionLifeTime', id: 'com.uzero.cn.eraseit.premium1.fromyear', cm: 'sja' },  // Smoothrase-AI擦除照片
   'DHWaterMarkManager': { name: 'Vip', id: 'lifetimeVIP_001', cm: 'sjb' },  // 水印熊
   '%E8%B5%84%E6%BA%90%E6%90%AC%E8%BF%90%E5%A4%A7%E5%B8%88': { name: 'SaveTikYoutu_common', id: 'LifetimeSubscription', cm: 'sjb' },  // 资源搬运大师
-  'Yosum': { name: 'Premium', id: 'yosum_999_1year', cm: 'sjb' },  // Yosum
-  'iplayTV': { name: 'com.ll.btplayer.12', id: 'com.ll.btplayer.12', cm: 'sjb' },  // ntplayer
+  'Yosum': { name: 'Premium', id: 'yosum_999_1year', cm: 'sja' },  // Yosum
+  'iplayTV': { name: 'com.ll.btplayer.12', id: 'com.ll.btplayer.12', cm: 'sja' },  // ntplayer
   'TQBrowser': { name: 'pro_lt', id: 'com.tk.client.lifetime', cm: 'sjb' },  // Teak浏览器
-  'Python3IDE': { name: 'pro', id: 'python3ide_six_month', cm: 'sjb' },  // Python3IDE
-  'CallAnnie': { name: 'ai.animato.callannie.entitlement.pro0', id: 'ai.animato.callannie.proyearly1', cm: 'sjb' },  // CallAnnie
+  'Python3IDE': { name: 'pro', id: 'python3ide_six_month', cm: 'sja' },  // Python3IDE
+  'CallAnnie': { name: 'ai.animato.callannie.entitlement.pro0', id: 'ai.animato.callannie.proyearly1', cm: 'sja' },  // CallAnnie
   'VideoToLive': { name: 'Premium', id: 'video_to_live_premium', cm: 'sjb' },  // VideoToLive
   'Themy': { name: 'fonts_premium', id: 'lifetime', cm: 'sjb' },  // Fonts-微信字体
   'BabyCare': { name: 'pro', id: 'KiddoKeeper_38_LifeTime', cm: 'sjb' },  // 小守护
   'MenuBox': { name: 'premium', id: 'com.menubox.premium', cm: 'sja' },  // MenuBox
+  'Chatme': { name: 'premium', id: 'chatme_premium_year_discount', cm: 'sja' },  // Chatme
 };
 
 if (typeof $response == "undefined") {
