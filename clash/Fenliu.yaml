@@ -2,6 +2,12 @@
 # 规则统计:13
 
 payload:
+  #Mix
+  - DOMAIN-SUFFIX,byteimg.com
+  # Ryde
+  - DOMAIN-KEYWORD,ryde
+  # Tada
+  - DOMAIN-KEYWORD,driver.tada
   # Gov SG
   - DOMAIN-KEYWORD,gov.sg
   # Streamlink org
