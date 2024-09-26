@@ -58,7 +58,7 @@ const list = {
   'BabyCare': { name: 'pro', id: 'KiddoKeeper_38_LifeTime', cm: 'sjb' },  // 小守护
   'MenuBox': { name: 'premium', id: 'com.menubox.premium', cm: 'sja' },  // MenuBox
   'Chatme': { name: 'premium', id: 'chatme_premium_year_discount', cm: 'sja' },  // Chatme
-  'Chatme': { name: 'premium', id: 'chatme_premium_year_discount', cm: 'sja' },  // Chatme
+  'GreenNet': { name: 'premium', id: 'chatme_premium_year_discount', cm: 'sja' },  // GreenNetVPN
 };
 
 if (typeof $response == "undefined") {
