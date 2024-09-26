@@ -8,4 +8,4 @@ hbqj = type=http-response, pattern=^https:\/\/h5\.hunbei\.com\/m\/member\/getUse
 
 
 [MITM]
-hostname = %APPEND% h5.hunbei.com
+hostname = h5.hunbei.com
