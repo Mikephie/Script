@@ -238,7 +238,7 @@ felotk = type=http-request, pattern=^https?:\/\/translator.felo.me\/api\/transla
 aloha = type=http-response, pattern=^https:\/\/api\.alohaprofile\.com\/v1\/profile_info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js, requires-body=true, max-size=-1, timeout=60
 
 # Aloha 游览器 （永久会员）
-# hostname = api.alohaprofile.com
+# hostname = be.aimirror.fun
 aimirror = type=http-response, pattern=^https:\/\/be\.aimirror\.fun\/(query_is_vip|draw|users\/video_render_count|query_consumable_quota|users\/discount), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aimirror.js, requires-body=true, max-size=-1, timeout=60
 
 # Aloha 游览器 （永久会员）
@@ -246,4 +246,4 @@ aimirror = type=http-response, pattern=^https:\/\/be\.aimirror\.fun\/(query_is_v
 aloha = type=http-response, pattern=^https:\/\/api\.alohaprofile\.com\/v1\/profile_info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com
+hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com, be.aimirror.fun, 
