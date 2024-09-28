@@ -4,7 +4,7 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/emby.png
 
 [Script]
-http-request ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycrack.js, timeout=60, tag=embycrack
+http-response ^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycrack.js, requires-body=true, tag=Emby(解锁播放权限)
 
 
 [MITM]
