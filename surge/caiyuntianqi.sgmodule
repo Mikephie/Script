@@ -6,18 +6,14 @@
 #appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
 [Script]
-# 赏叶赏花
-caiyun = type=http-response, pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
+# 广告净化/弹窗AD/去除亲友卡/去除悬浮模块
+caiyuntianqi = type=http-response, pattern=^https?:\/\/(ad|biz|wrapper|starplucker)\.cyapi\.cn\/.+\/((activity\?app_name|operation|config|req\?app_name=weather)|v\d\/(trial_card\/info|entries|friend_cards|token\/device)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
 
-# 解锁vip
-caiyun = type=http-response, pattern=^https:\/\/biz\.cyapi\.cn\/v2\/user, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
+# VIP信息
+caiyuntianqi = type=http-response, pattern=^https?:\/\/(biz|wrapper|starplucker)\.cyapi\.cn\/(v\d\/user\?app_name|.+\/v\d\/(vip_info|user_detail)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
 
-# 卫星云图 48小时预报
-caiyun = type=http-request, pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60
-
-# 7.20.0版本显示VIP
-caiyun = type=http-response, pattern=^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
-
+# SVIP地图-48小时预报
+caiyuntianqi = type=http-request, pattern=^https?:\/\/(api|wrapper)\.cyapi\.cn\/v\d\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60
 
 
 [MITM]
