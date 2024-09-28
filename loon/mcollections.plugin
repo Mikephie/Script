@@ -13,25 +13,6 @@ force-http-engine-hosts = gql.reddit.com, gql-fed.reddit.com
 
 [URL Rewrite]
 #************************************#
-# 普通版彩云天气广告
-^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather - reject-dict
-
-#************************************#
-# 酷我音乐广告
-^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
-^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ - reject
-^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/Ad - reject
-# 酷我听书广告
-https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright - reject-dict
-https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
-# 酷我音乐添加已购音乐
-^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ header http://musicpay.kuwo.cn/music.pay?uid=2
-
-#************************************#
-# iScreen小组件辅助解锁
-^https?:\/\/pay\.kuso\.xyz\/pay\/pay-check - reject-200
-
-#************************************#
 # 咪咕，电影猎手，去开屏广告
 ^https://.*miguvideo\.com/request/sdk - reject-200
 ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config\?pack - reject-dict
