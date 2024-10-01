@@ -48,6 +48,7 @@ const appList = {
   'iscreen': { method: 'v1', product_id: 'com.zerone.hidesktop.forever' },  //iscreen
   
   // 第二个脚本的应用列表
+  'com.casttv.remotetv': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" },
   'IconChange': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "iconeryearvip", latest: "mikephie" },
   'life.journal.diary': { method: 'v2', cm: 'timeb', hx: 'hxpbda', id: "life.journal.diary.lifetime", latest: "mikephie" },
   'com.floatcamellia.motionninja': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "com.floatcamellia.motionninja.yearlyvip", latest: "mikephie" },
