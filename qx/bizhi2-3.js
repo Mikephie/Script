@@ -14,50 +14,65 @@ hostname = leancloud.emotionwp.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "results": [
+  "status": 0,
+  "receipt": {
+    "in_app": [
+      {
+        "quantity": "1",
+        "purchase_date_ms": "17277412880000",
+        "expires_date": "2088-08-08 08:08:08 Etc\/GMT",
+        "expires_date_pst": "2088-08-08 08:08:08 America\/Los_Angeles",
+        "is_in_intro_offer_period": "false",
+        "transaction_id": "300002000603223",
+        "is_trial_period": "false",
+        "original_transaction_id": "300002000603223",
+        "purchase_date": "2024-10-01 08:08:08 Etc\/GMT",
+        "product_id": "com.chowjoe.wp2free.year.pro",
+        "original_purchase_date_pst": "2024-10-01 08:08:08 America\/Los_Angeles",
+        "in_app_ownership_type": "PURCHASED",
+        "subscription_group_identifier": "20431945",
+        "original_purchase_date_ms": "17277412880000",
+        "web_order_line_item_id": "300002000603223",
+        "expires_date_ms": "3742762088000",
+        "purchase_date_pst": "2024-10-01 08:08:08 America\/Los_Angeles",
+        "original_purchase_date": "2024-10-01 08:08:08 Etc\/GMT"
+      }
+    ]
+  },
+  "latest_receipt_info": [
     {
-      "nickName": "Mikephie",
-      "svipType": "year_pro",
-      "isVIP": 1,
-      "sex": "1",
-      "vipEndTime": 3742762088,
-      "favCount": 0,
-      "createdAt": "2023-11-19T09:29:18.937Z",
-      "vipType": "year_pro",
-      "svipEndTimeFormat": "2088-08-08",
-      "svipEndTime": 3742762088,
-      "updatedAt": "2024-08-11T07:23:01.886Z",
-      "loginType": 3,
-      "downloadCount": 3,
-      "objectId": "6559d56eb87b3b5ada6602a7",
-      "coin": 888888,
-      "vipEndTimeFormat": "2088-08-08",
-      "warmStartCount": 20,
-      "isSVIP": 1,
-      "coldStartCount": 0,
-      "headImageUrl": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
-      "userId": "000213.21970f036fd0454a99d29d8cebe086cd.0929"
-    },
-    {
-      "coin": 888888,
-      "updatedAt": "2023-11-19T09:35:30.531Z",
-      "vipEndTime": 3742762088,
-      "sex": "1",
-      "isSVIP": 1,
-      "favCount": 0,
-      "warmStartCount": 0,
-      "userId": "000213.21970f036fd0454a99d29d8cebe086cd.0929",
-      "loginType": 3,
-      "nickName": "Mikephie",
-      "isVIP": 1, 
-      "headImageUrl": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
-      "downloadCount": 0,
-      "objectId": "6559d6e271280637ee6efd63",
-      "createdAt": "2023-11-19T09:35:30.531Z",
-      "svipEndTime": 3742762088,
-      "coldStartCount": 0
+      "quantity": "1",
+      "purchase_date_ms": "17277412880000",
+      "expires_date": "2088-08-08 08:08:08 Etc\/GMT",
+      "expires_date_pst": "2088-08-08 08:08:08 America\/Los_Angeles",
+      "is_in_intro_offer_period": "false",
+      "transaction_id": "300002000603223",
+      "is_trial_period": "false",
+      "original_transaction_id": "300002000603223",
+      "purchase_date": "2024-10-01 08:08:08 Etc\/GMT",
+      "product_id": "com.chowjoe.wp2free.year.pro",
+      "original_purchase_date_pst": "2024-10-01 08:08:08 America\/Los_Angeles",
+      "in_app_ownership_type": "PURCHASED",
+      "subscription_group_identifier": "20431945",
+      "original_purchase_date_ms": "17277412880000",
+      "web_order_line_item_id": "300002000603223",
+      "expires_date_ms": "3742762088000",
+      "purchase_date_pst": "2024-10-01 08:08:08 America\/Los_Angeles",
+      "original_purchase_date": "2024-10-01 08:08:08 Etc\/GMT"
     }
-  ]
+  ],
+  "latest_receipt": "mikephie",
+  "environment": "Production",
+  "pending_renewal_info": [
+    {
+      "product_id": "com.chowjoe.wp2free.year.pro",
+      "original_transaction_id": "300002000603223",
+      "auto_renew_product_id": "com.chowjoe.wp2free.year.pro",
+      "auto_renew_status": "1"
+    }
+  ],
+  "warning": "仅供学习，禁止转载或售卖",
+  "Telegram": "https:\/\/t.me\/mikephie"
 }
 
 $done({body : JSON.stringify(mikephie)});

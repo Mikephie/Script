@@ -1,7 +1,18 @@
+/**************************************
+
 // iTunes-系列解锁合集（合并版）
 // 更新日期：2024-09-10
 // 脚本作者：mikephie (重构与合并由 AI 辅助)
 // 电报频道：https://t.me/mikephie
+
+[rewrite_local]
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/iTunes.js
+
+[mitm]
+hostname = buy.itunes.apple.com
+
+*************************************/
+
 
 const EXPIRES_DATE_MS = "3742762088000";   // 2088-08-08 08:08:08 GMT
 const EXPIRATION_DATE = "2088-08-08 08:08:08 Etc/GMT";
