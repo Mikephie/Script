@@ -59,7 +59,7 @@ const appList = {
   'iscreen': { method: 'v1', product_id: 'com.zerone.hidesktop.forever' },  //iscreen
   
   // 第二个脚本的应用列表
-  'qxwp%20copy': { method: 'v2', cm: 'timea', hx: 'hxpdb', id: "com.chowjoe.wp2free.year.pro", latest: "mikephie" },
+  'qxwp%20copy': { method: 'v2', cm: 'timeb', hx: 'hxpdb', id: "com.chowjoe.wp2free.year.pro", latest: "mikephie" },
   'com.casttv.remotetv': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" },
   'IconChange': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "iconeryearvip", latest: "mikephie" },
   'life.journal.diary': { method: 'v2', cm: 'timeb', hx: 'hxpbda', id: "life.journal.diary.lifetime", latest: "mikephie" },
