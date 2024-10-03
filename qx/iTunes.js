@@ -46,7 +46,7 @@ const appList = {
   'com.BertonYc.ScannerOCR': { method: 'v1', product_id: 'Scanner_Subscibe_Permanent' },
   'darkWeb': { method: 'v1', product_id: 'dforce_unlock_all_functions' },
   'VideoHelper': { method: 'v1', product_id: 'vip_service' },
-  //'qxwp%20copy': { method: 'v1', product_id: 'com.chowjoe.wp2free.year.pro' },
+   'qxwp%20copy': { method: 'v1', product_id: 'com.chowjoe.wp2free.year.pro' },
   'PhimCiaj': { method: 'v1', product_id: 'com.jiancent.calligraphymaster.lifetime' },
   'WiseMate': { method: 'v1', product_id: 'wiseart.ai.ios.week.nofree' },
   'CodeSnippet': { method: 'v1', product_id: 'it.beatcode.codesnippetpro.annualSubscription' },
