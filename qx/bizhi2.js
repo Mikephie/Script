@@ -17,13 +17,13 @@ hostname = leancloud.emotionwp.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var mikephie = JSON.parse($response.body);
 const user = /classes\/wpf_account/;
 const xiazai = /classes/;
 const save = /batch\/save/;
 
 if(user.test($request.url)){
-  chxm1023.results = [{
+  mikephie.results = [{
       "updatedAt" : "2023-09-09T09:09:09Z",
       "vipEndTime" : 3742762088000,
       "svipEndTimeFormat" : "2088-08-08",
@@ -37,14 +37,14 @@ if(user.test($request.url)){
       "objectId" : "666666666666666666666666",
       "createdAt" : "2023-09-09T09:09:09Z",
       "svipEndTime" : 3742762088000,
-      "coin" : 888888
+      "coin" : 88888888
   }];
 }
 
 if(xiazai.test($request.url)){
-  chxm1023.results.forEach(item => {
+  mikephie.results.forEach(item => {
     if ('needVIP' in item && 'needSVIP' in item && 'needCoin' in item && 'score' in item) {
-      item.score = 888888;
+      item.score = 88888888;
       item.needVIP = 0;
       item.needSVIP = 0;
       item.needCoin = 0;
@@ -53,7 +53,7 @@ if(xiazai.test($request.url)){
 }
 
 if(save.test($request.url)){
-  chxm1023 = {
+  mikephie = {
   "666666666666666666666666" : {
     "updatedAt" : "2023-09-09T09:09:09Z",
     "objectId" : "666666666666666666666666"
