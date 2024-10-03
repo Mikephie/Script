@@ -1,24 +1,21 @@
-/******************************
+/*************************************
 
-脚本名称: Careserver
-下载地址：商店
-脚本作者：Mikephie
-更新时间：10 May 2024 at 14:25
-问题反馈：TG
-使用声明：⚠️此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
-
-*******************************
+>「 脚本名称 」         DreamFace解锁Pro
+>「 脚本作者 」         M̆̈̆̈ĭ̈̆̈k̆̈̆̈ĕ̈
+>「 电报频道 」         https://t.me/TrollStoreKios 
+>「 更新时间 」         2024-09-26
+>「 注意事项 」         如需引用请注明出处，谢谢合作！
+>「 注意事项 」         使用此脚本，会导致AppleStore无法切换账户，解决方法[关闭QX切换账户，或关闭MITM，或删除脚本，或去设置媒体与购买项目处切换ID]
+>「 额外说明 」         请勿传播或售卖此脚本
 
 [rewrite_local]
+^https?:\/\/dreamfaceapp\.com\/df-server\/user\/save_user_login url script-response-body https://raw.githubusercontent.com/Mike-offers/Rewrite/refs/heads/master/QuantumultX/DreamFace.js
 
-^https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/careserver.js
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueheader.js
+[mitm]
+hostname = dreamfaceapp.com
 
-[mitm] 
+*************************************/
 
-hostname = api.revenuecat.com
-
-*******************************/
 
 var mikephie = JSON.parse($response.body);
 
