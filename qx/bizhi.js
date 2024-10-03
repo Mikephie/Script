@@ -21,7 +21,7 @@ var mikephie = JSON.parse($response.body);
     mikephie = {
   "results": [
     {
-      "nickName": "壁纸用户",
+      "nickName": "Mikephie",
       "svipType": "year_pro",
       "isVIP": 1,
       "sex": "1",
@@ -35,7 +35,7 @@ var mikephie = JSON.parse($response.body);
       "loginType": 3,
       "downloadCount": 5,
       "objectId": "6559d56eb87b3b5ada6602a7",
-      "coin": -15.999,
+      "coin": 88888888,
       "vipEndTimeFormat": "1970-01-01",
       "warmStartCount": 25,
       "isSVIP": 1,
