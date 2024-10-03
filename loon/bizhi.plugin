@@ -1,7 +1,7 @@
 #!name = 壁纸🔐APP解锁
 #!desc = 精选壁纸 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/bizhi.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/bizhi.png
 
 [Script]
 http-response ^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account? script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, timeout=60, tag=bizhi
