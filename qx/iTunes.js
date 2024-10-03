@@ -13,7 +13,6 @@ hostname = buy.itunes.apple.com
 
 *************************************/
 
-
 const EXPIRES_DATE_MS = "3742762088000";   // 2088-08-08 08:08:08 GMT
 const EXPIRATION_DATE = "2088-08-08 08:08:08 Etc/GMT";
 const PURCHASE_DATE_MS = "17277412880000";  // 2024-08-08 08:08:08 GMT
@@ -59,7 +58,6 @@ const appList = {
   'iscreen': { method: 'v1', product_id: 'com.zerone.hidesktop.forever' },  //iscreen
   
   // 第二个脚本的应用列表
-  //'qxwp%20copy': { method: 'v2', cm: 'timea', hx: 'hxpda', id: "com.chowjoe.wp2free.year.pro", latest: "mikephie" },
   'com.casttv.remotetv': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" },
   'IconChange': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "iconeryearvip", latest: "mikephie" },
   'life.journal.diary': { method: 'v2', cm: 'timeb', hx: 'hxpbda', id: "life.journal.diary.lifetime", latest: "mikephie" },
