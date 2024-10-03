@@ -1,0 +1,11 @@
+#!name = 壁纸🔐APP解锁
+#!desc = 精选壁纸 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/wallcraft.png
+
+[Script]
+http-response ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js, requires-body=true, timeout=60, tag=Wallpaperscraft
+
+
+[MITM]
+hostname = billing-ios.wallpaperscraft.com
