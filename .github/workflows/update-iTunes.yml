@@ -24,8 +24,8 @@ jobs:
 
       - name: Replace Date in Script
         run: |
-          sed -i "s/\$NOW_MS/$PURCHASE_DATE_MS/g" /qx/iTunestest.js
-          sed -i "s/\$NOW/'$PURCHASE_DATE'/g" /qx/iTunestest.js
+          sed -i "s/\$NOW_MS/$PURCHASE_DATE_MS/g" ./qx/iTunestest.js
+          sed -i "s/\$NOW/'$PURCHASE_DATE'/g" ./qx/iTunestest.js
 
       - name: Commit and Push Changes
         run: |
