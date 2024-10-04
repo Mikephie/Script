@@ -26,7 +26,7 @@ jobs:
             
             const content = \`const PURCHASE_DATE_MS = \"\${ms}\";\nconst PURCHASE_DATE = \"\${formatted}\";\`
             
-            fs.writeFileSync('qx/dates.js', content);
+            fs.writeFileSync('qx/iTunestest.js', content);
           "
           
       - name: Commit and push if changed
