@@ -14,10 +14,8 @@ hostname = buy.itunes.apple.com
 *************************************/
 
 // 获取当前日期和时间
-const now = new Date();
-const PURCHASE_DATE_MS = "888";
-const PURCHASE_DATE = "888 08:08:08 Etc/GMT";
-
+const PURCHASE_DATE_MS = "1727741288000";
+const PURCHASE_DATE = "2024-10-01 08:08:08 Etc/GMT";
 const EXPIRES_DATE_MS = "3742762088000";   // 2088-08-08 08:08:08 GMT
 const EXPIRATION_DATE = "2088-08-08 08:08:08 Etc/GMT";
 const TRANSACTION_ID = "300002000603223";
