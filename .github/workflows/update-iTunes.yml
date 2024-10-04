@@ -2,9 +2,11 @@ name: Update Purchase Date
 
 on:
   schedule:
-    # 每天在 UTC 时间凌晨 1:00 运行
     - cron: '0 1 * * *'
-  workflow_dispatch:  # 允许手动触发工作流程
+  workflow_dispatch:
+
+permissions:
+  contents: write  # 授予写权限
 
 jobs:
   update:
