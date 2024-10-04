@@ -9,29 +9,31 @@ permissions:
   contents: write  # 授予写权限
 
 jobs:
-  update:
+  update_purchase_date:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-
-    - name: Update Purchase Date
-      run: |
-        # 获取当前日期和时间
-        NOW=$(date -u +"%Y-%m-%d %H:%M:%S Etc/GMT")
-        NOW_MS=$(date +%s000)
-
-        # 替换 PURCHASE_DATE 和 PURCHASE_DATE_MS
-        sed -i "s/const PURCHASE_DATE_MS = .*/const PURCHASE_DATE_MS = \$NOW_MS;/" ./qx/iTunestest.js
-        sed -i "s/const PURCHASE_DATE = .*/const PURCHASE_DATE = '\$NOW';/" ./qx/iTunestest.js
-
-    - name: Commit and Push Changes
-      run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
-        git add .
-        git commit -m "Auto-update purchase date"
-        git push
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      
+      - name: Get Current Time
+        id: current_time
+        run: |
+          NOW=$(date -u +"%Y-%m-%d %H:%M:%S Etc/GMT")
+          NOW_MS=$(date +%s000)
+          echo "PURCHASE_DATE=$NOW" >> $GITHUB_ENV
+          echo "PURCHASE_DATE_MS=$NOW_MS" >> $GITHUB_ENV
+      
+      - name: Replace Date in Script
+        run: |
+          sed -i "s/\$NOW_MS/$PURCHASE_DATE_MS/g" qx/iTunestest.js
+          sed -i "s/\$NOW/'$PURCHASE_DATE'/g" qx/iTunestest.js
+      
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add path/to/your/script.js
+          git commit -m "Auto-update purchase date"
+          git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
