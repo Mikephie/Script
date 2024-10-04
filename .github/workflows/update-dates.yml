@@ -23,7 +23,7 @@ jobs:
     # Run a script to update dates
     - name: Update Purchase Dates
       run: |
-        node ./qx/update-date.js
+        node qx/update-date.js
 
     # Commit and push the changes
     - name: Commit and push changes
