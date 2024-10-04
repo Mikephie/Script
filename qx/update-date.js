@@ -10,7 +10,7 @@ const PURCHASE_DATE_MS = currentDate.getTime().toString();
 const PURCHASE_DATE = currentDate.toISOString().replace('T', ' ').split('.')[0] + " Etc/GMT";
 
 // Path to the file you want to update (replace 'your-file.js' with your actual file)
-const filePath = 'qx/iTunestest.js';
+const filePath = 'iTunestest.js';
 
 // Read the file
 let content = fs.readFileSync(filePath, 'utf-8');
