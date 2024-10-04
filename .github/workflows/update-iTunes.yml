@@ -25,6 +25,8 @@ jobs:
         sed -i "s/const PURCHASE_DATE = .*/const PURCHASE_DATE = '\$NOW';/" ./qx/iTunestest.js
 
     - name: Commit and Push Changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
