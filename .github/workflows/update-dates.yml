@@ -1,6 +1,6 @@
 # .github/workflows/update-dates.yml
 
-name: Update Dates
+name: Update Date Constants
 
 on:
   schedule:
@@ -13,26 +13,32 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Update dates
+      - name: Update date constants
         run: |
-          node -e "
-            const fs = require('fs');
-            const date = new Date();
-            date.setUTCHours(8, 8, 8, 0);
-            const ms = date.getTime().toString();
-            const formatted = date.toISOString()
-              .replace('T', ' ')
-              .replace('.000Z', ' Etc/GMT');
-            
-            const content = \`const PURCHASE_DATE_MS = \"\${ms}\";\nconst PURCHASE_DATE = \"\${formatted}\";\`
-            
-            fs.writeFileSync('qx/iTunestest.js', content);
-          "
+          file_path="qx/iTunestest.js"  # Replace with your actual JS file path
+          content=$(cat $file_path)
+          
+          # Generate new dates
+          new_ms=$(node -e "
+            const d = new Date();
+            d.setUTCHours(8, 8, 8, 0);
+            console.log(d.getTime().toString());
+          ")
+          
+          new_date=$(node -e "
+            const d = new Date();
+            d.setUTCHours(8, 8, 8, 0);
+            console.log(d.toISOString().replace('T', ' ').replace('.000Z', ' Etc/GMT'));
+          ")
+          
+          # Update the constants using sed
+          sed -i -E "s/PURCHASE_DATE_MS = \"[0-9]+\"/PURCHASE_DATE_MS = \"$new_ms\"/" $file_path
+          sed -i -E "s/PURCHASE_DATE = \"[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} Etc\/GMT\"/PURCHASE_DATE = \"$new_date\"/" $file_path
           
       - name: Commit and push if changed
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add -A
-          git commit -m "Update dates" || exit 0
+          git commit -m "Update date constants" || exit 0
           git push
