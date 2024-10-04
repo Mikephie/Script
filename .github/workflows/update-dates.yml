@@ -1,35 +1,38 @@
-name: Update Purchase Dates
+# .github/workflows/update-dates.yml
+
+name: Update Dates
 
 on:
   schedule:
-    # Run every day at midnight (UTC)
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # Runs at 00:00 UTC every day
+  workflow_dispatch:      # Allows manual trigger
 
 jobs:
-  update_dates:
+  update-dates:
     runs-on: ubuntu-latest
-
     steps:
-    # Checkout the repository
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    # Set up Node.js (if needed for the script)
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-
-    # Run a script to update dates
-    - name: Update Purchase Dates
-      run: |
-        node .github/scripts/update-dates.js
-
-    # Commit and push the changes
-    - name: Commit and push changes
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
-        git commit -m "Updated purchase dates"
-        git push
+      - uses: actions/checkout@v2
+      
+      - name: Update dates
+        run: |
+          node -e "
+            const fs = require('fs');
+            const date = new Date();
+            date.setUTCHours(8, 8, 8, 0);
+            const ms = date.getTime().toString();
+            const formatted = date.toISOString()
+              .replace('T', ' ')
+              .replace('.000Z', ' Etc/GMT');
+            
+            const content = \`const PURCHASE_DATE_MS = \"\${ms}\";\nconst PURCHASE_DATE = \"\${formatted}\";\`
+            
+            fs.writeFileSync('qx/dates.js', content);
+          "
+          
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add -A
+          git commit -m "Update dates" || exit 0
+          git push
