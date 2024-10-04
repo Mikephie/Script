@@ -15,8 +15,8 @@ hostname = buy.itunes.apple.com
 
 // 获取当前日期和时间
 const now = new Date();
-const PURCHASE_DATE_MS = now.getTime();  // 获取当前时间的时间戳（毫秒）
-const PURCHASE_DATE = now.toISOString().replace('T', ' ').replace(/\.\d+Z$/, ' Etc/GMT'); // 格式化为 "YYYY-MM-DD HH:MM:SS Etc/GMT"
+const PURCHASE_DATE_MS = $NOW_MS;
+const PURCHASE_DATE = '$NOW';
 
 const EXPIRES_DATE_MS = "3742762088000";   // 2088-08-08 08:08:08 GMT
 const EXPIRATION_DATE = "2088-08-08 08:08:08 Etc/GMT";
