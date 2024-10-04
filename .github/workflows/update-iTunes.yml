@@ -21,8 +21,8 @@ jobs:
         NOW_MS=$(date +%s000)
 
         # 替换 PURCHASE_DATE 和 PURCHASE_DATE_MS
-        sed -i "s/const PURCHASE_DATE_MS = .*/const PURCHASE_DATE_MS = \$NOW_MS;/" ./path/to/your/script.js
-        sed -i "s/const PURCHASE_DATE = .*/const PURCHASE_DATE = '\$NOW';/" ./path/to/your/script.js
+        sed -i "s/const PURCHASE_DATE_MS = .*/const PURCHASE_DATE_MS = \$NOW_MS;/" ./qx/iTunestest.js
+        sed -i "s/const PURCHASE_DATE = .*/const PURCHASE_DATE = '\$NOW';/" ./qx/iTunestest.js
 
     - name: Commit and Push Changes
       run: |
