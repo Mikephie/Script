@@ -14,7 +14,7 @@ jobs:
 
     - name: Update Date in Script
       run: |
-        node update-script.js  # 假设此JS文件负责更新日期
+        node update-https://raw.githubusercontent.com/Mikephie/Script/main/qx/iTunestest.js  # 假设此JS文件负责更新日期
 
     - name: Commit changes
       run: |
