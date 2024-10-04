@@ -26,7 +26,7 @@ jobs:
 
     - name: Commit and Push Changes
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ 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 }}
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
