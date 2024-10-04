@@ -31,13 +31,3 @@ jobs:
         git add .
         git commit -m "Auto-update purchase date"
         git push
-          # 替换脚本中的日期内容（假设你要修改的文件是 script.js）
-          sed -i "s/DATE_PLACEHOLDER/$date/g" qx/itunestest.js
-
-      - name: Commit changes
-        run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          git add qx/itunestest.js
-          git commit -m "Updated date to $date"
-          git push
