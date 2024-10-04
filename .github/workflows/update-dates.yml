@@ -16,24 +16,24 @@ jobs:
       - name: Update date constants
         run: |
           file_path="qx/iTunestest.js"  # Replace with your actual JS file path
-          content=$(cat $file_path)
           
-          # Generate new dates
-          new_ms=$(node -e "
+          # Create a temporary file with the new content
+          node -e "
+            const fs = require('fs');
+            const content = fs.readFileSync('$file_path', 'utf8');
+            
             const d = new Date();
             d.setUTCHours(8, 8, 8, 0);
-            console.log(d.getTime().toString());
-          ")
-          
-          new_date=$(node -e "
-            const d = new Date();
-            d.setUTCHours(8, 8, 8, 0);
-            console.log(d.toISOString().replace('T', ' ').replace('.000Z', ' Etc/GMT'));
-          ")
-          
-          # Update the constants using sed
-          sed -i -E "s/PURCHASE_DATE_MS = \"[0-9]+\"/PURCHASE_DATE_MS = \"$new_ms\"/" $file_path
-          sed -i -E "s/PURCHASE_DATE = \"[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} Etc\/GMT\"/PURCHASE_DATE = \"$new_date\"/" $file_path
+            
+            const new_ms = d.getTime().toString();
+            const new_date = d.toISOString().replace('T', ' ').replace('.000Z', ' Etc/GMT');
+            
+            const updated = content
+              .replace(/PURCHASE_DATE_MS = \"[0-9]+\"/, 'PURCHASE_DATE_MS = \"' + new_ms + '\"')
+              .replace(/PURCHASE_DATE = \"[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} Etc\/GMT\"/, 'PURCHASE_DATE = \"' + new_date + '\"');
+            
+            fs.writeFileSync('$file_path', updated);
+          "
           
       - name: Commit and push if changed
         run: |
