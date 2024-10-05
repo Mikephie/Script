@@ -4,20 +4,28 @@ name: Update Date Constants
 
 on:
   schedule:
-    - cron: '8 0 * * *'  # Runs at 00:00 UTC every day
-  workflow_dispatch:      # Allows manual trigger
+    # Run every day at 00:00, 08:00, and 16:00 UTC to ensure it doesn't miss updates
+    - cron: '8 0,8,16 * * *'
+  workflow_dispatch:  # Manual trigger
+  push:              # Runs on push to ensure it works
+    paths:
+      - '.github/workflows/update-dates.yml'
 
 jobs:
   update-dates:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v2
-      
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          
       - name: Update date constants
         run: |
+          echo "Starting date update at $(date)"
           file_path="qx/iTunestest.js"  # Replace with your actual JS file path
           
-          # Create a temporary file with the new content
           node -e "
             const fs = require('fs');
             const content = fs.readFileSync('$file_path', 'utf8');
@@ -28,17 +36,27 @@ jobs:
             const new_ms = d.getTime().toString();
             const new_date = d.toISOString().replace('T', ' ').replace('.000Z', ' Etc/GMT');
             
+            console.log('New MS:', new_ms);
+            console.log('New Date:', new_date);
+            
             const updated = content
               .replace(/PURCHASE_DATE_MS = \"[0-9]+\"/, 'PURCHASE_DATE_MS = \"' + new_ms + '\"')
               .replace(/PURCHASE_DATE = \"[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} Etc\/GMT\"/, 'PURCHASE_DATE = \"' + new_date + '\"');
             
             fs.writeFileSync('$file_path', updated);
           "
+          echo "Date update completed at $(date)"
           
       - name: Commit and push if changed
         run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          git add -A
-          git commit -m "Update date constants" || exit 0
-          git push
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "Changes detected, committing..."
+            git add -A
+            git commit -m "Update date constants [skip ci]"
+            git push
+          else
+            echo "No changes detected"
+          fi
