@@ -3,8 +3,9 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/dreamface.png
 
+
 [Script]
-http-response ^https?:\/\/dreamfaceapp\.com\/df-server\/user\/save_user_login script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/dreamface.js, requires-body=true, timeout=60, tag=dreamface
+http-response ^https?:\/\/dreamfaceapp\.com\/df-server\/user\/save_user_login script-path=https://raw.githubusercontent.com/Mike-offers/Rewrite/refs/heads/master/QuantumultX/DreamFace.js, requires-body=true, timeout=60, tag=DreamFace
 
 
 [MITM]
