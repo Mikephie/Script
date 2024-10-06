@@ -24,7 +24,7 @@ mikephie = {
       "renewal": false,
       "vip_type": "TRY_YEAR_PACKAGE",
       "vip_label": true,
-      "vip_remainder_day": 99999999,
+      "vip_remainder_day": 88888888,
       "expires_date": 33403938000000,
       "have_trial": false,
       "expires_date_format": "2099-09-09 00:00:00.000",
