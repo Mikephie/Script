@@ -17,6 +17,7 @@ hostname = dreamfaceapp.com
 
 
 var mikephie = JSON.parse($response.body);
+
 var Data = {
   'renewal': false,
   'vip_type': 'TRY_YEAR_PACKAGE',
@@ -26,7 +27,9 @@ var Data = {
   'have_trial': false,
   'expires_date_format': '2099-09-09 00:00:00.000',
   'vip_product_id': '96'
- };
-}
+};
 
-$done({body : JSON.stringify(mikephie)});
+// Merge Data into mikephie or update mikephie as necessary
+Object.assign(mikephie, Data);
+
+$done({body: JSON.stringify(mikephie)});
