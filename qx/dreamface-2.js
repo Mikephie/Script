@@ -18,7 +18,7 @@ hostname = dreamfaceapp.com
 
 var mikephie = JSON.parse($response.body);
 
-Mikephie = {
+mikephie = {
   "data": {
     "rights": {
       "renewal": false,
