@@ -21,10 +21,15 @@ DOMAIN-SUFFIX,m1.com.sg
 DOMAIN-SUFFIX,singtel.com
 DOMAIN-SUFFIX,starhub.com
 
-# Citibank
-DOMAIN-SUFFIX,smetrics.citibank.com.sg
-DOMAIN-SUFFIX,glassboxdigital.io
-DOMAIN-SUFFIX,omtrdc.net
+# Banking
+DOMAIN-SUFFIX,maybank2u.com
+DOMAIN-SUFFIX,dbs.com
+DOMAIN-SUFFIX,posb.com
+DOMAIN-SUFFIX,ocbc.com
+DOMAIN-SUFFIX,uob.com
+DOMAIN-SUFFIX,citibank.com
+#DOMAIN-SUFFIX,glassboxdigital.io
+#DOMAIN-SUFFIX,omtrdc.net
 
 # Circuit Route
 DOMAIN,firebaselogging-pa.googleapis
