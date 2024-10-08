@@ -21,7 +21,7 @@ var mikephie = JSON.parse($response.body);
   "message": "成功!",
   "result": {
     "uid": "efe376d39b4f4385a45cb19ae0c8c13b",
-    "phone": "18888888888",
+    "phone": "15546907888",
     "memberExpire": 3742762088000
   },
   "code": "00000"
