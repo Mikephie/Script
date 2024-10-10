@@ -1,0 +1,11 @@
+#!name = AppRaven🔐APP解锁
+#!desc = 软件排名 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/appraven.png
+
+[Script]
+http-response https://appraven.net/appraven/graphql script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, timeout=60, tag=AppRaven
+
+
+[MITM]
+hostname = appraven.net
