@@ -1,11 +1,11 @@
-#!name = AppRaven🔐APP解锁
+#!name = 瞬连自动订阅🔐APP解锁
 #!desc = 软件排名 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/appraven.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/shunlink.png
 
 [Script]
-http-response https://appraven.net/appraven/graphql script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, timeout=60, tag=AppRaven
+http-request https:\/\/sl\.eric\.vpn script-path=https://raw.githubusercontent.com/Alex0510/Eric/refs/heads/master/surge/Script/SLVPN.js, requires-body=true, timeout=60, tag=SLVPN
 
 
 [MITM]
-hostname = appraven.net
+hostname = sl.eric.vpn
