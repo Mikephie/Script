@@ -1,0 +1,11 @@
+#!name = 水印宝🔐APP解锁
+#!desc = 视频编辑 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/syb.png
+
+[Script]
+http-response ^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js, requires-body=true, timeout=60, tag=cdsp
+
+
+[MITM]
+hostname = appss.baomingding.com
