@@ -1,0 +1,11 @@
+#!name = 水印宝🔐APP
+#!desc = 媒体制作 - 模块
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🔐APP
+
+[Script]
+cdsp = type=http-response, pattern=^https:\/\/newappapi\.fntmob\.com\/api\/v1\/qsy\/user-info(.?)+, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/syb.js, requires-body=true, max-size=-1, timeout=60
+
+
+[MITM]
+hostname = %APPEND% newappapi.fntmob.com
