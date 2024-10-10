@@ -5,7 +5,7 @@
 #!订阅链接:https://sl.eric.vpn/query/sub
 
 [Script]
-SLVPN = type=http-request, pattern=https:\/\/sl\.eric\.vpn, script-path=https://raw.githubusercontent.com/Alex0510/Eric/refs/heads/master/surge/Script/SLVPN.js, requires-body=true, max-size=-1, timeout=60
+SLVPN = type=http-request, pattern=https:\/\/sl\.eric\.vpn, script-path=https://gist.githubusercontent.com/Sliverkiss/d70debac23704d6ec6feff1e99368f1b/raw/slvpn.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
 hostname = %APPEND% sl.eric.vpn

@@ -3,7 +3,7 @@
 订阅链接:https://sl.eric.vpn/query/sub
 /*
 [rewrite_local]
-https:\/\/sl\.eric\.vpn url script-analyze-echo-response https://raw.githubusercontent.com/Alex0510/Eric/refs/heads/master/surge/Script/SLVPN.js
+https:\/\/sl\.eric\.vpn url script-analyze-echo-response https://gist.githubusercontent.com/Sliverkiss/d70debac23704d6ec6feff1e99368f1b/raw/slvpn.js
 
 [MITM]
 hostname = sl.eric.vpn
