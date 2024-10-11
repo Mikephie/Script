@@ -54,10 +54,11 @@ const appList = {
   'OXNotchLockPets': { method: 'v1', product_id: 'Notchweekvip' },
   'AllMyBatteries': { method: 'v1', product_id: 'AllMyBatteries_Ultimate' },
   'Packet': { method: 'v1', product_id: 'com.aaaalab.nepacket.iap.full' },
-  'PhotoCollagePro': { method: 'v1', product_id: 'PHOTABLE_PREMIUM' },  //Photable-腹肌P图神器
-  'iscreen': { method: 'v1', product_id: 'com.zerone.hidesktop.forever' },  //iscreen
+  'PhotoCollagePro': { method: 'v1', product_id: 'PHOTABLE_PREMIUM' },
+  'iscreen': { method: 'v1', product_id: 'com.zerone.hidesktop.forever' },
   
   // 第二个脚本的应用列表
+  'com.eleven.chatgpt': { method: 'v2', cm: 'timea', hx: 'hxpda', id: "com.chatgpt.yearly", latest: "mikephie" },
   'com.casttv.remotetv': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" },
   'IconChange': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "iconeryearvip", latest: "mikephie" },
   'life.journal.diary': { method: 'v2', cm: 'timeb', hx: 'hxpbda', id: "life.journal.diary.lifetime", latest: "mikephie" },
