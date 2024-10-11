@@ -2,10 +2,13 @@
 #!desc = 工作效率 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!订阅链接:https://sl.eric.vpn/query/sub
+#!订阅链接:https://sl.eric.vpn/web/sub
+
+[Proxy Group]
+♽Eric瞬连 = smart, url=http://www.google.com/generate_204, policy-path=https://sl.eric.vpn/web/sub, update-interval=6000
 
 [Script]
-SLVPN = type=http-request, pattern=https:\/\/sl\.eric\.vpn, script-path=https://gist.githubusercontent.com/Sliverkiss/d70debac23704d6ec6feff1e99368f1b/raw/slvpn.js, requires-body=true, max-size=-1, timeout=60
+瞬连vpn = type=http-request,pattern=https://sl.eric.vpn/web/sub,requires-body=1,max-size=0,binary-body-mode=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/refs/heads/master/surge/Script/SLVPN.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% sl.eric.vpn
+hostname = %APPEND% *.eric.vpn
