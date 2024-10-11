@@ -58,7 +58,7 @@ const list = {
   'Themy': { name: 'fonts_premium', id: 'lifetime', cm: 'sjb' },  // Fonts-微信字体
   'BabyCare': { name: 'pro', id: 'KiddoKeeper_38_LifeTime', cm: 'sjb' },  // 小守护
   'MenuBox': { name: 'premium', id: 'com.menubox.premium', cm: 'sja' },  // MenuBox
-  'Chatme': { name: 'premium', id: 'chatme_premium_year_discount', cm: 'sja' },  // Chatme
+  'Chatme': { name: 'premium', id: 'chatme_premium_year_discount', cm: 'sja' },  //ChatMe
   'WiseMate': { name: 'vip_entitlement', id: 'wisemate.ai.ios.week', cm: 'sja' },  // WiseMate
 };
 
