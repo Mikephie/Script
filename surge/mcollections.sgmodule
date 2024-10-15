@@ -36,6 +36,11 @@ kkyun = type=http-response, pattern=^https?:\/\/kkyun.com\/api\/(accounts\/user|
 Adblock Pro = type=https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js
 
 #************************************#
+# AIMirror （永久会员）
+# hostname = be.aimirror.fun
+aimirror = type=http-response, pattern=^https:\/\/be\.aimirror\.fun\/(query_is_vip|draw|users\/video_render_count|query_consumable_quota|users\/discount), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aimirror.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # Aloha 游览器 （永久会员）
 # hostname = api.alohaprofile.com
 aloha = type=http-response, pattern=^https:\/\/api\.alohaprofile\.com\/v1\/profile_info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js, requires-body=true, max-size=-1, timeout=60
@@ -46,65 +51,52 @@ aloha = type=http-response, pattern=^https:\/\/api\.alohaprofile\.com\/v1\/profi
 AppRaven = type=http-response, pattern=https://appraven.net/appraven/graphql, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# 白描
+# hostname = baimiao.uzero.cn
+白描 = type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/.+\/(appLaunchWithUser|getAnnouncement|checkLoginClient),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/baimiao.js
+
+#************************************#
+# 边框水印大师（ 永久会员 ）
+# hostname = photoby.hasmash.com
+ds1 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds1.js, requires-body=true, max-size=-1, timeout=60
+ds2 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/auth\/member, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds2.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # 壁纸-需登录
 # hostname = leancloud.emotionwp.com
 壁纸 = type=http-response,pattern=https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
 
 #************************************#
-# Reddit
-# hostname = gql.reddit.com, gql-fed.reddit.com
-Reddit = type=http-response,pattern=https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js
+# 彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员） V1.1.1 @GieGie777
+# hostname = appss.baomingding.com
+cdsp = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
+# 彩云天气
+# hostname = *.cyapi.cn
+# 广告净化/弹窗AD/去除亲友卡/去除悬浮模块
+caiyuntianqi = type=http-response, pattern=^https?:\/\/(ad|biz|wrapper|starplucker)\.cyapi\.cn\/.+\/((activity\?app_name|operation|config|req\?app_name=weather)|v\d\/(trial_card\/info|entries|friend_cards|token\/device)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
+
+# VIP信息
+caiyuntianqi = type=http-response, pattern=^https?:\/\/(biz|wrapper|starplucker)\.cyapi\.cn\/(v\d\/user\?app_name|.+\/v\d\/(vip_info|user_detail)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
+
+# SVIP地图-48小时预报
+caiyuntianqi = type=http-request, pattern=^https?:\/\/(api|wrapper)\.cyapi\.cn\/v\d\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60
+
+#************************************#
+# classdojo （永久会员）
+# hostname = payments.classdojo.com
+classdojo = type=http-response, pattern=^https:\/\/payments\.classdojo\.com\/v1\/subscribers\/5dc2e328587d3dcf1bee91e0$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # DuetDisplayPro
 # hostname = rdp.duetdisplay.com
 DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/users/validateReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/duetdisplaypro.js, requires-body=true, max-size=-1, timeout=60
 
-
 #************************************#
-# Grammarly
-# hostname = subscription.grammarly.com
-grammarlypremiumcrack = type=http-response, pattern=^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js, requires-body=true, max-size=-1, timeout=60 
-
-#************************************#
-# 扫描全能王
-# hostname = *.camscanner.com, *.intsig.net
-#扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
-
-#************************************#
-# 彩云天气
-# hostname = *.cyapi.cn
-# 赏叶赏花
-caiyun = type=http-response, pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
-
-# 解锁vip
-caiyun = type=http-response, pattern=^https:\/\/biz\.cyapi\.cn\/v2\/user, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
-
-# 卫星云图 48小时预报
-caiyun = type=http-request, pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60
-
-# 7.20.0版本显示VIP
-caiyun = type=http-response, pattern=^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
-
-#************************************#
-# Flightradar24 解锁系列
-# hostname = mobile.flightradar24.com
-flightradar24 = type=http-response, pattern=^https://mobile.flightradar24.com/mobile/(user-session|subscribe), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js, requires-body=true, max-size=-1, timeout=60
-
-#************************************#
-# Filmix
-# hostname = appv2.filmix.com.cn
-Filmix = type=http-response,pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
-
-#************************************#
-# Wallcraft-动态壁纸
-# hostname = billing-ios.wallpaperscraft.com
-Wallcraft壁纸 = type=http-response,pattern=https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js
-
-#************************************#
-# ToonMe
-# hostname = purchases.ws.pho.to
-ToonMe = type=http-response,pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js
+# Emby(解锁播放权限)
+# hostname = mb3admin.com
+embycrack = type=http-request, pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycrack.js, timeout=60
 
 #************************************#
 # FaceLab
@@ -117,9 +109,25 @@ FaceLab = type=http-response, pattern=^https?:\/\/subscription-api\.lyrebirdstud
 faceSwapper = type=http-response, pattern=^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceSwapper.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# Notability
-# hostname = notability.com
-Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
+# felo实时翻译-同传与语音字幕 （永久会员）
+# hostname = accounts.felo.me,translator.felo.me
+felosubs = type=http-response, pattern=^https?:\/\/(translator|accounts).felo.me\/api\/user.*$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felosubs.js, requires-body=true, max-size=-1, timeout=60
+felotk = type=http-request, pattern=^https?:\/\/translator.felo.me\/api\/translation\/thirdToken\?token_channel, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felotk.js, requires-body=true, timeout=60
+
+#************************************#
+# Filmix
+# hostname = appv2.filmix.com.cn
+Filmix = type=http-response,pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
+
+#************************************#
+# Flightradar24 解锁系列
+# hostname = mobile.flightradar24.com
+flightradar24 = type=http-response, pattern=^https://mobile.flightradar24.com/mobile/(user-session|subscribe), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
+# >雅俗共赏/高定素材大师（永久会员）需要登录！
+# hostname = apps-api.lianaishouce.cn, apps-api.lingege.cn
+yygdsc = type=http-response, pattern=^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/getUserInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # gg
@@ -128,37 +136,30 @@ gg = type=http-response,pattern=^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(rec
 ggg = type=http-request,pattern=^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js
 
 #************************************#
-# Replica-屏幕镜像
-# hostname = api.apphud.com
-Replica-屏幕镜像 = type=http-response,pattern=^https?:\/\/api\.apphud\.com\/v1\/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/replica.js
+# GP4o（永久会员）
+# hostname = nichousha.sjrjyffs.top
+GTP4ohd = type=http-request, pattern=https://nichousha.sjrjyffs.top/api/img/aiSketch, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4ohd.js, requires-body=true, max-size=-1, timeout=60
+GP4o = type=http-response, pattern=https://nichousha.sjrjyffs.top/api/app/user/getCurrentInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4o.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# 白描
-# hostname = baimiao.uzero.cn
-白描 = type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/.+\/(appLaunchWithUser|getAnnouncement|checkLoginClient),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/baimiao.js
+# Grammarly
+# hostname = subscription.grammarly.com
+grammarlypremiumcrack = type=http-response, pattern=^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js, requires-body=true, max-size=-1, timeout=60 
 
 #************************************#
-# 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
-#************************************#
-# hostname = appss.baomingding.com
-sjsm = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/sjsm.js, requires-body=true, max-size=-1, timeout=60
+# 婚贝请柬 （永久会员）
+# hostname = h5.hunbei.com
+hbqj = type=http-response, pattern=^https:\/\/h5\.hunbei\.com\/m\/member\/getUserInfo\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbqj.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# 彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员） V1.1.1 @GieGie777
-# hostname = appss.baomingding.com
-cdsp = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js, requires-body=true, max-size=-1, timeout=60
+# 婚礼精选 （永久会员）
+# hostname = www.lovewith.me
+hljx = type=http-response, pattern=^https:\/\/www\.lovewith\.me\/golove\/v05\/profile, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# 作业批改-家长辅导作业工具（永久会员） V2.1.1 @GieGie777
-# hostname = appss.rhinoxlab.com
-zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, max-size=-1, timeout=60
-
-
-
-#************************************#
-# 全局扫描-图片转文字&全能扫描仪&拍照识别花草（永久会员）
-# hostname = sm.szsszykj.com
-qjsm = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, max-size=-1, timeout=60
+# Notability
+# hostname = notability.com
+Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
 
 #************************************#
 # Notebook （永久会员）
@@ -175,11 +176,6 @@ notebookMac2 = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/
 #notebook-token = type=http-response, pattern=^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-token.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# Ringtonemaker （永久会员）
-# hostname = clip.tto321.cn
-ringtonemaker = type=http-response, pattern=^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ringtonemaker.js, requires-body=true, max-size=-1, timeout=60
-
-#************************************#
 # PikPak （永久会员）
 # hostname = api-drive.mypikpak.com
 #VIP Info
@@ -192,20 +188,54 @@ ringtonemaker = type=http-response, pattern=^http:\/\/clip\.tto321\.cn\/v1\/api\
 #pikpak-drive = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/(about\?|about\?space=), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# 边框水印大师（ 永久会员 ）
-# hostname = photoby.hasmash.com
-ds1 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds1.js, requires-body=true, max-size=-1, timeout=60
-ds2 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/auth\/member, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds2.js, requires-body=true, max-size=-1, timeout=60
+# 全局扫描-图片转文字&全能扫描仪&拍照识别花草（永久会员）
+# hostname = sm.szsszykj.com
+qjsm = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# 婚礼精选 （永久会员）
-# hostname = www.lovewith.me
-hljx = type=http-response, pattern=^https:\/\/www\.lovewith\.me\/golove\/v05\/profile, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, max-size=-1, timeout=60
+# Reddit
+# hostname = gql.reddit.com, gql-fed.reddit.com
+Reddit = type=http-response,pattern=https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js
 
 #************************************#
-# >雅俗共赏/高定素材大师（永久会员）需要登录！
-# hostname = apps-api.lianaishouce.cn, apps-api.lingege.cn
-yygdsc = type=http-response, pattern=^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/getUserInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js, requires-body=true, max-size=-1, timeout=60
+# Replica-屏幕镜像
+# hostname = api.apphud.com
+Replica-屏幕镜像 = type=http-response,pattern=^https?:\/\/api\.apphud\.com\/v1\/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/replica.js
+
+#************************************#
+# Ringtonemaker （永久会员）
+# hostname = clip.tto321.cn
+ringtonemaker = type=http-response, pattern=^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ringtonemaker.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
+# 扫描全能王
+# hostname = *.camscanner.com, *.intsig.net
+#扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
+
+#************************************#
+# 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
+# hostname = appss.baomingding.com
+sjsm = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/sjsm.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
+# 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
+# hostname = appss.baomingding.com
+sjsm = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/sjsm.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
+# ToonMe
+# hostname = purchases.ws.pho.to
+ToonMe = type=http-response,pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js
+
+#************************************#
+# 图片转文字 （永久会员）
+# hostname = api.528529.com
+tpzwz = type=http-response, pattern=^http://api\.528529\.com/apple_product/, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/tpzwz.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
+# Wallcraft-动态壁纸
+# hostname = billing-ios.wallpaperscraft.com
+Wallcraft壁纸 = type=http-response,pattern=https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js
 
 #************************************#
 # 微商海报大师 （永久会员）
@@ -214,43 +244,55 @@ wshb1 = type=http-response, pattern=^https?:\/\/api-poster\.ycase\.cn\/api\/user
 wshb2 = type=http-response, pattern=^https?:\/\/api-poster\.ycase\.cn\/api\/User\/home, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb2.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# classdojo （永久会员）
-# hostname = payments.classdojo.com
-classdojo = type=http-response, pattern=^https:\/\/payments\.classdojo\.com\/v1\/subscribers\/5dc2e328587d3dcf1bee91e0$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js, requires-body=true, max-size=-1, timeout=60
-
-#************************************#
-# Emby(解锁播放权限)
-# hostname = mb3admin.com
-embycrack = type=http-request, pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycrack.js, timeout=60
-
-#************************************#
-# GP4o（永久会员）
-# hostname = nichousha.sjrjyffs.top
-GTP4ohd = type=http-request, pattern=https://nichousha.sjrjyffs.top/api/img/aiSketch, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4ohd.js, requires-body=true, max-size=-1, timeout=60
-GP4o = type=http-response, pattern=https://nichousha.sjrjyffs.top/api/app/user/getCurrentInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4o.js, requires-body=true, max-size=-1, timeout=60
-
-#************************************#
-# 婚贝请柬 （永久会员）
-# hostname = h5.hunbei.com
-hbqj = type=http-response, pattern=^https:\/\/h5\.hunbei\.com\/m\/member\/getUserInfo\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbqj.js, requires-body=true, max-size=-1, timeout=60
-
-#************************************#
-# felo实时翻译-同传与语音字幕 （永久会员）
-# hostname = accounts.felo.me,translator.felo.me
-felosubs = type=http-response, pattern=^https?:\/\/(translator|accounts).felo.me\/api\/user.*$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felosubs.js, requires-body=true, max-size=-1, timeout=60
-felotk = type=http-request, pattern=^https?:\/\/translator.felo.me\/api\/translation\/thirdToken\?token_channel, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felotk.js, requires-body=true, timeout=60
+# 作业批改-家长辅导作业工具（永久会员） V2.1.1 @GieGie777
+# hostname = appss.rhinoxlab.com
+zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, max-size=-1, timeout=60
 
 
 
-#************************************#
-# AIMirror （永久会员）
-# hostname = be.aimirror.fun
-aimirror = type=http-response, pattern=^https:\/\/be\.aimirror\.fun\/(query_is_vip|draw|users\/video_render_count|query_consumable_quota|users\/discount), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aimirror.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
-# 图片转文字 （永久会员）
-# hostname = api.528529.com
-tpzwz = type=http-response, pattern=^http://api\.528529\.com/apple_product/, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/tpzwz.js, requires-body=true, max-size=-1, timeout=60
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [MITM]
 hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com, be.aimirror.fun, api.528529.com
