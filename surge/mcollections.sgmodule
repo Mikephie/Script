@@ -34,7 +34,7 @@ kkyun = type=http-response, pattern=^https?:\/\/kkyun.com\/api\/(accounts\/user|
 #************************************#
 # Adblock Pro
 # hostname = api.adblockpro.app
-Adblock Pro = type=https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js
+Adblock Pro = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # AIMirror （永久会员）
