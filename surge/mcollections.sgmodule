@@ -94,6 +94,11 @@ classdojo = type=http-response, pattern=^https:\/\/payments\.classdojo\.com\/v1\
 DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/users/validateReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/duetdisplaypro.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# DuetDisplayPro
+# hostname = rdp.duetdisplay.com
+DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/users/validateReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/duetdisplaypro.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # Emby(解锁播放权限)
 # hostname = mb3admin.com
 embycrack = type=http-request, pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycrack.js, timeout=60
