@@ -1,0 +1,14 @@
+#!name = 吾爱破解✅签到
+#!desc = 工作效率 - 模块
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=✅签到
+#!BoxJs 地址：
+https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/boxjs.json
+
+[Script]
+wshb1 = type=http-response, pattern=^https?:\/\/api-poster\.ycase\.cn\/api\/user\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb1.js, requires-body=true, max-size=-1, timeout=60
+wshb2 = type=http-response, pattern=^https?:\/\/api-poster\.ycase\.cn\/api\/User\/home, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb2.js, requires-body=true, max-size=-1, timeout=60
+
+
+[MITM]
+hostname = %APPEND% www.52pojie.cn
