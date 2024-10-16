@@ -1,0 +1,22 @@
+#!name = 吾爱破解✅签到
+#!desc = 工作效率 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png
+#BoxJs 地址：
+https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/boxjs.json
+
+[Argument]
+appName = input,"吾爱破解✅签到",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
+appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
+isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
+cron = input,"30 9 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+
+
+[Script]
+http-request ^https:\/\/www\.52pojie\.cn\/home\.php\? tag=吾爱破解获取Cookie, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js, requires-body=0
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js, timeout=10, tag=吾爱破解签到, img-url=https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png
+
+
+[MITM]
+hostname = www.52pojie.cn
