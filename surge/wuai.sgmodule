@@ -6,8 +6,8 @@
 https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/boxjs.json
 
 [Script]
-wshb1 = type=http-response, pattern=^https?:\/\/api-poster\.ycase\.cn\/api\/user\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb1.js, requires-body=true, max-size=-1, timeout=60
-wshb2 = type=http-response, pattern=^https?:\/\/api-poster\.ycase\.cn\/api\/User\/home, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/wshb2.js, requires-body=true, max-size=-1, timeout=60
+吾爱破解获取Cookie = type=http-request ^https:\/\/www\.52pojie\.cn\/home\.php\?, requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js
+吾爱破解签到 = type=cron, cronexp=0 9 * * *, wake-system=1, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js, timeout=60
 
 
 [MITM]
