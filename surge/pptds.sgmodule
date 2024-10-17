@@ -1,0 +1,12 @@
+#!name = PPT大师🔐APP
+#!desc = 工作效率 - 模块
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🔐APP
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/aloha.png
+#appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
+
+[Script]
+pptds = type=http-response, pattern=^https:\/\/pptdashi\.kuoliang\.cn\/package\/ppt\/get(All|Random)\?.*, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pptds.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% pptdashi.kuoliang.cn
