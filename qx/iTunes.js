@@ -58,7 +58,7 @@ const appList = {
   'iscreen': { method: 'v1', product_id: 'com.zerone.hidesktop.forever' },
   
   // 第二个脚本的应用列表
-  'co.vulcanlabs': { cm: 'timeb', hx: 'hxpda', id: lifetimeid, latest: "chxm1023" },  //vulcanlabs合集
+  'co.vulcanlabs': { cm: 'timeb', hx: 'hxpda', id: lifetimeid, latest: "mikephie" },  //vulcanlabs合集
   'com.eleven.chatgpt': { method: 'v2', cm: 'timea', hx: 'hxpda', id: "com.chatgpt.weekly", latest: "mikephie" },
   'com.casttv.remotetv': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" },
   'IconChange': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "iconeryearvip", latest: "mikephie" },
