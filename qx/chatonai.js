@@ -19,7 +19,7 @@ var mikephie = JSON.parse($response.body);
     mikephie =  {
     subscriptions: [
         {
-            id: 'your_subscription_id',
+            id: '696969696969696969',
             provider: 'apple',
             status: 'active',
             periodEnd: 3742762088,
@@ -29,3 +29,7 @@ var mikephie = JSON.parse($response.body);
 };
 
 $done({body : JSON.stringify(mikephie)});
+
+"active", -
+"id".: "696969696969696969",-
+• "provider": "apple",-
