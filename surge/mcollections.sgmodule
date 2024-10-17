@@ -8,10 +8,6 @@
 [General]
 force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
-[Map Local]
-#电影猎手开屏
-^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config\?pack url reject-dict.json"
-
 
 [Script]
 
