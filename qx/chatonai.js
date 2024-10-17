@@ -22,8 +22,8 @@ var mikephie = JSON.parse($response.body);
             id: 'your_subscription_id',
             provider: 'apple',
             status: 'active',
-            periodEnd: 0xf4865700,
-            createdAt: 0x670d42cd
+            periodEnd: 3742762088,
+            createdAt: 1728922317
         }
     ]
 };
