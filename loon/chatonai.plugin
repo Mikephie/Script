@@ -1,12 +1,11 @@
 #!name = ChatOnAI🔐APP解锁
 #!desc = 工作效率 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/felo.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/chatonai.png
 
 [Script]
-http-response ^https?:\/\/(translator|accounts).felo.me\/api\/user.*$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felosubs.js, requires-body=true, timeout=60, tag=felo
-http-request ^https?:\/\/translator.felo.me\/api\/translation\/thirdToken\?token_channel script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felotk.js, requires-body=true, timeout=60, tag=felotk
+http-response ^https?:\/\/billing\.chaton\.ai\/v1\/subscriptions script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/chatonai.js, requires-body=true, timeout=60, tag=ChatOnAI
 
 
 [MITM]
-hostname = accounts.felo.me,translator.felo.me
+hostname = billing.chaton.ai
