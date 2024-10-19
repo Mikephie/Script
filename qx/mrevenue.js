@@ -59,7 +59,7 @@ const list = {
   'BabyCare': { name: 'pro', id: 'KiddoKeeper_38_LifeTime', cm: 'sjb' },  // 小守护
   'MenuBox': { name: 'premium', id: 'com.menubox.premium', cm: 'sja' },  // MenuBox
   'Chatme': { name: 'premium', id: 'chatme_premium_year_discount', cm: 'sja' },  //ChatMe
-  'WiseMate': { name: 'vip_entitlement', id: 'wisemate.ai.ios.week', cm: 'sja' },  // WiseMate
+  'AI%C2%A0Chat': { name: 'AI Plus', id: 'ai_plus_gpt_yearly', cm: 'sja' },  // WiseMate
 };
 
 if (typeof $response == "undefined") {
