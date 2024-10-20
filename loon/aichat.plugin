@@ -1,0 +1,11 @@
+#!name = AIChat🔐APP解锁
+#!desc = 工作效率 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/aichat.png
+
+[Script]
+http-response ^https?:\/\/billing\.chaton\.ai\/v1\/subscriptions script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/chatonai.js, requires-body=true, timeout=60, tag=ChatOnAI
+
+
+[MITM]
+hostname = billing.chaton.ai
