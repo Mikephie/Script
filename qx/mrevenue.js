@@ -39,10 +39,7 @@ const list = {
   },  //ChatBot-AIChat
 
   'Darkroom': { 
-    name: [
-      'co.bergen.Darkroom.entitlement.allToolsAndFilters',
-      'co.bergen.Darkroom.entitlement.selectiveAdjustments'
-    ], 
+    name: "co.bergen.Darkroom.entitlement.allToolsAndFilters,co.bergen.Darkroom.entitlement.selectiveAdjustments", 
     id: 'co.bergen.Darkroom.product.forever.everything', 
     cm: 'sja' 
   },  //Darkroom
@@ -219,7 +216,7 @@ const list = {
     name: 'AI Plus', 
     id: 'ai_plus_gpt_yearly', 
     cm: 'sja' 
-  }  //AI Plus 
+  }  //AI Plus
 };
 
 if (typeof $response == "undefined") {
