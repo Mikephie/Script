@@ -33,6 +33,7 @@ const bundle = {
 //识别UA
 const list = {
   'ChatBot': { name: 'chatbot_annual', id: 'chatbot_annual', cm: 'sja' },  //ChatBot-AIChat
+  'Darkroom': { name: 'co.bergen.Darkroom.product.forever.everything', id: 'co.bergen.Darkroom.entitlement.allToolsAndFilters', nameb: 'co.bergen.Darkroom.product.forever.everything', idb: 'co.bergen.Darkroom.entitlement.selectiveAdjustments', cm: 'sjb' },  //Darkroom
   'ASKAI': { name: 'pro', id: 'askai_pro', nameb: 'pro_plan', idb: 'token_pro_plan', cm: 'sjb' },  //ASKAI
   'Infltr': { name: 'com.Yooshr.infltr.subscriptionPremium', id: 'com.Yooshr.infltr.everythingForever', cm: 'sja' },  //樱飞无限滤镜
   'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever', cm: 'sjb' },  //ShellBean-SSH终端服/Linux监控
