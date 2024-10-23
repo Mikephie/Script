@@ -35,7 +35,13 @@ const list = {
   'ChatBot': { name: 'chatbot_annual', id: 'chatbot_annual', cm: 'sja' },  //ChatBot-AIChat
   'ASKAI': { name: 'pro', id: 'askai_pro', nameb: 'pro_plan', idb: 'token_pro_plan', cm: 'sjb' },  //ASKAI
   'Infltr': { name: 'com.Yooshr.infltr.subscriptionPremium', id: 'com.Yooshr.infltr.everythingForever', cm: 'sja' },  //樱飞无限滤镜
-  'Darkroom': { name: 'co.bergen.Darkroom.product.forever.everything', id: 'co.bergen.Darkroom.entitlement.allToolsAndFilters', nameb: 'co.bergen.Darkroom.product.forever.everything', idb: 'co.bergen.Darkroom.entitlement.selectiveAdjustments', cm: 'sja' },  //Darkroom
+  'Darkroom': { 
+  name: 'co.bergen.Darkroom.entitlement.allToolsAndFilters', 
+  id: 'co.bergen.Darkroom.product.forever.everything', 
+  nameb: 'co.bergen.Darkroom.entitlement.selectiveAdjustments', 
+  idb: 'co.bergen.Darkroom.product.forever.everything', 
+  cm: 'sja' 
+},  //Darkroom
   'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever', cm: 'sjb' },  //ShellBean-SSH终端服/Linux监控
   'ChatLLM': { name: 'Pro', id: 'com.curiouscreatorsco.ChatLLM.pro.lifetime.notrial.150_00', cm: 'sjb' },  //AItText
   'Photomator': { name: 'pixelmator_photo_pro_access', id: 'pixelmator_photo_lifetime_v1', cm: 'sjb' },  //Photomator
