@@ -56,6 +56,7 @@ const appList = {
   'Packet': { method: 'v1', product_id: 'com.aaaalab.nepacket.iap.full' },
   'PhotoCollagePro': { method: 'v1', product_id: 'PHOTABLE_PREMIUM' },
   'iscreen': { method: 'v1', product_id: 'com.zerone.hidesktop.forever' },
+  'pollykann': { method: 'v1', product_id: 'vip.forever.pollykann' },
   
   // 第二个脚本的应用列表
   'co.vulcanlabs': { cm: 'timeb', hx: 'hxpda', id: "liftetimeid", latest: "mikephie" },  //vulcanlabs合集
