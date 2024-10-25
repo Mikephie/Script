@@ -60,7 +60,7 @@ const appList = {
   'VLLO': { method: 'v1', product_id: 'com.darinsoft.vimo.yearly' },
   
   // 第二个脚本的应用列表
-  'co.vulcanlabs': { cm: 'timeb', hx: 'hxpda', id: "liftetimeid", latest: "mikephie" },  //vulcanlabs合集
+  'co.vulcanlabs': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetimeid", latest: "mikephie" },
   'com.eleven.chatgpt': { method: 'v2', cm: 'timea', hx: 'hxpda', id: "com.chatgpt.weekly", latest: "mikephie" },
   'com.casttv.remotetv': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" },
   'IconChange': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "iconeryearvip", latest: "mikephie" },
