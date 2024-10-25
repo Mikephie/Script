@@ -1,7 +1,7 @@
 #!name = 酷我音乐🔐APP解锁
 #!desc = 媒体播放 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/kuwo.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/kuwo.png
 
 [Script]
 http-response ^https?:\/\/(?:musicpay|nmobi|vip1|audiobookpay|tingshu)\.kuwo\.cn\/(?:music\.pay\?newver=\d+|mobi.s\?f=kwxs|vip\/(?:enc\/user\/vip\?op=ui&uid=|v2\/theme\?op=gd)|a\.p|v2\/api\/pay\/user\/info) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwo.js, requires-body=true, timeout=60, tag=kuwo
