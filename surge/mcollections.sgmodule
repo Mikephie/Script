@@ -3,8 +3,8 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/heji.gif
-#!arguments=revenuecat1:面板手动打断连接,revenuecat2:# 定时打断连接,iTunes:*/1 * * * *
-#!arguments-desc=[参数设置]\n1 输入#关闭,[参数设置]\n2输入#关闭,[参数设置]\n3输入#关闭
+#!arguments=revenuecat1:输入#关闭,revenuecat2:输入#关闭,iTunes:输入#关闭
+#!arguments-desc=[参数设置]\n1 revenuecat1,[脚本]\n2输入#关闭,[响应头]\n3输入#关闭,[脚本]
 
 
 [Script]
