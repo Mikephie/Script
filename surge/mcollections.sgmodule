@@ -3,7 +3,7 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/heji.gif
-#!arguments=IFTTT:开关
+#!arguments=revenuecat1:脚本，revenuecat2:清缓存，iTunes:脚本
 #!arguments-desc=[参数设置]\n⓵ 脚本: 默认开启脚本,如需关闭需修改此参数#
 
 
