@@ -3,7 +3,7 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/heji.gif
-#!arguments=PANEL_NAME:面板手动打断连接,CRON_SCRIPT_NAME:# 定时打断连接,CRON_EXP:*/1 * * * *,CRON_RULE:RULE-SET Telegram
+#!arguments=revenuecat1:面板手动打断连接,revenuecat2:# 定时打断连接,iTunes:*/1 * * * *
 #!arguments-desc=[参数设置]\n1 输入#关闭,[参数设置]\n2输入#关闭,[参数设置]\n3输入#关闭
 
 
