@@ -4,7 +4,7 @@
 #!category=🔐APP
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/heji.gif
 #!arguments=revenuecat1:脚本，revenuecat2:清缓存，iTunes:脚本
-#!arguments-desc=[参数设置]\n⓵ 脚本: 默认开启脚本,如需关闭需修改此参数#
+#!arguments-desc=[参数设置]\n1 输入#关闭,[参数设置]\n2输入#关闭,[参数设置]\n3输入#关闭
 
 
 [Script]
