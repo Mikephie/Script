@@ -8,8 +8,6 @@ appName = input,"Mikephie🔐APP解锁",tag=app的名字,desc=填写app的用户
 appCategory = select,"🔐APP","✅签到","🚫广告","🛠️工具",tag=app的分类
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
-[General]
-force-http-engine-hosts = gql.reddit.com, gql-fed.reddit.com
 
 [URL Rewrite]
 #************************************#
@@ -28,11 +26,6 @@ http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?
 # iTunes 解锁系列
 # hostname = buy.itunes.apple.com
 http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/iTunes.js, requires-body=true, tag=iTunes解锁系列
-
-#************************************#
-# Reddit 解锁系列
-# hostname = gql.reddit.com, gql-fed.reddit.com
-http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js, requires-body=true, timeout=60, tag=Reddit
 
 #************************************#
 # Duet Display 解锁系列
@@ -240,4 +233,4 @@ http-request ^https?:\/\/translator.felo.me\/api\/translation\/thirdToken\?token
 http-response ^https:\/\/api\.alohaprofile\.com\/v1\/profile_info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js, requires-body=true, timeout=60, tag=aloha
 
 [MITM]
-hostname = gql.reddit.com, gql-fed.reddit.com, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top,h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com
+hostname = rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top,h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com
