@@ -181,6 +181,11 @@ notebookMac2 = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/
 #notebook-token = type=http-response, pattern=^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-token.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# PPT大师（永久会员）
+# hostname = pptdashi.kuoliang.cn
+PPT大师 = type=http-response, pattern=^https:\/\/pptdashi\.kuoliang\.cn\/package\/ppt\/get(All|Random)\?.*, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pptds.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # PikPak （永久会员）
 # hostname = api-drive.mypikpak.com
 #VIP Info
