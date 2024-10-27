@@ -1,0 +1,11 @@
+#!name = Perfect365Video🔐APP解锁
+#!desc = 视频编辑 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/365video.png
+
+[Script]
+http-response ^https?:\/\/video-svr\.perfect365\.com\/video\/P365Video\/services script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/perfect365video.js, requires-body=true, timeout=60, tag=perfect365video
+
+
+[MITM]
+hostname = video-svr.perfect365.com
