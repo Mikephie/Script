@@ -203,11 +203,6 @@ PPT大师 = type=http-response, pattern=^https:\/\/pptdashi\.kuoliang\.cn\/packa
 qjsm = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# Reddit
-# hostname = gql.reddit.com, gql-fed.reddit.com
-Reddit = type=http-response,pattern=https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/reddit.js
-
-#************************************#
 # Replica-屏幕镜像
 # hostname = api.apphud.com
 Replica-屏幕镜像 = type=http-response,pattern=^https?:\/\/api\.apphud\.com\/v1\/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/replica.js
@@ -216,11 +211,6 @@ Replica-屏幕镜像 = type=http-response,pattern=^https?:\/\/api\.apphud\.com\/
 # Ringtonemaker （永久会员）
 # hostname = clip.tto321.cn
 ringtonemaker = type=http-response, pattern=^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ringtonemaker.js, requires-body=true, max-size=-1, timeout=60
-
-#************************************#
-# 扫描全能王
-# hostname = *.camscanner.com, *.intsig.net
-#扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
 
 #************************************#
 # 试卷扫描-拍照清除笔迹，还原空白试卷，错题标记重组（永久会员）
@@ -260,4 +250,4 @@ zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\
 
 
 [MITM]
-hostname = %APPEND% rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, isi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com, be.aimirror.fun, api.528529.com, newappapi.fntmob.com, dreamfaceapp.com, pptdashi.kuoliang.cn, billing.chaton.ai
+hostname = %APPEND% rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, ap*.intsig.net, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, qisi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com, be.aimirror.fun, api.528529.com, newappapi.fntmob.com, dreamfaceapp.com, pptdashi.kuoliang.cn, billing.chaton.ai
