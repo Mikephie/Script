@@ -18,13 +18,26 @@ hostname = video-svr.perfect365.com
 
 var mikephie = JSON.parse($response.body);
 
-mikephie.data = {
-  ...mikephie.data,
-  "isEligible" : true,
-    "isSubscribing" : true,
-    "productId" : "subscription_year",
-    "expireTime" : "3742762088000",
-    "isYearlyConversion" : true
-};
- 
-$done({body: JSON.stringify(mikephie)});
+    mikephie = {
+  "code" : 200,
+  "status" : "Success",
+  "message" : "User profile fetched successfully",
+  "plan_details" : [
+    {
+      "expiry_time" : 3742762088000,
+      "purchase_source" : "notebook",
+      "service_id" : "107000",
+      "source" : "PAID",
+      "plan_name" : "Notebook Pro",
+      "payment_frequency" : 12,
+      "service" : "NoteBook",
+      "grace_period" : 999160000000,
+      "notebook_plan_id" : "com.zoho.notebook.pro",
+      "plan_description" : "Upgrade to Notebook Pro and stay more productive",
+      "zoho_store_plan_id" : 107102,
+      "purchase_time" : 1717644792301
+    }
+  ]
+}
+
+$done({body : JSON.stringify(mikephie)});
