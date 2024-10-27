@@ -182,7 +182,7 @@ notebookMac2 = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/
 
 #************************************#
 # perfect365video（永久会员）
-# hostname = pptdashi.kuoliang.cn
+# hostname = video-svr.perfect365.com
 perfect365video = type=http-response, pattern=^https?:\/\/video-svr\.perfect365\.com\/video\/P365Video\/services, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/perfect365video.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
@@ -255,4 +255,4 @@ zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\
 
 
 [MITM]
-hostname = %APPEND% rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, qisi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com, be.aimirror.fun, api.528529.com, newappapi.fntmob.com, dreamfaceapp.com, pptdashi.kuoliang.cn, billing.chaton.ai
+hostname = %APPEND% rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, qisi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com, be.aimirror.fun, api.528529.com, newappapi.fntmob.com, dreamfaceapp.com, pptdashi.kuoliang.cn, billing.chaton.ai, video-svr.perfect365.com
