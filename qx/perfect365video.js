@@ -16,18 +16,35 @@ hostname = video-svr.perfect365.com
 *******************************/
 
 
-// 假设 body 已经有一些内容，先解析它
 let body = JSON.parse($response.body);
 
-// 添加或更新字段
-body.data = {
-  ...body.data,
-  "isEligible": true,
-  "isSubscribing": true,
-  "productId": "subscription_year",
-  "expireTime": "4092599349000",
-  "isYearlyConversion": true
-};
+function modifyObject(obj) {
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+                modifyObject(obj[key]);
+            } else {
+                // 修改指定字段的值
+                if (key === 'isEligible') {
+                    obj[key] = true;
+                }
+                if (key === 'isSubscribing') {
+                    obj[key] = true;
+                }
+                if (key === 'productId') {
+                    obj[key] = "subscription_year";
+                }
+                if (key === 'expireTime') {
+                    obj[key] = "4092599349000";
+                }
+                if (key === 'isYearlyConversion') {
+                    obj[key] = true;
+                }
+            }
+        }
+    }
+}
 
-// 将修改后的对象转换回 JSON 格式并返回
+// 修改对象
+modifyObject(body);
 $done({ body: JSON.stringify(body) });
