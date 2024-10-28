@@ -3,8 +3,8 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/heji.gif
-#!arguments=revenuecat1:输入#关闭,revenuecat2:输入#关闭,iTunes:输入#关闭
-#!arguments-desc=[参数设置]\n1 revenuecat1,[脚本]\n2 revenuecat2,[响应头]\n3 iTunes,[脚本]
+#!arguments=revenuecat1:revenuecat1,revenuecat2:revenuecat2,iTunes:iTunes,reserve:reserve
+#!arguments-desc=[参数设置]\n1 revenuecat1,[脚本]\n2 revenuecat2,[响应头]\n3 iTunes,[脚本]\n4 reserve,[脚本]
 
 
 [Script]
