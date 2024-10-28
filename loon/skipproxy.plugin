@@ -5,8 +5,8 @@
 
 
 [General]
-## www.baidu.com：网上国网、多看阅读、顺丰金融、广东农信、丰云行、中国银行缤纷生活、通信行程卡app、趣智校园、趣听音乐、光大手机银行、掌上12333、沃视频
-## https://www.maybank2u.com.my/home/m2u/common/login.do：建行生活
+
+## www.maybank2u.com.my：Maybank2U
 ## wxh.wo.cn：沃小号
 ## gate.lagou.com：拉勾招聘
 ## www.abchina.com.cn：中国农业银行
@@ -14,4 +14,4 @@
 ## www.google.com 成都公积金
 ## login-service.mobile-bank.psbc.com,mobile-bank.psbc.com：中国邮政储蓄银行
 
-skip-proxy = www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
+skip-proxy = www.maybank2u.com.my,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
