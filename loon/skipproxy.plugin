@@ -13,5 +13,7 @@
 ## internet.ocbc.com: OCBC SG
 ## www.ocbc.com.my: OCBC MY
 ## auth.alipay.com：支付宝
+## www.singpass.gov.sg: Singpass
 
-skip-proxy = www.maybank2u.com.my,www.citibank.com.sg,internet-banking.dbs.com.sg,www.uob.com.sg,internet.ocbc.com,www.ocbc.com.my,auth.alipay.com,mobile-bank.psbc.com
+
+skip-proxy = www.maybank2u.com.my,www.citibank.com.sg,internet-banking.dbs.com.sg,www.uob.com.sg,internet.ocbc.com,www.ocbc.com.my,auth.alipay.com,www.singpass.gov.sg
