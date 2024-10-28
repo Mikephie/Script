@@ -10,8 +10,8 @@
 ## www.citibank.com.sg：Citibank
 ## internet-banking.dbs.com.sg：POSB
 ## www.uob.com.sg：UOB
-## www.shanbay.com 扇贝单词消息中心
-## www.google.com 成都公积金
+## internet.ocbc.com: OCBC SG
+## internet.ocbc.com: OCBC MY
 ## login-service.mobile-bank.psbc.com,mobile-bank.psbc.com：中国邮政储蓄银行
 
 skip-proxy = www.maybank2u.com.my,www.citibank.com.sg,internet-banking.dbs.com.sg,www.uob.com.sg,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
