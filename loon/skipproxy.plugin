@@ -11,7 +11,7 @@
 ## internet-banking.dbs.com.sg：POSB
 ## www.uob.com.sg：UOB
 ## internet.ocbc.com: OCBC SG
-## internet.ocbc.com: OCBC MY
+## www.ocbc.com.my: OCBC MY
 ## login-service.mobile-bank.psbc.com,mobile-bank.psbc.com：中国邮政储蓄银行
 
-skip-proxy = www.maybank2u.com.my,www.citibank.com.sg,internet-banking.dbs.com.sg,www.uob.com.sg,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
+skip-proxy = www.maybank2u.com.my,www.citibank.com.sg,internet-banking.dbs.com.sg,www.uob.com.sg,internet.ocbc.com,www.ocbc.com.my,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
