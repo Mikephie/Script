@@ -1,7 +1,7 @@
 #!name=跳过代理检测 🛠️工具
 #!desc=跳过部分应用的代理检测 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/sjsm.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/skipproxy.png
 
 
 [General]
@@ -12,6 +12,6 @@
 ## www.uob.com.sg：UOB
 ## internet.ocbc.com: OCBC SG
 ## www.ocbc.com.my: OCBC MY
-## login-service.mobile-bank.psbc.com,mobile-bank.psbc.com：中国邮政储蓄银行
+## auth.alipay.com：支付宝
 
-skip-proxy = www.maybank2u.com.my,www.citibank.com.sg,internet-banking.dbs.com.sg,www.uob.com.sg,internet.ocbc.com,www.ocbc.com.my,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
+skip-proxy = www.maybank2u.com.my,www.citibank.com.sg,internet-banking.dbs.com.sg,www.uob.com.sg,internet.ocbc.com,www.ocbc.com.my,auth.alipay.com,mobile-bank.psbc.com
