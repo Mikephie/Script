@@ -8,10 +8,10 @@
 
 ## www.maybank2u.com.my：Maybank2U
 ## www.citibank.com.sg：Citibank
-## gate.lagou.com：拉勾招聘
+## internet-banking.dbs.com.sg：POSB
 ## www.abchina.com.cn：中国农业银行
 ## www.shanbay.com 扇贝单词消息中心
 ## www.google.com 成都公积金
 ## login-service.mobile-bank.psbc.com,mobile-bank.psbc.com：中国邮政储蓄银行
 
-skip-proxy = www.maybank2u.com.my,www.citibank.com.sg,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
+skip-proxy = www.maybank2u.com.my,www.citibank.com.sg,internet-banking.dbs.com.sg,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
