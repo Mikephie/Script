@@ -44,6 +44,9 @@ function modifyObject(obj) {
                 if (key === 'product_id') {
                     obj[key] = "pro.lifetime";
                 }
+                if (key === 'product_id') {
+                    obj[key] = "pro.lifetime";
+                }
             }
         }
     }
