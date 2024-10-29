@@ -41,7 +41,7 @@ function modifyObject(obj) {
                 if (key === 'expires_at') {
                     obj[key] = 3742762088000;
                 }
-                if (key === 'product_id') {
+                if (key === 'productId') {
                     obj[key] = "pro.lifetime";
                 }
                 if (key === 'product_id') {
