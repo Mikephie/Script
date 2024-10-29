@@ -18,14 +18,38 @@ hostname = purchase-verifier.cdwapi.com
 
 *************************************/
 
-var mikephie = JSON.parse($response.body);
 
-mikephie.profile = {
-  ...mikephie.profile,
-  "is_premium": true,
-  "end_of_premium": 3742762088,
-  "email": "888@gmail.com",
-  "_end_of_premium": "2088-08-08 08:08:08.000"
-};
+let body = JSON.parse($response.body);
 
-$done({body: JSON.stringify(mikephie)});
+function modifyObject(obj) {
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+                if (key === 'purchased_product_identifiers') {
+                    obj[key] = ["pro.lifetime"];  // 直接赋值数组
+                } else {
+                    modifyObject(obj[key]);
+                }
+            } else {
+                // 修改指定字段的值
+                if (key === 'isActive') {
+                    obj[key] = true;
+                }
+                if (key === 'expiresAt') {
+                    obj[key] = 3742762088000;
+                }
+                if (key === 'expires_at') {
+                    obj[key] = 3742762088000;
+                }
+                if (key === 'product_id') {
+                    obj[key] = "pro.lifetime";
+                }
+            }
+        }
+    }
+    return obj;
+}
+
+// 修改对象
+body = modifyObject(body);
+$done({ body: JSON.stringify(body) });
