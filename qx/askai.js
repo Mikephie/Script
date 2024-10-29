@@ -1,7 +1,7 @@
 /*        
           ➪：脚本名称:   Ask AI 
             
-     ꫛꫀꪝ  ：2024年8月15日 16:37
+     ꫛꫀꪝ  ：2024年10月28日 16:37
 
           ★：解锁永久🆅🅸🅿
 
@@ -14,7 +14,7 @@
 ^https:\/\/purchase-verifier\.cdwapi\.com\/ios url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/askai.js
 
 [mitm]
-hostname = api.alohaprofile.com
+hostname = purchase-verifier.cdwapi.com
 
 *************************************/
 
