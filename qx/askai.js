@@ -11,7 +11,7 @@
  
 
 [rewrite_local]
-^https:\/\/api\.alohaprofile\.com\/v1\/profile_info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js
+^https:\/\/purchase-verifier\.cdwapi\.com\/ios url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/askai.js
 
 [mitm]
 hostname = api.alohaprofile.com
