@@ -26,7 +26,7 @@ function modifyObject(obj) {
         if (obj.hasOwnProperty(key)) {
             if (typeof obj[key] === 'object' && obj[key] !== null) {
                 if (key === 'purchased_product_identifiers') {
-                    obj[key] = ["pro.lifetime"];  // 直接赋值数组
+                    obj[key] = ["pro.lifetime"];
                 } else {
                     modifyObject(obj[key]);
                 }
@@ -46,6 +46,19 @@ function modifyObject(obj) {
                 }
                 if (key === 'product_id') {
                     obj[key] = "pro.lifetime";
+                }
+                // 新增字段的修改
+                if (key === 'is_family_share') {
+                    obj[key] = true;
+                }
+                if (key === 'auto_renew_status') {
+                    obj[key] = "0";
+                }
+                if (key === 'is_intro_offer') {
+                    obj[key] = false;
+                }
+                if (key === 'is_trial') {
+                    obj[key] = false;
                 }
             }
         }
