@@ -58,6 +58,7 @@ const appList = {
   'iscreen': { method: 'v1', product_id: 'com.zerone.hidesktop.forever' },
   'pollykann': { method: 'v1', product_id: 'vip.forever.pollykann' },
   'VLLO': { method: 'v1', product_id: 'com.darinsoft.vimo.yearly' },
+  'VLLO': { method: 'v1', product_id: 'com.darinsoft.vimo.yearly' },
   
   // 第二个脚本的应用列表
   'co.vulcanlabs': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetimeid", latest: "mikephie" },
