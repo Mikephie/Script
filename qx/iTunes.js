@@ -70,7 +70,7 @@ const appList = {
   'com.iuuapp.audiomaker': { method: 'v2', cm: 'timed', hx: 'hxpbda', id: "com.iuuapp.audiomaker.cloud.year", ids: "com.iuuapp.audiomaker.removeads", latest: "mikephie" },
   'com.alphamobiletech.bodyApp': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "Bodyapp_Forever", latest: "mikephie" },
   'com.alphamobiletech.facey': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "Facey_Forever", latest: "mikephie" },
-  'VLLO': { method: 'v2', cm: 'timed', hx: 'hxpbda', id: "com.iuuapp.audiomaker.cloud.year", ids: "com.iuuapp.audiomaker.removeads", latest: "mikephie" },
+  'VLLO': { method: 'v2', cm: 'timed', hx: 'hxpbda', id: "com.vimosoft.EVERYTHING", ids: "com.iuuapp.audiomaker.removeads", latest: "mikephie" },
   // 注意：有些应用在两个列表中都出现了，这里保留了第二个脚本的版本
 };
 
