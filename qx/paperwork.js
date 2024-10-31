@@ -8,10 +8,10 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https:\/\/paperwork\.szshht\.cn\/api\/User\/(getUserInfo|getVipInfo) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js
+^https:\/\/paperwork\.szshht\.cn\/api\/User\/(getUserInfo|getVipInfo) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/paperwork.js
 
 [mitm] 
-hostname = appss.baomingding.com
+hostname = paperwork.szshht.cn
 
 *******************************/
 
