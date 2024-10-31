@@ -32,7 +32,7 @@ const bundle = {
 
 //识别UA
 const list = {
-  'ShellBean': { name: 'pro', id: 'blocker.ios.iap.lifetime', cm: 'sjb' },  //ShellBean-SSH终端服/Linux监控
+  'blocker': { name: 'premium', id: 'blocker.ios.iap.lifetime', cm: 'sjb' },  //blocker
   'VidCap': { name: 'io.fadel.vidcap.pro', id: 'subs.vcp_59.99_365_3', cm: 'sja' },  //VidCap
   'PicLoom': { id: 'com.efsoft.picloom_nc_lifetime', cm: 'sjc' },  //PicLoomban
   'Color%20Widgets': { name: 'pro', id: 'cw_1999_1y_3d0', cm: 'sja' },  //ColorWidgets
