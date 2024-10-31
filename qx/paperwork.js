@@ -1,3 +1,21 @@
+/*        
+        ➪：脚本名称: 视频转文字 （永久会员）
+
+        ★：解锁永久🆅🅸🅿
+
+        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
+
+[rewrite_local]
+^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js
+
+[mitm] 
+hostname = appss.baomingding.com
+
+*******************************/
+
+
 let body = JSON.parse($response.body);
 let url = $request.url;
 
