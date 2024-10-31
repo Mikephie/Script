@@ -8,7 +8,7 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js
+^https:\/\/paperwork\.szshht\.cn\/api\/User\/(getUserInfo|getVipInfo) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js
 
 [mitm] 
 hostname = appss.baomingding.com
