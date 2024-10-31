@@ -1,0 +1,11 @@
+#!name = 视频转文字🔐APP解锁
+#!desc = 学习效率 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/paperwork.png
+
+[Script]
+http-response ^https:\/\/paperwork\.szshht\.cn\/api\/User\/(getUserInfo|getVipInfo) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/paperwork.js, requires-body=true, timeout=60, tag=paperwork
+
+
+[mitm]
+hostname = paperwork.szshht.cn
