@@ -89,6 +89,11 @@ classdojo = type=http-response, pattern=^https:\/\/payments\.classdojo\.com\/v1\
 chatonai = type=http-response, pattern=^https?:\/\/billing\.chaton\.ai\/v1\/subscriptions, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/chatonai.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# Documents
+# hostname = rdp.duetdisplay.com
+DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/users/validateReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/duetdisplaypro.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # DreamFace
 # hostname = dreamfaceapp.com
 DreamFace = type=http-response, pattern=^https?:\/\/dreamfaceapp\.com\/df-server\/user\/save_user_login, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/dreamface.js, requires-body=true, max-size=-1, timeout=60
