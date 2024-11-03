@@ -91,7 +91,7 @@ chatonai = type=http-response, pattern=^https?:\/\/billing\.chaton\.ai\/v1\/subs
 #************************************#
 # Documents
 # hostname = *.pdfexpert.com
-DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/users/validateReceipt, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/duetdisplaypro.js, requires-body=true, max-size=-1, timeout=60
+Documents = type=http-request, pattern=https://license.pdfexpert.com/api/2.0/documents/subscription/refresh, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/documents.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # DreamFace
@@ -106,7 +106,7 @@ DuetDisplayPro = type=http-response, pattern=https://rdp.duetdisplay.com/v1/user
 #************************************#
 # Emby(解锁播放权限)
 # hostname = mb3admin.com
-embycrack = type=http-request, pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycrack.js, timeout=60
+Embycrack = type=http-request, pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycrack.js, timeout=60
 
 #************************************#
 # FaceLab
@@ -116,7 +116,7 @@ FaceLab = type=http-response, pattern=^https?:\/\/subscription-api\.lyrebirdstud
 #************************************#
 # FaceSwapper 解锁系列
 # hostname = api-*.facereplacerext.com
-faceSwapper = type=http-response, pattern=^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceSwapper.js, requires-body=true, max-size=-1, timeout=60
+FaceSwapper = type=http-response, pattern=^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceSwapper.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # felo实时翻译-同传与语音字幕 （永久会员）
@@ -132,7 +132,7 @@ Filmix = type=http-response,pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\
 #************************************#
 # Flightradar24 解锁系列
 # hostname = mobile.flightradar24.com
-flightradar24 = type=http-response, pattern=^https://mobile.flightradar24.com/mobile/(user-session|subscribe), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js, requires-body=true, max-size=-1, timeout=60
+Flightradar24 = type=http-response, pattern=^https://mobile.flightradar24.com/mobile/(user-session|subscribe), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # >雅俗共赏/高定素材大师（永久会员）需要登录！
