@@ -26,7 +26,7 @@ if (forbiddenAppFound) {
 
 //识别bundle_id
 const bundle = {
-  'app.imone.OneWidget': { name: 'premium', id: 'genius_lifetime_59', cm: 'sjb' },  //OneWidget-小组件
+  'app.imone.OneWidget': { name: 'pro', id: 'app.imone.OneWidget.Lifetime', cm: 'sjb' },  //OneWidget-小组件
   'com.skysoft.removalfree': { name: 'Pro', id: 'com.skysoft.removalfree.subscription.newyearly', cm: 'sja' }  //图片消除
 }
 
