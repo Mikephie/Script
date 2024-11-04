@@ -33,6 +33,7 @@ const bundle = {
 //识别UA
 const list = {
   'Vocai-iOS': { name: 'AI Pro', id: 'vocabAI_900_1m', cm: 'sja' },  // Vocai
+  'Vocai-iOS': { name: 'AI Pro', id: 'vocabAI_900_1m', cm: 'sja' },  // Vocai
   'PixImagine': { id: 'com.efsoft.piximagine_nc_lifetime', cm: 'sjc' },  //PixImagine
   '1Blocker': { name: 'premium', id: 'blocker.ios.iap.lifetime', cm: 'sjb' },  //1Blocker
   'VidCap': { name: 'io.fadel.vidcap.pro', id: 'subs.vcp_59.99_365_3', cm: 'sja' },  //VidCap
