@@ -46,6 +46,11 @@ aloha = type=http-response, pattern=^https:\/\/api\.alohaprofile\.com\/v1\/profi
 AppRaven = type=http-response, pattern=https://appraven.net/appraven/graphql, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# AskAI
+# hostname = appraven.net
+AppRaven = type=http-response, pattern=https://appraven.net/appraven/graphql, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/AppRaven.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # 白描
 # hostname = baimiao.uzero.cn
 白描 = type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/.+\/(appLaunchWithUser|getAnnouncement|checkLoginClient),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/baimiao.js
