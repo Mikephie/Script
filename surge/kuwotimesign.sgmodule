@@ -5,7 +5,7 @@
 
 [Script]
 kuwo.cookie = type=http-request, pattern=^https:\/\/appi\.kuwo\.cn\/api\/automobile\/kuwo\/v1\/configuration\/signature\?)/, script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/kuwo.cookie.js
-酷我音乐刷时长签到 = type=cron, cronexp="null", script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kuwotimes.js
+酷我音乐刷时长签到 = type=cron, cronexp= 30 6 * * *, script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kuwotimes.js
 
 [MITM]
 hostname = %APPEND% integralapi.kuwo.cn, appi.kuwo.cn
