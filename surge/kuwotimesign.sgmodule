@@ -1,12 +1,11 @@
-#!name=酷我音乐金币签到
-#!desc=✅签到模块
+#!name=酷我音乐刷时长✅签到
+#!desc=酷我音乐 - 插件
 #!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/kuwosvip.png
 
 [Script]
-kuwo.cookie = type=http-request, pattern=^https\:\/\/integralapi\.kuwo\.cn\/api\/v1\/online\/sign\/v1\/earningSignIn\/.*, script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/kuwo.cookie.js, timeout=60
-
-酷我音乐金币签到 = type=cron, cronexp="null", script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kuwocoin.js
+kuwo.cookie = type=http-request, pattern=^https:\/\/appi\.kuwo\.cn\/api\/automobile\/kuwo\/v1\/configuration\/signature\?)/, script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/kuwo.cookie.js
+酷我音乐刷时长签到 = type=cron, cronexp="null", script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kuwotimes.js
 
 [MITM]
 hostname = %APPEND% integralapi.kuwo.cn, appi.kuwo.cn
