@@ -4,9 +4,9 @@
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/kuwosvip.png
 
 [Script]
-kuwo.cookie = type=http-request, pattern=^https\:\/\/integralapi\.kuwo\.cn\/api\/v1\/online\/sign\/v1\/earningSignIn\/.*, script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/kuwo.cookie.js, timeout=60
+kuwo.cookie = type=http-request, pattern=^https\:\/\/integralapi\.kuwo\.cn\/api\/v1\/online\/sign\/v1\/earningSignIn\/.*, script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/kuwo.cookie.js,timeout=60,script-update-interval=0
 
-酷我音乐金币签到 = type=cron, cronexp="0 9,11,13,15,17,19,21 * * *", script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kuwocoin.js
+酷我音乐金币签到 = type=cron, cronexp="0 9,11,13,15,17,19,21 * * *", script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kuwocoin.js,timeout=60,script-update-interval=0
 
 [MITM]
 hostname = %APPEND% integralapi.kuwo.cn, appi.kuwo.cn
