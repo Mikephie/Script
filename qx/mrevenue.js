@@ -50,7 +50,7 @@ const list = {
   idb: 'co.bergen.Darkroom.product.forever.everything', 
   cm: 'sja' 
 },  //Darkroom
-  'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever', cm: 'sjb' },  //ShellBean-SSH终端服/Linux监控
+  'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever', cm: 'sja' },  //ShellBean-SSH终端服/Linux监控
   'ChatLLM': { name: 'Pro', id: 'com.curiouscreatorsco.ChatLLM.pro.lifetime.notrial.150_00', cm: 'sjb' },  //AItText
   'Photomator': { name: 'pixelmator_photo_pro_access', id: 'pixelmator_photo_lifetime_v1', cm: 'sjb' },  //Photomator
   'CountDuck': { name: 'premium', id: 'Lifetime', cm: 'sjb' },  // 倒数鸭
