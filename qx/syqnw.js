@@ -18,7 +18,7 @@ hostname = waterqnwa.yunxiaoguo.cn
 
 var mikephie = JSON.parse($response.body);
 
-mikephie.data = {
+mikephie = {
   "code": "10000",
   "content": {
     "qrCarVipInfo": null,
