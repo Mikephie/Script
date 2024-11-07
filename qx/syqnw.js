@@ -18,70 +18,33 @@ hostname = waterqnwa.yunxiaoguo.cn
 
 var mikephie = JSON.parse($response.body);
 
-mikephie = {
-  "code": "10000",
-  "content": {
-    "qrCarVipInfo": null,
-    "isToastDevInfo": 0,
-    "qimingVipInfo": null,
-    "isPurchasedSubscribe": 1,
-    "isCheckRealNameAuth": 1,
-    "aiPhotoIdVipInfo": null,
-    "virtualVipInfo": null,
-    "docConvertorVipInfo": null,
-    "adSpaceList": [
-    ],
-    "waterVipInfo": {
-      "beginTime": "2024-11-07 20:35:31",
-      "firstOpenTime": "2024-11-07 20:35:31",
-      "userSign": "ZlR0UKkflMM",
-      "expireTime": "2088-08-08 08:08:08",
-      "typeName": "新客专享",
-      "remainDays": 88888,
-      "sign": "VQU8Dq4YZDo",
-      "createTime": "2024-11-07 20:35:30"
-    },
-    "user": {
-      "registerClientType": "ios",
-      "maskRealityName": "",
-      "registerChannel": "appStore",
-      "pwd": "",
-      "parentMobile": "",
-      "realityName": "",
-      "appType": "app",
-      "maskIdNumber": "",
-      "promoteCode": "gKKnG9J4",
-      "registerClientBrand": "",
-      "appId": "water-qnw",
-      "appName": "水印全能王",
-      "parentRealityName": "",
-      "balanceStr": "0.00",
-      "regional": "",
-      "registerClientId": "7A8ED72D-D398-4AA1-BF8B-BCFC6A0D24F0",
-      "registerIp": "27.148.249.11",
-      "email": "",
-      "parentSign": "Tll50EH69Cs",
-      "name": "15546907888",
-      "mobile": "15546907888",
-      "registerClientVersion": "18.1",
-      "maskMobile": "155****7888",
-      "sign": "ZlR0UKkflMM",
-      "promoteQrCode": "",
-      "createTime": "2024-11-07 19:43:19",
-      "openid": "",
-      "registerClientModel": "Unknown",
-      "appCode": "water-qnw",
-      "balance": 0,
-      "wxMpPromoteUrl": "",
-      "pidStr": ",10050,",
-      "headImg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
-      "pid": 10050,
-      "idNumber": ""
-    }
-  }, 
-  "accessToken": "PPYzz3yk9chmg9swQXm1hXnq8Av2eGCQ5LKWHl3D03zqBFuoNW14Co0M3QLdYLZ0",
-  "msg": "成功!",
-  "timestamp": 1730983165409
-}
- 
+mikephie.content = {
+  ...mikephie.content,
+  "qrCarVipInfo": 1,
+  "isToastDevInfo": 0,
+  "qimingVipInfo": 1,
+  "isPurchasedSubscribe": 1,
+  "isCheckRealNameAuth": 1,
+  "aiPhotoIdVipInfo": 1,
+  "virtualVipInfo": 1,
+  "docConvertorVipInfo": 1,
+  "adSpaceList": [],
+  "waterVipInfo": {
+    "beginTime": "2024-11-07 20:35:31",
+    "firstOpenTime": "2024-11-07 20:35:31",
+    "userSign": "ZlR0UKkflMM",
+    "expireTime": "2088-08-08 08:08:08",
+    "typeName": "永久专享VIP",
+    "remainDays": 88888888,
+    "sign": "VQU8Dq4YZDo",
+    "createTime": "2024-11-07 20:35:30"
+  },
+  "user": {
+    ...mikephie.content.user,
+    "registerClientType": "ios",
+    "maskRealityName": "",
+    "registerChannel": "appStore"
+  }
+};
+
 $done({body: JSON.stringify(mikephie)});
