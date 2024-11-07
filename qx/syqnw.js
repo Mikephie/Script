@@ -42,7 +42,7 @@ mikephie.content = {
   "user": {
     ...mikephie.content.user,
     "maskMobile": "MIKEPHIE",
-    headImg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
+    "headImg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
   }
 };
 
