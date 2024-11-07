@@ -32,7 +32,7 @@ const bundle = {
 
 //识别UA
 const list = {
-  'WorldClock': { name: 'lifetime-unlock', id: 'forward.vip.forever.vvebo', cm: 'sja' },  //WorldClock
+  'WorldClock': { name: 'lifetime-unlock', id: 'com.overdesigned.worldclock.removeads1', cm: 'sjb' },  //WorldClock
   'Genius%20AI': { name: 'premium', id: 'genius_lifetime_59', cm: 'sjb' },  // Genius%20AI
   'Vocai-iOS': { name: 'AI Pro', id: 'vocabAI_900_1m', cm: 'sja' },  // Vocai
   'PixImagine': { id: 'com.efsoft.piximagine_nc_lifetime', cm: 'sjc' },  //PixImagine
