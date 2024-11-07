@@ -41,8 +41,7 @@ mikephie.content = {
   },
   "user": {
     ...mikephie.content.user,
-    "registerClientType": "ios",
-    "maskRealityName": "",
+    "maskMobile": "MIKEPHIE",
     headImg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
   }
 };
