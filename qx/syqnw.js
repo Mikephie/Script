@@ -43,7 +43,7 @@ mikephie.content = {
     ...mikephie.content.user,
     "registerClientType": "ios",
     "maskRealityName": "",
-    "registerChannel": "appStore"
+    headImg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
   }
 };
 
