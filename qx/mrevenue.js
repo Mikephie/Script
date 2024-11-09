@@ -34,7 +34,7 @@ const bundle = {
 //识别UA
 const list = {
   'World%20Clock': { name: 'lifetime-unlock', id: 'com.overdesigned.worldclock.removeads1', cm: 'sjb' },  // World%20Clock
-  'MorningAlarm': { name: 'morning_premium', id: 'com.overdesigned.worldclock.removeads1', cm: 'sjb' },  // MorningAlarm
+  'MorningAlarm': { name: 'morning_premium', id: 'alarmify.yearly.1', cm: 'sja' },  // MorningAlarm
   'Genius%20AI': { name: 'premium', id: 'genius_lifetime_59', cm: 'sjb' },  // Genius%20AI
   'Vocai-iOS': { name: 'AI Pro', id: 'vocabAI_900_1m', cm: 'sja' },  // Vocai
   'PixImagine': { id: 'com.efsoft.piximagine_nc_lifetime', cm: 'sjc' },  //PixImagine
