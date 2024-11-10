@@ -37,7 +37,7 @@ const list = {
   'Art%20Generator': { 
   name: 'pro', 
   id: 'artx_yearly_option_2', 
-  nameb: 'co.bergen.Darkroom.entitlement.selectiveAdjustments', 
+  nameb: 'artx_500_stdcredits', 
   idb: 'artx_std_500credit', 
   cm: 'sja' 
 },  //Art%20Generator
