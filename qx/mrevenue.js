@@ -38,7 +38,7 @@ const list = {
   name: 'pro', 
   id: 'artx_yearly_option_2', 
   nameb: 'co.bergen.Darkroom.entitlement.selectiveAdjustments', 
-  idb: 'co.bergen.Darkroom.product.forever.everything', 
+  idb: 'artx_std_500credit', 
   cm: 'sja' 
 },  //Art%20Generator
   //'Art%20Generator': { name: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },  // PhotoGPT
