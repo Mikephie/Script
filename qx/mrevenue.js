@@ -34,7 +34,7 @@ const bundle = {
 //识别UA
 const list = {
   'ReelRender': { name: 'premium', id: 'reelrender.credits30', cm: 'sja' },  // World%20Clock
-  'Art%20Generator': { name: 'pro', id: 'artx_yearly_option_2', cm: 'sja' },  // PhotoGPT
+  'Art%20Generator': { name: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },  // PhotoGPT
   'World%20Clock': { name: 'lifetime-unlock', id: 'com.overdesigned.worldclock.removeads1', cm: 'sjb' },  // World%20Clock
   'MorningAlarm': { name: 'morning_premium', id: 'alarmify.yearly.1', cm: 'sja' },  // MorningAlarm
   'Genius%20AI': { name: 'premium', id: 'genius_lifetime_59', cm: 'sjb' },  // Genius%20AI
