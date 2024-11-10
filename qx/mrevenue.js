@@ -33,7 +33,7 @@ const bundle = {
 
 //识别UA
 const list = {
-  'ChatPub': { name: 'premium', id: 'reelrender.credits30', cm: 'sja' },  // World%20Clock
+  'ChatPub': { name: 'Unlimited Access', id: 'reelrender.credits30', cm: 'sja' },  // World%20Clock
   'Art%20Generator': { 
   name: 'discount_pro', 
   id: 'artx_yearly_option_2', 
