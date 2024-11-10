@@ -22,7 +22,7 @@ var mikephie = JSON.parse($response.body);
   "password" : "SET",
   "sub" : "ZUNcGmFMxgvtLSD8",
   "created_at" : "2023-11-02T08:21:46.572570191Z",
-  "picture" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
+  "picture" : "https://static.mypikpak.com/avatar/pikpak_scale_01.png",
   "email" : "4pbhqkfbzx@privaterelay.appleid.com",
   "providers" : [
     {
