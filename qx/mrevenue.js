@@ -33,7 +33,7 @@ const bundle = {
 
 //识别UA
 const list = {
-  'World%20Clock': { name: 'lifetime-unlock', id: 'com.overdesigned.worldclock.removeads1', cm: 'sjb' },  // World%20Clock
+  'World%20Clock': { name: 'lifetime-unlock', id: 'reelrender.credits30', cm: 'sjb' },  // World%20Clock
   'MorningAlarm': { name: 'morning_premium', id: 'alarmify.yearly.1', cm: 'sja' },  // MorningAlarm
   'World%20Clock': { name: 'lifetime-unlock', id: 'com.overdesigned.worldclock.removeads1', cm: 'sjb' },  // World%20Clock
   'MorningAlarm': { name: 'morning_premium', id: 'alarmify.yearly.1', cm: 'sja' },  // MorningAlarm
