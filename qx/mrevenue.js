@@ -42,7 +42,7 @@ const list = {
   cm: 'sja' 
 },  //Art%20Generator
   'Dream': { name: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },  // PhotoGPT
-  'World%20Clock': { name: 'pro', id: 'com.overdesigned.worldclock.removeads1', cm: 'sjb' },  // Dream
+  'World%20Clock': { name: 'pro', id: 'dream_yearly_jan_2024_3999', cm: 'sja' },  // Dream
   'MorningAlarm': { name: 'morning_premium', id: 'alarmify.yearly.1', cm: 'sja' },  // MorningAlarm
   'Genius%20AI': { name: 'premium', id: 'genius_lifetime_59', cm: 'sjb' },  // Genius%20AI
   'Vocai-iOS': { name: 'AI Pro', id: 'vocabAI_900_1m', cm: 'sja' },  // Vocai
