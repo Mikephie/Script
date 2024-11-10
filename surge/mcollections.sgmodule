@@ -21,6 +21,11 @@
 {{{iTunes}}} = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/iTunes.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# Adapty解锁系列
+# hostname = buy.itunes.apple.com
+{{{adapty}}} = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/iTunes.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # 66Ringtones 抖抖去水印（ kkyun组合-永久会员 ）
 # hostname = kkyun.com
 kkyun = type=http-response, pattern=^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kkyun.js, requires-body=true, max-size=-1, timeout=60
