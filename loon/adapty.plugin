@@ -1,0 +1,10 @@
+#!name = Adapty🔐APP解锁
+#!desc = Adapty解锁系列 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/adapty.png
+
+[Script]
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adapty.js, requires-body=true, tag=Adapty解锁系列
+
+[MITM]
+hostname = buy.itunes.apple.com
