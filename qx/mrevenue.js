@@ -38,7 +38,7 @@ const list = {
   name: 'discount_pro', 
   id: 'artx_yearly_option_2', 
   nameb: 'artx_500_stdcredits', 
-  idb: 'artx_std_500credit', 
+  idb: 'artx_100Credit', 
   cm: 'sja' 
 },  //Art%20Generator
   //'Art%20Generator': { name: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },  // PhotoGPT
