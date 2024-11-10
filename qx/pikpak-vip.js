@@ -20,7 +20,7 @@ var mikephie = JSON.parse($response.body);
 
     mikephie = {
   "data" : {
-    "expire" : "2025-11-29T10:58:16+08:00",
+    "expire" : "2024-12-17T10:58:16+08:00",
     "ext_type" : "",
     "status" : "ok",
     "restricted" : {
@@ -37,19 +37,20 @@ var mikephie = JSON.parse($response.body);
       }
     },
     "extUserInfo" : {
-      "userRegion" : "regional"
+      "userRegion" : "regional",
+      "checkedInPremium" : false
     },
     "user_id" : "ZUNcGmFMxgvtLSD8",
-    "kind" : 2,
+    "kind" : 1,
     "fee_record" : "no_record",
     "type" : "platinum",
     "vipItem" : [
       {
         "status" : "ok",
-        "expire" : "2025-11-29T10:58:16+08:00",
+        "expire" : "2024-12-17T10:58:16+08:00",
         "type" : "regional",
-        "description" : "区域会员",
-        "surplus_day" : 461
+        "description" : "Regional Premium",
+        "surplus_day" : 37
       }
     ]
   }
