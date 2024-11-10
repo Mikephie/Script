@@ -41,10 +41,11 @@ const list = {
   idb: 'artx_100Credit', 
   cm: 'sja' 
 },  //Art%20Generator
-  'Dream': { name: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },  // PhotoGPT
-  'World%20Clock': { name: 'pro', id: 'dream_yearly_jan_2024_3999', cm: 'sja' },  // Dream
-  'MorningAlarm': { name: 'morning_premium', id: 'alarmify.yearly.1', cm: 'sja' },  // MorningAlarm
-  'Genius%20AI': { name: 'premium', id: 'genius_lifetime_59', cm: 'sjb' },  // Genius%20AI
+  'Dream': { name: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },  //PhotoGPT
+  'Dream': { name: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },  //Dream
+  'World%20Clock': { name: 'pro', id: 'dream_yearly_jan_2024_3999', cm: 'sja' },  //World%20Clock
+  'MorningAlarm': { name: 'morning_premium', id: 'alarmify.yearly.1', cm: 'sja' },  //MorningAlarm
+  'Genius%20AI': { name: 'premium', id: 'genius_lifetime_59', cm: 'sjb' },  //Genius%20AI
   'Vocai-iOS': { name: 'AI Pro', id: 'vocabAI_900_1m', cm: 'sja' },  // Vocai
   'PixImagine': { id: 'com.efsoft.piximagine_nc_lifetime', cm: 'sjc' },  //PixImagine
   '1Blocker': { name: 'premium', id: 'blocker.ios.iap.lifetime', cm: 'sjb' },  //1Blocker
