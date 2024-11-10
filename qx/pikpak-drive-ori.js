@@ -22,31 +22,26 @@ hostname = api-drive.mypikpak.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "space" : null,
-  "has_more" : false,
-  "base" : {
-    "sub_status" : true,
-    "assets" : "10T",
-    "upload" : {
-      "assets" : 0,
-      "total_assets" : 0,
-      "size" : 0
-    },
-    "expire_time" : "2024-12-17T10:58:16+08:00",
-    "download" : {
-      "assets" : 0,
-      "total_assets" : 0,
-      "size" : 0
-    },
-    "size" : 10995116277760,
-    "vip_status" : "ok",
-    "user_id" : "ZUNcGmFMxgvtLSD8",
-    "offline" : {
-      "assets" : 0,
-      "total_assets" : 0,
-      "size" : 0
-    },
-    "info" : ""
+  "expires_at" : "",
+  "user_type" : 2,
+  "kind" : "drive#about",
+  "quotas" : {
+    "cloud_download" : {
+      "usage_in_trash" : "0",
+      "kind" : "",
+      "usage" : "0",
+      "is_unlimited" : false,
+      "complimentary" : "2",
+      "limit" : "5"
+    }
+  },
+  "quota" : {
+    "usage_in_trash" : "0",
+    "kind" : "drive#quota",
+    "usage" : "10248884",
+    "is_unlimited" : false,
+    "complimentary" : "0",
+    "limit" : "6442450944"
   }
 }
 
