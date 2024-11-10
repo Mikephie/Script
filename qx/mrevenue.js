@@ -37,7 +37,7 @@ const list = {
   'Art%20Generator': { 
   name: 'discount_pro', 
   id: 'artx_yearly_option_2', 
-  nameb: 'artx_500_stdcredits', 
+  nameb: 'DalleCredit', 
   idb: 'artx_100Credit', 
   cm: 'sja' 
 },  //Art%20Generator
