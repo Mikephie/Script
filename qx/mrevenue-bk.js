@@ -28,13 +28,41 @@ if (forbiddenAppFound) {
 const bundle = {
   'app.imone.OneWidget': { name: 'pro', id: 'app.imone.OneWidget.Lifetime', cm: 'sjb' },  //OneWidget-小组件
   'com.skysoft.removalfree': { name: 'Pro', id: 'com.skysoft.removalfree.subscription.newyearly', cm: 'sja' }  //图片消除
+  //'com.overdesigned.WorldClock': { name: 'lifetime-unlock', id: 'com.overdesigned.worldclock.removeads1', cm: 'sjb' },  //WorldClock
 }
 
 //识别UA
 const list = {
+  'ChatPub': { name: 'Unlimited Access', id: 'conversationai.year', cm: 'sja' },  // World%20Clock
+  'Art%20Generator': { 
+  name: 'discount_pro', 
+  id: 'artx_yearly_option_2', 
+  nameb: 'DalleCredit', 
+  idb: 'artx_100Credit', 
+  cm: 'sja' 
+},  //Art%20Generator
+  'Dream': { name: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },  //PhotoGPT
+  'Dream': { name: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },  //Dream
+  'World%20Clock': { name: 'pro', id: 'dream_yearly_jan_2024_3999', cm: 'sja' },  //World%20Clock
+  'MorningAlarm': { name: 'morning_premium', id: 'alarmify.yearly.1', cm: 'sja' },  //MorningAlarm
+  'Genius%20AI': { name: 'premium', id: 'genius_lifetime_59', cm: 'sjb' },  //Genius%20AI
+  'Vocai-iOS': { name: 'AI Pro', id: 'vocabAI_900_1m', cm: 'sja' },  // Vocai
+  'PixImagine': { id: 'com.efsoft.piximagine_nc_lifetime', cm: 'sjc' },  //PixImagine
+  '1Blocker': { name: 'premium', id: 'blocker.ios.iap.lifetime', cm: 'sjb' },  //1Blocker
+  'VidCap': { name: 'io.fadel.vidcap.pro', id: 'subs.vcp_59.99_365_3', cm: 'sja' },  //VidCap
+  'PicLoom': { id: 'com.efsoft.picloom_nc_lifetime', cm: 'sjc' },  //PicLoomban
+  'Color%20Widgets': { name: 'pro', id: 'cw_1999_1y_3d0', cm: 'sja' },  //ColorWidgets
   'ChatBot': { name: 'chatbot_annual', id: 'chatbot_annual', cm: 'sja' },  //ChatBot-AIChat
+  'ASKAI': { name: 'pro', id: 'askai_pro', nameb: 'pro_plan', idb: 'token_pro_plan', cm: 'sjb' },  //ASKAI
   'Infltr': { name: 'com.Yooshr.infltr.subscriptionPremium', id: 'com.Yooshr.infltr.everythingForever', cm: 'sja' },  //樱飞无限滤镜
-  'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever', cm: 'sjb' },  //ShellBean-SSH终端服/Linux监控
+  'Darkroom': { 
+  name: 'co.bergen.Darkroom.entitlement.allToolsAndFilters', 
+  id: 'co.bergen.Darkroom.product.forever.everything', 
+  nameb: 'co.bergen.Darkroom.entitlement.selectiveAdjustments', 
+  idb: 'co.bergen.Darkroom.product.forever.everything', 
+  cm: 'sja' 
+},  //Darkroom
+  'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever', cm: 'sja' },  //ShellBean-SSH终端服/Linux监控
   'ChatLLM': { name: 'Pro', id: 'com.curiouscreatorsco.ChatLLM.pro.lifetime.notrial.150_00', cm: 'sjb' },  //AItText
   'Photomator': { name: 'pixelmator_photo_pro_access', id: 'pixelmator_photo_lifetime_v1', cm: 'sjb' },  //Photomator
   'CountDuck': { name: 'premium', id: 'Lifetime', cm: 'sjb' },  // 倒数鸭
