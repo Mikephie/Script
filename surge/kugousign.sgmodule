@@ -27,7 +27,7 @@ DOMAIN-SUFFIX,e.qq.com,REJECT
 [Script]
 tag=酷狗概念版Cookies = type=http-request, pattern=^https://gateway.kugou.com/youth/v1/(recharge/receive_vip_listen_song|activity/get_month_vip_record).*, script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kugou.js, argument="[{appName},{appCategory},{isSupportChinese}]"
 
-酷狗概念版签到 = type=cron, cronexp="null", script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kugou_auto.js
+酷狗概念版签到 = type=cron, cronexp="30 0 * * *", script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kugou_auto.js
 
 [MITM]
 hostname = %APPEND% *.kugou.com
