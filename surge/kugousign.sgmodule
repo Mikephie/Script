@@ -1,8 +1,8 @@
-#!name=酷我音乐刷时长✅签到
-#!desc=酷我音乐刷时长 - 模块
+#!name=酷狗概念版签到✅签到
+#!desc=酷狗概念版签到 - 模块
 #!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=✅签到
-#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/kuwosvip.png
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/kugou.png
 
 [Rule]
 URL-REGEX,https://gateway.kugou.com/ads.gateway/.*,REJECT
