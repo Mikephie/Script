@@ -67,7 +67,7 @@ const list = {
   'CountDuck': { Ent: 'premium', id: 'Lifetime', cm: 'sjb' },
   'ScreenRecordCase': { Ent: 'Premium', id: 'me.fandong.ScreenRecordCase.Ultra', cm: 'sjb' },
   'Currency': { Ent: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus', cm: 'sja' },
-  'Spark': { Ent: 'premium', id: 'spark_5999_1y_1w0', cm: 'sja' },
+  'Spark': { Ent: 'premium', id: 'spark_6999_1y_1w0', cm: 'sja' },
   'ShellBoxKit': { Ent: 'pro', id: 'ShellBoxKit.Lifetime', cm: 'sjb' },
   'IDM': { Ent: 'premium', id: 'sub_yearly_idm', cm: 'sja' },
   'Whisper': { Ent: 'all_features', id: 'whisperai_80_y', cm: 'sja' },
