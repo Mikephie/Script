@@ -39,7 +39,7 @@ const list = {
     idb: 'artx_100Credit', 
     cm: 'sja' 
   },
-  'Jellycuts': { Ent: 'pro', id: 'com.zlineman.Jellyfish.tier.5.pro', cm: 'sja' },
+  'Video%20Up!': { Ent: 'pro', id: 'com.zlineman.Jellyfish.tier.5.pro', cm: 'sja' },
   '%E9%85%B7%E6%8B%8D': { Ent: 'Premium', id: 'com.wallpapershub.anime.premiumCategories', cm: 'sja' },
   'Jellycuts': { Ent: 'pro', id: 'com.zlineman.Jellyfish.tier.5.pro', cm: 'sja' },
   'Dream': { Ent: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },
