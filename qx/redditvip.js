@@ -9,6 +9,10 @@ hostname = gql.reddit.com, gql-fed.reddit.com
 
 */
 
+let body;
+try {
+  body = 
+  
   // 解锁会员
   body = JSON.stringify(body)
     .replace(/"isPremiumMember":false/g, '"isPremiumMember":true')
