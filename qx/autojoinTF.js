@@ -3,7 +3,7 @@
 更新内容：404状态码判断更改为模块参数自定义选择保留或移除
 
 Surge配置
-https://raw.githubusercontent.com/githubdulong/Script/master/Surge/AUTOTF.sgmodule
+https://raw.githubusercontent.com/Mikephie/Script/main/surge/autoTF.sgmodule
 Boxjs订阅
 https://raw.githubusercontent.com/githubdulong/Script/master/boxjs.json
 */
