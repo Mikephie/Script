@@ -42,9 +42,9 @@
     {
   "id": "Auto_join_TF",
   "name": "TestFlight监控",
-  "author": "@MuTu888",
-  "script": "https://raw.githubusercontent.com/githubdulong/Script/master/Auto_join_TF.js",
-  "icons": [
+  "author": "@Mikephie",
+  "script": "https://raw.githubusercontent.com/Mikephie/Script/main/qx/autojoinTF.js",
+  "icons": [ 
     "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png",
     "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png"
   ],
