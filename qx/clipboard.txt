@@ -1,14 +1,8 @@
-/*
-去广告by@xream 解锁会员 by@ios151
+当然可以！你可以将解锁会员和去广告功能结合在同一个脚本中，并为 Loon 和 Surge 的处理做适当调整。以下是一个共用的脚本示例，支持 Loon 和 Surge 的处理逻辑。
 
-[rewrite_local]
-^https?:\/\/gql(-fed)?\.reddit\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js
+### 共用脚本示例
 
-[MITM]
-hostname = gql.reddit.com, gql-fed.reddit.com
-
-*/
-
+```javascript
 // 处理请求
 let isLoon = typeof $response !== 'undefined'; // 判断是否为 Loon 环境
 let isSurge = typeof $http !== 'undefined'; // 判断是否为 Surge 环境
@@ -95,3 +89,17 @@ if (body) {
   // 没有找到 body
   $done({});
 }
+```
+
+### 如何使用
+
+1. 将此代码放入 Loon 或 Surge 的脚本配置部分。
+2. 确保根据您的需求调整相应的 JSON 处理逻辑和字段。
+
+### 注意事项
+
+- **环境判断**：脚本中会根据 `$response` 和 `$http` 来判断是运行在 Loon 还是 Surge 环境，以便采用不同的方式处理响应。
+  
+- **调试与测试**：建议在添加后进行充分测试，以确保在两个环境中功能均能正常运作。
+
+如果需要更多的帮助或进一步的修改，请告诉我！
