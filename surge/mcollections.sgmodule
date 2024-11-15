@@ -238,13 +238,18 @@ ringtonemaker = type=http-response, pattern=^http:\/\/clip\.tto321\.cn\/v1\/api\
 sjsm = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/sjsm.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# 视频转文字（永久会员）
+# hostname = paperwork.szshht.cn
+paperwork = type=http-response, pattern=^https:\/\/paperwork\.szshht\.cn\/api\/User\/(getUserInfo|getVipInfo), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/paperwork.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # 水印宝 （永久会员）
 # hostname = newappapi.fntmob.com
 水印宝 = type=http-response, pattern=^https:\/\/newappapi\.fntmob\.com\/api\/v1\/qsy\/user-info(.?)+, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/syb.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 水印全能王 （永久会员）
-# hostname = newappapi.fntmob.com
+# hostname = waterqnwa.yunxiaoguo.cn
 水印全能王 = type=http-response, pattern=^https:\/\/waterqnwa\.yunxiaoguo\.cn\/user\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/syqnw.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
@@ -273,10 +278,6 @@ wshb2 = type=http-response, pattern=^https?:\/\/api-poster\.ycase\.cn\/api\/User
 # hostname = appss.rhinoxlab.com
 zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
-# 视频转文字（永久会员）
-# hostname = paperwork.szshht.cn
-paperwork = type=http-response, pattern=^https:\/\/paperwork\.szshht\.cn\/api\/User\/(getUserInfo|getVipInfo), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/paperwork.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, api.adapty.io, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, qisi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com, be.aimirror.fun, api.528529.com, newappapi.fntmob.com, dreamfaceapp.com, pptdashi.kuoliang.cn, billing.chaton.ai, video-svr.perfect365.com, paperwork.szshht.cn, *.pdfexpert.com, purchase-verifier.cdwapi.com
+hostname = %APPEND% rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, api.adapty.io, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, api.adblockpro.app, appv2.filmix.com.cn, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, qisi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com, be.aimirror.fun, api.528529.com, newappapi.fntmob.com, dreamfaceapp.com, pptdashi.kuoliang.cn, billing.chaton.ai, video-svr.perfect365.com, paperwork.szshht.cn, *.pdfexpert.com, purchase-verifier.cdwapi.com， waterqnwa.yunxiaoguo.cn
