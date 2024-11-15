@@ -2,27 +2,7 @@ let body = $response.body;
 try {
   let data = JSON.parse(body);
 
-  // 去除 NSFW 提示
-  JSON.stringify(data).replace(/"isNsfw":true/g, '"isNsfw":false')
-                     .replace(/"isNsfwMediaBlocked":true/g, '"isNsfwMediaBlocked":false')
-                     .replace(/"isNsfwContentShown":false/g, '"isNsfwContentShown":true');
-
-  // 去广告逻辑
-  if (data.data?.children?.commentsPageAds) {
-    data.data.children.commentsPageAds = [];
-  }
-  for (const key in data.data) {
-    if (data.data[key]?.elements?.edges) {
-      data.data[key].elements.edges = data.data[key].elements.edges.filter(
-        edge =>
-          !["AdPost"].includes(edge?.node?.__typename) &&
-          !(edge?.node?.cells?.some(cell => cell?.__typename === "AdMetadataCell")) &&
-          !edge?.node?.adPayload
-      );
-    }
-  }
-
-  // 解锁会员功能
+  // 追加会员解锁字段
   body = JSON.stringify(data)
     .replace(/"isPremiumMember":false/g, '"isPremiumMember":true')
     .replace(/"isSubscribed":false/g, '"isSubscribed":true')
@@ -34,7 +14,7 @@ try {
     );
 
 } catch (error) {
-  console.log("Error parsing JSON: ", error);
+  console.log("Error processing membership unlock:", error);
 }
 
 $done({ body });
