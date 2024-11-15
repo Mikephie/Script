@@ -4,7 +4,7 @@
 #!category=🔐APP
 
 [Script]
-水印全能王 = type=http-response, pattern=^https:\/\/waterqnwa\.yunxiaoguo\.cn\/user\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/syqnw.js, requires-body=true, max-size=-1, timeout=60
+syqnw = type=http-response, pattern=^https:\/\/waterqnwa\.yunxiaoguo\.cn\/user\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/syqnw.js, requires-body=true, timeout=60
 
 
 [MITM]
