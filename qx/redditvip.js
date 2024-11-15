@@ -1,19 +1,41 @@
 /*
 去广告by@xream 解锁会员 by@ios151
 
+
 [rewrite_local]
-^https?:\/\/gql(-fed)?\.reddit\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js
+^https?:\/\/gql(-fed)?\.reddit\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip-qx.js
+
 
 [MITM]
 hostname = gql.reddit.com, gql-fed.reddit.com
 
-*/
 
+*/
 let body;
 try {
-  body = 
-  
+  body = JSON.parse($response.body.replace(/"isNsfw":true/g, '"isNsfw":false'));
+
+  // 这里删除了去广告的代码
+
+  /*
+  if (body.data?.children?.commentsPageAds) {
+    body.data.children.commentsPageAds = [];
+  }
+  for (const [k, v] of Object.entries(body.data)) {
+    if (v?.elements?.edges) {
+      body.data[k].elements.edges = v.elements.edges.filter(
+        i =>
+          !['AdPost'].includes(i?.node?.__typename) &&
+          !i?.node?.cells?.some(j => j?.__typename === 'AdMetadataCell') &&
+          !i?.node?.adPayload
+
+      );
+    }
+  }
+  */
+
   // 解锁会员
+
   body = JSON.stringify(body)
     .replace(/"isPremiumMember":false/g, '"isPremiumMember":true')
     .replace(/"isSubscribed":false/g, '"isSubscribed":true')
