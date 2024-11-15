@@ -1,13 +1,12 @@
 #!name = Reddit去广告关 NSFW 提示(JQ 版)
-#!desc = 去广告 - 插件
+#!desc = 去广告附加会员 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/reddit.png
 #!tag = 去广告
 #!date = 2024-10-26 03:35:00
 
-[Rewrite]
-^https?:\/\/gql(-fed)?\.reddit\.com response-body-json-jq 'walk( if type == "object" then (if .isNsfw == true then .isNsfw = false else . end) | (if .isNsfwMediaBlocked == true then .isNsfwMediaBlocked = false else . end) | (if .isNsfwContentShown == false then .isNsfwContentShown = true else . end) | (if (.commentsPageAds | type == "array") then (.commentsPageAds = []) else . end) | (if ( (.node | type == "object") and (.node.cells | type == "array") and (.node.cells | any(.__typename? == "AdMetadataCell" or .isAdPost? == true)) ) then empty else . end) | (if (.node | type == "object") and (.node.adPayload | type == "object") then empty else . end) | (if .__typename == "AdPost" then empty else . end) else . end)'
-
+[Script]
+http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, requires-body=true, timeout=60, tag=redditvip
 
 
 [MitM]
