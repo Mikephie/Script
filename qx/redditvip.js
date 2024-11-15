@@ -1,53 +1,33 @@
-/*
-去广告by@xream 解锁会员 by@ios151
+#!name = Reddit 🚫广告 & 解锁会员
+#!desc = 去广告 & 解锁会员 - 模块
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🚫广告
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/reddit.png
+#appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
+[General]
 
-[rewrite_local]
-^https?:\/\/gql(-fed)?\.reddit\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip-qx.js
+force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 
 [MITM]
-hostname = gql.reddit.com, gql-fed.reddit.com
+
+hostname = %APPEND%, gql.reddit.com, gql-fed.reddit.com
 
 
-*/
-let body;
-try {
-  body = JSON.parse($response.body.replace(/"isNsfw":true/g, '"isNsfw":false'));
+[Body Rewrite]
 
-  // 这里删除了去广告的代码
-
-  /*
-  if (body.data?.children?.commentsPageAds) {
-    body.data.children.commentsPageAds = [];
-  }
-  for (const [k, v] of Object.entries(body.data)) {
-    if (v?.elements?.edges) {
-      body.data[k].elements.edges = v.elements.edges.filter(
-        i =>
-          !['AdPost'].includes(i?.node?.__typename) &&
-          !i?.node?.cells?.some(j => j?.__typename === 'AdMetadataCell') &&
-          !i?.node?.adPayload
-
-      );
-    }
-  }
-  */
-
-  // 解锁会员
-
-  body = JSON.stringify(body)
-    .replace(/"isPremiumMember":false/g, '"isPremiumMember":true')
-    .replace(/"isSubscribed":false/g, '"isSubscribed":true')
-    .replace(/"isEmployee":false/g, '"isEmployee":true')
-    .replace(/"skus": \[\]/g, '"skus": [{"kind":"Premium","subscriptionType":"Premium","name":"Premium Subscription","description":"Mobile Annual Premium Subscription","duration":{"amount":1,"unit":"YEAR"},"id":"1","quantity":"1","renewInterval":"YEAR","requiredPaymentProviders":["APPLE_INAPP","GOOGLE_INAPP"],"externalProductId":"com.reddit.premium_2","promos":[],"tags":[]}]')
-    .replace(
-      /({)/,
-      '$1"has_gold_subscription":true, "pref_autoplay":false, "has_subscribed_to_premium":true, "has_visited_new_profile":true, "pref_video_autoplay":false, "features":{"promoted_trend_blanks":false}, "is_mod":true, "user_is_subscriber":true, "hide_ads":true, "isPremiumMember":true, "is_gold":true, "isBrandAffiliate": true, "has_ios_subscription":true, "seen_premium_adblock_modal":true, "has_external_account":true,'
-    );
-
-} catch (e) {
-  console.log(e);
-} finally {
-  $done(body ? { body: body } : {});
-}
+http-response-jq ^https?:\/\/gql(-fed)?\.reddit\.com 'walk( if type == "object" then 
+  (if .isNsfw == true then .isNsfw = false else . end) 
+  | (if .isNsfwMediaBlocked == true then .isNsfwMediaBlocked = false else . end) 
+  | (if .isNsfwContentShown == false then .isNsfwContentShown = true else . end) 
+  | (if (.commentsPageAds | type == "array") then (.commentsPageAds = []) else . end) 
+  | (if ( (.node | type == "object") and (.node.cells | type == "array") and (.node.cells | any(.__typename? == "AdMetadataCell" or .isAdPost? == true)) ) then empty else . end) 
+  | (if (.node | type == "object") and (.node.adPayload | type == "object") then empty else . end) 
+  | (if .__typename == "AdPost" then empty else . end) 
+else . end) 
+| (if (.isPremiumMember == false) then .isPremiumMember = true else . end) 
+| (if (.isSubscribed == false) then .isSubscribed = true else . end) 
+| (if (.isEmployee == false) then .isEmployee = true else . end) 
+| (if (.skus | type == "array") then .skus = [{"kind":"Premium","subscriptionType":"Premium","name":"Premium Subscription","description":"Mobile Annual Premium Subscription","duration":{"amount":1,"unit":"YEAR"},"id":"1","quantity":"1","renewInterval":"YEAR","requiredPaymentProviders":["APPLE_INAPP","GOOGLE_INAPP"],"externalProductId":"com.reddit.premium_2","promos":[],"tags":[]}] else . end) 
+| . + {"has_gold_subscription":true, "pref_autoplay":false, "has_visited_new_profile":true, "pref_video_autoplay":false, "features":{"promoted_trend_blanks":false}, "is_mod":true, "user_is_subscriber":true, "hide_ads":true, "is_gold":true, "isBrandAffiliate": true, "has_ios_subscription":true, "seen_premium_adblock_modal":true, "has_external_account":true}'
