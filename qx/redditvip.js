@@ -1,34 +1,51 @@
 let body = JSON.parse($response.body);
 
-function processNSFW(obj) {
-  if (obj.isNsfw === true) obj.isNsfw = false;
-  if (obj.isNsfwMediaBlocked === true) obj.isNsfwMediaBlocked = false;
-  if (obj.isNsfwContentShown === false) obj.isNsfwContentShown = true;
+console.log("Original body:", JSON.stringify(body).slice(0, 200) + "..."); // 日志原始数据
+
+function isAd(item) {
+    if (!item || typeof item !== 'object') return false;
+    
+    // 检查所有可能表示广告的属性
+    const adIndicators = [
+        item.isAd === true,
+        item.isSponsored === true,
+        item.__typename === 'AdPost',
+        item.adPayload,
+        (item.cells && item.cells.some(cell => cell.__typename === 'AdMetadataCell' || cell.isAdPost === true)),
+        item.type === 'ad',
+        item.isAdvertiserContent === true,
+        item.promoted === true
+    ];
+
+    return adIndicators.some(indicator => indicator === true);
 }
 
-function removeAds(obj) {
-  // 清空评论页面广告
-  if (Array.isArray(obj.commentsPageAds)) {
-    obj.commentsPageAds = [];
-  }
-
-  // 处理 data 对象中的广告
-  if (obj.data && typeof obj.data === 'object') {
-    for (let key in obj.data) {
-      if (obj.data[key] && obj.data[key].elements && Array.isArray(obj.data[key].elements.edges)) {
-        obj.data[key].elements.edges = obj.data[key].elements.edges.filter(edge => {
-          if (!edge || !edge.node) return true;
-          if (edge.node.__typename === 'AdPost') return false;
-          if (edge.node.adPayload) return false;
-          if (Array.isArray(edge.node.cells) && edge.node.cells.some(cell => cell.__typename === 'AdMetadataCell' || cell.isAdPost === true)) return false;
-          return true;
+function removeAdsRecursive(obj) {
+    if (Array.isArray(obj)) {
+        return obj.filter(item => !isAd(item)).map(removeAdsRecursive);
+    } else if (typeof obj === 'object' && obj !== null) {
+        Object.keys(obj).forEach(key => {
+            if (Array.isArray(obj[key])) {
+                obj[key] = obj[key].filter(item => !isAd(item)).map(removeAdsRecursive);
+            } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+                obj[key] = removeAdsRecursive(obj[key]);
+            }
         });
-      }
     }
-  }
+    return obj;
+}
+
+function processNSFW(obj) {
+    if (typeof obj !== 'object' || obj === null) return;
+    if (obj.isNsfw === true) obj.isNsfw = false;
+    if (obj.isNsfwMediaBlocked === true) obj.isNsfwMediaBlocked = false;
+    if (obj.isNsfwContentShown === false) obj.isNsfwContentShown = true;
+    Object.values(obj).forEach(processNSFW);
 }
 
 processNSFW(body);
-removeAds(body);
+body = removeAdsRecursive(body);
+
+console.log("Processed body:", JSON.stringify(body).slice(0, 200) + "..."); // 日志处理后的数据
 
 $response.body = JSON.stringify(body);
