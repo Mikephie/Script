@@ -1,24 +1,29 @@
-let body;
+let body = $response.body;
 try {
-  body = JSON.parse($response.body.replace(/"isNsfw":true/g, '"isNsfw":false'));
+  let data = JSON.parse(body);
 
-  // Remove ads from the response
-  if (body.data?.children?.commentsPageAds) {
-    body.data.children.commentsPageAds = [];
+  // 去除 NSFW 提示
+  JSON.stringify(data).replace(/"isNsfw":true/g, '"isNsfw":false')
+                     .replace(/"isNsfwMediaBlocked":true/g, '"isNsfwMediaBlocked":false')
+                     .replace(/"isNsfwContentShown":false/g, '"isNsfwContentShown":true');
+
+  // 去广告逻辑
+  if (data.data?.children?.commentsPageAds) {
+    data.data.children.commentsPageAds = [];
   }
-  for (const [k, v] of Object.entries(body.data)) {
-    if (v?.elements?.edges) {
-      body.data[k].elements.edges = v.elements.edges.filter(
-        i =>
-          !['AdPost'].includes(i?.node?.__typename) &&
-          !i?.node?.cells?.some(j => j?.__typename === 'AdMetadataCell') &&
-          !i?.node?.adPayload
+  for (const key in data.data) {
+    if (data.data[key]?.elements?.edges) {
+      data.data[key].elements.edges = data.data[key].elements.edges.filter(
+        edge =>
+          !["AdPost"].includes(edge?.node?.__typename) &&
+          !(edge?.node?.cells?.some(cell => cell?.__typename === "AdMetadataCell")) &&
+          !edge?.node?.adPayload
       );
     }
   }
 
-  // Unlock premium membership features
-  body = JSON.stringify(body)
+  // 解锁会员功能
+  body = JSON.stringify(data)
     .replace(/"isPremiumMember":false/g, '"isPremiumMember":true')
     .replace(/"isSubscribed":false/g, '"isSubscribed":true')
     .replace(/"isEmployee":false/g, '"isEmployee":true')
@@ -28,8 +33,8 @@ try {
       '$1"has_gold_subscription":true, "pref_autoplay":false, "has_subscribed_to_premium":true, "has_visited_new_profile":true, "pref_video_autoplay":false, "features":{"promoted_trend_blanks":false}, "is_mod":true, "user_is_subscriber":true, "hide_ads":true, "isPremiumMember":true, "is_gold":true, "isBrandAffiliate": true, "has_ios_subscription":true, "seen_premium_adblock_modal":true, "has_external_account":true,'
     );
 
-} catch (e) {
-  console.log(e);
-} finally {
-  $done(body ? { body: body } : {});
+} catch (error) {
+  console.log("Error parsing JSON: ", error);
 }
+
+$done({ body });
