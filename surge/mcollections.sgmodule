@@ -243,6 +243,11 @@ sjsm = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/\/app\/acc
 水印宝 = type=http-response, pattern=^https:\/\/newappapi\.fntmob\.com\/api\/v1\/qsy\/user-info(.?)+, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/syb.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# 水印全能王 （永久会员）
+# hostname = newappapi.fntmob.com
+水印全能王 = type=http-response, pattern=^https:\/\/waterqnwa\.yunxiaoguo\.cn\/user\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/syqnw.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # ToonMe
 # hostname = purchases.ws.pho.to
 ToonMe = type=http-response,pattern=https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js
