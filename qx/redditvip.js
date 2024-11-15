@@ -3,8 +3,8 @@ try {
   let data = JSON.parse(body);
 
   // 去除广告和 NSFW 提示
-  function removeAds(obj) {
-    if (typeof obj !== 'object' || obj === null) return;
+  function cleanAdsAndNSFW(obj) {
+    if (typeof obj !== 'object' || obj === null) return obj;
 
     // 处理 NSFW 内容
     if (obj.isNsfw === true) obj.isNsfw = false;
@@ -13,27 +13,34 @@ try {
 
     // 去除广告内容
     if (Array.isArray(obj.commentsPageAds)) obj.commentsPageAds = [];
+
+    // 过滤广告帖子
     if (obj.__typename === "AdPost") return null;
     if (obj.node?.__typename === "AdPost") return null;
 
-    if (obj.node?.cells) {
-      obj.node.cells = obj.node.cells.filter(cell => cell.__typename !== "AdMetadataCell" && cell.isAdPost !== true);
+    // 过滤单元格中的广告内容
+    if (Array.isArray(obj.node?.cells)) {
+      obj.node.cells = obj.node.cells.filter(
+        cell => cell.__typename !== "AdMetadataCell" && cell.isAdPost !== true
+      );
     }
 
+    // 移除广告负载
     if (obj.node?.adPayload) {
       delete obj.node.adPayload;
     }
 
+    // 遍历子对象
     for (const key in obj) {
       if (typeof obj[key] === 'object') {
-        obj[key] = removeAds(obj[key]);
+        obj[key] = cleanAdsAndNSFW(obj[key]);
       }
     }
 
     return obj;
   }
 
-  data = removeAds(data);
+  data = cleanAdsAndNSFW(data);
 
   // 解锁会员功能
   data.isPremiumMember = true;
