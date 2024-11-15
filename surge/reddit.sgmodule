@@ -5,26 +5,8 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/reddit.png
 #appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
-[General]
-
-force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
+[Script]
+redditvip = type=http-response, pattern=^https?:\/\/gql(-fed)?\.reddit\.com, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, requires-body=true, timeout=60
 
 [MITM]
-
-hostname = %APPEND%, gql.reddit.com, gql-fed.reddit.com
-
-[Body Rewrite]
-
-# walk(
-#   if type == "object" then
-#     (if .isNsfw == true then .isNsfw = false else . end)
-#     | (if .isNsfwMediaBlocked == true then .isNsfwMediaBlocked = false else . end)
-#     | (if .isNsfwContentShown == false then .isNsfwContentShown = true else . end)
-#     | (if (.commentsPageAds | type == "array") then (.commentsPageAds = []) else . end)
-#     | (if ( (.node | type == "object") and (.node.cells | type == "array") and (.node.cells | any(.__typename? == "AdMetadataCell" or .isAdPost? == true)) ) then empty else . end)
-#     | (if (.node | type == "object") and (.node.adPayload | type == "object") then empty else . end)
-#     | (if .__typename == "AdPost" then empty else . end)
-#   else . 
-# end)
-
-http-response-jq ^https?:\/\/gql(-fed)?\.reddit\.com 'walk( if type == "object" then (if .isNsfw == true then .isNsfw = false else . end) | (if .isNsfwMediaBlocked == true then .isNsfwMediaBlocked = false else . end) | (if .isNsfwContentShown == false then .isNsfwContentShown = true else . end) | (if (.commentsPageAds | type == "array") then (.commentsPageAds = []) else . end) | (if ( (.node | type == "object") and (.node.cells | type == "array") and (.node.cells | any(.__typename? == "AdMetadataCell" or .isAdPost? == true)) ) then empty else . end) | (if (.node | type == "object") and (.node.adPayload | type == "object") then empty else . end) | (if .__typename == "AdPost" then empty else . end) else . end)'
+hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com
