@@ -63,7 +63,7 @@ AskAI = type=http-response, pattern=^https:\/\/purchase-verifier\.cdwapi\.com\/i
 #************************************#
 # 白描
 # hostname = baimiao.uzero.cn
-白描 = type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/.+\/(appLaunchWithUser|getAnnouncement|checkLoginClient),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/baimiao.js
+bzg = type=http-response, pattern=^http:\/\/format-api\.netpock\.com\/api\/user_info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bzg.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 边框水印大师（ 永久会员 ）
