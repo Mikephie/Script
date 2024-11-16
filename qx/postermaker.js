@@ -1,41 +1,29 @@
 /*        
-        ➪：脚本名称: 海报制作大师 （永久会员）
+        ➪：脚本名称: PosterMaker （永久会员）
 
         ★：解锁永久🆅🅸🅿
 
         𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 
-[rewrite_local] 
-^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbzzds.js
+[rewrite_local]
+^https:\/\/dcdnposter\.leminet\.cn\/ url script-response-body https://raw.githubusercontent.com/afengye/QX/main/haibao.js
 
 
-[MITM]
-hostname = poster.leminet.cn
+[mitm] 
+hostname = dcdnposter.leminet.cn
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
+*/
 
-*************************************/
+var aFengYe = $response.body;
+var obj =  JSON.parse(aFengYe); 
 
-
-var mikephie = JSON.parse($response.body);
-
-    mikephie = {
-  "success" : true,
-  "data" : {
-    "guest" : false,
-    "admin" : true,
-    "id" : 1766214,
-    "role" : 1,
-    "join_at" : 1716393343,
-    "username" : "Rnik666",
-    "endpoint" : "oss-cn-hangzhou",
-    "no" : 23105214,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbmRwb2ludElkIjowLCJleHAiOjE3MTg5ODUzNTIsInJvbGUiOjAsInVpZCI6MTc2NTIxNH0.lGeXRcKi759yQXwD5aUEJus1UgpEZeMJ6k47XzMeBZ0",
-    "vip" : true,
-    "vip_expire" : 4092610661000
-  }
+if($request.url.indexOf("/v01/login") != -1 || $request.url.indexOf("/v02/user/endpoint") != -1 || $request.url.indexOf("/v01/profile") != -1) {
+    obj.data.vip = true;
+    obj.data.vip_expire = 32472115200;
 }
-  
 
-$done({body : JSON.stringify(mikephie)});
+
+aFengYe = JSON.stringify(obj);
+$done(aFengYe);
