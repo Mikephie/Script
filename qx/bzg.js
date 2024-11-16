@@ -18,16 +18,21 @@ hostname = format-api.netpock.com
 
 var mikephie = JSON.parse($response.body);
 
-    mikephie =  {
-    subscriptions: [
-        {
-            id: '888888888888888888',
-            provider: 'apple',
-            status: 'active',
-            periodEnd: 3742762088,
-            createdAt: 1728922317
-        }
-    ]
+mikephie.data = {
+  ...mikephie.data,
+  "vipState": true,
+  "end_time": 3742762088,
+  "allLifeVip": true,
+  "status": 2,
+  "level": 2,
+  "is_select": 1,
+  "notice": "卡券：5张",
+  "title1": "终身VIP会员特权",
+  "remark": "gerenzhongshen",
+  "cat": "geren",
+  "show": 200,
+  "wx_name": "Mikephie",
+  "headimg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
 };
-
-$done({body : JSON.stringify(mikephie)});
+ 
+$done({body: JSON.stringify(mikephie)});
