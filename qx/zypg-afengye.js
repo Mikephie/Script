@@ -17,36 +17,20 @@ hostname = appss.rhinoxlab.com
 *******************************/
 
 
-var mikephie = JSON.parse($response.body);
+var aFengYe = $response.body;
+var obj =  JSON.parse(aFengYe);
 
-    mikephie = {
-  "success" : true,
-  "result" : {
-    "headImg" : "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
-    "dataId" : "00000000000000000000",
-    "appleUserEmail" : "mikephiemy@gmail.com",
-    "wordage" : 7777777,
-    "mobile" : "Mikephie",
-    "inviteCode" : "000000",
-    "vipGroupInfos" : [
-      {
+if($request.url.indexOf("/app/account/getAccountInfo") != -1) {
+    obj.result.type = "VIP";
+    obj.result.freeFlag = "YES";
+    obj.result.vipGroupInfos = [
+       {
         "groupType" : "TYPE_ONE",
         "vipType" : "VIP",
-        "autoPay" : "NO"
+        "autoPay" : "YES"
       }
-    ],
-    "type" : "VIP", 
-    "vipExpireTime" : "2088-08-08 08:08:08",
-    "vipExpireDays" : 99999999,
-    "registerTime" : "2022-09-09 03:20:32",
-    "nickname" : "Mikephie",
-    "email" : "mikephiemy@gmail.com",
-    "remainTimeSeconds" : 99999,
-    "realnameStatus" : "NO",
-    "times" : 77777777
-  },
-  "returnCode" : "200",
-  "timeOut" : false
+    ];
 }
 
-$done({body : JSON.stringify(mikephie)});
+aFengYe = JSON.stringify(obj);
+$done(aFengYe);
