@@ -20,7 +20,7 @@ var mikephie = JSON.parse($response.body);
 
 mikephie.data = {
   ...mikephie.data,
-  "vipState": true,
+  "is_vip": true,
   "end_time": 3742762088,
   "allLifeVip": true,
   "status": 2,
