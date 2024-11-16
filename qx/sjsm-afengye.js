@@ -17,38 +17,20 @@ hostname = appss.baomingding.com
 *******************************/
 
 
-var mikephie = JSON.parse($response.body);
+var aFengYe = $response.body;
+var obj =  JSON.parse(aFengYe);
 
-    mikephie = {
-  "success" : true,
-  "result" : {
-    "dataId" : "10171672668831233491",
-    "remainTimeSeconds" : 88888,
-    "realnameStatus" : "NO",
-    "appleUserEmail" : "mikephiemy@gmail.com",
-    "wordage" : 88888888,
-    "freeFlag" : "NO",
-    "inviteCode" : "QPHMUFX8",
-    "vipGroupInfos" : [
-      {
-        "groupType" : "TYPE_ONE",
-        "vipType" : "VIP",
-        "autoPay" : "NO"
-      }
-    ],
-    "autoPay" : "NO",
-    "type" : "VIP",
-    "vipExpireTime" : "2088-08-08 08:08:08",
-    "vipExpireDays" : 88888888,
-    "registerTime" : "2024-05-26 20:31:28",
-    "nickname" : "Mikephie",
-    "email" : "mikephiemy@gmail.com",
-    "headImg" : "https://boniuapp.rhinox.cn/common/head/1599546812784.png",
-    "times" : 88888888
-  },
-  "returnCode" : "200",
-  "timeOut" : false
-}
+obj.result.type = "VIP";
+obj.result.freeFlag = "YES";
+obj.result.vipExpireDays = 99999999999;
+obj.result.vipExpireTime = "2999-01-01 00:00:00";
+obj.result.vipGroupInfos = [
+   {
+    "groupType" : "TYPE_ONE",
+    "vipType" : "VIP",
+    "autoPay" : "YES"
+  }
+];
 
-$done({body : JSON.stringify(mikephie)});
-
+aFengYe = JSON.stringify(obj);
+$done(aFengYe);
