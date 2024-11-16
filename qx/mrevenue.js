@@ -73,7 +73,7 @@ const list = {
   'IDM': { Ent: 'premium', id: 'sub_yearly_idm', cm: 'sja' },
   'Whisper': { Ent: 'all_features', id: 'whisperai_80_y', cm: 'sja' },
   'PhotoRoom': { Ent: 'business', id: 'com.background.business.yearly', cm: 'sja' },
-  'TouchRetouchBasic': { Ent: 'premium', id: 'tr5_yearlysubsc_20dlrs_1', cm: 'sja' },
+  'TouchRetouchBasic': { Ent: 'premium', id: 'tr5_yearlysubsc_30_and_20_dlrs', cm: 'sja' },
   'Drops': { Ent: 'premium', id: 'forever_unlimited_time_discounted_80_int', cm: 'sjb' },
   'UTC': { Ent: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month', cm: 'sja' },
   'EraseIt': { Ent: 'ProVersionLifeTime', id: 'com.uzero.cn.eraseit.premium1.fromyear', cm: 'sja' },
