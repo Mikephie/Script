@@ -32,16 +32,32 @@ if (url.indexOf('feature/consumptions') !== -1) {
     var obj = JSON.parse(body);
     console.log("Original obj:", JSON.stringify(obj));
     
-    obj.feature_consumptions = [{
-      "feature_id": "com.zoho.notebook.storage",
-      "consumptions": [{
-        "value": "5268006",
-        "name": "SIZE",
-        "unit": "BYTES",
-        "user_type": "INDIVIDUAL_USER"
-      }],
-      "source": "PAID"
-    }];
+    obj.feature_consumptions = [
+      {
+        "feature_id": "com.zoho.notebook.storage",
+        "consumptions": [
+          {
+            "value": "107374182400", // 100 GB in bytes
+            "name": "SIZE",
+            "unit": "BYTES",
+            "user_type": "INDIVIDUAL_USER"
+          }
+        ],
+        "source": "PAID"
+      },
+      {
+        "feature_id": "com.zoho.notebook.meeting",
+        "consumptions": [
+          {
+            "value": "999999", // A large number for unlimited meetings
+            "name": "COUNT",
+            "unit": "NUMBER",
+            "user_type": "INDIVIDUAL_USER"
+          }
+        ],
+        "source": "PAID"
+      }
+    ];
     
     body = JSON.stringify(obj);
     console.log("Modified obj:", JSON.stringify(obj));
