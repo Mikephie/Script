@@ -29,6 +29,7 @@ console.log("URL: " + url);
 console.log("Original body: " + body);
 
 function modifyResponse(obj) {
+    // 保留原始结构，只修改必要的字段
     if (obj.plan_details) {
         obj.plan_details.forEach(plan => {
             plan.source = "PAID";
@@ -48,24 +49,17 @@ function modifyResponse(obj) {
                     }
                 });
             }
-            feature.source = "PAID";
         });
     }
     
     if (obj.feature_template) {
-        obj.feature_template = obj.feature_template.map(feature => ({
-            feature_name: feature.feature_name,
-            feature_id: feature.feature_id,
-            feature_meta_data: [{
-                end_date: 3742762088000,
-                source: "PAID",
-                type: "PRIMARY",
-                start_date: 1717644792301,
-                grace_period: 999160000000,
-                is_active: true,
-                is_enabled: true
-            }]
-        }));
+        obj.feature_template.forEach(feature => {
+            feature.feature_meta_data.forEach(meta => {
+                meta.source = "PAID";
+                meta.end_date = 3742762088000;
+                meta.grace_period = 999160000000;
+            });
+        });
     }
     
     return obj;
