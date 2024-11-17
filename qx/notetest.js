@@ -10,28 +10,26 @@
 *******************************
 
 [rewrite_local]
-# VIP 订阅, 100G 空间, Token
-^https:\/\/(notebook\.zoho\.com\/api\/v1\/(userprofile\/accounts\/payment\?action=(get_current_plan_detail&include_(expired_plans=true|purchase_platform=false)|get_feature_template(&platform=ios)?|get_feature_template)|payments\/feature\/consumptions)|sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken)$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js
+# VIP 订阅, 100G 空间, VIP 多项权益
+^https:\/\/notebook\.zoho\.com\/api\/v1\/(userprofile\/accounts\/payment\?action=get_(current_plan_detail&include_expired_plans=true|feature_template&platform=ios)|payments\/feature\/consumptions) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js
 
 # VIP 多项权益
-^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template&platform=ios url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-all.js
+#^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template&platform=ios url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-all.js
 
 
 [MITM]
 hostname = notebook.zoho.com
 */
 
+
 var url = $request.url;
-var body = $response.body;
+var.body;
 
 if (url.includes('get_current_plan_detail&include_expired_plans=true')) {
-    // VIP 订阅逻辑
     body = handleSubscription(body);
 } else if (url.includes('payments/feature/consumptions')) {
-    // 100G 空间逻辑
     body = handleStorage(body);
 } else if (url.includes('get_feature_template&platform=ios')) {
-    // VIP 多项权益逻辑
     body = handleFeatures(body);
 }
 
