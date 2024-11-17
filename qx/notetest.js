@@ -22,26 +22,37 @@ hostname = notebook.zoho.com
 */
 
 
+
 var body = $response.body;
 var url = $request.url;
 
-if (url.indexOf('get_current_plan_detail') !== -1) {
-  var obj = JSON.parse(body);
-  obj.plan_details = [{
-    "expiry_time": 3742762088000,
-    "purchase_source": "notebook",
-    "service_id": "107000",
-    "source": "PAID",
-    "plan_name": "Notebook Pro",
-    "payment_frequency": 12,
-    "service": "NoteBook",
-    "grace_period": 999160000000,
-    "notebook_plan_id": "com.zoho.notebook.pro",
-    "plan_description": "Upgraded to Notebook Pro",
-    "zoho_store_plan_id": 107102,
-    "purchase_time": 1717644792301
-  }];
-  body = JSON.stringify(obj);
+console.log("Script is running. URL:", url);
+
+if (url.includes('get_current_plan_detail')) {
+  console.log("Matched URL for plan details");
+  try {
+    var obj = JSON.parse(body);
+    obj.plan_details = [{
+      "expiry_time": 3742762088000,
+      "purchase_source": "notebook",
+      "service_id": "107000",
+      "source": "PAID",
+      "plan_name": "Notebook Pro",
+      "payment_frequency": 12,
+      "service": "NoteBook",
+      "grace_period": 999160000000,
+      "notebook_plan_id": "com.zoho.notebook.pro",
+      "plan_description": "Upgraded to Notebook Pro",
+      "zoho_store_plan_id": 107102,
+      "purchase_time": 1717644792301
+    }];
+    body = JSON.stringify(obj);
+    console.log("Modified body:", body);
+  } catch (e) {
+    console.log("Error parsing or modifying body:", e.message);
+  }
+} else {
+  console.log("URL did not match expected pattern");
 }
 
 $done({body});
