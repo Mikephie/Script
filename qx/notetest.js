@@ -11,7 +11,7 @@
 
 [rewrite_local]
 # VIP 订阅, 100G 空间, VIP 多项权益
-^https:\/\/notebook\.zoho\.com\/api\/v1\/(userprofile\/accounts\/payment\?action=get_(current_plan_detail&include_expired_plans=true|feature_template&platform=ios)|payments\/feature\/consumptions) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js
+^https:\/\/notebook\.zoho\.com\/api\/v1\/(userprofile\/accounts\/payment\?action=get_(current_plan_detail&include_expired_plans=true|feature_template&platform=ios)|payments\/feature\/consumptions) url script-response-body your-script-https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js
 
 # VIP 多项权益
 #^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template&platform=ios url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-all.js
@@ -22,85 +22,106 @@ hostname = notebook.zoho.com
 */
 
 
-var url = $request.url;
-var.body;
+const $ = new Env('ZohoNotebook');
 
-if (url.includes('get_current_plan_detail&include_expired_plans=true')) {
-    body = handleSubscription(body);
-} else if (url.includes('payments/feature/consumptions')) {
-    body = handleStorage(body);
-} else if (url.includes('get_feature_template&platform=ios')) {
-    body = handleFeatures(body);
-}
+!(async () => {
+  $.log('Script started');
+  const url = $request.url;
+  $.log(`Request URL: ${url}`);
 
-$done({ body });
+  let body = $response.body;
+  $.log(`Original response body: ${body}`);
+
+  try {
+    if (url.includes('get_current_plan_detail')) {
+      $.log('Handling subscription');
+      body = handleSubscription(body);
+    } else if (url.includes('feature/consumptions')) {
+      $.log('Handling storage');
+      body = handleStorage(body);
+    } else if (url.includes('get_feature_template')) {
+      $.log('Handling features');
+      body = handleFeatures(body);
+    } else {
+      $.log('No matching URL pattern');
+    }
+
+    $.log(`Modified response body: ${body}`);
+    $done({ body });
+  } catch (e) {
+    $.log(`Error occurred: ${e.stack}`);
+    $done({});
+  }
+})().catch((e) => {
+  $.log(`Unhandled error: ${e.stack}`);
+  $done({});
+});
 
 function handleSubscription(body) {
-    var obj = JSON.parse(body);
-    obj = {
-        "code": 200,
-        "status": "Success",
-        "message": "User profile fetched successfully",
-        "plan_details": [{
-            "expiry_time": 3742762088000,
-            "purchase_source": "notebook",
-            "service_id": "107000",
-            "source": "PAID",
-            "plan_name": "Notebook Pro",
-            "payment_frequency": 12,
-            "service": "NoteBook",
-            "grace_period": 999160000000,
-            "notebook_plan_id": "com.zoho.notebook.pro",
-            "plan_description": "Upgrade to Notebook Pro and stay more productive",
-            "zoho_store_plan_id": 107102,
-            "purchase_time": 1717644792301
-        }]
-    };
-    return JSON.stringify(obj);
+  return JSON.stringify({
+    "code": 200,
+    "status": "Success",
+    "message": "User profile fetched successfully",
+    "plan_details": [{
+      "expiry_time": 3742762088000,
+      "purchase_source": "notebook",
+      "service_id": "107000",
+      "source": "PAID",
+      "plan_name": "Notebook Pro",
+      "payment_frequency": 12,
+      "service": "NoteBook",
+      "grace_period": 999160000000,
+      "notebook_plan_id": "com.zoho.notebook.pro",
+      "plan_description": "Upgrade to Notebook Pro and stay more productive",
+      "zoho_store_plan_id": 107102,
+      "purchase_time": 1717644792301
+    }]
+  });
 }
 
 function handleStorage(body) {
-    var obj = JSON.parse(body);
-    obj = {
-        "code": 200,
-        "status": "Success",
-        "message": "Success",
-        "feature_consumptions": [{
-            "feature_id": "com.zoho.notebook.storage",
-            "consumptions": [{
-                "value": "5268006",
-                "name": "SIZE",
-                "unit": "BYTES",
-                "user_type": "INDIVIDUAL_USER"
-            }],
-            "source": "PAID"
-        }]
-    };
-    return JSON.stringify(obj);
+  return JSON.stringify({
+    "code": 200,
+    "status": "Success",
+    "message": "Success",
+    "feature_consumptions": [{
+      "feature_id": "com.zoho.notebook.storage",
+      "consumptions": [{
+        "value": "5268006",
+        "name": "SIZE",
+        "unit": "BYTES",
+        "user_type": "INDIVIDUAL_USER"
+      }],
+      "source": "PAID"
+    }]
+  });
 }
 
 function handleFeatures(body) {
-    var obj = JSON.parse(body);
-    obj = {
-        "code": 200,
-        "status": "Success",
-        "message": "User profile fetched successfully",
-        "feature_template": [
-            "AUDIO_CARD", "OCR", "CHAT_WITH_US", "FLIGHT_CARD", "EMAIL_IN",
-            "CUSTOM_RECURRING_REMINDER", "PREMIUM_COVERS", "NOTECARD", "STORAGE",
-            "PHONE_SUPPORT", "NOTEBOOK_SHARING", "SCAN_TABLE", "TAG_SUGGESTIONS",
-            "EXPORT_AS_PDF", "BCR", "SMART_SEARCH", "FEATURE_X"
-        ].map(feature => ({
-            feature_name: feature,
-            feature_id: `com.zoho.notebook.${feature.toLowerCase()}`,
-            feature_meta_data: [{
-                end_date: 3742762088000,
-                source: feature === "EXPORT_AS_PDF" || feature === "FEATURE_X" ? "FREE" : "PAID",
-                type: "PRIMARY",
-                start_date: 1717644792301,
-                grace_period: 999160000000
-            }]
-        }))
-    };
-    return JSON.stringify(obj);
+  return JSON.stringify({
+    "code": 200,
+    "status": "Success",
+    "message": "User profile fetched successfully",
+    "feature_template": [
+      "AUDIO_CARD", "OCR", "CHAT_WITH_US", "FLIGHT_CARD", "EMAIL_IN",
+      "CUSTOM_RECURRING_REMINDER", "PREMIUM_COVERS", "NOTECARD", "STORAGE",
+      "PHONE_SUPPORT", "NOTEBOOK_SHARING", "SCAN_TABLE", "TAG_SUGGESTIONS",
+      "EXPORT_AS_PDF", "BCR", "SMART_SEARCH", "FEATURE_X"
+    ].map(feature => ({
+      feature_name: feature,
+      feature_id: `com.zoho.notebook.${feature.toLowerCase()}`,
+      feature_meta_data: [{
+        end_date: 3742762088000,
+        source: feature === "EXPORT_AS_PDF" || feature === "FEATURE_X" ? "FREE" : "PAID",
+        type: "PRIMARY",
+        start_date: 1717644792301,
+        grace_period: 999160000000
+      }]
+    }))
+  });
+}
+
+// Env函数实现（简化版）
+function Env(t) {
+  this.log = (m) => console.log(m);
 }
