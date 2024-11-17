@@ -24,82 +24,78 @@ hostname = notebook.zoho.com
 var url = $request.url;
 var mikephie = JSON.parse($response.body);
 
-// URL 常量定义
 const URL1 = '/userprofile/accounts/payment?action=get_current_plan_detail&include_expired_plans=true';
 const URL2 = '/userprofile/accounts/payment?action=get_current_plan_detail&include_purchase_platform=false';
 const URL3 = '/payments/feature/consumptions';
 const URL4 = '/userprofile/accounts/payment?action=get_feature_template&platform=ios';
 const URL5 = '/userprofile/accounts/payment?action=get_feature_template';
 
-// 第一个 URL 处理
-if (url.indexOf(URL1) != -1) {
-  mikephie.code = 200;
-  mikephie.status = "Success";
-  mikephie.message = "User profile fetched successfully";
-  mikephie.plan_details = [
-    {
-      "expiry_time": 3742762088000,
-      "purchase_source": "notebook",
-      "service_id": "107000",
-      "source": "PAID",
-      "plan_name": "Notebook Pro",
-      "payment_frequency": 12,
-      "service": "NoteBook",
-      "grace_period": 999160000000,
-      "notebook_plan_id": "com.zoho.notebook.pro",
-      "plan_description": "Upgrade to Notebook Pro and stay more productive",
-      "zoho_store_plan_id": 107102,
-      "purchase_time": 1717644792301
-    }
-  ];
-}
-
-// 第二个 URL 处理
-if (url.indexOf(URL2) != -1) {
-  mikephie.code = 200;
-  mikephie.status = "Success";
-  mikephie.message = "User profile fetched successfully";
-  mikephie.plan_details = [
-    {
-      "expiry_time": 3742762088000,
-      "purchase_source": "notebook",
-      "service_id": "107000",
-      "source": "PAID",
-      "plan_name": "Notebook Pro",
-      "payment_frequency": 12,
-      "service": "NoteBook",
-      "grace_period": 999160000000,
-      "notebook_plan_id": "com.zoho.notebook.pro",
-      "plan_description": "Upgrade to Notebook Pro and stay more productive",
-      "zoho_store_plan_id": 107102,
-      "purchase_time": 1717644792301
-    }
-  ];
-}
-
-// 第三个 URL 处理
-if (url.indexOf(URL3) != -1) {  console.log("Matching URL3");  mikephie = {    "code": 200,    "status": "Success",    "message": "Success",    "feature_consumptions": [      {        "feature_id": "com.zoho.notebook.storage",        "consumptions": [          {            "value": "5268006",            "name": "SIZE",            "unit": "BYTES",            "user_type": "INDIVIDUAL_USER"          }        ],        "source": "PAID"      }    ]  };  console.log("Modified mikephie:", JSON.stringify(mikephie));}
-
-// 第四个 URL 处理（保留但不请求内容）
-if (url.indexOf(URL4) != -1) {
-  mikephie.code = 200; // 假设正常响应
-  mikephie.status = "Success"; // 假设的状态
-  mikephie.message = "Feature template not requested"; // 自定义消息
-  mikephie.feature_template = {
-      "templates": [] // 或设为 null，如果不需要值
+if (url.indexOf(URL1) != -1 || url.indexOf(URL2) != -1) {
+  mikephie = {
+    "code": 200,
+    "status": "Success",
+    "message": "User profile fetched successfully",
+    "plan_details": [
+      {
+        "expiry_time": 3742762088000,
+        "purchase_source": "notebook",
+        "service_id": "107000",
+        "source": "PAID",
+        "plan_name": "Notebook Pro",
+        "payment_frequency": 12,
+        "service": "NoteBook",
+        "grace_period": 999160000000,
+        "notebook_plan_id": "com.zoho.notebook.pro",
+        "plan_description": "Upgrade to Notebook Pro and stay more productive",
+        "zoho_store_plan_id": 107102,
+        "purchase_time": 1717644792301
+      }
+    ]
+  };
+  
+} else if (url.indexOf(URL3) != -1) {
+  mikephie = {
+    "code": 200,
+    "status": "Success",
+    "message": "Success",
+    "feature_consumptions": [
+      {
+        "feature_id": "com.zoho.notebook.storage",
+        "consumptions": [
+          {
+            "value": "5268006",
+            "name": "SIZE",
+            "unit": "BYTES",
+            "user_type": "INDIVIDUAL_USER"
+          }
+        ],
+        "source": "PAID"
+      }
+    ]
+  };
+  
+} else if (url.indexOf(URL4) != -1 || url.indexOf(URL5) != -1) {
+  mikephie = {
+    "code": 200,
+    "status": "Success",
+    "message": "User profile fetched successfully",
+    "feature_template": [
+      "AUDIO_CARD", "OCR", "CHAT_WITH_US", "FLIGHT_CARD", "EMAIL_IN",
+      "CUSTOM_RECURRING_REMINDER", "PREMIUM_COVERS", "NOTECARD", "STORAGE",
+      "PHONE_SUPPORT", "NOTEBOOK_SHARING", "SCAN_TABLE", "TAG_SUGGESTIONS",
+      "EXPORT_AS_PDF", "BCR", "SMART_SEARCH", "FEATURE_X"
+    ].map(feature => ({
+      feature_name: feature,
+      feature_id: `com.zoho.notebook.${feature.toLowerCase()}`,
+      feature_meta_data: [{
+        end_date: 3742762088000,
+        source: feature === "EXPORT_AS_PDF" || feature === "FEATURE_X" ? "FREE" : "PAID",
+        type: "PRIMARY",
+        start_date: 1717644792301,
+        grace_period: 999160000000
+      }]
+    }))
   };
 }
 
-// 第五个 URL 处理（保留但不请求内容）
-if (url.indexOf(URL5) != -1) {
-  mikephie.code = 200; // 假设正常响应
-  mikephie.status = "Success"; // 假设的状态
-  mikephie.message = "Basic feature template not requested"; // 自定义消息
-  mikephie.feature_template_basic = {
-      "templates": [] // 或设为 null，如果不需要值
-  };
-}
-
-
-// 返回 JSON 响应
-$done({body: JSON.stringify(mikephie)});
+$done({ body: JSON.stringify(mikephie) });
