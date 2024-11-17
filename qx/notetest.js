@@ -21,7 +21,6 @@
 hostname = notebook.zoho.com
 */
 
-
 var url = $request.url;
 var mikephie = JSON.parse($response.body);
 
@@ -33,8 +32,8 @@ const URL4 = '/userprofile/accounts/payment?action=get_feature_template&platform
 const URL5 = '/userprofile/accounts/payment?action=get_feature_template';
 const URL6 = '/sdk/api/apptics/v1/app/bearertoken';
 
-// 处理第一个和第二个 URL 的函数
-function handlePlanProfile() {
+// 第一个 URL 处理
+if (url.indexOf(URL1) != -1) {
   mikephie.code = 200;
   mikephie.status = "Success";
   mikephie.message = "User profile fetched successfully";
@@ -56,22 +55,36 @@ function handlePlanProfile() {
   ];
 }
 
-// 第一个 URL 处理
-if (url.indexOf(URL1) != -1) {
-  handlePlanProfile();
-}
-
 // 第二个 URL 处理
 if (url.indexOf(URL2) != -1) {
-  handlePlanProfile();
+  mikephie.code = 200;
+  mikephie.status = "Success";
+  mikephie.message = "User profile fetched successfully";
+  mikephie.plan_details = [
+    {
+      "expiry_time": 3742762088000,
+      "purchase_source": "notebook",
+      "service_id": "107000",
+      "source": "PAID",
+      "plan_name": "Notebook Pro",
+      "payment_frequency": 12,
+      "service": "NoteBook",
+      "grace_period": 999160000000,
+      "notebook_plan_id": "com.zoho.notebook.pro",
+      "plan_description": "Upgrade to Notebook Pro and stay more productive",
+      "zoho_store_plan_id": 107102,
+      "purchase_time": 1717644792301
+    }
+  ];
 }
 
 // 第三个 URL 处理
 if (url.indexOf(URL3) != -1) {
+   // 使用你提供的内容替换内容
   mikephie.code = 200;
   mikephie.status = "Success";
   mikephie.message = "Success";
-phie.feature_consumptions = [
+  mikephie.feature_consumptions = [
     {
       "feature_id": "com.zoho.notebook.storage",
       "consumptions": [
@@ -93,7 +106,7 @@ if (url.indexOf(URL4) != -1) {
   mikephie.status = "Success"; // 假设的状态
   mikephie.message = "Feature template not requested"; // 自定义消息
   mikephie.feature_template = {
-    "templates": [] // 或设为 null，如果不需要值
+      "templates": [] // 或设为 null，如果不需要值
   };
 }
 
@@ -103,7 +116,7 @@ if (url.indexOf(URL5) != -1) {
   mikephie.status = "Success"; // 假设的状态
   mikephie.message = "Basic feature template not requested"; // 自定义消息
   mikephie.feature_template_basic = {
-    "templates": [] // 或设为 null，如果不需要值
+      "templates": [] // 或设为 null，如果不需要值
   };
 }
 
@@ -115,4 +128,5 @@ if (url.indexOf(URL6) != -1) {
   };
 }
 
+// 返回 JSON 响应
 $done({body: JSON.stringify(mikephie)});
