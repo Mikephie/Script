@@ -1,7 +1,7 @@
 
 /******************************
 
-脚本名称: Notebook2
+脚本名称: Notebook3
 下载地址：商店
 脚本作者：Mikephie
 更新时间：2024-06-08
@@ -50,28 +50,43 @@ function modifyResponse(obj, url) {
             "is_expired": false
         }];
     } else if (url.indexOf('feature/consumptions') !== -1) {
-        if (obj.feature_consumptions) {
-            obj.feature_consumptions.forEach(feature => {
-                if (feature.feature_id === "com.zoho.notebook.storage") {
-                    feature.consumptions.forEach(consumption => {
-                        if (consumption.name === "SIZE") {
-                            consumption.value = "107374182400"; // 100 GB
-                        }
-                    });
-                }
-                feature.source = "PAID";
-            });
+        obj.code = 200;
+        obj.status = "Success";
+        obj.message = "Success";
+        if (!obj.feature_consumptions) {
+            obj.feature_consumptions = [];
         }
+        let storageFeature = obj.feature_consumptions.find(f => f.feature_id === "com.zoho.notebook.storage");
+        if (!storageFeature) {
+            storageFeature = {
+                "feature_id": "com.zoho.notebook.storage",
+                "consumptions": [],
+                "source": "PAID"
+            };
+            obj.feature_consumptions.push(storageFeature);
+        }
+        let sizeConsumption = storageFeature.consumptions.find(c => c.name === "SIZE");
+        if (!sizeConsumption) {
+            sizeConsumption = {
+                "name": "SIZE",
+                "unit": "BYTES",
+                "user_type": "INDIVIDUAL_USER"
+            };
+            storageFeature.consumptions.push(sizeConsumption);
+        }
+        sizeConsumption.value = "107374182400"; // 100 GB
+        storageFeature.source = "PAID";
     } else if (url.indexOf('get_feature_template') !== -1) {
         obj.code = 200;
         obj.status = "Success";
         obj.message = "User profile fetched successfully";
-        obj.feature_template = [
+        const features = [
             "AUDIO_CARD", "OCR", "CHAT_WITH_US", "FLIGHT_CARD", "EMAIL_IN",
             "CUSTOM_RECURRING_REMINDER", "PREMIUM_COVERS", "NOTECARD", "STORAGE",
             "PHONE_SUPPORT", "NOTEBOOK_SHARING", "SCAN_TABLE", "TAG_SUGGESTIONS",
             "EXPORT_AS_PDF", "BCR", "SMART_SEARCH", "FEATURE_X"
-        ].map(feature => ({
+        ];
+        obj.feature_template = features.map(feature => ({
             feature_name: feature,
             feature_id: "com.zoho.notebook." + feature.toLowerCase(),
             feature_meta_data: [{
