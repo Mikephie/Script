@@ -1,7 +1,7 @@
 
 /******************************
 
-脚本名称: Notebook1
+脚本名称: Notebook2
 下载地址：商店
 脚本作者：Mikephie
 更新时间：2024-06-08
@@ -30,15 +30,25 @@ console.log("Original body: " + body);
 
 function modifyResponse(obj, url) {
     if (url.indexOf('get_current_plan_detail') !== -1) {
-        if (obj.plan_details) {
-            obj.plan_details.forEach(plan => {
-                plan.source = "PAID";
-                plan.is_active = true;
-                plan.is_expired = false;
-                plan.expiry_time = 3742762088000;
-                plan.grace_period = 999160000000;
-            });
-        }
+        obj.code = 200;
+        obj.status = "Success";
+        obj.message = "User profile fetched successfully";
+        obj.plan_details = [{
+            "expiry_time": 3742762088000,
+            "purchase_source": "notebook",
+            "service_id": "107000",
+            "source": "PAID",
+            "plan_name": "Notebook Pro",
+            "payment_frequency": 12,
+            "service": "NoteBook",
+            "grace_period": 999160000000,
+            "notebook_plan_id": "com.zoho.notebook.pro",
+            "plan_description": "Upgraded to Notebook Pro",
+            "zoho_store_plan_id": 107102,
+            "purchase_time": 1717644792301,
+            "is_active": true,
+            "is_expired": false
+        }];
     } else if (url.indexOf('feature/consumptions') !== -1) {
         if (obj.feature_consumptions) {
             obj.feature_consumptions.forEach(feature => {
@@ -53,19 +63,27 @@ function modifyResponse(obj, url) {
             });
         }
     } else if (url.indexOf('get_feature_template') !== -1) {
-        if (obj.feature_template) {
-            obj.feature_template = obj.feature_template.map(feature => ({
-                ...feature,
-                feature_meta_data: feature.feature_meta_data.map(meta => ({
-                    ...meta,
-                    end_date: 3742762088000,
-                    source: "PAID",
-                    is_active: true,
-                    is_enabled: true,
-                    grace_period: 999160000000
-                }))
-            }));
-        }
+        obj.code = 200;
+        obj.status = "Success";
+        obj.message = "User profile fetched successfully";
+        obj.feature_template = [
+            "AUDIO_CARD", "OCR", "CHAT_WITH_US", "FLIGHT_CARD", "EMAIL_IN",
+            "CUSTOM_RECURRING_REMINDER", "PREMIUM_COVERS", "NOTECARD", "STORAGE",
+            "PHONE_SUPPORT", "NOTEBOOK_SHARING", "SCAN_TABLE", "TAG_SUGGESTIONS",
+            "EXPORT_AS_PDF", "BCR", "SMART_SEARCH", "FEATURE_X"
+        ].map(feature => ({
+            feature_name: feature,
+            feature_id: "com.zoho.notebook." + feature.toLowerCase(),
+            feature_meta_data: [{
+                end_date: 3742762088000,
+                source: "PAID",
+                type: "PRIMARY",
+                start_date: 1717644792301,
+                grace_period: 999160000000,
+                is_active: true,
+                is_enabled: true
+            }]
+        }));
     }
     
     return obj;
