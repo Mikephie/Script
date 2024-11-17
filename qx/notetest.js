@@ -11,38 +11,34 @@
 
 [rewrite_local]
 # VIP 订阅, 100G 空间, VIP 多项权益
-^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_expired_plans=true url script-response-body your-script-https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js
-
-# VIP 多项权益
-#^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template&platform=ios url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-all.js
+^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_expired_plans=true url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js
 
 
 [MITM]
 hostname = notebook.zoho.com
 */
 
-var mikephie = JSON.parse($response.body);
 
-mikephie = {
-    "code": 200,
-    "status": "Success",
-    "message": "User profile fetched successfully",
-    "plan_details": [
-        {
-            "expiry_time": 3742762088000,
-            "purchase_source": "notebook",
-            "service_id": "107000",
-            "source": "PAID",
-            "plan_name": "Notebook Pro",
-            "payment_frequency": 12,
-            "service": "NoteBook",
-            "grace_period": 999160000000,
-            "notebook_plan_id": "com.zoho.notebook.pro",
-            "plan_description": "Upgrade to Notebook Pro and stay more productive",
-            "zoho_store_plan_id": 107102,
-            "purchase_time": 1717644792301
-        }
-    ]
-};
+var body = $response.body;
+var url = $request.url;
 
-$done({body: JSON.stringify(mikephie)});
+if (url.indexOf('get_current_plan_detail') !== -1) {
+  var obj = JSON.parse(body);
+  obj.plan_details = [{
+    "expiry_time": 3742762088000,
+    "purchase_source": "notebook",
+    "service_id": "107000",
+    "source": "PAID",
+    "plan_name": "Notebook Pro",
+    "payment_frequency": 12,
+    "service": "NoteBook",
+    "grace_period": 999160000000,
+    "notebook_plan_id": "com.zoho.notebook.pro",
+    "plan_description": "Upgraded to Notebook Pro",
+    "zoho_store_plan_id": 107102,
+    "purchase_time": 1717644792301
+  }];
+  body = JSON.stringify(obj);
+}
+
+$done({body});
