@@ -22,42 +22,36 @@ hostname = notebook.zoho.com
 */
 
 
-const $ = new Env('ZohoNotebook');
+var $ = new Env('ZohoNotebook');
+var body = $response.body;
+var url = $request.url;
 
-!(async () => {
-  $.log('Script started');
-  const url = $request.url;
-  $.log(`Request URL: ${url}`);
+$.log('Script started');
+$.log('Request URL: ' + url);
+$.log('Original response body: ' + body);
 
-  let body = $response.body;
-  $.log(`Original response body: ${body}`);
-
-  try {
-    if (url.includes('get_current_plan_detail')) {
-      $.log('Handling subscription');
-      body = handleSubscription(body);
-    } else if (url.includes('feature/consumptions')) {
-      $.log('Handling storage');
-      body = handleStorage(body);
-    } else if (url.includes('get_feature_template')) {
-      $.log('Handling features');
-      body = handleFeatures(body);
-    } else {
-      $.log('No matching URL pattern');
-    }
-
-    $.log(`Modified response body: ${body}`);
-    $done({ body });
-  } catch (e) {
-    $.log(`Error occurred: ${e.stack}`);
-    $done({});
+try {
+  if (url.indexOf('get_current_plan_detail') !== -1) {
+    $.log('Handling subscription');
+    body = handleSubscription();
+  } else if (url.indexOf('feature/consumptions') !== -1) {
+    $.log('Handling storage');
+    body = handleStorage();
+  } else if (url.indexOf('get_feature_template') !== -1) {
+    $.log('Handling features');
+    body = handleFeatures();
+  } else {
+    $.log('No matching URL pattern');
   }
-})().catch((e) => {
-  $.log(`Unhandled error: ${e.stack}`);
-  $done({});
-});
 
-function handleSubscription(body) {
+  $.log('Modified response body: ' + body);
+} catch (e) {
+  $.log('Error occurred: ' + e.stack);
+}
+
+$done({body: body});
+
+function handleSubscription() {
   return JSON.stringify({
     "code": 200,
     "status": "Success",
@@ -79,7 +73,7 @@ function handleSubscription(body) {
   });
 }
 
-function handleStorage(body) {
+function handleStorage() {
   return JSON.stringify({
     "code": 200,
     "status": "Success",
@@ -97,31 +91,63 @@ function handleStorage(body) {
   });
 }
 
-function handleFeatures(body) {
-  return JSON.stringify({
-    "code": 200,
-    "status": "Success",
-    "message": "User profile fetched successfully",
-    "feature_template": [
-      "AUDIO_CARD", "OCR", "CHAT_WITH_US", "FLIGHT_CARD", "EMAIL_IN",
-      "CUSTOM_RECURRING_REMINDER", "PREMIUM_COVERS", "NOTECARD", "STORAGE",
-      "PHONE_SUPPORT", "NOTEBOOK_SHARING", "SCAN_TABLE", "TAG_SUGGESTIONS",
-      "EXPORT_AS_PDF", "BCR", "SMART_SEARCH", "FEATURE_X"
-    ].map(feature => ({
+function handleFeatures() {
+  var features = ["AUDIO_CARD", "OCR", "CHAT_WITH_US", "FLIGHT_CARD", "EMAIL_IN",
+    "CUSTOM_RECURRING_REMINDER", "PREMIUM_COVERS", "NOTECARD", "STORAGE",
+    "PHONE_SUPPORT", "NOTEBOOK_SHARING", "SCAN_TABLE", "TAG_SUGGESTIONS",
+    "EXPORT_AS_PDF", "BCR", "SMART_SEARCH", "FEATURE_X"];
+  
+  var featureTemplate = features.map(function(feature) {
+    return {
       feature_name: feature,
-      feature_id: `com.zoho.notebook.${feature.toLowerCase()}`,
+      feature_id: "com.zoho.notebook." + feature.toLowerCase(),
       feature_meta_data: [{
         end_date: 3742762088000,
-        source: feature === "EXPORT_AS_PDF" || feature === "FEATURE_X" ? "FREE" : "PAID",
+        source: (feature === "EXPORT_AS_PDF" || feature === "FEATURE_X") ? "FREE" : "PAID",
         type: "PRIMARY",
         start_date: 1717644792301,
         grace_period: 999160000000
       }]
-    }))
+    };
+  });
+
+  return JSON.stringify({
+    "code": 200,
+    "status": "Success",
+    "message": "User profile fetched successfully",
+    "feature_template": featureTemplate
   });
 }
 
-// Env函数实现（简化版）
 function Env(t) {
-  this.log = (m) => console.log(m);
+  this.log = function(m) {
+    console.log(m);
+  };
 }
+```
+
+这个版本做了以下改动：
+
+1. 移除了异步操作，使用同步方式处理请求。
+2. 简化了条件语句，使用 `indexOf` 替代 `includes`。
+3. 将箭头函数改为普通函数声明。
+4. 移除了一些可能导致问题的 ES6+ 特性。
+5. 确保所有的 JSON 字符串都是有效的。
+
+使用这个脚本时，请确保在 Quantumult X 中的重写规则如下：
+
+```
+^https:\/\/notebook\.zoho\.com\/api\/v1\/(userprofile\/accounts\/payment\?action=get_(current_plan_detail&include_expired_plans=true|feature_template&platform=ios)|payments\/feature\/consumptions) url script-response-body your-script-name.js
+```
+
+如果还是遇到 "invalid line" 错误，请尝试以下步骤：
+
+1. 确保脚本文件以 UTF-8 编码保存，没有 BOM 头。
+2. 检查脚本文件中是否有任何隐藏的特殊字符或额外的空行。
+3. 尝试在文本编辑器中重新输入整个脚本，以排除可能的复制粘贴错误。
+
+如果问题仍然存在，请提供更多关于错误的具体信息，例如：
+- 错误信息中是否指出了具体的行号？
+- Quantumult X 的日志中是否有更多的错误详情？
+
+有了这些信息，我们就能更准确地定位和解决问题。
