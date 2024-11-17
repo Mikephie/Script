@@ -2,7 +2,7 @@
      @Mike
 
 [rewrite_local] 
-^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions url script-response-body notebook-2.js
+^https:\/\/notebook\.zoho\.com\/api\/v1\/payments\/feature\/consumptions url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-storage.js
 
 
 [MITM]
