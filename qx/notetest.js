@@ -56,8 +56,28 @@ if (url.indexOf('get_current_plan_detail') !== -1) {
         console.log("Error in plan detail: " + e.message);
     }
 } else if (url.indexOf('feature/consumptions') !== -1) {
-    // 容量相关的代码保持不变
-    // ...
+    console.log("Matched URL for feature consumptions");
+    try {
+        var obj = JSON.parse(body);
+        obj.code = 200;
+        obj.status = "Success";
+        obj.message = "Success";
+        // 保留原有的 feature_consumptions 结构，只修改存储容量
+        if (obj.feature_consumptions) {
+            obj.feature_consumptions.forEach(function(feature) {
+                if (feature.feature_id === "com.zoho.notebook.storage") {
+                    feature.consumptions.forEach(function(consumption) {
+                        if (consumption.name === "SIZE") {
+                            consumption.value = "107374182400"; // 100 GB
+                        }
+                    });
+                }
+            });
+        }
+        body = JSON.stringify(obj);
+    } catch (e) {
+        console.log("Error in feature consumptions: " + e.message);
+    }
 } else if (url.indexOf('get_feature_template') !== -1) {
     console.log("Matched URL for feature template");
     try {
