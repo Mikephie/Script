@@ -21,8 +21,6 @@
 hostname = notebook.zoho.com
 */
 
-
-
 var mikephie = JSON.parse($response.body);
 
 mikephie = {
