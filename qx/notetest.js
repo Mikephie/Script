@@ -21,6 +21,7 @@
 hostname = notebook.zoho.com
 */
 
+
 var url = $request.url;
 var mikephie = JSON.parse($response.body);
 
@@ -69,8 +70,8 @@ if (url.indexOf(URL2) != -1) {
 if (url.indexOf(URL3) != -1) {
   mikephie.code = 200;
   mikephie.status = "Success";
-  mikeph = "Success";
-  mikephie.feature_consumptions = [
+  mikephie.message = "Success";
+phie.feature_consumptions = [
     {
       "feature_id": "com.zoho.notebook.storage",
       "consumptions": [
