@@ -79,26 +79,7 @@ if (url.indexOf(URL2) != -1) {
 }
 
 // 第三个 URL 处理
-if (url.indexOf(URL3) != -1) {
-   // 使用你提供的内容替换内容
-  mikephie.code = 200;
-  mikephie.status = "Success";
-  mikephie.message = "Success";
-  mikephie.feature_consumptions = [
-    {
-      "feature_id": "com.zoho.notebook.storage",
-      "consumptions": [
-        {
-          "value": "5268006",
-          "name": "SIZE",
-          "unit": "BYTES",
-          "user_type": "INDIVIDUAL_USER"
-        }
-      ],
-      "source": "PAID"
-    }
-  ];
-}
+if (url.indexOf(URL3) != -1) {  console.log("Matching URL3");  mikephie = {    "code": 200,    "status": "Success",    "message": "Success",    "feature_consumptions": [      {        "feature_id": "com.zoho.notebook.storage",        "consumptions": [          {            "value": "5268006",            "name": "SIZE",            "unit": "BYTES",            "user_type": "INDIVIDUAL_USER"          }        ],        "source": "PAID"      }    ]  };  console.log("Modified mikephie:", JSON.stringify(mikephie));}
 
 // 第四个 URL 处理（保留但不请求内容）
 if (url.indexOf(URL4) != -1) {
