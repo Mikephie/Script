@@ -11,7 +11,7 @@
 
 [rewrite_local]
 # VIP 订阅, 100G 空间, Token
-^https:\/\/notebook\.zoho\.com\/api\/v1\/(userprofile\/accounts\/payment\?action=get_current_plan_detail&include_(expired_plans=true|purchase_platform=false)|payments\/feature\/consumptions|userprofile\/accounts\/payment\?action=get_feature_template(&platform=ios)?|userprofile\/accounts\/payment\?action=get_feature_template)$|^https:\/\/sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js
+^https:\/\/(notebook\.zoho\.com\/api\/v1\/(userprofile\/accounts\/payment\?action=(get_current_plan_detail&include_(expired_plans=true|purchase_platform=false)|get_feature_template(&platform=ios)?|get_feature_template)|payments\/feature\/consumptions)|sdk-apptics\.zoho\.com\/sdk\/api\/apptics\/v1\/app\/bearertoken)$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js
 
 # VIP 多项权益
 ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template&platform=ios url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-all.js
