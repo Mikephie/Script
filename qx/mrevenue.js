@@ -32,6 +32,7 @@ const bundle = {
 //识别UA
 const list = {
   'ChatPub': { Ent: 'Unlimited Access', id: 'conversationai.year', cm: 'sja' },
+  'ChatPub': { Ent: 'Unlimited Access', id: 'conversationai.year', cm: 'sja' },
   'Art%20Generator': { 
     Ent: 'discount_pro', 
     id: 'artx_yearly_option_2', 
