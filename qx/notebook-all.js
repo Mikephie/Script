@@ -8,8 +8,8 @@
 hostname = notebook.zoho.com
 */
 
-// 公共模板：定义通用的元数据
-const template = {
+// 公共模板：定义通用数据
+const commonMeta = {
   start_date: 1717644792301,
   end_date: 3742762088000,
   grace_period: 999160000000,
@@ -17,62 +17,30 @@ const template = {
   type: "PRIMARY"
 };
 
-// 功能列表：仅需要定义功能名和特定属性
+// 定义功能列表
 const features = [
   {
-    feature_name: "AUDIO_CARD",
+    name: "AUDIO_CARD",
     limits: [
-      {
-        value: "60",
-        applied_for: "NOTE",
-        name: "DURATION",
-        unit: "MINUTES"
-      }
+      { value: "60", applied_for: "NOTE", name: "DURATION", unit: "MINUTES" }
+    ]
+  },
+  { name: "OCR" },
+  { name: "CHAT_WITH_US" },
+  { name: "FLIGHT_CARD" },
+  { name: "EMAIL_IN" },
+  { name: "CUSTOM_RECURRING_REMINDER" },
+  { name: "PREMIUM_COVERS" },
+  {
+    name: "NOTECARD",
+    limits: [
+      { value: "100", applied_for: "NOTE", name: "VERSIONS", unit: "RESOURCES" },
+      { value: "209715200", applied_for: "NOTE", name: "MAX_SIZE", unit: "BYTES" },
+      { value: "1073741824", applied_for: "NOTE", name: "MAX_FILE_SIZE", unit: "BYTES" }
     ]
   },
   {
-    feature_name: "OCR"
-  },
-  {
-    feature_name: "CHAT_WITH_US"
-  },
-  {
-    feature_name: "FLIGHT_CARD"
-  },
-  {
-    feature_name: "EMAIL_IN"
-  },
-  {
-    feature_name: "CUSTOM_RECURRING_REMINDER"
-  },
-  {
-    feature_name: "PREMIUM_COVERS"
-  },
-  {
-    feature_name: "NOTECARD",
-    limits: [
-      {
-        value: "100",
-        applied_for: "NOTE",
-        name: "VERSIONS",
-        unit: "RESOURCES"
-      },
-      {
-        value: "209715200",
-        applied_for: "NOTE",
-        name: "MAX_SIZE",
-        unit: "BYTES"
-      },
-      {
-        value: "1073741824",
-        applied_for: "NOTE",
-        name: "MAX_FILE_SIZE",
-        unit: "BYTES"
-      }
-    ]
-  },
-  {
-    feature_name: "STORAGE",
+    name: "STORAGE",
     limits: [
       {
         value: "107374182400",
@@ -82,61 +50,30 @@ const features = [
       }
     ]
   },
+  { name: "PHONE_SUPPORT" },
   {
-    feature_name: "PHONE_SUPPORT"
-  },
-  {
-    feature_name: "NOTEBOOK_SHARING",
+    name: "NOTEBOOK_SHARING",
     limits: [
-      {
-        value: "CO_OWNER",
-        applied_for: "NOTEBOOK",
-        name: "PERMISSION",
-        unit: "STRING"
-      },
-      {
-        value: "CO_OWNER",
-        applied_for: "COLLECTION",
-        name: "PERMISSION",
-        unit: "STRING"
-      },
-      {
-        value: "CO_OWNER",
-        applied_for: "NOTECARD",
-        name: "PERMISSION",
-        unit: "STRING"
-      },
-      {
-        value: "WRITE_DELETE",
-        applied_for: "NOTEBOARD",
-        name: "PERMISSION",
-        unit: "STRING"
-      },
-      {
-        value: "READ_WRITE",
-        applied_for: "WHITEBOARD",
-        name: "PERMISSION",
-        unit: "STRING"
-      }
+      { value: "CO_OWNER", applied_for: "NOTEBOOK", name: "PERMISSION", unit: "STRING" },
+      { value: "CO_OWNER", applied_for: "COLLECTION", name: "PERMISSION", unit: "STRING" },
+      { value: "CO_OWNER", applied_for: "NOTECARD", name: "PERMISSION", unit: "STRING" },
+      { value: "WRITE_DELETE", applied_for: "NOTEBOARD", name: "PERMISSION", unit: "STRING" },
+      { value: "READ_WRITE", applied_for: "WHITEBOARD", name: "PERMISSION", unit: "STRING" }
     ]
   }
 ];
 
-// 动态生成 JSON 配置
+// 动态生成最终数据
 const result = features.map(feature => {
-  // 公共模板数据
-  const metaData = [{ ...template }];
-  
-  // 如果功能有特定限制，添加到元数据中
-  if (feature.limits) {
-    metaData[0].limits = feature.limits;
-  }
+  // 每个功能都使用公共元数据
+  const metaData = [{ ...commonMeta }];
+  if (feature.limits) metaData[0].limits = feature.limits;
 
   return {
-    feature_name: feature.feature_name,
+    feature_name: feature.name,
     feature_meta_data: metaData
   };
 });
 
-// 返回最终 JSON
+// 输出 JSON 数据
 $done({ body: JSON.stringify({ code: 200, status: "Success", feature_template: result }) });
