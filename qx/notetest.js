@@ -11,13 +11,9 @@
 *******************************
 
 [Script]
-# VIP 订阅
-notebook-subs = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_expired_plans=true, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js, requires-body=true, max-size=-1, timeout=60
-notebookMac1 = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_current_plan_detail&include_purchase_platform=false, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js, requires-body=true, max-size=-1, timeout=60
+# VIP 订阅 & 多项权益
+^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=(get_current_plan_detail|get_feature_template)(&include_expired_plans=true|&include_purchase_platform=false|&platform=ios)? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js
 
-# VIP 多项权益
-notebook-all = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template&platform=ios, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js, requires-body=true, max-size=-1, timeout=60
-notebookMac2 = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=get_feature_template, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
 hostname = notebook.zoho.com
