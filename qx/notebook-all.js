@@ -8,328 +8,135 @@
 hostname = notebook.zoho.com
 */
 
-var mikephie = JSON.parse($response.body);
-
-mikephie = {
-  "code": 200,
-  "status": "Success",
-  "message": "User profile fetched successfully",
-  "feature_template": [
-    {
-      "feature_name": "AUDIO_CARD",
-      "feature_id": "com.zoho.notebook.audiocard",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "limits": [
-            {
-              "value": "60",
-              "applied_for": "NOTE",
-              "name": "DURATION",
-              "unit": "MINUTES"
-            }
-          ],
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301,
-          "grace_period": 999160000000
-        }
-      ]
-    },
-    {
-      "feature_name": "OCR",
-      "feature_id": "com.zoho.notebook.ocr",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "feature_name": "CHAT_WITH_US",
-      "feature_id": "com.zoho.notebook.support.chat",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "feature_name": "FLIGHT_CARD",
-      "feature_id": "com.zoho.notebook.flight_card",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "feature_name": "EMAIL_IN",
-      "feature_id": "com.zoho.notebook.email_in",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "feature_name": "CUSTOM_RECURRING_REMINDER",
-      "feature_id": "com.zoho.notebook.reminder.custom",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "feature_name": "PREMIUM_COVERS",
-      "feature_id": "com.zoho.notebook.covers.premium",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "feature_name": "NOTECARD",
-      "feature_id": "com.zoho.notebook.notecard",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "limits": [
-            {
-              "value": "100",
-              "applied_for": "NOTE",
-              "name": "VERSIONS",
-              "unit": "RESOURCES"
-            },
-            {
-              "value": "209715200",
-              "applied_for": "NOTE",
-              "name": "MAX_SIZE",
-              "unit": "BYTES"
-            },
-            {
-              "value": "1073741824",
-              "applied_for": "NOTE",
-              "name": "MAX_FILE_SIZE",
-              "unit": "BYTES"
-            }
-          ],
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301,
-          "grace_period": 999160000000
-        }
-      ]
-    },
-    {
-      "feature_name": "STORAGE",
-      "feature_id": "com.zoho.notebook.storage",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "limits": [
-            {
-              "value": "107374182400",
-              "name": "MAX_SIZE",
-              "unit": "BYTES",
-              "user_type": "INDIVIDUAL_USER"
-            }
-          ],
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301,
-          "grace_period": 999160000000
-        }
-      ]
-    },
-    {
-      "feature_name": "PHONE_SUPPORT",
-      "feature_id": "com.zoho.notebook.support.phone_call",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "feature_name": "NOTEBOOK_SHARING",
-      "feature_id": "com.zoho.notebook.sharing",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "limits": [
-            {
-              "value": "CO_OWNER",
-              "applied_for": "NOTEBOOK",
-              "name": "PERMISSION",
-              "unit": "STRING"
-            },
-            {
-              "value": "CO_OWNER",
-              "applied_for": "COLLECTION",
-              "name": "PERMISSION",
-              "unit": "STRING"
-            },
-            {
-              "value": "CO_OWNER",
-              "applied_for": "NOTECARD",
-              "name": "PERMISSION",
-              "unit": "STRING"
-            },
-            {
-              "value": "WRITE_DELETE",
-              "applied_for": "NOTEBOARD",
-              "name": "PERMISSION",
-              "unit": "STRING"
-            },
-            {
-              "value": "READ_WRITE",
-              "applied_for": "WHITEBOARD",
-              "name": "PERMISSION",
-              "unit": "STRING"
-            }
-          ],
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301,
-          "grace_period": 999160000000
-        }
-      ]
-    },
-    {
-      "supported_platforms": [
-        "android",
-        "ios",
-        "macos"
-      ],
-      "feature_id": "com.zoho.notebook.table.scan",
-      "feature_name": "SCAN_TABLE",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "feature_name": "TAG_SUGGESTIONS",
-      "feature_id": "com.zoho.notebook.tags.suggestions",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "supported_platforms": [
-        "android",
-        "ios",
-        "macos",
-        "windows"
-      ],
-      "feature_id": "com.zoho.notebook.notecard.export_as_pdf",
-      "feature_name": "EXPORT_AS_PDF",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "FREE",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "supported_platforms": [
-        "android",
-        "ios"
-      ],
-      "feature_id": "com.zoho.notebook.bcr",
-      "feature_name": "BCR",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "supported_platforms": [
-        "android",
-        "ios",
-        "macos"
-      ],
-      "feature_id": "com.zoho.notebook.search.smart_search",
-      "feature_name": "SMART_SEARCH",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "PAID",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    },
-    {
-      "supported_platforms": [
-        "ios",
-        "macos",
-        "windows"
-      ],
-      "feature_id": "com.zoho.notebook.feature_x",
-      "feature_name": "FEATURE_X",
-      "feature_meta_data": [
-        {
-          "end_date": 3742762088000,
-          "grace_period": 999160000000,
-          "source": "FREE",
-          "type": "PRIMARY",
-          "start_date": 1717644792301
-        }
-      ]
-    }
-  ]
+// 公共模板：定义通用的元数据
+const template = {
+  start_date: 1717644792301,
+  end_date: 3742762088000,
+  grace_period: 999160000000,
+  source: "PAID",
+  type: "PRIMARY"
 };
 
-$done({ body: JSON.stringify(mikephie) });
+// 功能列表：仅需要定义功能名和特定属性
+const features = [
+  {
+    feature_name: "AUDIO_CARD",
+    limits: [
+      {
+        value: "60",
+        applied_for: "NOTE",
+        name: "DURATION",
+        unit: "MINUTES"
+      }
+    ]
+  },
+  {
+    feature_name: "OCR"
+  },
+  {
+    feature_name: "CHAT_WITH_US"
+  },
+  {
+    feature_name: "FLIGHT_CARD"
+  },
+  {
+    feature_name: "EMAIL_IN"
+  },
+  {
+    feature_name: "CUSTOM_RECURRING_REMINDER"
+  },
+  {
+    feature_name: "PREMIUM_COVERS"
+  },
+  {
+    feature_name: "NOTECARD",
+    limits: [
+      {
+        value: "100",
+        applied_for: "NOTE",
+        name: "VERSIONS",
+        unit: "RESOURCES"
+      },
+      {
+        value: "209715200",
+        applied_for: "NOTE",
+        name: "MAX_SIZE",
+        unit: "BYTES"
+      },
+      {
+        value: "1073741824",
+        applied_for: "NOTE",
+        name: "MAX_FILE_SIZE",
+        unit: "BYTES"
+      }
+    ]
+  },
+  {
+    feature_name: "STORAGE",
+    limits: [
+      {
+        value: "107374182400",
+        name: "MAX_SIZE",
+        unit: "BYTES",
+        user_type: "INDIVIDUAL_USER"
+      }
+    ]
+  },
+  {
+    feature_name: "PHONE_SUPPORT"
+  },
+  {
+    feature_name: "NOTEBOOK_SHARING",
+    limits: [
+      {
+        value: "CO_OWNER",
+        applied_for: "NOTEBOOK",
+        name: "PERMISSION",
+        unit: "STRING"
+      },
+      {
+        value: "CO_OWNER",
+        applied_for: "COLLECTION",
+        name: "PERMISSION",
+        unit: "STRING"
+      },
+      {
+        value: "CO_OWNER",
+        applied_for: "NOTECARD",
+        name: "PERMISSION",
+        unit: "STRING"
+      },
+      {
+        value: "WRITE_DELETE",
+        applied_for: "NOTEBOARD",
+        name: "PERMISSION",
+        unit: "STRING"
+      },
+      {
+        value: "READ_WRITE",
+        applied_for: "WHITEBOARD",
+        name: "PERMISSION",
+        unit: "STRING"
+      }
+    ]
+  }
+];
+
+// 动态生成 JSON 配置
+const result = features.map(feature => {
+  // 公共模板数据
+  const metaData = [{ ...template }];
+  
+  // 如果功能有特定限制，添加到元数据中
+  if (feature.limits) {
+    metaData[0].limits = feature.limits;
+  }
+
+  return {
+    feature_name: feature.feature_name,
+    feature_meta_data: metaData
+  };
+});
+
+// 返回最终 JSON
+$done({ body: JSON.stringify({ code: 200, status: "Success", feature_template: result }) });
