@@ -9,7 +9,7 @@
 
 [rewrite_local]
 ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pdfexpert1.js
-^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pdfexpert2.js
+#^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/pdfexpert2.js
 
 [mitm]
 hostname = license.pdfexpert.com
