@@ -31,7 +31,7 @@ const bundle = {
 
 //识别UA
 const list = {
-  'Goru': { Ent: 'Pros', id: 'com.ahmetserdarkaradeniz.goruyearlyalternative', cm: 'sjb' },
+  'Goru': { Ent: 'goru_pro', id: 'com.ahmetserdarkaradeniz.goruyearlyalternative', cm: 'sja' },
   'Remote': { Ent: 'Pros', id: 'com.cherpake.macrc.mor', cm: 'sjb' },
   'ChatPub': { Ent: 'Unlimited Access', id: 'conversationai.year', cm: 'sja' },
   'Art%20Generator': { 
