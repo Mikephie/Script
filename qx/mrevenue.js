@@ -32,6 +32,7 @@ const bundle = {
 //识别UA
 const list = {
   'Remote': { Ent: 'Pros', id: 'com.cherpake.macrc.mor', cm: 'sjb' },
+  'Remote': { Ent: 'Pros', id: 'com.cherpake.macrc.mor', cm: 'sjb' },
   'ChatPub': { Ent: 'Unlimited Access', id: 'conversationai.year', cm: 'sja' },
   'Art%20Generator': { 
     Ent: 'discount_pro', 
