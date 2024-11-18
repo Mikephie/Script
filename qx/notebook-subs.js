@@ -2,8 +2,8 @@
      @Mike
 
 [rewrite_local] 
-^https://notebook.zoho.com/api/v1/userprofile/accounts/payment?action=get_current_plan_detail&include_(expired_plans|purchase_platform)=(true|false) url script-response-body notebook.js
-
+^https://notebook.zoho.com/api/v1/userprofile/accounts/payment?action=get_current_plan_detail&include_(expired_plans|purchase_platform)=(true|false) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook-subs.js
+ 
 [MITM]
 hostname = notebook.zoho.com
 */
