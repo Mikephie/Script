@@ -42,7 +42,7 @@ const list = {
     idb: 'artx_100Credit', 
     cm: 'sja' 
   },
-  'Video%20Up!': { Ent: 'Full_access_app', id: 'app.videoup.videoup.na.base.one_year', cm: 'sja' },
+  'ChatGPT!': { Ent: 'Full_access_app', id: 'app.videoup.videoup.na.base.one_year', cm: 'sja' },
   'Video%20Up!': { Ent: 'Full_access_app', id: 'app.videoup.videoup.na.base.one_year', cm: 'sja' },
   '%E9%85%B7%E6%8B%8D': { Ent: 'Premium', id: 'com.wallpapershub.anime.premiumCategories', cm: 'sja' },
   'Jellycuts': { Ent: 'pro', id: 'com.zlineman.Jellyfish.tier.5.pro', cm: 'sja' },
