@@ -31,7 +31,7 @@ const bundle = {
 
 //识别UA
 const list = {
-  '%E8%90%8C%E5%AE%A2AI%E7%BB%98%E7%94%BB': { Ent: 'goru_pro', id: 'xs_ios_yearly_sub_1', cm: 'sjb' },
+  '%E8%90%8C%E5%AE%A2AI%E7%BB%98%E7%94%BB': { Ent: 'AISticker_VIP', id: 'xs_ios_yearly_sub_1', cm: 'sjb' },
   'XS%20VPN': { Ent: 'goru_pro', id: 'xs_ios_yearly_sub_1', cm: 'sja' },
   'Goru': { Ent: 'goru_pro', id: 'com.ahmetserdarkaradeniz.goruyearlyalternative', cm: 'sja' },
   'Remote': { Ent: 'Pros', id: 'com.cherpake.macrc.mor', cm: 'sjb' },
