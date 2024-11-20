@@ -31,6 +31,7 @@ const bundle = {
 
 //识别UA
 const list = {
+  'XS%20VPN': { Ent: 'goru_pro', id: 'xs_ios_yearly_sub_1', cm: 'sjb' },
   'XS%20VPN': { Ent: 'goru_pro', id: 'xs_ios_yearly_sub_1', cm: 'sja' },
   'Goru': { Ent: 'goru_pro', id: 'com.ahmetserdarkaradeniz.goruyearlyalternative', cm: 'sja' },
   'Remote': { Ent: 'Pros', id: 'com.cherpake.macrc.mor', cm: 'sjb' },
