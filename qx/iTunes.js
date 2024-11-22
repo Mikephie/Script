@@ -62,7 +62,7 @@ const appList = {
   'iClear': { method: 'v1', product_id: 'com.youthpe.retake.yearly' },
   
   // 第二个脚本的应用列表
-  'co.vulcanlabs': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetimeid", latest: "mikephie" },
+  'Cam Translator': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "co.vulcanlabs.pictranslator.lifetime2", latest: "mikephie" },
   'co.vulcanlabs': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetimeid", latest: "mikephie" },
   'com.eleven.chatgpt': { method: 'v2', cm: 'timea', hx: 'hxpda', id: "com.chatgpt.weekly", latest: "mikephie" },
   'com.casttv.remotetv': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" },
