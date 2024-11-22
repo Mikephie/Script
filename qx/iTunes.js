@@ -22,7 +22,6 @@ const TRANSACTION_ID = "300002000603223";
 const appList = {
   // 第一个脚本的应用列表
   'ScreenRecord': { method: 'v1', product_id: 'https://t.me/mikephie' },
-  //'Cam Translator': { method: 'v1', product_id: 'co.vulcanlabs.pictranslator.lifetime2' },
   'iVCam': { method: 'v1', product_id: 'ivcam.full' },
   'ChickAlarmClock': { method: 'v1', product_id: 'Pro_M01' },
   'TWWeatherMajor': { method: 'v1', product_id: 'com.highonemob.weather.base.w' },
@@ -62,7 +61,6 @@ const appList = {
   'iClear': { method: 'v1', product_id: 'com.youthpe.retake.yearly' },
   
   // 第二个脚本的应用列表
-  //'Cam Translator': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "co.vulcanlabs.pictranslator.lifetime2", latest: "mikephie" },
   'co.vulcanlabs': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetimeid", latest: "mikephie" },
   'com.eleven.chatgpt': { method: 'v2', cm: 'timea', hx: 'hxpda', id: "com.chatgpt.weekly", latest: "mikephie" },
   'com.casttv.remotetv': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" },
