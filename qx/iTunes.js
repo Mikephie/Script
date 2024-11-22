@@ -62,14 +62,14 @@ const appList = {
   'iClear': { method: 'v1', product_id: 'com.youthpe.retake.yearly' },
   
   // 第二个脚本的应用列表
-  'Cam Translator': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "co.vulcanlabs.pictranslator.lifetime2", latest: "mikephie" },
+  //'Cam Translator': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "co.vulcanlabs.pictranslator.lifetime2", latest: "mikephie" },
   'co.vulcanlabs': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetimeid", latest: "mikephie" },
   'com.eleven.chatgpt': { method: 'v2', cm: 'timea', hx: 'hxpda', id: "com.chatgpt.weekly", latest: "mikephie" },
   'com.casttv.remotetv': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" },
   'IconChange': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "iconeryearvip", latest: "mikephie" },
   'life.journal.diary': { method: 'v2', cm: 'timeb', hx: 'hxpbda', id: "life.journal.diary.lifetime", latest: "mikephie" },
   'com.floatcamellia.motionninja': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "com.floatcamellia.motionninja.yearlyvip", latest: "mikephie" },
-  'Cam Translator': { method: 'v2', cm: 'timed', hx: 'hxpbda', id: "co.vulcanlabs.pictranslator.lifetime2", ids: "com.iuuapp.audiomaker.removeads", latest: "mikephie" },
+  'Cam Translator': { method: 'v2', cm: 'timed', hx: 'hxpbda', id: "co.vulcanlabs.pictranslator.lifetime2", ids: "co.vulcanlabs.pictranslator.offlineweekly1", latest: "mikephie" },
   'com.iuuapp.audiomaker': { method: 'v2', cm: 'timed', hx: 'hxpbda', id: "com.iuuapp.audiomaker.cloud.year", ids: "com.iuuapp.audiomaker.removeads", latest: "mikephie" },
   'com.alphamobiletech.bodyApp': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "Bodyapp_Forever", latest: "mikephie" },
   'com.alphamobiletech.facey': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "Facey_Forever", latest: "mikephie" },
