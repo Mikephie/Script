@@ -28,7 +28,7 @@ const appList = {
   'ProKnockOut': { method: 'v1', product_id: 'com.knockout.SVIP.50off' },
   'Prettya': { method: 'v1', product_id: 'com.floatcamellia.prettyup.onetimepurchase' },
   'Dial': { method: 'v1', product_id: '2104' },
-  'UCamera': { method: 'v1', product_id: '644377109928' },
+  'UCamera': { method: 'v1', product_id: '644377109928' },  //最终版解锁V1.74
   'com.pocket.photo': { method: 'v1', product_id: 'com.pocket.photo.yearly' },
   'HashPhotos': { method: 'v1', product_id: 'com.kobaltlab.HashPhotos.iap.allinone.free' },
   'AllMyBatteries': { method: 'v1', product_id: 'https://t.me/Guding88' },
@@ -61,7 +61,6 @@ const appList = {
   'iClear': { method: 'v1', product_id: 'com.youthpe.retake.yearly' },
   
   // 第二个脚本的应用列表
-  //'co.vulcanlabs': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetimeid", latest: "mikephie" },
   'com.eleven.chatgpt': { method: 'v2', cm: 'timea', hx: 'hxpda', id: "com.chatgpt.weekly", latest: "mikephie" },
   'com.casttv.remotetv': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" },
   'IconChange': { method: 'v2', cm: 'timea', hx: 'hxpbda', id: "iconeryearvip", latest: "mikephie" },
@@ -72,6 +71,7 @@ const appList = {
   'com.alphamobiletech.bodyApp': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "Bodyapp_Forever", latest: "mikephie" },
   'com.alphamobiletech.facey': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "Facey_Forever", latest: "mikephie" },
   'VLLO': { method: 'v2', cm: 'timed', hx: 'hxpbda', id: "com.vimosoft.EVERYTHING", ids: "com.vimosoft.vllo.premium3.annually_subscription", latest: "mikephie" },
+    //'co.vulcanlabs': { method: 'v2', cm: 'timeb', hx: 'hxpda', id: "liftetimeid", latest: "mikephie" },  //合集冲突
   // 注意：有些应用在两个列表中都出现了，这里保留了第二个脚本的版本
 };
 
