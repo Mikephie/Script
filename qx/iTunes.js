@@ -22,7 +22,7 @@ const TRANSACTION_ID = "300002000603223";
 const appList = {
   // 第一个脚本的应用列表
   'ScreenRecord': { method: 'v1', product_id: 'https://t.me/mikephie' },
-  'CamTranslator': { method: 'v1', product_id: 'co.vulcanlabs.pictranslator.lifetime2' },
+  'Cam Translator': { method: 'v1', product_id: 'co.vulcanlabs.pictranslator.lifetime2' },
   'iVCam': { method: 'v1', product_id: 'ivcam.full' },
   'ChickAlarmClock': { method: 'v1', product_id: 'Pro_M01' },
   'TWWeatherMajor': { method: 'v1', product_id: 'com.highonemob.weather.base.w' },
