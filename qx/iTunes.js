@@ -12,6 +12,19 @@ hostname = buy.itunes.apple.com
 
 *************************************/
 
+// 自定义
+const RECEIPT_VALUES = {
+  PURCHASE_DATE_MS: "1729856759000",
+  PURCHASE_DATE: "2024-10-25 04:45:59 Etc/GMT",
+  PURCHASE_DATE_PST: "2024-10-25 04:45:59 America/Los_Angeles",
+  ORIGINAL_PURCHASE_DATE_PST: "2024-10-25 04:45:59 America/Los_Angeles",
+  ORIGINAL_PURCHASE_DATE_MS: "1729856759000",
+  ORIGINAL_PURCHASE_DATE: "2024-10-25 04:45:59 Etc/GMT",
+  EXPIRES_DATE_MS: "3742762088000",
+  EXPIRATION_DATE: "2088-08-08 08:08:08 Etc/GMT",
+  EXPIRES_DATE_PST: "2088-08-08 06:06:06 America/Los_Angeles",
+  TRANSACTION_ID: "300002066031506"
+};
 
 var mikephie = JSON.parse($response.body);
 const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
@@ -325,8 +338,29 @@ const list = {
 };
 
 //内购数据变量
-const receipt = { "quantity": "1", "purchase_date_ms": "1694250549000", "is_in_intro_offer_period": "false", "transaction_id": "300002066031506", "is_trial_period": "false", "original_transaction_id": "300002066031506", "purchase_date": "2023-09-09 09:09:09 Etc/GMT", "product_id": yearlyid, "original_purchase_date_pst": "2023-09-09 02:09:10 America/Los_Angeles", "in_app_ownership_type": "PURCHASED", "original_purchase_date_ms": "1694250550000", "web_order_line_item_id": "490000123456789", "purchase_date_pst": "2023-09-09 02:09:09 America/Los_Angeles", "original_purchase_date": "2023-09-09 09:09:10 Etc/GMT" };
-const expirestime = { "expires_date": "2088-08-08 08:08:08 Etc/GMT", "expires_date_pst": "2088-08-08 06:06:06 America/Los_Angeles", "expires_date_ms": "3742762088000", };
+const receipt = {
+  "quantity": "1",
+  "purchase_date_ms": RECEIPT_VALUES.PURCHASE_DATE_MS,
+  "is_in_intro_offer_period": "false",
+  "transaction_id": RECEIPT_VALUES.TRANSACTION_ID,
+  "is_trial_period": "false",
+  "original_transaction_id": RECEIPT_VALUES.TRANSACTION_ID,
+  "purchase_date": RECEIPT_VALUES.PURCHASE_DATE,
+  "product_id": yearlyid,
+  "original_purchase_date_pst": RECEIPT_VALUES.ORIGINAL_PURCHASE_DATE_PST,
+  "in_app_ownership_type": "PURCHASED",
+  "original_purchase_date_ms": RECEIPT_VALUES.ORIGINAL_PURCHASE_DATE_MS,
+  "web_order_line_item_id": "490000123456789",
+  "purchase_date_pst": RECEIPT_VALUES.PURCHASE_DATE_PST,
+  "original_purchase_date": RECEIPT_VALUES.ORIGINAL_PURCHASE_DATE
+};
+
+const expirestime = {
+  "expires_date": RECEIPT_VALUES.EXPIRATION_DATE,
+  "expires_date_pst": RECEIPT_VALUES.EXPIRES_DATE_PST,
+  "expires_date_ms": RECEIPT_VALUES.EXPIRES_DATE_MS,
+};
+
 let anchor = false;
 let data;
 
