@@ -56,7 +56,6 @@ const appList = {
   'PhotoCollagePro': { method: 'v1', product_id: 'PHOTABLE_PREMIUM' },
   'iscreen': { method: 'v1', product_id: 'com.zerone.hidesktop.forever' },
   'pollykann': { method: 'v1', product_id: 'vip.forever.pollykann' },
-  //'VLLO': { method: 'v1', product_id: 'com.darinsoft.vimo.yearly' },
   'iClear': { method: 'v1', product_id: 'com.youthpe.retake.yearly' },
   
   // 第二个脚本的应用列表
