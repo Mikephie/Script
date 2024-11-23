@@ -50,7 +50,7 @@ const appList = {
   //'WiseMate': { method: 'v1', product_id: 'wiseart.ai.ios.week.nofree' },
   'CodeSnippet': { method: 'v1', product_id: 'it.beatcode.codesnippetpro.annualSubscription' },
   'VDIT': { method: 'v1', product_id: 'me.imgbase.videoday.profeaturesYearly' },
-  'com.tinymediapower.livephotowallpapers': { method: 'v1', product_id: 'livewp_group_d_year' },
+  //'com.tinymediapower.livephotowallpapers': { method: 'v1', product_id: 'livewp_group_d_year' },
   'OXNotchLockPets': { method: 'v1', product_id: 'Notchweekvip' },
   'AllMyBatteries': { method: 'v1', product_id: 'AllMyBatteries_Ultimate' },
   'Packet': { method: 'v1', product_id: 'com.aaaalab.nepacket.iap.full' },
