@@ -12,7 +12,6 @@ hostname = buy.itunes.apple.com
 
 *************************************/
 
-<<<<<<< main
 const EXPIRES_DATE_MS = "3742762088000";   // 2088-08-08 08:08:08 GMT
 const EXPIRATION_DATE = "2088-08-08 08:08:08 Etc/GMT";
 const PURCHASE_DATE_MS = "1729856759000";  // 2024-08-08 08:08:08 GMT
