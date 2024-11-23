@@ -31,7 +31,6 @@ const appList = {
   'UCamera': { method: 'v1', product_id: '644377109928' },  //最终版解锁V1.74
   'com.pocket.photo': { method: 'v1', product_id: 'com.pocket.photo.yearly' },
   'HashPhotos': { method: 'v1', product_id: 'com.kobaltlab.HashPhotos.iap.allinone.free' },
-  'AllMyBatteries': { method: 'v1', product_id: 'https://t.me/Guding88' },
   'Subscriptions': { method: 'v1', product_id: 'com.touchbits.subscriptions.iap.pro.yearly' },
   'TimeCut': { method: 'v1', product_id: 'com.floatcamellia.hfrslowmotion.forevervip' },
   'imgplay': { method: 'v1', product_id: 'me.imgbase.imgplay.subscriptionYearly' },
