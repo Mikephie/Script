@@ -12,9 +12,9 @@ hostname = buy.itunes.apple.com
 
 *************************************/
 
-const EXPIRES_DATE_MS = "3742762088000";   // 2088-08-08 08:08:08 GMT
+const EXPIRES_DATE_MS = "3742762088000";
 const EXPIRATION_DATE = "2088-08-08 08:08:08 Etc/GMT";
-const PURCHASE_DATE_MS = "1729856759000";  // 2024-08-08 08:08:08 GMT
+const PURCHASE_DATE_MS = "1729856759000";
 const PURCHASE_DATE = "2024-10-25 04:45:59 Etc/GMT";
 const TRANSACTION_ID = "300002066031506";
 
