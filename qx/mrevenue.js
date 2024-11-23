@@ -43,6 +43,7 @@ const list = {
     idb: 'artx_100Credit', 
     cm: 'sja' 
   },
+  'PicLoom': { id: 'com.efsoft.picloom_nc_lifetime', cm: 'sjc' },  //PicLoom
   'ChatGPT': { Ent: 'premium', id: 'com.prod.gpt.1y40', cm: 'sja' },
   'Video%20Up!': { Ent: 'Full_access_app', id: 'app.videoup.videoup.na.base.one_year', cm: 'sja' },
   '%E9%85%B7%E6%8B%8D': { Ent: 'Premium', id: 'com.wallpapershub.anime.premiumCategories', cm: 'sja' },
