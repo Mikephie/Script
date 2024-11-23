@@ -47,7 +47,7 @@ const appList = {
   'VideoHelper': { method: 'v1', product_id: 'vip_service' },
   'qxwp%20copy': { method: 'v1', product_id: 'com.chowjoe.wp2free.year.pro' },
   'PhimCiaj': { method: 'v1', product_id: 'com.jiancent.calligraphymaster.lifetime' },
-  'WiseMate': { method: 'v1', product_id: 'wiseart.ai.ios.week.nofree' },
+  //'WiseMate': { method: 'v1', product_id: 'wiseart.ai.ios.week.nofree' },
   'CodeSnippet': { method: 'v1', product_id: 'it.beatcode.codesnippetpro.annualSubscription' },
   'VDIT': { method: 'v1', product_id: 'me.imgbase.videoday.profeaturesYearly' },
   'com.tinymediapower.livephotowallpapers': { method: 'v1', product_id: 'livewp_group_d_year' },
