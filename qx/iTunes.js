@@ -12,17 +12,20 @@ hostname = buy.itunes.apple.com
 
 *************************************/
 
-// 自定义
+// 自定义信息
+const RECEIPT_DATE = {
+  MS: "1731294671000",
+  GMT: "2024-11-11 11:11:11 Etc/GMT",
+  PST: "2024-11-11 11:11:11 America/Los_Angeles"
+};
+
+const EXPIRES_DATE = {
+  MS: "3742762088000",
+  GMT: "2088-08-08 08:08:08 Etc/GMT",
+  PST: "2088-08-08 06:06:06 America/Los_Angeles"
+};
+
 const RECEIPT_VALUES = {
-  PURCHASE_DATE_MS: "1729856759000",
-  PURCHASE_DATE: "2024-10-25 04:45:59 Etc/GMT",
-  PURCHASE_DATE_PST: "2024-10-25 04:45:59 America/Los_Angeles",
-  ORIGINAL_PURCHASE_DATE_PST: "2024-10-25 04:45:59 America/Los_Angeles",
-  ORIGINAL_PURCHASE_DATE_MS: "1729856759000",
-  ORIGINAL_PURCHASE_DATE: "2024-10-25 04:45:59 Etc/GMT",
-  EXPIRES_DATE_MS: "3742762088000",
-  EXPIRATION_DATE: "2088-08-08 08:08:08 Etc/GMT",
-  EXPIRES_DATE_PST: "2088-08-08 06:06:06 America/Los_Angeles",
   TRANSACTION_ID: "300002066031506"
 };
 
@@ -340,25 +343,25 @@ const list = {
 //内购数据变量
 const receipt = {
   "quantity": "1",
-  "purchase_date_ms": RECEIPT_VALUES.PURCHASE_DATE_MS,
+  "purchase_date_ms": RECEIPT_DATE.MS,
   "is_in_intro_offer_period": "false",
   "transaction_id": RECEIPT_VALUES.TRANSACTION_ID,
   "is_trial_period": "false",
   "original_transaction_id": RECEIPT_VALUES.TRANSACTION_ID,
-  "purchase_date": RECEIPT_VALUES.PURCHASE_DATE,
+  "purchase_date": RECEIPT_DATE.GMT,
   "product_id": yearlyid,
-  "original_purchase_date_pst": RECEIPT_VALUES.ORIGINAL_PURCHASE_DATE_PST,
+  "original_purchase_date_pst": RECEIPT_DATE.PST,
   "in_app_ownership_type": "PURCHASED",
-  "original_purchase_date_ms": RECEIPT_VALUES.ORIGINAL_PURCHASE_DATE_MS,
+  "original_purchase_date_ms": RECEIPT_DATE.MS,
   "web_order_line_item_id": "490000123456789",
-  "purchase_date_pst": RECEIPT_VALUES.PURCHASE_DATE_PST,
-  "original_purchase_date": RECEIPT_VALUES.ORIGINAL_PURCHASE_DATE
+  "purchase_date_pst": RECEIPT_DATE.PST,
+  "original_purchase_date": RECEIPT_DATE.GMT
 };
 
 const expirestime = {
-  "expires_date": RECEIPT_VALUES.EXPIRATION_DATE,
-  "expires_date_pst": RECEIPT_VALUES.EXPIRES_DATE_PST,
-  "expires_date_ms": RECEIPT_VALUES.EXPIRES_DATE_MS,
+  "expires_date": EXPIRES_DATE.GMT,
+  "expires_date_pst": EXPIRES_DATE.PST,
+  "expires_date_ms": EXPIRES_DATE.MS,
 };
 
 let anchor = false;
