@@ -35,7 +35,7 @@ const appList = {
   'Subscriptions': { method: 'v1', product_id: 'com.touchbits.subscriptions.iap.pro.yearly' },
   'TimeCut': { method: 'v1', product_id: 'com.floatcamellia.hfrslowmotion.forevervip' },
   'imgplay': { method: 'v1', product_id: 'me.imgbase.imgplay.subscriptionYearly' },
-  'Ever%20Play': { method: 'v1', product_id: 'om.zhangchao.AudioPlayer.subscription.oneWeek' },
+  //'Ever%20Play': { method: 'v1', product_id: 'om.zhangchao.AudioPlayer.subscription.oneWeek' },
   'intolive': { method: 'v1', product_id: 'me.imgbase.intolive.proSubYearly' },
   'PhotosSorter': { method: 'v1', product_id: 'sorter.pro.ipa' },
   'OneExtractor': { method: 'v1', product_id: 'com.OneExtractor.Video.Forever' },
