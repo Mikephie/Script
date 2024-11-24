@@ -134,7 +134,7 @@ if (typeof $response == "undefined") {
   }
   const subData = Object.assign({}, data, { 
     "Author": "mikephie", 
-    "Telegram": "https://t.me/chxm1023", 
+    "Telegram": "https://t.me/mikephie", 
     "warning": "仅供学习，禁止转载或售卖", 
     "original_purchase_date": "2024-04-04T04:04:04Z", 
     "store": "app_store", 
@@ -145,7 +145,7 @@ if (typeof $response == "undefined") {
     mikephie.subscriber.subscriptions[idb] = subData;
   }
   mikephie8.body = JSON.stringify(mikephie);
-  console.log('已操作成功🎉🎉🎉\n叮当猫の分享频道: https://t.me/chxm1023');
+  console.log('已操作成功🎉🎉🎉\nMIKEPHIEの分享频道: https://t.me/mikephie');
 }
 
 $done(mikephie8);
