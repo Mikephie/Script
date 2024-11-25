@@ -103,6 +103,7 @@ const list = {
   'MenuBox': { name: 'premium', id: 'com.menubox.premium', cm: 'sja' },  //MenuBox
   'Chatme': { name: 'premium', id: 'chatme_premium_year_discount', cm: 'sja' },  //ChatMe
   'AI%C2%A0Chat': { name: 'AI Plus', id: 'ai_plus_gpt_yearly', cm: 'sja' },  //AIChat
+  'ScannerPro': { name: 'plus', id: 'com.chxm1024.premium.yearly', cm: 'sja' },  //Scanner Pro-文档扫描
   'Days': { name: 'premium', id: 'net.mattdavenport.daysuntil.dayspremiumlifetime', cm: 'sjb' },  //Days
   'Journal': { name: 'PRO', id: 'com.pureformstudio.diary.yearly_2022_promo', cm: 'sja' },  //Diarly
 };
