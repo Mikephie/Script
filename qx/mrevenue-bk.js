@@ -68,7 +68,7 @@ const list = {
     idb: 'co.bergen.Darkroom.product.forever.everything', 
     cm: 'sja' 
   },
-  'ShellBean': { Ent: 'pro', id: 'com.ningle.shellbean.iap.forever', cm: 'sja' },
+  'ShellBean': { Ent: 'pro', id: 'com.ningle.shellbean.subscription.year', cm: 'sja' },
   'ChatLLM': { Ent: 'Pro', id: 'com.curiouscreatorsco.ChatLLM.pro.lifetime.notrial.150_00', cm: 'sjb' },
   'Photomator': { Ent: 'pixelmator_photo_pro_access', id: 'pixelmator_photo_lifetime_v1', cm: 'sjb' },
   'CountDuck': { Ent: 'premium', id: 'Lifetime', cm: 'sjb' },
