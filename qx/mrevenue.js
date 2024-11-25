@@ -2,7 +2,7 @@
 
 项目名称：Revenuecat 系列解锁合集
 下载地址：https://too.st/CollectionsAPP
-更新日期：2024-09-21
+更新日期：2024-11-25
 脚本作者：mikephie
 电报频道：https://t.me/mikephie
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -51,36 +51,29 @@ const bundle = {
 
 //识别UA
 const list = {
-  '%E8%90%8C%E5%AE%A2AI%E7%BB%98%E7%94%BB': { Ent: 'AISticker_VIP', id: 'LifetimeSubscription_Sticker', cm: 'sjb' },
-  'XS%20VPN': { Ent: 'goru_pro', id: 'xs_ios_yearly_sub_1', cm: 'sja' },  //XS VPN
-  'Goru': { Ent: 'goru_pro', id: 'com.ahmetserdarkaradeniz.goruyearlyalternative', cm: 'sja' },  //Goru
-  'Remote': { Ent: 'Pros', id: 'com.cherpake.macrc.mor', cm: 'sjb' },  // Remote
-  'ChatPub': { Ent: 'Unlimited Access', id: 'conversationai.year', cm: 'sja' },  // ChatPub
-  'Art%20Generator': { 
-    Ent: 'discount_pro', 
-    id: 'artx_yearly_option_2', 
-    Entb: 'DalleCredit', 
-    idb: 'artx_100Credit', 
-    cm: 'sja' 
-  },
+  '%E8%90%8C%E5%AE%A2AI%E7%BB%98%E7%94%BB': { name: 'AISticker_VIP', id: 'LifetimeSubscription_Sticker', cm: 'sjb' },
+  'XS%20VPN': { name: 'goru_pro', id: 'xs_ios_yearly_sub_1', cm: 'sja' },  //XS VPN
+  'Goru': { name: 'goru_pro', id: 'com.ahmetserdarkaradeniz.goruyearlyalternative', cm: 'sja' },  //Goru
+  'Remote': { name: 'Pros', id: 'com.cherpake.macrc.mor', cm: 'sjb' },  // Remote
+  'ChatPub': { name: 'Unlimited Access', id: 'conversationai.year', cm: 'sja' },  // ChatPub
+  'Art%20Generator': { name: 'discount_pro', id: 'artx_yearly_option_2', nameb: 'DalleCredit', idb: 'artx_100Credit', cm: 'sja' },  //Art Generator
   'PicLoom': { id: 'com.efsoft.picloom_nc_lifetime', cm: 'sjc' },  //PicLoom
-  'ChatGPT': { Ent: 'premium', id: 'com.prod.gpt.1y40', cm: 'sja' },
-  'Video%20Up!': { Ent: 'Full_access_app', id: 'app.videoup.videoup.na.base.one_year', cm: 'sja' },
-  '%E9%85%B7%E6%8B%8D': { Ent: 'Premium', id: 'com.wallpapershub.anime.premiumCategories', cm: 'sja' },
-  'Jellycuts': { Ent: 'pro', id: 'com.zlineman.Jellyfish.tier.5.pro', cm: 'sja' },
-  'Dream': { Ent: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },
-  'World%20Clock': { Ent: 'pro', id: 'dream_yearly_jan_2024_3999', cm: 'sja' },
-  'MorningAlarm': { Ent: 'morning_premium', id: 'alarmify.yearly.1', cm: 'sja' },
-  'Genius%20AI': { Ent: 'premium', id: 'genius_lifetime_59', cm: 'sjb' },
-  'Vocai-iOS': { Ent: 'AI Pro', id: 'vocabAI_900_1m', cm: 'sja' },
-  'PixImagine': { id: 'com.efsoft.piximagine_nc_lifetime', cm: 'sjc' },
-  '1Blocker': { Ent: 'premium', id: 'blocker.ios.iap.lifetime', cm: 'sjb' },
-  'VidCap': { Ent: 'io.fadel.vidcap.pro', id: 'subs.vcp_59.99_365_3', cm: 'sja' },
-  'PicLoom': { id: 'com.efsoft.picloom_nc_lifetime', cm: 'sjc' },
-  'Color%20Widgets': { Ent: 'pro', id: 'cw_1999_1y_3d0', cm: 'sja' },
-  'ChatBot': { Ent: 'chatbot_annual', id: 'chatbot_annual', cm: 'sja' },
-  'ASKAI': { Ent: 'pro', id: 'askai_pro', Entb: 'pro_plan', idb: 'token_pro_plan', cm: 'sjb' },
-  'Infltr': { Ent: 'com.Yooshr.infltr.subscriptionPremium', id: 'com.Yooshr.infltr.everythingForever', cm: 'sja' },
+  'ChatGPT': { name: 'premium', id: 'com.prod.gpt.1y40', cm: 'sja' },  //ChatGPT
+  'Video%20Up!': { name: 'Full_access_app', id: 'app.videoup.videoup.na.base.one_year', cm: 'sja' },  //Video Up!
+  '%E9%85%B7%E6%8B%8D': { name: 'Premium', id: 'com.wallpapershub.anime.premiumCategories', cm: 'sja' },
+  'Jellycuts': { name: 'pro', id: 'com.zlineman.Jellyfish.tier.5.pro', cm: 'sja' },  //Jellycuts
+  'Dream': { name: 'premium', id: 'artx_yearly_option_2', cm: 'sja' },  //Dream
+  'World%20Clock': { name: 'pro', id: 'dream_yearly_jan_2024_3999', cm: 'sja' },  //World Clock
+  'MorningAlarm': { name: 'morning_premium', id: 'alarmify.yearly.1', cm: 'sja' },  //MorningAlarm
+  'Genius%20AI': { name: 'premium', id: 'genius_lifetime_59', cm: 'sjb' },  //Genius AI
+  'Vocai-iOS': { name: 'AI Pro', id: 'vocabAI_900_1m', cm: 'sja' },  //Vocai-iOS
+  'PixImagine': { id: 'com.efsoft.piximagine_nc_lifetime', cm: 'sjc' },  //PixImagine
+  '1Blocker': { name: 'premium', id: 'blocker.ios.iap.lifetime', cm: 'sjb' },  //1Blocker
+  'VidCap': { name: 'io.fadel.vidcap.pro', id: 'subs.vcp_59.99_365_3', cm: 'sja' },  //VidCap
+  'Color%20Widgets': { name: 'pro', id: 'cw_1999_1y_3d0', cm: 'sja' },  //Color Widgets
+  'ChatBot': { name: 'chatbot_annual', id: 'chatbot_annual', cm: 'sja' },  //ChatBot
+  'ASKAI': { name: 'pro', id: 'askai_pro', nameb: 'pro_plan', idb: 'token_pro_plan', cm: 'sjb' },  //ASKAI
+  'Infltr': { name: 'com.Yooshr.infltr.subscriptionPremium', id: 'com.Yooshr.infltr.everythingForever', cm: 'sja' },  //Infltr
   'Darkroom': { name: 'co.bergen.Darkroom.entitlement.allToolsAndFilters', id: 'co.bergen.Darkroom.product.forever.everything', nameb: 'co.bergen.Darkroom.entitlement.selectiveAdjustments', idb: 'co.bergen.Darkroom.product.forever.everything', cm: 'sja' },  //Spark_Mail-邮箱管理
   'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus', cm: 'sja' },  //Currency-汇率查询
   'Spark': { name: 'premium', id: 'spark_5999_1y_1w0', nameb: 'premium', idb: 'spark_openai_tokens_4xt', cm: 'sja' },  //Spark_Mail-邮箱管理
@@ -92,7 +85,7 @@ const list = {
   'ShellBoxKit': { name: 'ssh_pro', id: 'ShellBoxKit.Year', cm: 'sja' },  //CareServer-服务器监控
   'IDM': { name: 'premium', id: 'sub_yearly_idm', cm: 'sja' },  //IDM-下载
   'Whisper': { name: 'all_features', id: 'whisperai_80_y', cm: 'sja' },  //Whisper
-  'PhotoRoom': { Ent: 'business', id: 'com.background.business.yearly', cm: 'sja' },  //PhotoRoom
+  'PhotoRoom': { name: 'business', id: 'com.background.business.yearly', cm: 'sja' },  //PhotoRoom
   'TouchRetouchBasic': { name: 'premium', id: 'tr5_yearlysubsc_30_and_20_dlrs', cm: 'sja' },  //TouchRetouch-水印清理
   'Drops': { name: 'premium', id: 'forever_unlimited_time_discounted_80_int', cm: 'sjb' },  //Drops外语
   'UTC': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.subscription.month', cm: 'sja' },  //花样文字
