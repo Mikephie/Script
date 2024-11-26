@@ -214,7 +214,7 @@ Replica-屏幕镜像 = type=http-response,pattern=^https?:\/\/api\.apphud\.com\/
 
 #************************************#
 # 让我喵喵
-# hostname = api.apphud.com
+# hostname = www.pdreamer.com
 Replica-屏幕镜像 = type=http-response,pattern=^https?:\/\/api\.apphud\.com\/v1\/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/replica.js
 
 #************************************#
