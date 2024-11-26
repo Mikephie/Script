@@ -198,18 +198,6 @@ notebook = type=http-response, pattern=^https:\/\/notebook\.zoho\.com\/api\/v1\/
 perfect365video = type=http-response, pattern=^https?:\/\/video-svr\.perfect365\.com\/video\/P365Video\/services, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/perfect365video.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# PikPak （永久会员）
-# hostname = api-drive.mypikpak.com
-#VIP Info
-#pikpak-vip = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/vip\/info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vip.js, requires-body=true, max-size=-1, timeout=60
-#VIP Subs
-#pikpak-sub = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/allSubscriptionStatus, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-sub.js, requires-body=true, max-size=-1, timeout=60
-#VIP Drive Info
-#pikpak-vipdrive = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/vip\/v1\/space\/list\?type=space, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-vipdrive.js, requires-body=true, max-size=-1, timeout=60
-# Non-VIP Drive Info
-#pikpak-drive = type=http-response, pattern=^https:\/\/api-drive\.mypikpak\.com\/drive\/v1\/(about\?|about\?space=), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pikpak-drive.js, requires-body=true, max-size=-1, timeout=60
-
-#************************************#
 # PPT大师（永久会员）
 # hostname = pptdashi.kuoliang.cn
 PPT大师 = type=http-response, pattern=^https:\/\/pptdashi\.kuoliang\.cn\/package\/ppt\/get(All|Random)\?.*, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pptds.js, requires-body=true, max-size=-1, timeout=60
