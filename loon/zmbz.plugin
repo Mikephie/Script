@@ -4,8 +4,8 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/zmbz.png
 
 [Script]
-http-response ^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account? script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, timeout=60, tag=bizhi
+http-response ^https:\/\/api\.fzxhmy\.com\/(?:unique\/(?:backgrounds|landinginitialize|division\/material)|image\/fetch|avatar\/landing|background\/overview|member\/details|creator\/newcomers|np\/overview|intelligence\/user\/appreciate\/ids\?|user\/points\?) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zmbz.js, requires-body=true, timeout=60, tag=zmbz
 
 
 [MITM]
-hostname = leancloud.emotionwp.com
+hostname = api.fzxhmy.com
