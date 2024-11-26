@@ -266,7 +266,7 @@ zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\
 #************************************#
 # 作业批改-家长辅导作业工具（永久会员） V2.1.1 @GieGie777
 # hostname = appss.rhinoxlab.com
-zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, max-size=-1, timeout=60
+zmbz = type=http-response, pattern=^https:\/\/api\.fzxhmy\.com\/(?:unique\/(?:backgrounds|landinginitialize|division\/material)|image\/fetch|avatar\/landing|background\/overview|member\/details|creator\/newcomers|np\/overview|intelligence\/user\/appreciate\/ids\?|user\/points\?), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zmbz.js, requires-body=true, max-size=-1, timeout=60
 
 
 [MITM]
