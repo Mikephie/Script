@@ -26,6 +26,7 @@ try {
 
     if ($request.url.includes("/getAccountInfo")) {
         // 修改或添加字段
+        obj.result.headImg = "https://i.ibb.co/f1cgnGT/IMG-1215.jpg"; // 设置用户大头照
         obj.result.type = "VIP"; // 设置用户类型为 VIP
         obj.result.freeFlag = "YES"; // 设置为免费用户
         obj.result.vipExpireTime = "2088-08-08 08:08:08"; // 设置 VIP 到期时间
