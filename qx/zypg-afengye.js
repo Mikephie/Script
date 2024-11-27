@@ -24,14 +24,6 @@ try {
     let obj = JSON.parse(aFengYe);
 
     if (/\/app\/account\/getAccountInfo/.test($request.url)) {
-        // 修改或添加字段
-        obj.result.type = "VIP"; // 设置用户类型为 VIP
-        obj.result.freeFlag = "YES"; // 设置为免费用户
-        obj.result.vipExpireTime = "2088-08-08 08:08:08"; // 设置 VIP 到期时间
-        obj.result.vipExpireDays = 99999999; // 设置 VIP 剩余天数
-        obj.result.remainTimeSeconds = 99999; // 设置剩余秒数
-        obj.result.times = 77777777; // 设置时间统计字段
-
         // 确保 vipGroupInfos 存在并添加内容
         obj.result.vipGroupInfos = [
             {
