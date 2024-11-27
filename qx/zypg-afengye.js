@@ -17,7 +17,7 @@ hostname = appss.rhinoxlab.com
 
 *******************************/
 
-//修改范例
+//*修改范例
 {
   "success": true,
   "result": {
@@ -40,7 +40,7 @@ hostname = appss.rhinoxlab.com
   "timeOut": false
 }
 
-//
+//*
 
 let mikephie = $response.body;
 
