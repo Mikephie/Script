@@ -21,8 +21,7 @@ var mikephie = JSON.parse($response.body);
 mikephie.result = {
   ...mikephie.result,
   "headImg": "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
-  "appleUserEmail": "mikephiemy@gmail.com",
-  "wordage": 7777777,
+  "wordage": 88888888,
   "mobile": "Mikephie",
   "vipGroupInfos": [
     {
@@ -35,8 +34,7 @@ mikephie.result = {
   "vipExpireTime": "2088-08-08 08:08:08",
   "vipExpireDays": 88888888,
   "nickname": "Mikephie",
-  "email": "888@gmail.com",
-  "remainTimeSeconds": 99999,
+  "remainTimeSeconds": 888888,
   "times": 88888888
 };
 
