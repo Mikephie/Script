@@ -19,6 +19,8 @@ if($request.url.indexOf("/app/account/getAccountInfo") != -1) {
     obj.result.freeFlag = "YES";
     obj.result.headImg = "https://i.ibb.co/f1cgnGT/IMG-1215.jpg";
     obj.result.mobile = "Mikephie";
+    obj.result.vipExpireDays = "99999999";
+    obj.result.vipExpireTime = "2088-08-08 08:08:08";
     obj.result.vipGroupInfos = [
        {
         "groupType" : "TYPE_ONE",
