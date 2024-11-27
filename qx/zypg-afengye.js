@@ -16,7 +16,7 @@
 hostname = appss.rhinoxlab.com
 
 *******************************/
-
+if (url.includes("/getAccountInfo")) {
 
 let mikephie = $response.body;
 
@@ -24,7 +24,7 @@ try {
     // 解析响应体为 JSON 对象
     let obj = JSON.parse(mikephie);
 
-    if (/\/app\/account\/getAccountInfo/.test($request.url)) {
+    if (url.includes("/getAccountInfo")) {
         // 修改或添加字段
         obj.result.type = "VIP"; // 设置用户类型为 VIP
         obj.result.wordage = "88888888888"; // 设置用户类型为 VIP
