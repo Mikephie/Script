@@ -3,8 +3,7 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/zypg.png
 
-[Script]
-http-response https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, timeout=60, tag=zypg
+http-response ^https?:\/\/appss.rhinoxlab.com\/ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.jss, requires-body=true, timeout=60, tag=zypg
 
 
 [MITM]
