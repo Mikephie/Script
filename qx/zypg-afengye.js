@@ -9,7 +9,8 @@
 
 [rewrite_local]
 # >作业批改-家长辅导作业工具（永久会员）
-https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg-afengye.js
+作业工具（永久会员）
+^https:\/\/appss\.rhinoxlab\.com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg-afengye.js
 
 [mitm] 
 hostname = appss.rhinoxlab.com
