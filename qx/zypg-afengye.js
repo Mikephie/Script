@@ -20,19 +20,19 @@ hostname = appss.rhinoxlab.com
 let aFengYe = $response.body;
 
 try {
-    // 解析 JSON 响应体
+    // 解析响应体为 JSON 对象
     let obj = JSON.parse(aFengYe);
 
     if (/\/app\/account\/getAccountInfo/.test($request.url)) {
-        // 修改字段或添加新内容
-        obj.result.type = "VIP"; // 修改用户类型为 VIP
-        obj.result.freeFlag = "YES"; // 修改为免费用户
-        obj.result.vipExpireTime = "2088-08-08 08:08:08"; // 添加 VIP 到期时间
-        obj.result.vipExpireDays = 99999999; // 添加 VIP 剩余天数
-        obj.result.remainTimeSeconds = 99999; // 添加剩余时间
-        obj.result.times = 77777777; // 添加使用次数统计
+        // 修改或添加字段
+        obj.result.type = "VIP"; // 设置用户类型为 VIP
+        obj.result.freeFlag = "YES"; // 设置为免费用户
+        obj.result.vipExpireTime = "2088-08-08 08:08:08"; // 设置 VIP 到期时间
+        obj.result.vipExpireDays = 99999999; // 设置 VIP 剩余天数
+        obj.result.remainTimeSeconds = 99999; // 设置剩余秒数
+        obj.result.times = 77777777; // 设置时间统计字段
 
-        // 修改 vipGroupInfos 数组
+        // 确保 vipGroupInfos 存在并添加内容
         obj.result.vipGroupInfos = [
             {
                 "groupType": "TYPE_ONE",
@@ -42,11 +42,11 @@ try {
         ];
     }
 
-    // 将修改后的对象重新转换为字符串
+    // 将修改后的 JSON 对象转换回字符串
     aFengYe = JSON.stringify(obj);
 } catch (error) {
-    console.log("Error modifying JSON:", error);
+    console.log("Error modifying response:", error);
 }
 
 // 返回修改后的响应体
-$done(aFengYe);
+$done({ body: aFengYe });
