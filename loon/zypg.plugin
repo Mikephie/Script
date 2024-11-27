@@ -5,7 +5,7 @@
 
 [Script]
 # >作业批改-家长辅导作业工具（永久会员）
-http-response https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, timeout=60, tag=zypg
+http-response ^https?:\/\/appss.rhinoxlab.com\/ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, timeout=60, tag=zypg
 
 [MITM]
 hostname = appss.rhinoxlab.com
