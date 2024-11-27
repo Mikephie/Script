@@ -17,27 +17,29 @@ hostname = appss.rhinoxlab.com
 
 *******************************/
 
-var mikephie = JSON.parse($response.body);
+let aFengYe = $response.body;
 
-if ($request.url.indexOf("/app/account/getAccountInfo") != -1) {    
-mikephie.result = {
-  ...mikephie.result,
-  "headImg": "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
-  "wordage": 88888888,
-  "mobile": "Mikephie",
-  "vipGroupInfos": [
-    {
-      "groupType": "TYPE_ONE",
-      "vipType": "VIP",
-      "autoPay": "NO"
+try {
+    // 确保响应体是有效 JSON
+    let obj = JSON.parse(aFengYe);
+
+    if (/\/app\/account\/getAccountInfo/.test($request.url)) {
+        obj.result.type = "VIP";
+        obj.result.freeFlag = "YES";
+        obj.result.vipGroupInfos = [
+            {
+                groupType: "TYPE_ONE",
+                vipType: "VIP",
+                autoPay: "YES"
+            }
+        ];
     }
-  ],
-  "type": "VIP",
-  "vipExpireTime": "2088-08-08 08:08:08",
-  "vipExpireDays": 88888888,
-  "nickname": "Mikephie",
-  "remainTimeSeconds": 888888,
-  "times": 88888888
-};
 
-$done({body: JSON.stringify(mikephie)});
+    // 返回修改后的 JSON
+    aFengYe = JSON.stringify(obj);
+} catch (error) {
+    console.log("Error parsing JSON:", error);
+}
+
+// 完成响应修改
+$done(aFengYe);
