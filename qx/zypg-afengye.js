@@ -24,17 +24,10 @@ hostname = appss.rhinoxlab.com
     "wechatNickname": "Mikephie SG",
     "freeFlag": "NO",
     "wordage": 0,
-    "inviteCode": "qre9r7LB",
     "vipGroupInfos": [
     ],
     "type": "NORMAL",
-    "times": 0,
-    "dataId": "10173268592619634970",
-    "registerTime": "2024-11-27 13:38:46",
-    "nickname": "Mikephie SG",
     "remainTimeSeconds": 0,
-    "headImg": "https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/Q3auHgzwzM4Y04QRGLYMe8YjJgWlUQmQNtfv2AkETFQevfHtw0xQUJSAGoXFCVkgMWsSI11woPQQXFffibAnS8W5SzjgAI976\/132",
-    "realnameStatus": "NO"
   },
   "returnCode": "200",
   "timeOut": false
