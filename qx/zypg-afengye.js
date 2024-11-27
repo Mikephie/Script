@@ -24,22 +24,27 @@ try {
     let obj = JSON.parse(aFengYe);
 
     if (/\/app\/account\/getAccountInfo/.test($request.url)) {
-        // 添加新的字段或数据到响应体
-        obj.result = {
+        // 修改或新增需要的字段
+        obj.result.type = "VIP"; // 修改会员类型
+        obj.result.vipExpireTime = "2088-08-08 08:08:08"; // 设置过期时间
+        obj.result.vipExpireDays = 99999999; // 设置会员剩余天数
+        obj.result.remainTimeSeconds = 99999; // 设置剩余秒数
+        obj.result.times = 77777777; // 时间统计
+
+        // 修改 vipGroupInfos 数组内容
         obj.result.vipGroupInfos = [
             {
                 "groupType": "TYPE_ONE",
                 "vipType": "VIP",
                 "autoPay": "YES" // 改为自动续费
-                }
-            ]
-        };
+            }
+        ];
     }
 
-    // 转换为字符串，供响应体返回
+    // 将修改后的 JSON 转回字符串
     aFengYe = JSON.stringify(obj);
 } catch (error) {
-    console.log("Error parsing JSON:", error);
+    console.log("Error parsing or modifying JSON:", error);
 }
 
 // 返回修改后的响应体
