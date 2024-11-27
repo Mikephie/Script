@@ -9,7 +9,7 @@
 
 [rewrite_local]
 # >作业批改-家长辅导作业工具（永久会员）
-^https:\/\/appss\.rhinoxlab\.com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg-afengye.js
+https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg-afengye.js
 
 [mitm] 
 hostname = appss.rhinoxlab.com
@@ -21,11 +21,9 @@ var mikephie = JSON.parse($response.body);
 mikephie.result = {
   ...mikephie.result,
   "headImg": "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
-  "dataId": "00000000000000000000",
   "appleUserEmail": "mikephiemy@gmail.com",
   "wordage": 7777777,
   "mobile": "Mikephie",
-  "inviteCode": "000000",
   "vipGroupInfos": [
     {
       "groupType": "TYPE_ONE",
@@ -35,13 +33,11 @@ mikephie.result = {
   ],
   "type": "VIP",
   "vipExpireTime": "2088-08-08 08:08:08",
-  "vipExpireDays": 99999999,
-  "registerTime": "2022-09-09 03:20:32",
+  "vipExpireDays": 88888888,
   "nickname": "Mikephie",
-  "email": "mikephiemy@gmail.com",
+  "email": "888@gmail.com",
   "remainTimeSeconds": 99999,
-  "realnameStatus": "NO",
-  "times": 77777777
+  "times": 88888888
 };
 
 $done({body: JSON.stringify(mikephie)});
