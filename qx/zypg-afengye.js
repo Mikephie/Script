@@ -18,7 +18,7 @@ hostname = appss.rhinoxlab.com
 
 var mikephie = JSON.parse($response.body);
 
-mikephie.result = {
+if ($request.url.indexOf("/app/account/getAccountInfo") != -1) {    mikephie.result = {
   ...mikephie.result,
   "headImg": "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
   "wordage": 88888888,
