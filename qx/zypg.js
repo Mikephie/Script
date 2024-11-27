@@ -9,8 +9,7 @@
 
 [rewrite_local]
 # >作业批改-家长辅导作业工具（永久会员）
-作业工具（永久会员）
-^https?:\/\/appss.rhinoxlab.com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js
+https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js
 
 [mitm] 
 hostname = appss.rhinoxlab.com
@@ -20,7 +19,6 @@ hostname = appss.rhinoxlab.com
 
 let mikephie = JSON.parse($response.body);
 
-if ($request.url.includes("/getVipInfo")) {
     Object.assign(mikephie.result, {
         headImg: "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",                  // 更新或添加字段
         type: "VIP",                  // 更新或添加字段
