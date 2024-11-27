@@ -14,6 +14,17 @@ https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo url script-response
 [mitm] 
 hostname = appss.rhinoxlab.com
 
+if($request.url.indexOf("/app/account/getAccountInfo") != -1) {
+    obj.result.type = "VIP";
+    obj.result.freeFlag = "YES";
+    obj.result.vipGroupInfos = [
+       {
+        "groupType" : "TYPE_ONE",
+        "vipType" : "VIP",
+        "autoPay" : "YES"
+      }
+    ];
+}
 *******************************/
 
 
