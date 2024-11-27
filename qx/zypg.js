@@ -18,10 +18,11 @@ hostname = appss.rhinoxlab.com
 *******************************/
 
 
-let aFengYe = JSON.parse($response.body);
+let mikephie = JSON.parse($response.body);
 
 if ($request.url.includes("/getVipInfo")) {
-    Object.assign(aFengYe.result, {
+    Object.assign(mikephie.result, {
+        headImg: "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",                  // 更新或添加字段
         type: "VIP",                  // 更新或添加字段
         freeFlag: "YES",              // 更新或添加字段
         vipExpireTime: "2088-08-08 08:08:08", // 更新或添加字段
@@ -38,4 +39,4 @@ if ($request.url.includes("/getVipInfo")) {
     });
 }
 
-$done({ body: JSON.stringify(aFengYe) });
+$done({ body: JSON.stringify(mikephie) });
