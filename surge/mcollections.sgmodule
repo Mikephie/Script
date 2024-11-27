@@ -266,7 +266,7 @@ wshb2 = type=http-response, pattern=^https?:\/\/api-poster\.ycase\.cn\/api\/User
 #************************************#
 # 作业批改-家长辅导作业工具（永久会员） V2.1.1 @GieGie777
 # hostname = appss.rhinoxlab.com
-zypg = type=http-response, pattern=https?:\/\/appss.rhinoxlab.com\/, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, max-size=-1, timeout=60
+zypg = type=http-response, pattern=^https?:\/\/appss.rhinoxlab.com\/, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 最美壁纸（永久会员）
