@@ -16,7 +16,6 @@
 hostname = appss.rhinoxlab.com
 
 *******************************/
-if (url.includes("/getAccountInfo")) {
 
 let mikephie = $response.body;
 
