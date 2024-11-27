@@ -17,6 +17,8 @@ hostname = appss.rhinoxlab.com
 if($request.url.indexOf("/app/account/getAccountInfo") != -1) {
     obj.result.type = "VIP";
     obj.result.freeFlag = "YES";
+    obj.result.headImg = "https://i.ibb.co/f1cgnGT/IMG-1215.jpg";
+    obj.result.mobile = "Mikephie";
     obj.result.vipGroupInfos = [
        {
         "groupType" : "TYPE_ONE",
