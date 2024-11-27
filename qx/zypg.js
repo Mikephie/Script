@@ -9,59 +9,48 @@
 
 [rewrite_local]
 # >作业批改-家长辅导作业工具（永久会员）
-https?:\/\/appss.rhinoxlab.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js
+作业工具（永久会员）
+^https?:\/\/appss.rhinoxlab.com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg-afengye.js
 
 [mitm] 
 hostname = appss.rhinoxlab.com
 
-if($request.url.indexOf("/app/account/getAccountInfo") != -1) {
-    obj.result.type = "VIP";
-    obj.result.freeFlag = "YES";
-    obj.result.headImg = "https://i.ibb.co/f1cgnGT/IMG-1215.jpg";
-    obj.result.mobile = "Mikephie";
-    obj.result.vipExpireDays = "99999999";
-    obj.result.vipExpireTime = "2088-08-08 08:08:08";
-    obj.result.vipGroupInfos = [
-       {
-        "groupType" : "TYPE_ONE",
-        "vipType" : "VIP",
-        "autoPay" : "YES"
-      }
-    ];
-}
 *******************************/
 
 
-var mikephie = JSON.parse($response.body);
+let mikephie = $response.body;
 
-    mikephie = {
-  "success" : true,
-  "result" : {
-    "headImg" : "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
-    "dataId" : "00000000000000000000",
-    "appleUserEmail" : "mikephiemy@gmail.com",
-    "wordage" : 7777777,
-    "mobile" : "Mikephie",
-    "inviteCode" : "000000",
-    "vipGroupInfos" : [
-      {
-        "groupType" : "TYPE_ONE",
-        "vipType" : "VIP",
-        "autoPay" : "NO"
-      }
-    ],
-    "type" : "VIP", 
-    "vipExpireTime" : "2088-08-08 08:08:08",
-    "vipExpireDays" : 99999999,
-    "registerTime" : "2022-09-09 03:20:32",
-    "nickname" : "Mikephie",
-    "email" : "mikephiemy@gmail.com",
-    "remainTimeSeconds" : 99999,
-    "realnameStatus" : "NO",
-    "times" : 77777777
-  },
-  "returnCode" : "200",
-  "timeOut" : false
+try {
+    // 解析响应体为 JSON 对象
+    let obj = JSON.parse(mikephie);
+
+    if (/\/app\/account\/getAccountInfo/.test($request.url)) {
+        // 修改或添加字段
+        obj.result.type = "VIP"; // 设置用户类型为 VIP
+        obj.result.wordage = "88888888888"; // 设置用户类型为 VIP
+        obj.result.freeFlag = "YES"; // 设置为免费用户
+        obj.result.vipExpireTime = "2088-08-08 08:08:08"; // 设置 VIP 到期时间
+        obj.result.vipExpireDays = 88888; // 设置 VIP 剩余天数
+        obj.result.remainTimeSeconds = 88888888888; // 设置剩余秒数
+        obj.result.times = 88888888888; // 设置时间统计字段
+        obj.result.email = "888@gmail.com"; // 设置用户类型为 VIP
+        obj.result.appleUserEmail = "888@gmail.com"; // 设置为免费用户
+
+        // 确保 vipGroupInfos 存在并添加内容
+        obj.result.vipGroupInfos = [
+            {
+                "groupType": "TYPE_ONE",
+                "vipType": "VIP",
+                "autoPay": "YES"
+            }
+        ];
+    }
+
+    // 将修改后的 JSON 对象转换回字符串
+    mikephie = JSON.stringify(obj);
+} catch (error) {
+    console.log("Error modifying response:", error);
 }
 
-$done({body : JSON.stringify(mikephie)});
+// 返回修改后的响应体
+$done({ body: mikephie });
