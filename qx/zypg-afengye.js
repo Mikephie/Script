@@ -20,26 +20,30 @@ hostname = appss.rhinoxlab.com
 let aFengYe = $response.body;
 
 try {
-    // 确保响应体是有效 JSON
+    // 确保响应体是 JSON 格式
     let obj = JSON.parse(aFengYe);
 
     if (/\/app\/account\/getAccountInfo/.test($request.url)) {
-        obj.result.type = "VIP";
-        obj.result.freeFlag = "YES";
-        obj.result.vipGroupInfos = [
-            {
-                groupType: "TYPE_ONE",
-                vipType: "VIP",
-                autoPay: "YES"
-            }
-        ];
+        // 添加新的字段或数据到响应体
+        obj.result = {
+            ...obj.result, // 保留原有的内容
+            type: "VIP",  // 添加或覆盖新的字段
+            freeFlag: "YES",
+            vipGroupInfos: [
+                {
+                    groupType: "TYPE_ONE",
+                    vipType: "VIP",
+                    autoPay: "YES"
+                }
+            ]
+        };
     }
 
-    // 返回修改后的 JSON
+    // 转换为字符串，供响应体返回
     aFengYe = JSON.stringify(obj);
 } catch (error) {
     console.log("Error parsing JSON:", error);
 }
 
-// 完成响应修改
+// 返回修改后的响应体
 $done(aFengYe);
