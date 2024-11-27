@@ -26,14 +26,11 @@ try {
     if (/\/app\/account\/getAccountInfo/.test($request.url)) {
         // 添加新的字段或数据到响应体
         obj.result = {
-            ...obj.result, // 保留原有的内容
-            type: "VIP",  // 添加或覆盖新的字段
-            freeFlag: "YES",
-            vipGroupInfos: [
-                {
-                    groupType: "TYPE_ONE",
-                    vipType: "VIP",
-                    autoPay: "YES"
+        obj.result.vipGroupInfos = [
+            {
+                "groupType": "TYPE_ONE",
+                "vipType": "VIP",
+                "autoPay": "YES" // 改为自动续费
                 }
             ]
         };
