@@ -14,7 +14,7 @@
 
 [mitm] 
 hostname = appss.rhinoxlab.com
-getAccountInfo
+
 *******************************/
 
 
@@ -24,7 +24,7 @@ try {
     // 解析响应体为 JSON 对象
     let obj = JSON.parse(mikephie);
 
-    if (/\/app\/account\/getAccountInfo？/.test($request.url)) {
+    if ($request.url.includes("getAccountInfo")) {
         // 修改或添加字段
         obj.result.type = "VIP"; // 设置用户类型为 VIP
         obj.result.freeFlag = "YES"; // 设置为免费用户
