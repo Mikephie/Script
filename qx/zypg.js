@@ -18,26 +18,37 @@ hostname = appss.rhinoxlab.com
 *******************************/
 
 
-let mikephie = JSON.parse($response.body);
+let mikephie = $response.body;
 
-if ($request.url.includes("/getAccountInfo")) {
-    Object.assign(mikephie.result, {
-        headImg: "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",                  // 更新或添加字段
-        wordage: 7777777,              // 更新或添加字段
-        type: "VIP",                  // 更新或添加字段
-        freeFlag: "YES",              // 更新或添加字段
-        vipExpireTime: "2088-08-08 08:08:08", // 更新或添加字段
-        vipExpireDays: 99999999,      // 更新或添加字段
-        remainTimeSeconds: 99999,     // 更新或添加字段
-        times: 77777777,              // 更新或添加字段
-        vipGroupInfos: [              // 更新数组
+try {
+    // 解析响应体为 JSON 对象
+    let obj = JSON.parse(mikephie);
+
+    if ($request.url.includes("/getAccountInfo")) {
+        // 修改或添加字段
+        obj.result.headImg = "https://i.ibb.co/f1cgnGT/IMG-1215.jpg"; // 设置用户大头照
+        obj.result.type = "VIP"; // 设置用户类型为 VIP
+        obj.result.freeFlag = "YES"; // 设置为免费用户
+        obj.result.vipExpireTime = "2088-08-08 08:08:08"; // 设置 VIP 到期时间
+        obj.result.vipExpireDays = 88888888; // 设置 VIP 剩余天数
+        obj.result.remainTimeSeconds = 88888; // 设置剩余秒数
+        obj.result.times = 88888888; // 设置时间统计字段
+
+        // 确保 vipGroupInfos 存在并添加内容
+        obj.result.vipGroupInfos = [
             {
-                groupType: "TYPE_ONE",
-                vipType: "VIP",
-                autoPay: "YES"
+                "groupType": "TYPE_ONE",
+                "vipType": "VIP",
+                "autoPay": "YES"
             }
-        ]
-    });
+        ];
+    }
+
+    // 将修改后的 JSON 对象转换回字符串
+    mikephie = JSON.stringify(obj);
+} catch (error) {
+    console.log("Error modifying response:", error);
 }
 
-$done({ body: JSON.stringify(mikephie) });
+// 返回修改后的响应体
+$done({ body: mikephie });
