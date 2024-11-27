@@ -15,8 +15,6 @@
 [mitm] 
 hostname = appss.rhinoxlab.com
 
-*******************************/
-
 //*修改范例
 {
   "success": true,
@@ -32,8 +30,10 @@ hostname = appss.rhinoxlab.com
   "returnCode": "200",
   "timeOut": false
 }
+//*修改范例
 
-//*
+*******************************/
+
 
 let mikephie = $response.body;
 
