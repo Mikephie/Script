@@ -26,15 +26,18 @@ try {
 
     if (/\/app\/account\/getAccountInfo/.test($request.url)) {
         // 修改或添加字段
+        obj.result.headImg = "https://i.ibb.co/f1cgnGT/IMG-1215.jpg"; // 设置用户类型为 VIP
         obj.result.type = "VIP"; // 设置用户类型为 VIP
-        obj.result.wordage = "88888888888"; // 设置用户类型为 VIP
+        obj.result.wordage = 88888888888; // 设置时间统计字段
         obj.result.freeFlag = "YES"; // 设置为免费用户
         obj.result.vipExpireTime = "2088-08-08 08:08:08"; // 设置 VIP 到期时间
-        obj.result.vipExpireDays = 88888; // 设置 VIP 剩余天数
+        obj.result.vipExpireDays = 88888888; // 设置 VIP 剩余天数
         obj.result.remainTimeSeconds = 88888888888; // 设置剩余秒数
         obj.result.times = 88888888888; // 设置时间统计字段
         obj.result.email = "888@gmail.com"; // 设置用户类型为 VIP
         obj.result.appleUserEmail = "888@gmail.com"; // 设置为免费用户
+        obj.result.mobile = "Mikephie"; // 设置时间统计字段
+        obj.result.nickname = "Mikephie"; // 设置用户类型为 VIP
 
         // 确保 vipGroupInfos 存在并添加内容
         obj.result.vipGroupInfos = [
