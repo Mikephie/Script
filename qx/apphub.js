@@ -4,8 +4,8 @@
 下载地址：https://t.cn/A6m7WeMH
 下载地址：https://t.cn/A6WlGNDi
 更新日期：2024-11-24
-脚本作者：chxm1023
-电报频道：https://t.me/chxm1023
+脚本作者：mikephie
+电报频道：https://t.me/mikephie
 使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
@@ -19,7 +19,7 @@ hostname = *.apphud.com
 *************************************/
 
 
-const chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
+const mikephie = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
 
 const list = [
   "one.time.prremium",
@@ -49,7 +49,7 @@ const createSubscription = (productId = "one.time.prremium") => {
     "in_retry_billing": false,
     "started_at": "2024-11-11T11:11:11.000Z",
     "original_transaction_id": "490001314520000",
-    "expires_at": "2099-09-09T09:09:09.000Z",
+    "expires_at": "2088-08-08T08:08:08.000Z",
     "is_consumable": null
   };
 };
@@ -70,21 +70,21 @@ const processPaywalls = (paywalls) => {
   return subscriptions;
 };
 
-if (!chxm1023.data) chxm1023.data = {};
-if (!chxm1023.data.results) chxm1023.data.results = {};
-if (!Array.isArray(chxm1023.data.results.subscriptions)) {
-  chxm1023.data.results.subscriptions = [];
+if (!mikephie.data) mikephie.data = {};
+if (!mikephie.data.results) mikephie.data.results = {};
+if (!Array.isArray(mikephie.data.results.subscriptions)) {
+  mikephie.data.results.subscriptions = [];
 }
 
-if (chxm1023.data.results.paywalls) {
-  const subscriptions = processPaywalls(chxm1023.data.results.paywalls);
+if (mikephie.data.results.paywalls) {
+  const subscriptions = processPaywalls(mikephie.data.results.paywalls);
   if (subscriptions.length > 0) {
-    chxm1023.data.results.subscriptions.push(...subscriptions);
+    mikephie.data.results.subscriptions.push(...subscriptions);
   }
 }
 
 for (const productId of list) {
-  chxm1023.data.results.subscriptions.push(createSubscription(productId));
+  mikephie.data.results.subscriptions.push(createSubscription(productId));
 }
 
-$done({ body: JSON.stringify(chxm1023) });
+$done({ body: JSON.stringify(mikephie) });
