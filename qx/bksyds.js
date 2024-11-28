@@ -26,7 +26,7 @@ if ($request.url.includes("/auth/member")) {
     Object.assign(mikephie.result, {
         isVip: 1,      // 更新或添加字段
         vipTime: "2088-08-08 08:08:08"      // 更新或添加字段
-        uid: 3742762088000,      // 更新或添加字段
+        uid: "C4957375-2D67-4728-B3E1-2696A3DFA5C8",      // 更新或添加字段
         memberExpire: 3742762088000,      // 更新或添加字段
     });
 }
