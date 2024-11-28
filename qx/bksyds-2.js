@@ -15,23 +15,14 @@ hostname = photoby.hasmash.com
 
 *******************************/
 
+
 let mikephie = JSON.parse($response.body);
 
 if ($request.url.includes("/auth/member")) {
-    // 删除 deviceId 字段（如果存在）
-    if (mikephie.result && mikephie.result.hasOwnProperty('deviceId')) {
-        delete mikephie.result.deviceId;
-    }
-    
     Object.assign(mikephie.result, {
         memberExpire: 3742762088000,      // 更新或添加字段
-    });
+        });
 } else if ($request.url.includes("/clickEvent")) {
-    // 删除 deviceId 字段（如果存在）
-    if (mikephie.result && mikephie.result.hasOwnProperty('deviceId')) {
-        delete mikephie.result.deviceId;
-    }
-    
     Object.assign(mikephie.result, {
         isVip: 1,      // 更新或添加字段
         vipTime: "2088-08-08 08:08:08"      // 更新或添加字段
