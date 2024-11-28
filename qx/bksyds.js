@@ -21,6 +21,7 @@ if ($request.url.includes("/auth/member")) {
     Object.assign(mikephie.result, {
         memberExpire: 3742762088000,      // 更新或添加字段
         uid: "f7d62252b11144ee8193f85fa95fcf0b",      // 更新添加
+        uid: "f7d62252b11144ee8193f85fa95fcf0b",      // 更新添加
         });
 } else if ($request.url.includes("/clickEvent")) {
     Object.assign(mikephie.result, {
