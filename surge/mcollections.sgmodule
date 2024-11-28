@@ -26,6 +26,11 @@
 {{{adapty}}} = type=http-response, pattern=^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adapty.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# AppHub解锁系列
+# hostname = api.adapty.io
+{{{adapty}}} = type=http-response, pattern=^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adapty.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # 66Ringtones 抖抖去水印（ kkyun组合-永久会员 ）
 # hostname = kkyun.com
 kkyun = type=http-response, pattern=^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kkyun.js, requires-body=true, max-size=-1, timeout=60
