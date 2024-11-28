@@ -427,7 +427,7 @@ if (!anchor) {
   mikephie["latest_receipt_info"] = data;
   mikephie["pending_renewal_info"] = [{ "product_id": yearlyid, "original_transaction_id": "300002066031506", "auto_renew_product_id": yearlyid, "auto_renew_status": "1" }];
   mikephie["latest_receipt"] = "mikephie";
-  console.log('很遗憾未能识别出UA或bundle_id\n但已使用备用方案操作成功🎉🎉🎉\n叮当猫の分享频道: https://t.me/mikephie');
+  console.log('很遗憾未能识别出UA或bundle_id\n但已使用备用方案操作成功🎉🎉🎉\nMIKEPHIEの分享频道: https://t.me/mikephie');
 }
 
 mikephie["Telegram"] = "https://t.me/mikephie";
