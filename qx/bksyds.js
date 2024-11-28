@@ -21,8 +21,7 @@ let mikephie = JSON.parse($response.body);
 if ($request.url.includes("/auth/member")) {
     Object.assign(mikephie.result, {
         memberExpire: 3742762088000,      // 更新或添加字段
-        phone: "15546907888"      // 更新或添加字段
-    });
+        });
 } else if ($request.url.includes("/clickEvent")) {
     Object.assign(mikephie.result, {
         isVip: 1,      // 更新或添加字段
