@@ -22,11 +22,13 @@ hostname = *.apphud.com
 const mikephie = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
 
 const list = [
-  "one.time.prremium",
-  "ok.annual.sub",
-  "AFMS",
-  "com.tm.replica.lifetime",
-  "Plant_1w_7.99_3d"
+  "1year7days80",  //Bright
+  "com.movavi.clips.lifetime",  //Movavi
+  "ok.annual.sub",  //BodyOK
+  "AFMS",  //WatchFace表盘商店
+  "com.tm.replica.lifetime",  //Replica
+  "Plant_1w_7.99_3d",  //PlantMe
+  "one.time.premium"
 ];
 
 const createSubscription = (productId = "one.time.prremium") => {
