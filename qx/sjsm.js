@@ -21,7 +21,7 @@ let mikephie = JSON.parse($response.body);
 
 if ($request.url.includes("/getAccountInfo")) {
     Object.assign(mikephie.result, {
-        headImg: "https://s2.loli.net/2024/11/28/YNFB6W9zfoq4OCM.png",                  // 更新或添加字段
+        headImg: "https://s2.loli.net/2024/11/28/8Opsc25JQgdUNK1.png",                  // 更新或添加字段
         type: "VIP",                          // 更新或添加字段
         freeFlag: "YES",                       // 更新或添加字段
         wordage: 8888888888,                  // 更新或添加字段
