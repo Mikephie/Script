@@ -4,7 +4,7 @@
 #!category=🔐APP
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/heji.gif
 #!arguments=revenuecat1:revenuecat1,revenuecat2:revenuecat2,iTunes:iTunes,reserve:reserve
-#!arguments-desc=[参数设置]\n1 revenuecat1,[脚本]\n2 revenuecat2,[响应头]\n3 iTunes,[脚本]\n4 Adapty,[脚本]
+#!arguments-desc=[参数设置]\n1 revenuecat1,[脚本]\n2 revenuecat2,[响应头]\n3 iTunes,[脚本]\n4 Adapty,[脚本],[脚本]\n5 AppHub,[脚本]
 
 
 [Script]
@@ -28,7 +28,7 @@
 #************************************#
 # AppHub解锁系列
 # hostname = *.apphud.com
-{{{adapty}}} = type=http-response, pattern=^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adapty.js, requires-body=true, max-size=-1, timeout=60
+{{{apphub}}} = type=http-response, pattern=^https?:\/\/.*\.apphud\.com\/v\d\/(subscriptions|customers)$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/apphub.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 66Ringtones 抖抖去水印（ kkyun组合-永久会员 ）
