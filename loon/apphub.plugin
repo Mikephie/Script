@@ -1,0 +1,10 @@
+#!name = AppHub🔐APP解锁
+#!desc = AppHub解锁系列 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/adapty.png
+
+[Script]
+http-response ^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adapty.js, requires-body=true, tag=Adapty解锁系列
+
+[MITM]
+hostname = api.adapty.io
