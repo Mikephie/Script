@@ -35,6 +35,8 @@ if ($request.url.includes("/wpf_account?")) {
             vipEndTime: 3742761600,        // 添加字段
             vipEndTimeFormat: "2088-08-08", // 添加字段
             headImageUrl: "https://i.ibb.co/wM5z10N/IMG-1287.jpg" // 添加字段
+            objectId: "6559d56eb87b3b5ada6602a7", // 添加字段
+            userId: "000213.21970f036fd0454a99d29d8cebe086cd" // 添加字段
         });
     }); // 这里添加了缺失的右大括号
 }
