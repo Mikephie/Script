@@ -11,7 +11,7 @@ let mikephie = JSON.parse($response.body);
 
 [rewrite_local]
 # > 壁纸 - 精选高清墙纸图片和背景主题Vip&Svip
-^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
+^https?:\/\/leancloud.emotionwp.com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
 
 [mitm] 
 hostname = leancloud.emotionwp.com
@@ -20,7 +20,7 @@ hostname = leancloud.emotionwp.com
 
 let mikephie = JSON.parse($response.body);
 
-if ($request.url.includes("/getVipInfo")) {
+if ($request.url.includes("/wpf_account?")) {
     Object.assign(mikephie.result, {
         nickName: "Mikephie",          // 添加字段
         isSVIP: 1,                     // 添加字段
