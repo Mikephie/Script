@@ -28,9 +28,9 @@ if ($request.url.includes("/getAccountInfo")) {
         email: "888@gmail.com",              // 更新或添加字段
         vipExpireTime: "2088-08-08 08:08:08", // 更新或添加字段
         vipExpireDays: 8888888888,           // 更新或添加字段
-        remainTimeSeconds: 8888888,     // 更新或添加字段
-        times: 8888888888,              // 更新或添加字段
-        vipGroupInfos: [              // 更新数组
+        remainTimeSeconds: 8888888,          // 更新或添加字段
+        times: 8888888888,                  // 更新或添加字段
+        vipGroupInfos: [                     // 更新数组
             {
                 groupType: "TYPE_ONE",
                 vipType: "VIP",
