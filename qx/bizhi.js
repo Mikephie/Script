@@ -14,9 +14,10 @@ if ($request.url.includes("/wpf_account?")) {
         nickName: "Mikephie",      // 更新或添加字段
         svipType: "year_pro",      // 更新或添加字段
         isVip: 1,      // 更新或添加字段
-        vipEndTime: 3742762088000,      // 更新或添加字段
-        memberExpire: 3742762088000,      // 更新或添加字段
-        memberExpire: 3742762088000,      // 更新或添加字段
+        vipEndTime: 3742761600,      // 更新或添加字段
+        vipType: "year_pro",      // 更新或添加字段
+        svipEndTimeFormat: "2088-08-08",      // 更新或添加字段
+        vipEndTime: 3742761600,      // 更新或添加字段
     });
 } else if ($request.url.includes("/clickEvent")) {
     Object.assign(mikephie.result, {
