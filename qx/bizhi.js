@@ -7,6 +7,26 @@
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
+let mikephie = JSON.parse($response.body);
+
+if ($request.url.includes("/wpf_account?")) {
+    Object.assign(mikephie.result, {
+        nickName: "Mikephie",      // 更新或添加字段
+        svipType: "year_pro",      // 更新或添加字段
+        isVip: 1,      // 更新或添加字段
+        vipEndTime: 3742762088000,      // 更新或添加字段
+        memberExpire: 3742762088000,      // 更新或添加字段
+        memberExpire: 3742762088000,      // 更新或添加字段
+    });
+} else if ($request.url.includes("/clickEvent")) {
+    Object.assign(mikephie.result, {
+        isVip: 1,      // 更新或添加字段
+        vipTime: "2088-08-08 08:08:08"      // 更新或添加字段
+    });
+}
+
+$done({ body: JSON.stringify(mikephie) });
+
 [rewrite_local]
 # > 壁纸 - 精选高清墙纸图片和背景主题Vip&Svip
 ^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
@@ -15,7 +35,7 @@
 hostname = leancloud.emotionwp.com
 
 *******************************/
- 
+
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
