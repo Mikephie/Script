@@ -18,7 +18,6 @@ hostname = leancloud.emotionwp.com
 
 *******************************/
 
-
 let mikephie = JSON.parse($response.body);
 
 if ($request.url.includes("/getVipInfo")) {
