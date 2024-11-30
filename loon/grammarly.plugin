@@ -1,7 +1,7 @@
 ﻿#!name = Grammarly🔐APP解锁
 #!desc = 输入法 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/grammarly.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/grammarly.png
 
 [Script]
 http-response ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrammarlyPremiumCrack.js,requires-body=1,tag=Grammarly解锁订阅
