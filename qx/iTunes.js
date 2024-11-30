@@ -40,7 +40,7 @@ const lifetimeid = `${bundle_id}.lifetime`;
 const list = {
   
 // Mikephie 自用 
-  '%E6%88%90%E8%AA%9E%E7%8C%9C%E7%8C%9C': { cm: 'timea', hx: 'hxpda', id: "AIchat_1w_7.99_trial", latest: "mikephie" },  //AIAssistant
+  '%E6%88%90%E8%AA%9E%E7%8C%9C%E7%8C%9C': { cm: 'timea', hx: 'hxpda', id: "com.agedstudio.word.puzzle.chengyucaicai.yearly", latest: "mikephie" },  //成语猜猜
   'Cam Translator': { cm: 'timed', hx: 'hxpda', id: "co.vulcanlabs.pictranslator.lifetime", ids: "co.vulcanlabs.pictranslator.offlinelifetime1", latest: "mikephie" },  //Cam Translator
   'VLLO': { cm: 'timea', hx: 'hxpda', id: "com.vimosoft.vllo.premium3.annually_subscription", latest: "mikephie" },  //VLLO
   'com.casttv.remotetv': { cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "mikephie" }, //TVRemote电视遥控器
