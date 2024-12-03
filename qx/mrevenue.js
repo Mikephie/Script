@@ -18,6 +18,10 @@ hostname = api.revenuecat.com
 
 *************************************/
 
+// 自定义常量
+const EXPIRES_DATE = "2088-08-08T08:08:08Z";
+const PURCHASE_DATE = "2024-04-04T04:04:04Z";
+const TRANSACTION_ID = "300002119104362";
 
 const mikephie8 = {};
 const headers = $request.headers;
