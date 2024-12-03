@@ -347,40 +347,76 @@ const list = {
   'VSCO': { name: 'pro', id: 'vscopro_global_5999_annual_7D_free', cm: 'sja' }  //VSCO-照片与视频编辑编辑
 };
 
-if (typeof $response == "undefined") {
-  delete headers["x-revenuecat-etag"];
-  delete headers["X-RevenueCat-ETag"];
-  mikephie8.headers = headers;
+if (typeof $response === "undefined") {
+    // 删除请求头
+    delete headers["x-revenuecat-etag"];
+    delete headers["X-RevenueCat-ETag"];
+    mikephie8.headers = headers;
+    console.log('已操作成功🎉🎉🎉\nMIKEPHIEの分享频道: https://t.me/mikephie');
+    $done(mikephie8);
 } else if (mikephie && mikephie.subscriber) {
-  mikephie.subscriber.subscriptions = mikephie.subscriber.subscriptions || {};
-  mikephie.subscriber.entitlements = mikephie.subscriber.entitlements || {};
-  let name,nameb,ids,idb,data;
-  for (const src of [list, bundle]) {
-    for (const i in src) {
-      const test = src === list ? ua : bundle_id;
-      if (new RegExp(`^${i}`, `i`).test(test)) {
-      if (src[i].cm.indexOf('sja') != -1) { data = {  "purchase_date" : "2024-04-04T04:04:04Z",  "expires_date" : "2088-08-08T08:08:08Z" };  } else if (src[i].cm.indexOf('sjb') != -1) { data = {  "purchase_date" : "2024-04-04T04:04:04Z" }; }
-      ids = src[i].id;name = src[i].name;idb = src[i].idb;nameb = src[i].nameb;
-      break;
-      }
-    }
-  }
-  if (!name || !ids) {
-    data = {  "purchase_date" : "2024-04-04T04:04:04Z",  "expires_date" : "2088-08-08T08:08:08Z" };
-    name = 'pro';
-    ids = 'com.mikephie.pro';
-  }
-  mikephie.subscriber.entitlements[name] = Object.assign({}, data, { product_identifier: ids });
-  if (typeof nameb !== 'undefined' && nameb !== null) {
-    mikephie.subscriber.entitlements[nameb] = Object.assign({}, data, { product_identifier: idb });
-  }
-  const subData = Object.assign({},data,{  "Author": "mikephie",  "Telegram": "https://t.me/mikephie",  "warning": "仅供学习，禁止转载或售卖",  "original_purchase_date": "2024-04-04T04:04:04Z",  "store": "app_store",  "ownership_type": "PURCHASED"  });
-  mikephie.subscriber.subscriptions[ids] = subData;
-  if (typeof idb !== 'undefined' && idb !== null) {
-    mikephie.subscriber.subscriptions[idb] = subData;
-  }
-  mikephie8.body = JSON.stringify(mikephie);
-  console.log('已操作成功🎉🎉🎉\n叮当猫の分享频道: https://t.me/mikephie');
-}
+    // 初始化权限和订阅信息
+    mikephie.subscriber.subscriptions = mikephie.subscriber.subscriptions || {};
+    mikephie.subscriber.entitlements = mikephie.subscriber.entitlements || {};
 
-$done(mikephie8);
+    // 时间和订阅数据模板
+    const timea = {
+        "purchase_date": PURCHASE_DATE,
+        "expires_date": EXPIRES_DATE
+    };
+
+    const timeb = {
+        "original_purchase_date": PURCHASE_DATE,
+        "is_sandbox": false,
+        "store_transaction_id": TRANSACTION_ID,
+        "store": "app_store",
+        "ownership_type": "PURCHASED"
+    };
+
+    // 用于存储匹配到的订阅信息
+    let name, ids, nameb, idb, data;
+
+    // 遍历 list 和 bundle 匹配
+    for (const src of [list, bundle]) {
+        for (const i in src) {
+            const test = src === list ? ua : bundle_id;
+            if (new RegExp(`^${i}`, `i`).test(test)) {
+                if (src[i].cm.indexOf('sja') !== -1) {
+                    data = timea;
+                } else if (src[i].cm.indexOf('sjb') !== -1) {
+                    data = { "purchase_date": PURCHASE_DATE };
+                }
+
+                // 记录匹配的订阅信息
+                ids = src[i].id;
+                name = src[i].name;
+                idb = src[i].idb;
+                nameb = src[i].nameb;
+                break;
+            }
+        }
+        if (ids) break;
+    }
+
+    // 如果没有匹配到，则设置默认值
+    if (!name || !ids) {
+        data = timea;
+        name = "pro";
+        ids = "com.mikephie.pro";
+    }
+
+    // 更新权限和订阅信息
+    mikephie.subscriber.entitlements[name] = Object.assign({}, data, { product_identifier: ids });
+    mikephie.subscriber.subscriptions[ids] = Object.assign({}, data, timeb);
+
+    // 如果存在备用订阅信息，继续添加
+    if (idb && nameb) {
+        mikephie.subscriber.entitlements[nameb] = Object.assign({}, data, { product_identifier: idb });
+        mikephie.subscriber.subscriptions[idb] = Object.assign({}, data, timeb);
+    }
+
+    // 返回处理后的数据
+    mikephie8.body = JSON.stringify(mikephie);
+    console.log('已操作成功🎉🎉🎉\nMIKEPHIEの分享频道: https://t.me/mikephie');
+    $done(mikephie8);
+}
