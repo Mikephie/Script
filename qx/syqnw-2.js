@@ -8,7 +8,7 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https:\/\/waterqnwa\.yunxiaoguo\.cn\/user\/info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/syqnw.js
+^https:\/\/waterqnwa\.yunxiaoguo\.cn\/user\/info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/syqnw-2.js
 
 [mitm] 
 hostname = waterqnwa.yunxiaoguo.cn
