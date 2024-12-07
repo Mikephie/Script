@@ -3,7 +3,7 @@
 项目名称：snow多合一
 下载地址：https://t.cn/A6m7WeMH
 下载地址：https://t.cn/A6WlGNDi
-更新日期：2024-11-24
+更新日期：2024-12-06
 脚本作者：mikephie
 电报频道：https://t.me/mikephie
 使用声明：⚠️仅供参考，🈲转载与售卖！
