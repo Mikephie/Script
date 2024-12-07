@@ -86,7 +86,12 @@ const list = {
   'com.alphamobiletech.facey': { cm: 'timeb', hx: 'hxpda', id: "Facey_Forever", latest: "mikephie" }, //Facey-专业彩妆P图神器
 
 
-// 来自叮当猫 
+// 来自叮当猫
+  'com.cuilingshi.flipclock': { cm: 'timeb', hx: 'hxpda', id: "FlipClockProVersion", latest: "mikephie" },  //翻页时钟
+  'com.maine.aifill': { cm: 'timeb', hx: 'hxpda', id: "com.maine.aifill.unlimited", latest: "mikephie" },  //AI FILL-智能填充.换衣/换背景
+  'DeviceFinder': { cm: 'timeb', hx: 'hxpda', id: "com.wonderfind.lifetime", latest: "mikephie" },  //Wonderfind-设备查找
+  'Graphionica': { cm: 'timea', hx: 'hxpda', id: "premium_year", latest: "mikephie" },  //Graphionica-限时动态拼版图片
+  'AIAssistant': { cm: 'timea', hx: 'hxpda', id: "AIchat_1w_7.99_trial", latest: "mikephie" },  //AIAssistant
   'MonitorPlus': { cm: 'timeb', hx: 'hxpda', id: "com.unhonin.MonitorPlus.proversion", latest: "mikephie" },  //Monitor+
   'MessageHold': { cm: 'timeb', hx: 'hxpda', id: "com.messagehold.forever", latest: "mikephie" },  //拦截盾
   'co.vulcanlabs': { cm: 'timeb', hx: 'hxpda', id: lifetimeid, latest: "mikephie" },  //vulcanlabs合集
