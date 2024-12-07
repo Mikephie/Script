@@ -1,12 +1,13 @@
 #!name = DreamFace🔐APP解锁
 #!desc = 视频编辑 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/dreamface.png
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/dualsub.png
 
 
 [Script]
-http-response ^https?:\/\/dreamfaceapp\.com\/df-server\/user\/save_user_login script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/dreamface.js , requires-body=true, timeout=60, tag=DreamFace
+http-response ^http.+(media.(dss|star)ott|manifests.v2.api.hbo|hbomaxcdn|nflxvideo|cbs(aa|i)video|cloudfront|akamaihd|avi-cdn|huluim|youtube).(com|net)\/(.+\.vtt($|\?m=\d+)|.+-all-.+\.m3u8.*|hls\.m3u8.+|\?o=\d+&v=\d+&e=.+|\w+\/2\$.+\/[a-zA-Z0-9-]+\.m3u8|api\/timedtext.+) script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Dualsub.js, requires-body=true, timeout=30, tag=Dualsub
 
+http-request ^http.+(setting|general).(media.dssott|hbomaxcdn|nflxvideo|youtube|cbsivideo|cloudfront|huluim).(com|net)\/\?action=(g|s)et script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/dualsub.js, requires-body=true, tag=Dualsub-setting
 
 [MITM]
-hostname = dreamfaceapp.com
+hostname = *.media.dssott.com, *.media.starott.com, *.api.hbo.com, *.hbomaxcdn.com, *.huluim.com, *.nflxvideo.net, *.cbsaavideo.com, *.cbsivideo.com, *.cloudfront.net, *.akamaihd.net, *.avi-cdn.net, *.youtube.com
