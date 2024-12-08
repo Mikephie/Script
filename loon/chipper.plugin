@@ -1,0 +1,11 @@
+#!name = Aloha 游览器🔐APP解锁
+#!desc = 工作效率 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/aloha.png
+
+[Script]
+http-response ^https:\/\/api\.alohaprofile\.com\/v1\/profile_info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js, requires-body=true, timeout=60, tag=aloha
+
+
+[MITM]
+hostname = api.alohaprofile.com
