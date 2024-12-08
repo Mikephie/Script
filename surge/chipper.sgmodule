@@ -1,17 +1,14 @@
 #!name=Chipper辅助V3_🔐APP
-#!desc=Chipper辅助V3
+#!desc=1.邮箱过人脸 2.强制USDT入金
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon=https://www.revenuecat.com/icons/icon-512x512.png
-#!homepage=https://github.com/leey668
-#!date=2024-04-11 00:00:00
 
 [Script]
 # 展示入金界面
-usdt=type=http-response,pattern=^https:\/\/api\.chippercash\.com\/v1\/users\/accounts\/configuration, script-path=https://raw.githubusercontent.com/Argun-Team/Script/main/ChipperCash/Surge/js/showUSDXDeposits.js, requires-body=1
+usdt=type=http-response,pattern=^https:\/\/api\.chippercash\.com\/v1\/users\/accounts\/configuration, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/showUSDXDeposits.js, requires-body=1
 
 # 邮箱验证人脸
-frozen=type=http-response,pattern=https://compliance.chippercash.com/account/configuration, script-path=https://raw.githubusercontent.com/Argun-Team/Script/main/ChipperCash/Surge/js/skipFrozen.js, requires-body=1
+frozen=type=http-response,pattern=https://compliance.chippercash.com/account/configuration, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/skipFrozen.js, requires-body=1
 
 [MITM]
 hostname = %APPEND% api.chippercash.com, compliance.chippercash.com
