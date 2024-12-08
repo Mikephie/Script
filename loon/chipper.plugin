@@ -4,8 +4,11 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/chipper.png
 
 [Script]
-http-response ^https:\/\/api\.alohaprofile\.com\/v1\/profile_info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js, requires-body=true, timeout=60, tag=aloha
+# 展示入金界面
+http-response ^https:\/\/api\.chippercash\.com\/v1\/users\/accounts\/configuration script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/showUSDXDeposits.js, requires-body=true, tag=usdt
 
+# 邮箱验证人脸
+http-response https://compliance.chippercash.com/account/configuration script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/skipFrozen.js, requires-body=true, tag=frozen
 
 [MITM]
-hostname = api.alohaprofile.com
+hostname = api.chippercash.com, compliance.chippercash.com
