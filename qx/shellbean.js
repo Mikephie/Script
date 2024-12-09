@@ -19,50 +19,73 @@ hostname = leancloud.emotionwp.com
 var mikephie = JSON.parse($response.body);
 
     mikephie = {
-  "results": [
-    {
-      "nickName": "Mikephie",
-      "svipType": "year_pro",
-      "isVIP": 1,
-      "sex": "1",
-      "vipEndTime": 3742761600,
-      "favCount": 0,
-      "createdAt": "2023-11-19T09:29:18.937Z",
-      "vipType": "year_pro",
-      "svipEndTimeFormat": "2088-08-08",
-      "svipEndTime": 3742761600,
-      "updatedAt": "2024-08-18T01:00:30.990Z",
-      "loginType": 3,
-      "downloadCount": 5,
-      "objectId": "6559d56eb87b3b5ada6602a7",
-      "coin": 88888888,
-      "vipEndTimeFormat": "1970-01-01",
-      "warmStartCount": 5,
-      "isSVIP": 1,
-      "coldStartCount": 0,
-      "headImageUrl": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
-      "userId": "000213.21970f036fd0454a99d29d8cebe086cd.0929"
+  "request_date_ms": 1733785212661,
+  "request_date": "2024-12-09T23:00:12Z",
+  "subscriber": {
+    "non_subscriptions": {
+      "com.ningle.shellbean.iap.forever.discount": [
+        {
+          "id": "96390b26b7",
+          "is_sandbox": false,
+          "purchase_date": "2024-11-30T16:48:50Z",
+          "original_purchase_date": "2024-11-30T16:48:50Z",
+          "store": "app_store",
+          "store_transaction_id": "300002119104362"
+        }
+      ]
     },
-    {
-      "coin": 0,
-      "updatedAt": "2023-11-19T09:35:30.531Z",
-      "vipEndTime": 0,
-      "sex": "1",
-      "isSVIP": 0,
-      "favCount": 0,
-      "warmStartCount": 0,
-      "userId": "000213.21970f036fd0454a99d29d8cebe086cd.0929",
-      "loginType": 3,
-      "nickName": "壁纸用户",
-      "isVIP": 0,
-      "headImageUrl": "http://emotion.emotionwp.com/profile_head.png",
-      "downloadCount": 0,
-      "objectId": "6559d6e271280637ee6efd63",
-      "createdAt": "2023-11-19T09:35:30.531Z",
-      "svipEndTime": 0,
-      "coldStartCount": 0
-    }
-  ]
+    "first_seen": "2024-03-17T03:01:57Z",
+    "original_application_version": "43",
+    "other_purchases": {
+      "com.ningle.shellbean.iap.forever.discount": {
+        "purchase_date": "2024-11-30T16:48:50Z"
+      }
+    },
+    "management_url": null,
+    "subscriptions": {
+      "com.ningle.shellbean.subscription.year": {
+        "original_purchase_date": "2024-05-19T02:15:35Z",
+        "expires_date": "2024-05-26T02:15:34Z",
+        "is_sandbox": false,
+        "refunded_at": null,
+        "store_transaction_id": "150001791442057",
+        "unsubscribe_detected_at": "2024-05-19T02:31:40Z",
+        "grace_period_expires_date": null,
+        "period_type": "trial",
+        "purchase_date": "2024-05-19T02:15:34Z",
+        "billing_issues_detected_at": null,
+        "ownership_type": "PURCHASED",
+        "store": "app_store",
+        "auto_resume_date": null
+      },
+      "com.ningle.shellbean.subscription.year.discount": {
+        "original_purchase_date": "2024-12-02T05:28:20Z",
+        "expires_date": "2024-12-09T05:28:19Z",
+        "is_sandbox": false,
+        "refunded_at": null,
+        "store_transaction_id": "560001761275550",
+        "unsubscribe_detected_at": "2024-12-02T05:31:34Z",
+        "grace_period_expires_date": null,
+        "period_type": "trial",
+        "purchase_date": "2024-12-02T05:28:19Z",
+        "billing_issues_detected_at": null,
+        "ownership_type": "PURCHASED",
+        "store": "app_store",
+        "auto_resume_date": null
+      }
+    },
+    "entitlements": {
+      "pro": {
+        "grace_period_expires_date": null,
+        "purchase_date": "2024-11-30T16:48:50Z",
+        "product_identifier": "com.ningle.shellbean.iap.forever.discount",
+        "expires_date": null
+      }
+    },
+    "original_purchase_date": "2024-02-10T13:20:52Z",
+    "original_app_user_id": "$RCAnonymousID:a934d2fe4499460f8fbc47f246056381",
+    "last_seen": "2024-12-09T00:05:09Z"
+  }
 }
 
 $done({body : JSON.stringify(mikephie)});
