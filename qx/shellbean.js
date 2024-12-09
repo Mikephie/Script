@@ -1,5 +1,5 @@
 /*        
-        ➪：脚本名称: 精选高清墙纸图片 （永久会员）
+        ➪：脚本名称: Shellbean （永久会员）
 
         ★：解锁永久🆅🅸🅿
 
@@ -8,11 +8,11 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-# > 壁纸 - 精选高清墙纸图片和背景主题Vip&Svip
-^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
 
-[mitm] 
-hostname = leancloud.emotionwp.com
+[mitm]
+hostname = api.revenuecat.com
 
 *******************************/
  
