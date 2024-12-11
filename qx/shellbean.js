@@ -58,21 +58,6 @@ var mikephie = JSON.parse($response.body);
         "store": "app_store",
         "auto_resume_date": null
       },
-      "com.ningle.shellbean.subscription.year.discount": {
-        "original_purchase_date": "2024-12-02T05:28:20Z",
-        "expires_date": "2024-12-09T05:28:19Z",
-        "is_sandbox": false,
-        "refunded_at": null,
-        "store_transaction_id": "560001761275550",
-        "unsubscribe_detected_at": "2024-12-02T05:31:34Z",
-        "grace_period_expires_date": null,
-        "period_type": "trial",
-        "purchase_date": "2024-12-02T05:28:19Z",
-        "billing_issues_detected_at": null,
-        "ownership_type": "PURCHASED",
-        "store": "app_store",
-        "auto_resume_date": null
-      }
     },
     "entitlements": {
       "pro": {
