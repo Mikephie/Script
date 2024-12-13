@@ -84,7 +84,7 @@ const list = {
   'Infltr': { name: 'com.Yooshr.infltr.subscriptionPremium', id: 'com.Yooshr.infltr.everythingForever', cm: 'sja' },  //Infltr
   'Darkroom': { name: 'co.bergen.Darkroom.entitlement.allToolsAndFilters', id: 'co.bergen.Darkroom.product.forever.everything', nameb: 'co.bergen.Darkroom.entitlement.selectiveAdjustments', idb: 'co.bergen.Darkroom.product.forever.everything', cm: 'sja' },  //Spark_Mail-邮箱管理
   'Currency': { name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.plus', cm: 'sja' },  //Currency-汇率查询
-  'Spark': { name: 'premium', id: 'spark_5999_1y_1w0', nameb: 'premium', cm: 'sja' },  //Spark_Mail-邮箱管理
+  'Spark': { name: 'premium', id: 'spark_5999_1y_1w0', cm: 'sja' },  //Spark_Mail-邮箱管理
   'ChatLLM': { name: 'Pro', id: 'com.curiouscreatorsco.ChatLLM.pro.lifetime.notrial.150_00', cm: 'sjb' },  //AItText
   'Photomator': { name: 'pixelmator_photo_pro_access', id: 'pixelmator_photo_lifetime_v1', cm: 'sjb' },  //Photomator
   'CountDuck': { name: 'premium', id: 'Lifetime', cm: 'sjb' },  //倒数鸭
