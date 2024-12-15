@@ -7,7 +7,7 @@
 
 
 [rewrite_local]
-^https:\/\/dcdnposter\.leminet\.cn\/ url script-response-body https://raw.githubusercontent.com/afengye/QX/main/haibao.js
+^https:\/\/dcdnposter\.leminet\.cn\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/postermaker.js
 
 
 [mitm] 
