@@ -12,7 +12,7 @@
 ^https?:\/\/appss.baomingding.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/cdsp.js
 
 [mitm] 
-hostname = appss.baomingding.com
+hostname = %APPEND% api.revenuecat.com
 
 *******************************/
 
