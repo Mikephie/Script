@@ -1,8 +1,6 @@
-#!name = Revenuecat_entitlement_mapping
+#!name = Revenuecat_CatMapping
 #!desc = 获取 revenuecat 会员信息
-#!openUrl = 
-#!author = @leepyer
-#!homepage = https://github.com/leey668
+#!author = @Mikephie
 #!icon = https://www.revenuecat.com/icons/icon-512x512.png
 #!date = 2024-04-11 00:00:00
 
