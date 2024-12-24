@@ -12,7 +12,7 @@
 *******************************
 [rewrite_local]
 # >配音师-文字转语音助手 Unlock VIP+配音课
-^http:\/\/(dubbing.csweimei.cn\/course\/GetCourseInfo?|music.dreamyin.cn\/Svip\/SVIP_Existence.aspx) url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/peiyinshi.js
+^http:\/\/(dubbing.csweimei.cn\/course\/GetCourseInfo?|music.dreamyin.cn\/Svip\/SVIP_Existence.aspx) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/peiyinshi.js
 
 
 [mitm]
