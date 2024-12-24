@@ -20,49 +20,125 @@ hostname = *.kuwo.cn
 ******************************************/
  
 
-let obj = JSON.parse($response.body || "{}");
-const url = $request.url;
+function Env(name, opts) {
+  class Http {
+    constructor(env) {
+      this.env = env;
+    }
 
-if (url.includes("mobi.s?f=kwxs")) {
-    let data = JSON.parse(obj.data);
-    obj.data = JSON.stringify(data);
-}
+    send(opts, method = 'GET') {
+      opts = typeof opts === 'string' ? { url: opts } : opts;
+      let sender = this.get;
+      if (method === 'POST') {
+        sender = this.post;
+      }
+      return new Promise((resolve, reject) => {
+        sender.call(this, opts, (err, resp, body) => {
+          if (err) reject(err);
+          else resolve(resp);
+        });
+      });
+    }
 
-if (url.includes("vip/enc")) {
-    obj = {
-        "result": 0,
-        "serverDuration": 16,
-        "data": {
-            "uid": "1",
-            "vipstatus": 1,
-            "expiration": "4030910885",
-            "vipType": 3,
-            "isyearvip": 1
-        }
-    };
-}
+    get(opts) {
+      return this.send.call(this.env, opts);
+    }
 
-if (url.includes("vip/v2/theme")) {
-    obj.data.vipTheme = null;
-}
+    post(opts) {
+      return this.send.call(this.env, opts, 'POST');
+    }
+  }
 
-if (url.includes("playright") || url.includes("downright") || url.includes("policytype")) {
-    let body = $response.body;
-    body = body.replace(/"playright":\d+/g, '"playright":1');
-    body = body.replace(/"downright":\d+/g, '"downright":1');
-    body = body.replace(/"policytype":\d+/g, '"policytype":3');
-    body = body.replace(/"policy":\d+/g, '"policy":5');
-    obj = JSON.parse(body);
-}
+  return new (class {
+    constructor(name, opts) {
+      this.name = name;
+      this.http = new Http(this);
+      this.data = null;
+      this.dataFile = 'box.dat';
+      this.logs = [];
+      this.isMute = false;
+      this.isNeedRewrite = false;
+      this.logSeparator = '\n';
+      this.startTime = new Date().getTime();
+      Object.assign(this, opts);
+      this.log('', `🔔${this.name}, 开始!`);
+    }
 
-if (url.includes("pay/user/info")) {
-    obj.data = {
-        "end": 4030910885,
-        "bought_vip": 1,
-        "type": 1,
-        "period": 31,
-        "bought_vip_end": 4030910885
-    };
-}
+    isNode() {
+      return 'undefined' !== typeof module && !!module.exports;
+    }
 
-$done({body: JSON.stringify(obj)});
+    isQuanX() {
+      return 'undefined' !== typeof $task;
+    }
+
+    isSurge() {
+      return 'undefined' !== typeof $httpClient && 'undefined' === typeof $loon;
+    }
+
+    isLoon() {
+      return 'undefined' !== typeof $loon;
+    }
+
+    isShadowrocket() {
+      return 'undefined' !== typeof $rocket;
+    }
+
+    toObj(str, defaultValue = null) {
+      try {
+        return JSON.parse(str);
+      } catch {
+        return defaultValue;
+      }
+    }
+
+    toStr(obj, defaultValue = null) {
+      try {
+        return JSON.stringify(obj);
+      } catch {
+        return defaultValue;
+      }
+    }
+
+    getjson(key, defaultValue) {
+      let json = defaultValue;
+      const val = this.getdata(key);
+      if (val) {
+        try {
+          json = JSON.parse(this.getdata(key));
+        } catch {}
+      }
+      return json;
+    }
+
+    setjson(val, key) {
+      try {
+        return this.setdata(JSON.stringify(val), key);
+      } catch {
+        return false;
+      }
+    }
+
+    getScript(url) {
+      return new Promise((resolve) => {
+        this.get({ url }, (err, resp, body) => resolve(body));
+      });
+    }
+
+    runScript(script, runOpts) {
+      return new Promise((resolve) => {
+        let httpApi = this.getdata('@chavy_boxjs_userCfgs.httpApi');
+        httpApi = httpApi ? httpApi.replace(/\n/g, '').trim() : httpApi;
+        let httpApi_timeout = this.getdata('@chavy_boxjs_userCfgs.httpApi_timeout');
+        httpApi_timeout = httpApi_timeout ? httpApi_timeout * 1 : 20;
+        httpApi_timeout = runOpts && runOpts.timeout ? runOpts.timeout : httpApi_timeout;
+        const [key, addr] = httpApi.split('@');
+        const opts = {
+          url: `http://${addr}/v1/scripting/evaluate`,
+          body: { script_text: script, mock_type: 'cron', timeout: httpApi_timeout },
+          headers: { 'X-Key': key, 'Accept': '*/*' },
+        };
+        this.post(opts, (err, resp, body) => resolve(body));
+      }).catch((e) => this.logErr(e));
+    }
+ 
