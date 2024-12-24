@@ -22,3 +22,30 @@ hostname =
 *
 */
 
+
+var body = $response.body;
+var url = $request.url;
+
+const SVIP_PATH = "/Svip/SVIP_Existence.aspx";
+const COURSE_PATH = "/course/GetCourseInfo?";
+
+if (typeof body === "string") {
+  if (url.indexOf(COURSE_PATH) !== -1) {
+    body = body.replace(/"isprice":\d/g, '"isprice":0');
+  }
+  
+  var jsonData;
+  try {
+    jsonData = JSON.parse(body);
+    if (url.indexOf(SVIP_PATH) !== -1) {
+      jsonData.Code.SVIP_ID = "One Year Vip";
+      jsonData.Code.Cre_Datetime = "2024-11-11 11:11:11";
+      jsonData.Code.Due_Datetime = "9999-11-11 11:11:11";
+      body = JSON.stringify(jsonData);
+    }
+  } catch (error) {
+    console.log("JSON 解析错误: " + error.message);
+  }
+}
+
+$done({ body: body });
