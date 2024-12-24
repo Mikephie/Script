@@ -141,4 +141,130 @@ function Env(name, opts) {
         this.post(opts, (err, resp, body) => resolve(body));
       }).catch((e) => this.logErr(e));
     }
- 
+    loaddata() {
+      if (this.isNode()) {
+        this.fs = this.fs ? this.fs : require('fs');
+        this.path = this.path ? this.path : require('path');
+        const curDirDataFilePath = this.path.resolve(this.dataFile);
+        const rootDirDataFilePath = this.path.resolve(process.cwd(), this.dataFile);
+        const isCurDirDataFile = this.fs.existsSync(curDirDataFilePath);
+        const isRootDirDataFile = !isCurDirDataFile && this.fs.existsSync(rootDirDataFilePath);
+        if (isCurDirDataFile || isRootDirDataFile) {
+          const datPath = isCurDirDataFile ? curDirDataFilePath : rootDirDataFilePath;
+          try {
+            return JSON.parse(this.fs.readFileSync(datPath));
+          } catch (e) {
+            return {};
+          }
+        } else return {};
+      } else return {};
+    }
+
+    writedata() {
+      if (this.isNode()) {
+        this.fs = this.fs ? this.fs : require('fs');
+        this.path = this.path ? this.path : require('path');
+        const curDirDataFilePath = this.path.resolve(this.dataFile);
+        const rootDirDataFilePath = this.path.resolve(process.cwd(), this.dataFile);
+        const isCurDirDataFile = this.fs.existsSync(curDirDataFilePath);
+        const isRootDirDataFile = !isCurDirDataFile && this.fs.existsSync(rootDirDataFilePath);
+        const jsondata = JSON.stringify(this.data);
+        if (isCurDirDataFile) {
+          this.fs.writeFileSync(curDirDataFilePath, jsondata);
+        } else if (isRootDirDataFile) {
+          this.fs.writeFileSync(rootDirDataFilePath, jsondata);
+        } else {
+          this.fs.writeFileSync(curDirDataFilePath, jsondata);
+        }
+      }
+    }
+
+    lodash_get(source, path, defaultValue = undefined) {
+      const paths = path.replace(/\[(\d+)\]/g, '.$1').split('.');
+      let result = source;
+      for (const p of paths) {
+        result = Object(result)[p];
+        if (result === undefined) {
+          return defaultValue;
+        }
+      }
+      return result;
+    }
+
+    lodash_set(obj, path, value) {
+      if (Object(obj) !== obj) return obj;
+      if (!Array.isArray(path)) path = path.toString().match(/[^.[\]]+/g) || [];
+      path
+        .slice(0, -1)
+        .reduce((a, c, i) => (Object(a[c]) === a[c] ? a[c] : (a[c] = Math.abs(path[i + 1]) >> 0 === +path[i + 1] ? [] : {})), obj)[
+        path[path.length - 1]
+      ] = value;
+      return obj;
+    }
+
+    getdata(key) {
+      let val = this.getval(key);
+      // 如果以 @
+      if (/^@/.test(key)) {
+        const [, objkey, paths] = /^@(.*?)\.(.*?)$/.exec(key);
+        const objval = objkey ? this.getval(objkey) : '';
+        if (objval) {
+          try {
+            const objedval = JSON.parse(objval);
+            val = objedval ? this.lodash_get(objedval, paths, '') : val;
+          } catch (e) {
+            val = '';
+          }
+        }
+      }
+      return val;
+    }
+
+    setdata(val, key) {
+      let issuc = false;
+      if (/^@/.test(key)) {
+        const [, objkey, paths] = /^@(.*?)\.(.*?)$/.exec(key);
+        const objdat = this.getval(objkey);
+        const objval = objkey ? (objdat === 'null' ? null : objdat || '{}') : '{}';
+        try {
+          const objedval = JSON.parse(objval);
+          this.lodash_set(objedval, paths, val);
+          issuc = this.setval(JSON.stringify(objedval), objkey);
+        } catch (e) {
+          const objedval = {};
+          this.lodash_set(objedval, paths, val);
+          issuc = this.setval(JSON.stringify(objedval), objkey);
+        }
+      } else {
+        issuc = this.setval(val, key);
+      }
+      return issuc;
+    }
+
+    getval(key) {
+      if (this.isSurge() || this.isLoon()) {
+        return $persistentStore.read(key);
+      } else if (this.isQuanX()) {
+        return $prefs.valueForKey(key);
+      } else if (this.isNode()) {
+        this.data = this.loaddata();
+        return this.data[key];
+      } else {
+        return (this.data && this.data[key]) || null;
+      }
+    }
+
+    setval(val, key) {
+      if (this.isSurge() || this.isLoon()) {
+        return $persistentStore.write(val, key);
+      } else if (this.isQuanX()) {
+        return $prefs.setValueForKey(val, key);
+      } else if (this.isNode()) {
+        this.data = this.loaddata();
+        this.data[key] = val;
+        this.writedata();
+        return true;
+      } else {
+        return (this.data && this.data[key]) || null;
+      }
+    }
