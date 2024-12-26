@@ -2,22 +2,17 @@
 #!desc = RevenueCat解锁系列 - 插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/revenuecat.png
+[Argument]
+Body = switch,true,tag=是否启用Body脚本
+Header = switch,true,tag=是否启用Header脚本
+cron = input,"5,6",tag=定时任务时间,desc=定时任务的cron表达式
 
 [Script]
 http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/RevenueCat.js, requires-body=true, tag=RevenueCat, argument= {Entitlements} , , enable = {Body}
 
 http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/RevenueCat.js, requires-body=false, tag=RevenueCat, enable = {Header}
 
+cron {cron} script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kuwocoin.js,tag = 酷我音乐金币签到,enable=true
+
 [MITM]
 hostname = api.revenuecat.com
-
-[Argument]
-Body = switch,true,tag=是否启用Body脚本
-Header = switch,true,tag=是否启用Header脚本
-Entitlements = input, "",tag=Entitlements,desc=pro:sub
-cron = input,"",tag=定时任务时间,desc=定时任务的cron表达式
-cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
-
-
-
-cron {cron} script-path=https://raw.githubusercontent.com/Mikephie/Task/main/kuwocoin.js,tag = 酷我音乐金币签到,enable=true
