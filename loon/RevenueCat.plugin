@@ -10,3 +10,7 @@ http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)
 
 [MITM]
 hostname = api.revenuecat.com
+
+[Argument]
+RevenueCatBodyEnable = switch,true,tag=是否启用Body脚本
+RevenueCatHeaderEnable = switch,true,tag=是否启用Header脚本
