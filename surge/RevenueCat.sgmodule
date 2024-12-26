@@ -10,3 +10,4 @@ RevenueCat = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(s
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com
+
