@@ -1,0 +1,3 @@
+RevenueCat = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=RevenueCat.js, requires-body=true, max-size=-1, timeout=60, argument=
+
+RevenueCat = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=RevenueCat.js, requires-body=true, max-size=-1, timeout=60
