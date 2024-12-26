@@ -1,4 +1,4 @@
-#!name=ⓡⓔⓥⓔⓝⓤⓔ 🔐APP
+#!name=ⓇⓔⓥⓔⓝⓤⓔⒸⓐⓣ 🔐APP
 #!desc=APP解锁 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
@@ -10,4 +10,3 @@ RevenueCat = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(s
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com
-
