@@ -198,6 +198,12 @@ class ProductManager {
 
   static PRODUCTS = {
     UA: {
+      'Loopsie': {
+        products: [
+          { entitlement: 'premium', id: 'com.gamelounge.loopsie.ios.one_time', type: 'life', name: 'Loopsie照片编辑' }
+        ],
+        name: 'Loopsie照片编辑'
+      },
       'Art%20Generator': {
         products: [
           { entitlement: 'discount_pro', id: 'artx_yearly_option_2', type: 'sub', name: 'Art Generator' },
