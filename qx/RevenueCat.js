@@ -1,4 +1,202 @@
-static PRODUCTS = {
+// Configuration constants with enhanced type safety and flexibility
+const CONFIG = {
+  DATES: {
+    CURRENT: "2024-04-04T04:04:04Z",
+    FUTURE: "2088-08-08T08:08:08Z"
+  },
+  STORE: {
+    TRANSACTION_ID: "888888888888888",
+    NAME: "app_store"
+  },
+  FORBIDDEN_APPS: ['ShellBean', 'Fileball', 'mizframa', 'chatgpt', 'APTV'],
+  SUBSCRIPTION: {
+    MAX_PRODUCTS: 2,
+    DEFAULT_VERSION: "168",
+    ANONYMOUS_ID_PREFIX: "$RCAnonymousID:MIKEPHIE"
+  }
+};
+
+// Enhanced utility functions with better error handling and logging
+const Utils = {
+  log(...args) {
+    console.log(`[${new Date().toISOString()}]`, ...args);
+  },
+
+  error(...args) {
+    console.error(`[${new Date().toISOString()}] ERROR:`, ...args);
+  },
+
+  parseJSON(str, defaultValue = {}) {
+    if (!str) return defaultValue;
+    try {
+      return JSON.parse(str);
+    } catch (e) {
+      this.error("JSON parse error:", e.message);
+      return defaultValue;
+    }
+  },
+
+  getHeader(headers, key) {
+    if (!headers || typeof headers !== 'object') return "";
+    const normalizedKey = key.toLowerCase();
+    return headers[key] || headers[normalizedKey] || "";
+  },
+
+  sendNotification(title, subtitle, body) {
+    try {
+      if (typeof $notification !== "undefined" && typeof $notification.post === "function") {
+        $notification.post(title, subtitle, body);
+        return true;
+      }
+      this.log("Notification service unavailable");
+      return false;
+    } catch (e) {
+      this.error("Notification error:", e.message);
+      return false;
+    }
+  }
+};
+
+// Enhanced subscription model with validation and type checking
+class SubscriptionModel {
+  static validateType(type) {
+    return ['life', 'annual', 'yearly', 'monthly', 'sub', 'non_subscription'].includes(type) ? type : 'sub';
+  }
+
+  static create(id, type) {
+    const validType = this.validateType(type);
+    const isLifetime = validType === "life";
+    const isNonSubscription = validType === "non_subscription";
+    
+    if (isNonSubscription) {
+      return {
+        id: "96390b26b7",
+        is_sandbox: false,
+        purchase_date: CONFIG.DATES.CURRENT,
+        original_purchase_date: CONFIG.DATES.CURRENT,
+        store: CONFIG.STORE.NAME,
+        store_transaction_id: CONFIG.STORE.TRANSACTION_ID
+      };
+    }
+    
+    return {
+      is_sandbox: false,
+      ownership_type: "PURCHASED",
+      product_identifier: id,
+      expires_date: isLifetime ? null : CONFIG.DATES.FUTURE,
+      original_purchase_date: CONFIG.DATES.CURRENT,
+      store_transaction_id: CONFIG.STORE.TRANSACTION_ID,
+      purchase_date: CONFIG.DATES.CURRENT,
+      store: CONFIG.STORE.NAME,
+      grace_period_expires_date: isLifetime ? null : CONFIG.DATES.FUTURE,
+      period_type: validType
+    };
+  }
+
+  static createEntitlement(id, type) {
+    const validType = this.validateType(type);
+    const isLifetime = validType === "life";
+    const isNonSubscription = validType === "non_subscription";
+    
+    return {
+      expires_date: isLifetime || isNonSubscription ? null : CONFIG.DATES.FUTURE,
+      purchase_date: CONFIG.DATES.CURRENT,
+      product_identifier: id,
+      grace_period_expires_date: isLifetime || isNonSubscription ? null : CONFIG.DATES.FUTURE
+    };
+  }
+}
+
+// New FallbackManager class for enhanced fallback handling
+class FallbackManager {
+  static async parseFallback() {
+    const storedData = await this.loadFromPersistentStore();
+    if (storedData?.data) {
+      Utils.sendNotification(
+        "持久化数据加载成功",
+        "正在筛选订阅",
+        `共匹配了 ${Object.keys(storedData.data).length} 项订阅`
+      );
+      return this.filterAndGenerateOrders(storedData.data);
+    }
+
+    Utils.log("No valid data found. Using default preset.");
+    Utils.sendNotification("数据加载失败", "未找到本地存储数据", "使用默认预设值");
+    return this.generateDefaultOrders();
+  }
+
+  static async loadFromPersistentStore() {
+    Utils.log("Loading data from persistent storage...");
+    try {
+      const rawData = $persistentStore?.read("revenuecat_response_data");
+      return Utils.parseJSON(rawData);
+    } catch (error) {
+      Utils.error("Failed to read persistent data:", error.message);
+      return null;
+    }
+  }
+
+  static filterAndGenerateOrders(data) {
+    const subscriptions = {};
+    const entitlements = {};
+    const filtered = this.filterDynamicEntitlements(data);
+
+    filtered.forEach((item) => {
+      subscriptions[item.productId] = SubscriptionModel.create(item.productId, item.type);
+      entitlements[item.entitlement] = SubscriptionModel.createEntitlement(item.productId, item.type);
+    });
+
+    return { subscriptions, entitlements };
+  }
+
+  static filterDynamicEntitlements(data) {
+    const priority = ["life", "annual", "yearly", "monthly", "sub"];
+    const uniqueEntitlements = {};
+
+    Object.keys(data).forEach((key) => {
+      const entry = data[key];
+      const type = this.detectType(key);
+
+      entry.entitlements.forEach((entitlement) => {
+        if (!uniqueEntitlements[entitlement] || 
+            priority.indexOf(type) < priority.indexOf(uniqueEntitlements[entitlement].type)) {
+          uniqueEntitlements[entitlement] = { productId: key, entitlement, type };
+        }
+      });
+    });
+
+    return Object.values(uniqueEntitlements);
+  }
+
+  static detectType(productId) {
+    if (productId.includes("life")) return "life";
+    if (productId.includes("annual")) return "annual";
+    if (productId.includes("yearly")) return "yearly";
+    if (productId.includes("monthly")) return "monthly";
+    return "sub";
+  }
+
+  static generateDefaultOrders() {
+    Utils.sendNotification("使用默认值", "没有本地数据", "生成默认订阅和权限");
+    return {
+      subscriptions: {
+        "com.default.pro": SubscriptionModel.create("com.default.pro", "sub"),
+        "com.default.premium": SubscriptionModel.create("com.default.premium", "sub")
+      },
+      entitlements: {
+        "pro": SubscriptionModel.createEntitlement("com.default.pro", "sub"),
+        "premium": SubscriptionModel.createEntitlement("com.default.premium", "sub")
+      }
+    };
+  }
+}
+
+// Enhanced product manager with improved caching and error handling
+class ProductManager {
+  static lastNotification = null;
+  static notificationCache = new Set();
+
+  static PRODUCTS = {
     UA: {
       'Art%20Generator': {
         products: [
@@ -411,3 +609,241 @@ static PRODUCTS = {
       ]
     }
   };
+
+  static parseArgumentChoice(choice) {
+    if (!choice) return null;
+    const [entitlement, type] = choice.split(':');
+    return entitlement ? {
+      entitlement,
+      type: SubscriptionModel.validateType(type)
+    } : null;
+  }
+
+  static sendNotification(mode, productName, entitlements, ids) {
+    const entitlementStr = Array.isArray(entitlements) ? entitlements.join(', ') : entitlements;
+    const idStr = Array.isArray(ids) ? ids.join(', ') : ids;
+    const notificationContent = `${mode}-${productName}-${entitlementStr}-${idStr}`;
+    
+    if (this.notificationCache.has(notificationContent)) return;
+    
+    this.notificationCache.add(notificationContent);
+    if (this.notificationCache.size > 10) {
+      this.notificationCache.clear();
+    }
+    
+    Utils.sendNotification(
+      "订阅模式通知",
+      `当前模式：${mode}`,
+      `匹配到产品：${productName}\nEntitlements: ${entitlementStr}\nIDs: ${idStr}`
+    );
+  }
+
+  static matchUA(ua) {
+    for (const [key, product] of Object.entries(this.PRODUCTS.UA)) {
+      if (ua.includes(key)) {
+        Utils.log(`UA匹配成功: ${key}`, product);
+        if (product.products) {
+          return product.products;
+        }
+        return Array.isArray(product) ? product : [product];
+      }
+    }
+    return null;
+  }
+
+  static matchBundle(bundleId) {
+    for (const [key, config] of Object.entries(this.PRODUCTS.BUNDLE)) {
+      if (bundleId.includes(key)) {
+        Utils.log(`Bundle匹配成功: ${key}`, config);
+        if (config.products) {
+          return config.products;
+        }
+        return Array.isArray(config) ? config : [config];
+      }
+    }
+    return null;
+  }
+
+  static async loadFallback() {
+    if (typeof $argument === "string") {
+      const argumentChoice = this.parseArgumentChoice($argument.trim());
+      if (argumentChoice) {
+        Utils.log(`使用参数选择: ${JSON.stringify(argumentChoice)}`);
+        return {
+          subscriptions: {
+            [`com.argument.${argumentChoice.entitlement}`]: 
+              SubscriptionModel.create(`com.argument.${argumentChoice.entitlement}`, argumentChoice.type)
+          },
+          entitlements: {
+            [argumentChoice.entitlement]: 
+              SubscriptionModel.createEntitlement(`com.argument.${argumentChoice.entitlement}`, argumentChoice.type)
+          }
+        };
+      }
+    }
+
+    return FallbackManager.parseFallback();
+  }
+
+  static async matchProduct(ua, bundleId) {
+    Utils.log("开始匹配产品...");
+
+    const uaProducts = this.matchUA(ua);
+    if (uaProducts?.length) {
+      const entitlements = uaProducts.map(p => p.entitlement);
+      const ids = uaProducts.map(p => p.id);
+      this.sendNotification("UA 匹配", uaProducts[0].name, entitlements, ids);
+      return { 
+        products: uaProducts.slice(0, CONFIG.SUBSCRIPTION.MAX_PRODUCTS),
+        source: "UA" 
+      };
+    }
+
+    const bundleProducts = this.matchBundle(bundleId);
+    if (bundleProducts?.length) {
+      const entitlements = bundleProducts.map(p => p.entitlement);
+      const ids = bundleProducts.map(p => p.id);
+      this.sendNotification("Bundle 匹配", bundleProducts[0].name, entitlements, ids);
+      return { 
+        products: bundleProducts.slice(0, CONFIG.SUBSCRIPTION.MAX_PRODUCTS),
+        source: "Bundle" 
+      };
+    }
+
+    const fallbackData = await this.loadFallback();
+    const products = Object.entries(fallbackData.entitlements).map(([entitlement, data]) => {
+      const productId = fallbackData.subscriptions[Object.keys(fallbackData.subscriptions).find(key => 
+        fallbackData.subscriptions[key].product_identifier === data.product_identifier
+      )].product_identifier;
+      
+      return {
+        entitlement,
+        id: productId,
+        type: fallbackData.subscriptions[productId].period_type
+      };
+    });
+
+    this.sendNotification(
+      "Fallback 匹配",
+      "Fallback",
+      products.map(p => p.entitlement),
+      products.map(p => p.id)
+    );
+
+    return {
+      products,
+      source: "Fallback"
+    };
+  }
+}
+
+// RequestHandler class
+class RequestHandler {
+  static checkForbiddenApps(ua, body) {
+    const forbiddenApp = CONFIG.FORBIDDEN_APPS.find(app => 
+      ua.includes(app) || (body && body.includes(app))
+    );
+    
+    if (forbiddenApp) {
+      Utils.log(`检测到禁止的应用: ${forbiddenApp}`);
+      Utils.log("MIKEPHIEの分享频道: https://t.me/mikephie");
+      return true;
+    }
+    return false;
+  }
+
+  static handleRequest() {
+    try {
+      const headers = { ...$request.headers };
+      const ua = Utils.getHeader(headers, 'User-Agent');
+      const body = $request.body || "";
+
+      if (this.checkForbiddenApps(ua, body)) {
+        return $done({});
+      }
+
+      delete headers['x-revenuecat-etag'];
+      delete headers['X-RevenueCat-ETag'];
+      
+      return $done({ headers });
+    } catch (e) {
+      Utils.error("Request handling error:", e.message);
+      return $done({});
+    }
+  }
+
+  static async handleResponse() {
+    try {
+      const headers = $request.headers;
+      const ua = Utils.getHeader(headers, 'User-Agent');
+      const bundleId = Utils.getHeader(headers, 'X-Client-Bundle-ID');
+      const body = $response.body || "";
+
+      if (this.checkForbiddenApps(ua, body)) {
+        return $done({});
+      }
+
+      const responseData = Utils.parseJSON($response.body);
+      const { products, source } = await ProductManager.matchProduct(ua, bundleId);
+
+      if (!products?.length) {
+        Utils.log("没有匹配到产品");
+        return $done({ body: JSON.stringify(responseData) });
+      }
+
+      const subscriptions = {};
+      const entitlements = {};
+      const non_subscriptions = {};
+      const other_purchases = {};
+
+      products.forEach(product => {
+        Utils.log(`构建订阅数据: ${JSON.stringify(product)}`);
+        if (product.type === 'non_subscription') {
+          non_subscriptions[product.id] = [{
+            id: "96390b26b7",
+            is_sandbox: false,
+            purchase_date: CONFIG.DATES.CURRENT,
+            original_purchase_date: CONFIG.DATES.CURRENT,
+            store: CONFIG.STORE.NAME,
+            store_transaction_id: CONFIG.STORE.TRANSACTION_ID
+          }];
+          other_purchases[product.id] = {
+            purchase_date: CONFIG.DATES.CURRENT
+          };
+        } else {
+          subscriptions[product.id] = SubscriptionModel.create(product.id, product.type);
+        }
+        entitlements[product.entitlement] = SubscriptionModel.createEntitlement(product.id, product.type);
+      });
+
+      responseData.subscriber = {
+        last_seen: responseData?.request_date || new Date().toISOString(),
+        first_seen: CONFIG.DATES.CURRENT,
+        original_application_version: CONFIG.SUBSCRIPTION.DEFAULT_VERSION,
+        other_purchases,
+        management_url: null,
+        subscriptions,
+        entitlements,
+        original_purchase_date: CONFIG.DATES.CURRENT,
+        original_app_user_id: responseData?.subscriber?.original_app_user_id || CONFIG.SUBSCRIPTION.ANONYMOUS_ID_PREFIX,
+        non_subscriptions
+      };
+
+      Utils.log(`处理完成: 通过 ${source} 匹配到 ${products.length} 个产品`);
+      return $done({ body: JSON.stringify(responseData) });
+    } catch (e) {
+      Utils.error("Response handling error:", e.message);
+      return $done({ body: $response.body });
+    }
+  }
+}
+
+// Main execution
+try {
+  typeof $response === "undefined" ? 
+    RequestHandler.handleRequest() : 
+    RequestHandler.handleResponse();
+} catch (e) {
+  Utils.error("Main execution error:", e.message);
+  $done({});
+}

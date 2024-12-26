@@ -9,3 +9,5 @@ http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)
 
 [MITM]
 hostname = api.revenuecat.com
+
+RevenueCat.js
