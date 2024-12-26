@@ -15,9 +15,8 @@ hostname = photoby.hasmash.com
 
 *******************************/
 
-// 判断请求类型并进行相应处理
-if ($request.url.includes("/auth/member") || $request.url.includes("/clickEvent")) {
-    // 处理响应体
+// 处理响应体
+if ($response.body) {
     let mikephie = JSON.parse($response.body);
 
     if ($request.url.includes("/auth/member")) {
@@ -35,10 +34,14 @@ if ($request.url.includes("/auth/member") || $request.url.includes("/clickEvent"
             deviceId: "39B810B4-B42D-4208-90CF-2F1573394270"
         });
     }
-    
-    $done({ body: JSON.stringify(mikephie) });
-} else {
-    // 处理请求头
+
+    $done({ 
+        body: JSON.stringify(mikephie),
+        headers: $request.headers // 保持原有请求头不变
+    });
+} 
+// 如果只需要修改请求头
+else {
     let headers = Object.fromEntries(
         Object.entries($request.headers).map(([key, value]) => [key.toLowerCase(), value])
     );
