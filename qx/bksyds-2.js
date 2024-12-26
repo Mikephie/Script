@@ -41,9 +41,7 @@ $done({ body: JSON.stringify(mikephie) });
     );
     
     Object.assign(headers, {
-        authorization: "qq_60cabdacf608480aa95663ab8f0f1ab5__",
-        deviceid: "902C611A-A12A-4D48-9DEF-562EF8155908",
-        cookie: "_clsk=1e3ji69%7C1723606564421%7C1%7C1%7Cw.clarity.ms%2Fcollect; _ga_70F8QP140X=GS1.1.1723606552.4.1.1723606558.0.0.0; _ga=GA1.1.347029008.1723476322; _clck=8lm7fs%7C2%7Cfob%7C0%7C1685"
+        authorization: "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmN2Q2MjI1MmIxMTE0NGVlODE5M2Y4NWZhOTVmY2YwYiIsImV4cCI6MTczNzc4Mjc3M30.cb8RAuzrdFMJZZnDwDXo1D9pOIp4JechPurVA5fnFFPvXTOr95vQokAJwTAFkpBuOnGlGxyTdR8PK_aQLUmQqg"
     });
     
     $done({headers: headers});
