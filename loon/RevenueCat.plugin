@@ -4,7 +4,7 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/revenuecat.png
 
 [Script]
-http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/RevenueCat.js, requires-body=true, tag=RevenueCat, argument={argument}, , enable = {Body}
+http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/RevenueCat.js, requires-body=true, tag=RevenueCat, argument={Entitlements}, , enable = {Body}
 
 http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/RevenueCat.js, requires-body=false, tag=RevenueCat, enable = {Header}
 
@@ -14,4 +14,4 @@ hostname = api.revenuecat.com
 [Argument]
 Body = switch,true,tag=是否启用Body脚本
 Header = switch,true,tag=是否启用Header脚本
-argument = input, "",tag=Entitlements,desc=pro:sub
+Entitlements = input, "",tag=Entitlements,desc=pro:sub
