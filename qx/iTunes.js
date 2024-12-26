@@ -40,6 +40,8 @@ const lifetimeid = `${bundle_id}.lifetime`;
 const list = {
   
 // Mikephie 自用 
+  'YinzhangMaster': { cm: 'timeb', hx: 'hxpda', id: "com.xiaoqi.seal.forever", latest: "mikephie" },  //印章大师
+  'com.cuilingshi.flipclock': { cm: 'timeb', hx: 'hxpda', id: "FlipClockProVersion", latest: "mikephie" },  //翻页时钟
   '%E6%88%90%E8%AA%9E%E7%8C%9C%E7%8C%9C': { cm: 'timea', hx: 'hxpda', id: "com.agedstudio.word.puzzle.chengyucaicai.yearly", latest: "mikephie" },  //成语猜猜
   'Cam Translator': { cm: 'timed', hx: 'hxpda', id: "co.vulcanlabs.pictranslator.lifetime", ids: "co.vulcanlabs.pictranslator.offlinelifetime1", latest: "mikephie" },  //Cam Translator
   'VLLO': { cm: 'timea', hx: 'hxpda', id: "com.vimosoft.vllo.premium3.annually_subscription", latest: "mikephie" },  //VLLO
