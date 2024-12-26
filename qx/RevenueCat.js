@@ -200,7 +200,7 @@ class ProductManager {
     UA: {
       'js_code_pad': {
         products: [
-          { entitlement: 'developer', id: 'js_code_pad_developer_upgrade', type: 'life', name: 'Loopsie照片编辑' }
+          { entitlement: 'developer', id: 'js_code_pad_developer_upgrade', type: 'life', name: 'js_code_pad代码编辑' }
         ],
         name: 'js_code_pad代码编辑'
       },
