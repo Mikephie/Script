@@ -198,11 +198,11 @@ class ProductManager {
 
   static PRODUCTS = {
     UA: {
-      'Loopsie': {
+      'js_code_pad': {
         products: [
           { entitlement: 'premium', id: 'com.gamelounge.loopsie.ios.one_time', type: 'life', name: 'Loopsie照片编辑' }
         ],
-        name: 'Loopsie照片编辑'
+        name: 'js_code_pad代码编辑'
       },
       'Art%20Generator': {
         products: [
