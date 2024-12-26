@@ -11,7 +11,7 @@ force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [MITM]
 
-hostname = %APPEND%, gql.reddit.com, gql-fed.reddit.com
+hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [Body Rewrite]
 
