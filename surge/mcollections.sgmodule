@@ -76,7 +76,7 @@ AskAI = type=http-response, pattern=^https:\/\/purchase-verifier\.cdwapi\.com\/i
 bzg = type=http-response, pattern=^http:\/\/format-api\.netpock\.com\/api\/user_info, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bzg.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# 边框水印大师（ 永久会员 ）
+# 边框水印大师（ 需登录 ）
 # hostname = photoby.hasmash.com
 bksyds = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js, requires-body=true, max-size=-1, timeout=60
 
