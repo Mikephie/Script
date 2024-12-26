@@ -200,7 +200,7 @@ class ProductManager {
     UA: {
       'js_code_pad': {
         products: [
-          { entitlement: 'premium', id: 'com.gamelounge.loopsie.ios.one_time', type: 'life', name: 'Loopsie照片编辑' }
+          { entitlement: 'premium', id: 'js_code_pad_developer_upgrade', type: 'life', name: 'Loopsie照片编辑' }
         ],
         name: 'js_code_pad代码编辑'
       },
