@@ -58,6 +58,8 @@ const bundle = {
 //识别UA
 const list = {
   'Loopsie': { name: 'premium', id: 'com.gamelounge.loopsie.ios.one_time', cm: 'sjb' },  //Loopsie照片编辑
+  'Loopsie': { name: 'premium', id: 'com.gamelounge.loopsie.ios.one_time', cm: 'sjb' },  //Loopsie照片编辑
+  'Loopsie': { name: 'premium', id: 'com.gamelounge.loopsie.ios.one_time', cm: 'sjb' },  //Loopsie照片编辑
   'photography': { name: 'premium', id: 'photography_sub_yearly_1', cm: 'sja' },  //PhotoX
   'chatbotapp': { name: 'One Time Full Access', id: 'PAI_lifeTimeAccess_01', cm: 'sjb' },  //chatbotapp
   '%E8%90%8C%E5%AE%A2AI%E7%BB%98%E7%94%BB': { name: 'AISticker_VIP', id: 'LifetimeSubscription_Sticker', cm: 'sjb' },
