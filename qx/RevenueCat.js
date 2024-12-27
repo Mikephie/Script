@@ -479,92 +479,68 @@ class ProductManager {
         products: [
           { entitlement: 'com.valo.reader.vip1.forever', id: 'com.valo.reader.vip1.forever', type: 'sub', name: '读不舍手' },
           { entitlement: 'com.valo.reader.vip2.year', id: 'com.valo.reader.vip2.year', type: 'sub', name: '读不舍手' }
-        ],
-        name: '读不舍手'
+        ]
       },
       'com.runbuddy.prod': {
         products: [
           { entitlement: 'premium', id: 'rb_9999_1y_1y7999', type: 'sub', name: 'Runna-马拉松训练' }
-        ],
-        name: 'Runna-马拉松训练'
+        ]
       },
       'com.reku.Counter': {
         products: [
           { entitlement: 'plus', id: 'com.reku.counter.plus.lifetime', type: 'life', name: 'Counter-计步器' }
-        ],
-        name: 'Counter-计步器'
+        ]
       },
       'TeleprompterX': {
         products: [
           { entitlement: 'Pro Upgrade', id: 'TPXOTP', type: 'life', name: 'Teleprompter' }
-        ],
-        name: 'Teleprompter'
+        ]
       },
       'moonbox.co.il.grow': {
         products: [
           { entitlement: 'pro', id: 'moonbox.co.il.grow.lifetime.offer', type: 'life', name: '植物识别-PlantID' }
-        ],
-        name: '植物识别-PlantID'
+        ]
       },
       'tech.miidii.MDClock': {
         products: [
           { entitlement: 'Entitlement.Pro', id: 'tech.miidii.MDClock.pro', type: 'life', name: '谜底时钟' }
-        ],
-        name: '谜底时钟'
+        ]
       },
       'com.voicedream.Voic': {
         products: [
           { entitlement: 'standard', id: 'vd_annual_79_3daytrial', type: 'sub', name: '声之梦' }
-        ],
-        name: '声之梦'
+        ]
       },
       'com.laser-focused.focus-ios': {
         products: [
           { entitlement: 'subscribed', id: 'iap.io.masterbuilders.focus.pro_one_year', type: 'sub', name: 'Focus-专注时间管理' }
-        ],
-        name: 'Focus-专注时间管理'
+        ]
       },
       'com.roehl': {
         products: [
           { entitlement: 'Pro', id: 'habitkit_3499_lt', type: 'life', name: 'HabitKit/WinDiary-双件套' }
-        ],
-        name: 'HabitKit/WinDiary-双件套'
+        ]
       },
       'net.tengl.powertimer': {
         products: [
           { entitlement: 'plus', id: 'powertimer.plus', type: 'life', name: '元气计时-PowerTimer' }
-        ],
-        name: '元气计时-PowerTimer'
+        ]
       },
       'com.reader.book': {
         products: [
           { entitlement: 'pro', id: 'reader.lifetimeFamily.pro', type: 'sub', name: 'PureLibro' }
-        ],
-        name: 'PureLibro'
+        ]
       },
       'app.imone.OneWidget': {
         products: [
           { entitlement: 'pro', id: 'app.imone.OneWidget.Lifetime', type: 'life', name: 'OneWidget-小组件' }
-        ],
-        name: 'OneWidget-小组件'
+        ]
       },
       'io.innerpeace.yiye': {
         products: [
           { entitlement: 'Premium', id: 'io.innerpeace.yiye.lifetime.forYearly', type: 'sub', name: '言外笔记' }
-        ],
-        name: '言外笔记'
-      },
-      'Example2Subs': {
-        products: [
-          { entitlement: 'pro', id: 'co.forever.everything', type: 'sub' },
-          { entitlement: 'premium', id: 'co.forever.everything', type: 'sub' }
-        ],
-        name: 'Example2Subs App'
-      },
-      'com.reku.Counter2': [
-        { entitlement: 'premium', id: 'com.reku.counter.plus.lifetime', type: 'life', name: 'Counter App' }
-      ]
-    }
+        ]
+      }
   };
 
   static parseArgumentChoice(choice) {
