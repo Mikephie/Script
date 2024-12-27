@@ -528,7 +528,7 @@ class ProductManager {
       },
       'com.reader.book': {
         products: [
-          { entitlement: 'pro', id: 'reader.lifetimeFamily.pro', type: 'sub', name: 'PureLibro' }
+          { entitlement: 'pro', id: 'reader.lifetimeFamily.pro', type: 'life', name: 'PureLibro' }
         ]
       },
       'app.imone.OneWidget': {
@@ -538,7 +538,7 @@ class ProductManager {
       },
       'io.innerpeace.yiye': {
         products: [
-          { entitlement: 'Premium', id: 'io.innerpeace.yiye.lifetime.forYearly', type: 'sub', name: '言外笔记' }
+          { entitlement: 'Premium', id: 'io.innerpeace.yiye.lifetime.forYearly', type: 'life', name: '言外笔记' }
         ]
       }
   };
