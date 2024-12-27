@@ -468,7 +468,8 @@ class ProductManager {
       },
       'Journal': {
         products: [
-          { entitlement: 'PRO', id: 'com.pureformstudio.diary.yearly_2022_promo', type: 'sub', name: 'Diarly' }
+          { entitlement: 'PRO', id: 'com.pureformstudio.diary.yearly', type: 'sub', name: 'Journal App' },
+          { entitlement: 'AI+', id: 'com.pureformstudio.diarly.ai_plus_yearly', type: 'sub', name: 'Journal App' }
         ]
       }
 
