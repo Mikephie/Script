@@ -57,7 +57,7 @@ const bundle = {
 
 //识别UA
 const list = {
-  'flighttracker': { name: 'premium', id: 'free_lifetime_access_2024', cm: 'sjb' },  //flighttracker航班查询
+  'flighttracker': { name: 'unlimited_access', id: 'free_lifetime_access_2024', cm: 'sjb' },  //flighttracker航班查询
   'Loopsie': { name: 'premium', id: 'com.gamelounge.loopsie.ios.one_time', cm: 'sjb' },  //Loopsie照片编辑
   'Loopsie': { name: 'premium', id: 'com.gamelounge.loopsie.ios.one_time', cm: 'sjb' },  //Loopsie照片编辑
   'photography': { name: 'premium', id: 'photography_sub_yearly_1', cm: 'sja' },  //PhotoX
