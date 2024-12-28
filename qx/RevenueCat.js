@@ -198,7 +198,7 @@ class ProductManager {
 
   static PRODUCTS = {
     UA: {
-      'com.ausoco.umai': {
+      'umai': {
         products: [
           { entitlement: 'umai_pro', id: 'umai_pro_yearly', type: 'sub', name: 'UmAI' }
         ]
