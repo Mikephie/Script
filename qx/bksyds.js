@@ -26,7 +26,7 @@ if ($request.url.includes("/auth/member")) {
 } else if ($request.url.includes("/clickEvent")) {
     Object.assign(mikephie.result, {
         id: 38476625,      // 更新添加
-        isVip: 2,      // 更新或添加字段
+        isVip: 1,      // 更新或添加字段
         vipTime: "2088-08-08 08:08:08",      // 更新或添加字段
         uid: "C4957375-2D67-4728-B3E1-2696A3DFA5C8",      // 更新添加
         deviceId: "39B810B4-B42D-4208-90CF-2F1573394270"      // 更新添加
