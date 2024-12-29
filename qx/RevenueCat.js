@@ -198,6 +198,11 @@ class ProductManager {
 
   static PRODUCTS = {
     UA: {
+      'Fontsify': {
+        products: [
+          { entitlement: 'pro', id: 'media.upstate.fontify.lifetime', type: 'life', name: 'Fontsify-字体' }
+        ]
+      }, 
       'umai': {
         products: [
           { entitlement: 'umai_pro', id: 'umai_pro_yearly', type: 'sub', name: 'UmAI' }
