@@ -200,7 +200,7 @@ class ProductManager {
     UA: {
       'Fontsify': {
         products: [
-          { entitlement: 'pro', id: 'media.upstate.fontify.lifetime', type: 'life', name: 'Fontsify-字体' }
+          { entitlement: 'lifetime', id: 'watchface.lifetime', type: 'life', name: 'watchface' }
         ]
       },
       'Fontsify': {
