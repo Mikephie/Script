@@ -202,6 +202,11 @@ class ProductManager {
         products: [
           { entitlement: 'pro', id: 'media.upstate.fontify.lifetime', type: 'life', name: 'Fontsify-字体' }
         ]
+      },
+      'Fontsify': {
+        products: [
+          { entitlement: 'pro', id: 'media.upstate.fontify.lifetime', type: 'life', name: 'Fontsify-字体' }
+        ]
       }, 
       'umai': {
         products: [
