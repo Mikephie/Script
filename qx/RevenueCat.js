@@ -198,9 +198,9 @@ class ProductManager {
 
   static PRODUCTS = {
     UA: {
-      'Fontsify': {
+      'Watchly': {
         products: [
-          { entitlement: 'lifetime', id: 'watchface.lifetime', type: 'life', name: 'watchface' }
+          { entitlement: 'lifetime', id: 'watchface.lifetime', type: 'life', name: 'Watchly-表面' }
         ]
       },
       'Fontsify': {
