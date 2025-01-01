@@ -20,23 +20,49 @@ hostname = *.kuwo.cn
 ******************************************/
 
 
-const scriptName = "酷我音乐";
-const isSurge = typeof $httpClient !== "undefined";
+(function () {
+  const scriptName = "酷我音乐";
+  const isSurge = typeof $httpClient !== "undefined";
+  const isQuanX = typeof $task !== "undefined";
 
-function logger(message) {
-  console.log(`[${scriptName}] ${message}`);
-}
+  const logger = (message) => {
+    console.log(`[${scriptName}] ${message}`);
+  };
 
-function modifyResponse() {
+  // Platform-specific HTTP request handlers
+  const fetch = (url, options = {}, callback) => {
+    if (isSurge) {
+      if (options.method === "POST") {
+        $httpClient.post(url, options, callback);
+      } else {
+        $httpClient.get(url, callback);
+      }
+    } else if (isQuanX) {
+      options.method = options.method || "GET";
+      $task.fetch({ url, ...options }).then(
+        (response) => callback(null, response, response.body),
+        (error) => callback(error, null, null)
+      );
+    }
+  };
+
+  const done = (response) => {
+    if (isSurge) {
+      $done(response);
+    } else if (isQuanX) {
+      $done(response);
+    }
+  };
+
   const url = $request.url;
   const body = $response.body;
-  let obj;
 
+  let obj;
   try {
     obj = JSON.parse(body);
   } catch (e) {
     logger(`Failed to parse response: ${e.message}`);
-    return $done({});
+    return done({});
   }
 
   if (/music\.pay\?newver=\d+/.test(url)) {
@@ -91,12 +117,5 @@ function modifyResponse() {
     logger("Removed advertisements.");
   }
 
-  $done({ body: JSON.stringify(obj) });
-}
-
-if (isSurge) {
-  modifyResponse();
-} else {
-  logger("This script is only for Surge.");
-  $done({});
-}
+  done({ body: JSON.stringify(obj) });
+})();
