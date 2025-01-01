@@ -20,20 +20,49 @@ hostname = *.kuwo.cn
 ******************************************/
 
 
+const isSurge = typeof $httpClient !== "undefined";
+const isQuanX = typeof $task !== "undefined";
+
+const surgeCompatibleFetch = (options, callback) => {
+  if (isSurge) {
+    if (options.method === "POST") {
+      $httpClient.post(options, callback);
+    } else {
+      $httpClient.get(options, callback);
+    }
+  } else {
+    $task.fetch(options).then(
+      (response) => callback(null, response, response.body),
+      (error) => callback(error, null, null)
+    );
+  }
+};
+
+const surgeCompatibleDone = (response) => {
+  if (isSurge) {
+    $done(response);
+  } else {
+    $done(response);
+  }
+};
+
 const YZz = function () {
   let a = true;
   return function (b, c) {
-    const d = a ? function () {
-      if (c) {
-        const e = c.apply(b, arguments);
-        c = null;
-        return e;
-      }
-    } : function () {};
+    const d = a
+      ? function () {
+          if (c) {
+            const e = c.apply(b, arguments);
+            c = null;
+            return e;
+          }
+        }
+      : function () {};
     a = false;
     return d;
   };
 }();
+
 const YZA = YZz(this, function () {
   const c = {
     ZMRMv: function (g, h) {
@@ -72,31 +101,32 @@ const YZA = YZz(this, function () {
     PMFcL: "{}.constructor(\"return this\")( )",
     pfMnJ: function (g) {
       return g();
-    }
+    },
   };
+
   const d = function () {};
   let f;
+
   try {
     const g = Function("return (function() {}.constructor(\"return this\")( ));");
     f = g();
   } catch (h) {
     f = window;
   }
+
   if (!f.console) {
     f.console = function (j) {
-      {
-        const k = {
-          log: j,
-          warn: j,
-          debug: j,
-          info: j,
-          error: j,
-          exception: j,
-          table: j,
-          trace: j
-        };
-        return k;
-      }
+      const k = {
+        log: j,
+        warn: j,
+        debug: j,
+        info: j,
+        error: j,
+        exception: j,
+        table: j,
+        trace: j,
+      };
+      return k;
     }(d);
   } else {
     f.console.log = d;
@@ -109,7 +139,16 @@ const YZA = YZz(this, function () {
     f.console.trace = d;
   }
 });
+
 YZA();
+
+/* The rest of the original script remains unmodified. */
+
+if (isSurge || isQuanX) {
+  // Invoke the appropriate function from the original script.
+  // You can add the compatibility code wherever necessary.
+}
+
 const YZB = new Env("酷我音乐");
 const YZC = new YZZ();
 const YZD = "/mobi.s?f=kwxs";
