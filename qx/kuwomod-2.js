@@ -20,40 +20,41 @@ hostname = *.kuwo.cn
 ******************************************/
 
 
-(function () {
-  const scriptName = "酷我音乐";
-  const isSurge = typeof $httpClient !== "undefined";
-  const isQuanX = typeof $task !== "undefined";
+const isSurge = typeof $httpClient !== "undefined";
+const isQuanX = typeof $task !== "undefined";
+const scriptName = "酷我音乐";
 
-  const logger = (message) => {
-    console.log(`[${scriptName}] ${message}`);
-  };
+const logger = (message) => {
+  console.log(`[${scriptName}] ${message}`);
+};
 
-  // Platform-specific HTTP request handlers
-  const fetch = (url, options = {}, callback) => {
-    if (isSurge) {
-      if (options.method === "POST") {
-        $httpClient.post(url, options, callback);
-      } else {
-        $httpClient.get(url, callback);
-      }
-    } else if (isQuanX) {
-      options.method = options.method || "GET";
-      $task.fetch({ url, ...options }).then(
-        (response) => callback(null, response, response.body),
-        (error) => callback(error, null, null)
-      );
+// Platform-specific fetch and done methods
+const fetch = (url, options, callback) => {
+  if (isSurge) {
+    if (options.method === "POST") {
+      $httpClient.post(url, options, callback);
+    } else {
+      $httpClient.get(url, callback);
     }
-  };
+  } else if (isQuanX) {
+    options.method = options.method || "GET";
+    $task.fetch({ url, ...options }).then(
+      (response) => callback(null, response, response.body),
+      (error) => callback(error, null, null)
+    );
+  }
+};
 
-  const done = (response) => {
-    if (isSurge) {
-      $done(response);
-    } else if (isQuanX) {
-      $done(response);
-    }
-  };
+const done = (response) => {
+  if (isSurge) {
+    $done(response);
+  } else if (isQuanX) {
+    $done(response);
+  }
+};
 
+// Parse and modify response
+function modifyResponse() {
   const url = $request.url;
   const body = $response.body;
 
@@ -65,28 +66,27 @@ hostname = *.kuwo.cn
     return done({});
   }
 
+  // Unlock membership and premium audio
   if (/music\.pay\?newver=\d+/.test(url)) {
-    if (obj && obj.songs) {
-      obj.songs.forEach((song) => {
-        if (song.audio) {
-          song.audio.forEach((audio) => {
-            audio.st = 0; // Unlock audio
-          });
-        }
+    if (obj && obj.songs && obj.songs[0] && obj.songs[0].audio) {
+      obj.songs[0].audio.forEach((audio) => {
+        audio.st = 0; // Unlock audio
       });
     }
     logger("Unlocked audio content.");
   }
 
+  // Unlock VIP user info
   if (/v2\/api\/pay\/user\/info/.test(url)) {
     obj.data.vipExpire = "4077187200315"; // Far future timestamp
-    obj.data.vipType = 1; // Mark as VIP
+    obj.data.vipType = 1; // Set user as VIP
     obj.data.growthValue = 9999;
     obj.data.vipTag = "VIP7";
-    obj.data.isYearUser = "2";
-    logger("Unlocked VIP user features.");
+    obj.data.isYearUser = "2"; // Yearly VIP user
+    logger("VIP features unlocked.");
   }
 
+  // Unlock VIP themes
   if (/v2\/theme\?op=gd/.test(url)) {
     if (obj.data.vipTheme) {
       obj.data.vipTheme.type = "free";
@@ -94,22 +94,25 @@ hostname = *.kuwo.cn
     logger("Unlocked VIP themes.");
   }
 
+  // Modify mobi.s endpoint
   if (/mobi\.s\?f=kwxs/.test(url)) {
     logger("Intercepted mobi.s request, no action required.");
   }
 
+  // Handle audiobook-related endpoints
   if (/audiobookpay|tingshu/.test(url)) {
     if (obj.data && obj.data.child) {
       obj.data.child.forEach((item) => {
         if (item.type === "ad" || item.vip === false) {
-          item.vip = true;
+          item.vip = true; // Mark all content as VIP-unlocked
           item.ad = false; // Remove ads
         }
       });
     }
-    logger("Unlocked audiobook content.");
+    logger("Unlocked audiobook-related content.");
   }
 
+  // General ad removal
   if (/advert/.test(url)) {
     if (obj.data && obj.data.ads) {
       obj.data.ads = []; // Remove all ads
@@ -118,4 +121,12 @@ hostname = *.kuwo.cn
   }
 
   done({ body: JSON.stringify(obj) });
-})();
+}
+
+// Ensure the script works in Surge
+if (isSurge || isQuanX) {
+  modifyResponse();
+} else {
+  logger("This script is optimized for Surge and Quantumult X only.");
+  done({});
+}
