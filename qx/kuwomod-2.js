@@ -1,23 +1,29 @@
-/******************************************
- * @name 酷我音乐
- * @description 解锁会员皮肤、会员音频(最高无损)、听书权限, 配合其他去广告脚本达到最佳效果
- * @channel https://t.me/yqc_123
- * @feedback https://t.me/yqc_777
- * @version 1.0.3
-******************************************
-脚本声明:
-1. 本脚本仅用于学习研究，禁止用于商业用途
-2. 本脚本不保证准确性、可靠性、完整性和及时性
-3. 任何个人或组织均可无需经过通知而自由使用
-4. 作者对任何脚本问题概不负责，包括由此产生的任何损失
-5. 如果任何单位或个人认为该脚本可能涉嫌侵犯其权利，应及时通知并提供身份证明、所有权证明，我将在收到认证文件确认后删除
-6. 请勿将本脚本用于商业用途，由此引起的问题与作者无关
-7. 本脚本及其更新版权归作者所有
-******************************************
+/****************************
+
+#!name = 酷我音乐 & 酷我畅听
+#!desc = 〔 酷我音乐&酷我畅听 〕全功能破解
+#!author = 影子[https://www.napi.ltd]
+#!homepage = https://napi.ltd
+#!openUrl = https://napi.ltd
+#!tag = 会员
+#!loon_version = 3.2.3(762)
+#!icon = https://static.napi.ltd/Image/KuWo.png
+#!date = 2024-12-29
+
+
+[Rule]
+USER-AGENT,KWPlayer*,PROXY
+HOST-SUFFIX,kuwo.cn,PROXY
+
+
+[Script]
+http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic)|app/newMenuList/menuListInfo|tingshu/index/radio|operate/homePage)|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwomod-2.js, requires-body=true, timeout=60, tag=酷我音乐, img-url=https://static.napi.ltd/Image/KuWo.png
+
+
+[Mitm]
 hostname = *.kuwo.cn
 
-^https?:\/\/(?:musicpay|nmobi|vip1|audiobookpay|tingshu)\.kuwo\.cn\/(?:music\.pay\?newver=\d+|mobi.s\?f=kwxs|vip\/(?:enc\/user\/vip\?op=ui&uid=|v2\/theme\?op=gd)|a\.p|v2\/api\/pay\/user\/info) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwomod-2.js
-******************************************/
+****************************/
 
 
 const YZw = function () {
