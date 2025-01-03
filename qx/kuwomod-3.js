@@ -226,9 +226,6 @@ const YZA = YZz(this, function () {
     }
 });
 YZA();
-非常抱歉之前的疏忽。您说得对，提供完整版确实能避免插入错误。以下是完整的修改版本，包含了兼容性更改和原有的所有代码：
-
-```javascript
 const $ = new Env('酷我音乐');
 const YZC = new YZZ();
 const YZD = '/mobi.s?f=kwxs';
@@ -540,8 +537,7 @@ if (YZU.indexOf(YZJ) != -0x1) {
             YZW.data.scheme = null;
             continue;
         case '5':
-            Y
-            YZV = YZB.toStr(YZW);
+            YZV = $.toStr(YZW);
             continue;
         }
         break;
@@ -551,22 +547,22 @@ if (YZU.match(YZK)) {
     YZV = 'YingZi';
     const YZan = {};
     YZan.body = YZV;
-    YZB.done(YZan);
+    $.done(YZan);
 }
 if (YZU.indexOf(YZL) != -0x1) {
     delete YZW.data.songListTopContext;
-    YZV = YZB.toStr(YZW);
+    YZV = $.toStr(YZW);
     const YZao = {};
     YZao.body = YZV;
-    YZB.done(YZao);
+    $.done(YZao);
 }
 if (YZU.indexOf(YZM) != -0x1) {
     delete YZW.data;
     delete YZW.dataV2;
-    YZV = YZB.toStr(YZW);
+    YZV = $.toStr(YZW);
     const YZap = {};
     YZap.body = YZV;
-    YZB.done(YZap);
+    $.done(YZap);
 }
 if (YZU.indexOf(YZN) != -0x1) {
     let YZaq = 0x0;
@@ -574,10 +570,10 @@ if (YZU.indexOf(YZN) != -0x1) {
         if (/^小焦点/ ['test'](YZW.data.child[YZaq].label)) delete YZW.data.child[YZaq].child;
         YZaq++;
     }
-    YZV = YZB.toStr(YZW);
+    YZV = $.toStr(YZW);
     const YZar = {};
     YZar.body = YZV;
-    YZB.done(YZar);
+    $.done(YZar);
 }
 if (YZU.indexOf(YZO) != -0x1) {
     if ('undefined' !== typeof YZW.data.tab.vipTypes[0x0]) {
@@ -587,24 +583,24 @@ if (YZU.indexOf(YZO) != -0x1) {
             YZat++;
         }
     }
-    YZV = YZB.toStr(YZW);
+    YZV = $.toStr(YZW);
     const YZas = {};
     YZas.body = YZV;
-    YZB.done(YZas);
+    $.done(YZas);
 }
 if (YZU.indexOf(YZP) != -0x1) {
     YZW.data = [];
-    YZV = YZB.toStr(YZW);
+    YZV = $.toStr(YZW);
     const YZau = {};
     YZau.body = YZV;
-    YZB.done(YZau);
+    $.done(YZau);
 }
 if (YZU.indexOf(YZQ) != -0x1) {
     delete YZW.data.listenSomething;
-    YZV = YZB.toStr(YZW);
+    YZV = $.toStr(YZW);
     const YZav = {};
     YZav.body = YZV;
-    YZB.done(YZav);
+    $.done(YZav);
 }
 if (YZU.indexOf(YZR) != -0x1) {
     let YZaw = ['发现', '推荐', '听书'];
@@ -615,11 +611,12 @@ if (YZU.indexOf(YZR) != -0x1) {
         }
         YZax++;
     }
-    YZV = YZB.toStr(YZW);
+    YZV = $.toStr(YZW);
     const YZay = {};
     YZay.body = YZV;
-    YZB.done(YZay);
+    $.done(YZay);
 }
+
 async function YZX() {
     const b = {};
     b.FGUeC = '7|6|4|5|1|3|2|0';
@@ -635,16 +632,16 @@ async function YZX() {
     while (true) {
         switch (d[e++]) {
         case '0':
-            YZB.setval(YZB.toStr(YZS), c.JLhJK);
+            $.setval($.toStr(YZS), c.JLhJK);
             continue;
         case '1':
-            YZW = YZB.toObj(res);
+            YZW = $.toObj(res);
             continue;
         case '2':
             YZS.ver = YZW.kuwo;
             continue;
         case '3':
-            if (c.NBJNo(YZT, YZW.kuwo)) YZB.msg(c.hykdt);
+            if (c.NBJNo(YZT, YZW.kuwo)) $.msg(c.hykdt);
             continue;
         case '4':
             info = info.match(/<article class=\"note-body\">([\s\S]*?)<\/article>/);
@@ -653,7 +650,7 @@ async function YZX() {
             res = info[0x1].replace(/(\s|<.*?>)/g, '');
             continue;
         case '6':
-            info = await YZB.http.get(YZU).then(f => f.body);
+            info = await $.http.get(YZU).then(f => f.body);
             continue;
         case '7':
             YZU = c.XERZN;
