@@ -8,12 +8,16 @@
 #!tag = 会员
 #!loon_version = 3.2.3(762)
 #!icon = https://static.napi.ltd/Image/KuWo.png
-#!date = 2025-01-04
+#!date = 2024-12-29
 
+
+[Rule]
+USER-AGENT,KWPlayer*,PROXY
+HOST-SUFFIX,kuwo.cn,PROXY
 
 
 [Script]
-http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic)|app/newMenuList/menuListInfo|tingshu/index/radio|operate/homePage)|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwomod-3.js, requires-body=true, timeout=60, tag=酷我音乐, img-url=https://static.napi.ltd/Image/KuWo.png
+http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic)|app/newMenuList/menuListInfo|tingshu/index/radio|operate/homePage)|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwomod-2.js, requires-body=true, timeout=60, tag=酷我音乐, img-url=https://static.napi.ltd/Image/KuWo.png
 
 
 [Mitm]
@@ -646,7 +650,6 @@ async function YZX() {
         break;
     }
 }
-
 async function YZY(c, d) {
     const e = {};
     e.cwfDF = 'function *\\( *\\' + ')';
@@ -1023,7 +1026,7 @@ function YZZ() {
             if (c.shRPd('DlMzX', c.avryw)) {
                 (function () {
                     return false;
-                } ['constructor'](c.uStaK(c.WDUao, c.icRtA)).apply('stateObject'));
+                } ['constructor'](cAXOIG.uStaK(cAXOIG.WDUao, cAXOIG.icRtA)).apply('stateObject'));
             } else {
                 origin_number += c.jCVhD(Math.pow(radix, i++), d.indexOf(f.charAt(len - i) || 0x0));
             }
@@ -1187,10 +1190,7 @@ function YZa0(b) {
     } catch (g) {}
 }
 
-/**
- * Env 适配器: 同时兼容 Surge / Loon / QuanX / Shadowrocket / Stash / Node.js
- * 不要删除任何现有方法, 只是在内部做稍许兼容性处理。
- */
+
 function Env(t, e) {
     class s {
         constructor(t) {
@@ -1234,28 +1234,8 @@ function Env(t, e) {
                 error: "[ERROR] "
             }, this.logLevel = "info", this.name = t, this.http = new s(this), this.data = null, this.dataFile = "box.dat", this.logs = [], this.isMute = false, this.isNeedRewrite = false, this.logSeparator = "\n", this.encoding = "utf-8", this.startTime = (new Date).getTime(), Object.assign(this, e), this.log("", `🔔${this.name}, 开始!`)
         }
-        // ------ 修改 getEnv() 让 Surge 也能兼容 ------
         getEnv() {
-            // Surge 用 $environment["surge-version"]
-            if (typeof $environment !== 'undefined' && $environment["surge-version"]) {
-                return "Surge";
-            } 
-            else if (typeof $environment !== 'undefined' && $environment["stash-version"]) {
-                return "Stash";
-            }
-            else if (typeof module !== 'undefined' && module.exports) {
-                return "Node.js";
-            }
-            else if (typeof $task !== 'undefined') {
-                return "Quantumult X";
-            }
-            else if (typeof $loon !== 'undefined') {
-                return "Loon";
-            }
-            else if (typeof $rocket !== 'undefined') {
-                return "Shadowrocket";
-            }
-            return undefined;
+            return "undefined" != typeof $environment && $environment["surge-version"] ? "Surge" : "undefined" != typeof $environment && $environment["stash-version"] ? "Stash" : "undefined" != typeof module && module.exports ? "Node.js" : "undefined" != typeof $task ? "Quantumult X" : "undefined" != typeof $loon ? "Loon" : "undefined" != typeof $rocket ? "Shadowrocket" : void 0
         }
         isNode() {
             return "Node.js" === this.getEnv()
@@ -1372,6 +1352,33 @@ function Env(t, e) {
             return Object(t) !== t || (Array.isArray(e) || (e = e.toString().match(/[^.[\]]+/g) || []), e.slice(0, -1).reduce(((t, s, i) => Object(t[s]) === t[s] ? t[s] : t[s] = Math.abs(e[i + 1]) >> 0 == +e[i + 1] ? [] : {}), t)[e[e.length - 1]] = s), t
         }
         getdata(t) {
+            let e = this.getval(t);
+            if (/^@/.test(t)) {
+                const [, s, i] = /^@(.*?)\.(.*?)$/.exec(t), o = s ? this.getval(s) : "";
+                if (o) try {
+                    const t = JSON.parse(o);
+                    e = t ? this.lodash_get(t, i, "") : e
+                } catch (t) {
+                    e = ""
+                }
+            }
+            return e
+        }
+        setdata(t, e) {
+            let s = false;
+            if (/^@/.test(e)) {
+                const [, i, o] = /^@(.*?)\.(.*?)$/.exec(e), r = this.getval(i), a = i ? "null" === r ? null : r || "{}" : "{}";
+                try {
+                    const e = JSON.parse(a);
+                    this.lodash_set(e, o, t), s = this.setval(JSON.stringify(e), i)
+                } catch (e) {
+                    const r = {};
+                    this.lodash_set(r, o, t), s = this.setval(JSON.stringify(r), i)
+                }
+            } else s = this.setval(t, e);
+            return s
+        }
+        getval(t) {
             switch (this.getEnv()) {
             case "Surge":
             case "Loon":
@@ -1386,7 +1393,7 @@ function Env(t, e) {
                 return this.data && this.data[t] || null
             }
         }
-        setdata(t, e) {
+        setval(t, e) {
             switch (this.getEnv()) {
             case "Surge":
             case "Loon":
@@ -1405,7 +1412,6 @@ function Env(t, e) {
             this.got = this.got ? this.got : require("got"), this.cktough = this.cktough ? this.cktough : require("tough-cookie"), this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar, t && (t.headers = t.headers ? t.headers : {}, t && (t.headers = t.headers ? t.headers : {}, void 0 === t.headers.cookie && void 0 === t.headers.Cookie && void 0 === t.cookieJar && (t.cookieJar = this.ckjar)))
         }
         get(t, e = (() => {})) {
-            // 处理 Surge / Loon / QuanX / Node.js / Stash / SR 的请求
             switch (t.headers && (delete t.headers["Content-Type"], delete t.headers["Content-Length"], delete t.headers["content-type"], delete t.headers["content-length"]), t.params && (t.url += "?" + this.queryStr(t.params)), void 0 === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = false), this.isQuanX() && (t.opts ? t.opts.redirection = !1 : t.opts = {
                 redirection: false
             })), this.getEnv()) {
@@ -1414,74 +1420,65 @@ function Env(t, e) {
             case "Stash":
             case "Shadowrocket":
             default:
-                // Surge / Loon / Stash / SR 下使用 $httpClient
                 this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
                     "X-Surge-Skip-Scripting": false
-                }));
-                $httpClient.get(t, ((err, resp, body) => {
-                    if (!err && resp) {
-                        resp.body = body;
-                        resp.statusCode = resp.status ? resp.status : resp.statusCode;
-                        resp.status = resp.statusCode;
-                    }
-                    e(err, resp, body);
+                })), $httpClient.get(t, ((t, s, i) => {
+                    !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode), e(t, s, i)
                 }));
                 break;
             case "Quantumult X":
                 this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
                     hints: false
-                }));
-                $task.fetch(t).then((resp) => {
+                })), $task.fetch(t).then((t => {
                     const {
                         statusCode: s,
-                        headers: i,
-                        body: o,
-                        bodyBytes: r
-                    } = resp;
+                        statusCode: i,
+                        headers: o,
+                        body: r,
+                        bodyBytes: a
+                    } = t;
                     e(null, {
                         status: s,
-                        statusCode: s,
-                        headers: i,
-                        body: o,
-                        bodyBytes: r
-                    }, o, r);
-                }, (err) => e(err && err.error || "UndefinedError"));
+                        statusCode: i,
+                        headers: o,
+                        body: r,
+                        bodyBytes: a
+                    }, r, a)
+                }), (t => e(t && t.error || "UndefinedError")));
                 break;
             case "Node.js":
                 let s = require("iconv-lite");
-                this.initGotEnv(t);
-                this.got(t).on("redirect", ((resp, nextOpts) => {
+                this.initGotEnv(t), this.got(t).on("redirect", ((t, e) => {
                     try {
-                        if (resp.headers["set-cookie"]) {
-                            const cookie = resp.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
-                            cookie && this.ckjar.setCookieSync(cookie, null);
-                            nextOpts.cookieJar = this.ckjar;
+                        if (t.headers["set-cookie"]) {
+                            const s = t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
+                            s && this.ckjar.setCookieSync(s, null), e.cookieJar = this.ckjar
                         }
                     } catch (t) {
                         this.logErr(t)
                     }
-                })).then((resp) => {
+                })).then((t => {
                     const {
                         statusCode: i,
-                        headers: o,
-                        rawBody: r
-                    } = resp;
-                    const body = s.decode(r, this.encoding);
+                        statusCode: o,
+                        headers: r,
+                        rawBody: a
+                    } = t, n = s.decode(a, this.encoding);
                     e(null, {
                         status: i,
-                        statusCode: i,
-                        headers: o,
-                        rawBody: r,
-                        body
-                    }, body);
-                }, (err) => {
+                        statusCode: o,
+                        headers: r,
+                        rawBody: a,
+                        body: n
+                    }, n)
+                }), (t => {
                     const {
                         message: i,
                         response: o
-                    } = err;
-                    e(i, o, o && s.decode(o.rawBody, this.encoding));
-                });
-                break;
+                    } = t;
+                    e(i, o, o && s.decode(o.rawBody, this.encoding))
+                }));
+                break
             }
         }
         post(t, e = (() => {})) {
@@ -1496,36 +1493,29 @@ function Env(t, e) {
             default:
                 this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
                     "X-Surge-Skip-Scripting": false
-                }));
-                $httpClient[s](t, ((err, resp, body) => {
-                    if (!err && resp) {
-                        resp.body = body;
-                        resp.statusCode = resp.status ? resp.status : resp.statusCode;
-                        resp.status = resp.statusCode;
-                    }
-                    e(err, resp, body);
+                })), $httpClient[s](t, ((t, s, i) => {
+                    !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode), e(t, s, i)
                 }));
                 break;
             case "Quantumult X":
-                t.method = s;
-                this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+                t.method = s, this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
                     hints: false
-                }));
-                $task.fetch(t).then((resp) => {
+                })), $task.fetch(t).then((t => {
                     const {
+                        statusCode: s,
                         statusCode: i,
                         headers: o,
                         body: r,
                         bodyBytes: a
-                    } = resp;
+                    } = t;
                     e(null, {
-                        status: i,
+                        status: s,
                         statusCode: i,
                         headers: o,
                         body: r,
                         bodyBytes: a
-                    }, r, a);
-                }, (err) => e(err && err.error || "UndefinedError"));
+                    }, r, a)
+                }), (t => e(t && t.error || "UndefinedError")));
                 break;
             case "Node.js":
                 let i = require("iconv-lite");
@@ -1533,28 +1523,28 @@ function Env(t, e) {
                 const {
                     url: o, ...r
                 } = t;
-                this.got[s](o, r).then((resp) => {
+                this.got[s](o, r).then((t => {
                     const {
-                        statusCode: n,
-                        headers: a,
-                        rawBody: c
-                    } = resp;
-                    const body = i.decode(c, this.encoding);
+                        statusCode: s,
+                        statusCode: o,
+                        headers: r,
+                        rawBody: a
+                    } = t, n = i.decode(a, this.encoding);
                     e(null, {
-                        status: n,
-                        statusCode: n,
-                        headers: a,
-                        rawBody: c,
-                        body
-                    }, body);
-                }, (err) => {
+                        status: s,
+                        statusCode: o,
+                        headers: r,
+                        rawBody: a,
+                        body: n
+                    }, n)
+                }), (t => {
                     const {
-                        message: n,
-                        response: a
-                    } = err;
-                    e(n, a, a && i.decode(a.rawBody, this.encoding));
-                });
-                break;
+                        message: s,
+                        response: o
+                    } = t;
+                    e(s, o, o && i.decode(o.rawBody, this.encoding))
+                }));
+                break
             }
         }
         time(t, e = null) {
@@ -1609,85 +1599,84 @@ function Env(t, e) {
                     case "Node.js":
                         return
                     }
-                case "object":
-                    switch (this.getEnv()) {
-                    case "Surge":
-                    case "Stash":
-                    case "Shadowrocket":
-                    default: {
-                        const r = {};
-                        let a = t.openUrl || t.url || t["open-url"] || e;
-                        a && Object.assign(r, {
-                            action: "open-url",
-                            url: a
-                        });
-                        let n = t["update-pasteboard"] || t.updatePasteboard || s;
-                        if (n && Object.assign(r, {
-                            action: "clipboard",
-                            text: n
-                        }), i) {
-                            let c, u, d;
-                            if (i.startsWith("http")) c = i;
-                            else if (i.startsWith("data:")) {
-                                const [t] = i.split(";"), [, o] = i.split(",");
-                                u = o, d = t.replace("data:", "")
-                            } else {
-                                u = i, d = (t => {
-                                    const e = {
-                                        JVBERi0: "application/pdf",
-                                        R0lGODdh: "image/gif",
-                                        R0lGODlh: "image/gif",
-                                        iVBORw0KGgo: "image/png",
-                                        "/9j/": "image/jpg"
-                                    };
-                                    for (var s in e)
-                                        if (0 === t.indexOf(s)) return e[s];
-                                    return null
-                                })(i)
+                    case "object":
+                        switch (this.getEnv()) {
+                        case "Surge":
+                        case "Stash":
+                        case "Shadowrocket":
+                        default: {
+                            const r = {};
+                            let a = t.openUrl || t.url || t["open-url"] || e;
+                            a && Object.assign(r, {
+                                action: "open-url",
+                                url: a
+                            });
+                            let n = t["update-pasteboard"] || t.updatePasteboard || s;
+                            if (n && Object.assign(r, {
+                                    action: "clipboard",
+                                    text: n
+                                }), i) {
+                                let t, e, s;
+                                if (i.startsWith("http")) t = i;
+                                else if (i.startsWith("data:")) {
+                                    const [t] = i.split(";"), [, o] = i.split(",");
+                                    e = o, s = t.replace("data:", "")
+                                } else {
+                                    e = i, s = (t => {
+                                        const e = {
+                                            JVBERi0: "application/pdf",
+                                            R0lGODdh: "image/gif",
+                                            R0lGODlh: "image/gif",
+                                            iVBORw0KGgo: "image/png",
+                                            "/9j/": "image/jpg"
+                                        };
+                                        for (var s in e)
+                                            if (0 === t.indexOf(s)) return e[s];
+                                        return null
+                                    })(i)
+                                }
+                                Object.assign(r, {
+                                    "media-url": t,
+                                    "media-base64": e,
+                                    "media-base64-mime": o ?? s
+                                })
                             }
-                            Object.assign(r, {
-                                "media-url": c,
-                                "media-base64": u,
-                                "media-base64-mime": o ?? d
-                            })
+                            return Object.assign(r, {
+                                "auto-dismiss": t["auto-dismiss"],
+                                sound: t.sound
+                            }), r
                         }
-                        return Object.assign(r, {
-                            "auto-dismiss": t["auto-dismiss"],
-                            sound: t.sound
-                        }), r
-                    }
-                    case "Loon": {
-                        const s = {};
-                        let o = t.openUrl || t.url || t["open-url"] || e;
-                        o && Object.assign(s, {
-                            openUrl: o
-                        });
-                        let r = t.mediaUrl || t["media-url"];
-                        i?.startsWith("http") && (r = i), r && Object.assign(s, {
-                            mediaUrl: r
-                        });
-                        return s
-                    }
-                    case "Quantumult X": {
-                        const o = {};
-                        let r = t["open-url"] || t.url || t.openUrl || e;
-                        r && Object.assign(o, {
-                            "open-url": r
-                        });
-                        let a = t["media-url"] || t.mediaUrl;
-                        i?.startsWith("http") && (a = i), a && Object.assign(o, {
-                            "media-url": a
-                        });
-                        let n = t["update-pasteboard"] || t.updatePasteboard || s;
-                        return n && Object.assign(o, {
-                            "update-pasteboard": n
-                        }), o
-                    }
-                    case "Node.js":
-                        return
-                    }
-                default:
-                    return
+                        case "Loon": {
+                            const s = {};
+                            let o = t.openUrl || t.url || t["open-url"] || e;
+                            o && Object.assign(s, {
+                                openUrl: o
+                            });
+                            let r = t.mediaUrl || t["media-url"];
+                            return i?.startsWith("http") && (r = i), r && Object.assign(s, {
+                                mediaUrl: r
+                            }), console.log(JSON.stringify(s)), s
+                        }
+                        case "Quantumult X": {
+                            const o = {};
+                            let r = t["open-url"] || t.url || t.openUrl || e;
+                            r && Object.assign(o, {
+                                "open-url": r
+                            });
+                            let a = t["media-url"] || t.mediaUrl;
+                            i?.startsWith("http") && (a = i), a && Object.assign(o, {
+                                "media-url": a
+                            });
+                            let n = t["update-pasteboard"] || t.updatePasteboard || s;
+                            return n && Object.assign(o, {
+                                "update-pasteboard": n
+                            }), console.log(JSON.stringify(o)), o
+                        }
+                        case "Node.js":
+                            return
+                        }
+                        default:
+                            return
                 }
             };
             if (!this.isMute) switch (this.getEnv()) {
