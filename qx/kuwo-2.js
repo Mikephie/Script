@@ -20,6 +20,879 @@ hostname = *.kuwo.cn
 ******************************************/
 
 
+//Sat Jan 04 2025 00:10:50 GMT+0000 (Coordinated Universal Time)
+//Base:https://github.com/echo094/decode-js
+//Modify:https://github.com/smallfawn/decode_action
+(() => {
+  function d(q) {
+    var s = {
+      FPlRl: function (v, w) {
+        return v === w;
+      },
+      qZmZO: function (v, w) {
+        return v(w);
+      },
+      xGQkA: function (v, w, x, y, z) {
+        return v(w, x, y, z);
+      },
+      SBrUn: "throw",
+      cBxYD: function (v, w) {
+        return v === w;
+      },
+      GVeAN: "GjXNe",
+      VvFGh: function (v, w) {
+        return v == w;
+      },
+      GdWVF: function (v, w) {
+        return v === w;
+      },
+      AEvsX: "symbol"
+    };
+    {
+      d = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (w) {
+        return typeof w;
+      } : function (w) {
+        {
+          return w && "function" == typeof Symbol && w.constructor === Symbol && w !== Symbol.prototype ? "symbol" : typeof w;
+        }
+      };
+      return d(q);
+    }
+  }
+  function f() {
+    "use strict";
+
+    var q = {
+      fRDXI: "4|0|1|5|2|3",
+      PEKxn: function (ae, af, ag) {
+        return ae(af, ag);
+      },
+      crmsS: function (ae, af) {
+        return ae !== af;
+      },
+      uWTbh: "return",
+      NvFiM: function (ae, af, ag, ah) {
+        return ae(af, ag, ah);
+      },
+      OiUVS: "next",
+      PjqZy: function (ae, af) {
+        return ae !== af;
+      },
+      KMskP: "GLOtI",
+      IwQUF: "EAWqo",
+      PxTJO: "FxylJ",
+      YZmjy: function (ae, af) {
+        return ae in af;
+      },
+      GqBdB: function (ae, af) {
+        return ae(af);
+      },
+      kkkzx: "normal",
+      XkJLn: function (ae, af) {
+        return ae instanceof af;
+      },
+      HWDVb: "_invoke",
+      FDRvH: function (ae, af, ag, ah) {
+        return ae(af, ag, ah);
+      },
+      xGsOc: function (ae, af) {
+        return ae == af;
+      },
+      czSDT: function (ae, af) {
+        return ae === af;
+      },
+      KKTrA: "symbol",
+      VZkhT: "kTvpH",
+      SLbpg: function (ae, af) {
+        return ae(af);
+      },
+      LYCuh: "try statement without catch or finally",
+      Gixcg: function (ae, af) {
+        return ae(af);
+      },
+      fOzSn: function (ae, af) {
+        return ae === af;
+      },
+      cNjZD: "SLDPk",
+      oGNIa: function (ae, af, ag, ah) {
+        return ae(af, ag, ah);
+      },
+      LUwMb: function (ae, af) {
+        return ae === af;
+      },
+      YLEOE: "throw",
+      RdTTf: function (ae, af) {
+        return ae === af;
+      },
+      OxUcI: "XaTNg",
+      viUFd: function (ae, af, ag, ah, ai) {
+        return ae(af, ag, ah, ai);
+      },
+      UwnZg: "ZkIeL",
+      wwlyg: "Flddz",
+      nLGcU: "Oxqzp",
+      RQNRx: "uuzqw",
+      lKhgY: "IjHHf",
+      gKHKX: function (ae, af) {
+        return ae == af;
+      },
+      GyFcs: "object",
+      VHixi: "__await",
+      bCXqL: "Jifvf",
+      EoSWz: function (ae, af, ag, ah, ai) {
+        return ae(af, ag, ah, ai);
+      },
+      TWiXg: "HrZfO",
+      UPUHU: function (ae, af, ag) {
+        return ae(af, ag);
+      },
+      MJxin: function (ae, af, ag, ah, ai) {
+        return ae(af, ag, ah, ai);
+      },
+      hJJbB: function (ae, af) {
+        return ae !== af;
+      },
+      btRXY: "ZntNU",
+      ngvzE: function (ae) {
+        return ae();
+      },
+      iDNVf: function (ae, af) {
+        return ae !== af;
+      },
+      KVxvs: "bvqry",
+      TRBPm: function (ae, af) {
+        return ae in af;
+      },
+      YWiWc: function (ae, af) {
+        return ae == af;
+      },
+      EzMeW: function (ae, af) {
+        return ae(af);
+      },
+      grYcM: "wfJaW",
+      NKDUI: "Generator is already running",
+      yKVWh: function (ae, af) {
+        return ae === af;
+      },
+      cXmjw: "iSekA",
+      FwAga: "ioHBS",
+      MwoCh: "rrcOI",
+      WCeBd: function (ae, af) {
+        return ae === af;
+      },
+      sMqFB: "WZico",
+      ormyM: "SleMG",
+      mJJGw: function (ae, af) {
+        return ae !== af;
+      },
+      HgYuN: "CMhbh",
+      elVxl: function (ae, af) {
+        return ae === af;
+      },
+      usyiO: "njoQk",
+      EEXaF: function (ae, af) {
+        return ae === af;
+      },
+      AhkkM: function (ae, af) {
+        return ae === af;
+      },
+      EJcBb: function (ae, af) {
+        return ae < af;
+      },
+      liGAG: function (ae, af) {
+        return ae === af;
+      },
+      rovqz: "GLInR",
+      OquUt: function (ae, af) {
+        return ae in af;
+      },
+      KHSsW: function (ae, af) {
+        return ae === af;
+      },
+      BRVnC: "ZCFRe",
+      udZhL: "XJxmP",
+      twjfe: "(((.+)+)+)+$",
+      AdLgO: function (ae, af, ag, ah, ai, aj, ak, al) {
+        return ae(af, ag, ah, ai, aj, ak, al);
+      },
+      SscDE: "zHSUI",
+      XhEXI: "root",
+      wfZrf: "vziWg",
+      IeJKS: "break",
+      bHWOY: function (ae, af) {
+        return ae === af;
+      },
+      PVewI: function (ae, af) {
+        return ae === af;
+      },
+      DNiyb: "end",
+      ntSat: function (ae, af) {
+        return ae === af;
+      },
+      dpfaX: function (ae, af) {
+        return ae === af;
+      },
+      YnqKH: function (ae, af) {
+        return ae === af;
+      },
+      mQeHK: "wobtx",
+      GMEYt: function (ae, af) {
+        return ae === af;
+      },
+      QdfUQ: "neKSl",
+      yflXL: "mxwZm",
+      MOkan: function (ae, af) {
+        return ae === af;
+      },
+      MOhXV: function (ae, af) {
+        return ae(af);
+      },
+      AOoBv: "eJIIf",
+      BZJbR: "CcbXv",
+      LAaVA: function (ae, af) {
+        return ae(af);
+      },
+      QVIEM: function (ae, af, ag, ah, ai) {
+        return ae(af, ag, ah, ai);
+      },
+      khglp: function (ae, af) {
+        return ae !== af;
+      },
+      xEffm: "yxwuO",
+      gkWGk: "[object Generator]",
+      xozTN: function (ae, af) {
+        return ae(af);
+      },
+      mvCWV: "function",
+      zdQZT: " is not iterable",
+      vOEBC: function (ae, af, ag, ah, ai, aj, ak, al) {
+        return ae(af, ag, ah, ai, aj, ak, al);
+      },
+      xDzvs: "WjBQJ",
+      QGihh: "OCkXJ",
+      xQbPB: "NZLwC",
+      IuLXd: function (ae, af) {
+        return ae(af);
+      },
+      bNnhM: function (ae, af) {
+        return ae <= af;
+      },
+      fTTKH: "XDQbF",
+      doAed: "catchLoc",
+      loYjK: "finallyLoc",
+      gHFqX: function (ae, af) {
+        return ae && af;
+      },
+      lPlsO: "ZDMKV",
+      hgcEh: function (ae, af) {
+        return ae < af;
+      },
+      dwxBD: "soShb",
+      ozZES: "TQlPQ",
+      ZgMDn: function (ae, af) {
+        return ae < af;
+      },
+      xtzxo: "MGrRp",
+      ntaru: function (ae, af) {
+        return ae !== af;
+      },
+      rlQki: "xNVJv",
+      RqxUh: function (ae, af) {
+        return ae - af;
+      },
+      OBveN: function (ae, af) {
+        return ae !== af;
+      },
+      UkImx: "xohVN",
+      WHuHo: "fKhMc",
+      CPTcr: function (ae, af) {
+        return ae < af;
+      },
+      qxSNO: "poSdH",
+      sUeGA: function (ae, af) {
+        return ae === af;
+      },
+      yjvXb: "continue",
+      FkWve: function (ae, af) {
+        return ae <= af;
+      }
+    };
+    f = function () {
+      var ae = {
+        iETEF: "4|0|1|5|2|3",
+        ZMURs: function (af, ag) {
+          return af === ag;
+        },
+        jtyWN: "throw",
+        CCHwy: function (af, ag, ah) {
+          return af(ag, ah);
+        },
+        BfZjH: function (af, ag) {
+          return af !== ag;
+        },
+        UpAjY: "return",
+        gnLQj: function (af, ag) {
+          return af + ag;
+        },
+        Rdxwm: "' method",
+        BpyvQ: function (af, ag, ah, ai) {
+          return af(ag, ah, ai);
+        },
+        KSuNL: "next",
+        gLGjt: function (af, ag) {
+          return af === ag;
+        }
+      };
+      {
+        return A;
+      }
+    };
+    var z;
+    var A = {};
+    var B = Object.prototype;
+    var D = B.hasOwnProperty;
+    var G = Object.defineProperty || function (ae, af, ag) {
+      {
+        ae[af] = ag.value;
+      }
+    };
+    var H = "function" == typeof Symbol ? Symbol : {};
+    var I = H.iterator || "@@iterator";
+    var J = H.asyncIterator || "@@asyncIterator";
+    var K = H.toStringTag || "@@toStringTag";
+    function M(ae, af, ag) {
+      Object.defineProperty(ae, af, {
+        value: ag,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+      return ae[af];
+    }
+    try {
+      {
+        M({}, "");
+      }
+    } catch (af) {
+      {
+        M = function (ah, ai, aj) {
+          return ah[ai] = aj;
+        };
+      }
+    }
+    function P(ah, ai, aj, ak) {
+      {
+        var am = ai && ai.prototype instanceof Z ? ai : Z;
+        var an = Object.create(am.prototype);
+        var ao = new ac(ak || []);
+        G(an, "_invoke", {
+          value: a8(ah, aj, ao)
+        });
+        return an;
+      }
+    }
+    function Q(ah, ai, aj) {
+      {
+        try {
+          {
+            return {
+              type: "normal",
+              arg: ah.call(ai, aj)
+            };
+          }
+        } catch (am) {
+          return {
+            type: "throw",
+            arg: am
+          };
+        }
+      }
+    }
+    A.wrap = P;
+    var R = "suspendedStart";
+    var V = "suspendedYield";
+    var W = "executing";
+    var X = "completed";
+    var Y = {};
+    function Z() {}
+    function a0() {}
+    function a1() {}
+    var a2 = {};
+    M(a2, I, function () {
+      return this;
+    });
+    var a3 = Object.getPrototypeOf;
+    var a4 = a3 && a3(a3(ad([])));
+    a4 && a4 !== B && D.call(a4, I) && (a2 = a4);
+    a1.prototype = Z.prototype = Object.create(a2);
+    var a5 = a1.prototype;
+    function a6(ah) {
+      {
+        ["next", "throw", "return"].forEach(function (aj) {
+          {
+            M(ah, aj, function (al) {
+              {
+                return this._invoke(aj, al);
+              }
+            });
+          }
+        });
+      }
+    }
+    function a7(ah, ai) {
+      {
+        function am(an, ao, ap, aq) {
+          {
+            var as = Q(ah[an], ah, ao);
+            if ("throw" !== as.type) {
+              {
+                var at = as.arg;
+                var au = at.value;
+                return au && "object" == d(au) && D.call(au, "__await") ? ai.resolve(au.__await).then(function (ax) {
+                  {
+                    am("next", ax, ap, aq);
+                  }
+                }, function (ax) {
+                  {
+                    am("throw", ax, ap, aq);
+                  }
+                }) : ai.resolve(au).then(function (ax) {
+                  {
+                    at.value = ax;
+                    ap(at);
+                  }
+                }, function (ax) {
+                  {
+                    return am("throw", ax, ap, aq);
+                  }
+                });
+              }
+            }
+            aq(as.arg);
+          }
+        }
+        var ak;
+        G(this, "_invoke", {
+          value: function (an, ao) {
+            {
+              function ar() {
+                {
+                  return new ai(function (au, av) {
+                    {
+                      am(an, ao, au, av);
+                    }
+                  });
+                }
+              }
+              return ak = ak ? ak.then(ar, ar) : ar();
+            }
+          }
+        });
+      }
+    }
+    function a8(ah, ai, aj) {
+      {
+        var al = R;
+        return function (an, ao) {
+          {
+            if (al === W) {
+              throw Error("Generator is already running");
+            }
+            if (al === X) {
+              {
+                if ("throw" === an) {
+                  throw ao;
+                }
+                return {
+                  value: z,
+                  done: true
+                };
+              }
+            }
+            for (aj.method = an, aj.arg = ao;;) {
+              {
+                var aq = aj.delegate;
+                if (aq) {
+                  {
+                    var ar = a9(aq, aj);
+                    if (ar) {
+                      {
+                        if (ar === Y) {
+                          continue;
+                        }
+                        return ar;
+                      }
+                    }
+                  }
+                }
+                if ("next" === aj.method) {
+                  aj.sent = aj._sent = aj.arg;
+                } else {
+                  if ("throw" === aj.method) {
+                    {
+                      if (al === R) {
+                        throw al = X, aj.arg;
+                      }
+                      aj.dispatchException(aj.arg);
+                    }
+                  } else {
+                    "return" === aj.method && aj.abrupt("return", aj.arg);
+                  }
+                }
+                al = W;
+                var as = Q(ah, ai, aj);
+                if ("normal" === as.type) {
+                  {
+                    if (al = aj.done ? X : V, as.arg === Y) {
+                      continue;
+                    }
+                    return {
+                      value: as.arg,
+                      done: aj.done
+                    };
+                  }
+                }
+                "throw" === as.type && (al = X, aj.method = "throw", aj.arg = as.arg);
+              }
+            }
+          }
+        };
+      }
+    }
+    function a9(ah, ai) {
+      {
+        var aj = ai.method;
+        var ak = ah.iterator[aj];
+        if (ak === z) {
+          ai.delegate = null;
+          "throw" === aj && ah.iterator.return && (ai.method = "return", ai.arg = z, a9(ah, ai), "throw" === ai.method) || "return" !== aj && (ai.method = "throw", ai.arg = new TypeError("The iterator does not provide a '" + aj + "' method"));
+          return Y;
+        }
+        var al = Q(ak, ah.iterator, ai.arg);
+        if ("throw" === al.type) {
+          ai.method = "throw";
+          ai.arg = al.arg;
+          ai.delegate = null;
+          return Y;
+        }
+        var am = al.arg;
+        return am ? am.done ? (ai[ah.resultName] = am.value, ai.next = ah.nextLoc, "return" !== ai.method && (ai.method = "next", ai.arg = z), ai.delegate = null, Y) : am : (ai.method = "throw", ai.arg = new TypeError("iterator result is not an object"), ai.delegate = null, Y);
+      }
+    }
+    function aa(ah) {
+      {
+        var ai = {
+          tryLoc: ah[0]
+        };
+        1 in ah && (ai.catchLoc = ah[1]);
+        2 in ah && (ai.finallyLoc = ah[2], ai.afterLoc = ah[3]);
+        this.tryEntries.push(ai);
+      }
+    }
+    function ab(ah) {
+      {
+        var ai = ah.completion || {};
+        ai.type = "normal";
+        delete ai.arg;
+        ah.completion = ai;
+      }
+    }
+    function ac(ah) {
+      this.tryEntries = [{
+        tryLoc: "root"
+      }];
+      ah.forEach(aa, this);
+      this.reset(true);
+    }
+    function ad(ah) {
+      {
+        if (ah || "" === ah) {
+          {
+            var aj = ah[I];
+            if (aj) {
+              return aj.call(ah);
+            }
+            if ("function" == typeof ah.next) {
+              return ah;
+            }
+            if (!isNaN(ah.length)) {
+              {
+                var ak = -1;
+                var al = function an() {
+                  {
+                    for (; ++ak < ah.length;) {
+                      if (D.call(ah, ak)) {
+                        an.value = ah[ak];
+                        an.done = false;
+                        return an;
+                      }
+                    }
+                    an.value = z;
+                    an.done = true;
+                    return an;
+                  }
+                };
+                return al.next = al;
+              }
+            }
+          }
+        }
+        throw new TypeError(d(ah) + " is not iterable");
+      }
+    }
+    a0.prototype = a1;
+    G(a5, "constructor", {
+      value: a1,
+      configurable: true
+    });
+    G(a1, "constructor", {
+      value: a0,
+      configurable: true
+    });
+    a0.displayName = M(a1, K, "GeneratorFunction");
+    A.isGeneratorFunction = function (ah) {
+      {
+        var aj = "function" == typeof ah && ah.constructor;
+        return !!aj && (aj === a0 || "GeneratorFunction" === (aj.displayName || aj.name));
+      }
+    };
+    A.mark = function (ah) {
+      {
+        Object.setPrototypeOf ? Object.setPrototypeOf(ah, a1) : (ah.__proto__ = a1, M(ah, K, "GeneratorFunction"));
+        ah.prototype = Object.create(a5);
+        return ah;
+      }
+    };
+    A.awrap = function (ah) {
+      {
+        return {
+          __await: ah
+        };
+      }
+    };
+    a6(a7.prototype);
+    M(a7.prototype, J, function () {
+      {
+        return this;
+      }
+    });
+    A.AsyncIterator = a7;
+    A.async = function (ah, ai, aj, ak, al) {
+      {
+        undefined === al && (al = Promise);
+        var an = new a7(P(ah, ai, aj, ak), al);
+        return A.isGeneratorFunction(ai) ? an : an.next().then(function (ap) {
+          return ap.done ? ap.value : an.next();
+        });
+      }
+    };
+    a6(a5);
+    M(a5, K, "Generator");
+    M(a5, I, function () {
+      {
+        return this;
+      }
+    });
+    M(a5, "toString", function () {
+      {
+        return "[object Generator]";
+      }
+    });
+    A.keys = function (ah) {
+      {
+        var aj = Object(ah);
+        var ak = [];
+        for (var al in aj) ak.push(al);
+        ak.reverse();
+        return function am() {
+          {
+            for (; ak.length;) {
+              var an = ak.pop();
+              if (an in aj) {
+                am.value = an;
+                am.done = false;
+                return am;
+              }
+            }
+            am.done = true;
+            return am;
+          }
+        };
+      }
+    };
+    A.values = ad;
+    ac.prototype = {
+      constructor: ac,
+      reset: function (ah) {
+        {
+          if (this.prev = 0, this.next = 0, this.sent = this._sent = z, this.done = false, this.delegate = null, this.method = "next", this.arg = z, this.tryEntries.forEach(ab), !ah) {
+            for (var aj in this) "t" === aj.charAt(0) && D.call(this, aj) && !isNaN(+aj.slice(1)) && (this[aj] = z);
+          }
+        }
+      },
+      stop: function () {
+        {
+          this.done = true;
+          var ah = this.tryEntries[0].completion;
+          if ("throw" === ah.type) {
+            throw ah.arg;
+          }
+          return this.rval;
+        }
+      },
+      dispatchException: function (ah) {
+        {
+          if (this.done) {
+            throw ah;
+          }
+          var aj = this;
+          function ap(aq, ar) {
+            {
+              am.type = "throw";
+              am.arg = ah;
+              aj.next = aq;
+              ar && (aj.method = "next", aj.arg = z);
+              return !!ar;
+            }
+          }
+          for (var ak = this.tryEntries.length - 1; ak >= 0; --ak) {
+            {
+              var al = this.tryEntries[ak];
+              var am = al.completion;
+              if ("root" === al.tryLoc) {
+                return ap("end");
+              }
+              if (al.tryLoc <= this.prev) {
+                {
+                  var an = D.call(al, "catchLoc");
+                  var ao = D.call(al, "finallyLoc");
+                  if (an && ao) {
+                    {
+                      if (this.prev < al.catchLoc) {
+                        return ap(al.catchLoc, true);
+                      }
+                      if (this.prev < al.finallyLoc) {
+                        return ap(al.finallyLoc);
+                      }
+                    }
+                  } else {
+                    if (an) {
+                      {
+                        if (this.prev < al.catchLoc) {
+                          return ap(al.catchLoc, true);
+                        }
+                      }
+                    } else {
+                      {
+                        if (!ao) {
+                          throw Error("try statement without catch or finally");
+                        }
+                        if (this.prev < al.finallyLoc) {
+                          return ap(al.finallyLoc);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      abrupt: function (ah, ai) {
+        {
+          for (var aj = this.tryEntries.length - 1; aj >= 0; --aj) {
+            {
+              var ak = this.tryEntries[aj];
+              if (ak.tryLoc <= this.prev && D.call(ak, "finallyLoc") && this.prev < ak.finallyLoc) {
+                {
+                  var al = ak;
+                  break;
+                }
+              }
+            }
+          }
+          al && ("break" === ah || "continue" === ah) && al.tryLoc <= ai && ai <= al.finallyLoc && (al = null);
+          var am = al ? al.completion : {};
+          am.type = ah;
+          am.arg = ai;
+          return al ? (this.method = "next", this.next = al.finallyLoc, Y) : this.complete(am);
+        }
+      },
+      complete: function (ah, ai) {
+        {
+          if ("throw" === ah.type) {
+            throw ah.arg;
+          }
+          "break" === ah.type || "continue" === ah.type ? this.next = ah.arg : "return" === ah.type ? (this.rval = this.arg = ah.arg, this.method = "return", this.next = "end") : "normal" === ah.type && ai && (this.next = ai);
+          return Y;
+        }
+      },
+      finish: function (ah) {
+        {
+          for (var ai = this.tryEntries.length - 1; ai >= 0; --ai) {
+            {
+              var aj = this.tryEntries[ai];
+              if (aj.finallyLoc === ah) {
+                this.complete(aj.completion, aj.afterLoc);
+                ab(aj);
+                return Y;
+              }
+            }
+          }
+        }
+      },
+      catch: function (ah) {
+        for (var ai = this.tryEntries.length - 1; ai >= 0; --ai) {
+          var aj = this.tryEntries[ai];
+          if (aj.tryLoc === ah) {
+            var ak = aj.completion;
+            if ("throw" === ak.type) {
+              var al = ak.arg;
+              ab(aj);
+            }
+            return al;
+          }
+        }
+        throw Error("illegal catch attempt");
+      },
+      delegateYield: function (ah, ai, aj) {
+        this.delegate = {
+          iterator: ad(ah),
+          resultName: ai,
+          nextLoc: aj
+        };
+        "next" === this.method && (this.arg = z);
+        return Y;
+      }
+    };
+    return A;
+  }
+  function g(q, s, v, w, x, y, z) {
+    try {
+      var A = q[y](z);
+      var B = A.value;
+    } catch (C) {
+      return void v(C);
+    }
+    A.done ? s(B) : Promise.resolve(B).then(w, x);
+  }
+  function h(q) {
+    return function () {
+      var v = this;
+      var w = arguments;
+      return new Promise(function (x, y) {
+        var A = q.apply(v, w);
+        function B(D) {
+          g(A, x, y, B, C, "next", D);
+        }
+        function C(D) {
+          g(A, x, y, B, C, "throw", D);
+        }
+        B(undefined);
+      });
+    };
+  }
   var j = Env("酷我音乐");
   var k = "kuwo_".concat(j.time("yyyyMM"), "_notified");
   var l = j.toObj($response.body) || {};
