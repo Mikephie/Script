@@ -3,7 +3,7 @@
 2024.1.12
 
 [rewrite_local]
-^https:\/\/paper\.zjapp\.xyz\/api\/v1\/product\/receipt\/verify url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/sj100.js
+^https:\/\/paper\.zjapp\.xyz\/api\/v1\/status\/list url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/sj100.js
 
 [mitm]
 hostname = paper.zjapp.xyz
@@ -23,9 +23,3 @@ obj.data.user_status_infos = [{
 $done({
   "body": JSON.stringify(obj)
 });
-
-^https:\/\/paper\.zjapp\.xyz\/api\/v1\/product\/receipt\/verify url script-response-body
-
-[mitm]
-
-hostname = paper.zjapp.xyz
