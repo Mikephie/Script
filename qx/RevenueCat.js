@@ -1,3 +1,23 @@
+/*************************************
+
+项目名称：Revenuecat 系列解锁合集
+下载地址：https://too.st/CollectionsAPP
+更新日期：2024-12-03
+脚本作者：mikephie
+电报频道：https://t.me/mikephie
+使用声明：⚠️仅供参考，🈲转载与售卖！
+
+**************************************
+
+[rewrite_local]
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/RevenueCat.js
+
+[mitm]
+hostname = api.revenuecat.com
+
+*************************************/
+
 // Configuration constants with enhanced type safety and flexibility
 const CONFIG = {
   DATES: {
