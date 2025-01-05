@@ -12,16 +12,21 @@ hostname = paper.zjapp.xyz
 */
 
 
-let obj = JSON.parse($response.body);
-obj.data.user_status_infos = [{
-  "serial": "",
-  "uid": "522546324428709888",
-  "status": 1,
-  "expire_at": 3742762088000,
-  "extra" : "{\"products\":[{\"code\":\"paper100_svip_weekly_38\",\"trial\":true,\"subscription\":true,\"upgraded\":false,\"introductory\":true,
-  "count": 1,
-  "name": "svip"
-}];
-$done({
-  "body": JSON.stringify(obj)
-});
+var mikephie = JSON.parse($response.body);
+
+    mikephie = {
+  "method": "GET",
+  "url": "/api/translation/thirdToken?token_channel=MS",
+  "headers": {
+    "authority": "translator.felo.me",
+    "accept": "*/*",
+    "content-type": "application/json",
+    "deviceid": "C58D8339-7888-4914-B1E8-054F75B568B9",
+    "accept-language": "zh-SG, zh-CN; q=0.9, zh-Hans; q=0.8",
+    "appversionid": "204",
+    "appversion": "3.1.2",
+    "user-agent": "iPhone"
+
+}
+
+$done({body: JSON.stringify(mikephie)});
