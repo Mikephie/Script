@@ -39,8 +39,8 @@ var mikephie = JSON.parse($response.body);
         "in_app" : [
           {
             "quantity" : "1",
-            "expires_date" : "2025-01-08 14:02:20 Etc\/GMT",
-            "expires_date_pst" : "2025-01-08 06:02:20 America\/Los_Angeles",
+            "expires_date" : "2088-08-08 08:08:08 Etc\/GMT",
+            "expires_date_pst" : "2088-08-08 08:08:08 America\/Los_Angeles",
             "is_in_intro_offer_period" : "true",
             "purchase_date_ms" : "1736085740000",
             "transaction_id" : "300002171829050",
@@ -52,7 +52,7 @@ var mikephie = JSON.parse($response.body);
             "purchase_date" : "2025-01-05 14:02:20 Etc\/GMT",
             "original_purchase_date_ms" : "1736085741000",
             "web_order_line_item_id" : "300001031239313",
-            "expires_date_ms" : "1736344940000",
+            "expires_date_ms" : "3742762088000",
             "purchase_date_pst" : "2025-01-05 06:02:20 America\/Los_Angeles",
             "original_purchase_date" : "2025-01-05 14:02:21 Etc\/GMT"
           },
@@ -97,8 +97,8 @@ var mikephie = JSON.parse($response.body);
       "latest_receipt_info" : [
         {
           "quantity" : "1",
-          "expires_date" : "2025-01-08 14:02:20 Etc\/GMT",
-          "expires_date_pst" : "2025-01-08 06:02:20 America\/Los_Angeles",
+          "expires_date" : "2088-08-08 08:08:08 Etc\/GMT",
+          "expires_date_pst" : "2088-08-08 08:08:08 America\/Los_Angeles",
           "is_in_intro_offer_period" : "true",
           "purchase_date_ms" : "1736085740000",
           "transaction_id" : "300002171829050",
@@ -111,7 +111,7 @@ var mikephie = JSON.parse($response.body);
           "subscription_group_identifier" : "21572955",
           "original_purchase_date_ms" : "1736085741000",
           "web_order_line_item_id" : "300001031239313",
-          "expires_date_ms" : "1736344940000",
+          "expires_date_ms" : "3742762088000",
           "purchase_date_pst" : "2025-01-05 06:02:20 America\/Los_Angeles",
           "original_purchase_date" : "2025-01-05 14:02:21 Etc\/GMT"
         },
