@@ -12,8 +12,8 @@
 
 
 [Rule]
-USER-AGENT,KWPlayer*,PROXY
-HOST-SUFFIX,kuwo.cn,PROXY
+USER-AGENT,KWPlayer*,🇨🇳回国策略
+HOST-SUFFIX,kuwo.cn,🇨🇳回国策略
 
 
 [Script]
