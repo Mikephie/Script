@@ -40,6 +40,7 @@ const lifetimeid = `${bundle_id}.lifetime`;
 const list = {
   
 // Mikephie 自用 
+  '%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8': { cm: 'timea', hx: 'hxpda', id: "com.mobislet.files.yearly", latest: "mikephie" },  //文件管理器
   'com.Spin.The.Wheel.Random.Picker.decision.maker': { cm: 'timeb', hx: 'hxpda', id: "com.Spin.The.Wheel.Random.Picker.decision.maker.lifetime", latest: "mikephie" },  //RandomSpin
   'YinzhangMaster': { cm: 'timeb', hx: 'hxpda', id: "com.xiaoqi.seal.forever", latest: "mikephie" },  //印章大师
   'com.cuilingshi.flipclock': { cm: 'timeb', hx: 'hxpda', id: "FlipClockProVersion", latest: "mikephie" },  //翻页时钟
