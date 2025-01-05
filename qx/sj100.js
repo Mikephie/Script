@@ -10,22 +10,21 @@ hostname = paper.zjapp.xyz
 */
 
 
-let obj = JSON.parse($response.body);
-obj.data.user_status_infos = [{
-  "serial": "",
-  "uid": "406280149991055360",
-  "status": 1,
-  "expire_at": 4092595200000,
-  "extra": "{\"products\":[{\"code\":\"premium_lifetime_prime_398\",\"trial\":false,\"subscription\":true,\"upgraded\":false,\"introductory\":false}]}",
-  "count": 1,
-  "name": "vip"
-}];
-$done({
-  "body": JSON.stringify(obj)
-});
+var mikephie = JSON.parse($response.body);
 
-^https:\/\/paper\.zjapp\.xyz\/api\/v1\/product\/receipt\/verify url script-response-body
+    mikephie = {
+  "method": "GET",
+  "url": "/api/translation/thirdToken?token_channel=MS",
+  "headers": {
+    "authority": "translator.felo.me",
+    "accept": "*/*",
+    "content-type": "application/json",
+    "deviceid": "C58D8339-7888-4914-B1E8-054F75B568B9",
+    "accept-language": "zh-SG, zh-CN; q=0.9, zh-Hans; q=0.8",
+    "appversionid": "204",
+    "appversion": "3.1.2",
+    "user-agent": "iPhone"
 
-[mitm]
+}
 
-hostname = paper.zjapp.xyz
+$done({body: JSON.stringify(mikephie)});
