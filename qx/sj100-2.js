@@ -5,7 +5,7 @@
 
   
 [rewrite_local]
-^https:\/\/paper\.zjapp\.xyz\/api\/v1\/status\/list url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/sj100.js
+^https:\/\/paper\.zjapp\.xyz\/api\/v1\/status\/list url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/sj100-2.js
 
 [mitm]
 hostname = paper.zjapp.xyz
