@@ -17,8 +17,8 @@ obj.data.user_status_infos = [{
   "serial": "",
   "uid": "522546324428709888",
   "status": 1,
-  "expire_at": 4092595200000,
-  "extra" : "{\"products\":[{\"code\":\"paper100_svip_weekly_38\",\"trial\":false,\"subscription\":true,\"upgraded\":false,\"introductory\":false,
+  "expire_at": 3742762088000,
+  "extra" : "{\"products\":[{\"code\":\"paper100_svip_weekly_38\",\"trial\":true,\"subscription\":true,\"upgraded\":false,\"introductory\":true,
   "count": 1,
   "name": "svip"
 }];
