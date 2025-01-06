@@ -30,6 +30,7 @@ if ($request.url.includes("/status/list")) {
         let extraObj = JSON.parse(info.extra);
         if (Array.isArray(extraObj?.products)) {
           extraObj.products.forEach(p => {
+            p.code = false; 
             p.trial = false; 
           });
         }
