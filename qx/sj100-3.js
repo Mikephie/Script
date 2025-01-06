@@ -30,7 +30,7 @@ if ($request.url.includes("/status/list")) {
         let extraObj = JSON.parse(info.extra);
         if (Array.isArray(extraObj?.products)) {
           extraObj.products.forEach(p => {
-            p.code = false; 
+            p.code = "paper100_svip_yearly_268"; 
             p.trial = false; 
           });
         }
