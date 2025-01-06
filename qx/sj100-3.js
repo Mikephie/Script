@@ -12,47 +12,29 @@ hostname = paper.zjapp.xyz
 */
 
 
-let body = JSON.parse($response.body);
-let url = $request.url;
+let mikephie = JSON.parse($response.body);
 
-function modifyObject(obj) {
-    for (let key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            if (typeof obj[key] === 'object' && obj[key] !== null) {
-                modifyObject(obj[key]);
-            } else {
-                // VIP interface modifications
-                if (url.includes("/getVipInfo")) {
-                    if (key === 'is_vip') {
-                        obj[key] = 1;
-                    }
-                    if (key === 'enddate') {
-                        obj[key] = "2088-08-08";
-                    }
-                    if (key === 'product_id') {
-                        obj[key] = "VideoToText_158";
-                    }
-                }
-                // User info interface modifications
-                else if (url.includes("/getUserInfo")) {
-                    if (key === 'nickname') {
-                        obj[key] = "15546907888";
-                    }
-                    if (key === 'phone') {
-                        obj[key] = "88888888888";
-                    }
-                    if (key === 'avatar') {
-                        obj[key] = "https://i.ibb.co/wM5z10N/IMG-1287.jpg";
-                    }
-                }
-            }
-        }
-    }
-    return obj;
+if ($request.url.includes("/auth/member")) {
+    Object.assign(mikephie.data.user_status_infos, {
+        serial: "",
+        uid: "522546324428709888",      // 更新添加
+        status: 1,
+        expire_at: 3742762088000,
+        extra: "{\"products\":[{\"code\":\"paper100_svip_weekly_38\",\"trial\":true,\"subscription\":true,\"upgraded\":false,\"introductory\":true,\"order_id\":\"SJI*2025010522022601351689485\",\"create_time\":1736085746000}]}",
+        "count" : 1,
+        "name" : "svip"
+    });
+} else if ($request.url.includes("/clickEvent")) {
+    Object.assign(mikephie.data.receipt., {
+        id: 38476625,      // 更新添加
+        isVip: 1,      // 更新或添加字段
+        vipTime: "2088-08-08 08:08:08",      // 更新或添加字段
+        uid: "C4957375-2D67-4728-B3E1-2696A3DFA5C8",      // 更新添加
+        deviceId: "39B810B4-B42D-4208-90CF-2F1573394270"      // 更新添加
+    });
 }
 
-body = modifyObject(body);
-$done({ body: JSON.stringify(body) });
+$done({ body: JSON.stringify(mikephie) });
  
 let obj = JSON.parse($response.body);
 obj.data.user_status_infos = [{
