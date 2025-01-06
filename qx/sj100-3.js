@@ -21,7 +21,9 @@ if ($request.url.includes("/status/list")) {
       info.status = 1;
       info.expire_at = 3742762088000; // 2088-08-08 08:08:08 => 毫秒
       info.count = 1;
-      info.name = svip // 2088-08-08 08:08:08 => 毫秒
+
+      // 这行务必用字符串
+      info.name = "svip"; // 2088-08-08 08:08:08 => 毫秒
 
       // 修改 extra 里的 trial => false
       try {
@@ -63,7 +65,7 @@ if ($request.url.includes("/status/list")) {
     });
   }
 
-  // （可选）如果想改 pending_renewal_info，类似这样：
+  // （可选）如果想改 pending_renewal_info
   // if (Array.isArray(obj?.data?.info?.pending_renewal_info)) {
   //   obj.data.info.pending_renewal_info.forEach(item => {
   //     item.auto_renew_status = "1";
