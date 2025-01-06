@@ -20,6 +20,8 @@ if ($request.url.includes("/status/list")) {
       // 设置 status=1，假设过期时间改成 2088-08-08
       info.status = 1;
       info.expire_at = 3742762088000; // 2088-08-08 08:08:08 => 毫秒
+      info.count = 1;
+      info.name = svip // 2088-08-08 08:08:08 => 毫秒
 
       // 修改 extra 里的 trial => false
       try {
