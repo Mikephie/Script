@@ -4,7 +4,7 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/bksyds.png
 
 [Script]
-http-response ^https?:\/\/photoby\.hasmash\.com\/ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js, requires-body=true, timeout=60, tag=bksyds
+http-response ^https?:\/\/photoby\.hasmash\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js, requires-body=true, timeout=60, tag=bksyds
 
 [MITM]
 hostname = photoby.hasmash.com 
