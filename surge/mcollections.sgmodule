@@ -10,10 +10,10 @@
 [Script]
 
 #************************************#
-# Revenuecat解锁系列
+# RevenueCat解锁系列
 # hostname = api.revenuecat.com
-{{{revenuecat1}}} = type=http-response,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js
-{{{revenuecat2}}} = type=http-request,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/mrevenue.js,script-update-interval=0
+{{{revenuecat1}}} = type=http-response,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/RevenueCat.js
+{{{revenuecat2}}} = type=http-request,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path= https://raw.githubusercontent.com/Mikephie/Script/main/qx/RevenueCat.js,script-update-interval=0
 
 #************************************#
 # iTunes解锁系列
@@ -78,7 +78,7 @@ bzg = type=http-response, pattern=^http:\/\/format-api\.netpock\.com\/api\/user_
 #************************************#
 # 边框水印大师（ 需登录 ）
 # hostname = photoby.hasmash.com
-bksyds = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js, requires-body=true, max-size=-1, timeout=60
+bksyds = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 壁纸-需登录
@@ -145,8 +145,8 @@ FaceSwapper = type=http-response, pattern=^https?:\/\/api-.*\.facereplacerext\.c
 #************************************#
 # felo实时翻译-同传与语音字幕 （永久会员）
 # hostname = accounts.felo.me,translator.felo.me
-felosubs = type=http-response, pattern=^https?:\/\/(translator|accounts).felo.me\/api\/user.*$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felosubs.js, requires-body=true, max-size=-1, timeout=60
-felotk = type=http-request, pattern=^https?:\/\/translator.felo.me\/api\/translation\/thirdToken\?token_channel, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felotk.js, requires-body=true, timeout=60
+felosubs = type=http-response, pattern=^https?:\/\/(translator|accounts).felo.me\/api\/user.*$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js, requires-body=true, max-size=-1, timeout=60
+felotk = type=http-request, pattern=^https?:\/\/translator.felo.me\/api\/translation\/thirdToken\?token_channel, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js, requires-body=true, timeout=60
 
 #************************************#
 # Filmix
