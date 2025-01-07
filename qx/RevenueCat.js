@@ -28,7 +28,7 @@ const CONFIG = {
     TRANSACTION_ID: "888888888888888",
     NAME: "app_store"
   },
-  FORBIDDEN_APPS: ['ShellBean', 'Fileball', 'mizframa', 'chatgpt', 'APTV'],
+  FORBIDDEN_APPS: ['1ShellBean', 'Fileball', 'mizframa', 'chatgpt', 'APTV'],
   SUBSCRIPTION: {
     MAX_PRODUCTS: 2,
     DEFAULT_VERSION: "168",
@@ -223,9 +223,9 @@ class ProductManager {
           { entitlement: 'lifetime', id: 'watchface.lifetime', type: 'life', name: 'Watchly-表面' }
         ]
       },
-      'Fontsify': {
+      'ShellBean': {
         products: [
-          { entitlement: 'pro', id: 'media.upstate.fontify.lifetime', type: 'life', name: 'Fontsify-字体' }
+          { entitlement: 'pro', id: 'media.upstate.fontify.lifetime', type: 'life', name: 'ShellBean- SHH服务器' }
         ]
       }, 
       'umai': {
