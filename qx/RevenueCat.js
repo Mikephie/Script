@@ -225,7 +225,7 @@ class ProductManager {
       },
       'ShellBean': {
         products: [
-          { entitlement: 'pro', id: 'media.upstate.fontify.lifetime', type: 'life', name: 'ShellBean- SHH服务器' }
+          { entitlement: 'pro', id: 'com.ningle.shellbean.subscription.year.discount', type: 'sub', name: 'ShellBean- SHH服务器' }
         ]
       }, 
       'umai': {
