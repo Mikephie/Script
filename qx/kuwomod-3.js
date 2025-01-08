@@ -215,3 +215,76 @@ async function getVer() {
     }
 }
 
+// 处理其他URL匹配的逻辑
+if (url.endsWith(KuWo_Down)) {
+    if (obj.hasOwnProperty('songs')) {
+        id = obj.songs[0x0].id;
+        if ('number' !== typeof id) id = body.replace(/.*?\"id\":(\d+).*/, '$1');
+        KuWo.PlayID = id;
+        KuWo.Song = 'music';
+        $.setval($.toStr(KuWo), 'KuWo');
+        obj.songs[0x0].audio.forEach(a => a.st = 0x0);
+    }
+    let tmp = obj.songs[0x0].audio[0x0].policy;
+    obj.user[0x0] = {
+        'pid': obj.songs[0x0].audio[0x0].pid,
+        'type': tmp,
+        'name': tmp + '_1',
+        'categray': tmp + '_1',
+        'id': obj.songs[0x0].id,
+        'order': 0x1666118f,
+        'final': [],
+        'buy': 0x62ca4da9,
+        'begin': 0x62ca4da9,
+        'end': 0xf304f080,
+        'CurEnd': 0x0,
+        'playCnt': 0x0,
+        'playUpper': 0x12c,
+        'downCnt': 0x0,
+        'downUpper': 0x12c,
+        'playVideoCnt': 0x0,
+        'playVideoUpper': 0xbb8,
+        'downVideoCnt': 0x0,
+        'downVideoUpper': 0xbb8,
+        'price': obj.songs[0x0].audio[0x0].price,
+        'period': 0x3e8,
+        'feetype': 0x0,
+        'info': obj.songs[0x0]
+    };
+    body = $.toStr(obj);
+    $done({body});
+}
+
+// 其他URL处理逻辑保持不变，但适配 Surge 的响应方式
+if (url.match(KuWo_Book)) {
+    if (obj.hasOwnProperty('songs')) {
+        for (let key in obj.songs) {
+            id = obj.songs[key].id;
+            if ('number' !== typeof id) id = body.replace(/.*?\"id\":(\d+).*/, '$1');
+            if ('number' == typeof id) {
+                KuWo.PlayID = id;
+                KuWo.Song = 'book';
+                $.setval($.toStr(KuWo), 'KuWo');
+                break;
+            }
+        }
+    }
+    body = body.replace(/(policy|policytype)\":\d/g, '$1":0')
+               .replace(/(playright|downright|type|bought_vip|limitfree|vipType)\":\d/g, '$1":1')
+               .replace(/(end|endtime|vipExpires)\":\d+/g, '$1":4077187200');
+    $done({body});
+}
+
+// 处理其他URL匹配
+if (url.match(KuWo_Vip)) {
+    obj.data.vipIcon = 'https://image.kuwo.cn/fe/13e4f930-f8bc-4b86-8def-43cbc3c7d86c7.png';
+    delete obj.data.iconJumpUrl;
+    delete obj.data.adActUrl;
+    obj.data.growthValue = '9999';
+    obj.data.vipTag = 'VIP7';
+    // ... (其他属性设置保持不变)
+    body = $.toStr(obj);
+    $done({body});
+}
+
+// ... (其他URL处理逻辑类似，都需要使用 $done({body}) 来结束)
