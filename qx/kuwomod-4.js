@@ -114,31 +114,39 @@ function Env(t, e) {
     }(t, e);
 }
 
-// 解锁逻辑开始
+// 核心功能
 (async () => {
     const $ = new Env("Loon 解锁脚本");
     const url = $request.url || "";
     let body = $response.body || "";
 
-    // 解锁 VIP
-    if (url.includes("vipCheck")) {
-        const obj = JSON.parse(body);
-        obj.data.isVip = true;  // 强制设置为 VIP
-        obj.data.vipExpire = 4070880000000; // 设置长期有效到期时间
-        body = JSON.stringify(obj);
-    }
+    try {
+        // 解锁 VIP 功能
+        if (url.includes("vipCheck")) {
+            const obj = JSON.parse(body);
+            obj.data.isVip = true;  // 强制 VIP
+            obj.data.vipExpire = 4070880000000; // 设置长期到期时间
+            body = JSON.stringify(obj);
+        }
 
-    // 去广告逻辑
-    if (url.includes("ads")) {
-        body = body.replace(/"ads":true/g, '"ads":false'); // 替换广告标记
-    }
+        // 去广告逻辑
+        if (url.includes("ads")) {
+            body = body.replace(/"ads":true/g, '"ads":false'); // 替换广告标记
+        }
 
-    // 精简界面处理
-    if (url.includes("ui/config")) {
-        const obj = JSON.parse(body);
-        obj.data.features = obj.data.features.filter(f => !f.includes("广告")); // 去除广告相关功能
-        obj.data.settings = obj.data.settings.filter(s => !s.includes("推送")); // 去除推送设置
-        body = JSON.stringify(obj);
+        // 精简界面
+        if (url.includes("ui/config")) {
+            const obj = JSON.parse(body);
+            if (obj.data.features) {
+                obj.data.features = obj.data.features.filter(f => !f.includes("广告"));
+            }
+            if (obj.data.settings) {
+                obj.data.settings = obj.data.settings.filter(s => !s.includes("推送"));
+            }
+            body = JSON.stringify(obj);
+        }
+    } catch (err) {
+        $.logErr(err, "解析响应体时发生错误");
     }
 
     // 返回修改后的响应
