@@ -128,3 +128,80 @@ if (url.indexOf(Play_URL) != -0x1) {
     })();
 }
 
+if (url.match(KuWo_Vip)) {
+    obj.data.vipIcon = 'https://image.kuwo.cn/fe/13e4f930-f8bc-4b86-8def-43cbc3c7d86c7.png';
+    delete obj.data.iconJumpUrl;
+    delete obj.data.adActUrl;
+    obj.data.growthValue = '9999';
+    obj.data.vipTag = 'VIP7';
+    obj.data.vipmIcon = 'https://image.kuwo.cn/fe/34ad47f8-da7f-43e4-abdc-e6c995666368yyb.png';
+    obj.data.svipIcon = 'https://image.kuwo.cn/fe/13e4f930-f8bc-4b86-8def-43cbc3c7d86c7.png';
+    obj.data.openBtnText = '永久会员';
+    obj.data.vipExpire = '4077187200315';
+    obj.data.vipExpires = 0x3b54b4b753b;
+    obj.data.luxuryIcon = 'https://image.kuwo.cn/fe/2fae68ff-de2d-4473-bf28-8efc29e44968vip.png';
+    obj.data.vipmExpire = '4077187200315';
+    obj.data.vipLuxuryExpire = '4077187200315';
+    obj.data.svipExpire = '4077187200315';
+    obj.data.isYearUser = '2';
+    obj.data.biedSong = '1';
+    obj.data.svipAutoPayUser = '1';
+    body = $.toStr(obj);
+    const KuWoLj = {};
+    KuWoLj.body = body;
+    $.done(KuWoLj);
+}
+
+if (url.match(KuWo_Book)) {
+    body = body.replace(/(policy|policytype)\":\d/g, '$1":0').replace(/(playright|downright|type|bought_vip|limitfree|vipType)\":\d/g, '$1":1').replace(/(end|endtime|vipExpires)\":\d+/g, '$1":4077187200');
+    const KuWoLh = {};
+    KuWoLh.body = body;
+    $.done(KuWoLh);
+}
+if (url.match(KuWo_Theme)) {
+    obj.data.vipTheme.type = 'free';
+    delete obj.data.needBieds;
+    body = $.toStr(obj);
+    const KuWoLk = {};
+    KuWoLk.body = body;
+    $.done(KuWoLk);
+}
+if (url.match(Book_Home)) {
+    obj.data.scheme = null;
+    obj.data.title = '酷我畅听';
+    obj.data.url = null;
+    obj.data.subTitle = '畅听服务由影子提供';
+    body = $.toStr(obj);
+    const KuWoLl = {};
+    KuWoLl.body = body;
+    $.done(KuWoLl);
+}
+if (url.match(KuWo_AD)) {
+    body = 'YingZi';
+    const KuWoLm = {};
+    KuWoLm.body = body;
+    $.done(KuWoLm);
+}
+
+async function getVer() {
+    url = 'https://sharechain.qq.com/cfa48d8b4551a20d5e6c016bdf3823ff';
+    const info = await $.http.get(url).then(a => a.body);
+    const match = info.match(/<article class=\"note-body\">([\s\S]*?)<\/article>/);
+    const res = match[1].replace(/(\s|<.*?>)/g, '');
+    const obj = $.toObj(res);
+    if (LocVer != obj.kuwo) $.msg('需要更新 -> 请更新你的脚本！');
+    KuWo.ver = obj.kuwo;
+    $.setval($.toStr(KuWo), 'KuWo');
+}
+
+async function getInfo(c, d) {
+    const e = 'type=' + d + '&user=' + c;
+    if (!KuWo.user || c != KuWo.user || !KuWo.endTime || new Date().getTime() > KuWo.endTime || !KuWo.keys) {
+        $.log('正在获取 ' + c + ' 的授权信息…');
+        const f = { url: 'https://napi.ltd/getInfo', body: e };
+        const g = $.toObj(await $.http.post(f).then(h => h.body));
+        Object.assign(KuWo, g);
+        $.setval($.toStr(KuWo), 'KuWo');
+        $.log('数据获取完成...');
+    }
+}
