@@ -17,7 +17,7 @@ HOST-SUFFIX,kuwo.cn,🇨🇳回国策略
 
 
 [Script]
-http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic)|app/newMenuList/menuListInfo|tingshu/index/radio|operate/homePage)|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwomod-5.js, requires-body=true, timeout=60, tag=酷我音乐, img-url=https://static.napi.ltd/Image/KuWo.png
+http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic)|app/newMenuList/menuListInfo|tingshu/index/radio|operate/homePage)|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwomod-6.js, requires-body=true, timeout=60, tag=酷我音乐, img-url=https://static.napi.ltd/Image/KuWo.png
 
 
 [Mitm]
@@ -43,15 +43,10 @@ function Env(t, e) {
                 });
             });
             return t.timeout
-                ? ((t, e = 1e3) =>
-                      Promise.race([
-                          t,
-                          new Promise((_, reject) => {
-                              setTimeout(() => {
-                                  reject(new Error("请求超时"));
-                              }, e);
-                          }),
-                      ]))(i, t.timeout)
+                ? Promise.race([
+                      i,
+                      new Promise((_, reject) => setTimeout(() => reject(new Error("请求超时")), t.timeout)),
+                  ])
                 : i;
         }
         get(t) {
@@ -64,6 +59,9 @@ function Env(t, e) {
 
     return new (class {
         constructor(t, e) {
+            this.logLevels = { debug: 0, info: 1, warn: 2, error: 3 };
+            this.logLevelPrefixs = { debug: "[DEBUG] ", info: "[INFO] ", warn: "[WARN] ", error: "[ERROR] " };
+            this.logLevel = "info";
             this.name = t;
             this.http = new s(this);
             this.data = null;
@@ -74,105 +72,156 @@ function Env(t, e) {
             this.logSeparator = "\n";
             this.encoding = "utf-8";
             this.startTime = new Date().getTime();
-            this.logLevels = {
-                debug: 0,
-                info: 1,
-                warn: 2,
-                error: 3,
-            };
-            this.logLevelPrefixs = {
-                debug: "[DEBUG] ",
-                info: "[INFO] ",
-                warn: "[WARN] ",
-                error: "[ERROR] ",
-            };
-            this.logLevel = "info";
             Object.assign(this, e);
             this.log("", `🔔${this.name}, 开始!`);
         }
 
         getEnv() {
-            if (typeof $environment !== "undefined" && $environment["surge-version"]) return "Surge";
             if (typeof $environment !== "undefined" && $environment["stash-version"]) return "Stash";
-            if (typeof module !== "undefined" && module.exports) return "Node.js";
             if (typeof $task !== "undefined") return "Quantumult X";
             if (typeof $loon !== "undefined") return "Loon";
             if (typeof $rocket !== "undefined") return "Shadowrocket";
             return undefined;
         }
 
-        getval(key) {
+        isQuanX() {
+            return this.getEnv() === "Quantumult X";
+        }
+        isLoon() {
+            return this.getEnv() === "Loon";
+        }
+        isShadowrocket() {
+            return this.getEnv() === "Shadowrocket";
+        }
+        isStash() {
+            return this.getEnv() === "Stash";
+        }
+
+        toObj(t, e = null) {
+            try {
+                return JSON.parse(t);
+            } catch {
+                return e;
+            }
+        }
+
+        toStr(t, e = null, ...s) {
+            try {
+                return JSON.stringify(t, ...s);
+            } catch {
+                return e;
+            }
+        }
+
+        getjson(t, e) {
+            let s = e;
+            if (this.getdata(t)) {
+                try {
+                    s = JSON.parse(this.getdata(t));
+                } catch {}
+            }
+            return s;
+        }
+
+        setjson(t, e) {
+            try {
+                return this.setdata(JSON.stringify(t), e);
+            } catch {
+                return false;
+            }
+        }
+
+        getdata(t) {
+            let e = this.getval(t);
+            if (/^@/.test(t)) {
+                const [, s, i] = /^@(.*?)\.(.*?)$/.exec(t);
+                const o = s ? this.getval(s) : "";
+                if (o) {
+                    try {
+                        const t = JSON.parse(o);
+                        e = t ? this.lodash_get(t, i, "") : e;
+                    } catch (t) {
+                        e = "";
+                    }
+                }
+            }
+            return e;
+        }
+
+        setdata(t, e) {
+            let s = false;
+            if (/^@/.test(e)) {
+                const [, i, o] = /^@(.*?)\.(.*?)$/.exec(e);
+                const r = this.getval(i);
+                const a = i ? (r === "null" ? null : r || "{}") : "{}";
+                try {
+                    const e = JSON.parse(a);
+                    this.lodash_set(e, o, t);
+                    s = this.setval(JSON.stringify(e), i);
+                } catch (e) {
+                    const r = {};
+                    this.lodash_set(r, o, t);
+                    s = this.setval(JSON.stringify(r), i);
+                }
+            } else {
+                s = this.setval(t, e);
+            }
+            return s;
+        }
+
+        getval(t) {
             switch (this.getEnv()) {
-                case "Surge":
                 case "Loon":
                 case "Stash":
                 case "Shadowrocket":
-                    return $persistentStore.read(key);
+                    return $persistentStore.read(t);
                 case "Quantumult X":
-                    return $prefs.valueForKey(key);
-                case "Node.js":
-                    this.data = this.loaddata();
-                    return this.data[key];
+                    return $prefs.valueForKey(t);
                 default:
-                    return this.data && this.data[key] || null;
+                    return null;
             }
         }
 
-        setval(value, key) {
+        setval(t, e) {
             switch (this.getEnv()) {
-                case "Surge":
                 case "Loon":
                 case "Stash":
                 case "Shadowrocket":
-                    return $persistentStore.write(value, key);
+                    return $persistentStore.write(t, e);
                 case "Quantumult X":
-                    return $prefs.setValueForKey(value, key);
-                case "Node.js":
-                    this.data = this.loaddata();
-                    this.data[key] = value;
-                    this.writedata();
-                    return true;
+                    return $prefs.setValueForKey(t, e);
                 default:
-                    return this.data && this.data[key] || null;
+                    return false;
             }
         }
 
-        get(options, callback = () => {}) {
-            switch (this.getEnv()) {
-                case "Surge":
-                case "Loon":
-                case "Stash":
-                case "Shadowrocket":
-                    $httpClient.get(options, (err, resp, body) => {
-                        if (!err && resp) resp.body = body;
-                        callback(err, resp, body);
-                    });
-                    break;
-                case "Quantumult X":
-                    $task.fetch(options).then(
-                        (resp) => {
-                            const { statusCode, headers, body } = resp;
-                            callback(null, { statusCode, headers, body }, body);
-                        },
-                        (err) => callback(err)
-                    );
-                    break;
-                case "Node.js":
-                    this.initGotEnv(options);
-                    this.got(options).then(
-                        (resp) => {
-                            const { statusCode, headers, rawBody, body } = resp;
-                            callback(null, { statusCode, headers, rawBody, body }, body);
-                        },
-                        (err) => callback(err)
-                    );
-                    break;
-            }
-        }
+        msg(title = "", subtitle = "", body = "", options = {}) {
+            const notify = (t) => {
+                const { $open: openUrl, $copy: copy, $media: mediaUrl } = t;
+                switch (this.getEnv()) {
+                    case "Loon":
+                        return { openUrl, mediaUrl };
+                    case "Quantumult X":
+                        return { "open-url": openUrl, "media-url": mediaUrl, "update-pasteboard": copy };
+                    case "Shadowrocket":
+                    case "Stash":
+                    default:
+                        return { action: "open-url", url: openUrl };
+                }
+            };
 
-        post(options, callback = () => {}) {
-            options.method = "POST";
-            this.get(options, callback);
+            if (!this.isMute) {
+                switch (this.getEnv()) {
+                    case "Loon":
+                    case "Shadowrocket":
+                    case "Stash":
+                        $notification.post(title, subtitle, body, notify(options));
+                        break;
+                    case "Quantumult X":
+                        $notify(title, subtitle, body, notify(options));
+                        break;
+                }
+            }
         }
 
         log(...args) {
@@ -181,31 +230,20 @@ function Env(t, e) {
         }
 
         logErr(err, msg) {
-            this.log("", `❗️${this.name}, 错误: ${msg}`, err);
+            this.log("", `❗️${this.name}, 错误!`, msg, err);
         }
 
-        msg(title = "", subtitle = "", body = "", options = {}) {
-            if (!this.isMute) {
-                switch (this.getEnv()) {
-                    case "Surge":
-                    case "Loon":
-                    case "Stash":
-                    case "Shadowrocket":
-                        $notification.post(title, subtitle, body, options);
-                        break;
-                    case "Quantumult X":
-                        $notify(title, subtitle, body, options);
-                        break;
-                    case "Node.js":
-                        break;
-                }
+        done(t = {}) {
+            const e = (new Date().getTime() - this.startTime) / 1000;
+            this.log("", `🔔${this.name}, 结束! 🕛 ${e} 秒`);
+            switch (this.getEnv()) {
+                case "Loon":
+                case "Shadowrocket":
+                case "Stash":
+                case "Quantumult X":
+                    $done(t);
+                    break;
             }
-        }
-
-        done(result = {}) {
-            const endTime = (new Date().getTime() - this.startTime) / 1000;
-            this.log("", `🔔${this.name}, 结束! 🕛 ${endTime} 秒`);
-            $done(result);
         }
     })(t, e);
 }
