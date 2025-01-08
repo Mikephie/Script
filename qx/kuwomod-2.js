@@ -450,4 +450,163 @@ function NapiCode() {
     }
     return d;
   };
- 
+   _utf8_encode = function (d) {
+    d = d.replace(/\r\n/g, "\n");
+    var e = "";
+    for (var f = 0; f < d.length; f++) {
+      var g = d.charCodeAt(f);
+      if (g < 128) {
+        e += String.fromCharCode(g);
+      } else {
+        if (g > 127 && g < 2048) {
+          e += String.fromCharCode(g >> 6 | 192);
+          e += String.fromCharCode(g & 63 | 128);
+        } else {
+          e += String.fromCharCode(g >> 12 | 224);
+          e += String.fromCharCode(g >> 6 & 63 | 128);
+          e += String.fromCharCode(g & 63 | 128);
+        }
+      }
+    }
+    return e;
+  };
+  _utf8_decode = function (d) {
+    var e = "";
+    var f = 0;
+    c1 = c2 = 0;
+    var g = c1;
+    while (f < d.length) {
+      g = d.charCodeAt(f);
+      if (g < 128) {
+        e += String.fromCharCode(g);
+        f++;
+      } else {
+        if (g > 191 && g < 224) {
+          c2 = d.charCodeAt(f + 1);
+          e += String.fromCharCode((g & 31) << 6 | c2 & 63);
+          f += 2;
+        } else {
+          c2 = d.charCodeAt(f + 1);
+          c3 = d.charCodeAt(f + 2);
+          e += String.fromCharCode((g & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
+          f += 3;
+        }
+      }
+    }
+    return e;
+  };
+}
+
+function Env(t, e) {
+  class s {
+    constructor(t) {
+      this.env = t;
+    }
+    send(t, e = "GET") {
+      t = "string" == typeof t ? { url: t } : t;
+      let s = this.get;
+      "POST" === e && (s = this.post);
+      const i = new Promise((e, i) => {
+        s.call(this, t, (t, s, o) => {
+          t ? i(t) : e(s);
+        });
+      });
+      return t.timeout ? ((t, e = 1000) => Promise.race([t, new Promise((t, s) => {
+        setTimeout(() => {
+          s(new Error("请求超时"));
+        }, e);
+      })]))(i, t.timeout) : i;
+    }
+    get(t) {
+      return this.send.call(this.env, t);
+    }
+    post(t) {
+      return this.send.call(this.env, t, "POST");
+    }
+  }
+  return new class {
+    constructor(t, e) {
+      this.name = t;
+      this.http = new s(this);
+      this.data = null;
+      this.dataFile = "box.dat";
+      this.logs = [];
+      this.isMute = false;
+      this.isNeedRewrite = false;
+      this.logSeparator = "\n";
+      this.encoding = "utf-8";
+      this.startTime = new Date().getTime();
+      Object.assign(this, e);
+      this.log("", `🔔${this.name}, 开始!`);
+    }
+
+    getEnv() {
+      if (typeof $environment !== "undefined" && $environment["surge-version"]) return "Surge";
+      if (typeof $environment !== "undefined" && $environment["stash-version"]) return "Stash";
+      if (typeof module !== "undefined" && module.exports) return "Node.js";
+      if (typeof $task !== "undefined") return "Quantumult X";
+      if (typeof $persistentStore !== "undefined") return "Loon";
+      return "Unknown";
+    }
+
+    getdata(key) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+          return $persistentStore.read(key);
+        case "Quantumult X":
+          return $prefs.valueForKey(key);
+        default:
+          return null;
+      }
+    }
+
+    setdata(value, key) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+          return $persistentStore.write(value, key);
+        case "Quantumult X":
+          return $prefs.setValueForKey(value, key);
+        default:
+          return false;
+      }
+    }
+
+    msg(title = this.name, subtitle = "", body = "", options = {}) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+          $notification.post(title, subtitle, body, options);
+          break;
+        case "Quantumult X":
+          $notify(title, subtitle, body, options);
+          break;
+      }
+    }
+
+    log(...t) {
+      t.length > 0 && (this.logs = [...this.logs, ...t]);
+      console.log(t.map(t => t ?? String(t)).join(this.logSeparator));
+    }
+
+    logErr(err, msg) {
+      this.log("", `❗️${this.name}, 错误!`, msg, err.stack);
+    }
+
+    done(val = {}) {
+      const endTime = (new Date().getTime() - this.startTime) / 1000;
+      this.log("", `🔔${this.name}, 结束! ⏱ ${endTime} 秒`);
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+          $done(val);
+          break;
+        case "Quantumult X":
+          $done(val);
+          break;
+      }
+    }
+  }(t, e);
+}
