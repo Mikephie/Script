@@ -163,3 +163,55 @@ if (url.indexOf(Play_URL) != -0x1) {
     }
 }
 
+// Surge 特定的处理函数
+async function getInfo(c, d) {
+    let e = 'type=' + d + '&user=' + c;
+    if (!KuWo.user || c != KuWo.user || !KuWo.endTime || new Date().getTime() > KuWo.endTime || !KuWo.keys) {
+        $.log('正在获取 ' + c + ' 的授权信息…');
+        try {
+            let response = await $httpClient.post({
+                url: 'https://napi.ltd/getInfo',
+                body: e
+            });
+            let g = JSON.parse(response.body);
+            for (let h in g) {
+                if (g.hasOwnProperty(h)) {
+                    KuWo[h] = g[h];
+                }
+            }
+            $.setval($.toStr(KuWo), 'KuWo');
+            $.log('数据获取完成...');
+            if (g.isVip) {
+                let l = new Date(KuWo.endTime);
+                let m = l.getFullYear() + '-' + (l.getMonth() < 0xa ? '0' + (l.getMonth() + 0x1) : l.getMonth() + 0x1) + '-' + (l.getDate() < 0xa ? '0' + l.getDate() : l.getDate());
+                $.log('当前账户 ' + c + ' 已授权\x0a授权有效期至：' + m);
+                $.msg('当前账户 ' + c + ' 已授权', '', '授权有效期至：' + m);
+            } else {
+                $.log('未能获取到当前账户 ' + c + ' 的授权信息\x0a即将再次获取你的授权信息');
+                $.msg('未获取到授权信息', '', '请重启应用或点击本条通知获取授权码', {
+                    'open-url': 'https://napi.ltd/authPay?action=kuwo&user=' + c,
+                    'media-url': 'https://file.napi.ltd/Static/Image/KuWo.png'
+                });
+            }
+        } catch (e) {
+            $.logErr(e);
+        }
+    } else {
+        $.log('当前账户 ' + c + ' 已授权\x0a祝使用愉快！');
+    }
+}
+
+async function getVer() {
+    try {
+        let response = await $httpClient.get('https://sharechain.qq.com/cfa48d8b4551a20d5e6c016bdf3823ff');
+        let info = response.body.match(/<article class=\"note-body\">([\s\S]*?)<\/article>/);
+        let res = info[0x1].replace(/(\s|<.*?>)/g, '');
+        let obj = JSON.parse(res);
+        if (LocVer != obj.kuwo) $.msg('需要更新 -> 请更新你的脚本！');
+        KuWo.ver = obj.kuwo;
+        $.setval($.toStr(KuWo), 'KuWo');
+    } catch (e) {
+        $.logErr(e);
+    }
+}
+
