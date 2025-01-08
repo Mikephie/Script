@@ -96,3 +96,70 @@ const KuWo_MenuAD = RegExp(/openapi\/v\d\/app\/newMenuList\/menuListInfo/);
 const KuWo_HomeAD = RegExp(/openapi\/v\d\/album\/myRec\/vipMusic/);
 const KuWo_HomeTopAD = RegExp(/openapi\/v\d\/operate\/homePage/);
 
+const KuWo = $.toObj($.getval('KuWo')) || {};
+const LocVer = '5.1.5';
+var url = 'undefined' !== typeof $request ? $request.url : '';
+var body = 'undefined' !== typeof $response ? $response.body : null;
+let obj = $.toObj(body);
+
+// 适配 Surge 的关键修改
+if (typeof $environment !== 'undefined' && $environment["surge-version"]) {
+    if ($response && $response.body) {
+        body = $response.body;
+        try {
+            obj = JSON.parse(body);
+        } catch (e) {}
+    }
+}
+
+if (url.indexOf(Play_URL) != -0x1) {
+    let keys = KuWo.keys;
+    let key = keys[Math.floor(Math.random() * keys.length)];
+    let arr = [];
+    key.forEach((a, b) => {
+        arr[b] = NC.ntoc(a);
+    });
+    let UserID = KuWo.user;
+    let PlayID = KuWo.PlayID;
+    let PlayUrl = arr.join('_');
+    let Song = KuWo.Song;
+    let Ver = KuWo.ver;
+    let rid = body.replace(/.*?\"rid\":(\d+).*/, '$1');
+    
+    // Surge 特殊处理
+    if (typeof $environment !== 'undefined' && $environment["surge-version"]) {
+        !(async () => {
+            await getInfo(UserID, 'kuwo');
+            await getVer();
+            if (KuWo.isVip && new Date().getTime() < KuWo.endTime && LocVer == Ver && rid != PlayID) {
+                const g = {};
+                g.br = 0xfa0;
+                g.url = '4000kflac';
+                const h = {};
+                h.br = 0x7d0;
+                h.url = '2000kflac';
+                const j = {};
+                j.br = 0x140;
+                j.url = '320kmp3';
+                let k = [g, h, j];
+                let l = 0x0;
+                if ('book' == Song) l = 0x2;
+                while (k[l]) {
+                    const m = {};
+                    m.url = 'http://mobi.kuwo.cn/mobi.s?f=web&source=' + PlayUrl + ('&type=convert_url_with_sign&br' + '=') + k[l].url + '&rid=' + PlayID;
+                    try {
+                        let response = await $httpClient.get(m.url);
+                        body = response.body;
+                        obj = JSON.parse(body);
+                    } catch (e) {}
+                    if (obj.data.bitrate == k[l].br) break;
+                    l++;
+                }
+            }
+            KuWo.PlayID = '';
+            $.setval($.toStr(KuWo), 'KuWo');
+            $done({body: body});
+        })();
+    }
+}
+
