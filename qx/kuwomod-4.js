@@ -29,4 +29,110 @@ const KuWoLa=['wrQhwp8Rw40=','ZAMsw4U=','B8Kkw4PClBA=','6K+k6YeN5ZG75bqr55ed5oqX
 
 
 
-class
+function Env(t, e) {
+    class Http {
+        constructor(env) {
+            this.env = env;
+        }
+        send(options, method = "GET") {
+            options = typeof options === "string" ? { url: options } : options;
+            const request = this[method.toLowerCase()];
+            return new Promise((resolve, reject) => {
+                request.call(this, options, (err, resp, body) => {
+                    if (err) reject(err);
+                    else resolve(resp);
+                });
+            });
+        }
+        get(options) {
+            return this.send(options, "GET");
+        }
+        post(options) {
+            return this.send(options, "POST");
+        }
+    }
+
+    return new class {
+        constructor(t, e) {
+            this.name = t;
+            this.http = new Http(this);
+            this.data = null;
+            this.logs = [];
+            this.isMute = false;
+            this.startTime = new Date().getTime();
+            Object.assign(this, e);
+            this.log("", `🔔${this.name}, 开始!`);
+        }
+
+        // 仅支持 Loon
+        getEnv() {
+            return "Loon";
+        }
+
+        getval(key) {
+            return $persistentStore.read(key);
+        }
+
+        setval(value, key) {
+            return $persistentStore.write(value, key);
+        }
+
+        get(options, callback = () => {}) {
+            $httpClient.get(options, (err, resp, body) => {
+                if (!err && resp) {
+                    resp.body = body;
+                }
+                callback(err, resp, body);
+            });
+        }
+
+        post(options, callback = () => {}) {
+            $httpClient.post(options, (err, resp, body) => {
+                if (!err && resp) {
+                    resp.body = body;
+                }
+                callback(err, resp, body);
+            });
+        }
+
+        log(...args) {
+            this.logs = [...this.logs, ...args];
+            console.log(args.join("\n"));
+        }
+
+        logErr(err, msg) {
+            console.error(`❗️${this.name}, 错误: ${msg}`, err);
+        }
+
+        msg(title = "", subtitle = "", body = "", options = {}) {
+            $notification.post(title, subtitle, body, options);
+        }
+
+        done(result = {}) {
+            const endTime = (new Date().getTime() - this.startTime) / 1000;
+            this.log("", `🔔${this.name}, 结束! 🕛 ${endTime} 秒`);
+            $done(result);
+        }
+    }(t, e);
+}
+
+// 以下为解锁逻辑
+(async () => {
+    const $ = new Env("解锁工具");
+    const url = $request.url || "";
+    let body = $response.body || "";
+
+    // 示例解锁逻辑
+    if (url.includes("vipCheck")) {
+        const obj = JSON.parse(body);
+        obj.data.isVip = true;  // 强制设置为 VIP
+        obj.data.vipExpire = 4070880000000; // 设置到期时间
+        body = JSON.stringify(obj);
+    }
+
+    if (url.includes("ads")) {
+        body = body.replace(/"ads":true/g, '"ads":false'); // 去广告
+    }
+
+    $.done({ body });
+})();
