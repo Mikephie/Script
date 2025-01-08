@@ -64,7 +64,6 @@ function Env(t, e) {
             this.log("", `🔔${this.name}, 开始!`);
         }
 
-        // 仅支持 Loon
         getEnv() {
             return "Loon";
         }
@@ -116,22 +115,31 @@ function Env(t, e) {
     }(t, e);
 }
 
-// 以下为解锁逻辑
+// 以下为核心功能实现
 (async () => {
-    const $ = new Env("解锁工具");
+    const $ = new Env("Loon 解锁脚本");
     const url = $request.url || "";
     let body = $response.body || "";
 
-    // 示例解锁逻辑
+    // 解锁 VIP
     if (url.includes("vipCheck")) {
         const obj = JSON.parse(body);
-        obj.data.isVip = true;  // 强制设置为 VIP
-        obj.data.vipExpire = 4070880000000; // 设置到期时间
+        obj.data.isVip = true;  // 强制 VIP
+        obj.data.vipExpire = 4070880000000; // 设置长期到期时间
         body = JSON.stringify(obj);
     }
 
+    // 去广告逻辑
     if (url.includes("ads")) {
-        body = body.replace(/"ads":true/g, '"ads":false'); // 去广告
+        body = body.replace(/"ads":true/g, '"ads":false'); // 广告标记替换
+    }
+
+    // 精简界面处理
+    if (url.includes("ui/config")) {
+        const obj = JSON.parse(body);
+        obj.data.features = obj.data.features.filter(f => !f.includes("广告"));
+        obj.data.settings = obj.data.settings.filter(s => !s.includes("推送"));
+        body = JSON.stringify(obj);
     }
 
     $.done({ body });
