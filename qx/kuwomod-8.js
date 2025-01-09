@@ -764,6 +764,7 @@ function Env(t, e) {
           return this.data && this.data[t] || null;
       }
     }
+    
     setval(t, e) {
       switch (this.getEnv()) {
         case "Surge":
