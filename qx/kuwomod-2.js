@@ -17,7 +17,7 @@ HOST-SUFFIX,kuwo.cn,🇨🇳回国策略
 
 
 [Script]
-http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic)|app/newMenuList/menuListInfo|tingshu/index/radio|operate/homePage)|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwomod-8.js, requires-body=true, timeout=60, tag=酷我音乐, img-url=https://static.napi.ltd/Image/KuWo.png
+http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic)|app/newMenuList/menuListInfo|tingshu/index/radio|operate/homePage)|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwomod.js, requires-body=true, timeout=60, tag=酷我音乐, img-url=https://static.napi.ltd/Image/KuWo.png
 
 
 [Mitm]
@@ -38,37 +38,16 @@ const Book_Home = RegExp(/v\d\/api\/advert\/myPage/);
 const KuWo_AD = RegExp(/(v\d\/api\/advert\/(iListen|album)|openapi\/v\d\/album\/adBar|(\/EcomResource|\/(Mobile)?Ad)Serv(er|ice))/);
 const KuWo_ListAD = RegExp(/vip\/v\d\/sysinfo\?op\=getRePayAndDoPayBoxNew/);
 const KuWo_BookAD = RegExp(/v\d\/api\/pay\/payInfo\/kwplayer\/payMiniBar/);
-const KuWo_BookPageAD = RegExp(/openapi\/v\d\/tingshu\/index\/radio/);  
+const KuWo_BookPageAD = RegExp(/openapi\/v\d\/tingshu\/index\/radio/);
 const KuWo_TabAD = "/kuwopay/vip-tab/setting";
 const KuWo_MenuAD = RegExp(/openapi\/v\d\/app\/newMenuList\/menuListInfo/);
 const KuWo_HomeAD = RegExp(/openapi\/v\d\/album\/myRec\/vipMusic/);
 const KuWo_HomeTopAD = RegExp(/openapi\/v\d\/operate\/homePage/);
 const KuWo = $.toObj($.getval("KuWo")) || {};
 const LocVer = "5.1.6";
-
-// 为 Surge 环境添加必要的全局变量
-if (typeof $environment != "undefined" && $environment["surge-version"]) {
-  var $task = {
-    fetch: url => {
-      return new Promise((resolve, reject) => {
-        $httpClient.get(url, (error, response, body) => {
-          if (error) reject(error)
-          else resolve({ statusCode: response.status || response.statusCode, headers: response.headers, body })
-        })
-      })
-    }
-  }
-  
-  var $prefs = {
-    valueForKey: key => $persistentStore.read(key),
-    setValueForKey: (val, key) => $persistentStore.write(val, key)
-  }
-}
-
 var url = "undefined" !== typeof $request ? $request.url : "";
 var body = "undefined" !== typeof $response ? $response.body : null;
 let obj = $.toObj(body);
-
 if (url.indexOf(Play_URL) != -1) {
   let keys = KuWo.keys;
   let key = keys[Math.floor(Math.random() * keys.length)];
@@ -82,7 +61,6 @@ if (url.indexOf(Play_URL) != -1) {
   let Song = KuWo.Song;
   let Ver = KuWo.ver;
   let rid = body.replace(/.*?\"rid\":(\d+).*/, "$1");
-  
   !(async () => {
     await getInfo(UserID, "kuwo");
     await getVer();
@@ -93,7 +71,7 @@ if (url.indexOf(Play_URL) != -1) {
       };
       const h = {
         br: 2000,
-        url: "2000kflac"  
+        url: "2000kflac"
       };
       const j = {
         br: 320,
@@ -121,7 +99,7 @@ if (url.indexOf(Play_URL) != -1) {
     KuWo.PlayID = "";
     $.setval($.toStr(KuWo), "KuWo");
     const f = {
-      body: body  
+      body: body
     };
     $.done(f);
   })();
@@ -518,47 +496,27 @@ function NapiCode() {
     return e;
   };
 }
-// 如果是 Surge 环境，添加必要的导出
-if (typeof $environment != "undefined" && $environment["surge-version"]) {
-  module.exports = {
-    Env,
-    NapiCode
-  }
-}
 function Env(t, e) {
   class s {
     constructor(t) {
       this.env = t;
     }
-    
     send(t, e = "GET") {
       t = "string" == typeof t ? {
         url: t
       } : t;
       let s = this.get;
       "POST" === e && (s = this.post);
-      
-      // 为 Surge 添加特殊处理
-      if (typeof $environment != "undefined" && $environment["surge-version"]) {
-        return new Promise((resolve, reject) => {
-          $httpClient[e.toLowerCase()](t, (error, response, body) => {
-            if (error) reject(error)
-            else resolve(response)
-          })
-        })
-      }
-      
       const i = new Promise((e, i) => {
         s.call(this, t, (t, s, o) => {
           t ? i(t) : e(s);
         });
       });
-      
-      return t.timeout ? Promise.race([i, new Promise((t, s) => {
+      return t.timeout ? ((t, e = 1000) => Promise.race([t, new Promise((t, s) => {
         setTimeout(() => {
           s(new Error("请求超时"));
-        }, t.timeout);
-      })]) : i;
+        }, e);
+      })]))(i, t.timeout) : i;
     }
     get(t) {
       return this.send.call(this.env, t);
@@ -569,6 +527,19 @@ function Env(t, e) {
   }
   return new class {
     constructor(t, e) {
+      this.logLevels = {
+        debug: 0,
+        info: 1,
+        warn: 2,
+        error: 3
+      };
+      this.logLevelPrefixs = {
+        debug: "[DEBUG] ",
+        info: "[INFO] ",
+        warn: "[WARN] ",
+        error: "[ERROR] "
+      };
+      this.logLevel = "info";
       this.name = t;
       this.http = new s(this);
       this.data = null;
@@ -583,13 +554,7 @@ function Env(t, e) {
       this.log("", `🔔${this.name}, 开始!`);
     }
     getEnv() {
-      if (typeof $environment != "undefined" && $environment["surge-version"]) return "Surge";
-      if (typeof $environment != "undefined" && $environment["stash-version"]) return "Stash";
-      if (typeof module != "undefined" && module.exports) return "Node.js";
-      if (typeof $task != "undefined") return "Quantumult X";
-      if (typeof $loon != "undefined") return "Loon";
-      if (typeof $rocket != "undefined") return "Shadowrocket";
-      return undefined;
+      return "undefined" != typeof $environment && $environment["surge-version"] ? "Surge" : "undefined" != typeof $environment && $environment["stash-version"] ? "Stash" : "undefined" != typeof module && module.exports ? "Node.js" : "undefined" != typeof $task ? "Quantumult X" : "undefined" != typeof $loon ? "Loon" : "undefined" != typeof $rocket ? "Shadowrocket" : undefined;
     }
     isNode() {
       return "Node.js" === this.getEnv();
@@ -771,7 +736,6 @@ function Env(t, e) {
           return this.data && this.data[t] || null;
       }
     }
-    
     setval(t, e) {
       switch (this.getEnv()) {
         case "Surge":
