@@ -523,22 +523,35 @@ function Env(t, e) {
     constructor(t) {
       this.env = t;
     }
+    
     send(t, e = "GET") {
       t = "string" == typeof t ? {
         url: t
       } : t;
       let s = this.get;
       "POST" === e && (s = this.post);
+      
+      // 为 Surge 添加特殊处理
+      if (typeof $environment != "undefined" && $environment["surge-version"]) {
+        return new Promise((resolve, reject) => {
+          $httpClient[e.toLowerCase()](t, (error, response, body) => {
+            if (error) reject(error)
+            else resolve(response)
+          })
+        })
+      }
+      
       const i = new Promise((e, i) => {
         s.call(this, t, (t, s, o) => {
           t ? i(t) : e(s);
         });
       });
-      return t.timeout ? ((t, e = 1000) => Promise.race([t, new Promise((t, s) => {
+      
+      return t.timeout ? Promise.race([i, new Promise((t, s) => {
         setTimeout(() => {
           s(new Error("请求超时"));
-        }, e);
-      })]))(i, t.timeout) : i;
+        }, t.timeout);
+      })]) : i;
     }
     get(t) {
       return this.send.call(this.env, t);
@@ -549,19 +562,6 @@ function Env(t, e) {
   }
   return new class {
     constructor(t, e) {
-      this.logLevels = {
-        debug: 0,
-        info: 1,
-        warn: 2,
-        error: 3
-      };
-      this.logLevelPrefixs = {
-        debug: "[DEBUG] ",
-        info: "[INFO] ",
-        warn: "[WARN] ",
-        error: "[ERROR] "
-      };
-      this.logLevel = "info";
       this.name = t;
       this.http = new s(this);
       this.data = null;
