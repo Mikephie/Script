@@ -169,6 +169,8 @@ async function vipTabInfo() {
   };
   $.done(g);
 }
+
+// 其他解锁逻辑保持不变...
 async function bookVip() {
   if (obj.hasOwnProperty("songs")) {
     {
