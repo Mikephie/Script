@@ -8,16 +8,11 @@
 #!tag = 会员
 #!loon_version = 3.2.3(762)
 #!icon = https://static.napi.ltd/Image/KuWo.png
-#!date = 2025-01-05
-
-
-[Rule]
-USER-AGENT,KWPlayer*,🇨🇳回国策略
-HOST-SUFFIX,kuwo.cn,🇨🇳回国策略
+#!date = 2025-01-09
 
 
 [Script]
-http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic)|app/newMenuList/menuListInfo|tingshu/index/radio|operate/homePage)|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwomod.js, requires-body=true, timeout=60, tag=酷我音乐, img-url=https://static.napi.ltd/Image/KuWo.png
+http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/(v\d/)?(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/v\d)?(/pay)?/(app/getConfigInfo|user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|--album/(adBar|myRec/vipMusic)--|app/(newMenuList/menuListInfo|pasterAdvert/config)|tingshu/index/radio|operate/homePage)|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?newver\=\d$|.*?op\=(getvip|policy_shortvideo)|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=\d$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwomod.js, requires-body=true, timeout=60, tag=酷我音乐, img-url=https://static.napi.ltd/Image/KuWo.png
 
 
 [Mitm]
@@ -25,102 +20,197 @@ hostname = *.kuwo.cn
 
 ****************************/
 
-
 const $ = new Env("酷我音乐");
-const NC = new NapiCode();
-const Play_URL = "/mobi.s?f=kwxs";
-const KuWo_Down = "/music.pay?newver=3";
-const KuWo_Book = RegExp(/(a\.p|v\d\/api\/(user\/personal\/)?user\/info)/);
-const KuWo_Enc = "/vip/enc";
-const KuWo_Vip = RegExp(/(vip\/)?v\d\/(api(\/pay)?\/user\/info|user\/vip)/);
-const KuWo_Theme = RegExp(/vip\/v\d\/theme\?op\=gd/);
-const Book_Home = RegExp(/v\d\/api\/advert\/myPage/);
-const KuWo_AD = RegExp(/(v\d\/api\/advert\/(iListen|album)|openapi\/v\d\/album\/adBar|(\/EcomResource|\/(Mobile)?Ad)Serv(er|ice))/);
-const KuWo_ListAD = RegExp(/vip\/v\d\/sysinfo\?op\=getRePayAndDoPayBoxNew/);
-const KuWo_BookAD = RegExp(/v\d\/api\/pay\/payInfo\/kwplayer\/payMiniBar/);
-const KuWo_BookPageAD = RegExp(/openapi\/v\d\/tingshu\/index\/radio/);
-const KuWo_TabAD = "/kuwopay/vip-tab/setting";
-const KuWo_MenuAD = RegExp(/openapi\/v\d\/app\/newMenuList\/menuListInfo/);
-const KuWo_HomeAD = RegExp(/openapi\/v\d\/album\/myRec\/vipMusic/);
-const KuWo_HomeTopAD = RegExp(/openapi\/v\d\/operate\/homePage/);
+const {
+  encrypt,
+  decrypt,
+  getVer,
+  getInfo
+} = Napi("影子");
+const LocVer = "5.1.9";
 const KuWo = $.toObj($.getval("KuWo")) || {};
-const LocVer = "5.1.6";
-var url = "undefined" !== typeof $request ? $request.url : "";
-var body = "undefined" !== typeof $response ? $response.body : null;
+let url = "undefined" !== typeof $request ? $request.url : "";
+let body = "undefined" !== typeof $response ? $response.body : null;
 let obj = $.toObj(body);
-if (url.indexOf(Play_URL) != -1) {
-  let keys = KuWo.keys;
-  let key = keys[Math.floor(Math.random() * keys.length)];
-  let arr = [];
-  key.forEach((a, b) => {
-    arr[b] = NC.ntoc(a);
-  });
-  let UserID = KuWo.user;
-  let PlayID = KuWo.PlayID;
-  let PlayUrl = arr.join("_");
-  let Song = KuWo.Song;
-  let Ver = KuWo.ver;
-  let rid = body.replace(/.*?\"rid\":(\d+).*/, "$1");
+const urlHandlers = {
+  playInfo: /mobi\.s\?f\=kwxs/,
+  userInfo: /vip\/enc/,
+  vipTabInfo: /vip\/v\d\/user\/vip/,
+  bookVip: /(a\.p|v\d\/api\/(pay\/)?user\/info)/,
+  musicInfo: /music\.pay\?newver\=\d$/,
+  vipTheme: /vip\/v\d\/theme\?op\=gd/,
+  kwBookHome: /v\d\/api\/advert\/myPage/,
+  indexTopAd: /openapi\/v\d\/operate\/homePage/,
+  bookPageAd: /openapi\/v\d\/tingshu\/index\/radio/,
+  vipTabAd: /kuwopay\/vip-tab\/setting/,
+  baseAd: /((EcomResource|(Mobile)?Ad)Serv(er|ice)|(vip|openapi|api)?\/v\d\/(sysinfo\?op\=getRePayAndDoPayBoxNew|api\/pay\/payInfo\/kwplayer\/payMiniBar|app\/(newMenuList\/menuListInfo|pasterAdvert\/config)|pay\/app\/getConfigInfo|api\/advert\/(iListen|album)))/,
+  _kwBookAd: /openapi\/v\d\/album\/adBar/,
+  _myPageAd: /openapi\/v\d\/album\/myRec\/vipMusic/
+};
+const functions = {
+  playInfo: playInfo,
+  userInfo: userInfo,
+  vipTabInfo: vipTabInfo,
+  bookVip: bookVip,
+  musicInfo: musicInfo,
+  vipTheme: vipTheme,
+  kwBookHome: kwBookHome,
+  indexTopAd: indexTopAd,
+  bookPageAd: bookPageAd,
+  vipTabAd: vipTabAd,
+  baseAd: baseAd,
+  _kwBookAd: _kwBookAd,
+  _myPageAd: _myPageAd
+};
+for (const [handler, regex] of Object.entries(urlHandlers)) {
+  if (regex.test(url)) {
+    functions[handler]();
+    break;
+  }
+}
+async function playInfo() {
+  let d = KuWo.keys;
+  let e = d[Math.floor(Math.random() * d.length)];
+  let f = KuWo.user;
+  let g = KuWo.PlayID;
+  let h = decrypt(e);
+  let i = KuWo.Song;
+  let j = KuWo.ver;
+  let k = body.replace(/.*?\"rid\":(\d+).*/, "$1");
   !(async () => {
-    await getInfo(UserID, "kuwo");
+    await getInfo(f, "kuwo");
     await getVer();
-    if (KuWo.isVip && new Date().getTime() < KuWo.endTime && LocVer == Ver && rid != PlayID) {
-      const g = {
-        br: 4000,
-        url: "4000kflac"
-      };
-      const h = {
-        br: 2000,
-        url: "2000kflac"
-      };
-      const j = {
-        br: 320,
-        url: "320kmp3"
-      };
-      let k = [g, h, j];
-      let l = 0;
-      if ("book" == Song) {
-        l = 2;
-      }
-      while (k[l]) {
-        const m = {
-          url: "http://mobi.kuwo.cn/mobi.s?f=web&source=" + PlayUrl + "&type=convert_url_with_sign&br=" + k[l].url + "&rid=" + PlayID
+    if (KuWo.isVip && new Date().getTime() < KuWo.endTime && LocVer == j && k != g) {
+      {
+        const p = {
+          br: 4000,
+          url: "4000kflac"
         };
-        await $.http.get(m).then(n => {
-          body = n.body;
-          obj = $.toObj(body);
-        });
-        if (obj.data.bitrate == k[l].br) {
-          break;
+        const q = {
+          br: 2000,
+          url: "2000kflac"
+        };
+        const r = {
+          br: 320,
+          url: "320kmp3"
+        };
+        let s = [p, q, r];
+        let t = 0;
+        if ("book" == i) {
+          t = 2;
         }
-        l++;
+        while (s[t]) {
+          {
+            const v = {
+              url: "http://mobi.kuwo.cn/mobi.s?f=web&source=" + h + "&type=convert_url_with_sign&br=" + s[t].url + "&rid=" + g
+            };
+            await $.http.get(v).then(w => {
+              {
+                body = w.body;
+                obj = $.toObj(body);
+              }
+            });
+            if (obj.data.bitrate == s[t].br) {
+              break;
+            }
+            t++;
+          }
+        }
       }
     }
     KuWo.PlayID = "";
     $.setval($.toStr(KuWo), "KuWo");
+    const n = {
+      body: body
+    };
+    $.done(n);
+  })();
+}
+async function userInfo() {
+  !(async () => {
+    let d = new URL(url).searchParams;
+    let e = d.get("uid");
+    if ("number" !== typeof e) {
+      e = url.replace(/.*?uid=(\d+).*/, "$1");
+    }
+    await getInfo(e, "kuwo");
+    body = await $.http.get(url.replace(/uid=\d+/g, "uid=238581279")).then(g => g.body);
     const f = {
       body: body
     };
     $.done(f);
   })();
 }
-if (url.endsWith(KuWo_Down)) {
+async function vipTabInfo() {
+  obj.data.vipIcon = "https://image.kuwo.cn/fe/13e4f930-f8bc-4b86-8def-43cbc3c7d86c7.png";
+  delete obj.data.iconJumpUrl;
+  delete obj.data.adActUrl;
+  obj.data.growthValue = "9999";
+  obj.data.vipTag = "VIP7";
+  obj.data.vipmIcon = "https://image.kuwo.cn/fe/34ad47f8-da7f-43e4-abdc-e6c995666368yyb.png";
+  obj.data.svipIcon = "https://image.kuwo.cn/fe/13e4f930-f8bc-4b86-8def-43cbc3c7d86c7.png";
+  obj.data.openBtnText = "永久会员";
+  obj.data.vipExpire = "4077187200315";
+  obj.data.vipExpires = 4077187200315;
+  obj.data.luxuryIcon = "https://image.kuwo.cn/fe/2fae68ff-de2d-4473-bf28-8efc29e44968vip.png";
+  obj.data.vipmExpire = "4077187200315";
+  obj.data.vipLuxuryExpire = "4077187200315";
+  obj.data.svipExpire = "4077187200315";
+  obj.data.isYearUser = "2";
+  obj.data.biedSong = "1";
+  obj.data.svipAutoPayUser = "1";
+  body = $.toStr(obj);
+  const g = {
+    body: body
+  };
+  $.done(g);
+}
+async function bookVip() {
   if (obj.hasOwnProperty("songs")) {
-    id = obj.songs[0].id;
-    if ("number" !== typeof id) {
-      id = body.replace(/.*?\"id\":(\d+).*/, "$1");
+    {
+      for (let f in obj.songs) {
+        {
+          id = obj.songs[f].id;
+          if ("number" !== typeof id) {
+            id = body.replace(/.*?\"id\":(\d+).*/, "$1");
+          }
+          if ("number" == typeof id) {
+            {
+              KuWo.PlayID = id;
+              KuWo.Song = "book";
+              $.setval($.toStr(KuWo), "KuWo");
+              break;
+            }
+          }
+        }
+      }
     }
-    KuWo.PlayID = id;
-    KuWo.Song = "music";
-    $.setval($.toStr(KuWo), "KuWo");
-    obj.songs[0].audio.forEach(a => a.st = 0);
   }
-  let tmp = obj.songs[0].audio[0].policy;
+  body = body.replace(/(policy|policytype)\":\d/g, "$1\":0").replace(/(playright|downright|type|bought|bought_vip|limitfree|vipType)\":\d/g, "$1\":1").replace(/(end|endtime|vipExpires|bought_vip_end)\":\d+/g, "$1\":4077187200");
+  const e = {
+    body: body
+  };
+  $.done(e);
+}
+async function musicInfo() {
+  if (obj.hasOwnProperty("songs")) {
+    {
+      id = obj.songs[0].id;
+      if ("number" !== typeof id) {
+        id = body.replace(/.*?\"id\":(\d+).*/, "$1");
+      }
+      KuWo.PlayID = id;
+      KuWo.Song = "music";
+      $.setval($.toStr(KuWo), "KuWo");
+      obj.songs[0].audio.forEach(i => i.st = 0);
+    }
+  }
+  let e = obj.songs[0].audio[0].policy;
   obj.user[0] = {
     pid: obj.songs[0].audio[0].pid,
-    type: tmp,
-    name: tmp + "_1",
-    categray: tmp + "_1",
+    type: e,
+    name: e + "_1",
+    categray: e + "_1",
     id: obj.songs[0].id,
     order: 375787919,
     final: [],
@@ -142,359 +232,214 @@ if (url.endsWith(KuWo_Down)) {
     info: obj.songs[0]
   };
   body = $.toStr(obj);
-  const KuWoLg = {
+  const f = {
     body: body
   };
-  $.done(KuWoLg);
+  $.done(f);
 }
-if (url.match(KuWo_Book)) {
-  if (obj.hasOwnProperty("songs")) {
-    for (let key in obj.songs) {
-      id = obj.songs[key].id;
-      if ("number" !== typeof id) {
-        id = body.replace(/.*?\"id\":(\d+).*/, "$1");
-      }
-      if ("number" == typeof id) {
-        KuWo.PlayID = id;
-        KuWo.Song = "book";
-        $.setval($.toStr(KuWo), "KuWo");
-        break;
-      }
-    }
-  }
-  body = body.replace(/(policy|policytype)\":\d/g, "$1\":0").replace(/(playright|downright|type|bought|bought_vip|limitfree|vipType)\":\d/g, "$1\":1").replace(/(end|endtime|vipExpires)\":\d+/g, "$1\":4077187200");
-  const KuWoLh = {
-    body: body
-  };
-  $.done(KuWoLh);
-}
-if (url.indexOf(KuWo_Enc) != -1) {
-  !(async () => {
-    let b = new URL(url).searchParams;
-    let c = b.get("uid");
-    if ("number" !== typeof c) {
-      c = url.replace(/.*?uid=(\d+).*/, "$1");
-    }
-    await getInfo(c, "kuwo");
-    let d = await $.http.get(url.replace(/uid=\d+/g, "uid=238581279")).then(f => f.body);
-    const e = {
-      body: d
-    };
-    $.done(e);
-  })();
-}
-if (url.match(KuWo_Vip)) {
-  obj.data.vipIcon = "https://image.kuwo.cn/fe/13e4f930-f8bc-4b86-8def-43cbc3c7d86c7.png";
-  delete obj.data.iconJumpUrl;
-  delete obj.data.adActUrl;
-  obj.data.growthValue = "9999";
-  obj.data.vipTag = "VIP7";
-  obj.data.vipmIcon = "https://image.kuwo.cn/fe/34ad47f8-da7f-43e4-abdc-e6c995666368yyb.png";
-  obj.data.svipIcon = "https://image.kuwo.cn/fe/13e4f930-f8bc-4b86-8def-43cbc3c7d86c7.png";
-  obj.data.openBtnText = "永久会员";
-  obj.data.vipExpire = "4077187200315";
-  obj.data.vipExpires = 4077187200315;
-  obj.data.luxuryIcon = "https://image.kuwo.cn/fe/2fae68ff-de2d-4473-bf28-8efc29e44968vip.png";
-  obj.data.vipmExpire = "4077187200315";
-  obj.data.vipLuxuryExpire = "4077187200315";
-  obj.data.svipExpire = "4077187200315";
-  obj.data.isYearUser = "2";
-  obj.data.biedSong = "1";
-  obj.data.svipAutoPayUser = "1";
-  body = $.toStr(obj);
-  const KuWoLj = {
-    body: body
-  };
-  $.done(KuWoLj);
-}
-if (url.match(KuWo_Theme)) {
+async function vipTheme() {
   obj.data.vipTheme.type = "free";
   delete obj.data.needBieds;
   body = $.toStr(obj);
-  const KuWoLk = {
+  const e = {
     body: body
   };
-  $.done(KuWoLk);
+  $.done(e);
 }
-if (url.match(Book_Home)) {
+async function kwBookHome() {
   obj.data.scheme = null;
   obj.data.title = "酷我畅听";
   obj.data.url = null;
   obj.data.subTitle = "畅听服务由影子提供";
   body = $.toStr(obj);
-  const KuWoLl = {
+  const e = {
     body: body
   };
-  $.done(KuWoLl);
+  $.done(e);
 }
-if (url.match(KuWo_AD)) {
-  body = "YingZi";
-  const KuWoLm = {
-    body: body
-  };
-  $.done(KuWoLm);
-}
-if (url.match(KuWo_ListAD)) {
-  delete obj.data.songListTopContext;
-  body = $.toStr(obj);
-  const KuWoLn = {
-    body: body
-  };
-  $.done(KuWoLn);
-}
-if (url.match(KuWo_BookAD)) {
-  delete obj.data;
-  delete obj.dataV2;
-  body = $.toStr(obj);
-  const KuWoLo = {
-    body: body
-  };
-  $.done(KuWoLo);
-}
-if (url.match(KuWo_BookPageAD)) {
-  let i = 0;
-  while (obj.data.child[i]) {
-    if (/^小焦点/.test(obj.data.child[i].label)) {
-      delete obj.data.child[i].child;
+async function indexTopAd() {
+  let e = ["发现", "推荐", "听书", "看短剧"];
+  let f = 0;
+  while (obj.data.homeTop[f]) {
+    {
+      if (!e.includes(obj.data.homeTop[f].title)) {
+        {
+          delete obj.data.homeTop[f];
+        }
+      }
+      f++;
     }
-    i++;
   }
   body = $.toStr(obj);
-  const KuWoLp = {
+  const g = {
     body: body
   };
-  $.done(KuWoLp);
+  $.done(g);
 }
-if (url.indexOf(KuWo_TabAD) != -1) {
+async function bookPageAd() {
+  let e = ["小焦点", "免费模式", "看广告"];
+  let f = 0;
+  while (obj.data.child[f]) {
+    {
+      if (e.some(h => obj.data.child[f].label.includes(h))) {
+        delete obj.data.child[f].child;
+      }
+      f++;
+    }
+  }
+  body = $.toStr(obj);
+  const g = {
+    body: body
+  };
+  $.done(g);
+}
+async function vipTabAd() {
   if ("undefined" !== typeof obj.data.tab.vipTypes[0]) {
-    let i = 1;
-    while (obj.data.tab.vipTypes[0].topics[i]) {
-      delete obj.data.tab.vipTypes[0].topics[i];
-      i++;
+    {
+      let g = 1;
+      while (obj.data.tab.vipTypes[0].topics[g]) {
+        {
+          delete obj.data.tab.vipTypes[0].topics[g];
+          g++;
+        }
+      }
     }
   }
   body = $.toStr(obj);
-  const KuWoLq = {
+  const e = {
     body: body
   };
-  $.done(KuWoLq);
+  $.done(e);
 }
-if (url.match(KuWo_MenuAD)) {
-  if (obj.hasOwnProperty("data")) {
-    delete obj.data;
-  }
-  body = $.toStr(obj);
-  const KuWoLr = {
+async function baseAd() {
+  const b = {
+    body: ""
+  };
+  $.done(b);
+}
+async function _kwBookAd() {
+  body = "YingZi";
+  const b = {
     body: body
   };
-  $.done(KuWoLr);
+  $.done(b);
 }
-if (url.match(KuWo_HomeAD)) {
+async function _myPageAd() {
   delete obj.data.listenSomething;
   body = $.toStr(obj);
-  const KuWoLs = {
+  const e = {
     body: body
   };
-  $.done(KuWoLs);
+  $.done(e);
 }
-if (url.match(KuWo_HomeTopAD)) {
-  let Tops = ["发现", "推荐", "听书", "看短剧"];
-  let i = 0;
-  while (obj.data.homeTop[i]) {
-    if (!Tops.includes(obj.data.homeTop[i].title)) {
-      delete obj.data.homeTop[i];
-    }
-    i++;
-  }
-  body = $.toStr(obj);
-  const KuWoLt = {
-    body: body
-  };
-  $.done(KuWoLt);
-}
-async function getVer() {
-  url = "https://sharechain.qq.com/cfa48d8b4551a20d5e6c016bdf3823ff";
-  info = await $.http.get(url).then(a => a.body);
-  info = info.match(/<article class=\"note-body\">([\s\S]*?)<\/article>/);
-  res = info[1].replace(/(\s|<.*?>)/g, "");
-  obj = $.toObj(res);
-  if (LocVer != obj.kuwo) {
-    $.msg("需要更新 -> 请更新你的脚本！");
-  }
-  KuWo.ver = obj.kuwo;
-  $.setval($.toStr(KuWo), "KuWo");
-}
-async function getInfo(c, d) {
-  let e = "type=" + d + "&user=" + c;
-  if (!KuWo.user || c != KuWo.user || !KuWo.endTime || new Date().getTime() > KuWo.endTime || !KuWo.keys) {
-    $.log("正在获取 " + c + " 的授权信息…");
-    const f = {
-      url: "https://napi.ltd/getInfo",
-      body: e
-    };
-    let g = $.toObj(await $.http.post(f).then(h => h.body));
-    for (let h in g) {
-      if (g.hasOwnProperty(h)) {
-        KuWo[h] = g[h];
-      }
-    }
-    $.setval($.toStr(KuWo), "KuWo");
-    $.log("数据获取完成...");
-    if (g.isVip) {
-      let j = new Date(KuWo.endTime);
-      let k = j.getFullYear() + "-" + (j.getMonth() < 10 ? "0" + (j.getMonth() + 1) : j.getMonth() + 1) + "-" + (j.getDate() < 10 ? "0" + j.getDate() : j.getDate());
-      $.log("当前账户 " + c + " 已授权\n授权有效期至：" + k);
-      $.msg("当前账户 " + c + " 已授权", "", "授权有效期至：" + k);
-    } else {
-      $.log("未能获取到当前账户 " + c + " 的授权信息\n即将再次获取你的授权信息");
-      const l = {
-        "open-url": "https://napi.ltd/authPay?action=kuwo&user=" + c,
-        "media-url": "https://file.napi.ltd/Static/Image/KuWo.png"
-      };
-      $.msg("未获取到授权信息", "", "请重启应用或点击本条通知获取授权码", l);
-    }
-  } else {
-    $.log("当前账户 " + c + " 已授权\n祝使用愉快！");
-  }
-}
-function NapiCode() {
-  let a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-  let b = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  this.encode = function (c) {
-    var d = "";
-    var e;
-    var f;
-    var g;
-    var h;
-    var j;
-    var k;
-    var l;
-    var m = 0;
-    c = _utf8_encode(c);
-    while (m < c.length) {
-      e = c.charCodeAt(m++);
-      f = c.charCodeAt(m++);
-      g = c.charCodeAt(m++);
-      h = e >> 2;
-      j = (e & 3) << 4 | f >> 4;
-      k = (f & 15) << 2 | g >> 6;
-      l = g & 63;
-      if (isNaN(f)) {
-        k = l = 64;
-      } else {
-        if (isNaN(g)) {
-          l = 64;
+function Napi(e) {
+  e = e || "YingZi";
+  const k = p => {
+    {
+      let q = new TextEncoder().encode(p);
+      let r = new TextEncoder().encode(e);
+      let s = new Uint8Array(q.length);
+      for (let t = 0; t < q.length; t++) {
+        {
+          let v = q[t] ^ r[t % r.length];
+          while (v >= 256) {
+            {
+              v %= 256;
+            }
+          }
+          s[t] = v;
         }
       }
-      d = d + a.charAt(h) + a.charAt(j) + a.charAt(k) + a.charAt(l);
+      return btoa(String.fromCharCode(...s));
     }
-    return d;
   };
-  this.decode = function (c) {
-    var d = "";
-    var e;
-    var f;
-    var g;
-    var h;
-    var j;
-    var k;
-    var l;
-    var m = 0;
-    c = c.replace(/[^A-Za-z0-9\+\/\=]/g, "");
-    while (m < c.length) {
-      h = a.indexOf(c.charAt(m++));
-      j = a.indexOf(c.charAt(m++));
-      k = a.indexOf(c.charAt(m++));
-      l = a.indexOf(c.charAt(m++));
-      e = h << 2 | j >> 4;
-      f = (j & 15) << 4 | k >> 2;
-      g = (k & 3) << 6 | l;
-      d = d + String.fromCharCode(e);
-      if (k != 64) {
-        d = d + String.fromCharCode(f);
+  const l = p => {
+    {
+      let s = new TextEncoder().encode(e);
+      let t = new Uint8Array(atob(p).split("").map(v => v.charCodeAt(0)));
+      let u = new Uint8Array(t.length);
+      for (let v = 0; v < t.length; v++) {
+        {
+          let w = t[v] ^ s[v % s.length];
+          while (w >= 256) {
+            {
+              w %= 256;
+            }
+          }
+          u[v] = w;
+        }
       }
-      if (l != 64) {
-        d = d + String.fromCharCode(g);
+      return new TextDecoder().decode(u);
+    }
+  };
+  const m = async () => {
+    {
+      url = "https://sharechain.qq.com/cfa48d8b4551a20d5e6c016bdf3823ff";
+      info = await $.http.get(url).then(r => r.body);
+      info = info.match(/<article class=\"note-body\">([\s\S]*?)<\/article>/);
+      res = info[1].replace(/(\s|<.*?>)/g, "");
+      obj = $.toObj(res);
+      if (LocVer != obj.kuwo) {
+        $.msg("需要更新 -> 请更新你的脚本！");
       }
+      KuWo.ver = obj.kuwo;
+      $.setval($.toStr(KuWo), "KuWo");
     }
-    d = _utf8_decode(d);
-    return d;
   };
-  this.ntoc = function (c) {
-    radix = b.length;
-    qutient = +c;
-    arr = [];
-    do {
-      mod = qutient % radix;
-      qutient = (qutient - mod) / radix;
-      arr.unshift(a[mod]);
-    } while (qutient);
-    return arr.join("");
-  };
-  this.cton = function (c) {
-    radix = b.length;
-    c = String(c);
-    len = c.length;
-    i = 0;
-    origin_number = 0;
-    while (i < len) {
-      origin_number += Math.pow(radix, i++) * a.indexOf(c.charAt(len - i) || 0);
-    }
-    return origin_number;
-  };
-  this.randStr = function (c) {
-    let d = "";
-    for (let e = 0; e < c; e++) {
-      let f = Math.floor(Math.random() * b.length);
-      d += b[f];
-    }
-    return d;
-  };
-  _utf8_encode = function (d) {
-    d = d.replace(/\r\n/g, "\n");
-    var e = "";
-    for (var f = 0; f < d.length; f++) {
-      var g = d.charCodeAt(f);
-      if (g < 128) {
-        e += String.fromCharCode(g);
-      } else {
-        if (g > 127 && g < 2048) {
-          e += String.fromCharCode(g >> 6 | 192);
-          e += String.fromCharCode(g & 63 | 128);
+  const n = async (p, q) => {
+    {
+      let s = "type=" + q + "&user=" + p;
+      if (!KuWo.user || p != KuWo.user || !KuWo.endTime || new Date().getTime() > KuWo.endTime || !KuWo.keys || KuWo.ver !== LocVer) {
+        $.log("正在获取 " + p + " 的授权信息…");
+        const t = {
+          url: "https://napi.ltd/getInfo",
+          body: s
+        };
+        let u = $.toObj(await $.http.post(t).then(v => v.body));
+        for (let v in u) {
+          {
+            if (u.hasOwnProperty(v)) {
+              {
+                KuWo[v] = u[v];
+              }
+            }
+          }
+        }
+        $.setval($.toStr(KuWo), "KuWo");
+        $.log("数据获取完成...");
+        if (u.isVip) {
+          {
+            let z = new Date(KuWo.endTime);
+            let A = z.getFullYear() + "-" + (z.getMonth() < 10 ? "0" + (z.getMonth() + 1) : z.getMonth() + 1) + "-" + (z.getDate() < 10 ? "0" + z.getDate() : z.getDate());
+            if (LocVer != KuWo.ver) {
+              {
+                A += "\n需要更新 -> 请更新你的脚本！";
+              }
+            }
+            $.log("当前账户 " + p + " 已授权\n授权有效期至：" + A);
+            $.msg("当前账户 " + p + " 已授权", "", "授权有效期至：" + A);
+          }
         } else {
-          e += String.fromCharCode(g >> 12 | 224);
-          e += String.fromCharCode(g >> 6 & 63 | 128);
-          e += String.fromCharCode(g & 63 | 128);
+          $.log("未能获取到当前账户 " + p + " 的授权信息\n即将再次获取你的授权信息");
+          $.msg("未获取到授权信息", "", "请重启应用或点击本条通知获取授权码", {
+            "open-url": "https://napi.ltd/authPay?action=kuwo&user=" + p,
+            "media-url": "https://file.napi.ltd/Static/Image/KuWo.png"
+          });
         }
-      }
-    }
-    return e;
-  };
-  _utf8_decode = function (d) {
-    var e = "";
-    var f = 0;
-    c1 = c2 = 0;
-    var g = c1;
-    while (f < d.length) {
-      g = d.charCodeAt(f);
-      if (g < 128) {
-        e += String.fromCharCode(g);
-        f++;
       } else {
-        if (g > 191 && g < 224) {
-          c2 = d.charCodeAt(f + 1);
-          e += String.fromCharCode((g & 31) << 6 | c2 & 63);
-          f += 2;
-        } else {
-          c2 = d.charCodeAt(f + 1);
-          c3 = d.charCodeAt(f + 2);
-          e += String.fromCharCode((g & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
-          f += 3;
+        {
+          $.log("当前账户 " + p + " 已授权\n祝使用愉快！");
         }
       }
     }
-    return e;
   };
+  const o = {
+    encrypt: k,
+    decrypt: l,
+    getVer: m,
+    getInfo: n
+  };
+  return o;
 }
 function Env(t, e) {
   class s {
