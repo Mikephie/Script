@@ -576,7 +576,13 @@ function Env(t, e) {
       this.log("", `🔔${this.name}, 开始!`);
     }
     getEnv() {
-      return "undefined" != typeof $environment && $environment["surge-version"] ? "Surge" : "undefined" != typeof $environment && $environment["stash-version"] ? "Stash" : "undefined" != typeof module && module.exports ? "Node.js" : "undefined" != typeof $task ? "Quantumult X" : "undefined" != typeof $loon ? "Loon" : "undefined" != typeof $rocket ? "Shadowrocket" : undefined;
+      if (typeof $environment != "undefined" && $environment["surge-version"]) return "Surge";
+      if (typeof $environment != "undefined" && $environment["stash-version"]) return "Stash";
+      if (typeof module != "undefined" && module.exports) return "Node.js";
+      if (typeof $task != "undefined") return "Quantumult X";
+      if (typeof $loon != "undefined") return "Loon";
+      if (typeof $rocket != "undefined") return "Shadowrocket";
+      return undefined;
     }
     isNode() {
       return "Node.js" === this.getEnv();
