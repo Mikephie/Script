@@ -38,16 +38,37 @@ const Book_Home = RegExp(/v\d\/api\/advert\/myPage/);
 const KuWo_AD = RegExp(/(v\d\/api\/advert\/(iListen|album)|openapi\/v\d\/album\/adBar|(\/EcomResource|\/(Mobile)?Ad)Serv(er|ice))/);
 const KuWo_ListAD = RegExp(/vip\/v\d\/sysinfo\?op\=getRePayAndDoPayBoxNew/);
 const KuWo_BookAD = RegExp(/v\d\/api\/pay\/payInfo\/kwplayer\/payMiniBar/);
-const KuWo_BookPageAD = RegExp(/openapi\/v\d\/tingshu\/index\/radio/);
+const KuWo_BookPageAD = RegExp(/openapi\/v\d\/tingshu\/index\/radio/);  
 const KuWo_TabAD = "/kuwopay/vip-tab/setting";
 const KuWo_MenuAD = RegExp(/openapi\/v\d\/app\/newMenuList\/menuListInfo/);
 const KuWo_HomeAD = RegExp(/openapi\/v\d\/album\/myRec\/vipMusic/);
 const KuWo_HomeTopAD = RegExp(/openapi\/v\d\/operate\/homePage/);
 const KuWo = $.toObj($.getval("KuWo")) || {};
 const LocVer = "5.1.6";
+
+// 为 Surge 环境添加必要的全局变量
+if (typeof $environment != "undefined" && $environment["surge-version"]) {
+  var $task = {
+    fetch: url => {
+      return new Promise((resolve, reject) => {
+        $httpClient.get(url, (error, response, body) => {
+          if (error) reject(error)
+          else resolve({ statusCode: response.status || response.statusCode, headers: response.headers, body })
+        })
+      })
+    }
+  }
+  
+  var $prefs = {
+    valueForKey: key => $persistentStore.read(key),
+    setValueForKey: (val, key) => $persistentStore.write(val, key)
+  }
+}
+
 var url = "undefined" !== typeof $request ? $request.url : "";
 var body = "undefined" !== typeof $response ? $response.body : null;
 let obj = $.toObj(body);
+
 if (url.indexOf(Play_URL) != -1) {
   let keys = KuWo.keys;
   let key = keys[Math.floor(Math.random() * keys.length)];
@@ -61,6 +82,7 @@ if (url.indexOf(Play_URL) != -1) {
   let Song = KuWo.Song;
   let Ver = KuWo.ver;
   let rid = body.replace(/.*?\"rid\":(\d+).*/, "$1");
+  
   !(async () => {
     await getInfo(UserID, "kuwo");
     await getVer();
@@ -71,7 +93,7 @@ if (url.indexOf(Play_URL) != -1) {
       };
       const h = {
         br: 2000,
-        url: "2000kflac"
+        url: "2000kflac"  
       };
       const j = {
         br: 320,
@@ -99,7 +121,7 @@ if (url.indexOf(Play_URL) != -1) {
     KuWo.PlayID = "";
     $.setval($.toStr(KuWo), "KuWo");
     const f = {
-      body: body
+      body: body  
     };
     $.done(f);
   })();
