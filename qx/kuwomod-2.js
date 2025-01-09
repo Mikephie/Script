@@ -130,21 +130,7 @@ async function playInfo() {
     $.done(n);
   })();
 }
-async function userInfo() {
-  !(async () => {
-    let d = new URL(url).searchParams;
-    let e = d.get("uid");
-    if ("number" !== typeof e) {
-      e = url.replace(/.*?uid=(\d+).*/, "$1");
-    }
-    await getInfo(e, "kuwo");
-    body = await $.http.get(url.replace(/uid=\d+/g, "uid=238581279")).then(g => g.body);
-    const f = {
-      body: body
-    };
-    $.done(f);
-  })();
-}
+
 async function vipTabInfo() {
   obj.data.vipIcon = "https://image.kuwo.cn/fe/13e4f930-f8bc-4b86-8def-43cbc3c7d86c7.png";
   delete obj.data.iconJumpUrl;
