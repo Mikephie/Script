@@ -518,6 +518,13 @@ function NapiCode() {
     return e;
   };
 }
+// 如果是 Surge 环境，添加必要的导出
+if (typeof $environment != "undefined" && $environment["surge-version"]) {
+  module.exports = {
+    Env,
+    NapiCode
+  }
+}
 function Env(t, e) {
   class s {
     constructor(t) {
