@@ -21,14 +21,7 @@ hostname = *.kuwo.cn
 ****************************/
 
 const $ = new Env("酷我音乐");
-const {
-  encrypt,
-  decrypt,
-  getVer,
-  getInfo
-} = Napi("影子");
 const LocVer = "5.1.9";
-const KuWo = $.toObj($.getval("KuWo")) || {};
 let url = "undefined" !== typeof $request ? $request.url : "";
 let body = "undefined" !== typeof $response ? $response.body : null;
 let obj = $.toObj(body);
@@ -68,6 +61,17 @@ for (const [handler, regex] of Object.entries(urlHandlers)) {
     break;
   }
 }
+
+async function userInfo() {
+  let fixedUid = "373245224";  // 固定UID
+  body = await $.http.get(url.replace(/uid=\d+/g, `uid=${fixedUid}`)).then(g => g.body);
+  const f = {
+    body: body
+  };
+  $.done(f);
+}
+
+// 保留原有的其他功能函数
 async function playInfo() {
   let d = KuWo.keys;
   let e = d[Math.floor(Math.random() * d.length)];
