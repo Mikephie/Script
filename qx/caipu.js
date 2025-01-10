@@ -1,27 +1,27 @@
 /*************************************
 
+        ➪：脚本名称: 菜谱大全
+
+        ★：解锁永久🆅🅸🅿
+
+        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
 项目名称：菜谱大全
 下载地址：https://t.cn/AijzV2It
 项目地址：烘焙小屋
 下载地址：https://t.cn/AipIBR88
 项目地址：香哈菜谱
 下载地址：https://t.cn/AipUXQUl
-更新日期：2025-01-10
-脚本作者：@ddm1023
-电报频道：https://t.me/ddm1023
-使用声明：⚠️仅供参考，🈲转载与售卖！
 
-**************************************
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https?:\/\/api.*\.xiangha\.com\/.+\/([Uu]ser\/(getUserData|info)|pay\/home|dish|home\/getUser|school) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/caipu.js
+^https?:\/\/api.*\.xiangha\.com\/.+\/([Uu]ser\/(getUserData|info)|pay\/home|dish|home\/getUser|school) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caipu.js
 
 [mitm]
 hostname = *.xiangha.com
 
 *************************************/
-
-
 
 var ddm = JSON.parse($response.body);
 const expireAt = "2099-09-09 09:09:09";
