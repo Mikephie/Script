@@ -4,7 +4,7 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/caipu.png
 
 [Script]
-http-response ^http:\/\/format-api\.netpock\.com\/api\/user_info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bzg.js, requires-body=true, timeout=60, tag=bzg
+http-response ^https?:\/\/api.*\.xiangha\.com\/.+\/([Uu]ser\/(getUserData|info)|pay\/home|dish|home\/getUser|school) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caipu.js, requires-body=true, timeout=60, tag=caipu
 
 [MITM]
 hostname = format-api.netpock.com
