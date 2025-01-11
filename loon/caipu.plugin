@@ -1,0 +1,10 @@
+#!name = 菜谱-登陆后解锁会员功能🔐APP解锁
+#!desc = 美食教学 - 插件
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/caipu.png
+
+[Script]
+http-response ^http:\/\/format-api\.netpock\.com\/api\/user_info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bzg.js, requires-body=true, timeout=60, tag=bzg
+
+[MITM]
+hostname = format-api.netpock.com
