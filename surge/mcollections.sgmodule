@@ -94,7 +94,7 @@ cdsp = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/app\/accou
 # 彩云天气
 # hostname = *.cyapi.cn
 # 广告净化/弹窗AD/去除亲友卡/去除悬浮模块
-caiyuntianqi = type=http-response, pattern=^https?:\/\/(ad|biz|wrapper|starplucker)\.cyapi\.cn\/.+\/((activity\?app_name|operation|config|req\?app_name=weather)|v\d\/(trial_card\/info|entries|friend_cards|token\/device)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
+caiyuntianqi = type=http-response, pattern=^https?:\/\/api.*\.xiangha\.com\/.+\/([Uu]ser\/(getUserData|info)|pay\/home|dish|home\/getUser|school), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 菜谱大全
