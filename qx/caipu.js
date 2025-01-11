@@ -23,7 +23,7 @@ hostname = *.xiangha.com
 
 *************************************/
 
-var ddm = JSON.parse($response.body);
+var mike = JSON.parse($response.body);
 const expireAt = "2088-08-08 08:08:08";
 
 function calculateDaysToEnd(dateString) {
@@ -36,7 +36,7 @@ function calculateDaysToEnd(dateString) {
 const daysLeft = calculateDaysToEnd(expireAt);
 
 if (/getUserData/.test($request.url)) {
-  Object.assign(ddm.data.data, {
+  Object.assign(mike.data.data, {
     vip: {
       is_open_vip: 2,
       is_vip: 2,
@@ -49,7 +49,7 @@ if (/getUserData/.test($request.url)) {
 }
 
 if (/pay\/home/.test($request.url)) {
-  Object.assign(ddm.data.user, {
+  Object.assign(mike.data.user, {
     expireDate: expireAt,
     img: "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
     nickname: "MIKEPHIE",
@@ -58,9 +58,9 @@ if (/pay\/home/.test($request.url)) {
 }
 
 if (/home\/getUser/.test($request.url)) {
-  ddm.data.nickName = "MIKEPHIE";
-  ddm.data.img = "https://i.ibb.co/wM5z10N/IMG-1287.jpg";
-  Object.assign(ddm.data.vip, {
+  mike.data.nickName = "MIKEPHIE";
+  mike.data.img = "https://i.ibb.co/wM5z10N/IMG-1287.jpg";
+  Object.assign(mike.data.vip, {
     first_time: "2024-01-23",
     expired_day: "0",
     isVip: 2,
@@ -72,7 +72,7 @@ if (/home\/getUser/.test($request.url)) {
 }
 
 if (/user\/info/.test($request.url)) {
-  Object.assign(ddm.data, {
+  Object.assign(mike.data, {
     nickName: "MIKEPHIE",
     img: "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
     vipInfo: {
@@ -89,10 +89,10 @@ if (/(dish|school)/.test($request.url)) {
     isCollection: 2,
     isVip: "2",
   };
-  searchAndModify(ddm, Params);
+  searchAndModify(mike, Params);
 }
 
-$done({ body: JSON.stringify(ddm) });
+$done({ body: JSON.stringify(mike) });
 
 function searchAndModify(obj, params) {
   for (const key in obj) {
