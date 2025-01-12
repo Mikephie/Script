@@ -1,10 +1,21 @@
 #!name = 酷我音乐🔐APP解锁
-#!desc = 媒体播放 - 插件
-#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/kuwo.png
+#!desc = 〔 酷我音乐&酷我畅听 〕全功能破解
+#!author = 影子[https://www.napi.ltd]
+#!homepage = https://napi.ltd
+#!openUrl = https://napi.ltd
+#!tag = 会员
+#!loon_version = 3.2.3(762)
+#!icon = https://static.napi.ltd/Image/KuWo.png
+#!date = 2025-01-11
+
+
+[Rewrite]
+^.*?kuwo\.cn\/((EcomResource|(Mobile)?Ad)Serv(er|ice)|(vip|openapi|api)?\/v\d\/(sysinfo\?op\=getRePayAndDoPayBoxNew|api\/pay\/payInfo\/kwplayer\/payMiniBar|app\/(newMenuList\/menuListInfo|pasterAdvert\/config)|pay\/app\/getConfigInfo|api\/advert\/(iListen|album))) reject-200
+
 
 [Script]
-http-response ^https?:\/\/(?:musicpay|nmobi|vip1|audiobookpay|tingshu)\.kuwo\.cn\/(?:music\.pay\?newver=\d+|mobi.s\?f=kwxs|vip\/(?:enc\/user\/vip\?op=ui&uid=|v2\/theme\?op=gd)|a\.p|v2\/api\/pay\/user\/info) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/kuwo.js, requires-body=true, timeout=60, tag=kuwo
+http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/(v\d/)?(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|api/((pay/)?user/info|advert/myPage)|tingshu/index/radio|operate/homePage)|/kuwopay/vip-tab/setting|/a\.p($|\?newver\=\d$|.*?op\=(getvip|policy_shortvideo)|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=\d$|--album/(adBar|myRec/vipMusic)--) script-path=https://napi.ltd/script/Worker/KuWo.js, requires-body=true, timeout=60, tag=酷我音乐, img-url=https://static.napi.ltd/Image/KuWo.png
 
-[MITM]
+
+[Mitm]
 hostname = *.kuwo.cn
