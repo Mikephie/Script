@@ -2,41 +2,57 @@
   "UA": {
     "Watchly": {
       "products": [
-        { "entitlement": "lifetime", "id": "watchface.lifetime", "type": "life", "name": "Watchly-表面" }
+        {
+          "entitlement": "lifetime",
+          "id": "watchface.lifetime",
+          "type": "life",
+          "name": "Watchly-表面"
+        }
       ]
     },
-    "Mockview": {
+    "Journal": {
       "products": [
-        { "entitlement": "Pro", "id": "kavsoft.dev.yearly", "type": "sub", "name": "Mockview" }
-      ]
-    },
-    "ShellBean": {
-      "products": [
-        { "entitlement": "pro", "id": "com.ningle.shellbean.subscription.year.discount", "type": "sub", "name": "ShellBean- SHH服务器" }
-      ]
-    },
-    "umai": {
-      "products": [
-        { "entitlement": "umai_pro", "id": "umai_pro_yearly", "type": "sub", "name": "UmAI" }
-      ]
-    },
-    "Art Generator": {
-      "products": [
-        { "entitlement": "discount_pro", "id": "artx_yearly_option_2", "type": "sub", "name": "Art Generator" },
-        { "entitlement": "DalleCredit", "id": "artx_100Credit", "type": "sub", "name": "Art Generator" }
+        {
+          "entitlement": "PRO",
+          "id": "com.pureformstudio.diary.yearly",
+          "type": "sub",
+          "name": "Journal App"
+        },
+        {
+          "entitlement": "AI+",
+          "id": "com.pureformstudio.diarly.ai_plus_yearly",
+          "type": "sub",
+          "name": "Journal App"
+        }
       ]
     }
-    // ... [truncated for brevity] - Add all other UA products here
   },
   "BUNDLE": {
     "com.valo.reader": {
       "products": [
-        { "entitlement": "com.valo.reader.vip1.forever", "id": "com.valo.reader.vip1.forever", "type": "sub", "name": "读不舍手" },
-        { "entitlement": "com.valo.reader.vip2.year", "id": "com.valo.reader.vip2.year", "type": "sub", "name": "读不舍手" }
+        {
+          "entitlement": "com.valo.reader.vip1.forever",
+          "id": "com.valo.reader.vip1.forever",
+          "type": "sub",
+          "name": "读不舍手"
+        },
+        {
+          "entitlement": "com.valo.reader.vip2.year",
+          "id": "com.valo.reader.vip2.year",
+          "type": "sub",
+          "name": "读不舍手"
+        }
+      ]
+    },
+    "io.innerpeace.yiye": {
+      "products": [
+        {
+          "entitlement": "Premium",
+          "id": "io.innerpeace.yiye.lifetime.forYearly",
+          "type": "life",
+          "name": "言外笔记"
+        }
       ]
     }
-    // ... [truncated for brevity] - Add all other BUNDLE products here
-  },
-  "VERSION": "2024.01.16",
-  "LAST_UPDATE": "2024-01-16T00:00:00Z"
+  }
 }
