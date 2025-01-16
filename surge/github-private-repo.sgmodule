@@ -1,0 +1,11 @@
+#!name=Github Private_🔐APP
+#!desc=允许引用Github私有仓库/gist中的订阅分流，重写，脚本等配置文件。
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🔐APP
+
+
+[Script]
+Github Private = type=http-request, requires-body=0, pattern=^https?:\/\/(raw|gist)\.githubusercontent.com, script-path=githubprivate.js
+
+[MITM]
+hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com
