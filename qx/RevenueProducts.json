@@ -4,6 +4,11 @@
           { entitlement: 'lifetime', id: 'watchface.lifetime', type: 'life', name: 'Watchly-表面' }
         ]
       },
+      'Mockview': {
+        products: [
+          { entitlement: 'Pro', id: 'kavsoft.dev.yearly', type: 'sub', name: 'Mockview' }
+        ]
+      },
       'ShellBean': {
         products: [
           { entitlement: 'pro', id: 'com.ningle.shellbean.subscription.year.discount', type: 'sub', name: 'ShellBean- SHH服务器' }
