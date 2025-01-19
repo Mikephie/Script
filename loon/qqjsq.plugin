@@ -4,9 +4,8 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/qqjsq.png
 
 [Script]
-http-response ^https:\/\/paperwork\.szshht\.cn\/api\/User\/(getUserInfo|getVipInfo) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qqjsq.js, requires-body=true, timeout=60, tag=qqjsq
+http-response ^http:\/\/chenghu\.kuaixuanwo\.com\/user\/info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qqjsq.js, requires-body=true, timeout=60, tag=qqjsq
 
 
 [mitm]
 hostname = chenghu.kuaixuanwo.com
-qqjsq = type=http-response, pattern=^http:\/\/chenghu\.kuaixuanwo\.com\/user\/info, script-path=https://raw.githubusercontent.com/afengye/QX/main/qqjsq.js, requires-body=true, max-size=-1, timeout=60
