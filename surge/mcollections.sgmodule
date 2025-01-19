@@ -217,6 +217,11 @@ perfect365video = type=http-response, pattern=^https?:\/\/video-svr\.perfect365\
 PPT大师 = type=http-response, pattern=^https:\/\/pptdashi\.kuoliang\.cn\/package\/ppt\/get(All|Random)\?.*, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pptds.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# 亲戚计算器（永久会员）
+# hostname = sm.szsszykj.com
+qqjsq = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, max-size=-1, timeout=60
+
+#************************************#
 # 全局扫描-图片转文字&全能扫描仪&拍照识别花草（永久会员）
 # hostname = sm.szsszykj.com
 qjsm = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, max-size=-1, timeout=60
