@@ -16,4 +16,5 @@ http-request ^https?:\/\/.+\/emby\/Sessions\/Playing\/Stopped script-path=https:
 cron {cron} script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/emby.js,tag = 自动观看保号,enable=true
 
 [MITM]
-hostname = -*.fileball.app, *
+[MITM]
+hostname = %APPEND% -*.fileball.app, *.emby.*, *.emby.*.*
