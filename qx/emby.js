@@ -12,8 +12,7 @@
 35 22 15,30 * * https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Emby.js, tag=Emby自动观看, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/emby.png, enabled=true
 
 [MITM]
-[MITM]
-hostname = %APPEND% -*.fileball.app, *.emby.*, *.emby.*.*
+hostname = %APPEND% -*.fileball.app, api.sencloud.vip, *.sencloud.vip, mb3admin.com, *.mb3admin.com
 
 */
 
