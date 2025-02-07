@@ -16,4 +16,4 @@ http-request ^https?:\/\/.+\/emby\/Sessions\/Playing\/Stopped script-path=https:
 cron {cron} script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/emby-ori.js,tag = 自动观看保号,enable=true
 
 [MITM]
-hostname = -*.fileball.app, *.SenPlayer.app, mb3admin.com, *.mb3admin.com
+hostname = tanhuatv.site:443, www.023168.xyz:443, emby-micax-ca-v2.mius.uk:8443, su.viclub.top:8090
