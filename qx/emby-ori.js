@@ -12,7 +12,7 @@
 35 22 15,30 * * https://raw.githubusercontent.com/Mikephie/Script/main/qx/emby-ori.js, tag=Emby自动观看, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/emby.png, enabled=true
 
 [MITM]
-hostname = -*.fileball.app, *.SenPlayer.app, mb3admin.com, *.mb3admin.com
+hostname = -*.fileball.app, -*.SenPlayer.app, *
 */
 
 // Environment detection
