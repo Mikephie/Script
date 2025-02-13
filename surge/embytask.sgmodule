@@ -1,0 +1,11 @@
+#!name=Emby观看保号✅
+#!desc=EMBY - 模块
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=✅签到
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/emby.png
+
+[Script]
+emby-task = type=cron,cronexp="35 22 15,30 * *",wake-system=1,timeout=60,script-path=Scripts/embytask.js
+
+[MITM]
+hostname = %APPEND% *.viclub.top:*, us.nanflix.net:2231, tanhuatv.site:*, emby.jingzhe.pro, new.emby.moe

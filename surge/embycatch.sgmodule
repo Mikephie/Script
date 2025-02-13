@@ -1,0 +1,44 @@
+#!name=Emby观看保号✅
+#!desc=Capture Emby playback events (start, progress, stop) over HTTP and HTTPS
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🔐APP
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/emby.png
+
+
+[Script]
+# 探花服务器
+th-playing = type=http-request,pattern=^https?:\/\/tanhuatv\.site:443\/emby\/Sessions\/Playing$,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+th-playing-progress = type=http-request,pattern=^https?:\/\/tanhuatv\.site:443\/emby\/Sessions\/Playing\/Progress,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+th-playing-stopped = type=http-request,pattern=^https?:\/\/tanhuatv\.site:443\/emby\/Sessions\/Playing\/Stopped,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+th-stopped = type=http-request,pattern=^https?:\/\/tanhuatv\.site:443\/emby\/Sessions\/Stopped,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+
+# Viclub服务器
+vc-playing = type=http-request,pattern=^https?:\/\/.*\.viclub\.top:\d+\/emby\/Sessions\/Playing$,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+vc-playing-progress = type=http-request,pattern=^https?:\/\/.*\.viclub\.top:\d+\/emby\/Sessions\/Playing\/Progress,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+vc-playing-stopped = type=http-request,pattern=^https?:\/\/.*\.viclub\.top:\d+\/emby\/Sessions\/Playing\/Stopped,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+vc-stopped = type=http-request,pattern=^https?:\/\/.*\.viclub\.top:\d+\/emby\/Sessions\/Stopped,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+
+# 惊蛰服务器
+jz-playing = type=http-request,pattern=^https?:\/\/emby\.jingzhe\.pro\/emby\/Sessions\/Playing$,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+jz-playing-progress = type=http-request,pattern=^https?:\/\/emby\.jingzhe\.pro\/emby\/Sessions\/Playing\/Progress,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+jz-playing-stopped = type=http-request,pattern=^https?:\/\/emby\.jingzhe\.pro\/emby\/Sessions\/Playing\/Stopped,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+jz-stopped = type=http-request,pattern=^https?:\/\/emby\.jingzhe\.pro\/emby\/Sessions\/Stopped,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+
+# MisakaF服务器
+moe-playing = type=http-request,pattern=^https?:\/\/new\.emby\.moe\/emby\/Sessions\/Playing$,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+moe-playing-progress = type=http-request,pattern=^https?:\/\/new\.emby\.moe\/emby\/Sessions\/Playing\/Progress,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+moe-playing-stopped = type=http-request,pattern=^https?:\/\/new\.emby\.moe\/emby\/Sessions\/Playing\/Stopped,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+moe-stopped = type=http-request,pattern=^https?:\/\/new\.emby\.moe\/emby\/Sessions\/Stopped,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+
+# Nanflix服务器
+nf-playing = type=http-request,pattern=^https?:\/\/us\.nanflix\.net:2231\/emby\/Sessions\/Playing$,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+nf-playing-progress = type=http-request,pattern=^https?:\/\/us\.nanflix\.net:2231\/emby\/Sessions\/Playing\/Progress,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+nf-playing-stopped = type=http-request,pattern=^https?:\/\/us\.nanflix\.net:2231\/emby\/Sessions\/Playing\/Stopped,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+nf-stopped = type=http-request,pattern=^https?:\/\/us\.nanflix\.net:2231\/emby\/Sessions\/Stopped,requires-body=1,max-size=0,debug=1,script-path=Scripts/embycatch.js
+
+# 定时任务保持不变
+emby-task = type=cron,cronexp="35 22 15,30 * *",wake-system=1,timeout=30,script-path=Scripts/embytask.js
+
+
+[MITM]
+hostname = %APPEND% *.viclub.top:*, us.nanflix.net:2231, tanhuatv.site:*, emby.jingzhe.pro, new.emby.moe
