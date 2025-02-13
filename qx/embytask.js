@@ -1,18 +1,11 @@
-// Emby请求类型说明：兼容三个平台
-// session: 创建/维护会话的请求，用于初始化播放
-// progress: 更新播放进度的请求，用于记录历史
-// playing: 维持播放状态的请求，用于保持账户活跃（保号）
-
 function Env(name) {
     this.name = name;
     this.startTime = Date.now();
     
-    // 平台判断
     this.isLoon = typeof $loon !== 'undefined';
     this.isQuanX = typeof $task !== 'undefined';
     this.isSurge = typeof $httpClient !== 'undefined' && !this.isLoon;
     
-    // 统一通知接口
     this.notify = (title, subtitle, message) => {
         if (this.isLoon || this.isSurge) {
             $notification.post(title, subtitle, message);
@@ -21,7 +14,6 @@ function Env(name) {
         }
     };
     
-    // 统一持久化接口
     this.persist = {
         read: (key) => {
             if (this.isLoon || this.isSurge) {
@@ -39,7 +31,6 @@ function Env(name) {
         }
     };
     
-    // 统一网络请求接口
     this.http = {
         post: (options) => {
             if (this.isLoon || this.isSurge) {
@@ -60,13 +51,11 @@ function Env(name) {
         if (this.isLoon || this.isQuanX || this.isSurge) $done();
     };
 
-    // 输出环境信息
     console.log(`[ENV] 脚本运行环境: ${this.isLoon ? 'Loon' : this.isQuanX ? 'QuantumultX' : this.isSurge ? 'Surge' : 'unknown'}`);
 }
 
 const $ = new Env('Emby定时任务');
 
-// Server配置
 const SERVER_KEYS = {
     'th': {
         key: 'emby_th_playing',
@@ -95,19 +84,17 @@ const SERVER_KEYS = {
     }
 };
 
-// 工具函数
 const formatTime = () => {
     const now = new Date();
     return `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
 };
 
-// 处理单个请求
 const processRequest = async (key, serverName, comment) => {
     return new Promise((resolve) => {
         const timeoutPromise = new Promise((_, reject) => {
             setTimeout(() => {
                 reject(new Error('请求超时'));
-            }, 5000);
+            }, 3000);
         });
 
         const requestPromise = (async () => {
@@ -140,35 +127,29 @@ const processRequest = async (key, serverName, comment) => {
             .then(resolve)
             .catch((error) => {
                 console.log(`[Task] ${comment} 请求异常:`, error);
-                resolve(null);
+                resolve({ success: false, domain: '-', comment });
             });
     });
 };
 
-// 主任务
 const doTask = async () => {
     try {
         console.log(`[Task] 开始执行定时任务 [${formatTime()}]`);
         const startTime = Date.now();
         const serverResults = {};
 
-        // 并行处理所有请求
-        const results = await Promise.all(
-            Object.entries(SERVER_KEYS).map(async ([serverId, server]) => {
-                const result = await processRequest(server.key, server.name, server.comment);
-                if (result) {
-                    serverResults[server.comment] = {
-                        success: result.success ? 1 : 0,
-                        total: 1,
-                        domain: result.domain
-                    };
-                }
-                await new Promise(r => setTimeout(r, 300));
-                return result;
-            })
-        );
+        for (const [serverId, server] of Object.entries(SERVER_KEYS)) {
+            const result = await processRequest(server.key, server.name, server.comment);
+            if (result) {
+                serverResults[server.comment] = {
+                    success: result.success ? 1 : 0,
+                    total: 1,
+                    domain: result.domain
+                };
+            }
+            await new Promise(r => setTimeout(r, 200));
+        }
 
-        // 生成通知消息
         const duration = ((Date.now() - startTime) / 1000).toFixed(1);
         const serverCount = Object.keys(serverResults).length;
 
@@ -197,6 +178,5 @@ const doTask = async () => {
     $.done();
 };
 
-// 执行
 console.log(`[Task] 脚本开始于 ${formatTime()}`);
 doTask();
