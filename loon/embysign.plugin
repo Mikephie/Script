@@ -7,7 +7,7 @@
 [Argument]
 appName = input,"Emby自动观看保号",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
 appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
-cron = input,"35 22 15,30 * *",tag=定时任务时间,desc=定时任务的cron表达式
+cron = input,"30 10 7,14,21,28 * *",tag=定时任务时间,desc=定时任务的cron表达式
 cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
 
 
