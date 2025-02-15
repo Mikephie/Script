@@ -1,0 +1,11 @@
+#!name=Paga US Card
+#!desc=by niuniujun Telegram @niuniujunGroup
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🔐APP
+
+[MITM]
+hostname = %APPEND% www.mypaga.com
+
+[Script]
+# 替换响应
+paga=type=http-response,pattern=https://www.mypaga.com/paga-webservices/customer-mobile/secured/getUserData/v3,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/pagacard.js, requires-body=1
