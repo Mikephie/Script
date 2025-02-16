@@ -1,6 +1,6 @@
+// 变量
 const $ = new Env('Emby播放记录');
 const NOTIFY_COUNT_KEY = 'notify_count';
-const NOTIFY_SESSION_KEY = 'notify_session';
 
 // 服务器配置
 const SERVERS = {
@@ -44,16 +44,9 @@ const shouldNotify = () => {
     try {
         let countStr = $.getdata(NOTIFY_COUNT_KEY) || '0';
         let count = parseInt(countStr);
-
-        const currentSession = Math.floor(new Date().getTime() / 1000 / 60).toString();
-        const lastSession = $.getdata(NOTIFY_SESSION_KEY);
-
-        if (currentSession !== lastSession) {
-            count = 0;
-            $.setdata(currentSession, NOTIFY_SESSION_KEY);
-        }
-
-        if (count >= 3) {
+        
+        // 限制为2次
+        if (count >= 2) {
             return false;
         }
 
@@ -169,6 +162,8 @@ const handleRequest = () => {
 
 // 主函数
 if (isRequest) {
+    // 重置通知计数
+    $.setdata('0', NOTIFY_COUNT_KEY);
     handleRequest();
 } else {
     $done({});
