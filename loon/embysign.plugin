@@ -1,4 +1,4 @@
-#!name = Emby自动观看保号
+5#!name = Emby自动观看保号
 #!desc = ✅签到插件
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/emby.png
@@ -7,25 +7,25 @@
 [Argument]
 appName = input,"Emby自动观看保号",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
 appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具",tag=app的分类
-cron = input,"30 10 7,14,21,28 * *",tag=定时任务时间,desc=定时任务的cron表达式
+cron = input,"35 22 15,30 * *",tag=定时任务时间,desc=定时任务的cron表达式
 cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
 
 
 [Script]
 # Viclub服务器
-http-request ^https?:\/\/su\.viclub\.top:8090\/emby\/videos\/[^\/]+\/(original|stream) script-path=emby_nanflix.js, requires-body=true, tag=viclub, timeout=60,enable = {cookieScriptEnable}
+http-request ^https?:\/\/su\.viclub\.top:8090\/emby\/videos\/[^\/]+\/(original|stream) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycatch.js, requires-body=true, tag=viclub, timeout=60,enable = {cookieScriptEnable}
 
 # 探花服务器
-http-request ^https?:\/\/tanhuatv\.site:443\/emby\/videos\/[^\/]+\/(original|stream) script-path=emby_nanflix.js, requires-body=true, tag=tanhua, timeout=60,enable = {cookieScriptEnable}
+http-request ^https?:\/\/tanhuatv\.site:443\/emby\/videos\/[^\/]+\/(original|stream) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycatch.js, requires-body=true, tag=tanhua, timeout=60,enable = {cookieScriptEnable}
 
 # Nanflix服务器
-http-request ^https?:\/\/us\.nanflix\.net:2231\/emby\/videos\/[^\/]+\/(original|stream) script-path=emby_nanflix.js, requires-body=true, tag=nanflix, timeout=60,enable = {cookieScriptEnable}
+http-request ^https?:\/\/us\.nanflix\.net:2231\/emby\/videos\/[^\/]+\/(original|stream) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycatch.js, requires-body=true, tag=nanflix, timeout=60,enable = {cookieScriptEnable}
 
 # 惊蛰服务器
-http-request ^https?:\/\/emby\.jingzhe\.pro:80\/emby\/videos\/[^\/]+\/(original|stream) script-path=emby_nanflix.js, requires-body=true, tag=jingzhe, timeout=60,enable = {cookieScriptEnable}
+http-request ^https?:\/\/emby\.jingzhe\.pro:80\/emby\/videos\/[^\/]+\/(original|stream) script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycatch.js, requires-body=true, tag=jingzhe, timeout=60,enable = {cookieScriptEnable}
 
 # MisakaF服务器
-http-request ^https?:\/\/newplay\.emby\.moe\/stream\?md5=.+ script-path=emby_nanflix.js, requires-body=true, tag=moe, timeout=60,enable = {cookieScriptEnable}
+http-request ^https?:\/\/newplay\.emby\.moe\/stream\?md5=.+ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycatch.js, requires-body=true, tag=moe, timeout=60,enable = {cookieScriptEnable}
 
 # 定时任务
 cron {cron} script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embytask.js,tag = 自动观看保号,enable=true
