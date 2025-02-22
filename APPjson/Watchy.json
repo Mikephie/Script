@@ -1,0 +1,35 @@
+{
+  "user_agent": "Watchy",
+  "data": {
+    "coolz_pro_lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "coolz_pro_lifetime"
+    },
+    "coolz_pro_monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "coolz_pro_monthly"
+    },
+    "coolz_pro_weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "coolz_pro_weekly"
+    },
+    "coolz_pro_yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "coolz_pro_yearly"
+    },
+    "watchy_pro_lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "watchy_pro_lifetime"
+    }
+  }
+}
