@@ -1,0 +1,89 @@
+{
+  "user_agent": "Ereasy",
+  "data": {
+    "app.ereasy.ereasy.intro.bold.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.intro.bold.one_week"
+    },
+    "app.ereasy.ereasy.intro.bold_2.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.intro.bold_2.one_week"
+    },
+    "app.ereasy.ereasy.intro.bold_3.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.intro.bold_3.one_week"
+    },
+    "app.ereasy.ereasy.intro.bold_4.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.intro.bold_4.one_week"
+    },
+    "app.ereasy.ereasy.intro.bold_5.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.intro.bold_5.one_week"
+    },
+    "app.ereasy.ereasy.na.50_discount.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.na.50_discount.one_week"
+    },
+    "app.ereasy.ereasy.na.50_discount.one_year": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.na.50_discount.one_year"
+    },
+    "app.ereasy.ereasy.na.bold.one_year": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.na.bold.one_year"
+    },
+    "app.ereasy.ereasy.na.bold_2.one_year": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.na.bold_2.one_year"
+    },
+    "app.ereasy.ereasy.trial.7days_freetrial.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.trial.7days_freetrial.one_week"
+    },
+    "app.ereasy.ereasy.trial.7days_freetrial_2.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.ereasy.ereasy.trial.7days_freetrial_2.one_week"
+    },
+    "rc_promo_voucher_full_access_ereasy_2months": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "rc_promo_voucher_full_access_ereasy_2months"
+    },
+    "rc_promo_voucher_full_access_ereasy_3months": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "rc_promo_voucher_full_access_ereasy_3months"
+    },
+    "rc_promo_voucher_full_access_ereasy_monhtly": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "rc_promo_voucher_full_access_ereasy_monhtly"
+    }
+  }
+}
