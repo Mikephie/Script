@@ -1,0 +1,41 @@
+{
+  "user_agent": "Goru",
+  "data": {
+    "com.ahmetserdarkaradeniz.gorumonthly": {
+      "entitlements": [
+        "goru_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.gorumonthly"
+    },
+    "com.ahmetserdarkaradeniz.goruprolife": {
+      "entitlements": [
+        "goru_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.goruprolife"
+    },
+    "com.ahmetserdarkaradeniz.goruweekly": {
+      "entitlements": [
+        "goru_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.goruweekly"
+    },
+    "com.ahmetserdarkaradeniz.goruweeklyalternative": {
+      "entitlements": [
+        "goru_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.goruweeklyalternative"
+    },
+    "com.ahmetserdarkaradeniz.goruyearly": {
+      "entitlements": [
+        "goru_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.goruyearly"
+    },
+    "com.ahmetserdarkaradeniz.goruyearlyalternative": {
+      "entitlements": [
+        "goru_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.goruyearlyalternative"
+    }
+  }
+}
