@@ -1,0 +1,35 @@
+{
+  "user_agent": "ScreenMaker",
+  "data": {
+    "snapAppPro_week": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "snapAppPro_week"
+    },
+    "snapApp_pro_1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "snapApp_pro_1"
+    },
+    "snapApp_pro_12": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "snapApp_pro_12"
+    },
+    "snapApp_pro_3": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "snapApp_pro_3"
+    },
+    "snapApp_pro_lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "snapApp_pro_lifetime"
+    }
+  }
+}
