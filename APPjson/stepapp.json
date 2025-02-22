@@ -1,0 +1,143 @@
+{
+  "user_agent": "stepapp",
+  "data": {
+    "app.steps.stepsapp.premium.month.tier1": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_month"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.month.tier1"
+    },
+    "app.steps.stepsapp.premium.month.tier2": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_month"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.month.tier2"
+    },
+    "app.steps.stepsapp.premium.month.tier3": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_month"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.month.tier3"
+    },
+    "app.steps.stepsapp.premium.monthlyTrial": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_month"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.monthlyTrial"
+    },
+    "app.steps.stepsapp.premium.monthlyTrial.tier1": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_month"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.monthlyTrial.tier1"
+    },
+    "app.steps.stepsapp.premium.monthlyTrial.tier2": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_month"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.monthlyTrial.tier2"
+    },
+    "app.steps.stepsapp.premium.monthlyTrial.tier3": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_month"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.monthlyTrial.tier3"
+    },
+    "app.steps.stepsapp.premium.year": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.year"
+    },
+    "app.steps.stepsapp.premium.year.tier1": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.year.tier1"
+    },
+    "app.steps.stepsapp.premium.year.tier2": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.year.tier2"
+    },
+    "app.steps.stepsapp.premium.year.tier3": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.year.tier3"
+    },
+    "app.steps.stepsapp.premium.yearTrial": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.yearTrial"
+    },
+    "app.steps.stepsapp.premium.yearTrial.tier1": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.yearTrial.tier1"
+    },
+    "app.steps.stepsapp.premium.yearTrial.tier1.2": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.yearTrial.tier1.2"
+    },
+    "app.steps.stepsapp.premium.yearTrial.tier1.3": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.yearTrial.tier1.3"
+    },
+    "app.steps.stepsapp.premium.yearTrial.tier2": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.yearTrial.tier2"
+    },
+    "app.steps.stepsapp.premium.yearTrial.tier3": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "app.steps.stepsapp.premium.yearTrial.tier3"
+    },
+    "co.rocket.apps.ios.stepsapp.pro.1m.7dt.tier1": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_month"
+      ],
+      "product_identifier": "co.rocket.apps.ios.stepsapp.pro.1m.7dt.tier1"
+    },
+    "co.rocket.apps.ios.stepsapp.pro.1m.7dt.tier1.1": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_month"
+      ],
+      "product_identifier": "co.rocket.apps.ios.stepsapp.pro.1m.7dt.tier1.1"
+    },
+    "co.rocket.apps.ios.stepsapp.pro.1y.7d.tier1": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "co.rocket.apps.ios.stepsapp.pro.1y.7d.tier1"
+    },
+    "co.rocket.apps.ios.stepsapp.pro.1y.intro.tier1": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "co.rocket.apps.ios.stepsapp.pro.1y.intro.tier1"
+    },
+    "co.rocket.apps.ios.stepsapp.pro.1y.intro.tier1.1": {
+      "entitlements": [
+        "stepsapp_pedometer_premium_1_year"
+      ],
+      "product_identifier": "co.rocket.apps.ios.stepsapp.pro.1y.intro.tier1.1"
+    },
+    "stepapppro": {
+      "entitlements": [
+        "stepapppro"
+      ],
+      "product_identifier": "stepapppro"
+    }
+  }
+}
