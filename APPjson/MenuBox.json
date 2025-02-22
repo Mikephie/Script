@@ -1,0 +1,23 @@
+{
+  "user_agent": "MenuBox",
+  "data": {
+    "com.menubox.premium": {
+      "entitlements": [],
+      "product_identifier": "com.menubox.premium"
+    },
+    "mbx_tipjar_lrg": {
+      "entitlements": [],
+      "product_identifier": "mbx_tipjar_lrg"
+    },
+    "mbx_tipjar_small": {
+      "entitlements": [],
+      "product_identifier": "mbx_tipjar_small"
+    },
+    "premium_annual": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_annual"
+    }
+  }
+}
