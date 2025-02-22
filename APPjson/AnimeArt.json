@@ -1,0 +1,23 @@
+{
+  "user_agent": "AnimeArt",
+  "data": {
+    "WaifuArt.Lifetime": {
+      "entitlements": [
+        "AnimeArt.Gold"
+      ],
+      "product_identifier": "WaifuArt.Lifetime"
+    },
+    "WaifuArt.OneMonth": {
+      "entitlements": [
+        "AnimeArt.Gold"
+      ],
+      "product_identifier": "WaifuArt.OneMonth"
+    },
+    "WaifuArt.OneWeek": {
+      "entitlements": [
+        "AnimeArt.Gold"
+      ],
+      "product_identifier": "WaifuArt.OneWeek"
+    }
+  }
+}
