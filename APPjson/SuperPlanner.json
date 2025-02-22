@@ -1,0 +1,45 @@
+{
+  "user_agent": "SuperPlanner",
+  "data": {
+    "advanced_scheduling_feature_pack_39.99": {
+      "entitlements": [
+        "advanced_scheduling_feature_pack"
+      ],
+      "product_identifier": "advanced_scheduling_feature_pack_39.99"
+    },
+    "customizations_feature_pack_9.99": {
+      "entitlements": [
+        "customizations_feature_pack"
+      ],
+      "product_identifier": "customizations_feature_pack_9.99"
+    },
+    "superplanner_29.99_1y_1w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "superplanner_29.99_1y_1w0"
+    },
+    "superplanner_3.99_1m": {
+      "entitlements": [],
+      "product_identifier": "superplanner_3.99_1m"
+    },
+    "superplanner_4.99_1m_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "superplanner_4.99_1m_3d0"
+    },
+    "superplanner_pro_lifetime": {
+      "entitlements": [
+        "pro_lifetime"
+      ],
+      "product_identifier": "superplanner_pro_lifetime"
+    },
+    "widgets_feature_pack_29.99": {
+      "entitlements": [
+        "widgets_feature_pack"
+      ],
+      "product_identifier": "widgets_feature_pack_29.99"
+    }
+  }
+}
