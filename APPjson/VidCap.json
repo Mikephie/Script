@@ -1,0 +1,203 @@
+{
+  "user_agent": "VidCap",
+  "data": {
+    "iap.vcp_149.99_0": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "iap.vcp_149.99_0"
+    },
+    "io.fadel.vidcap.pro.lifetime": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.pro.lifetime"
+    },
+    "io.fadel.vidcap.pro.lifetime.2": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.pro.lifetime.2"
+    },
+    "io.fadel.vidcap.pro.monthly": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.pro.monthly"
+    },
+    "io.fadel.vidcap.pro.monthly.2": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.pro.monthly.2"
+    },
+    "io.fadel.vidcap.pro.monthly.3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.pro.monthly.3"
+    },
+    "io.fadel.vidcap.pro.weekly": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.pro.weekly"
+    },
+    "io.fadel.vidcap.pro.weekly.3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.pro.weekly.3"
+    },
+    "io.fadel.vidcap.pro.yearly": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.pro.yearly"
+    },
+    "io.fadel.vidcap.pro.yearly.2": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.pro.yearly.2"
+    },
+    "io.fadel.vidcap.pro.yearly.3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.pro.yearly.3"
+    },
+    "io.fadel.vidcap.yearly.4": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "io.fadel.vidcap.yearly.4"
+    },
+    "subs.vcp_14.99_180_00": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_14.99_180_00"
+    },
+    "subs.vcp_14.99_30_0": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_14.99_30_0"
+    },
+    "subs.vcp_19.99_180_0": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_19.99_180_0"
+    },
+    "subs.vcp_19.99_365_3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_19.99_365_3"
+    },
+    "subs.vcp_29.99_180_0": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_29.99_180_0"
+    },
+    "subs.vcp_3.99_30_0": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_3.99_30_0"
+    },
+    "subs.vcp_3.99_7_3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_3.99_7_3"
+    },
+    "subs.vcp_34.99_365_3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_34.99_365_3"
+    },
+    "subs.vcp_39.99_180_00": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_39.99_180_00"
+    },
+    "subs.vcp_39.99_180_3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_39.99_180_3"
+    },
+    "subs.vcp_39.99_365_3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_39.99_365_3"
+    },
+    "subs.vcp_49.99_365_3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_49.99_365_3"
+    },
+    "subs.vcp_5.99_30_0": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_5.99_30_0"
+    },
+    "subs.vcp_5.99_7_3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_5.99_7_3"
+    },
+    "subs.vcp_59.99_365_3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_59.99_365_3"
+    },
+    "subs.vcp_6.99_30_3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_6.99_30_3"
+    },
+    "subs.vcp_6.99_7_0": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_6.99_7_0"
+    },
+    "subs.vcp_69.99_365_0": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_69.99_365_0"
+    },
+    "subs.vcp_9.99_30_0": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_9.99_30_0"
+    },
+    "subs.vcp_9.99_30_3": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_9.99_30_3"
+    },
+    "subs.vcp_9.99_7_0": {
+      "entitlements": [
+        "io.fadel.vidcap.pro"
+      ],
+      "product_identifier": "subs.vcp_9.99_7_0"
+    }
+  }
+}
