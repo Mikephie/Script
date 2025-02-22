@@ -1,0 +1,105 @@
+{
+  "user_agent": "Infltr",
+  "data": {
+    "com.Yooshr.infltr.everythingForever": {
+      "entitlements": [
+        "com.Yooshr.infltr.subscriptionPremium"
+      ],
+      "product_identifier": "com.Yooshr.infltr.everythingForever"
+    },
+    "com.Yooshr.infltr.pack_001": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.pack_001"
+    },
+    "com.Yooshr.infltr.pack_002": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.pack_002"
+    },
+    "com.Yooshr.infltr.pack_003": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.pack_003"
+    },
+    "com.Yooshr.infltr.pack_004": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.pack_004"
+    },
+    "com.Yooshr.infltr.pack_005": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.pack_005"
+    },
+    "com.Yooshr.infltr.pack_006": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.pack_006"
+    },
+    "com.Yooshr.infltr.pack_007": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.pack_007"
+    },
+    "com.Yooshr.infltr.pride": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.pride"
+    },
+    "com.Yooshr.infltr.proSettings": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.proSettings"
+    },
+    "com.Yooshr.infltr.stickers.avocado": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.stickers.avocado"
+    },
+    "com.Yooshr.infltr.stickers.breakfast": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.stickers.breakfast"
+    },
+    "com.Yooshr.infltr.stickers.cactus": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.stickers.cactus"
+    },
+    "com.Yooshr.infltr.stickers.mango": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.stickers.mango"
+    },
+    "com.Yooshr.infltr.stickers.virus": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.stickers.virus"
+    },
+    "com.Yooshr.infltr.stickers.yoga": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.stickers.yoga"
+    },
+    "com.Yooshr.infltr.subscriptionPremium.Monthly": {
+      "entitlements": [
+        "com.Yooshr.infltr.subscriptionPremium"
+      ],
+      "product_identifier": "com.Yooshr.infltr.subscriptionPremium.Monthly"
+    },
+    "com.Yooshr.infltr.subscriptionPremium.Weekly": {
+      "entitlements": [
+        "com.Yooshr.infltr.subscriptionPremium"
+      ],
+      "product_identifier": "com.Yooshr.infltr.subscriptionPremium.Weekly"
+    },
+    "com.Yooshr.infltr.subscriptionPremium.Yearly": {
+      "entitlements": [
+        "com.Yooshr.infltr.subscriptionPremium"
+      ],
+      "product_identifier": "com.Yooshr.infltr.subscriptionPremium.Yearly"
+    },
+    "com.Yooshr.infltr.subscriptionPremium.Yearly.2": {
+      "entitlements": [
+        "com.Yooshr.infltr.subscriptionPremium"
+      ],
+      "product_identifier": "com.Yooshr.infltr.subscriptionPremium.Yearly.2"
+    },
+    "com.Yooshr.infltr.subscriptionPremium.Yearly.3": {
+      "entitlements": [
+        "com.Yooshr.infltr.subscriptionPremium"
+      ],
+      "product_identifier": "com.Yooshr.infltr.subscriptionPremium.Yearly.3"
+    },
+    "com.Yooshr.infltr.unlimitedCustomFilters": {
+      "entitlements": [],
+      "product_identifier": "com.Yooshr.infltr.unlimitedCustomFilters"
+    }
+  }
+}
