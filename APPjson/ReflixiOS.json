@@ -1,65 +1,39 @@
 {
   "user_agent": "ReflixiOS",
   "sources": {
-    "rc-backup": {
-      "data": {
-        "com.magicgroot.reflix.subs.annually": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.annually"
-        },
-        "com.magicgroot.reflix.subs.lifetime": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.lifetime"
-        },
-        "com.magicgroot.reflix.subs.lifetime.origin": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.lifetime.origin"
-        },
-        "com.magicgroot.reflix.subs.monthly": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.monthly"
-        }
-      },
-      "timestamp": "2025-02-22T03:29:18.388Z"
-    },
     "revenuecat": {
-      "data": {
-        "com.magicgroot.reflix.subs.annually": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.annually"
-        },
-        "com.magicgroot.reflix.subs.lifetime": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.lifetime"
-        },
-        "com.magicgroot.reflix.subs.lifetime.origin": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.lifetime.origin"
-        },
-        "com.magicgroot.reflix.subs.monthly": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.monthly"
-        }
-      },
-      "timestamp": "2025-02-22T03:29:18.482Z"
+      "timestamp": "2025-02-22T03:32:09.094Z"
+    },
+    "rc-backup": {
+      "timestamp": "2025-02-22T03:32:09.123Z"
     }
   },
-  "unique_product_count": 4,
-  "last_updated": "2025-02-22T03:29:18.483Z"
+  "products": {
+    "com.magicgroot.reflix.subs.annually": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.annually"
+    },
+    "com.magicgroot.reflix.subs.lifetime": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.lifetime"
+    },
+    "com.magicgroot.reflix.subs.lifetime.origin": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.lifetime.origin"
+    },
+    "com.magicgroot.reflix.subs.monthly": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.monthly"
+    }
+  },
+  "product_count": 4,
+  "last_updated": "2025-02-22T03:32:09.123Z"
 }
