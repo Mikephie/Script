@@ -1,6 +1,14 @@
 {
   "user_agent": "PhotoRoom",
-  "data": {
+  "sources": {
+    "rc-backup": {
+      "timestamp": "2025-02-22T03:33:00.666Z"
+    },
+    "revenuecat": {
+      "timestamp": "2025-02-22T03:33:00.889Z"
+    }
+  },
+  "products": {
     "com.background.business.monthly": {
       "entitlements": [
         "business"
@@ -85,5 +93,7 @@
       ],
       "product_identifier": "com.background.pro.yearly"
     }
-  }
+  },
+  "product_count": 14,
+  "last_updated": "2025-02-22T03:33:00.889Z"
 }
