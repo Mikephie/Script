@@ -1,0 +1,71 @@
+{
+  "user_agent": "Color%20Widgets",
+  "data": {
+    "cw_1299_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "cw_1299_1y"
+    },
+    "cw_1499_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "cw_1499_1y"
+    },
+    "cw_1599_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "cw_1599_1y"
+    },
+    "cw_1999_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "cw_1999_1y"
+    },
+    "cw_1999_1y_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "cw_1999_1y_3d0"
+    },
+    "cw_199_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "cw_199_1m"
+    },
+    "cw_199_1m_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "cw_199_1m_3d0"
+    },
+    "cw_2499_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "cw_2499_1y"
+    },
+    "cw_2499_1y_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "cw_2499_1y_3d0"
+    },
+    "cw_299_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "cw_299_1m"
+    },
+    "widgets.pro": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "widgets.pro"
+    }
+  }
+}
