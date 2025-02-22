@@ -1,0 +1,64 @@
+{
+  "user_agent": "ReflixiOS",
+  "sources": {
+    "revenuecat": {
+      "data": {
+        "com.magicgroot.reflix.subs.annually": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.annually"
+        },
+        "com.magicgroot.reflix.subs.lifetime": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.lifetime"
+        },
+        "com.magicgroot.reflix.subs.lifetime.origin": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.lifetime.origin"
+        },
+        "com.magicgroot.reflix.subs.monthly": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.monthly"
+        }
+      },
+      "timestamp": "2025-02-22T02:31:25.038Z"
+    },
+    "rc-backup": {
+      "data": {
+        "com.magicgroot.reflix.subs.annually": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.annually"
+        },
+        "com.magicgroot.reflix.subs.lifetime": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.lifetime"
+        },
+        "com.magicgroot.reflix.subs.lifetime.origin": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.lifetime.origin"
+        },
+        "com.magicgroot.reflix.subs.monthly": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.monthly"
+        }
+      },
+      "timestamp": "2025-02-22T02:31:25.404Z"
+    }
+  },
+  "last_updated": "2025-02-22T02:31:25.405Z"
+}
