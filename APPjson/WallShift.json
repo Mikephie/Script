@@ -1,0 +1,29 @@
+{
+  "user_agent": "WallShift",
+  "data": {
+    "com.roadesign.WallShift.Annual": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.roadesign.WallShift.Annual"
+    },
+    "com.roadesign.WallShift.Lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.roadesign.WallShift.Lifetime"
+    },
+    "com.roadesign.WallShift.LifetimeDiscount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.roadesign.WallShift.LifetimeDiscount"
+    },
+    "com.roadesign.WallShift.Monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.roadesign.WallShift.Monthly"
+    }
+  }
+}
