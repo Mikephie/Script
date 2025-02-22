@@ -1,0 +1,59 @@
+{
+  "user_agent": "Yosum",
+  "data": {
+    "amazingtip": {
+      "entitlements": [
+        "Tips"
+      ],
+      "product_identifier": "amazingtip"
+    },
+    "greattip": {
+      "entitlements": [
+        "Tips"
+      ],
+      "product_identifier": "greattip"
+    },
+    "kindtip": {
+      "entitlements": [
+        "Tips"
+      ],
+      "product_identifier": "kindtip"
+    },
+    "outrageoustip": {
+      "entitlements": [
+        "Tips"
+      ],
+      "product_identifier": "outrageoustip"
+    },
+    "terrykuo.co.yosum.premiummembership": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "terrykuo.co.yosum.premiummembership"
+    },
+    "yosum_099_1mon": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "yosum_099_1mon"
+    },
+    "yosum_399_1year_1week0": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "yosum_399_1year_1week0"
+    },
+    "yosum_799_1year_7free": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "yosum_799_1year_7free"
+    },
+    "yosum_999_1year": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "yosum_999_1year"
+    }
+  }
+}
