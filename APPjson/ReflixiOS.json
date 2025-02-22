@@ -1,1 +1,29 @@
-"{\"name\":\"ReflixiOS.json\",\"path\":\"APPjson/ReflixiOS.json\",\"sha\":\"933bb2589963ae03b38a946d07cda05a067d26bf\",\"size\":2068,\"url\":\"https://api.github.com/repos/Mikephie/Script/contents/APPjson/ReflixiOS.json?ref=main\",\"html_url\":\"https://github.com/Mikephie/Script/blob/main/APPjson/ReflixiOS.json\",\"git_url\":\"https://api.github.com/repos/Mikephie/Script/git/blobs/933bb2589963ae03b38a946d07cda05a067d26bf\",\"download_url\":\"https://raw.githubusercontent.com/Mikephie/Script/main/APPjson/ReflixiOS.json\",\"type\":\"file\",\"content\":\"IntcIm5hbWVcIjpcIlJlZmxpeGlPUy5qc29uXCIsXCJwYXRoXCI6XCJBUFBq\\nc29uL1JlZmxpeGlPUy5qc29uXCIsXCJzaGFcIjpcIjE4ZjQ1NzUxYzNmNDhk\\nMmVmYThmMmRkMzNlMzA2YzljNjk1NDllMzhcIixcInNpemVcIjo4NDMsXCJ1\\ncmxcIjpcImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvTWlrZXBoaWUv\\nU2NyaXB0L2NvbnRlbnRzL0FQUGpzb24vUmVmbGl4aU9TLmpzb24/cmVmPW1h\\naW5cIixcImh0bWxfdXJsXCI6XCJodHRwczovL2dpdGh1Yi5jb20vTWlrZXBo\\naWUvU2NyaXB0L2Jsb2IvbWFpbi9BUFBqc29uL1JlZmxpeGlPUy5qc29uXCIs\\nXCJnaXRfdXJsXCI6XCJodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL01p\\na2VwaGllL1NjcmlwdC9naXQvYmxvYnMvMThmNDU3NTFjM2Y0OGQyZWZhOGYy\\nZGQzM2UzMDZjOWM2OTU0OWUzOFwiLFwiZG93bmxvYWRfdXJsXCI6XCJodHRw\\nczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vTWlrZXBoaWUvU2NyaXB0\\nL21haW4vQVBQanNvbi9SZWZsaXhpT1MuanNvblwiLFwidHlwZVwiOlwiZmls\\nZVwiLFwiY29udGVudFwiOlwiZXdvZ0lDSjFjMlZ5WDJGblpXNTBJam9nSWxK\\nbFpteHBlR2xQVXlJc0NpQWdJbVJoZEdFaU9pQjdDaUFnXFxuSUNBaVkyOXRM\\nbTFoWjJsalozSnZiM1F1Y21WbWJHbDRMbk4xWW5NdVlXNXVkV0ZzYkhraU9p\\nQjdDaUFnXFxuSUNBZ0lDSmxiblJwZEd4bGJXVnVkSE1pT2lCYkNpQWdJQ0Fn\\nSUNBZ0ltTnZiUzV0WVdkcFkyZHliMjkwXFxuTG5KbFpteHBlQzVsYm5ScGRH\\neGxiV1Z1ZEhNaUNpQWdJQ0FnSUYwc0NpQWdJQ0FnSUNKd2NtOWtkV04wXFxu\\nWDJsa1pXNTBhV1pwWlhJaU9pQWlZMjl0TG0xaFoybGpaM0p2YjNRdWNtVm1i\\nR2w0TG5OMVluTXVZVzV1XFxuZFdGc2JIa2lDaUFnSUNCOUxBb2dJQ0FnSW1O\\ndmJTNXRZV2RwWTJkeWIyOTBMbkpsWm14cGVDNXpkV0p6XFxuTG14cFptVjBh\\nVzFsSWpvZ2V3b2dJQ0FnSUNBaVpXNTBhWFJzWlcxbGJuUnpJam9nV3dvZ0lD\\nQWdJQ0FnXFxuSUNKamIyMHViV0ZuYVdObmNtOXZkQzV5Wldac2FYZ3VaVzUw\\nYVhSc1pXMWxiblJ6SWdvZ0lDQWdJQ0JkXFxuTEFvZ0lDQWdJQ0FpY0hKdlpI\\nVmpkRjlwWkdWdWRHbG1hV1Z5SWpvZ0ltTnZiUzV0WVdkcFkyZHliMjkwXFxu\\nTG5KbFpteHBlQzV6ZFdKekxteHBabVYwYVcxbElnb2dJQ0FnZlN3S0lDQWdJ\\nQ0pqYjIwdWJXRm5hV05uXFxuY205dmRDNXlaV1pzYVhndWMzVmljeTVzYVda\\nbGRHbHRaUzV2Y21sbmFXNGlPaUI3Q2lBZ0lDQWdJQ0psXFxuYm5ScGRHeGxi\\nV1Z1ZEhNaU9pQmJDaUFnSUNBZ0lDQWdJbU52YlM1dFlXZHBZMmR5YjI5MExu\\nSmxabXhwXFxuZUM1bGJuUnBkR3hsYldWdWRITWlDaUFnSUNBZ0lGMHNDaUFn\\nSUNBZ0lDSndjbTlrZFdOMFgybGtaVzUwXFxuYVdacFpYSWlPaUFpWTI5dExt\\nMWhaMmxqWjNKdmIzUXVjbVZtYkdsNExuTjFZbk11YkdsbVpYUnBiV1V1XFxu\\nYjNKcFoybHVJZ29nSUNBZ2ZTd0tJQ0FnSUNKamIyMHViV0ZuYVdObmNtOXZk\\nQzV5Wldac2FYZ3VjM1ZpXFxuY3k1dGIyNTBhR3g1SWpvZ2V3b2dJQ0FnSUNB\\naVpXNTBhWFJzWlcxbGJuUnpJam9nV3dvZ0lDQWdJQ0FnXFxuSUNKamIyMHVi\\nV0ZuYVdObmNtOXZkQzV5Wldac2FYZ3VaVzUwYVhSc1pXMWxiblJ6SWdvZ0lD\\nQWdJQ0JkXFxuTEFvZ0lDQWdJQ0FpY0hKdlpIVmpkRjlwWkdWdWRHbG1hV1Z5\\nSWpvZ0ltTnZiUzV0WVdkcFkyZHliMjkwXFxuTG5KbFpteHBlQzV6ZFdKekxt\\nMXZiblJvYkhraUNpQWdJQ0I5Q2lBZ2ZRcDlcXG5cIixcImVuY29kaW5nXCI6\\nXCJiYXNlNjRcIixcIl9saW5rc1wiOntcInNlbGZcIjpcImh0dHBzOi8vYXBp\\nLmdpdGh1Yi5jb20vcmVwb3MvTWlrZXBoaWUvU2NyaXB0L2NvbnRlbnRzL0FQ\\nUGpzb24vUmVmbGl4aU9TLmpzb24/cmVmPW1haW5cIixcImdpdFwiOlwiaHR0\\ncHM6Ly9hcGkuZ2l0aHViLmNvbS9yZXBvcy9NaWtlcGhpZS9TY3JpcHQvZ2l0\\nL2Jsb2JzLzE4ZjQ1NzUxYzNmNDhkMmVmYThmMmRkMzNlMzA2YzljNjk1NDll\\nMzhcIixcImh0bWxcIjpcImh0dHBzOi8vZ2l0aHViLmNvbS9NaWtlcGhpZS9T\\nY3JpcHQvYmxvYi9tYWluL0FQUGpzb24vUmVmbGl4aU9TLmpzb25cIn19Ig==\\n\",\"encoding\":\"base64\",\"_links\":{\"self\":\"https://api.github.com/repos/Mikephie/Script/contents/APPjson/ReflixiOS.json?ref=main\",\"git\":\"https://api.github.com/repos/Mikephie/Script/git/blobs/933bb2589963ae03b38a946d07cda05a067d26bf\",\"html\":\"https://github.com/Mikephie/Script/blob/main/APPjson/ReflixiOS.json\"}}"
+{
+  "user_agent": "ReflixiOS",
+  "data": {
+    "com.magicgroot.reflix.subs.annually": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.annually"
+    },
+    "com.magicgroot.reflix.subs.lifetime": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.lifetime"
+    },
+    "com.magicgroot.reflix.subs.lifetime.origin": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.lifetime.origin"
+    },
+    "com.magicgroot.reflix.subs.monthly": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.monthly"
+    }
+  }
+}
