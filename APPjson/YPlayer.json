@@ -1,0 +1,23 @@
+{
+  "user_agent": "YPlayer",
+  "data": {
+    "net.duoziwei.yplayer.premium": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "net.duoziwei.yplayer.premium"
+    },
+    "net.duoziwei.yplayer.weekly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "net.duoziwei.yplayer.weekly"
+    },
+    "net.duoziwei.yplayer.yearly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "net.duoziwei.yplayer.yearly"
+    }
+  }
+}
