@@ -1,0 +1,35 @@
+{
+  "user_agent": "AmazingWidget",
+  "data": {
+    "com.moyo.forever.vip": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.moyo.forever.vip"
+    },
+    "com.moyo.yearly.vip": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.moyo.yearly.vip"
+    },
+    "moyo_subcription_monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moyo_subcription_monthly"
+    },
+    "moyo_subcription_yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moyo_subcription_yearly"
+    },
+    "moyo_subcription_yearly2": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moyo_subcription_yearly2"
+    }
+  }
+}
