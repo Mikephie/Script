@@ -1,1 +1,23 @@
-{"user_agent":"PhotoRoom","data":{"com.background.business.monthly":{"entitlements":["business"],"product_identifier":"com.background.business.monthly"}}}
+{
+  "user_agent": "PhotoRoom",
+  "data": {
+    "com.background.business.monthly": {
+      "entitlements": [
+        "business"
+      ],
+      "product_identifier": "com.background.business.monthly"
+    },
+    "com.background.business.weekly": {
+      "entitlements": [
+        "business"
+      ],
+      "product_identifier": "com.background.business.weekly"
+    },
+    "com.background.business.yearly": {
+      "entitlements": [
+        "business"
+      ],
+      "product_identifier": "com.background.business.yearly"
+    }
+  }
+}
