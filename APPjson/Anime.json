@@ -1,0 +1,53 @@
+{
+  "user_agent": "Anime",
+  "data": {
+    "com.wallpapershub.anime.monthly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.wallpapershub.anime.monthly"
+    },
+    "com.wallpapershub.anime.premium": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.wallpapershub.anime.premium"
+    },
+    "com.wallpapershub.anime.premiumCategories": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.wallpapershub.anime.premiumCategories"
+    },
+    "com.wallpapershub.anime.sixMonth": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.wallpapershub.anime.sixMonth"
+    },
+    "com.wallpapershub.anime.threeMonth": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.wallpapershub.anime.threeMonth"
+    },
+    "com.wallpapershub.anime.weekly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.wallpapershub.anime.weekly"
+    },
+    "com.wallpapershub.anime.yearly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.wallpapershub.anime.yearly"
+    },
+    "com.wallpapershub.anime.yearly2": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.wallpapershub.anime.yearly2"
+    }
+  }
+}
