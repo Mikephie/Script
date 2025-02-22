@@ -1,0 +1,95 @@
+{
+  "user_agent": "1Blocker",
+  "data": {
+    "00002": {
+      "entitlements": [],
+      "product_identifier": "00002"
+    },
+    "00003": {
+      "entitlements": [],
+      "product_identifier": "00003"
+    },
+    "02002": {
+      "entitlements": [],
+      "product_identifier": "02002"
+    },
+    "03002": {
+      "entitlements": [],
+      "product_identifier": "03002"
+    },
+    "04002": {
+      "entitlements": [],
+      "product_identifier": "04002"
+    },
+    "blocker.ios.iap.lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blocker.ios.iap.lifetime"
+    },
+    "blocker.ios.iap.lifetime.sale": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blocker.ios.iap.lifetime.sale"
+    },
+    "blocker.ios.iap.lifetime.x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blocker.ios.iap.lifetime.x"
+    },
+    "blocker.ios.subscription.lifetime": {
+      "entitlements": [],
+      "product_identifier": "blocker.ios.subscription.lifetime"
+    },
+    "blocker.ios.subscription.monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blocker.ios.subscription.monthly"
+    },
+    "blocker.ios.subscription.monthly.sale": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blocker.ios.subscription.monthly.sale"
+    },
+    "blocker.ios.subscription.monthly.x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blocker.ios.subscription.monthly.x"
+    },
+    "blocker.ios.subscription.yearly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blocker.ios.subscription.yearly"
+    },
+    "blocker.ios.subscription.yearly.sale": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blocker.ios.subscription.yearly.sale"
+    },
+    "blocker.ios.subscription.yearly.x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blocker.ios.subscription.yearly.x"
+    },
+    "iap.lifetime": {
+      "entitlements": [],
+      "product_identifier": "iap.lifetime"
+    },
+    "subscription.monthly": {
+      "entitlements": [],
+      "product_identifier": "subscription.monthly"
+    },
+    "subscription.yearly": {
+      "entitlements": [],
+      "product_identifier": "subscription.yearly"
+    }
+  }
+}
