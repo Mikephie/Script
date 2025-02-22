@@ -1,0 +1,37 @@
+{
+  "user_agent": "PixImagine",
+  "data": {
+    "com.efsoft.piximagine_credits10": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.piximagine_credits10"
+    },
+    "com.efsoft.piximagine_credits30": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.piximagine_credits30"
+    },
+    "com.efsoft.piximagine_credits50": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.piximagine_credits50"
+    },
+    "com.efsoft.piximagine_nc_lifetime": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.piximagine_nc_lifetime"
+    },
+    "com.efsoft.piximagine_subscription_annual": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.piximagine_subscription_annual"
+    },
+    "com.efsoft.piximagine_subscription_for3months": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.piximagine_subscription_for3months"
+    },
+    "com.efsoft.piximagine_subscription_monthly": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.piximagine_subscription_monthly"
+    },
+    "com.efsoft.piximagine_subscription_weekly": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.piximagine_subscription_weekly"
+    }
+  }
+}
