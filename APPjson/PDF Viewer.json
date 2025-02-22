@@ -1,0 +1,17 @@
+{
+  "user_agent": "PDF%20Viewer",
+  "data": {
+    "com.pspdfkit.viewer.sub.pro.months.3": {
+      "entitlements": [
+        "sub.pro"
+      ],
+      "product_identifier": "com.pspdfkit.viewer.sub.pro.months.3"
+    },
+    "com.pspdfkit.viewer.sub.pro.yearly": {
+      "entitlements": [
+        "sub.pro"
+      ],
+      "product_identifier": "com.pspdfkit.viewer.sub.pro.yearly"
+    }
+  }
+}
