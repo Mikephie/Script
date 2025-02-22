@@ -1,0 +1,55 @@
+{
+  "user_agent": "Mockview",
+  "data": {
+    "dev.kavsoft.annualAccess": {
+      "entitlements": [],
+      "product_identifier": "dev.kavsoft.annualAccess"
+    },
+    "dev.kavsoft.monthly": {
+      "entitlements": [],
+      "product_identifier": "dev.kavsoft.monthly"
+    },
+    "dev.kavsoft.monthlyAccess": {
+      "entitlements": [],
+      "product_identifier": "dev.kavsoft.monthlyAccess"
+    },
+    "dev.kavsoft.monthlyPlan": {
+      "entitlements": [],
+      "product_identifier": "dev.kavsoft.monthlyPlan"
+    },
+    "dev.kavsoft.promaxtip": {
+      "entitlements": [
+        "Tipping"
+      ],
+      "product_identifier": "dev.kavsoft.promaxtip"
+    },
+    "dev.kavsoft.protip": {
+      "entitlements": [
+        "Tipping"
+      ],
+      "product_identifier": "dev.kavsoft.protip"
+    },
+    "dev.kavsoft.tip": {
+      "entitlements": [
+        "Tipping"
+      ],
+      "product_identifier": "dev.kavsoft.tip"
+    },
+    "dev.kavsoft.yearlyPlan": {
+      "entitlements": [],
+      "product_identifier": "dev.kavsoft.yearlyPlan"
+    },
+    "kavsoft.dev.monthly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "kavsoft.dev.monthly"
+    },
+    "kavsoft.dev.yearly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "kavsoft.dev.yearly"
+    }
+  }
+}
