@@ -1,35 +1,6 @@
 {
   "user_agent": "ReflixiOS",
   "sources": {
-    "revenuecat": {
-      "data": {
-        "com.magicgroot.reflix.subs.annually": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.annually"
-        },
-        "com.magicgroot.reflix.subs.lifetime": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.lifetime"
-        },
-        "com.magicgroot.reflix.subs.lifetime.origin": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.lifetime.origin"
-        },
-        "com.magicgroot.reflix.subs.monthly": {
-          "entitlements": [
-            "com.magicgroot.reflix.entitlements"
-          ],
-          "product_identifier": "com.magicgroot.reflix.subs.monthly"
-        }
-      },
-      "timestamp": "2025-02-22T03:25:34.757Z"
-    },
     "rc-backup": {
       "data": {
         "com.magicgroot.reflix.subs.annually": {
@@ -57,8 +28,38 @@
           "product_identifier": "com.magicgroot.reflix.subs.monthly"
         }
       },
-      "timestamp": "2025-02-22T03:25:35.148Z"
+      "timestamp": "2025-02-22T03:28:14.014Z"
+    },
+    "revenuecat": {
+      "data": {
+        "com.magicgroot.reflix.subs.annually": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.annually"
+        },
+        "com.magicgroot.reflix.subs.lifetime": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.lifetime"
+        },
+        "com.magicgroot.reflix.subs.lifetime.origin": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.lifetime.origin"
+        },
+        "com.magicgroot.reflix.subs.monthly": {
+          "entitlements": [
+            "com.magicgroot.reflix.entitlements"
+          ],
+          "product_identifier": "com.magicgroot.reflix.subs.monthly"
+        }
+      },
+      "timestamp": "2025-02-22T03:28:14.201Z"
     }
   },
-  "last_updated": "2025-02-22T03:25:35.148Z"
+  "unique_product_count": 4,
+  "last_updated": "2025-02-22T03:28:14.201Z"
 }
