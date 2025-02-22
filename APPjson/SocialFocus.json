@@ -1,0 +1,23 @@
+{
+  "user_agent": "SocialFocus",
+  "data": {
+    "socialfocus_lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "socialfocus_lifetime"
+    },
+    "socialfocus_monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "socialfocus_monthly"
+    },
+    "socialfocus_yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "socialfocus_yearly"
+    }
+  }
+}
