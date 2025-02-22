@@ -1,14 +1,6 @@
 {
   "user_agent": "ReflixiOS",
-  "sources": {
-    "revenuecat": {
-      "timestamp": "2025-02-22T03:32:09.094Z"
-    },
-    "rc-backup": {
-      "timestamp": "2025-02-22T03:32:09.123Z"
-    }
-  },
-  "products": {
+  "data": {
     "com.magicgroot.reflix.subs.annually": {
       "entitlements": [
         "com.magicgroot.reflix.entitlements"
@@ -33,7 +25,5 @@
       ],
       "product_identifier": "com.magicgroot.reflix.subs.monthly"
     }
-  },
-  "product_count": 4,
-  "last_updated": "2025-02-22T03:32:09.123Z"
+  }
 }
