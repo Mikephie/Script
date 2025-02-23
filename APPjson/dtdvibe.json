@@ -1,0 +1,29 @@
+{
+  "user_agent": "dtdvibe",
+  "data": {
+    "com.dtd.aroundu.life": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.dtd.aroundu.life"
+    },
+    "com.dtd.aroundu.life.rp": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.dtd.aroundu.life.rp"
+    },
+    "com.dtd.aroundu.month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.dtd.aroundu.month"
+    },
+    "com.dtd.aroundu.year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.dtd.aroundu.year"
+    }
+  }
+}
