@@ -1,0 +1,17 @@
+{
+  "user_agent": "nPtt",
+  "data": {
+    "app.nextptt.vip1": {
+      "entitlements": [
+        "level"
+      ],
+      "product_identifier": "app.nextptt.vip1"
+    },
+    "app.nextptt.vip1.yearly": {
+      "entitlements": [
+        "vip.yearly"
+      ],
+      "product_identifier": "app.nextptt.vip1.yearly"
+    }
+  }
+}
