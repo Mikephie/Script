@@ -1,0 +1,23 @@
+{
+  "user_agent": "StarDiary",
+  "data": {
+    "com.gsdyx.StarDiary.nonConsumable.forever": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.gsdyx.StarDiary.nonConsumable.forever"
+    },
+    "com.gsdyx.StarDiary.subscription.pro.month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.gsdyx.StarDiary.subscription.pro.month"
+    },
+    "com.gsdyx.StarDiary.subscription.pro.year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.gsdyx.StarDiary.subscription.pro.year"
+    }
+  }
+}
