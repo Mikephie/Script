@@ -1,0 +1,11 @@
+{
+  "user_agent": "TruthOrDare",
+  "data": {
+    "truth_or_dare_premium_monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "truth_or_dare_premium_monthly"
+    }
+  }
+}
