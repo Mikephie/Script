@@ -1,0 +1,23 @@
+{
+  "user_agent": "LiveWallpaper",
+  "data": {
+    "com.tech.LiveWallpaper.ALL": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.tech.LiveWallpaper.ALL"
+    },
+    "com.tech.LiveWallpaper.Monthy": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.tech.LiveWallpaper.Monthy"
+    },
+    "com.tech.LiveWallpaper.Year": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.tech.LiveWallpaper.Year"
+    }
+  }
+}
