@@ -1,0 +1,65 @@
+{
+  "user_agent": "MadeYu",
+  "data": {
+    "my_099_30": {
+      "entitlements": [],
+      "product_identifier": "my_099_30"
+    },
+    "my_1499_1000": {
+      "entitlements": [],
+      "product_identifier": "my_1499_1000"
+    },
+    "my_149_100": {
+      "entitlements": [],
+      "product_identifier": "my_149_100"
+    },
+    "my_199_100": {
+      "entitlements": [],
+      "product_identifier": "my_199_100"
+    },
+    "my_299_1m_200": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "my_299_1m_200"
+    },
+    "my_399_300": {
+      "entitlements": [],
+      "product_identifier": "my_399_300"
+    },
+    "my_499_1w": {
+      "entitlements": [
+        "unlimited"
+      ],
+      "product_identifier": "my_499_1w"
+    },
+    "my_499_300": {
+      "entitlements": [],
+      "product_identifier": "my_499_300"
+    },
+    "my_549_1m_400": {
+      "entitlements": [
+        "pro_plus"
+      ],
+      "product_identifier": "my_549_1m_400"
+    },
+    "my_549_500": {
+      "entitlements": [],
+      "product_identifier": "my_549_500"
+    },
+    "my_799_500": {
+      "entitlements": [],
+      "product_identifier": "my_799_500"
+    },
+    "my_999_1000": {
+      "entitlements": [],
+      "product_identifier": "my_999_1000"
+    },
+    "my_999_1m": {
+      "entitlements": [
+        "unlimited"
+      ],
+      "product_identifier": "my_999_1m"
+    }
+  }
+}
