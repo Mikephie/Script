@@ -1,0 +1,23 @@
+{
+  "user_agent": "App",
+  "data": {
+    "com.hello.german.lifetime": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.hello.german.lifetime"
+    },
+    "com.hello.german.monthly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.hello.german.monthly"
+    },
+    "com.hello.german.yearly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.hello.german.yearly"
+    }
+  }
+}
