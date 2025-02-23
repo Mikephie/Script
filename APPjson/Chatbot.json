@@ -1,0 +1,37 @@
+{
+  "user_agent": "Chatbot",
+  "data": {
+    "chatme.weekly.6_99.3d_trial": {
+      "entitlements": [],
+      "product_identifier": "chatme.weekly.6_99.3d_trial"
+    },
+    "chatme.yearly.39_99": {
+      "entitlements": [],
+      "product_identifier": "chatme.yearly.39_99"
+    },
+    "chatme_premium_month_discount2": {
+      "entitlements": [],
+      "product_identifier": "chatme_premium_month_discount2"
+    },
+    "chatme_premium_month_trial": {
+      "entitlements": [],
+      "product_identifier": "chatme_premium_month_trial"
+    },
+    "chatme_premium_week_discount2": {
+      "entitlements": [],
+      "product_identifier": "chatme_premium_week_discount2"
+    },
+    "chatme_premium_week_trial": {
+      "entitlements": [],
+      "product_identifier": "chatme_premium_week_trial"
+    },
+    "chatme_premium_year_discount": {
+      "entitlements": [],
+      "product_identifier": "chatme_premium_year_discount"
+    },
+    "chatme_premium_year_trial": {
+      "entitlements": [],
+      "product_identifier": "chatme_premium_year_trial"
+    }
+  }
+}
