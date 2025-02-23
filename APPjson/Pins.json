@@ -1,0 +1,27 @@
+{
+  "user_agent": "Pins",
+  "data": {
+    "do.anh.Pins.Tip.Large": {
+      "entitlements": [],
+      "product_identifier": "do.anh.Pins.Tip.Large"
+    },
+    "do.anh.Pins.Tip.Medium": {
+      "entitlements": [],
+      "product_identifier": "do.anh.Pins.Tip.Medium"
+    },
+    "do.anh.Pins.Tip.Small": {
+      "entitlements": [],
+      "product_identifier": "do.anh.Pins.Tip.Small"
+    },
+    "do.anh.Pins.Unlock.Pro": {
+      "entitlements": [],
+      "product_identifier": "do.anh.Pins.Unlock.Pro"
+    },
+    "do.anh.Pins.Unlock.Standard": {
+      "entitlements": [
+        "customer"
+      ],
+      "product_identifier": "do.anh.Pins.Unlock.Standard"
+    }
+  }
+}
