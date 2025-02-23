@@ -1,0 +1,17 @@
+{
+  "user_agent": "FocusFour",
+  "data": {
+    "focusfour_lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "focusfour_lifetime"
+    },
+    "focusfour_lifetime_free": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "focusfour_lifetime_free"
+    }
+  }
+}
