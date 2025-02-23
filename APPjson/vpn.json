@@ -1,0 +1,17 @@
+{
+  "user_agent": "vpn",
+  "data": {
+    "ultrasurf_monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ultrasurf_monthly"
+    },
+    "ultrasurf_yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ultrasurf_yearly"
+    }
+  }
+}
