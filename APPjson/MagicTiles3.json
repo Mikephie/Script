@@ -1,0 +1,593 @@
+{
+  "user_agent": "MagicTiles3",
+  "data": {
+    "1443446174": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "1443446174"
+    },
+    "abc": {
+      "entitlements": [],
+      "product_identifier": "abc"
+    },
+    "abcr": {
+      "entitlements": [],
+      "product_identifier": "abcr"
+    },
+    "com.amanotes.magictiles_iap.album.24hVIPfree_0.99": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.album.24hVIPfree_0.99"
+    },
+    "com.amanotes.magictiles_iap.beginner.bundle": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.beginner.bundle"
+    },
+    "com.amanotes.magictiles_iap.cat.album.24hvipfree_1.99": {
+      "entitlements": [],
+      "product_identifier": "com.amanotes.magictiles_iap.cat.album.24hvipfree_1.99"
+    },
+    "com.amanotes.magictiles_iap.christmas.album.24hvipfree_1.99": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.christmas.album.24hvipfree_1.99"
+    },
+    "com.amanotes.magictiles_iap.christmas_album_3.99usd": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.christmas_album_3.99usd"
+    },
+    "com.amanotes.magictiles_iap.currency_1.99": {
+      "entitlements": [
+        "Currency Pack"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.currency_1.99"
+    },
+    "com.amanotes.magictiles_iap.currency_19.99": {
+      "entitlements": [
+        "Currency Pack"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.currency_19.99"
+    },
+    "com.amanotes.magictiles_iap.currency_4.99": {
+      "entitlements": [
+        "Currency Pack"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.currency_4.99"
+    },
+    "com.amanotes.magictiles_iap.currency_49.99": {
+      "entitlements": [
+        "Currency Pack"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.currency_49.99"
+    },
+    "com.amanotes.magictiles_iap.currency_9.99": {
+      "entitlements": [
+        "Currency Pack"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.currency_9.99"
+    },
+    "com.amanotes.magictiles_iap.currency_99.99": {
+      "entitlements": [
+        "Currency Pack"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.currency_99.99"
+    },
+    "com.amanotes.magictiles_iap.currency_deal_2.99usd": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.currency_deal_2.99usd"
+    },
+    "com.amanotes.magictiles_iap.currency_deal_4.99usd": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.currency_deal_4.99usd"
+    },
+    "com.amanotes.magictiles_iap.currency_deal_6.99usd": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.currency_deal_6.99usd"
+    },
+    "com.amanotes.magictiles_iap.daily_dealbox_0.99usd": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.daily_dealbox_0.99usd"
+    },
+    "com.amanotes.magictiles_iap.daily_dealbox_1": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.daily_dealbox_1"
+    },
+    "com.amanotes.magictiles_iap.daily_dealbox_1.49usd": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.daily_dealbox_1.49usd"
+    },
+    "com.amanotes.magictiles_iap.daily_dealbox_1.99usd": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.daily_dealbox_1.99usd"
+    },
+    "com.amanotes.magictiles_iap.daily_dealbox_2": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.daily_dealbox_2"
+    },
+    "com.amanotes.magictiles_iap.daily_dealbox_3": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.daily_dealbox_3"
+    },
+    "com.amanotes.magictiles_iap.master.bundle": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.master.bundle"
+    },
+    "com.amanotes.magictiles_iap.master.bundle299": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.master.bundle299"
+    },
+    "com.amanotes.magictiles_iap.new.valentine.album.24hvipfree_1.99": {
+      "entitlements": [],
+      "product_identifier": "com.amanotes.magictiles_iap.new.valentine.album.24hvipfree_1.99"
+    },
+    "com.amanotes.magictiles_iap.piggybank_0.99": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.piggybank_0.99"
+    },
+    "com.amanotes.magictiles_iap.piggybank_1.99": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.piggybank_1.99"
+    },
+    "com.amanotes.magictiles_iap.remove_ads_9.99": {
+      "entitlements": [
+        "RemoveAds"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.remove_ads_9.99"
+    },
+    "com.amanotes.magictiles_iap.removeads_1.99": {
+      "entitlements": [
+        "RemoveAds"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.removeads_1.99"
+    },
+    "com.amanotes.magictiles_iap.removeads_3.99": {
+      "entitlements": [
+        "RemoveAds"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.removeads_3.99"
+    },
+    "com.amanotes.magictiles_iap.song_bundle01_4.99usd": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.song_bundle01_4.99usd"
+    },
+    "com.amanotes.magictiles_iap.song_bundle02_3.99usd": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.song_bundle02_3.99usd"
+    },
+    "com.amanotes.magictiles_iap.thanksgivin.album.24hVIPfree_1.99": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.thanksgivin.album.24hVIPfree_1.99"
+    },
+    "com.amanotes.magictiles_iap.valentine.album.24hvipfree_1.99": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.amanotes.magictiles_iap.valentine.album.24hvipfree_1.99"
+    },
+    "com.amanotes.magictiles_sub.vip_1m_14.99usd": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.amanotes.magictiles_sub.vip_1m_14.99usd"
+    },
+    "com.amanotes.magictiles_sub.vip_1w_4.99usd": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.amanotes.magictiles_sub.vip_1w_4.99usd"
+    },
+    "com.amanotes.magictiles_sub.vip_1w_5.99usd": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.amanotes.magictiles_sub.vip_1w_5.99usd"
+    },
+    "com.amanotes.magictiles_sub.vip_1w_6.99usd": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.amanotes.magictiles_sub.vip_1w_6.99usd"
+    },
+    "com.amanotes.magictiles_sub.vip_1y_49.99usd": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.amanotes.magictiles_sub.vip_1y_49.99usd"
+    },
+    "com.amanotes.magictiles_sub_1w_3.49usd": {
+      "entitlements": [],
+      "product_identifier": "com.amanotes.magictiles_sub_1w_3.49usd"
+    },
+    "com.amanotes.magictiles_sub_segment_1w_4.99": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.amanotes.magictiles_sub_segment_1w_4.99"
+    },
+    "com.pianoidol.removeads3.03": {
+      "entitlements": [
+        "RemoveAds"
+      ],
+      "product_identifier": "com.pianoidol.removeads3.03"
+    },
+    "com.pianoidol.removeads_sale": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidol.removeads_sale"
+    },
+    "com.pianoidol.segmentation_removeads_4.99": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidol.segmentation_removeads_4.99"
+    },
+    "com.pianoidol.segmentation_removeads_6.99": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.pianoidol.segmentation_removeads_6.99"
+    },
+    "com.pianoidols.gacha.bigkey.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.gacha.bigkey.03"
+    },
+    "com.pianoidols.gacha.bigkey_sale": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.gacha.bigkey_sale"
+    },
+    "com.pianoidols.gacha.mediumkey.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.gacha.mediumkey.03"
+    },
+    "com.pianoidols.gacha.mediumkey_sale": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.gacha.mediumkey_sale"
+    },
+    "com.pianoidols.gacha.smallkey.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.gacha.smallkey.03"
+    },
+    "com.pianoidols.iap.starter.2": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pianoidols.iap.starter.2"
+    },
+    "com.pianoidols.iap.starter.2usd": {
+      "entitlements": [
+        "IAP package"
+      ],
+      "product_identifier": "com.pianoidols.iap.starter.2usd"
+    },
+    "com.pianoidols.pack.7years": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.7years"
+    },
+    "com.pianoidols.pack.ainokatachi": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.ainokatachi"
+    },
+    "com.pianoidols.pack.aotonatsu": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.aotonatsu"
+    },
+    "com.pianoidols.pack.attention": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.attention"
+    },
+    "com.pianoidols.pack.axelf": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.axelf"
+    },
+    "com.pianoidols.pack.badguy": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.badguy"
+    },
+    "com.pianoidols.pack.badromance": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.badromance"
+    },
+    "com.pianoidols.pack.bumbumtamtam": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.bumbumtamtam"
+    },
+    "com.pianoidols.pack.chandelier": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.chandelier"
+    },
+    "com.pianoidols.pack.chayngaydi": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.chayngaydi"
+    },
+    "com.pianoidols.pack.cheapthrills": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.cheapthrills"
+    },
+    "com.pianoidols.pack.christmas.04": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.christmas.04"
+    },
+    "com.pianoidols.pack.christmas_sale.01": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.christmas_sale.01"
+    },
+    "com.pianoidols.pack.close": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.close"
+    },
+    "com.pianoidols.pack.closer": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.closer"
+    },
+    "com.pianoidols.pack.countingstars": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.countingstars"
+    },
+    "com.pianoidols.pack.dontletmedown": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.dontletmedown"
+    },
+    "com.pianoidols.pack.emcuangayhomqua": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.emcuangayhomqua"
+    },
+    "com.pianoidols.pack.girlslikeyou": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.girlslikeyou"
+    },
+    "com.pianoidols.pack.happier": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.happier"
+    },
+    "com.pianoidols.pack.haytraochoanh": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.haytraochoanh"
+    },
+    "com.pianoidols.pack.howlong": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.howlong"
+    },
+    "com.pianoidols.pack.jinglesbellrock": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.jinglesbellrock"
+    },
+    "com.pianoidols.pack.kimiwarokkuokikanai2": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.kimiwarokkuokikanai2"
+    },
+    "com.pianoidols.pack.kiseki": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.kiseki"
+    },
+    "com.pianoidols.pack.lactroi": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.lactroi"
+    },
+    "com.pianoidols.pack.lethergo": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.lethergo"
+    },
+    "com.pianoidols.pack.marigold": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.marigold"
+    },
+    "com.pianoidols.pack.neverbelikeyou": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.neverbelikeyou"
+    },
+    "com.pianoidols.pack.newrules": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.newrules"
+    },
+    "com.pianoidols.pack.noinaycoanh": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.noinaycoanh"
+    },
+    "com.pianoidols.pack.rollinginthedeep": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.rollinginthedeep"
+    },
+    "com.pianoidols.pack.shapeofyou": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.shapeofyou"
+    },
+    "com.pianoidols.pack.thinkingoutloud": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.thinkingoutloud"
+    },
+    "com.pianoidols.pack.thunder": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.thunder"
+    },
+    "com.pianoidols.pack.wedonttalkanymore": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.pack.wedonttalkanymore"
+    },
+    "com.pianoidols.popular.pack1.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.popular.pack1.03"
+    },
+    "com.pianoidols.popular.pack2.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.popular.pack2.03"
+    },
+    "com.pianoidols.popular.pack3.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.popular.pack3.03"
+    },
+    "com.pianoidols.songpack.pack1.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.songpack.pack1.03"
+    },
+    "com.pianoidols.songpack.pack1_sale": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.songpack.pack1_sale"
+    },
+    "com.pianoidols.songpack.pack2.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.songpack.pack2.03"
+    },
+    "com.pianoidols.songpack.pack2_sale": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.songpack.pack2_sale"
+    },
+    "com.pianoidols.songpack.pack3.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.songpack.pack3.03"
+    },
+    "com.pianoidols.songpack.pack3_sale": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.songpack.pack3_sale"
+    },
+    "com.pianoidols.songpack.pack4.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.songpack.pack4.03"
+    },
+    "com.pianoidols.songpack.pack4_sale": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.songpack.pack4_sale"
+    },
+    "com.pianoidols.songpack.pack5.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.songpack.pack5.03"
+    },
+    "com.pianoidols.songpack.pack5_sale": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.songpack.pack5_sale"
+    },
+    "com.pianoidols.starterpacks.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.starterpacks.03"
+    },
+    "com.pianoidols.unlimitedlife.03": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.unlimitedlife.03"
+    },
+    "com.pianoidols.vipsub.1week.250jp": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pianoidols.vipsub.1week.250jp"
+    },
+    "com.pianoidols.vipsub.1week.600jp": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pianoidols.vipsub.1week.600jp"
+    },
+    "com.pianoidols.vipsub.1week.980jp": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pianoidols.vipsub.1week.980jp"
+    },
+    "com.pianoidols.vipsub.month.06": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pianoidols.vipsub.month.06"
+    },
+    "com.pianoidols.vipsub.month.kid": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pianoidols.vipsub.month.kid"
+    },
+    "com.pianoidols.vipsub.week.06": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pianoidols.vipsub.week.06"
+    },
+    "com.pianoidols.vipsub.week.07": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.vipsub.week.07"
+    },
+    "com.pianoidols.vipsub.week.08": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.vipsub.week.08"
+    },
+    "com.pianoidols.vipsub.week.09": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.vipsub.week.09"
+    },
+    "com.pianoidols.vipsub.week.10": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pianoidols.vipsub.week.10"
+    },
+    "com.pianoidols.vipsub.week.11": {
+      "entitlements": [],
+      "product_identifier": "com.pianoidols.vipsub.week.11"
+    },
+    "com.pianoidols.vipsub.week.introoffer.2week": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pianoidols.vipsub.week.introoffer.2week"
+    },
+    "com.pianoidols.vipsub.year.06": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pianoidols.vipsub.year.06"
+    },
+    "pianoidol.iap.diamondpackage.tier1.03": {
+      "entitlements": [],
+      "product_identifier": "pianoidol.iap.diamondpackage.tier1.03"
+    },
+    "pianoidol.iap.diamondpackage.tier2.03": {
+      "entitlements": [],
+      "product_identifier": "pianoidol.iap.diamondpackage.tier2.03"
+    },
+    "pianoidol.iap.diamondpackage.tier2_sale": {
+      "entitlements": [],
+      "product_identifier": "pianoidol.iap.diamondpackage.tier2_sale"
+    },
+    "test.com": {
+      "entitlements": [],
+      "product_identifier": "test.com"
+    },
+    "xxx": {
+      "entitlements": [],
+      "product_identifier": "xxx"
+    }
+  }
+}
