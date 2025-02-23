@@ -1,0 +1,23 @@
+{
+  "user_agent": "IDM",
+  "data": {
+    "sub_monthly_idm": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "sub_monthly_idm"
+    },
+    "sub_weekly_idm": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "sub_weekly_idm"
+    },
+    "sub_yearly_idm": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "sub_yearly_idm"
+    }
+  }
+}
