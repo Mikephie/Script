@@ -1,0 +1,143 @@
+{
+  "user_agent": "IPCams",
+  "data": {
+    "ipcams_large_tip": {
+      "entitlements": [
+        "tip"
+      ],
+      "product_identifier": "ipcams_large_tip"
+    },
+    "ipcams_medium_tip": {
+      "entitlements": [
+        "tip"
+      ],
+      "product_identifier": "ipcams_medium_tip"
+    },
+    "ipcams_pro_lifetime": {
+      "entitlements": [
+        "lifetime",
+        "pro"
+      ],
+      "product_identifier": "ipcams_pro_lifetime"
+    },
+    "ipcams_pro_lifetime_family": {
+      "entitlements": [
+        "family",
+        "family_lifetime",
+        "legacy_plan",
+        "plus_lifetime",
+        "pro",
+        "pro_plus"
+      ],
+      "product_identifier": "ipcams_pro_lifetime_family"
+    },
+    "ipcams_pro_lifetime_family_upgrade": {
+      "entitlements": [
+        "family",
+        "family_lifetime",
+        "legacy_plan",
+        "plus_lifetime",
+        "pro",
+        "pro_plus"
+      ],
+      "product_identifier": "ipcams_pro_lifetime_family_upgrade"
+    },
+    "ipcams_pro_monthly_099": {
+      "entitlements": [
+        "legacy_plan",
+        "pro"
+      ],
+      "product_identifier": "ipcams_pro_monthly_099"
+    },
+    "ipcams_pro_monthly_2024": {
+      "entitlements": [
+        "2024_plan",
+        "pro"
+      ],
+      "product_identifier": "ipcams_pro_monthly_2024"
+    },
+    "ipcams_pro_plus_lifetime": {
+      "entitlements": [
+        "family",
+        "family_lifetime",
+        "plus_lifetime",
+        "pro",
+        "pro_plus"
+      ],
+      "product_identifier": "ipcams_pro_plus_lifetime"
+    },
+    "ipcams_pro_plus_lifetime_upgrade": {
+      "entitlements": [
+        "family",
+        "family_lifetime",
+        "plus_lifetime",
+        "pro",
+        "pro_plus"
+      ],
+      "product_identifier": "ipcams_pro_plus_lifetime_upgrade"
+    },
+    "ipcams_pro_plus_monthly": {
+      "entitlements": [
+        "family",
+        "legacy_plan",
+        "pro",
+        "pro_plus"
+      ],
+      "product_identifier": "ipcams_pro_plus_monthly"
+    },
+    "ipcams_pro_plus_monthly_2024": {
+      "entitlements": [
+        "2024_plan",
+        "pro",
+        "pro_plus"
+      ],
+      "product_identifier": "ipcams_pro_plus_monthly_2024"
+    },
+    "ipcams_pro_plus_yearly": {
+      "entitlements": [
+        "family",
+        "legacy_plan",
+        "pro",
+        "pro_plus"
+      ],
+      "product_identifier": "ipcams_pro_plus_yearly"
+    },
+    "ipcams_pro_plus_yearly_2024": {
+      "entitlements": [
+        "2024_plan",
+        "pro",
+        "pro_plus"
+      ],
+      "product_identifier": "ipcams_pro_plus_yearly_2024"
+    },
+    "ipcams_pro_yearly_2024": {
+      "entitlements": [
+        "2024_plan",
+        "pro"
+      ],
+      "product_identifier": "ipcams_pro_yearly_2024"
+    },
+    "ipcams_pro_yearly_999": {
+      "entitlements": [
+        "legacy_plan",
+        "pro"
+      ],
+      "product_identifier": "ipcams_pro_yearly_999"
+    },
+    "ipcams_pro_yearly_family_1499": {
+      "entitlements": [
+        "family",
+        "legacy_plan",
+        "pro",
+        "pro_plus"
+      ],
+      "product_identifier": "ipcams_pro_yearly_family_1499"
+    },
+    "ipcams_small_tip": {
+      "entitlements": [
+        "tip"
+      ],
+      "product_identifier": "ipcams_small_tip"
+    }
+  }
+}
