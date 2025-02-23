@@ -1,0 +1,41 @@
+{
+  "user_agent": "Shift%20Days",
+  "data": {
+    "PRO1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "PRO1"
+    },
+    "PRO2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "PRO2"
+    },
+    "co.pixo.shiftdays.subscription.month": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "co.pixo.shiftdays.subscription.month"
+    },
+    "co.pixo.shiftdays.subscription.month.notrial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "co.pixo.shiftdays.subscription.month.notrial"
+    },
+    "co.pixo.shiftdays.subscription.year": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "co.pixo.shiftdays.subscription.year"
+    },
+    "co.pixo.shiftdays.subscription.year.notrial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "co.pixo.shiftdays.subscription.year.notrial"
+    }
+  }
+}
