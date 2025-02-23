@@ -1,0 +1,39 @@
+{
+  "user_agent": "Atomic",
+  "data": {
+    "ht_lifetime": {
+      "entitlements": [],
+      "product_identifier": "ht_lifetime"
+    },
+    "ht_lifetime1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ht_lifetime1"
+    },
+    "ht_lifetime2": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ht_lifetime2"
+    },
+    "ht_monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ht_monthly"
+    },
+    "ht_yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ht_yearly"
+    },
+    "ht_yearly2": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ht_yearly2"
+    }
+  }
+}
