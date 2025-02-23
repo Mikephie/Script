@@ -1,0 +1,11 @@
+{
+  "user_agent": "OrderClock",
+  "data": {
+    "com.metaorder.orderclock.lifetime": {
+      "entitlements": [
+        "lifetime"
+      ],
+      "product_identifier": "com.metaorder.orderclock.lifetime"
+    }
+  }
+}
