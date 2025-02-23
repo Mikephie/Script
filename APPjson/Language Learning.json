@@ -1,0 +1,35 @@
+{
+  "user_agent": "Language%20Learning",
+  "data": {
+    "language_sub_lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "language_sub_lifetime"
+    },
+    "language_sub_monthly_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "language_sub_monthly_1"
+    },
+    "language_sub_weekly_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "language_sub_weekly_1"
+    },
+    "language_sub_yearly_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "language_sub_yearly_1"
+    },
+    "language_sub_yearly_2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "language_sub_yearly_2"
+    }
+  }
+}
