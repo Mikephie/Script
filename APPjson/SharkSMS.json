@@ -1,0 +1,35 @@
+{
+  "user_agent": "SharkSMS",
+  "data": {
+    "com.gaapp.sms.monthly": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.gaapp.sms.monthly"
+    },
+    "com.gaapp.sms.permanently": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.gaapp.sms.permanently"
+    },
+    "com.gaapp.sms.weekly": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.gaapp.sms.weekly"
+    },
+    "monthly": {
+      "entitlements": [],
+      "product_identifier": "monthly"
+    },
+    "permanent": {
+      "entitlements": [],
+      "product_identifier": "permanent"
+    },
+    "weekly": {
+      "entitlements": [],
+      "product_identifier": "weekly"
+    }
+  }
+}
