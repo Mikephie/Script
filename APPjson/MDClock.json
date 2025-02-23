@@ -1,0 +1,125 @@
+{
+  "user_agent": "MDClock",
+  "data": {
+    "tech.miidii.MDClock.cc": {
+      "entitlements": [
+        "Entitlement.Clock.Chinese"
+      ],
+      "product_identifier": "tech.miidii.MDClock.cc"
+    },
+    "tech.miidii.MDClock.clocks": {
+      "entitlements": [
+        "Entitlement.Clocks"
+      ],
+      "product_identifier": "tech.miidii.MDClock.clocks"
+    },
+    "tech.miidii.MDClock.clocks.upgrade": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.clocks.upgrade"
+    },
+    "tech.miidii.MDClock.cm": {
+      "entitlements": [
+        "Entitlement.Clock.Marble"
+      ],
+      "product_identifier": "tech.miidii.MDClock.cm"
+    },
+    "tech.miidii.MDClock.cp": {
+      "entitlements": [
+        "Entitlement.Clock.Pixel"
+      ],
+      "product_identifier": "tech.miidii.MDClock.cp"
+    },
+    "tech.miidii.MDClock.cw": {
+      "entitlements": [
+        "Entitlement.Clock.Wood"
+      ],
+      "product_identifier": "tech.miidii.MDClock.cw"
+    },
+    "tech.miidii.MDClock.pro": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.pro"
+    },
+    "tech.miidii.MDClock.pro.c": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.pro.c"
+    },
+    "tech.miidii.MDClock.pro.e": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.pro.e"
+    },
+    "tech.miidii.MDClock.pro.v1": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.pro.v1"
+    },
+    "tech.miidii.MDClock.subscription.month": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.subscription.month"
+    },
+    "tech.miidii.MDClock.subscription.week.v1": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.subscription.week.v1"
+    },
+    "tech.miidii.MDClock.subscription.year": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.subscription.year"
+    },
+    "tech.miidii.MDClock.subscription.year.introductory": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.subscription.year.introductory"
+    },
+    "tech.miidii.MDClock.subscription.year.introductory.firstyear": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.subscription.year.introductory.firstyear"
+    },
+    "tech.miidii.MDClock.subscription.year.v1": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.subscription.year.v1"
+    },
+    "tech.miidii.MDClock.tools": {
+      "entitlements": [
+        "Entitlement.Tools"
+      ],
+      "product_identifier": "tech.miidii.MDClock.tools"
+    },
+    "tech.miidii.MDClock.tools.upgrade": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.MDClock.tools.upgrade"
+    },
+    "tech.miidii.MDClock.wbwg": {
+      "entitlements": [
+        "Entitlement.Clock.BlackWhite"
+      ],
+      "product_identifier": "tech.miidii.MDClock.wbwg"
+    },
+    "tech.miidii.MDClock.wrb": {
+      "entitlements": [
+        "Entitlement.Clock.RedBlue"
+      ],
+      "product_identifier": "tech.miidii.MDClock.wrb"
+    }
+  }
+}
