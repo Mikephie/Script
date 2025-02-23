@@ -1,11 +1,23 @@
 {
   "user_agent": "Counter",
   "data": {
-    "com.dujinke.Counter.Unlimited": {
+    "com.reku.counter.plus.lifetime": {
       "entitlements": [
-        "Unlimited"
+        "plus"
       ],
-      "product_identifier": "com.dujinke.Counter.Unlimited"
+      "product_identifier": "com.reku.counter.plus.lifetime"
+    },
+    "com.reku.counter.plus.year": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.reku.counter.plus.year"
+    },
+    "count.plus.lifetime.free1": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "count.plus.lifetime.free1"
     }
   }
 }
