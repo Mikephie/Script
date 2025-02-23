@@ -1,0 +1,33 @@
+{
+  "user_agent": "DtdVibe",
+  "data": {
+    "com.dtd.playlist.premium": {
+      "entitlements": [],
+      "product_identifier": "com.dtd.playlist.premium"
+    },
+    "com.dtd.playlist.premium.product": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.dtd.playlist.premium.product"
+    },
+    "com.dtd.playlist.premium.product.rp": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.dtd.playlist.premium.product.rp"
+    },
+    "com.dtd.playlist.premium.subscription.month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.dtd.playlist.premium.subscription.month"
+    },
+    "com.dtd.playlist.premium.subscription.year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.dtd.playlist.premium.subscription.year"
+    }
+  }
+}
