@@ -1,0 +1,189 @@
+{
+  "user_agent": "Runna",
+  "data": {
+    "EIGHT_WEEK_5K_IMPROVEMENT": {
+      "entitlements": [],
+      "product_identifier": "EIGHT_WEEK_5K_IMPROVEMENT"
+    },
+    "HILLY_HALF": {
+      "entitlements": [],
+      "product_identifier": "HILLY_HALF"
+    },
+    "RUNBUDDY_PLAN_2099": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_2099"
+    },
+    "RUNBUDDY_PLAN_2399": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_2399"
+    },
+    "RUNBUDDY_PLAN_2699": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_2699"
+    },
+    "RUNBUDDY_PLAN_2799": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_2799"
+    },
+    "RUNBUDDY_PLAN_2999": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_2999"
+    },
+    "RUNBUDDY_PLAN_3199": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_3199"
+    },
+    "RUNBUDDY_PLAN_3499": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_3499"
+    },
+    "RUNBUDDY_PLAN_3599": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_3599"
+    },
+    "RUNBUDDY_PLAN_3999": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_3999"
+    },
+    "RUNBUDDY_PLAN_4199": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_4199"
+    },
+    "RUNBUDDY_PLAN_4499": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_4499"
+    },
+    "RUNBUDDY_PLAN_4799": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_4799"
+    },
+    "RUNBUDDY_PLAN_4999": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_4999"
+    },
+    "RUNBUDDY_PLAN_5499": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_5499"
+    },
+    "RUNBUDDY_PLAN_5999": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_5999"
+    },
+    "RUNBUDDY_PLAN_6999": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_6999"
+    },
+    "RUNBUDDY_PLAN_7999": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_7999"
+    },
+    "RUNBUDDY_PLAN_TESTINGTESTING": {
+      "entitlements": [],
+      "product_identifier": "RUNBUDDY_PLAN_TESTINGTESTING"
+    },
+    "SIXTEEN_WEEK_100K": {
+      "entitlements": [],
+      "product_identifier": "SIXTEEN_WEEK_100K"
+    },
+    "SIXTEEN_WEEK_250K": {
+      "entitlements": [],
+      "product_identifier": "SIXTEEN_WEEK_250K"
+    },
+    "SIXTEEN_WEEK_50K": {
+      "entitlements": [],
+      "product_identifier": "SIXTEEN_WEEK_50K"
+    },
+    "SIXTEEN_WEEK_FULL": {
+      "entitlements": [],
+      "product_identifier": "SIXTEEN_WEEK_FULL"
+    },
+    "TEN_WEEK_10K_IMPROVEMENT": {
+      "entitlements": [],
+      "product_identifier": "TEN_WEEK_10K_IMPROVEMENT"
+    },
+    "TWELVE_WEEK_FULL": {
+      "entitlements": [],
+      "product_identifier": "TWELVE_WEEK_FULL"
+    },
+    "TWELVE_WEEK_HALF": {
+      "entitlements": [],
+      "product_identifier": "TWELVE_WEEK_HALF"
+    },
+    "WINTER_MAINTENANCE": {
+      "entitlements": [],
+      "product_identifier": "WINTER_MAINTENANCE"
+    },
+    "rb_1599_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_1599_1m"
+    },
+    "rb_1599_1m_1m0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_1599_1m_1m0"
+    },
+    "rb_1599_1m_1m1299": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_1599_1m_1m1299"
+    },
+    "rb_1599_1m_1m1349": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_1599_1m_1m1349"
+    },
+    "rb_1599_1m_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_1599_1m_1w0"
+    },
+    "rb_1599_1m_2w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_1599_1m_2w0"
+    },
+    "rb_1599_1m_4m1099": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_1599_1m_4m1099"
+    },
+    "rb_1599_1m_4m1449": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_1599_1m_4m1449"
+    },
+    "rb_9999_1y_1m0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_9999_1y_1m0"
+    },
+    "rb_9999_1y_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_9999_1y_1w0"
+    },
+    "rb_9999_1y_1y7999": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_9999_1y_1y7999"
+    },
+    "rb_9999_1y_2w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "rb_9999_1y_2w0"
+    }
+  }
+}
