@@ -1,0 +1,23 @@
+{
+  "user_agent": "ChatBot",
+  "data": {
+    "chatbot_annual": {
+      "entitlements": [
+        "chatbot_annual"
+      ],
+      "product_identifier": "chatbot_annual"
+    },
+    "chatbot_monthly": {
+      "entitlements": [
+        "chatbot_monthly"
+      ],
+      "product_identifier": "chatbot_monthly"
+    },
+    "chatbot_quarterly": {
+      "entitlements": [
+        "chatbot_quarterly"
+      ],
+      "product_identifier": "chatbot_quarterly"
+    }
+  }
+}
