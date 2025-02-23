@@ -1,0 +1,33 @@
+{
+  "user_agent": "Pedometer",
+  "data": {
+    "REMOVE_ADVERTISEMENTS": {
+      "entitlements": [],
+      "product_identifier": "REMOVE_ADVERTISEMENTS"
+    },
+    "basictip": {
+      "entitlements": [],
+      "product_identifier": "basictip"
+    },
+    "largetip": {
+      "entitlements": [],
+      "product_identifier": "largetip"
+    },
+    "mediumtip": {
+      "entitlements": [],
+      "product_identifier": "mediumtip"
+    },
+    "pedometer_annual_20": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "pedometer_annual_20"
+    },
+    "pedometer_monthly_2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "pedometer_monthly_2"
+    }
+  }
+}
