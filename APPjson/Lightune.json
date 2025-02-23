@@ -1,0 +1,17 @@
+{
+  "user_agent": "Lightune",
+  "data": {
+    "Lightune_Pro_Month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "Lightune_Pro_Month"
+    },
+    "Lightune_Pro_Year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "Lightune_Pro_Year"
+    }
+  }
+}
