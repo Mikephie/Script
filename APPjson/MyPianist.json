@@ -1,0 +1,37 @@
+{
+  "user_agent": "MyPianist",
+  "data": {
+    "com.collaparte.mypianist.pro": {
+      "entitlements": [],
+      "product_identifier": "com.collaparte.mypianist.pro"
+    },
+    "com.collaparte.mypianist.pro.gift.one": {
+      "entitlements": [],
+      "product_identifier": "com.collaparte.mypianist.pro.gift.one"
+    },
+    "com.collaparte.mypianist.pro.gift.six": {
+      "entitlements": [],
+      "product_identifier": "com.collaparte.mypianist.pro.gift.six"
+    },
+    "com.collaparte.mypianist.pro.gift.three": {
+      "entitlements": [],
+      "product_identifier": "com.collaparte.mypianist.pro.gift.three"
+    },
+    "com.collaparte.mypianist.pro.gift.twelve": {
+      "entitlements": [],
+      "product_identifier": "com.collaparte.mypianist.pro.gift.twelve"
+    },
+    "com.collaparte.mypianist.pro.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.collaparte.mypianist.pro.monthly"
+    },
+    "com.collaparte.mypianist.pro.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.collaparte.mypianist.pro.yearly"
+    }
+  }
+}
