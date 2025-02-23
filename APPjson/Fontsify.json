@@ -1,0 +1,29 @@
+{
+  "user_agent": "Fontsify",
+  "data": {
+    "media.upstate.fontify.lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "media.upstate.fontify.lifetime"
+    },
+    "media.upstate.fontify.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "media.upstate.fontify.monthly"
+    },
+    "media.upstate.fontify.weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "media.upstate.fontify.weekly"
+    },
+    "media.upstate.fontify.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "media.upstate.fontify.yearly"
+    }
+  }
+}
