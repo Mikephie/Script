@@ -1,0 +1,29 @@
+{
+  "user_agent": "BabyCare",
+  "data": {
+    "KiddoKeeper_1_weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "KiddoKeeper_1_weekly"
+    },
+    "KiddoKeeper_28_Yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "KiddoKeeper_28_Yearly"
+    },
+    "KiddoKeeper_28_monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "KiddoKeeper_28_monthly"
+    },
+    "KiddoKeeper_38_LifeTime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "KiddoKeeper_38_LifeTime"
+    }
+  }
+}
