@@ -1,0 +1,29 @@
+{
+  "user_agent": "SaveTikYoutu",
+  "data": {
+    "LifetimeSubscription": {
+      "entitlements": [
+        "SaveTikYoutu_common"
+      ],
+      "product_identifier": "LifetimeSubscription"
+    },
+    "MonthlySubscription": {
+      "entitlements": [
+        "SaveTikYoutu_common"
+      ],
+      "product_identifier": "MonthlySubscription"
+    },
+    "WeeklySubscription": {
+      "entitlements": [
+        "SaveTikYoutu_common"
+      ],
+      "product_identifier": "WeeklySubscription"
+    },
+    "YearlySubscription": {
+      "entitlements": [
+        "SaveTikYoutu_common"
+      ],
+      "product_identifier": "YearlySubscription"
+    }
+  }
+}
