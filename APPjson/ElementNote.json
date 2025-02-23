@@ -1,0 +1,23 @@
+{
+  "user_agent": "ElementNote",
+  "data": {
+    "com.soysaucelab.element.note.lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.soysaucelab.element.note.lifetime"
+    },
+    "com.soysaucelab.element.note.lifetime.launch.special": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.soysaucelab.element.note.lifetime.launch.special"
+    },
+    "com.soysaucelab.element.note.subscription.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.soysaucelab.element.note.subscription.yearly"
+    }
+  }
+}
