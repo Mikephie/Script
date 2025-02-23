@@ -1,0 +1,27 @@
+{
+  "user_agent": "AdGuard%20Home%20Remote",
+  "data": {
+    "adguard.home.remote.huge.tip": {
+      "entitlements": [],
+      "product_identifier": "adguard.home.remote.huge.tip"
+    },
+    "adguard.home.remote.large.tip": {
+      "entitlements": [],
+      "product_identifier": "adguard.home.remote.large.tip"
+    },
+    "adguard.home.remote.medium.tip": {
+      "entitlements": [],
+      "product_identifier": "adguard.home.remote.medium.tip"
+    },
+    "adguard.home.remote.pro": {
+      "entitlements": [
+        "aghrpro"
+      ],
+      "product_identifier": "adguard.home.remote.pro"
+    },
+    "adguard.home.remote.small.tip": {
+      "entitlements": [],
+      "product_identifier": "adguard.home.remote.small.tip"
+    }
+  }
+}
