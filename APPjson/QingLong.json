@@ -1,0 +1,23 @@
+{
+  "user_agent": "QingLong",
+  "data": {
+    "qinglong_premium": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "qinglong_premium"
+    },
+    "ql_month_2": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "ql_month_2"
+    },
+    "ql_year_12": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "ql_year_12"
+    }
+  }
+}
