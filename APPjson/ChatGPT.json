@@ -1,0 +1,59 @@
+{
+  "user_agent": "ChatGPT",
+  "data": {
+    "com.prod.gpt.1m3d": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.prod.gpt.1m3d"
+    },
+    "com.prod.gpt.1w3d": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.prod.gpt.1w3d"
+    },
+    "com.prod.gpt.1w3d7": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.prod.gpt.1w3d7"
+    },
+    "com.prod.gpt.1w3d8": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.prod.gpt.1w3d8"
+    },
+    "com.prod.gpt.1w3d9": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.prod.gpt.1w3d9"
+    },
+    "com.prod.gpt.1w7": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.prod.gpt.1w7"
+    },
+    "com.prod.gpt.1w8": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.prod.gpt.1w8"
+    },
+    "com.prod.gpt.1y3d50": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.prod.gpt.1y3d50"
+    },
+    "com.prod.gpt.1y40": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.prod.gpt.1y40"
+    }
+  }
+}
