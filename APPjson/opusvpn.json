@@ -1,0 +1,71 @@
+{
+  "user_agent": "opusvpn",
+  "data": {
+    "monthly_discount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "monthly_discount"
+    },
+    "opus.vpn.lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "opus.vpn.lifetime"
+    },
+    "opus.vpn.weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "opus.vpn.weekly"
+    },
+    "opus.vpn.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "opus.vpn.yearly"
+    },
+    "opusvpn.v2.weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "opusvpn.v2.weekly"
+    },
+    "opusvpn.v2.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "opusvpn.v2.yearly"
+    },
+    "opusvpn.v3.yearly.one.month.discount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "opusvpn.v3.yearly.one.month.discount"
+    },
+    "opusvpn.v3.yearly.one.week.free": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "opusvpn.v3.yearly.one.week.free"
+    },
+    "sixmonth_discount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "sixmonth_discount"
+    },
+    "threemonth_discount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "threemonth_discount"
+    },
+    "yearly_discount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "yearly_discount"
+    }
+  }
+}
