@@ -1,0 +1,11 @@
+{
+  "user_agent": "iplayTV",
+  "data": {
+    "com.ll.btplayer.12": {
+      "entitlements": [
+        "com.ll.btplayer.12"
+      ],
+      "product_identifier": "com.ll.btplayer.12"
+    }
+  }
+}
