@@ -1,0 +1,69 @@
+{
+  "user_agent": "MusicMate",
+  "data": {
+    "mm_12yuan_60karma_5_plus": {
+      "entitlements": [],
+      "product_identifier": "mm_12yuan_60karma_5_plus"
+    },
+    "mm_18yuan_1w_3d0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mm_18yuan_1w_3d0"
+    },
+    "mm_18yuan_90karma": {
+      "entitlements": [],
+      "product_identifier": "mm_18yuan_90karma"
+    },
+    "mm_25yuan_125karma": {
+      "entitlements": [],
+      "product_identifier": "mm_25yuan_125karma"
+    },
+    "mm_30_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mm_30_1y"
+    },
+    "mm_30_1y_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mm_30_1y_1w0"
+    },
+    "mm_3yuan_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mm_3yuan_1m"
+    },
+    "mm_3yuan_1m_3d0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mm_3yuan_1m_3d0"
+    },
+    "mm_58yuan_3m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mm_58yuan_3m"
+    },
+    "mm_6yuan_30karma": {
+      "entitlements": [],
+      "product_identifier": "mm_6yuan_30karma"
+    },
+    "mm_lifetime_198_premium": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mm_lifetime_198_premium"
+    },
+    "mm_lifetime_68_premium": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mm_lifetime_68_premium"
+    }
+  }
+}
