@@ -1,0 +1,11 @@
+{
+  "user_agent": "Tally",
+  "data": {
+    "tally.remove_ad": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "tally.remove_ad"
+    }
+  }
+}
