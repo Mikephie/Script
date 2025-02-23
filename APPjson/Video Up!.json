@@ -1,0 +1,137 @@
+{
+  "user_agent": "Video%20Up!",
+  "data": {
+    "app.videoup.videoup.Trial.7DFree.one_month": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.Trial.7DFree.one_month"
+    },
+    "app.videoup.videoup.Trial.7DFree.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.Trial.7DFree.one_week"
+    },
+    "app.videoup.videoup.Trial.7DFree.one_year": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.Trial.7DFree.one_year"
+    },
+    "app.videoup.videoup.intro.bold.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.intro.bold.one_week"
+    },
+    "app.videoup.videoup.intro.bold_intro049.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.intro.bold_intro049.one_week"
+    },
+    "app.videoup.videoup.intro.bold_plus3.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.intro.bold_plus3.one_week"
+    },
+    "app.videoup.videoup.intro.oneplan_intro049.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.intro.oneplan_intro049.one_week"
+    },
+    "app.videoup.videoup.na.annual4499.one_year": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.annual4499.one_year"
+    },
+    "app.videoup.videoup.na.annual4999.one_year": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.annual4999.one_year"
+    },
+    "app.videoup.videoup.na.base.one_month": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.base.one_month"
+    },
+    "app.videoup.videoup.na.base.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.base.one_week"
+    },
+    "app.videoup.videoup.na.base.one_year": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.base.one_year"
+    },
+    "app.videoup.videoup.na.base.six_month": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.base.six_month"
+    },
+    "app.videoup.videoup.na.bold.one_year": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.bold.one_year"
+    },
+    "app.videoup.videoup.na.bold.three_month": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.bold.three_month"
+    },
+    "app.videoup.videoup.na.bold_plus3.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.bold_plus3.one_week"
+    },
+    "app.videoup.videoup.na.oneplan.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.oneplan.one_week"
+    },
+    "app.videoup.videoup.na.oneplan.one_year": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.na.oneplan.one_year"
+    },
+    "app.videoup.videoup.trial.bold_999_7DFree.one_week": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "app.videoup.videoup.trial.bold_999_7DFree.one_week"
+    },
+    "rc_promo_voucher_full_access_videoup_2months": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "rc_promo_voucher_full_access_videoup_2months"
+    },
+    "rc_promo_voucher_full_access_videoup_3months": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "rc_promo_voucher_full_access_videoup_3months"
+    },
+    "rc_promo_voucher_full_access_videoup_monthly": {
+      "entitlements": [
+        "Full_access_app"
+      ],
+      "product_identifier": "rc_promo_voucher_full_access_videoup_monthly"
+    }
+  }
+}
