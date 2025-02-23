@@ -1,0 +1,17 @@
+{
+  "user_agent": "OneBox",
+  "data": {
+    "com.ziheng.pandora.lifetime": {
+      "entitlements": [
+        "all"
+      ],
+      "product_identifier": "com.ziheng.pandora.lifetime"
+    },
+    "com.ziheng.pandora.yearly": {
+      "entitlements": [
+        "all"
+      ],
+      "product_identifier": "com.ziheng.pandora.yearly"
+    }
+  }
+}
