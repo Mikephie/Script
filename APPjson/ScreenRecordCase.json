@@ -1,0 +1,47 @@
+{
+  "user_agent": "ScreenRecordCase",
+  "data": {
+    "me.fandong.ScreenRecordCase.Pro": {
+      "entitlements": [
+        "Premium",
+        "Pro access"
+      ],
+      "product_identifier": "me.fandong.ScreenRecordCase.Pro"
+    },
+    "me.fandong.ScreenRecordCase.Pro2": {
+      "entitlements": [],
+      "product_identifier": "me.fandong.ScreenRecordCase.Pro2"
+    },
+    "me.fandong.ScreenRecordCase.Pro365": {
+      "entitlements": [],
+      "product_identifier": "me.fandong.ScreenRecordCase.Pro365"
+    },
+    "me.fandong.ScreenRecordCase.Ultra": {
+      "entitlements": [
+        "Premium",
+        "Ultra access"
+      ],
+      "product_identifier": "me.fandong.ScreenRecordCase.Ultra"
+    },
+    "me.fandong.ScreenRecordCase.Ultra2": {
+      "entitlements": [],
+      "product_identifier": "me.fandong.ScreenRecordCase.Ultra2"
+    },
+    "screencase_month_3": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "screencase_month_3"
+    },
+    "screencase_year_19": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "screencase_year_19"
+    },
+    "screenrecordcase_monthly_3": {
+      "entitlements": [],
+      "product_identifier": "screenrecordcase_monthly_3"
+    }
+  }
+}
