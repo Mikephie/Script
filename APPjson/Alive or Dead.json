@@ -1,0 +1,11 @@
+{
+  "user_agent": "Alive%20or%20Dead",
+  "data": {
+    "com.dujinke.AliveOrDead.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.AliveOrDead.Unlimited"
+    }
+  }
+}
