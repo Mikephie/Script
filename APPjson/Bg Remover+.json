@@ -1,0 +1,23 @@
+{
+  "user_agent": "Bg%20Remover+",
+  "data": {
+    "cutout0": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "cutout0"
+    },
+    "net.kaleidoscope.cutout.premium0": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "net.kaleidoscope.cutout.premium0"
+    },
+    "net.kaleidoscope.cutout.premium1": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "net.kaleidoscope.cutout.premium1"
+    }
+  }
+}
