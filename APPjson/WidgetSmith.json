@@ -1,0 +1,17 @@
+{
+  "user_agent": "WidgetSmith",
+  "data": {
+    "PremiumAnnualWidget": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "PremiumAnnualWidget"
+    },
+    "PremiumMonthlyWidgetsmith": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "PremiumMonthlyWidgetsmith"
+    }
+  }
+}
