@@ -1,0 +1,23 @@
+{
+  "user_agent": "MySticker",
+  "data": {
+    "com.miiiao.MySticker.lifetime": {
+      "entitlements": [
+        "mysticker premium"
+      ],
+      "product_identifier": "com.miiiao.MySticker.lifetime"
+    },
+    "com.miiiao.MySticker.monthly": {
+      "entitlements": [
+        "mysticker premium"
+      ],
+      "product_identifier": "com.miiiao.MySticker.monthly"
+    },
+    "com.miiiao.MySticker.yearly": {
+      "entitlements": [
+        "mysticker premium"
+      ],
+      "product_identifier": "com.miiiao.MySticker.yearly"
+    }
+  }
+}
