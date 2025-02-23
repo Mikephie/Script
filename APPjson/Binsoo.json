@@ -1,0 +1,17 @@
+{
+  "user_agent": "Binsoo",
+  "data": {
+    "annual": {
+      "entitlements": [
+        "vibe"
+      ],
+      "product_identifier": "annual"
+    },
+    "monthly": {
+      "entitlements": [
+        "vibe"
+      ],
+      "product_identifier": "monthly"
+    }
+  }
+}
