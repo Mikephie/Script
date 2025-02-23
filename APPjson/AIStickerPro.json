@@ -1,0 +1,29 @@
+{
+  "user_agent": "AIStickerPro",
+  "data": {
+    "LifetimeSubscription_Sticker": {
+      "entitlements": [
+        "AISticker_VIP"
+      ],
+      "product_identifier": "LifetimeSubscription_Sticker"
+    },
+    "MonthlySubscription_Sticker": {
+      "entitlements": [
+        "AISticker_VIP"
+      ],
+      "product_identifier": "MonthlySubscription_Sticker"
+    },
+    "WeeklySubscription_Sticker": {
+      "entitlements": [
+        "AISticker_VIP"
+      ],
+      "product_identifier": "WeeklySubscription_Sticker"
+    },
+    "YearlySubscription_Sticker": {
+      "entitlements": [
+        "AISticker_VIP"
+      ],
+      "product_identifier": "YearlySubscription_Sticker"
+    }
+  }
+}
