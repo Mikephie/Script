@@ -1,0 +1,23 @@
+{
+  "user_agent": "FruitMinder",
+  "data": {
+    "com.bartozo.FruitMinder.annual": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.bartozo.FruitMinder.annual"
+    },
+    "com.bartozo.FruitMinder.lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.bartozo.FruitMinder.lifetime"
+    },
+    "com.bartozo.FruitMinder.monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.bartozo.FruitMinder.monthly"
+    }
+  }
+}
