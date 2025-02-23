@@ -1,0 +1,11 @@
+{
+  "user_agent": "Text%20to%20Speech",
+  "data": {
+    "tts_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tts_1m"
+    }
+  }
+}
