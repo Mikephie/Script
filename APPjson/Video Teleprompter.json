@@ -1,0 +1,54 @@
+{
+  "user_agent": "Video%20Teleprompter",
+  "data": {
+    "com.joeallenpro.videoteleprompter.autocaptions": {
+      "entitlements": [
+        "premiumSubscription"
+      ],
+      "product_identifier": "com.joeallenpro.videoteleprompter.autocaptions"
+    },
+    "com.joeallenpro.videoteleprompter.upgrade.lifetime": {
+      "entitlements": [
+        "videoPremium"
+      ],
+      "product_identifier": "com.joeallenpro.videoteleprompter.upgrade.lifetime"
+    },
+    "com.joeallenpro.videoteleprompter.upgrade.lifetime_b": {
+      "entitlements": [
+        "premiumSubscription",
+        "videoPremium"
+      ],
+      "product_identifier": "com.joeallenpro.videoteleprompter.upgrade.lifetime_b"
+    },
+    "com.joeallenpro.videoteleprompter.upgrade.monthly_a": {
+      "entitlements": [
+        "autocaptions",
+        "macPremium",
+        "premium",
+        "premiumSubscription",
+        "videoPremium"
+      ],
+      "product_identifier": "com.joeallenpro.videoteleprompter.upgrade.monthly_a"
+    },
+    "com.joeallenpro.videoteleprompter.upgrade.weekly_a": {
+      "entitlements": [
+        "autocaptions",
+        "macPremium",
+        "premium",
+        "premiumSubscription",
+        "videoPremium"
+      ],
+      "product_identifier": "com.joeallenpro.videoteleprompter.upgrade.weekly_a"
+    },
+    "com.joeallenpro.videoteleprompter.upgrade.yearly_a": {
+      "entitlements": [
+        "autocaptions",
+        "macPremium",
+        "premium",
+        "premiumSubscription",
+        "videoPremium"
+      ],
+      "product_identifier": "com.joeallenpro.videoteleprompter.upgrade.yearly_a"
+    }
+  }
+}
