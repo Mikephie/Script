@@ -1,0 +1,53 @@
+{
+  "user_agent": "remoteMouse",
+  "data": {
+    "REMOVE_ADS_FREE_VER": {
+      "entitlements": [
+        "iap"
+      ],
+      "product_identifier": "REMOVE_ADS_FREE_VER"
+    },
+    "Subscribe__RemoteMouse_Monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "Subscribe__RemoteMouse_Monthly"
+    },
+    "Subscribe__RemoteMouse_Quarterly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "Subscribe__RemoteMouse_Quarterly"
+    },
+    "Subscribe__RemoteMouse_Yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "Subscribe__RemoteMouse_Yearly"
+    },
+    "UNLOCK_CUSTOM_BACKGROUND_FREE_VER": {
+      "entitlements": [],
+      "product_identifier": "UNLOCK_CUSTOM_BACKGROUND_FREE_VER"
+    },
+    "UNLOCK_IMAGE_VIEWER_IPHONE_FREE": {
+      "entitlements": [],
+      "product_identifier": "UNLOCK_IMAGE_VIEWER_IPHONE_FREE"
+    },
+    "UNLOCK_MEDIA_PAD_FREE_VER": {
+      "entitlements": [
+        "iap"
+      ],
+      "product_identifier": "UNLOCK_MEDIA_PAD_FREE_VER"
+    },
+    "UNLOCK_SPOTIFY_PAD_FREE_VER": {
+      "entitlements": [],
+      "product_identifier": "UNLOCK_SPOTIFY_PAD_FREE_VER"
+    },
+    "UNLOCK_WEB_REMOTE_FREE_VER": {
+      "entitlements": [
+        "iap"
+      ],
+      "product_identifier": "UNLOCK_WEB_REMOTE_FREE_VER"
+    }
+  }
+}
