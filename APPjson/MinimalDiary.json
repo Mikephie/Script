@@ -1,0 +1,23 @@
+{
+  "user_agent": "MinimalDiary",
+  "data": {
+    "com.mad.MinimalDiary.lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.mad.MinimalDiary.lifetime"
+    },
+    "com.mad.MinimalDiary.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.mad.MinimalDiary.monthly"
+    },
+    "com.mad.MinimalDiary.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.mad.MinimalDiary.yearly"
+    }
+  }
+}
