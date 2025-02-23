@@ -1,0 +1,29 @@
+{
+  "user_agent": "Origami",
+  "data": {
+    "origami_1499_1y": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "origami_1499_1y"
+    },
+    "origami_2499_1y_1w0": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "origami_2499_1y_1w0"
+    },
+    "origami_249_1m": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "origami_249_1m"
+    },
+    "origami_499_1m": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "origami_499_1m"
+    }
+  }
+}
