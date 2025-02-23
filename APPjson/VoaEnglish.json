@@ -1,0 +1,23 @@
+{
+  "user_agent": "VoaEnglish",
+  "data": {
+    "com.shenming.voavip": {
+      "entitlements": [
+        "enPro"
+      ],
+      "product_identifier": "com.shenming.voavip"
+    },
+    "com.shenming.voavip.month": {
+      "entitlements": [
+        "enPro"
+      ],
+      "product_identifier": "com.shenming.voavip.month"
+    },
+    "com.shenming.voavip.year": {
+      "entitlements": [
+        "enPro"
+      ],
+      "product_identifier": "com.shenming.voavip.year"
+    }
+  }
+}
