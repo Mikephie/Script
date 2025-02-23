@@ -1,0 +1,47 @@
+{
+  "user_agent": "OneTap",
+  "data": {
+    "DiscountedProLifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "DiscountedProLifetime"
+    },
+    "OneTimeLifetimeDiscount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "OneTimeLifetimeDiscount"
+    },
+    "ZoZoPlusAnnual": {
+      "entitlements": [],
+      "product_identifier": "ZoZoPlusAnnual"
+    },
+    "ZoZoPlusMonthly": {
+      "entitlements": [],
+      "product_identifier": "ZoZoPlusMonthly"
+    },
+    "ZoZoProLifetime": {
+      "entitlements": [],
+      "product_identifier": "ZoZoProLifetime"
+    },
+    "ZoZoProMonthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ZoZoProMonthly"
+    },
+    "ZoZoProOneTime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ZoZoProOneTime"
+    },
+    "ZoZoProYearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ZoZoProYearly"
+    }
+  }
+}
