@@ -1,0 +1,33 @@
+{
+  "user_agent": "photography",
+  "data": {
+    "photography_lifetime_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photography_lifetime_1"
+    },
+    "photography_monthly_1": {
+      "entitlements": [],
+      "product_identifier": "photography_monthly_1"
+    },
+    "photography_sub_monthly_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photography_sub_monthly_1"
+    },
+    "photography_sub_yearly_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photography_sub_yearly_1"
+    },
+    "photography_sub_yearly_2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photography_sub_yearly_2"
+    }
+  }
+}
