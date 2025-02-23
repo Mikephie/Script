@@ -1,0 +1,95 @@
+{
+  "user_agent": "Shapy",
+  "data": {
+    "com.blake.femalefitness.3monthsplan": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.blake.femalefitness.3monthsplan"
+    },
+    "com.blake.femalefitness.abs": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.abs"
+    },
+    "com.blake.femalefitness.armschestandback": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.armschestandback"
+    },
+    "com.blake.femalefitness.bikinibody": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.bikinibody"
+    },
+    "com.blake.femalefitness.buttworkout": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.buttworkout"
+    },
+    "com.blake.femalefitness.cardioandtotalbody": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.cardioandtotalbody"
+    },
+    "com.blake.femalefitness.fatburn": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.fatburn"
+    },
+    "com.blake.femalefitness.leanlegs": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.leanlegs"
+    },
+    "com.blake.femalefitness.monthly": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.monthly"
+    },
+    "com.blake.femalefitness.nutritionplanweight": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.nutritionplanweight"
+    },
+    "com.blake.femalefitness.premium": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.premium"
+    },
+    "com.blake.femalefitness.subscription.6monthsplan": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.blake.femalefitness.subscription.6monthsplan"
+    },
+    "com.blake.femalefitness.subscription.monthly": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.subscription.monthly"
+    },
+    "com.blake.femalefitness.subscription.monthly2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.blake.femalefitness.subscription.monthly2"
+    },
+    "com.blake.femalefitness.subscription.onetimeoffer": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.blake.femalefitness.subscription.onetimeoffer"
+    },
+    "com.blake.femalefitness.subscription.weekly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.blake.femalefitness.subscription.weekly"
+    },
+    "com.blake.femalefitness.subscription.weeklyfreetrial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.blake.femalefitness.subscription.weeklyfreetrial"
+    },
+    "com.blake.femalefitness.subscription.yearly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.blake.femalefitness.subscription.yearly"
+    },
+    "com.blake.femalefitness.yearly": {
+      "entitlements": [],
+      "product_identifier": "com.blake.femalefitness.yearly"
+    }
+  }
+}
