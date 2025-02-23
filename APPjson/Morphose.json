@@ -1,0 +1,17 @@
+{
+  "user_agent": "Morphose",
+  "data": {
+    "com.pixery.morphose.weekly": {
+      "entitlements": [
+        "ProStandard"
+      ],
+      "product_identifier": "com.pixery.morphose.weekly"
+    },
+    "com.pixery.morphose.yearly": {
+      "entitlements": [
+        "ProStandard"
+      ],
+      "product_identifier": "com.pixery.morphose.yearly"
+    }
+  }
+}
