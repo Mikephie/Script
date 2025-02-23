@@ -1,0 +1,35 @@
+{
+  "user_agent": "Kylin",
+  "data": {
+    "pro_life": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_life"
+    },
+    "pro_month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_month"
+    },
+    "pro_week": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_week"
+    },
+    "pro_year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_year"
+    },
+    "test1": {
+      "entitlements": [
+        "pro2"
+      ],
+      "product_identifier": "test1"
+    }
+  }
+}
