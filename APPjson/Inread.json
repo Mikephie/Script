@@ -1,0 +1,11 @@
+{
+  "user_agent": "Inread",
+  "data": {
+    "inRead.premium.monthly": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "inRead.premium.monthly"
+    }
+  }
+}
