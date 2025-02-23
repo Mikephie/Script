@@ -1,0 +1,21 @@
+{
+  "user_agent": "Chatty",
+  "data": {
+    "chatty.monthly.1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "chatty.monthly.1"
+    },
+    "chatty.weekly.1": {
+      "entitlements": [],
+      "product_identifier": "chatty.weekly.1"
+    },
+    "chatty.yearly.1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "chatty.yearly.1"
+    }
+  }
+}
