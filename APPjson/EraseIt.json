@@ -1,0 +1,35 @@
+{
+  "user_agent": "EraseIt",
+  "data": {
+    "com.uzero.cn.eraseit.annual1": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.uzero.cn.eraseit.annual1"
+    },
+    "com.uzero.cn.eraseit.monthly1": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.uzero.cn.eraseit.monthly1"
+    },
+    "com.uzero.cn.eraseit.premium1": {
+      "entitlements": [
+        "ProVersionLifeTime"
+      ],
+      "product_identifier": "com.uzero.cn.eraseit.premium1"
+    },
+    "com.uzero.cn.eraseit.premium1.frommonth": {
+      "entitlements": [
+        "ProVersionLifeTime"
+      ],
+      "product_identifier": "com.uzero.cn.eraseit.premium1.frommonth"
+    },
+    "com.uzero.cn.eraseit.premium1.fromyear": {
+      "entitlements": [
+        "ProVersionLifeTime"
+      ],
+      "product_identifier": "com.uzero.cn.eraseit.premium1.fromyear"
+    }
+  }
+}
