@@ -1,0 +1,83 @@
+{
+  "user_agent": "quitnow",
+  "data": {
+    "24q4_month": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "24q4_month"
+    },
+    "24q4_month_demo": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "24q4_month_demo"
+    },
+    "24q4_quarter": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "24q4_quarter"
+    },
+    "24q4_quarter_demo": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "24q4_quarter_demo"
+    },
+    "24q4_year": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "24q4_year"
+    },
+    "24q4_year_demo": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "24q4_year_demo"
+    },
+    "com.eaginsoftware.QuitNow.unlock_all_pro_features": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "com.eaginsoftware.QuitNow.unlock_all_pro_features"
+    },
+    "pro_features_month": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "pro_features_month"
+    },
+    "pro_features_month_subscription": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "pro_features_month_subscription"
+    },
+    "pro_features_quarter": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "pro_features_quarter"
+    },
+    "pro_features_quarter_subscription": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "pro_features_quarter_subscription"
+    },
+    "pro_features_year": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "pro_features_year"
+    },
+    "pro_features_year_subscription": {
+      "entitlements": [
+        "pro_features"
+      ],
+      "product_identifier": "pro_features_year_subscription"
+    }
+  }
+}
