@@ -1,0 +1,27 @@
+{
+  "user_agent": "LiveCaption",
+  "data": {
+    "rc_0100_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "rc_0100_1m"
+    },
+    "rc_0200_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "rc_0200_1m"
+    },
+    "rc_0400_1m": {
+      "entitlements": [
+        "pro plus"
+      ],
+      "product_identifier": "rc_0400_1m"
+    },
+    "rc_200k_coins": {
+      "entitlements": [],
+      "product_identifier": "rc_200k_coins"
+    }
+  }
+}
