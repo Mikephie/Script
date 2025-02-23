@@ -1,0 +1,29 @@
+{
+  "user_agent": "Whisper",
+  "data": {
+    "sub_lifetime_whisper": {
+      "entitlements": [
+        "all_features"
+      ],
+      "product_identifier": "sub_lifetime_whisper"
+    },
+    "whisperai_10_w": {
+      "entitlements": [
+        "all_features"
+      ],
+      "product_identifier": "whisperai_10_w"
+    },
+    "whisperai_17_m": {
+      "entitlements": [
+        "all_features"
+      ],
+      "product_identifier": "whisperai_17_m"
+    },
+    "whisperai_80_y": {
+      "entitlements": [
+        "all_features"
+      ],
+      "product_identifier": "whisperai_80_y"
+    }
+  }
+}
