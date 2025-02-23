@@ -1,0 +1,43 @@
+{
+  "user_agent": "Jellycuts",
+  "data": {
+    "basic": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "basic"
+    },
+    "com.zlineman.Jellyfish.tier.1.pro": {
+      "entitlements": [],
+      "product_identifier": "com.zlineman.Jellyfish.tier.1.pro"
+    },
+    "com.zlineman.Jellyfish.tier.2.pro": {
+      "entitlements": [],
+      "product_identifier": "com.zlineman.Jellyfish.tier.2.pro"
+    },
+    "com.zlineman.Jellyfish.tier.3.pro": {
+      "entitlements": [],
+      "product_identifier": "com.zlineman.Jellyfish.tier.3.pro"
+    },
+    "com.zlineman.Jellyfish.tier.4.pro": {
+      "entitlements": [],
+      "product_identifier": "com.zlineman.Jellyfish.tier.4.pro"
+    },
+    "com.zlineman.Jellyfish.tier.5.pro": {
+      "entitlements": [],
+      "product_identifier": "com.zlineman.Jellyfish.tier.5.pro"
+    },
+    "premium": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "premium"
+    },
+    "standart": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "standart"
+    }
+  }
+}
