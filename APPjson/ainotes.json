@@ -1,0 +1,137 @@
+{
+  "user_agent": "ainotes",
+  "data": {
+    "GRP_A_M_19_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_A_M_19_99"
+    },
+    "GRP_A_W_9_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_A_W_9_99"
+    },
+    "GRP_A_Y_149_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_A_Y_149_99"
+    },
+    "GRP_B_M_19_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_B_M_19_99"
+    },
+    "GRP_B_W_9_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_B_W_9_99"
+    },
+    "GRP_B_Y_99_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_B_Y_99_99"
+    },
+    "GRP_C_M_19_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_C_M_19_99"
+    },
+    "GRP_C_W_9_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_C_W_9_99"
+    },
+    "GRP_C_Y_FT3_99_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_C_Y_FT3_99_99"
+    },
+    "GRP_D_M_19_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_D_M_19_99"
+    },
+    "GRP_D_W_9_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_D_W_9_99"
+    },
+    "GRP_D_Y_129_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_D_Y_129_99"
+    },
+    "GRP_E_M_19_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_E_M_19_99"
+    },
+    "GRP_E_W_9_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_E_W_9_99"
+    },
+    "GRP_E_Y_FT3_129_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_E_Y_FT3_129_99"
+    },
+    "GRP_F_M_19_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_F_M_19_99"
+    },
+    "GRP_F_W_9_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_F_W_9_99"
+    },
+    "GRP_F_Y_79_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_F_Y_79_99"
+    },
+    "GRP_G_M_1_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_G_M_1_99"
+    },
+    "GRP_H_M_2_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "GRP_H_M_2_99"
+    },
+    "NCIAP_A_0_0_0": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "NCIAP_A_0_0_0"
+    },
+    "NCIAP_A_149_99": {
+      "entitlements": [
+        "HoneyNote AI Pro"
+      ],
+      "product_identifier": "NCIAP_A_149_99"
+    }
+  }
+}
