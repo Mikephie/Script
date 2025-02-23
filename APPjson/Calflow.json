@@ -1,0 +1,23 @@
+{
+  "user_agent": "Calflow",
+  "data": {
+    "kike.calflow.pro.lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "kike.calflow.pro.lifetime"
+    },
+    "kike.calflow.pro.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "kike.calflow.pro.monthly"
+    },
+    "kike.calflow.pro.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "kike.calflow.pro.yearly"
+    }
+  }
+}
