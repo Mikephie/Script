@@ -1,0 +1,11 @@
+{
+  "user_agent": "WhiteBorder",
+  "data": {
+    "com.dujinke.WhiteBorder.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.WhiteBorder.Unlimited"
+    }
+  }
+}
