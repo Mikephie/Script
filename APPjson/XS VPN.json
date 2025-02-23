@@ -1,0 +1,77 @@
+{
+  "user_agent": "XS%20VPN",
+  "data": {
+    "xs_ios_lifetime": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_lifetime"
+    },
+    "xs_ios_monthly_sub_1": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_monthly_sub_1"
+    },
+    "xs_ios_monthly_sub_trial": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_monthly_sub_trial"
+    },
+    "xs_ios_monthly_sub_unlimited": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_monthly_sub_unlimited"
+    },
+    "xs_ios_weeklu_sub_plus": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_weeklu_sub_plus"
+    },
+    "xs_ios_weekly_sub_1": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_weekly_sub_1"
+    },
+    "xs_ios_weekly_sub_trial": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_weekly_sub_trial"
+    },
+    "xs_ios_yearly_sub_1": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_yearly_sub_1"
+    },
+    "xs_ios_yearly_sub_2": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_yearly_sub_2"
+    },
+    "xs_ios_yearly_sub_max_offer": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_yearly_sub_max_offer"
+    },
+    "xs_ios_yearly_sub_trial": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_yearly_sub_trial"
+    },
+    "xs_ios_yearly_sub_unlimited": {
+      "entitlements": [
+        "xsvpn.android.premium"
+      ],
+      "product_identifier": "xs_ios_yearly_sub_unlimited"
+    }
+  }
+}
