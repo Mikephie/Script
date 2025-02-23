@@ -1,0 +1,41 @@
+{
+  "user_agent": "ArtStage",
+  "data": {
+    "com.nicdeane.artstage.MonthlySubscription": {
+      "entitlements": [
+        "FullAccess"
+      ],
+      "product_identifier": "com.nicdeane.artstage.MonthlySubscription"
+    },
+    "com.nicdeane.artstage.MonthlySubscription50OffIntro": {
+      "entitlements": [
+        "FullAccess"
+      ],
+      "product_identifier": "com.nicdeane.artstage.MonthlySubscription50OffIntro"
+    },
+    "com.nicdeane.artstage.QuarterlySubscription": {
+      "entitlements": [
+        "FullAccess"
+      ],
+      "product_identifier": "com.nicdeane.artstage.QuarterlySubscription"
+    },
+    "com.nicdeane.artstage.QuarterlySubscription50OffIntro": {
+      "entitlements": [
+        "FullAccess"
+      ],
+      "product_identifier": "com.nicdeane.artstage.QuarterlySubscription50OffIntro"
+    },
+    "com.nicdeane.artstage.YearlySubscription": {
+      "entitlements": [
+        "FullAccess"
+      ],
+      "product_identifier": "com.nicdeane.artstage.YearlySubscription"
+    },
+    "com.nicdeane.artstage.YearlySubscription50OffIntro": {
+      "entitlements": [
+        "FullAccess"
+      ],
+      "product_identifier": "com.nicdeane.artstage.YearlySubscription50OffIntro"
+    }
+  }
+}
