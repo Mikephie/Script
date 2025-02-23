@@ -1,0 +1,23 @@
+{
+  "user_agent": "easy_chart",
+  "data": {
+    "qgnjs_1": {
+      "entitlements": [
+        "unlock all"
+      ],
+      "product_identifier": "qgnjs_1"
+    },
+    "qgnjs_2": {
+      "entitlements": [
+        "unlock all"
+      ],
+      "product_identifier": "qgnjs_2"
+    },
+    "qgnjs_lifetime": {
+      "entitlements": [
+        "unlock all"
+      ],
+      "product_identifier": "qgnjs_lifetime"
+    }
+  }
+}
