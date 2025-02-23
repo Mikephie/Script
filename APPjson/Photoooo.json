@@ -1,0 +1,51 @@
+{
+  "user_agent": "Photoooo",
+  "data": {
+    "canoe_12.99_dollars_lifetime": {
+      "entitlements": [
+        "lifetime"
+      ],
+      "product_identifier": "canoe_12.99_dollars_lifetime"
+    },
+    "canoe_18_rnb_per_year": {
+      "entitlements": [],
+      "product_identifier": "canoe_18_rnb_per_year"
+    },
+    "canoe_28_rnb_forever": {
+      "entitlements": [
+        "lifetime"
+      ],
+      "product_identifier": "canoe_28_rnb_forever"
+    },
+    "photoo_1.99_dollars_per_month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "photoo_1.99_dollars_per_month"
+    },
+    "photoo_12_rnb_per_year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "photoo_12_rnb_per_year"
+    },
+    "photoo_18_rnb_per_year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "photoo_18_rnb_per_year"
+    },
+    "photoo_4.99_dollars_per_year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "photoo_4.99_dollars_per_year"
+    },
+    "photoo_6_rnb_per_month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "photoo_6_rnb_per_month"
+    }
+  }
+}
