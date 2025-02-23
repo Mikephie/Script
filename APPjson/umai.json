@@ -1,0 +1,17 @@
+{
+  "user_agent": "umai",
+  "data": {
+    "umai_pro_weekly": {
+      "entitlements": [
+        "umai_pro"
+      ],
+      "product_identifier": "umai_pro_weekly"
+    },
+    "umai_pro_yearly": {
+      "entitlements": [
+        "umai_pro"
+      ],
+      "product_identifier": "umai_pro_yearly"
+    }
+  }
+}
