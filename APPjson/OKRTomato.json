@@ -1,0 +1,29 @@
+{
+  "user_agent": "OKRTomato",
+  "data": {
+    "com.metaorder.OKRTomato.vip.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.metaorder.OKRTomato.vip.monthly"
+    },
+    "com.metaorder.OKRTomato.vip.quarterly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.metaorder.OKRTomato.vip.quarterly"
+    },
+    "com.metaorder.OKRTomato.vip.supremacy": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.metaorder.OKRTomato.vip.supremacy"
+    },
+    "com.metaorder.OKRTomato.vip.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.metaorder.OKRTomato.vip.yearly"
+    }
+  }
+}
