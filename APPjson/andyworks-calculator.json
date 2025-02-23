@@ -1,0 +1,100 @@
+{
+  "user_agent": "andyworks-calculator",
+  "data": {
+    "com.andyworks.calculator.lifetimeApp": {
+      "entitlements": [
+        "calculatorApp"
+      ],
+      "product_identifier": "com.andyworks.calculator.lifetimeApp"
+    },
+    "com.andyworks.calculator.monthBeliever": {
+      "entitlements": [
+        "believer",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.calculator.monthBeliever"
+    },
+    "com.andyworks.calculator.monthlyBeliever": {
+      "entitlements": [],
+      "product_identifier": "com.andyworks.calculator.monthlyBeliever"
+    },
+    "com.andyworks.calculator.monthlyPatron": {
+      "entitlements": [],
+      "product_identifier": "com.andyworks.calculator.monthlyPatron"
+    },
+    "com.andyworks.calculator.skinAndy": {
+      "entitlements": [
+        "skinAndy"
+      ],
+      "product_identifier": "com.andyworks.calculator.skinAndy"
+    },
+    "com.andyworks.calculator.skinCedar": {
+      "entitlements": [
+        "skinCedar"
+      ],
+      "product_identifier": "com.andyworks.calculator.skinCedar"
+    },
+    "com.andyworks.calculator.skinChroma": {
+      "entitlements": [
+        "skinChroma"
+      ],
+      "product_identifier": "com.andyworks.calculator.skinChroma"
+    },
+    "com.andyworks.calculator.skinKarat": {
+      "entitlements": [
+        "skinKarat"
+      ],
+      "product_identifier": "com.andyworks.calculator.skinKarat"
+    },
+    "com.andyworks.calculator.skinMonster": {
+      "entitlements": [
+        "skinMonster"
+      ],
+      "product_identifier": "com.andyworks.calculator.skinMonster"
+    },
+    "com.andyworks.calculator.skinOpal": {
+      "entitlements": [
+        "skinOpal"
+      ],
+      "product_identifier": "com.andyworks.calculator.skinOpal"
+    },
+    "com.andyworks.calculator.skinPresstube": {
+      "entitlements": [
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.calculator.skinPresstube"
+    },
+    "com.andyworks.calculator.yearlyBeliever": {
+      "entitlements": [
+        "believer",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.calculator.yearlyBeliever"
+    },
+    "com.andyworks.calculator.yearlyPatron": {
+      "entitlements": [
+        "patron",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.calculator.yearlyPatron"
+    }
+  }
+}
