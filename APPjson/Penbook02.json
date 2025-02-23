@@ -1,0 +1,131 @@
+{
+  "user_agent": "Penbook02",
+  "data": {
+    "Penbook.sub02": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "Penbook.sub02"
+    },
+    "penbook.lifetime.2024.10": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.lifetime.2024.10"
+    },
+    "penbook.lifetime.2024.10.B": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.lifetime.2024.10.B"
+    },
+    "penbook.lifetime.2024.12.A": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.lifetime.2024.12.A"
+    },
+    "penbook.lifetime.2024.12.B": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.lifetime.2024.12.B"
+    },
+    "penbook.lifetime.2024.12.C": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.lifetime.2024.12.C"
+    },
+    "penbook.lifetime01": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.lifetime01"
+    },
+    "penbook.lifetime02": {
+      "entitlements": [
+        "proLoyalty"
+      ],
+      "product_identifier": "penbook.lifetime02"
+    },
+    "penbook.monthly.2023.04": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.monthly.2023.04"
+    },
+    "penbook.monthly.2024.10": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.monthly.2024.10"
+    },
+    "penbook.monthly.2024.12.A": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.monthly.2024.12.A"
+    },
+    "penbook.monthly.2024.12.B": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.monthly.2024.12.B"
+    },
+    "penbook.monthly.2024.12.C": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.monthly.2024.12.C"
+    },
+    "penbook.sub01": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.sub01"
+    },
+    "penbook.sub03": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.sub03"
+    },
+    "penbook.yearly.2023.04": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.yearly.2023.04"
+    },
+    "penbook.yearly.2024.10": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.yearly.2024.10"
+    },
+    "penbook.yearly.2024.10.B": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.yearly.2024.10.B"
+    },
+    "penbook.yearly.2024.12.A": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.yearly.2024.12.A"
+    },
+    "penbook.yearly.2024.12.B": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.yearly.2024.12.B"
+    },
+    "penbook.yearly.2024.12.C": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "penbook.yearly.2024.12.C"
+    }
+  }
+}
