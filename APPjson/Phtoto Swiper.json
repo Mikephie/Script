@@ -1,0 +1,113 @@
+{
+  "user_agent": "Phtoto%20Swiper",
+  "data": {
+    "ps_099_1m_hidden": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_099_1m_hidden"
+    },
+    "ps_0_life": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_0_life"
+    },
+    "ps_1999_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_1999_1y"
+    },
+    "ps_199_1w_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_199_1w_3d0"
+    },
+    "ps_2499_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_2499_1y"
+    },
+    "ps_2999_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_2999_1y"
+    },
+    "ps_2999_1y_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_2999_1y_3d0"
+    },
+    "ps_299_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_299_1m"
+    },
+    "ps_499_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_499_1m"
+    },
+    "ps_499_1m_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_499_1m_3d0"
+    },
+    "ps_499_1w_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_499_1w_3d0"
+    },
+    "ps_7999_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_7999_1y"
+    },
+    "ps_999_1m_3d0_1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_999_1m_3d0_1"
+    },
+    "ps_999_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_999_1y"
+    },
+    "ps_999_1y_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ps_999_1y_3d0"
+    },
+    "rc_099_life": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "rc_099_life"
+    },
+    "rc_0_life": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "rc_0_life"
+    },
+    "rc_499_life": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "rc_499_life"
+    }
+  }
+}
