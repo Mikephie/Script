@@ -1,0 +1,11 @@
+{
+  "user_agent": "CheckCalendar",
+  "data": {
+    "checkcalendar.610.lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "checkcalendar.610.lifetime"
+    }
+  }
+}
