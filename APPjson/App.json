@@ -1,23 +1,35 @@
 {
   "user_agent": "App",
   "data": {
-    "com.hello.german.lifetime": {
+    "com.langster.universal.lifetime": {
       "entitlements": [
         "Premium"
       ],
-      "product_identifier": "com.hello.german.lifetime"
+      "product_identifier": "com.langster.universal.lifetime"
     },
-    "com.hello.german.monthly": {
+    "com.langster.universal.monthly": {
       "entitlements": [
         "Premium"
       ],
-      "product_identifier": "com.hello.german.monthly"
+      "product_identifier": "com.langster.universal.monthly"
     },
-    "com.hello.german.yearly": {
+    "com.langster.universal.monthly.now": {
       "entitlements": [
         "Premium"
       ],
-      "product_identifier": "com.hello.german.yearly"
+      "product_identifier": "com.langster.universal.monthly.now"
+    },
+    "com.langster.universal.yearly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.langster.universal.yearly"
+    },
+    "com.langster.universal.yearly.now": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.langster.universal.yearly.now"
     }
   }
 }
