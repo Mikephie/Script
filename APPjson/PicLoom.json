@@ -1,0 +1,25 @@
+{
+  "user_agent": "PicLoom",
+  "data": {
+    "com.efsoft.picloom_nc_lifetime": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.picloom_nc_lifetime"
+    },
+    "com.efsoft.picloom_subscription_3months": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.picloom_subscription_3months"
+    },
+    "com.efsoft.picloom_subscription_annual": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.picloom_subscription_annual"
+    },
+    "com.efsoft.picloom_subscription_monthly": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.picloom_subscription_monthly"
+    },
+    "com.efsoft.picloom_subscription_weekly": {
+      "entitlements": [],
+      "product_identifier": "com.efsoft.picloom_subscription_weekly"
+    }
+  }
+}
