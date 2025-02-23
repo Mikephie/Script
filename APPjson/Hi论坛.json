@@ -1,0 +1,23 @@
+{
+  "user_agent": "Hi%E8%AE%BA%E5%9D%9B",
+  "data": {
+    "ad_remove": {
+      "entitlements": [
+        "ad_remove"
+      ],
+      "product_identifier": "ad_remove"
+    },
+    "plus_monthly": {
+      "entitlements": [
+        "plus_monthly"
+      ],
+      "product_identifier": "plus_monthly"
+    },
+    "plus_yearly": {
+      "entitlements": [
+        "plus_yearly"
+      ],
+      "product_identifier": "plus_yearly"
+    }
+  }
+}
