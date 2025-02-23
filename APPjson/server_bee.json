@@ -1,0 +1,23 @@
+{
+  "user_agent": "server_bee",
+  "data": {
+    "pro_45_lifetime": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "pro_45_lifetime"
+    },
+    "pro_lifetime": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "pro_lifetime"
+    },
+    "serverbee_18_1y_1w0": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "serverbee_18_1y_1w0"
+    }
+  }
+}
