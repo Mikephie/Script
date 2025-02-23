@@ -1,0 +1,23 @@
+{
+  "user_agent": "Accountit",
+  "data": {
+    "DesignTech.SIA.Spendit.Plus.Lifetime": {
+      "entitlements": [
+        "spenditPlus"
+      ],
+      "product_identifier": "DesignTech.SIA.Spendit.Plus.Lifetime"
+    },
+    "DesignTech.SIA.Spendit.Plus.Monthly": {
+      "entitlements": [
+        "spenditPlus"
+      ],
+      "product_identifier": "DesignTech.SIA.Spendit.Plus.Monthly"
+    },
+    "DesignTech.SIA.Spendit.Plus.Yearly": {
+      "entitlements": [
+        "spenditPlus"
+      ],
+      "product_identifier": "DesignTech.SIA.Spendit.Plus.Yearly"
+    }
+  }
+}
