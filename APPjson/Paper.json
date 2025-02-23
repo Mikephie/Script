@@ -1,0 +1,103 @@
+{
+  "user_agent": "Paper",
+  "data": {
+    "co.bergen.Darkroom.SpecialOfferWithProKit": {
+      "entitlements": [],
+      "product_identifier": "co.bergen.Darkroom.SpecialOfferWithProKit"
+    },
+    "com.fiftythree.paper.color": {
+      "entitlements": [
+        "essentials"
+      ],
+      "product_identifier": "com.fiftythree.paper.color"
+    },
+    "com.fiftythree.paper.credit": {
+      "entitlements": [],
+      "product_identifier": "com.fiftythree.paper.credit"
+    },
+    "com.fiftythree.paper.credit.bundle.1": {
+      "entitlements": [],
+      "product_identifier": "com.fiftythree.paper.credit.bundle.1"
+    },
+    "com.fiftythree.paper.credit.bundle.2": {
+      "entitlements": [],
+      "product_identifier": "com.fiftythree.paper.credit.bundle.2"
+    },
+    "com.fiftythree.paper.draw": {
+      "entitlements": [
+        "essentials"
+      ],
+      "product_identifier": "com.fiftythree.paper.draw"
+    },
+    "com.fiftythree.paper.essentials": {
+      "entitlements": [
+        "essentials"
+      ],
+      "product_identifier": "com.fiftythree.paper.essentials"
+    },
+    "com.fiftythree.paper.essentials_red": {
+      "entitlements": [
+        "essentials"
+      ],
+      "product_identifier": "com.fiftythree.paper.essentials_red"
+    },
+    "com.fiftythree.paper.fill": {
+      "entitlements": [
+        "essentials"
+      ],
+      "product_identifier": "com.fiftythree.paper.fill"
+    },
+    "com.fiftythree.paper.mixer": {
+      "entitlements": [
+        "essentials"
+      ],
+      "product_identifier": "com.fiftythree.paper.mixer"
+    },
+    "com.fiftythree.paper.outline": {
+      "entitlements": [
+        "essentials"
+      ],
+      "product_identifier": "com.fiftythree.paper.outline"
+    },
+    "com.fiftythree.paper.patron": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.fiftythree.paper.patron"
+    },
+    "com.fiftythree.paper.pro_12": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.fiftythree.paper.pro_12"
+    },
+    "com.fiftythree.paper.sketch": {
+      "entitlements": [
+        "essentials"
+      ],
+      "product_identifier": "com.fiftythree.paper.sketch"
+    },
+    "com.fiftythree.paper.write": {
+      "entitlements": [
+        "essentials"
+      ],
+      "product_identifier": "com.fiftythree.paper.write"
+    },
+    "paper_pro_2024_1week": {
+      "entitlements": [],
+      "product_identifier": "paper_pro_2024_1week"
+    },
+    "paper_pro_2024_1week_7dayft": {
+      "entitlements": [],
+      "product_identifier": "paper_pro_2024_1week_7dayft"
+    },
+    "paper_pro_2024_1year": {
+      "entitlements": [],
+      "product_identifier": "paper_pro_2024_1year"
+    },
+    "paper_pro_2024_1year_7dayft": {
+      "entitlements": [],
+      "product_identifier": "paper_pro_2024_1year_7dayft"
+    }
+  }
+}
