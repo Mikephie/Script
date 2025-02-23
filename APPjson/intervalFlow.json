@@ -1,0 +1,101 @@
+{
+  "user_agent": "intervalFlow",
+  "data": {
+    "wodtimer_1499_1y": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_1499_1y"
+    },
+    "wodtimer_1499_1y_1w0": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_1499_1y_1w0"
+    },
+    "wodtimer_199_1m": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_199_1m"
+    },
+    "wodtimer_199_1m_1w0": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_199_1m_1w0"
+    },
+    "wodtimer_1m": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_1m"
+    },
+    "wodtimer_1m3d0": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_1m3d0"
+    },
+    "wodtimer_1y": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_1y"
+    },
+    "wodtimer_1y3d0": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_1y3d0"
+    },
+    "wodtimer_1y_discounted": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_1y_discounted"
+    },
+    "wodtimer_1y_intro": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_1y_intro"
+    },
+    "wodtimer_499_3m": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_499_3m"
+    },
+    "wodtimer_499_3m_1w0": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_499_3m_1w0"
+    },
+    "wodtimer_899_6m": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_899_6m"
+    },
+    "wodtimer_899_6m_1w0": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_899_6m_1w0"
+    },
+    "wodtimer_lf": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_lf"
+    },
+    "wodtimer_lf_free": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "wodtimer_lf_free"
+    }
+  }
+}
