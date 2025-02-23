@@ -1,0 +1,59 @@
+{
+  "user_agent": "GradientMusic",
+  "data": {
+    "com.gradient.vision.gradient.music.monthly.7": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.gradient.vision.gradient.music.monthly.7"
+    },
+    "com.gradient.vision.gradient.music.one.time.purchase.69": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.gradient.vision.gradient.music.one.time.purchase.69"
+    },
+    "com.gradient.vision.gradient.music.yearly.49.trial": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.gradient.vision.gradient.music.yearly.49.trial"
+    },
+    "com.gradient.vision.music.monthly.9": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.gradient.vision.music.monthly.9"
+    },
+    "com.gradient.vision.music.one.time.79": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.gradient.vision.music.one.time.79"
+    },
+    "com.gradient.vision.music.yearly.49.trial": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.gradient.vision.music.yearly.49.trial"
+    },
+    "com.gradient.vision.new.music.monthly.9": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.gradient.vision.new.music.monthly.9"
+    },
+    "com.gradient.vision.new.music.one.time.79": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.gradient.vision.new.music.one.time.79"
+    },
+    "com.gradient.vision.new.music.yearly.49.trial": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.gradient.vision.new.music.yearly.49.trial"
+    }
+  }
+}
