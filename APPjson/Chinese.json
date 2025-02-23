@@ -1,0 +1,11 @@
+{
+  "user_agent": "Chinese",
+  "data": {
+    "com.dujinke.Chinese.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.Chinese.Unlimited"
+    }
+  }
+}
