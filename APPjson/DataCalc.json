@@ -1,0 +1,11 @@
+{
+  "user_agent": "DataCalc",
+  "data": {
+    "datacalc.yearly.12": {
+      "entitlements": [
+        "datacalc.pro"
+      ],
+      "product_identifier": "datacalc.yearly.12"
+    }
+  }
+}
