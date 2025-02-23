@@ -1,0 +1,29 @@
+{
+  "user_agent": "becoming",
+  "data": {
+    "membership_lifetime_discount": {
+      "entitlements": [
+        "Strength Pro"
+      ],
+      "product_identifier": "membership_lifetime_discount"
+    },
+    "strength_membership_annual": {
+      "entitlements": [
+        "Strength Pro"
+      ],
+      "product_identifier": "strength_membership_annual"
+    },
+    "strength_membership_lifetime": {
+      "entitlements": [
+        "Strength Pro"
+      ],
+      "product_identifier": "strength_membership_lifetime"
+    },
+    "strength_membership_monthly": {
+      "entitlements": [
+        "Strength Pro"
+      ],
+      "product_identifier": "strength_membership_monthly"
+    }
+  }
+}
