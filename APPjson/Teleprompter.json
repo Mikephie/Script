@@ -1,0 +1,23 @@
+{
+  "user_agent": "Teleprompter",
+  "data": {
+    "teleprompter_2999_1y_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "teleprompter_2999_1y_3d0"
+    },
+    "teleprompter_999_1w": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "teleprompter_999_1w"
+    },
+    "teleprompter_lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "teleprompter_lifetime"
+    }
+  }
+}
