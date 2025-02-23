@@ -1,0 +1,91 @@
+{
+  "user_agent": "ChatLLM",
+  "data": {
+    "com.curiouscreatorsco.ChatLLM.pro.1month.notrial.9_99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1month.notrial.9_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1week.3daytrial.6_99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1week.3daytrial.6_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1week.3daytrial.7_99": {
+      "entitlements": [],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1week.3daytrial.7_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1week.notrial.6_99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1week.notrial.6_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1week.notrial.7_99": {
+      "entitlements": [],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1week.notrial.7_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1year.3daytrial": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1year.3daytrial"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1year.3daytrial.49_99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1year.3daytrial.49_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1year.3daytrial.69_99": {
+      "entitlements": [],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1year.3daytrial.69_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1year.3daytrial.89_99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1year.3daytrial.89_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.24_99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.24_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.29_99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.29_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.31_99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.31_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.49_99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.49_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.69_99": {
+      "entitlements": [],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.69_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.89_99": {
+      "entitlements": [],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.1year.notrial.89_99"
+    },
+    "com.curiouscreatorsco.ChatLLM.pro.lifetime.notrial.150_00": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.curiouscreatorsco.ChatLLM.pro.lifetime.notrial.150_00"
+    }
+  }
+}
