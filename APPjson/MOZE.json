@@ -1,0 +1,391 @@
+{
+  "user_agent": "MOZE",
+  "data": {
+    "MOZE_IAP_ICONS_CN_01": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_CN_01"
+    },
+    "MOZE_IAP_ICONS_CN_02": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_CN_02"
+    },
+    "MOZE_IAP_ICONS_CN_03": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_CN_03"
+    },
+    "MOZE_IAP_ICONS_CN_04": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_CN_04"
+    },
+    "MOZE_IAP_ICONS_COLLECTION_01": {
+      "entitlements": [
+        "MOZE_ICON_COLLECTION"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_COLLECTION_01"
+    },
+    "MOZE_IAP_ICONS_COLLECTION_02": {
+      "entitlements": [
+        "MOZE_ICON_COLLECTION"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_COLLECTION_02"
+    },
+    "MOZE_IAP_ICONS_COLLECTION_03": {
+      "entitlements": [
+        "MOZE_ICON_COLLECTION"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_COLLECTION_03"
+    },
+    "MOZE_IAP_ICONS_ENTERTAINMENT_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_ENTERTAINMENT_01"
+    },
+    "MOZE_IAP_ICONS_ENTERTAINMENT_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_ENTERTAINMENT_02"
+    },
+    "MOZE_IAP_ICONS_ENTERTAINMENT_03": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_ENTERTAINMENT_03"
+    },
+    "MOZE_IAP_ICONS_FAMILY_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_FAMILY_01"
+    },
+    "MOZE_IAP_ICONS_FAMILY_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_FAMILY_02"
+    },
+    "MOZE_IAP_ICONS_FAMILY_03": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_FAMILY_03"
+    },
+    "MOZE_IAP_ICONS_FOOD_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_FOOD_01"
+    },
+    "MOZE_IAP_ICONS_FOOD_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_FOOD_02"
+    },
+    "MOZE_IAP_ICONS_FOOD_03": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_FOOD_03"
+    },
+    "MOZE_IAP_ICONS_FOOD_04": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_FOOD_04"
+    },
+    "MOZE_IAP_ICONS_FOOD_05": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_FOOD_05"
+    },
+    "MOZE_IAP_ICONS_HK_01": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_HK_01"
+    },
+    "MOZE_IAP_ICONS_HOUSE_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_HOUSE_01"
+    },
+    "MOZE_IAP_ICONS_HOUSE_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_HOUSE_02"
+    },
+    "MOZE_IAP_ICONS_HOUSE_03": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_HOUSE_03"
+    },
+    "MOZE_IAP_ICONS_LEARNING_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_LEARNING_01"
+    },
+    "MOZE_IAP_ICONS_LEARNING_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_LEARNING_02"
+    },
+    "MOZE_IAP_ICONS_LEARNING_03": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_LEARNING_03"
+    },
+    "MOZE_IAP_ICONS_LIVING_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_LIVING_01"
+    },
+    "MOZE_IAP_ICONS_LIVING_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_LIVING_02"
+    },
+    "MOZE_IAP_ICONS_LIVING_03": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_LIVING_03"
+    },
+    "MOZE_IAP_ICONS_MEDICAL_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_MEDICAL_01"
+    },
+    "MOZE_IAP_ICONS_MEDICAL_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_MEDICAL_02"
+    },
+    "MOZE_IAP_ICONS_OTHERS_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_OTHERS_01"
+    },
+    "MOZE_IAP_ICONS_PERSONAL_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_PERSONAL_01"
+    },
+    "MOZE_IAP_ICONS_PERSONAL_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_PERSONAL_02"
+    },
+    "MOZE_IAP_ICONS_PERSONAL_03": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_PERSONAL_03"
+    },
+    "MOZE_IAP_ICONS_SHOPPING_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_SHOPPING_01"
+    },
+    "MOZE_IAP_ICONS_SHOPPING_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_SHOPPING_02"
+    },
+    "MOZE_IAP_ICONS_SHOPPING_03": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_SHOPPING_03"
+    },
+    "MOZE_IAP_ICONS_SHOPPING_04": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_SHOPPING_04"
+    },
+    "MOZE_IAP_ICONS_SYSTEM_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_SYSTEM_01"
+    },
+    "MOZE_IAP_ICONS_SYSTEM_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_SYSTEM_02"
+    },
+    "MOZE_IAP_ICONS_SYSTEM_03": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_SYSTEM_03"
+    },
+    "MOZE_IAP_ICONS_TRANSPORT_01": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_TRANSPORT_01"
+    },
+    "MOZE_IAP_ICONS_TRANSPORT_02": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_TRANSPORT_02"
+    },
+    "MOZE_IAP_ICONS_TRANSPORT_03": {
+      "entitlements": [
+        "MOZE_ICON"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_TRANSPORT_03"
+    },
+    "MOZE_IAP_ICONS_TW_01": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_TW_01"
+    },
+    "MOZE_IAP_ICONS_TW_02": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_TW_02"
+    },
+    "MOZE_IAP_ICONS_TW_03": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_TW_03"
+    },
+    "MOZE_IAP_ICONS_TW_04": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_TW_04"
+    },
+    "MOZE_IAP_ICONS_TW_05": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_TW_05"
+    },
+    "MOZE_IAP_ICONS_TW_06": {
+      "entitlements": [
+        "MOZE_ICON_FREE"
+      ],
+      "product_identifier": "MOZE_IAP_ICONS_TW_06"
+    },
+    "MOZE_IAP_THEMES_MARBLE": {
+      "entitlements": [
+        "MOZE_THEME"
+      ],
+      "product_identifier": "MOZE_IAP_THEMES_MARBLE"
+    },
+    "MOZE_IAP_THEMES_MARBLE_01": {
+      "entitlements": [
+        "MOZE_THEME"
+      ],
+      "product_identifier": "MOZE_IAP_THEMES_MARBLE_01"
+    },
+    "MOZE_IAP_THEMES_SPACE_01": {
+      "entitlements": [
+        "MOZE_THEME"
+      ],
+      "product_identifier": "MOZE_IAP_THEMES_SPACE_01"
+    },
+    "MOZE_IAP_THEMES_WATERCOLOR_01": {
+      "entitlements": [
+        "MOZE_THEME"
+      ],
+      "product_identifier": "MOZE_IAP_THEMES_WATERCOLOR_01"
+    },
+    "MOZE_IAP_THEMES_WATERCOLOR_02": {
+      "entitlements": [
+        "MOZE_THEME"
+      ],
+      "product_identifier": "MOZE_IAP_THEMES_WATERCOLOR_02"
+    },
+    "MOZE_PRO_FREE_TRIAL_14_DAY": {
+      "entitlements": [],
+      "product_identifier": "MOZE_PRO_FREE_TRIAL_14_DAY"
+    },
+    "MOZE_PRO_FREE_TRIAL_60_DAY": {
+      "entitlements": [],
+      "product_identifier": "MOZE_PRO_FREE_TRIAL_60_DAY"
+    },
+    "MOZE_PRO_SUBSCRIPTION_MONTHLY_AI": {
+      "entitlements": [],
+      "product_identifier": "MOZE_PRO_SUBSCRIPTION_MONTHLY_AI"
+    },
+    "MOZE_PRO_SUBSCRIPTION_MONTHLY_BASIC": {
+      "entitlements": [
+        "MOZE_PREMIUM_SUBSCRIPTION"
+      ],
+      "product_identifier": "MOZE_PRO_SUBSCRIPTION_MONTHLY_BASIC"
+    },
+    "MOZE_PRO_SUBSCRIPTION_MONTHLY_BONUS": {
+      "entitlements": [],
+      "product_identifier": "MOZE_PRO_SUBSCRIPTION_MONTHLY_BONUS"
+    },
+    "MOZE_PRO_SUBSCRIPTION_MONTHLY_GPT": {
+      "entitlements": [
+        "MOZE_PREMIUM_SUBSCRIPTION"
+      ],
+      "product_identifier": "MOZE_PRO_SUBSCRIPTION_MONTHLY_GPT"
+    },
+    "MOZE_PRO_SUBSCRIPTION_MONTH_BONUS": {
+      "entitlements": [],
+      "product_identifier": "MOZE_PRO_SUBSCRIPTION_MONTH_BONUS"
+    },
+    "MOZE_PRO_SUBSCRIPTION_YEARLY_AI": {
+      "entitlements": [],
+      "product_identifier": "MOZE_PRO_SUBSCRIPTION_YEARLY_AI"
+    },
+    "MOZE_PRO_SUBSCRIPTION_YEARLY_BASIC": {
+      "entitlements": [
+        "MOZE_PREMIUM_SUBSCRIPTION"
+      ],
+      "product_identifier": "MOZE_PRO_SUBSCRIPTION_YEARLY_BASIC"
+    },
+    "MOZE_PRO_SUBSCRIPTION_YEARLY_BONUS": {
+      "entitlements": [],
+      "product_identifier": "MOZE_PRO_SUBSCRIPTION_YEARLY_BONUS"
+    },
+    "MOZE_PRO_SUBSCRIPTION_YEARLY_GPT": {
+      "entitlements": [
+        "MOZE_PREMIUM_SUBSCRIPTION"
+      ],
+      "product_identifier": "MOZE_PRO_SUBSCRIPTION_YEARLY_GPT"
+    },
+    "com.lcj.ocr": {
+      "entitlements": [],
+      "product_identifier": "com.lcj.ocr"
+    }
+  }
+}
