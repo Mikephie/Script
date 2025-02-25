@@ -1,0 +1,49 @@
+{
+  "user_agent": "HRZN",
+  "bundle_id": "net.tengl.weird",
+  "data": {
+    "analog.plus": {
+      "entitlements": [
+        "plus",
+        "pro"
+      ],
+      "product_identifier": "analog.plus"
+    },
+    "plus_099_1m": {
+      "entitlements": [
+        "plus",
+        "pro"
+      ],
+      "product_identifier": "plus_099_1m"
+    },
+    "plus_2499_lifetime": {
+      "entitlements": [
+        "plus",
+        "pro"
+      ],
+      "product_identifier": "plus_2499_lifetime"
+    },
+    "plus_699_1y": {
+      "entitlements": [
+        "plus",
+        "pro"
+      ],
+      "product_identifier": "plus_699_1y"
+    },
+    "plus_999_lifetime": {
+      "entitlements": [
+        "plus",
+        "pro"
+      ],
+      "product_identifier": "plus_999_lifetime"
+    },
+    "premium1": {
+      "entitlements": [],
+      "product_identifier": "premium1"
+    },
+    "premium12": {
+      "entitlements": [],
+      "product_identifier": "premium12"
+    }
+  }
+}
