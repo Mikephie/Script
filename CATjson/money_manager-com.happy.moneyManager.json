@@ -1,0 +1,24 @@
+{
+  "user_agent": "money_manager",
+  "bundle_id": "com.happy.moneyManager",
+  "data": {
+    "com.happy.money.forever": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.happy.money.forever"
+    },
+    "com.happy.money.monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.happy.money.monthly"
+    },
+    "com.happy.money.yearly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.happy.money.yearly"
+    }
+  }
+}
