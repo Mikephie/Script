@@ -1,0 +1,76 @@
+{
+  "user_agent": "avocation",
+  "bundle_id": null,
+  "data": {
+    "app.avocation.membership": {
+      "entitlements": [
+        "membership"
+      ],
+      "product_identifier": "app.avocation.membership"
+    },
+    "app.avocation.membership.lifetime": {
+      "entitlements": [
+        "membership"
+      ],
+      "product_identifier": "app.avocation.membership.lifetime"
+    },
+    "app.avocation.membership.year": {
+      "entitlements": [
+        "membership"
+      ],
+      "product_identifier": "app.avocation.membership.year"
+    },
+    "app.avocation.pot.avocado.option1": {
+      "entitlements": [],
+      "product_identifier": "app.avocation.pot.avocado.option1"
+    },
+    "app.avocation.pot.avocado.option2": {
+      "entitlements": [],
+      "product_identifier": "app.avocation.pot.avocado.option2"
+    },
+    "app.avocation.pot.avocado.option3": {
+      "entitlements": [],
+      "product_identifier": "app.avocation.pot.avocado.option3"
+    },
+    "app.avocation.pot.purple.option1": {
+      "entitlements": [],
+      "product_identifier": "app.avocation.pot.purple.option1"
+    },
+    "app.avocation.pot.purple.option2": {
+      "entitlements": [],
+      "product_identifier": "app.avocation.pot.purple.option2"
+    },
+    "app.avocation.pot.purple.option3": {
+      "entitlements": [],
+      "product_identifier": "app.avocation.pot.purple.option3"
+    },
+    "app.avocation.pot.smile.option1": {
+      "entitlements": [],
+      "product_identifier": "app.avocation.pot.smile.option1"
+    },
+    "app.avocation.pot.smile.option2": {
+      "entitlements": [],
+      "product_identifier": "app.avocation.pot.smile.option2"
+    },
+    "app.avocation.pot.smile.option3": {
+      "entitlements": [],
+      "product_identifier": "app.avocation.pot.smile.option3"
+    },
+    "app.avocation.pro.annual.9.99": {
+      "entitlements": [
+        "membership"
+      ],
+      "product_identifier": "app.avocation.pro.annual.9.99"
+    },
+    "app.avocation.pro.lifetime.19.99": {
+      "entitlements": [
+        "membership"
+      ],
+      "product_identifier": "app.avocation.pro.lifetime.19.99"
+    },
+    "rc_lifetime": {
+      "entitlements": [],
+      "product_identifier": "rc_lifetime"
+    }
+  }
+}
