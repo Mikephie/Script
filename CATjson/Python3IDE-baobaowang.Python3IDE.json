@@ -1,0 +1,30 @@
+{
+  "user_agent": "Python3IDE",
+  "bundle_id": "baobaowang.Python3IDE",
+  "data": {
+    "baobaowang.Python3IDE": {
+      "entitlements": [
+        "unlock"
+      ],
+      "product_identifier": "baobaowang.Python3IDE"
+    },
+    "python3ide_annual": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "python3ide_annual"
+    },
+    "python3ide_one_month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "python3ide_one_month"
+    },
+    "python3ide_six_month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "python3ide_six_month"
+    }
+  }
+}
