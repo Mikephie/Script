@@ -1,0 +1,30 @@
+{
+  "user_agent": "PDF_convertor",
+  "bundle_id": "com.pdf.convertor",
+  "data": {
+    "com.pdf.convertor.forever": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pdf.convertor.forever"
+    },
+    "com.pdf.convertor.month": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pdf.convertor.month"
+    },
+    "com.pdf.convertor.week": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pdf.convertor.week"
+    },
+    "com.pdf.convertor.week2": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.pdf.convertor.week2"
+    }
+  }
+}
