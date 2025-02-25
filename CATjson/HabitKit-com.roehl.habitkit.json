@@ -1,0 +1,54 @@
+{
+  "user_agent": "HabitKit",
+  "bundle_id": "com.roehl.habitkit",
+  "data": {
+    "habitkit_0099_1m": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "habitkit_0099_1m"
+    },
+    "habitkit_0199_1m": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "habitkit_0199_1m"
+    },
+    "habitkit_0599_1y": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "habitkit_0599_1y"
+    },
+    "habitkit_1299_1y": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "habitkit_1299_1y"
+    },
+    "habitkit_1799_lt": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "habitkit_1799_lt"
+    },
+    "habitkit_3499_lt": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "habitkit_3499_lt"
+    },
+    "habitkit_ii_0199_1m": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "habitkit_ii_0199_1m"
+    },
+    "habitkit_ii_1299_1y": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "habitkit_ii_1299_1y"
+    }
+  }
+}
