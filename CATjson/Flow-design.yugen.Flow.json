@@ -1,0 +1,28 @@
+{
+  "user_agent": "Flow",
+  "bundle_id": "design.yugen.Flow",
+  "data": {
+    "design.yugen.Flow.AnnualSubscription": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "design.yugen.Flow.AnnualSubscription"
+    },
+    "design.yugen.Flow.Lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "design.yugen.Flow.Lifetime"
+    },
+    "design.yugen.Flow.MonthlySubscription": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "design.yugen.Flow.MonthlySubscription"
+    },
+    "design.yugen.Flow.Test": {
+      "entitlements": [],
+      "product_identifier": "design.yugen.Flow.Test"
+    }
+  }
+}
