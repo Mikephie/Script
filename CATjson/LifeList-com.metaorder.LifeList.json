@@ -1,0 +1,27 @@
+{
+  "user_agent": "LifeList",
+  "bundle_id": "com.metaorder.LifeList",
+  "data": {
+    "com.metaorder.lifelist.monthly": {
+      "entitlements": [
+        "pro",
+        "subscription"
+      ],
+      "product_identifier": "com.metaorder.lifelist.monthly"
+    },
+    "com.metaorder.lifelist.premium": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "com.metaorder.lifelist.premium"
+    },
+    "com.metaorder.lifelist.yearly": {
+      "entitlements": [
+        "pro",
+        "subscription"
+      ],
+      "product_identifier": "com.metaorder.lifelist.yearly"
+    }
+  }
+}
