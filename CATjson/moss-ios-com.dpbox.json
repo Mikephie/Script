@@ -1,0 +1,24 @@
+{
+  "user_agent": "moss-ios",
+  "bundle_id": "com.dpbox",
+  "data": {
+    "dpbox_3month_18": {
+      "entitlements": [
+        "prouser"
+      ],
+      "product_identifier": "dpbox_3month_18"
+    },
+    "dpbox_monthly_6": {
+      "entitlements": [
+        "prouser"
+      ],
+      "product_identifier": "dpbox_monthly_6"
+    },
+    "dpbox_yearly_68": {
+      "entitlements": [
+        "prouser"
+      ],
+      "product_identifier": "dpbox_yearly_68"
+    }
+  }
+}
