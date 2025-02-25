@@ -1,0 +1,72 @@
+{
+  "user_agent": "Remote+",
+  "bundle_id": "com.cherpake.macrc",
+  "data": {
+    "com.cherpake.control.1msub": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.cherpake.control.1msub"
+    },
+    "com.cherpake.control.1msub.50off": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.cherpake.control.1msub.50off"
+    },
+    "com.cherpake.control.1ysub": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.cherpake.control.1ysub"
+    },
+    "com.cherpake.control.1ysub.50off": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.cherpake.control.1ysub.50off"
+    },
+    "com.cherpake.macrc.adsfree": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.cherpake.macrc.adsfree"
+    },
+    "com.cherpake.macrc.all": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.cherpake.macrc.all"
+    },
+    "com.cherpake.macrc.apps": {
+      "entitlements": [],
+      "product_identifier": "com.cherpake.macrc.apps"
+    },
+    "com.cherpake.macrc.apps.trial": {
+      "entitlements": [],
+      "product_identifier": "com.cherpake.macrc.apps.trial"
+    },
+    "com.cherpake.macrc.keyboard": {
+      "entitlements": [],
+      "product_identifier": "com.cherpake.macrc.keyboard"
+    },
+    "com.cherpake.macrc.lite.tip.10": {
+      "entitlements": [],
+      "product_identifier": "com.cherpake.macrc.lite.tip.10"
+    },
+    "com.cherpake.macrc.more": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.cherpake.macrc.more"
+    },
+    "com.cherpake.macrc.trackpad": {
+      "entitlements": [],
+      "product_identifier": "com.cherpake.macrc.trackpad"
+    },
+    "com.cherpake.macrc.volume": {
+      "entitlements": [],
+      "product_identifier": "com.cherpake.macrc.volume"
+    }
+  }
+}
