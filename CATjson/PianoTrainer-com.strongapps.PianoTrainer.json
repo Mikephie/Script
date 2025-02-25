@@ -1,0 +1,18 @@
+{
+  "user_agent": "PianoTrainer",
+  "bundle_id": "com.strongapps.PianoTrainer",
+  "data": {
+    "pianotrainer.sub.monthly.pro": {
+      "entitlements": [
+        "pro_subscription"
+      ],
+      "product_identifier": "pianotrainer.sub.monthly.pro"
+    },
+    "pianotrainer.sub.yearly.pro": {
+      "entitlements": [
+        "pro_subscription"
+      ],
+      "product_identifier": "pianotrainer.sub.yearly.pro"
+    }
+  }
+}
