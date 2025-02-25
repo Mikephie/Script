@@ -1,0 +1,36 @@
+{
+  "user_agent": "YouCanFocus2",
+  "bundle_id": "com.Bundulas.Vilius.youCanFocus.ios.project.YouCanFocus2",
+  "data": {
+    "yc_099_1m": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "yc_099_1m"
+    },
+    "yc_1299_1y_": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "yc_1299_1y_"
+    },
+    "yc_1299_all": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "yc_1299_all"
+    },
+    "yc_199_1w": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "yc_199_1w"
+    },
+    "yc_899_1y_1w0": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "yc_899_1y_1w0"
+    }
+  }
+}
