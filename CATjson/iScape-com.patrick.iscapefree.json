@@ -1,0 +1,116 @@
+{
+  "user_agent": "iScape",
+  "bundle_id": "com.patrick.iscapefree",
+  "data": {
+    "AutoRenewMonthlyBasic": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "AutoRenewMonthlyBasic"
+    },
+    "AutoRenewWeeklyBasic": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "AutoRenewWeeklyBasic"
+    },
+    "AutoRenewYearlyBasic": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "AutoRenewYearlyBasic"
+    },
+    "ConsumerPass_1Month": {
+      "entitlements": [],
+      "product_identifier": "ConsumerPass_1Month"
+    },
+    "ConsumerPass_3Months": {
+      "entitlements": [],
+      "product_identifier": "ConsumerPass_3Months"
+    },
+    "IMGCREDITS": {
+      "entitlements": [],
+      "product_identifier": "IMGCREDITS"
+    },
+    "IMGCREDITS2": {
+      "entitlements": [],
+      "product_identifier": "IMGCREDITS2"
+    },
+    "Limited_MonthlyProAutoRenew": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "Limited_MonthlyProAutoRenew"
+    },
+    "Limited_WeeklyProAutoRenew": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "Limited_WeeklyProAutoRenew"
+    },
+    "Limited_YearlyProAutoRenew": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "Limited_YearlyProAutoRenew"
+    },
+    "MonthlyAutoRenewConsumers": {
+      "entitlements": [
+        "Consumer"
+      ],
+      "product_identifier": "MonthlyAutoRenewConsumers"
+    },
+    "feature.duplicate": {
+      "entitlements": [],
+      "product_identifier": "feature.duplicate"
+    },
+    "feature.moveupdown": {
+      "entitlements": [],
+      "product_identifier": "feature.moveupdown"
+    },
+    "iscapefree.category.christmas": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.category.christmas"
+    },
+    "iscapefree.category.flowers": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.category.flowers"
+    },
+    "iscapefree.category.grass_groundcover": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.category.grass_groundcover"
+    },
+    "iscapefree.category.hardscapes": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.category.hardscapes"
+    },
+    "iscapefree.category.planters": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.category.planters"
+    },
+    "iscapefree.category.shrubs": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.category.shrubs"
+    },
+    "iscapefree.category.textures": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.category.textures"
+    },
+    "iscapefree.category.trees": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.category.trees"
+    },
+    "iscapefree.category.tropical_cactus": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.category.tropical_cactus"
+    },
+    "iscapefree.category.water_features": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.category.water_features"
+    },
+    "iscapefree.feature.cutout": {
+      "entitlements": [],
+      "product_identifier": "iscapefree.feature.cutout"
+    }
+  }
+}
