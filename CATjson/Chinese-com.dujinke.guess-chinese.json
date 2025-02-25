@@ -1,0 +1,12 @@
+{
+  "user_agent": "Chinese",
+  "bundle_id": "com.dujinke.guess-chinese",
+  "data": {
+    "com.dujinke.Chinese.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.Chinese.Unlimited"
+    }
+  }
+}
