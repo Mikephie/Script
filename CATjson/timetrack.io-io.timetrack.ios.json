@@ -1,0 +1,78 @@
+{
+  "user_agent": "timetrack.io",
+  "bundle_id": "io.timetrack.ios",
+  "data": {
+    "io.timetrack.auto_renew.1": {
+      "entitlements": [
+        "atimelogger-premium-month"
+      ],
+      "product_identifier": "io.timetrack.auto_renew.1"
+    },
+    "io.timetrack.auto_renew.12": {
+      "entitlements": [
+        "atimelogger-premium-year"
+      ],
+      "product_identifier": "io.timetrack.auto_renew.12"
+    },
+    "io.timetrack.auto_renew.6": {
+      "entitlements": [],
+      "product_identifier": "io.timetrack.auto_renew.6"
+    },
+    "io.timetrack.ios.premium1": {
+      "entitlements": [],
+      "product_identifier": "io.timetrack.ios.premium1"
+    },
+    "io.timetrack.ios.premium12": {
+      "entitlements": [],
+      "product_identifier": "io.timetrack.ios.premium12"
+    },
+    "io.timetrack.ios.premium24": {
+      "entitlements": [],
+      "product_identifier": "io.timetrack.ios.premium24"
+    },
+    "io.timetrack.ios.premium3": {
+      "entitlements": [],
+      "product_identifier": "io.timetrack.ios.premium3"
+    },
+    "io.timetrack.ios.premium6": {
+      "entitlements": [],
+      "product_identifier": "io.timetrack.ios.premium6"
+    },
+    "ttio_premium": {
+      "entitlements": [
+        "atimelogger-premium"
+      ],
+      "product_identifier": "ttio_premium"
+    },
+    "ttio_premium_no_sync": {
+      "entitlements": [
+        "atimelogger-premium-no-sync"
+      ],
+      "product_identifier": "ttio_premium_no_sync"
+    },
+    "ttio_premium_plus": {
+      "entitlements": [
+        "atimelogger-premium-plus"
+      ],
+      "product_identifier": "ttio_premium_plus"
+    },
+    "ttio_premium_premium_plus": {
+      "entitlements": [
+        "from-premium-to-premium-plus"
+      ],
+      "product_identifier": "ttio_premium_premium_plus"
+    },
+    "ttio_standard_no_sync": {
+      "entitlements": [
+        "atimelogger-standard-no-sync"
+      ],
+      "product_identifier": "ttio_standard_no_sync"
+    },
+    "ttio_standard_to_premium_no_sync": {
+      "entitlements": [
+        "atimelogger-standard-to-premium-no-sync"
+      ],
+      "product_identifier": "ttio_standard_to_premium_no_sync"
+    }
+  }
+}
