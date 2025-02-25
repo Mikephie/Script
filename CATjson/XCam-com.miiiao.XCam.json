@@ -1,0 +1,48 @@
+{
+  "user_agent": "XCam",
+  "bundle_id": "com.miiiao.XCam",
+  "data": {
+    "com.miiiao.xcam.lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.miiiao.xcam.lifetime"
+    },
+    "com.miiiao.xcam.lifetimediscount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.miiiao.xcam.lifetimediscount"
+    },
+    "com.miiiao.xcam.monthly2": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.miiiao.xcam.monthly2"
+    },
+    "com.miiiao.xcam.monthlydiscount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.miiiao.xcam.monthlydiscount"
+    },
+    "com.miiiao.xcam.quarter": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.miiiao.xcam.quarter"
+    },
+    "com.miiiao.xcam.quarterdiscount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.miiiao.xcam.quarterdiscount"
+    },
+    "com.miiiao.xcam.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.miiiao.xcam.yearly"
+    }
+  }
+}
