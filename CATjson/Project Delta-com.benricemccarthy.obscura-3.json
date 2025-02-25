@@ -1,0 +1,34 @@
+{
+  "user_agent": "Project%20Delta",
+  "bundle_id": "com.benricemccarthy.obscura-3",
+  "data": {
+    "com.benricemccarthy.obscura4.obscura_ultra": {
+      "entitlements": [],
+      "product_identifier": "com.benricemccarthy.obscura4.obscura_ultra"
+    },
+    "com.benricemccarthy.obscura4.obscura_ultra_lifetime": {
+      "entitlements": [
+        "rc_entitlement_obscura_ultra"
+      ],
+      "product_identifier": "com.benricemccarthy.obscura4.obscura_ultra_lifetime"
+    },
+    "com.benricemccarthy.obscura4.obscura_ultra_sub_annual": {
+      "entitlements": [
+        "rc_entitlement_obscura_ultra"
+      ],
+      "product_identifier": "com.benricemccarthy.obscura4.obscura_ultra_sub_annual"
+    },
+    "com.benricemccarthy.obscura4.obscura_ultra_sub_monthly": {
+      "entitlements": [
+        "rc_entitlement_obscura_ultra"
+      ],
+      "product_identifier": "com.benricemccarthy.obscura4.obscura_ultra_sub_monthly"
+    },
+    "com.benricemccarthy.obscura4.obscura_ultra_upgrade_sub_annual": {
+      "entitlements": [
+        "rc_entitlement_obscura_ultra"
+      ],
+      "product_identifier": "com.benricemccarthy.obscura4.obscura_ultra_upgrade_sub_annual"
+    }
+  }
+}
