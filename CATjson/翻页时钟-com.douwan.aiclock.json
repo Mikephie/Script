@@ -1,0 +1,12 @@
+{
+  "user_agent": "%E7%BF%BB%E9%A1%B5%E6%97%B6%E9%92%9F",
+  "bundle_id": "com.douwan.aiclock",
+  "data": {
+    "com.douwan.aiclock.ALL": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.douwan.aiclock.ALL"
+    }
+  }
+}
