@@ -1,0 +1,32 @@
+{
+  "user_agent": "logomaker",
+  "bundle_id": "com.lolly.ailogomaker",
+  "data": {
+    "annual_lm": {
+      "entitlements": [
+        "promember"
+      ],
+      "product_identifier": "annual_lm"
+    },
+    "lifetime_": {
+      "entitlements": [
+        "promember"
+      ],
+      "product_identifier": "lifetime_"
+    },
+    "monthly": {
+      "entitlements": [],
+      "product_identifier": "monthly"
+    },
+    "monthly_lm": {
+      "entitlements": [
+        "promember"
+      ],
+      "product_identifier": "monthly_lm"
+    },
+    "n_mon": {
+      "entitlements": [],
+      "product_identifier": "n_mon"
+    }
+  }
+}
