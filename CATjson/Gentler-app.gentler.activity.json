@@ -1,0 +1,66 @@
+{
+  "user_agent": "Gentler",
+  "bundle_id": "app.gentler.activity",
+  "data": {
+    "app.gentler.activity.nonconsumable.onetime1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.gentler.activity.nonconsumable.onetime1"
+    },
+    "app.gentler.activity.nonconsumable.onetime2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.gentler.activity.nonconsumable.onetime2"
+    },
+    "app.gentler.activity.nonconsumable.onetime3": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.gentler.activity.nonconsumable.onetime3"
+    },
+    "app.gentler.activity.nonconsumable.onetime4": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.gentler.activity.nonconsumable.onetime4"
+    },
+    "app.gentler.activity.subscription.monthly1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.gentler.activity.subscription.monthly1"
+    },
+    "app.gentler.activity.subscription.monthlyFamily": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.gentler.activity.subscription.monthlyFamily"
+    },
+    "app.gentler.activity.subscription.yearly1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.gentler.activity.subscription.yearly1"
+    },
+    "app.gentler.activity.subscription.yearly2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.gentler.activity.subscription.yearly2"
+    },
+    "app.gentler.activity.subscription.yearlyFamily": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.gentler.activity.subscription.yearlyFamily"
+    },
+    "app.gentler.activity.subscription.yearlyFamily2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.gentler.activity.subscription.yearlyFamily2"
+    }
+  }
+}
