@@ -1,0 +1,856 @@
+{
+  "user_agent": "Reader",
+  "bundle_id": "com.voicedream.Voice-Dream-Reader",
+  "data": {
+    "TRANSLATION_PACK": {
+      "entitlements": [],
+      "product_identifier": "TRANSLATION_PACK"
+    },
+    "VOICE_ALICE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ALICE"
+    },
+    "VOICE_ALYONA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ALYONA"
+    },
+    "VOICE_ANDREAS": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ANDREAS"
+    },
+    "VOICE_ANIA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ANIA"
+    },
+    "VOICE_ANTOINE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ANTOINE"
+    },
+    "VOICE_ANTOINE_FROMAFAR": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ANTOINE_FROMAFAR"
+    },
+    "VOICE_ANTOINE_HAPPY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ANTOINE_HAPPY"
+    },
+    "VOICE_ANTOINE_SAD": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ANTOINE_SAD"
+    },
+    "VOICE_ANTOINE_UPCLOSE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ANTOINE_UPCLOSE"
+    },
+    "VOICE_ANTONIO": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ANTONIO"
+    },
+    "VOICE_BENTE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_BENTE"
+    },
+    "VOICE_BRUNO": {
+      "entitlements": [],
+      "product_identifier": "VOICE_BRUNO"
+    },
+    "VOICE_CELIA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_CELIA"
+    },
+    "VOICE_CHIARA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_CHIARA"
+    },
+    "VOICE_CLAIRE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_CLAIRE"
+    },
+    "VOICE_CLAUDIA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_CLAUDIA"
+    },
+    "VOICE_DAAN": {
+      "entitlements": [],
+      "product_identifier": "VOICE_DAAN"
+    },
+    "VOICE_DEEPA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_DEEPA"
+    },
+    "VOICE_DIMITRIS": {
+      "entitlements": [],
+      "product_identifier": "VOICE_DIMITRIS"
+    },
+    "VOICE_DIMITRIS_HAPPY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_DIMITRIS_HAPPY"
+    },
+    "VOICE_DIMITRIS_SAD": {
+      "entitlements": [],
+      "product_identifier": "VOICE_DIMITRIS_SAD"
+    },
+    "VOICE_ELIN": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ELIN"
+    },
+    "VOICE_ELISKA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ELISKA"
+    },
+    "VOICE_ELLA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ELLA"
+    },
+    "VOICE_EMIL": {
+      "entitlements": [],
+      "product_identifier": "VOICE_EMIL"
+    },
+    "VOICE_EMILIO_EN_US": {
+      "entitlements": [],
+      "product_identifier": "VOICE_EMILIO_EN_US"
+    },
+    "VOICE_EMILIO_ES_US": {
+      "entitlements": [],
+      "product_identifier": "VOICE_EMILIO_ES_US"
+    },
+    "VOICE_EMMA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_EMMA"
+    },
+    "VOICE_ERIK": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ERIK"
+    },
+    "VOICE_FABIANA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_FABIANA"
+    },
+    "VOICE_FEMKE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_FEMKE"
+    },
+    "VOICE_GRAHAM": {
+      "entitlements": [],
+      "product_identifier": "VOICE_GRAHAM"
+    },
+    "VOICE_HANNA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_HANNA"
+    },
+    "VOICE_HANUS": {
+      "entitlements": [],
+      "product_identifier": "VOICE_HANUS"
+    },
+    "VOICE_HARRY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_HARRY"
+    },
+    "VOICE_HEATHER": {
+      "entitlements": [],
+      "product_identifier": "VOICE_HEATHER"
+    },
+    "VOICE_INES": {
+      "entitlements": [],
+      "product_identifier": "VOICE_INES"
+    },
+    "VOICE_IPEK": {
+      "entitlements": [],
+      "product_identifier": "VOICE_IPEK"
+    },
+    "VOICE_JASMIJN": {
+      "entitlements": [],
+      "product_identifier": "VOICE_JASMIJN"
+    },
+    "VOICE_JEROEN": {
+      "entitlements": [],
+      "product_identifier": "VOICE_JEROEN"
+    },
+    "VOICE_JEROEN_HAPPY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_JEROEN_HAPPY"
+    },
+    "VOICE_JEROEN_SAD": {
+      "entitlements": [],
+      "product_identifier": "VOICE_JEROEN_SAD"
+    },
+    "VOICE_JONAS": {
+      "entitlements": [],
+      "product_identifier": "VOICE_JONAS"
+    },
+    "VOICE_JOSH": {
+      "entitlements": [],
+      "product_identifier": "VOICE_JOSH"
+    },
+    "VOICE_JULIA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_JULIA"
+    },
+    "VOICE_JULIE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_JULIE"
+    },
+    "VOICE_KAL": {
+      "entitlements": [],
+      "product_identifier": "VOICE_KAL"
+    },
+    "VOICE_KAREN": {
+      "entitlements": [],
+      "product_identifier": "VOICE_KAREN"
+    },
+    "VOICE_KARI": {
+      "entitlements": [],
+      "product_identifier": "VOICE_KARI"
+    },
+    "VOICE_KENNY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_KENNY"
+    },
+    "VOICE_KLAUS": {
+      "entitlements": [],
+      "product_identifier": "VOICE_KLAUS"
+    },
+    "VOICE_LAIA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_LAIA"
+    },
+    "VOICE_LAURA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_LAURA"
+    },
+    "VOICE_LEA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_LEA"
+    },
+    "VOICE_LEILA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_LEILA"
+    },
+    "VOICE_LIAM": {
+      "entitlements": [],
+      "product_identifier": "VOICE_LIAM"
+    },
+    "VOICE_LISA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_LISA"
+    },
+    "VOICE_LOUISE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_LOUISE"
+    },
+    "VOICE_LUCY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_LUCY"
+    },
+    "VOICE_LULU": {
+      "entitlements": [],
+      "product_identifier": "VOICE_LULU"
+    },
+    "VOICE_MANON": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MANON"
+    },
+    "VOICE_MARCIA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MARCIA"
+    },
+    "VOICE_MARGAUX": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MARGAUX"
+    },
+    "VOICE_MARGAUX_HAPPY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MARGAUX_HAPPY"
+    },
+    "VOICE_MARGAUX_SAD": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MARGAUX_SAD"
+    },
+    "VOICE_MARIA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MARIA"
+    },
+    "VOICE_MAX": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MAX"
+    },
+    "VOICE_MEHDI": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MEHDI"
+    },
+    "VOICE_METTE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_METTE"
+    },
+    "VOICE_MIA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MIA"
+    },
+    "VOICE_MICAH": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MICAH"
+    },
+    "VOICE_MINJI": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MINJI"
+    },
+    "VOICE_MONIKA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_MONIKA"
+    },
+    "VOICE_NELLY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_NELLY"
+    },
+    "VOICE_NIZAR": {
+      "entitlements": [],
+      "product_identifier": "VOICE_NIZAR"
+    },
+    "VOICE_NIZARENG": {
+      "entitlements": [],
+      "product_identifier": "VOICE_NIZARENG"
+    },
+    "VOICE_OLAV": {
+      "entitlements": [],
+      "product_identifier": "VOICE_OLAV"
+    },
+    "VOICE_OLIVIA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_OLIVIA"
+    },
+    "VOICE_PETER": {
+      "entitlements": [],
+      "product_identifier": "VOICE_PETER"
+    },
+    "VOICE_PETER_HAPPY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_PETER_HAPPY"
+    },
+    "VOICE_PETER_SAD": {
+      "entitlements": [],
+      "product_identifier": "VOICE_PETER_SAD"
+    },
+    "VOICE_QUEEN_ELIZABETH": {
+      "entitlements": [],
+      "product_identifier": "VOICE_QUEEN_ELIZABETH"
+    },
+    "VOICE_RACHEL": {
+      "entitlements": [],
+      "product_identifier": "VOICE_RACHEL"
+    },
+    "VOICE_RASMUS": {
+      "entitlements": [],
+      "product_identifier": "VOICE_RASMUS"
+    },
+    "VOICE_RHONA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_RHONA"
+    },
+    "VOICE_ROBOT": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ROBOT"
+    },
+    "VOICE_ROD": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ROD"
+    },
+    "VOICE_RODRIGO": {
+      "entitlements": [],
+      "product_identifier": "VOICE_RODRIGO"
+    },
+    "VOICE_ROSA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ROSA"
+    },
+    "VOICE_ROSIE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ROSIE"
+    },
+    "VOICE_RYAN": {
+      "entitlements": [],
+      "product_identifier": "VOICE_RYAN"
+    },
+    "VOICE_SAKURA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_SAKURA"
+    },
+    "VOICE_SALMA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_SALMA"
+    },
+    "VOICE_SAMUEL_NEW": {
+      "entitlements": [],
+      "product_identifier": "VOICE_SAMUEL_NEW"
+    },
+    "VOICE_SANNA": {
+      "entitlements": [],
+      "product_identifier": "VOICE_SANNA"
+    },
+    "VOICE_SARAH": {
+      "entitlements": [],
+      "product_identifier": "VOICE_SARAH"
+    },
+    "VOICE_SAUL": {
+      "entitlements": [],
+      "product_identifier": "VOICE_SAUL"
+    },
+    "VOICE_SHARON": {
+      "entitlements": [],
+      "product_identifier": "VOICE_SHARON"
+    },
+    "VOICE_SOFIE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_SOFIE"
+    },
+    "VOICE_TRACY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_TRACY"
+    },
+    "VOICE_TYLER": {
+      "entitlements": [],
+      "product_identifier": "VOICE_TYLER"
+    },
+    "VOICE_VALERIA_EN_US": {
+      "entitlements": [],
+      "product_identifier": "VOICE_VALERIA_EN_US"
+    },
+    "VOICE_VALERIA_ES_US": {
+      "entitlements": [],
+      "product_identifier": "VOICE_VALERIA_ES_US"
+    },
+    "VOICE_VITTORIO": {
+      "entitlements": [],
+      "product_identifier": "VOICE_VITTORIO"
+    },
+    "VOICE_WILL": {
+      "entitlements": [],
+      "product_identifier": "VOICE_WILL"
+    },
+    "VOICE_WILL_BAD_GUY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_WILL_BAD_GUY"
+    },
+    "VOICE_WILL_FROM_AFAR": {
+      "entitlements": [],
+      "product_identifier": "VOICE_WILL_FROM_AFAR"
+    },
+    "VOICE_WILL_HAPPY": {
+      "entitlements": [],
+      "product_identifier": "VOICE_WILL_HAPPY"
+    },
+    "VOICE_WILL_LITTLE_CREATURE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_WILL_LITTLE_CREATURE"
+    },
+    "VOICE_WILL_OLD_MAN": {
+      "entitlements": [],
+      "product_identifier": "VOICE_WILL_OLD_MAN"
+    },
+    "VOICE_WILL_SAD": {
+      "entitlements": [],
+      "product_identifier": "VOICE_WILL_SAD"
+    },
+    "VOICE_WILL_UPCLOSE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_WILL_UPCLOSE"
+    },
+    "VOICE_ZOE": {
+      "entitlements": [],
+      "product_identifier": "VOICE_ZOE"
+    },
+    "annual_119": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "annual_119"
+    },
+    "annual_20t": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "annual_20t"
+    },
+    "annual_99": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "annual_99"
+    },
+    "com.voicedream.reader.bookshare": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.bookshare"
+    },
+    "com.voicedream.reader.neospeech.voice.james": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.neospeech.voice.james"
+    },
+    "com.voicedream.reader.neospeech.voice.paul": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.neospeech.voice.paul"
+    },
+    "com.voicedream.reader.subscription.1month": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "com.voicedream.reader.subscription.1month"
+    },
+    "com.voicedream.reader.voice.ivona.agnieszka": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.agnieszka"
+    },
+    "com.voicedream.reader.voice.ivona.amy": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.amy"
+    },
+    "com.voicedream.reader.voice.ivona.astrid": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.astrid"
+    },
+    "com.voicedream.reader.voice.ivona.brian": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.brian"
+    },
+    "com.voicedream.reader.voice.ivona.carla": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.carla"
+    },
+    "com.voicedream.reader.voice.ivona.carmen": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.carmen"
+    },
+    "com.voicedream.reader.voice.ivona.celine": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.celine"
+    },
+    "com.voicedream.reader.voice.ivona.chantal": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.chantal"
+    },
+    "com.voicedream.reader.voice.ivona.chipmunk": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.chipmunk"
+    },
+    "com.voicedream.reader.voice.ivona.conchita": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.conchita"
+    },
+    "com.voicedream.reader.voice.ivona.cristiano": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.cristiano"
+    },
+    "com.voicedream.reader.voice.ivona.dora": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.dora"
+    },
+    "com.voicedream.reader.voice.ivona.emma": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.emma"
+    },
+    "com.voicedream.reader.voice.ivona.enrique": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.enrique"
+    },
+    "com.voicedream.reader.voice.ivona.eric": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.eric"
+    },
+    "com.voicedream.reader.voice.ivona.ewa": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.ewa"
+    },
+    "com.voicedream.reader.voice.ivona.filiz": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.filiz"
+    },
+    "com.voicedream.reader.voice.ivona.geraint": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.geraint"
+    },
+    "com.voicedream.reader.voice.ivona.geraint.cy": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.geraint.cy"
+    },
+    "com.voicedream.reader.voice.ivona.giorgio": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.giorgio"
+    },
+    "com.voicedream.reader.voice.ivona.gwyneth": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.gwyneth"
+    },
+    "com.voicedream.reader.voice.ivona.gwyneth.cy": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.gwyneth.cy"
+    },
+    "com.voicedream.reader.voice.ivona.hans": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.hans"
+    },
+    "com.voicedream.reader.voice.ivona.ivy": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.ivy"
+    },
+    "com.voicedream.reader.voice.ivona.jacek": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.jacek"
+    },
+    "com.voicedream.reader.voice.ivona.jan": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.jan"
+    },
+    "com.voicedream.reader.voice.ivona.jennifer": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.jennifer"
+    },
+    "com.voicedream.reader.voice.ivona.joey": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.joey"
+    },
+    "com.voicedream.reader.voice.ivona.karl": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.karl"
+    },
+    "com.voicedream.reader.voice.ivona.kendra": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.kendra"
+    },
+    "com.voicedream.reader.voice.ivona.kimberly": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.kimberly"
+    },
+    "com.voicedream.reader.voice.ivona.lotte": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.lotte"
+    },
+    "com.voicedream.reader.voice.ivona.mads": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.mads"
+    },
+    "com.voicedream.reader.voice.ivona.maja": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.maja"
+    },
+    "com.voicedream.reader.voice.ivona.marlene": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.marlene"
+    },
+    "com.voicedream.reader.voice.ivona.mathieu": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.mathieu"
+    },
+    "com.voicedream.reader.voice.ivona.miguel": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.miguel"
+    },
+    "com.voicedream.reader.voice.ivona.naja": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.naja"
+    },
+    "com.voicedream.reader.voice.ivona.nicole": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.nicole"
+    },
+    "com.voicedream.reader.voice.ivona.penelope": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.penelope"
+    },
+    "com.voicedream.reader.voice.ivona.raveena": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.raveena"
+    },
+    "com.voicedream.reader.voice.ivona.ricardo": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.ricardo"
+    },
+    "com.voicedream.reader.voice.ivona.ruben": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.ruben"
+    },
+    "com.voicedream.reader.voice.ivona.russell": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.russell"
+    },
+    "com.voicedream.reader.voice.ivona.salli": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.salli"
+    },
+    "com.voicedream.reader.voice.ivona.tatyana": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.tatyana"
+    },
+    "com.voicedream.reader.voice.ivona.vitoria": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.ivona.vitoria"
+    },
+    "com.voicedream.reader.voice.neospeech.ashley": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.ashley"
+    },
+    "com.voicedream.reader.voice.neospeech.bridget": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.bridget"
+    },
+    "com.voicedream.reader.voice.neospeech.chloe": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.chloe"
+    },
+    "com.voicedream.reader.voice.neospeech.francisco": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.francisco"
+    },
+    "com.voicedream.reader.voice.neospeech.hugh": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.hugh"
+    },
+    "com.voicedream.reader.voice.neospeech.hui": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.hui"
+    },
+    "com.voicedream.reader.voice.neospeech.julie": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.julie"
+    },
+    "com.voicedream.reader.voice.neospeech.junwoo": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.junwoo"
+    },
+    "com.voicedream.reader.voice.neospeech.kate": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.kate"
+    },
+    "com.voicedream.reader.voice.neospeech.liang": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.liang"
+    },
+    "com.voicedream.reader.voice.neospeech.misaki": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.misaki"
+    },
+    "com.voicedream.reader.voice.neospeech.show": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.show"
+    },
+    "com.voicedream.reader.voice.neospeech.violeta": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.violeta"
+    },
+    "com.voicedream.reader.voice.neospeech.yumi": {
+      "entitlements": [],
+      "product_identifier": "com.voicedream.reader.voice.neospeech.yumi"
+    },
+    "legacy_annual_59": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "legacy_annual_59"
+    },
+    "legacy_annual_79_first_39": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "legacy_annual_79_first_39"
+    },
+    "legacy_monthly_5": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "legacy_monthly_5"
+    },
+    "legacy_monthly_6": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "legacy_monthly_6"
+    },
+    "monthly_1499": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "monthly_1499"
+    },
+    "vd_annual_39": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_39"
+    },
+    "vd_annual_39_renewal": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_39_renewal"
+    },
+    "vd_annual_49": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_49"
+    },
+    "vd_annual_59": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_59"
+    },
+    "vd_annual_59_3dtrial": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_59_3dtrial"
+    },
+    "vd_annual_59_t": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_59_t"
+    },
+    "vd_annual_79": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_79"
+    },
+    "vd_annual_79_2": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_79_2"
+    },
+    "vd_annual_79_3daytrial": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_79_3daytrial"
+    },
+    "vd_annual_79_3daytrial_de_updated": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_79_3daytrial_de_updated"
+    },
+    "vd_annual_79_first_19": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_79_first_19"
+    },
+    "vd_annual_79_freemium": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_annual_79_freemium"
+    },
+    "vd_monthly_1999": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_monthly_1999"
+    },
+    "vd_monthly_999": {
+      "entitlements": [
+        "standard"
+      ],
+      "product_identifier": "vd_monthly_999"
+    }
+  }
+}
