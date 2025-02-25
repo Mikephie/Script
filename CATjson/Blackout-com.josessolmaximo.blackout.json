@@ -1,0 +1,36 @@
+{
+  "user_agent": "Blackout",
+  "bundle_id": "com.josessolmaximo.blackout",
+  "data": {
+    "blackout_099_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blackout_099_1m"
+    },
+    "blackout_1199_lt": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blackout_1199_lt"
+    },
+    "blackout_299_lt": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blackout_299_lt"
+    },
+    "blackout_599_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blackout_599_1y"
+    },
+    "blackout_599_1y_3d0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "blackout_599_1y_3d0"
+    }
+  }
+}
