@@ -1,0 +1,79 @@
+{
+  "user_agent": "pixel_me_tokyo",
+  "bundle_id": "sato.tokyo.pixel-me",
+  "data": {
+    "pm_499_1m_3d0": {
+      "entitlements": [
+        "pm_499",
+        "pro"
+      ],
+      "product_identifier": "pm_499_1m_3d0"
+    },
+    "pm_jpy2000_7d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_jpy2000_7d0"
+    },
+    "pm_jpy500_1m_0d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_jpy500_1m_0d0"
+    },
+    "pm_usd1999_1y_0d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_usd1999_1y_0d0"
+    },
+    "pm_usd1999_1y_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_usd1999_1y_3d0"
+    },
+    "pm_usd2999_1y_0d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_usd2999_1y_0d0"
+    },
+    "pm_usd2999_1y_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_usd2999_1y_3d0"
+    },
+    "pm_usd299_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_usd299_3d0"
+    },
+    "pm_usd3499_1y_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_usd3499_1y_3d0"
+    },
+    "pm_usd3499_1y_7d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_usd3499_1y_7d0"
+    },
+    "pm_usd499_0d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_usd499_0d0"
+    },
+    "pm_usd99.99_onetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm_usd99.99_onetime"
+    }
+  }
+}
