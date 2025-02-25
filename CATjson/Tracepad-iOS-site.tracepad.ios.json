@@ -1,0 +1,16 @@
+{
+  "user_agent": "Tracepad-iOS",
+  "bundle_id": "site.tracepad.ios",
+  "data": {
+    "tracepad_trial_all_gesture_3_days": {
+      "entitlements": [],
+      "product_identifier": "tracepad_trial_all_gesture_3_days"
+    },
+    "tracepad_unlock_all_gesture_5": {
+      "entitlements": [
+        "unlock"
+      ],
+      "product_identifier": "tracepad_unlock_all_gesture_5"
+    }
+  }
+}
