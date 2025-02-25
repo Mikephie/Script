@@ -1,0 +1,24 @@
+{
+  "user_agent": "EmojiGenerator",
+  "bundle_id": "ai.emoji.generator.maker.creator",
+  "data": {
+    "emoji_lifetime": {
+      "entitlements": [
+        "AI Emoji Generator Premium"
+      ],
+      "product_identifier": "emoji_lifetime"
+    },
+    "emoji_weekly": {
+      "entitlements": [
+        "AI Emoji Generator Premium"
+      ],
+      "product_identifier": "emoji_weekly"
+    },
+    "emoji_yearly": {
+      "entitlements": [
+        "AI Emoji Generator Premium"
+      ],
+      "product_identifier": "emoji_yearly"
+    }
+  }
+}
