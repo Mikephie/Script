@@ -1,0 +1,72 @@
+{
+  "user_agent": "Fiery%20Feeds",
+  "bundle_id": "net.voidstern.fiery-feeds",
+  "data": {
+    "net.voidstern.fieryfeeds.12months": {
+      "entitlements": [
+        "com.fieryfeeds.pro"
+      ],
+      "product_identifier": "net.voidstern.fieryfeeds.12months"
+    },
+    "net.voidstern.fieryfeeds.12months.3daytrial": {
+      "entitlements": [
+        "com.fieryfeeds.pro"
+      ],
+      "product_identifier": "net.voidstern.fieryfeeds.12months.3daytrial"
+    },
+    "net.voidstern.fieryfeeds.12months.7daytrial": {
+      "entitlements": [
+        "com.fieryfeeds.pro"
+      ],
+      "product_identifier": "net.voidstern.fieryfeeds.12months.7daytrial"
+    },
+    "net.voidstern.fieryfeeds.1month": {
+      "entitlements": [
+        "com.fieryfeeds.pro"
+      ],
+      "product_identifier": "net.voidstern.fieryfeeds.1month"
+    },
+    "net.voidstern.fieryfeeds.1month.trial": {
+      "entitlements": [
+        "com.fieryfeeds.pro"
+      ],
+      "product_identifier": "net.voidstern.fieryfeeds.1month.trial"
+    },
+    "net.voidstern.fieryfeeds.3months": {
+      "entitlements": [
+        "com.fieryfeeds.pro"
+      ],
+      "product_identifier": "net.voidstern.fieryfeeds.3months"
+    },
+    "net.voidstern.fieryfeeds.6months": {
+      "entitlements": [
+        "com.fieryfeeds.pro"
+      ],
+      "product_identifier": "net.voidstern.fieryfeeds.6months"
+    },
+    "net.voidstern.fieryfeeds.monthly": {
+      "entitlements": [
+        "com.fieryfeeds.pro"
+      ],
+      "product_identifier": "net.voidstern.fieryfeeds.monthly"
+    },
+    "net.voidstern.fieryfeeds.tipjar.large": {
+      "entitlements": [],
+      "product_identifier": "net.voidstern.fieryfeeds.tipjar.large"
+    },
+    "net.voidstern.fieryfeeds.tipjar.medium": {
+      "entitlements": [],
+      "product_identifier": "net.voidstern.fieryfeeds.tipjar.medium"
+    },
+    "net.voidstern.fieryfeeds.tipjar.small": {
+      "entitlements": [],
+      "product_identifier": "net.voidstern.fieryfeeds.tipjar.small"
+    },
+    "net.voidstern.fieryfeeds.yearly.trial": {
+      "entitlements": [
+        "com.fieryfeeds.pro"
+      ],
+      "product_identifier": "net.voidstern.fieryfeeds.yearly.trial"
+    }
+  }
+}
