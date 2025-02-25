@@ -1,0 +1,542 @@
+{
+  "user_agent": "Bend2",
+  "bundle_id": "com.bowery-digital.bend",
+  "data": {
+    "com.bowerydigital.bend.additionalroutines": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "com.bowerydigital.bend.additionalroutines"
+    },
+    "com.bowerydigital.bend.lifetimemembership": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "com.bowerydigital.bend.lifetimemembership"
+    },
+    "iap.bnd_0.99_0__001": {
+      "entitlements": [],
+      "product_identifier": "iap.bnd_0.99_0__001"
+    },
+    "iap.bnd_0.99__001": {
+      "entitlements": [],
+      "product_identifier": "iap.bnd_0.99__001"
+    },
+    "iap_expert_4.99": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "iap_expert_4.99"
+    },
+    "iap_full_body_4.99": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "iap_full_body_4.99"
+    },
+    "iap_posture_reset_4.99": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "iap_posture_reset_4.99"
+    },
+    "iap_sleep_4.99": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "iap_sleep_4.99"
+    },
+    "subs.bnd.aus_19.99_365_0__020": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.aus_19.99_365_0__020"
+    },
+    "subs.bnd.aus_29.99_365_0__019": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.aus_29.99_365_0__019"
+    },
+    "subs.bnd.aus_9.99_30_0__019": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.aus_9.99_30_0__019"
+    },
+    "subs.bnd.bra_14.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.bra_14.99_365_0"
+    },
+    "subs.bnd.bra_4.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.bra_4.99_30_0"
+    },
+    "subs.bnd.can_13.99_30_0__013": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.can_13.99_30_0__013"
+    },
+    "subs.bnd.can_37.99_365_0__012": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.can_37.99_365_0__012"
+    },
+    "subs.bnd.can_39.99_365_0__013": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.can_39.99_365_0__013"
+    },
+    "subs.bnd.can_9.99_30_0__012": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.can_9.99_30_0__012"
+    },
+    "subs.bnd.gbr_13.99_30_0__011": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.gbr_13.99_30_0__011"
+    },
+    "subs.bnd.gbr_24.99_365_0__010": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.gbr_24.99_365_0__010"
+    },
+    "subs.bnd.gbr_29.99_365_0__016": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.gbr_29.99_365_0__016"
+    },
+    "subs.bnd.gbr_39.99_365_0__011": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.gbr_39.99_365_0__011"
+    },
+    "subs.bnd.gbr_9.99_30_0__010": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.gbr_9.99_30_0__010"
+    },
+    "subs.bnd.gbr_9.99_30_0__016": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd.gbr_9.99_30_0__016"
+    },
+    "subs.bnd_11.99_30_0__004": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_11.99_30_0__004"
+    },
+    "subs.bnd_13.99_30_0__005": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_13.99_30_0__005"
+    },
+    "subs.bnd_13.99_30_0__018": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_13.99_30_0__018"
+    },
+    "subs.bnd_13.99_30_0__021": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_13.99_30_0__021"
+    },
+    "subs.bnd_16.99_30_0__006": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_16.99_30_0__006"
+    },
+    "subs.bnd_19.99_30_0__007": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_19.99_30_0__007"
+    },
+    "subs.bnd_19.99_365_0__001": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_19.99_365_0__001"
+    },
+    "subs.bnd_19.99_365_0__015": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_19.99_365_0__015"
+    },
+    "subs.bnd_19.99_365_7__024": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_19.99_365_7__024"
+    },
+    "subs.bnd_23.99_365_0__002": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_0__002"
+    },
+    "subs.bnd_23.99_365_0__009": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_0__009"
+    },
+    "subs.bnd_23.99_365_0__014": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_0__014"
+    },
+    "subs.bnd_23.99_365_0__affiliate": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_0__affiliate"
+    },
+    "subs.bnd_23.99_365_0__balance": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_0__balance"
+    },
+    "subs.bnd_23.99_365_0__balance_q1_2025": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_0__balance_q1_2025"
+    },
+    "subs.bnd_23.99_365_0__balance_q4_2024": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_0__balance_q4_2024"
+    },
+    "subs.bnd_23.99_365_0__docjord": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_0__docjord"
+    },
+    "subs.bnd_23.99_365_0__loseit_2025": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_0__loseit_2025"
+    },
+    "subs.bnd_23.99_365_0__welcome70": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_0__welcome70"
+    },
+    "subs.bnd_23.99_365_7__023": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_23.99_365_7__023"
+    },
+    "subs.bnd_29.99_365_0__008": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_29.99_365_0__008"
+    },
+    "subs.bnd_29.99_365_0__017": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_29.99_365_0__017"
+    },
+    "subs.bnd_35.99_365_0__003": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_35.99_365_0__003"
+    },
+    "subs.bnd_35.99_365_0__004": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_35.99_365_0__004"
+    },
+    "subs.bnd_39.99_365_0__005": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_39.99_365_0__005"
+    },
+    "subs.bnd_39.99_365_0__018": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_39.99_365_0__018"
+    },
+    "subs.bnd_39.99_365_0__021": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_39.99_365_0__021"
+    },
+    "subs.bnd_39.99_365_7__022": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_39.99_365_7__022"
+    },
+    "subs.bnd_49.99_365_0__006": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_49.99_365_0__006"
+    },
+    "subs.bnd_59.99_365_0__007": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_59.99_365_0__007"
+    },
+    "subs.bnd_6.99_30_0__001": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_6.99_30_0__001"
+    },
+    "subs.bnd_7.99_30_0__002": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_7.99_30_0__002"
+    },
+    "subs.bnd_9.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_9.99_30_0"
+    },
+    "subs.bnd_9.99_30_0__003": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_9.99_30_0__003"
+    },
+    "subs.bnd_9.99_30_0__017": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.bnd_9.99_30_0__017"
+    },
+    "subs1_4.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs1_4.99_30_0"
+    },
+    "subs1_49.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs1_49.99_365_0"
+    },
+    "subs2_5.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs2_5.99_30_0"
+    },
+    "subs2_59.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs2_59.99_365_0"
+    },
+    "subs3_6.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs3_6.99_30_0"
+    },
+    "subs3_69.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs3_69.99_365_0"
+    },
+    "subs4_7.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs4_7.99_30_0"
+    },
+    "subs4_79.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs4_79.99_365_0"
+    },
+    "subs5_8.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs5_8.99_30_0"
+    },
+    "subs5_89.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs5_89.99_365_0"
+    },
+    "subs6_9.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs6_9.99_30_0"
+    },
+    "subs6_99.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs6_99.99_365_0"
+    },
+    "subsL_29.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subsL_29.99_365_0"
+    },
+    "subsL_4.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subsL_4.99_30_0"
+    },
+    "subs_19.99_0_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_19.99_0_0"
+    },
+    "subs_2.99_30_3": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_2.99_30_3"
+    },
+    "subs_29.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_29.99_365_0"
+    },
+    "subs_29.99_365_14": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_29.99_365_14"
+    },
+    "subs_29.99_365_3": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_29.99_365_3"
+    },
+    "subs_29.99_365_30": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_29.99_365_30"
+    },
+    "subs_29.99_365_7": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_29.99_365_7"
+    },
+    "subs_4.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_4.99_30_0"
+    },
+    "subs_4.99_30_14": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_4.99_30_14"
+    },
+    "subs_4.99_30_3": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_4.99_30_3"
+    },
+    "subs_4.99_30_30": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_4.99_30_30"
+    },
+    "subs_4.99_30_7": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_4.99_30_7"
+    },
+    "subs_41.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_41.99_365_0"
+    },
+    "subs_41.99_365_3": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_41.99_365_3"
+    },
+    "subs_6.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_6.99_30_0"
+    },
+    "subs_6.99_30_3": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_6.99_30_3"
+    },
+    "subs_7.99_30_3": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_7.99_30_3"
+    },
+    "subs_9.99_0_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs_9.99_0_0"
+    }
+  }
+}
