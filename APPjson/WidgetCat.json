@@ -1,5 +1,6 @@
 {
   "user_agent": "WidgetCat",
+  "bundle_id": null,
   "data": {
     "MiaoLifeTime": {
       "entitlements": [
