@@ -1,0 +1,54 @@
+{
+  "user_agent": "CallAnnie",
+  "bundle_id": "ai.animato.callsam",
+  "data": {
+    "ai.animato.callannie.pro0": {
+      "entitlements": [
+        "ai.animato.callannie.entitlement.pro0"
+      ],
+      "product_identifier": "ai.animato.callannie.pro0"
+    },
+    "ai.animato.callannie.pro0.3m": {
+      "entitlements": [
+        "ai.animato.callannie.entitlement.pro0"
+      ],
+      "product_identifier": "ai.animato.callannie.pro0.3m"
+    },
+    "ai.animato.callannie.pro1": {
+      "entitlements": [
+        "ai.animato.callannie.entitlement.pro0"
+      ],
+      "product_identifier": "ai.animato.callannie.pro1"
+    },
+    "ai.animato.callannie.proyearly0": {
+      "entitlements": [
+        "ai.animato.callannie.entitlement.pro0"
+      ],
+      "product_identifier": "ai.animato.callannie.proyearly0"
+    },
+    "ai.animato.callannie.proyearly0.discount30": {
+      "entitlements": [
+        "ai.animato.callannie.entitlement.pro0"
+      ],
+      "product_identifier": "ai.animato.callannie.proyearly0.discount30"
+    },
+    "ai.animato.callannie.proyearly1": {
+      "entitlements": [
+        "ai.animato.callannie.entitlement.pro0"
+      ],
+      "product_identifier": "ai.animato.callannie.proyearly1"
+    },
+    "callannie_credits_1000": {
+      "entitlements": [],
+      "product_identifier": "callannie_credits_1000"
+    },
+    "callannie_credits_3000": {
+      "entitlements": [],
+      "product_identifier": "callannie_credits_3000"
+    },
+    "callannie_credits_6000": {
+      "entitlements": [],
+      "product_identifier": "callannie_credits_6000"
+    }
+  }
+}
