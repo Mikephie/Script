@@ -1,0 +1,30 @@
+{
+  "user_agent": "TeleprompterX",
+  "bundle_id": "com.teleprompterx.mattdoug",
+  "data": {
+    "TPXASUB": {
+      "entitlements": [
+        "Pro Upgrade"
+      ],
+      "product_identifier": "TPXASUB"
+    },
+    "TPXASUBDISC": {
+      "entitlements": [
+        "Pro Upgrade"
+      ],
+      "product_identifier": "TPXASUBDISC"
+    },
+    "TPXOTP": {
+      "entitlements": [
+        "Pro Upgrade"
+      ],
+      "product_identifier": "TPXOTP"
+    },
+    "TPXWSUB": {
+      "entitlements": [
+        "Pro Upgrade"
+      ],
+      "product_identifier": "TPXWSUB"
+    }
+  }
+}
