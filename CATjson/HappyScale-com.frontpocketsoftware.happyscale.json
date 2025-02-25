@@ -1,0 +1,52 @@
+{
+  "user_agent": "HappyScale",
+  "bundle_id": "com.frontpocketsoftware.happyscale",
+  "data": {
+    "com.frontpocketsoftware.happyscale.deluxe": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.frontpocketsoftware.happyscale.deluxe"
+    },
+    "com.frontpocketsoftware.happyscale.premium.monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.frontpocketsoftware.happyscale.premium.monthly"
+    },
+    "com.frontpocketsoftware.happyscale.premium.perpetual": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.frontpocketsoftware.happyscale.premium.perpetual"
+    },
+    "com.frontpocketsoftware.happyscale.premium.yearly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.frontpocketsoftware.happyscale.premium.yearly"
+    },
+    "com.frontpocketsoftware.happyscale.tip001": {
+      "entitlements": [],
+      "product_identifier": "com.frontpocketsoftware.happyscale.tip001"
+    },
+    "com.frontpocketsoftware.happyscale.tip003": {
+      "entitlements": [],
+      "product_identifier": "com.frontpocketsoftware.happyscale.tip003"
+    },
+    "com.frontpocketsoftware.happyscale.tip005": {
+      "entitlements": [],
+      "product_identifier": "com.frontpocketsoftware.happyscale.tip005"
+    },
+    "com.frontpocketsoftware.happyscale.tip010": {
+      "entitlements": [],
+      "product_identifier": "com.frontpocketsoftware.happyscale.tip010"
+    },
+    "subscription_yearly_1w_trial_test": {
+      "entitlements": [
+        "trial_test"
+      ],
+      "product_identifier": "subscription_yearly_1w_trial_test"
+    }
+  }
+}
