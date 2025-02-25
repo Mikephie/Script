@@ -1,0 +1,24 @@
+{
+  "user_agent": "Falendar",
+  "bundle_id": "com.thedafeige.Falendar",
+  "data": {
+    "falendar_45_1y_3d0": {
+      "entitlements": [
+        "Falendar+"
+      ],
+      "product_identifier": "falendar_45_1y_3d0"
+    },
+    "falendar_68_life": {
+      "entitlements": [
+        "Falendar+"
+      ],
+      "product_identifier": "falendar_68_life"
+    },
+    "falendar_6_1m_3d0": {
+      "entitlements": [
+        "Falendar+"
+      ],
+      "product_identifier": "falendar_6_1m_3d0"
+    }
+  }
+}
