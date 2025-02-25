@@ -1,0 +1,12 @@
+{
+  "user_agent": "Ricoh%20Recipes",
+  "bundle_id": "com.fujixweekly.Ricoh-Recipes",
+  "data": {
+    "Ricoh_Patron": {
+      "entitlements": [
+        "Patron"
+      ],
+      "product_identifier": "Ricoh_Patron"
+    }
+  }
+}
