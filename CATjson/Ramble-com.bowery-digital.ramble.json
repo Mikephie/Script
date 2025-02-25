@@ -1,0 +1,156 @@
+{
+  "user_agent": "Ramble",
+  "bundle_id": "com.bowery-digital.ramble",
+  "data": {
+    "subs.rmbl_13.99_30_0__007": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_13.99_30_0__007"
+    },
+    "subs.rmbl_14.99_30_0__013": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_14.99_30_0__013"
+    },
+    "subs.rmbl_14.99_365_0__002": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_14.99_365_0__002"
+    },
+    "subs.rmbl_16.99_30_0__008": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_16.99_30_0__008"
+    },
+    "subs.rmbl_17.99_30_0__014": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_17.99_30_0__014"
+    },
+    "subs.rmbl_19.99_30_0__011": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_19.99_30_0__011"
+    },
+    "subs.rmbl_19.99_365_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_19.99_365_0"
+    },
+    "subs.rmbl_19.99_365_0__003": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_19.99_365_0__003"
+    },
+    "subs.rmbl_23.99_30_0__015": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_23.99_30_0__015"
+    },
+    "subs.rmbl_23.99_365_0__004": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_23.99_365_0__004"
+    },
+    "subs.rmbl_29.99_365_0__005": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_29.99_365_0__005"
+    },
+    "subs.rmbl_3.99_30_0__001": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_3.99_30_0__001"
+    },
+    "subs.rmbl_39.99_365_0__007": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_39.99_365_0__007"
+    },
+    "subs.rmbl_39.99_365_7__009": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_39.99_365_7__009"
+    },
+    "subs.rmbl_4.99_30_0": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_4.99_30_0"
+    },
+    "subs.rmbl_4.99_30_0__002": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_4.99_30_0__002"
+    },
+    "subs.rmbl_4.99_30_0__006": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_4.99_30_0__006"
+    },
+    "subs.rmbl_49.99_365_0__008": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_49.99_365_0__008"
+    },
+    "subs.rmbl_49.99_365_7__010": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_49.99_365_7__010"
+    },
+    "subs.rmbl_59.99_365_0__011": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_59.99_365_0__011"
+    },
+    "subs.rmbl_59.99_365_7__012": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_59.99_365_7__012"
+    },
+    "subs.rmbl_6.99_30_0__003": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_6.99_30_0__003"
+    },
+    "subs.rmbl_7.99_30_0__004": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_7.99_30_0__004"
+    },
+    "subs.rmbl_9.99_30_0__005": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_9.99_30_0__005"
+    },
+    "subs.rmbl_9.99_365_0__001": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "subs.rmbl_9.99_365_0__001"
+    }
+  }
+}
