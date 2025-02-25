@@ -1,0 +1,56 @@
+{
+  "user_agent": "Echo",
+  "bundle_id": "com.LEMO.LemoFM",
+  "data": {
+    "com.LEMO.LemoFm.plus.annually": {
+      "entitlements": [
+        "Annually",
+        "PLUS"
+      ],
+      "product_identifier": "com.LEMO.LemoFm.plus.annually"
+    },
+    "com.LEMO.LemoFm.plus.lifetime.ja.l1": {
+      "entitlements": [
+        "Lifetime",
+        "PLUS"
+      ],
+      "product_identifier": "com.LEMO.LemoFm.plus.lifetime.ja.l1"
+    },
+    "com.LEMO.LemoFm.plus.lifetime.ja.l2": {
+      "entitlements": [
+        "Lifetime",
+        "PLUS"
+      ],
+      "product_identifier": "com.LEMO.LemoFm.plus.lifetime.ja.l2"
+    },
+    "com.LEMO.LemoFm.plus.lifetime.l1": {
+      "entitlements": [
+        "Lifetime",
+        "PLUS"
+      ],
+      "product_identifier": "com.LEMO.LemoFm.plus.lifetime.l1"
+    },
+    "com.LEMO.LemoFm.plus.lifetime.l2": {
+      "entitlements": [
+        "Lifetime",
+        "PLUS"
+      ],
+      "product_identifier": "com.LEMO.LemoFm.plus.lifetime.l2"
+    },
+    "com.LEMO.LemoFm.plus.lifetime.l3": {
+      "entitlements": [
+        "Lifetime",
+        "PATRON",
+        "PLUS"
+      ],
+      "product_identifier": "com.LEMO.LemoFm.plus.lifetime.l3"
+    },
+    "com.LEMO.LemoFm.plus.monthly": {
+      "entitlements": [
+        "Monthly",
+        "PLUS"
+      ],
+      "product_identifier": "com.LEMO.LemoFm.plus.monthly"
+    }
+  }
+}
