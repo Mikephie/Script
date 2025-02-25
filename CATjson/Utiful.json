@@ -1,0 +1,76 @@
+{
+  "user_agent": "Utiful",
+  "bundle_id": null,
+  "data": {
+    "All_Access_MC": {
+      "entitlements": [],
+      "product_identifier": "All_Access_MC"
+    },
+    "All_Access_MCN": {
+      "entitlements": [],
+      "product_identifier": "All_Access_MCN"
+    },
+    "All_Access_MCNN": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "All_Access_MCNN"
+    },
+    "All_Access_MN": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "All_Access_MN"
+    },
+    "All_Access_YC": {
+      "entitlements": [],
+      "product_identifier": "All_Access_YC"
+    },
+    "All_Access_YCN": {
+      "entitlements": [],
+      "product_identifier": "All_Access_YCN"
+    },
+    "All_Access_YCNN": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "All_Access_YCNN"
+    },
+    "All_Access_YR": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "All_Access_YR"
+    },
+    "All_Access_YR_01M_Free": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "All_Access_YR_01M_Free"
+    },
+    "All_Access_YR_02M_Free": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "All_Access_YR_02M_Free"
+    },
+    "All_Access_YR_03M_Free": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "All_Access_YR_03M_Free"
+    },
+    "All_Access_YR_06M_Free": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "All_Access_YR_06M_Free"
+    },
+    "All_Access_YR_12M_Free": {
+      "entitlements": [
+        "All Access"
+      ],
+      "product_identifier": "All_Access_YR_12M_Free"
+    }
+  }
+}
