@@ -1,0 +1,18 @@
+{
+  "user_agent": "OneBox",
+  "bundle_id": "unknown-202502252025",
+  "data": {
+    "com.ziheng.pandora.lifetime": {
+      "entitlements": [
+        "all"
+      ],
+      "product_identifier": "com.ziheng.pandora.lifetime"
+    },
+    "com.ziheng.pandora.yearly": {
+      "entitlements": [
+        "all"
+      ],
+      "product_identifier": "com.ziheng.pandora.yearly"
+    }
+  }
+}
