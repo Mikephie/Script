@@ -1,0 +1,96 @@
+{
+  "user_agent": "Dumb%20Phone",
+  "bundle_id": "au.com.michaeltigas.MiniOS",
+  "data": {
+    "dp.lifetime_17.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.lifetime_17.99"
+    },
+    "dp.lifetime_19.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.lifetime_19.99"
+    },
+    "dp.lifetime_24.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.lifetime_24.99"
+    },
+    "dp.lifetime_29.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.lifetime_29.99"
+    },
+    "dp.lifetime_39.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.lifetime_39.99"
+    },
+    "dp.monthly_1.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.monthly_1.99"
+    },
+    "dp.monthly_2.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.monthly_2.99"
+    },
+    "dp.monthly_3.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.monthly_3.99"
+    },
+    "dp.monthly_4.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.monthly_4.99"
+    },
+    "dp.monthly_5.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.monthly_5.99"
+    },
+    "dp.yearly_12.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.yearly_12.99"
+    },
+    "dp.yearly_14.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.yearly_14.99"
+    },
+    "dp.yearly_19.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.yearly_19.99"
+    },
+    "dp.yearly_6.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.yearly_6.99"
+    },
+    "dp.yearly_9.99": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "dp.yearly_9.99"
+    }
+  }
+}
