@@ -1,0 +1,102 @@
+{
+  "user_agent": "Carbon-iOS",
+  "bundle_id": "rr.carbon",
+  "data": {
+    "carbon.bokeh": {
+      "entitlements": [
+        "textures_bokeh"
+      ],
+      "product_identifier": "carbon.bokeh"
+    },
+    "carbon.carbonblack": {
+      "entitlements": [
+        "filters_blackAndWhite"
+      ],
+      "product_identifier": "carbon.carbonblack"
+    },
+    "carbon.colorfog": {
+      "entitlements": [
+        "textures_colorfog"
+      ],
+      "product_identifier": "carbon.colorfog"
+    },
+    "carbon.desktop.carbonblack": {
+      "entitlements": [],
+      "product_identifier": "carbon.desktop.carbonblack"
+    },
+    "carbon.desktop.carbonblack.2": {
+      "entitlements": [],
+      "product_identifier": "carbon.desktop.carbonblack.2"
+    },
+    "carbon.desktop.carbonblack.3": {
+      "entitlements": [],
+      "product_identifier": "carbon.desktop.carbonblack.3"
+    },
+    "carbon.duotone": {
+      "entitlements": [
+        "filters_duotone"
+      ],
+      "product_identifier": "carbon.duotone"
+    },
+    "carbon.grain": {
+      "entitlements": [
+        "textures_grain"
+      ],
+      "product_identifier": "carbon.grain"
+    },
+    "carbon.grunge": {
+      "entitlements": [
+        "textures_grunge"
+      ],
+      "product_identifier": "carbon.grunge"
+    },
+    "carbon.lightleaks": {
+      "entitlements": [
+        "textures_lightleaks"
+      ],
+      "product_identifier": "carbon.lightleaks"
+    },
+    "carbon.oldphoto": {
+      "entitlements": [
+        "filters_oldPhoto"
+      ],
+      "product_identifier": "carbon.oldphoto"
+    },
+    "carbon.sub.monthly.1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "carbon.sub.monthly.1"
+    },
+    "carbon.subscription.yearly.1.freetrial": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "carbon.subscription.yearly.1.freetrial"
+    },
+    "carbon.unlockall": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "carbon.unlockall"
+    },
+    "carbon.unlockall.2": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "carbon.unlockall.2"
+    },
+    "carbon.unlockall.3": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "carbon.unlockall.3"
+    },
+    "carbon.unlockall.discount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "carbon.unlockall.discount"
+    }
+  }
+}
