@@ -1,0 +1,90 @@
+{
+  "user_agent": "PhotoRoom",
+  "bundle_id": "com.dr1ven.eraser",
+  "data": {
+    "com.background.business.monthly": {
+      "entitlements": [
+        "business"
+      ],
+      "product_identifier": "com.background.business.monthly"
+    },
+    "com.background.business.weekly": {
+      "entitlements": [
+        "business"
+      ],
+      "product_identifier": "com.background.business.weekly"
+    },
+    "com.background.business.yearly": {
+      "entitlements": [
+        "business"
+      ],
+      "product_identifier": "com.background.business.yearly"
+    },
+    "com.background.pro.experiment.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.experiment.monthly"
+    },
+    "com.background.pro.experiment.weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.experiment.weekly"
+    },
+    "com.background.pro.experiment.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.experiment.yearly"
+    },
+    "com.background.pro.experiment2.weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.experiment2.weekly"
+    },
+    "com.background.pro.experiment3.weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.experiment3.weekly"
+    },
+    "com.background.pro.experiment4.weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.experiment4.weekly"
+    },
+    "com.background.pro.experiment5.weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.experiment5.weekly"
+    },
+    "com.background.pro.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.monthly"
+    },
+    "com.background.pro.monthlyyearly.upgrade": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.monthlyyearly.upgrade"
+    },
+    "com.background.pro.weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.weekly"
+    },
+    "com.background.pro.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.background.pro.yearly"
+    }
+  }
+}
