@@ -1,0 +1,60 @@
+{
+  "user_agent": "Journal_iOS",
+  "bundle_id": "com.pureformstudio.diaryOSX",
+  "data": {
+    "com.pureformstudio.diarly.ai_plus_monthly": {
+      "entitlements": [
+        "AI+"
+      ],
+      "product_identifier": "com.pureformstudio.diarly.ai_plus_monthly"
+    },
+    "com.pureformstudio.diary.IOS_PRO_migrated": {
+      "entitlements": [
+        "PRO"
+      ],
+      "product_identifier": "com.pureformstudio.diary.IOS_PRO_migrated"
+    },
+    "com.pureformstudio.diary.PRO": {
+      "entitlements": [
+        "PRO"
+      ],
+      "product_identifier": "com.pureformstudio.diary.PRO"
+    },
+    "com.pureformstudio.diary.PRO_2": {
+      "entitlements": [
+        "PRO"
+      ],
+      "product_identifier": "com.pureformstudio.diary.PRO_2"
+    },
+    "com.pureformstudio.diary.monthly": {
+      "entitlements": [
+        "PRO"
+      ],
+      "product_identifier": "com.pureformstudio.diary.monthly"
+    },
+    "com.pureformstudio.diary.yearly": {
+      "entitlements": [
+        "PRO"
+      ],
+      "product_identifier": "com.pureformstudio.diary.yearly"
+    },
+    "com.pureformstudio.diary.yearly_2022": {
+      "entitlements": [
+        "PRO"
+      ],
+      "product_identifier": "com.pureformstudio.diary.yearly_2022"
+    },
+    "com.pureformstudio.diary.yearly_2022_no_discount": {
+      "entitlements": [
+        "PRO"
+      ],
+      "product_identifier": "com.pureformstudio.diary.yearly_2022_no_discount"
+    },
+    "com.pureformstudio.diary.yearly_2022_promo": {
+      "entitlements": [
+        "PRO"
+      ],
+      "product_identifier": "com.pureformstudio.diary.yearly_2022_promo"
+    }
+  }
+}
