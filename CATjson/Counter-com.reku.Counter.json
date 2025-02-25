@@ -1,0 +1,24 @@
+{
+  "user_agent": "Counter",
+  "bundle_id": "com.reku.Counter",
+  "data": {
+    "com.reku.counter.plus.lifetime": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.reku.counter.plus.lifetime"
+    },
+    "com.reku.counter.plus.year": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.reku.counter.plus.year"
+    },
+    "count.plus.lifetime.free1": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "count.plus.lifetime.free1"
+    }
+  }
+}
