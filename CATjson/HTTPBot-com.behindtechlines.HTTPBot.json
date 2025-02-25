@@ -1,0 +1,46 @@
+{
+  "user_agent": "HTTPBot",
+  "bundle_id": "com.behindtechlines.HTTPBot",
+  "data": {
+    "com.behindtechlines.HTTPBot.prounlock": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.behindtechlines.HTTPBot.prounlock"
+    },
+    "com.behindtechlines.HTTPBot.prounlock2": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.behindtechlines.HTTPBot.prounlock2"
+    },
+    "httpbot_0299_1w": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "httpbot_0299_1w"
+    },
+    "httpbot_0499_1w_3d": {
+      "entitlements": [],
+      "product_identifier": "httpbot_0499_1w_3d"
+    },
+    "httpbot_1499_1y_1w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "httpbot_1499_1y_1w0"
+    },
+    "httpbot_1999_1y_1w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "httpbot_1999_1y_1w0"
+    },
+    "httpbot_2999_1y_1w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "httpbot_2999_1y_1w0"
+    }
+  }
+}
