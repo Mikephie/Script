@@ -1,0 +1,24 @@
+{
+  "user_agent": "StarFocus",
+  "bundle_id": "com.gsdyx.StarFocus",
+  "data": {
+    "com.gsdyx.StarFocus.nonConsumable.forever": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.gsdyx.StarFocus.nonConsumable.forever"
+    },
+    "com.gsdyx.StarFocus.subscription.pro.month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.gsdyx.StarFocus.subscription.pro.month"
+    },
+    "com.gsdyx.StarFocus.subscription.pro.year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.gsdyx.StarFocus.subscription.pro.year"
+    }
+  }
+}
