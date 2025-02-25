@@ -1,0 +1,12 @@
+{
+  "user_agent": "ActionDay",
+  "bundle_id": "com.dujinke.ActionDay",
+  "data": {
+    "com.dujinke.ActionDay.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.ActionDay.Unlimited"
+    }
+  }
+}
