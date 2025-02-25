@@ -1,0 +1,30 @@
+{
+  "user_agent": "maple_mobile",
+  "bundle_id": "com.maplesoft.companion",
+  "data": {
+    "mc_2100_6m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mc_2100_6m"
+    },
+    "mc_3000_12m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mc_3000_12m"
+    },
+    "mc_399_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mc_399_1m"
+    },
+    "mc_699_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mc_699_1m"
+    }
+  }
+}
