@@ -1,0 +1,30 @@
+{
+  "user_agent": "fastdiet",
+  "bundle_id": "com.happy.fastdiet",
+  "data": {
+    "com.fasting.app.vip.forever": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.fasting.app.vip.forever"
+    },
+    "com.happy.fastdiet.forever": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.happy.fastdiet.forever"
+    },
+    "com.happy.fastdiet.monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.happy.fastdiet.monthly"
+    },
+    "com.happy.fastdiet.yearly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.happy.fastdiet.yearly"
+    }
+  }
+}
