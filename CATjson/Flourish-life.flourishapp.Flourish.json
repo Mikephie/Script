@@ -1,0 +1,24 @@
+{
+  "user_agent": "Flourish",
+  "bundle_id": "life.flourishapp.Flourish",
+  "data": {
+    "flourish_3600_3mo": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "flourish_3600_3mo"
+    },
+    "flourish_5800_6mo_2w0": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "flourish_5800_6mo_2w0"
+    },
+    "flourish_9800_1yr_1m0": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "flourish_9800_1yr_1m0"
+    }
+  }
+}
