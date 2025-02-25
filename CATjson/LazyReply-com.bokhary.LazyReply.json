@@ -1,0 +1,18 @@
+{
+  "user_agent": "LazyReply",
+  "bundle_id": "com.bokhary.LazyReply",
+  "data": {
+    "com.bokhary.lazyreply.monthlyprosubscription": {
+      "entitlements": [
+        "lazyReplyMonthlySubscription"
+      ],
+      "product_identifier": "com.bokhary.lazyreply.monthlyprosubscription"
+    },
+    "com.bokhary.lazyreply.yearlyprosubscription": {
+      "entitlements": [
+        "lazyReplyYearlySubscription"
+      ],
+      "product_identifier": "com.bokhary.lazyreply.yearlyprosubscription"
+    }
+  }
+}
