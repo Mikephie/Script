@@ -1,5 +1,6 @@
 {
   "user_agent": "Pins",
+  "bundle_id": null,
   "data": {
     "do.anh.Pins.Tip.Large": {
       "entitlements": [],
