@@ -1,0 +1,22 @@
+{
+  "user_agent": "MusicPutty",
+  "bundle_id": "com.autumnrockdev.MusicPutty",
+  "data": {
+    "mp_2999_1y": {
+      "entitlements": [
+        "pro_version"
+      ],
+      "product_identifier": "mp_2999_1y"
+    },
+    "mp_3599_1y": {
+      "entitlements": [],
+      "product_identifier": "mp_3599_1y"
+    },
+    "mp_499_1m": {
+      "entitlements": [
+        "pro_version"
+      ],
+      "product_identifier": "mp_499_1m"
+    }
+  }
+}
