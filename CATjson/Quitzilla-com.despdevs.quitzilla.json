@@ -1,0 +1,40 @@
+{
+  "user_agent": "Quitzilla",
+  "bundle_id": "com.despdevs.quitzilla",
+  "data": {
+    "com.despdevs.quitzilla.lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.despdevs.quitzilla.lifetime"
+    },
+    "com.despdevs.quitzilla.sub1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.despdevs.quitzilla.sub1m"
+    },
+    "com.despdevs.quitzilla.sub1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.despdevs.quitzilla.sub1y"
+    },
+    "com.despdevs.quitzilla.sub1y.trial.7d": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.despdevs.quitzilla.sub1y.trial.7d"
+    },
+    "com.despdevs.quitzilla.sub3m": {
+      "entitlements": [],
+      "product_identifier": "com.despdevs.quitzilla.sub3m"
+    },
+    "com.despdevs.quitzilla.sub6m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.despdevs.quitzilla.sub6m"
+    }
+  }
+}
