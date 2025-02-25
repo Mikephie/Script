@@ -1,0 +1,58 @@
+{
+  "user_agent": "PhotoMapper",
+  "bundle_id": "com.NikolayFiantsev.PhotoMapper",
+  "data": {
+    "photomapper_annual_24.99": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photomapper_annual_24.99"
+    },
+    "photomapper_annual_trial3d_24.99": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photomapper_annual_trial3d_24.99"
+    },
+    "photomapper_annual_trial_24.99": {
+      "entitlements": [],
+      "product_identifier": "photomapper_annual_trial_24.99"
+    },
+    "photomapper_lifetime_1.99": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photomapper_lifetime_1.99"
+    },
+    "photomapper_lifetime_2.99": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photomapper_lifetime_2.99"
+    },
+    "photomapper_weekly_3dtrial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photomapper_weekly_3dtrial"
+    },
+    "photomapper_weekly_3dtrial_2.99": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photomapper_weekly_3dtrial_2.99"
+    },
+    "photomapper_weekly_3dtrial_4.99": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photomapper_weekly_3dtrial_4.99"
+    },
+    "pm_yearly_49.99": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "pm_yearly_49.99"
+    }
+  }
+}
