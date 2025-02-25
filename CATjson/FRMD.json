@@ -1,0 +1,54 @@
+{
+  "user_agent": "FRMD",
+  "bundle_id": null,
+  "data": {
+    "black_and_white_set": {
+      "entitlements": [
+        "film_bw_collection"
+      ],
+      "product_identifier": "black_and_white_set"
+    },
+    "collection_christmas": {
+      "entitlements": [
+        "film_christmas_collection"
+      ],
+      "product_identifier": "collection_christmas"
+    },
+    "collection_light_colors": {
+      "entitlements": [
+        "film_neon_collection"
+      ],
+      "product_identifier": "collection_light_colors"
+    },
+    "collection_monochrome": {
+      "entitlements": [
+        "film_monochrome_collection"
+      ],
+      "product_identifier": "collection_monochrome"
+    },
+    "frmd_plus_099_1m": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "frmd_plus_099_1m"
+    },
+    "frmd_plus_2499_lifetime": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "frmd_plus_2499_lifetime"
+    },
+    "frmd_plus_699_1y": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "frmd_plus_699_1y"
+    },
+    "frmd_plus_999_lifetime": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "frmd_plus_999_lifetime"
+    }
+  }
+}
