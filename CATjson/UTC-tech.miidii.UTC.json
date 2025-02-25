@@ -1,0 +1,60 @@
+{
+  "user_agent": "UTC",
+  "bundle_id": "tech.miidii.UTC",
+  "data": {
+    "tech.miidii.UTC.subscription.month": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.UTC.subscription.month"
+    },
+    "tech.miidii.UTC.subscription.year": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.UTC.subscription.year"
+    },
+    "tech.miidii.UTC.subscription.year.first_year_discount": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.UTC.subscription.year.first_year_discount"
+    },
+    "tech.miidii.UTC.subscription.year.v1": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.UTC.subscription.year.v1"
+    },
+    "tech.miidii.UTC.subscription.year.v1.discount": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.UTC.subscription.year.v1.discount"
+    },
+    "tech.miidii.UTC.unlock.pro": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.UTC.unlock.pro"
+    },
+    "tech.miidii.UTC.unlock.pro.c": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.UTC.unlock.pro.c"
+    },
+    "tech.miidii.UTC.unlock.pro.e": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.UTC.unlock.pro.e"
+    },
+    "tech.miidii.UTC.unlock.pro.gift": {
+      "entitlements": [
+        "Entitlement.Pro"
+      ],
+      "product_identifier": "tech.miidii.UTC.unlock.pro.gift"
+    }
+  }
+}
