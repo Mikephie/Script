@@ -1,0 +1,30 @@
+{
+  "user_agent": "ReflixiOS",
+  "bundle_id": "com.magicgroot.gooby",
+  "data": {
+    "com.magicgroot.reflix.subs.annually": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.annually"
+    },
+    "com.magicgroot.reflix.subs.lifetime": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.lifetime"
+    },
+    "com.magicgroot.reflix.subs.lifetime.origin": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.lifetime.origin"
+    },
+    "com.magicgroot.reflix.subs.monthly": {
+      "entitlements": [
+        "com.magicgroot.reflix.entitlements"
+      ],
+      "product_identifier": "com.magicgroot.reflix.subs.monthly"
+    }
+  }
+}
