@@ -1,0 +1,12 @@
+{
+  "user_agent": "Text%20to%20Speech",
+  "bundle_id": "social.steet.TextToSpeech",
+  "data": {
+    "tts_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tts_1m"
+    }
+  }
+}
