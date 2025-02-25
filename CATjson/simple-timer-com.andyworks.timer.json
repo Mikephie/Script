@@ -1,0 +1,97 @@
+{
+  "user_agent": "simple-timer",
+  "bundle_id": "com.andyworks.timer",
+  "data": {
+    "com.andyworks.timer.lifetimeApp": {
+      "entitlements": [
+        "timerApp"
+      ],
+      "product_identifier": "com.andyworks.timer.lifetimeApp"
+    },
+    "com.andyworks.timer.monthBeliever": {
+      "entitlements": [
+        "believer",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.timer.monthBeliever"
+    },
+    "com.andyworks.timer.monthlyBeliever": {
+      "entitlements": [],
+      "product_identifier": "com.andyworks.timer.monthlyBeliever"
+    },
+    "com.andyworks.timer.skinAndy": {
+      "entitlements": [
+        "skinAndy"
+      ],
+      "product_identifier": "com.andyworks.timer.skinAndy"
+    },
+    "com.andyworks.timer.skinCedar": {
+      "entitlements": [
+        "skinCedar"
+      ],
+      "product_identifier": "com.andyworks.timer.skinCedar"
+    },
+    "com.andyworks.timer.skinChroma": {
+      "entitlements": [
+        "skinChroma"
+      ],
+      "product_identifier": "com.andyworks.timer.skinChroma"
+    },
+    "com.andyworks.timer.skinKarat": {
+      "entitlements": [
+        "skinKarat"
+      ],
+      "product_identifier": "com.andyworks.timer.skinKarat"
+    },
+    "com.andyworks.timer.skinMonster": {
+      "entitlements": [
+        "skinMonster"
+      ],
+      "product_identifier": "com.andyworks.timer.skinMonster"
+    },
+    "com.andyworks.timer.skinOpal": {
+      "entitlements": [
+        "skinOpal"
+      ],
+      "product_identifier": "com.andyworks.timer.skinOpal"
+    },
+    "com.andyworks.timer.skinPresstube": {
+      "entitlements": [
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.timer.skinPresstube"
+    },
+    "com.andyworks.timer.yearlyBeliever": {
+      "entitlements": [
+        "believer",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.timer.yearlyBeliever"
+    },
+    "com.andyworks.timer.yearlyPatron": {
+      "entitlements": [
+        "patron",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.timer.yearlyPatron"
+    }
+  }
+}
