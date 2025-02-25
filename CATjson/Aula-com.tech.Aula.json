@@ -1,0 +1,24 @@
+{
+  "user_agent": "Aula",
+  "bundle_id": "com.tech.Aula",
+  "data": {
+    "com.tech.Aula.Month": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.tech.Aula.Month"
+    },
+    "com.tech.Aula.Quarter": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.tech.Aula.Quarter"
+    },
+    "com.tech.Aula.VIPALL": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.tech.Aula.VIPALL"
+    }
+  }
+}
