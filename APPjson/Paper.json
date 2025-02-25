@@ -1,5 +1,6 @@
 {
   "user_agent": "Paper",
+  "bundle_id": null,
   "data": {
     "co.bergen.Darkroom.SpecialOfferWithProKit": {
       "entitlements": [],
