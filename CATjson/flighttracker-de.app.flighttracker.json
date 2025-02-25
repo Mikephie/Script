@@ -1,0 +1,36 @@
+{
+  "user_agent": "flighttracker",
+  "bundle_id": "de.app.flighttracker",
+  "data": {
+    "free_lifetime_access_2024": {
+      "entitlements": [
+        "unlimited_access"
+      ],
+      "product_identifier": "free_lifetime_access_2024"
+    },
+    "unlimited_access_monthly_flight_tracker": {
+      "entitlements": [
+        "unlimited_access"
+      ],
+      "product_identifier": "unlimited_access_monthly_flight_tracker"
+    },
+    "unlimited_access_weekly_flight_tracker": {
+      "entitlements": [
+        "unlimited_access"
+      ],
+      "product_identifier": "unlimited_access_weekly_flight_tracker"
+    },
+    "unlimited_access_yearly_flight_tracker": {
+      "entitlements": [
+        "unlimited_access"
+      ],
+      "product_identifier": "unlimited_access_yearly_flight_tracker"
+    },
+    "unlimited_access_yearly_trial": {
+      "entitlements": [
+        "unlimited_access"
+      ],
+      "product_identifier": "unlimited_access_yearly_trial"
+    }
+  }
+}
