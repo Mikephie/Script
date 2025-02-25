@@ -1,0 +1,72 @@
+{
+  "user_agent": "Spark",
+  "bundle_id": "com.readdle.smartemail",
+  "data": {
+    "com.readdle.smartemail.test.premium.year": {
+      "entitlements": [],
+      "product_identifier": "com.readdle.smartemail.test.premium.year"
+    },
+    "spark_5999_1y_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "spark_5999_1y_1w0"
+    },
+    "spark_6999_1y_1w0": {
+      "entitlements": [],
+      "product_identifier": "spark_6999_1y_1w0"
+    },
+    "spark_799_1m_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "spark_799_1m_1w0"
+    },
+    "spark_999_1m_1w0": {
+      "entitlements": [],
+      "product_identifier": "spark_999_1m_1w0"
+    },
+    "spark_a_5999_1y_d30": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "spark_a_5999_1y_d30"
+    },
+    "spark_a_799_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "spark_a_799_1m"
+    },
+    "spark_b_4199_1y_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "spark_b_4199_1y_1w0"
+    },
+    "spark_b_799_1m_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "spark_b_799_1m_1w0"
+    },
+    "spark_c_5999_1y_d50": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "spark_c_5999_1y_d50"
+    },
+    "spark_openai_tokens_1xt": {
+      "entitlements": [],
+      "product_identifier": "spark_openai_tokens_1xt"
+    },
+    "spark_openai_tokens_2xt": {
+      "entitlements": [],
+      "product_identifier": "spark_openai_tokens_2xt"
+    },
+    "spark_openai_tokens_4xt": {
+      "entitlements": [],
+      "product_identifier": "spark_openai_tokens_4xt"
+    }
+  }
+}
