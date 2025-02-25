@@ -1,0 +1,58 @@
+{
+  "user_agent": "Krishna%20VPN%20Plus%20Browser",
+  "bundle_id": "com.krishnatechnoweb.vpnbrowser",
+  "data": {
+    "com.krishnatechnoweb.vpnbrowser.month": {
+      "entitlements": [
+        "monthly"
+      ],
+      "product_identifier": "com.krishnatechnoweb.vpnbrowser.month"
+    },
+    "com.krishnatechnoweb.vpnbrowser.monthlynew": {
+      "entitlements": [
+        "monthly_new"
+      ],
+      "product_identifier": "com.krishnatechnoweb.vpnbrowser.monthlynew"
+    },
+    "com.krishnatechnoweb.vpnbrowser.sixmonthnew": {
+      "entitlements": [
+        "six_month_new"
+      ],
+      "product_identifier": "com.krishnatechnoweb.vpnbrowser.sixmonthnew"
+    },
+    "com.krishnatechnoweb.vpnbrowser.week": {
+      "entitlements": [
+        "weekly"
+      ],
+      "product_identifier": "com.krishnatechnoweb.vpnbrowser.week"
+    },
+    "com.krishnatechnoweb.vpnbrowser.weekly": {
+      "entitlements": [],
+      "product_identifier": "com.krishnatechnoweb.vpnbrowser.weekly"
+    },
+    "com.krishnatechnoweb.vpnbrowser.weeklynew": {
+      "entitlements": [
+        "weekly_new"
+      ],
+      "product_identifier": "com.krishnatechnoweb.vpnbrowser.weeklynew"
+    },
+    "com.krishnatechnoweb.vpnbrowser.year": {
+      "entitlements": [
+        "yearly"
+      ],
+      "product_identifier": "com.krishnatechnoweb.vpnbrowser.year"
+    },
+    "com.krishnatechnoweb.vpnbrowser.yearnew": {
+      "entitlements": [
+        "yearly_new"
+      ],
+      "product_identifier": "com.krishnatechnoweb.vpnbrowser.yearnew"
+    },
+    "vpnz.life_time": {
+      "entitlements": [
+        "vpnz-lifetime"
+      ],
+      "product_identifier": "vpnz.life_time"
+    }
+  }
+}
