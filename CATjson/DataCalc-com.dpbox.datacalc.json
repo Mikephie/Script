@@ -1,0 +1,12 @@
+{
+  "user_agent": "DataCalc",
+  "bundle_id": "com.dpbox.datacalc",
+  "data": {
+    "datacalc.yearly.12": {
+      "entitlements": [
+        "datacalc.pro"
+      ],
+      "product_identifier": "datacalc.yearly.12"
+    }
+  }
+}
