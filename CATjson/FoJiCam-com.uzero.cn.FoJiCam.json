@@ -1,0 +1,30 @@
+{
+  "user_agent": "FoJiCam",
+  "bundle_id": "com.uzero.cn.FoJiCam",
+  "data": {
+    "com.uzero.cn.fojicam.annual1": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.uzero.cn.fojicam.annual1"
+    },
+    "com.uzero.cn.fojicam.life1": {
+      "entitlements": [
+        "ProVersionLifeTime"
+      ],
+      "product_identifier": "com.uzero.cn.fojicam.life1"
+    },
+    "com.uzero.cn.fojicam.life2": {
+      "entitlements": [
+        "ProVersionLifeTime"
+      ],
+      "product_identifier": "com.uzero.cn.fojicam.life2"
+    },
+    "com.uzero.cn.fojicam.month1": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.uzero.cn.fojicam.month1"
+    }
+  }
+}
