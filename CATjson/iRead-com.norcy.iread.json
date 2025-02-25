@@ -1,0 +1,64 @@
+{
+  "user_agent": "iRead",
+  "bundle_id": "com.norcy.iread",
+  "data": {
+    "com.vip.1m_1": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "com.vip.1m_1"
+    },
+    "com.vip.1ms_1": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "com.vip.1ms_1"
+    },
+    "com.vip.1y_1": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "com.vip.1y_1"
+    },
+    "com.vip.1ys_1": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "com.vip.1ys_1"
+    },
+    "com.vip.forever": {
+      "entitlements": [],
+      "product_identifier": "com.vip.forever"
+    },
+    "com.vip.forever_1": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "com.vip.forever_1"
+    },
+    "com.vip.forever_2": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "com.vip.forever_2"
+    },
+    "com.vip.forever_3": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "com.vip.forever_3"
+    },
+    "com.vip.forever_4": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "com.vip.forever_4"
+    },
+    "com.vip.forever_5": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "com.vip.forever_5"
+    }
+  }
+}
