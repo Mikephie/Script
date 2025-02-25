@@ -1,0 +1,28 @@
+{
+  "user_agent": "EncryptNote",
+  "bundle_id": "com.gaapp.bestnotes",
+  "data": {
+    "com.gaapp.2019note.noAds": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.gaapp.2019note.noAds"
+    },
+    "com.gaapp.2019note.waterMark": {
+      "entitlements": [],
+      "product_identifier": "com.gaapp.2019note.waterMark"
+    },
+    "gaapp.com.inotes.monthvip": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "gaapp.com.inotes.monthvip"
+    },
+    "gaapp.com.inotes.yearvip": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "gaapp.com.inotes.yearvip"
+    }
+  }
+}
