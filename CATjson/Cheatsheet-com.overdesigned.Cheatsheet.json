@@ -1,0 +1,42 @@
+{
+  "user_agent": "Cheatsheet",
+  "bundle_id": "com.overdesigned.Cheatsheet",
+  "data": {
+    "com.overdesigned.cheatsheet.everything": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.overdesigned.cheatsheet.everything"
+    },
+    "com.overdesigned.cheatsheet.tip1": {
+      "entitlements": [],
+      "product_identifier": "com.overdesigned.cheatsheet.tip1"
+    },
+    "com.overdesigned.cheatsheet.tip2": {
+      "entitlements": [],
+      "product_identifier": "com.overdesigned.cheatsheet.tip2"
+    },
+    "com.overdesigned.cheatsheet.tip3": {
+      "entitlements": [],
+      "product_identifier": "com.overdesigned.cheatsheet.tip3"
+    },
+    "pro_annual": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_annual"
+    },
+    "pro_lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_lifetime"
+    },
+    "pro_monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_monthly"
+    }
+  }
+}
