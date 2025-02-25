@@ -1,0 +1,54 @@
+{
+  "user_agent": "SleepMaster",
+  "bundle_id": "app.sleepmaster",
+  "data": {
+    "sm_14999_lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "sm_14999_lifetime"
+    },
+    "sm_1499_1y_discount": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "sm_1499_1y_discount"
+    },
+    "sm_1499_1y_xmas": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "sm_1499_1y_xmas"
+    },
+    "sm_1999_1y_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "sm_1999_1y_1w0"
+    },
+    "sm_249_1m_discount": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "sm_249_1m_discount"
+    },
+    "sm_2999_1y_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "sm_2999_1y_1w0"
+    },
+    "sm_399_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "sm_399_1m"
+    },
+    "sm_499_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "sm_499_1m"
+    }
+  }
+}
