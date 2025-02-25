@@ -1,0 +1,86 @@
+{
+  "user_agent": "ChatGPTApp",
+  "bundle_id": "com.palligroup.gpt3",
+  "data": {
+    "com.palligroup.gpt3.halfyear": {
+      "entitlements": [
+        "Advanced"
+      ],
+      "product_identifier": "com.palligroup.gpt3.halfyear"
+    },
+    "com.palligroup.gpt3.monthly": {
+      "entitlements": [],
+      "product_identifier": "com.palligroup.gpt3.monthly"
+    },
+    "com.palligroup.gpt3.monthlyyy": {
+      "entitlements": [
+        "Advanced"
+      ],
+      "product_identifier": "com.palligroup.gpt3.monthlyyy"
+    },
+    "com.palligroup.gpt3.weekly": {
+      "entitlements": [],
+      "product_identifier": "com.palligroup.gpt3.weekly"
+    },
+    "com.palligroup.gpt3.weekly.399": {
+      "entitlements": [
+        "Advanced"
+      ],
+      "product_identifier": "com.palligroup.gpt3.weekly.399"
+    },
+    "com.palligroup.gpt3.weekly.399.trial": {
+      "entitlements": [
+        "Advanced"
+      ],
+      "product_identifier": "com.palligroup.gpt3.weekly.399.trial"
+    },
+    "com.palligroup.gpt3.weeklyBasic": {
+      "entitlements": [
+        "Advanced"
+      ],
+      "product_identifier": "com.palligroup.gpt3.weeklyBasic"
+    },
+    "com.palligroup.gpt3.weeklyLite": {
+      "entitlements": [],
+      "product_identifier": "com.palligroup.gpt3.weeklyLite"
+    },
+    "com.palligroup.gpt3.weeklyyy": {
+      "entitlements": [
+        "Advanced"
+      ],
+      "product_identifier": "com.palligroup.gpt3.weeklyyy"
+    },
+    "com.palligroup.gpt3.weeklyyy2": {
+      "entitlements": [
+        "Advanced"
+      ],
+      "product_identifier": "com.palligroup.gpt3.weeklyyy2"
+    },
+    "com.palligroup.gpt3.yearly": {
+      "entitlements": [],
+      "product_identifier": "com.palligroup.gpt3.yearly"
+    },
+    "com.palligroup.gpt3.yearlyBasic": {
+      "entitlements": [
+        "Advanced"
+      ],
+      "product_identifier": "com.palligroup.gpt3.yearlyBasic"
+    },
+    "com.palligroup.gpt3.yearlyLite": {
+      "entitlements": [],
+      "product_identifier": "com.palligroup.gpt3.yearlyLite"
+    },
+    "com.palligroup.gpt3.yearly_trial": {
+      "entitlements": [
+        "Advanced"
+      ],
+      "product_identifier": "com.palligroup.gpt3.yearly_trial"
+    },
+    "com.palligroup.gpt3.yearlyyy": {
+      "entitlements": [
+        "Advanced"
+      ],
+      "product_identifier": "com.palligroup.gpt3.yearlyyy"
+    }
+  }
+}
