@@ -1,0 +1,24 @@
+{
+  "user_agent": "ClevCalc",
+  "bundle_id": "com.dencreak.dlcalculator",
+  "data": {
+    "com.dencreak.dlcalculator.iap.dlc_no_ads_permanent": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.dencreak.dlcalculator.iap.dlc_no_ads_permanent"
+    },
+    "com.dencreak.dlcalculator.iap.dlc_sub_premium.1m": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.dencreak.dlcalculator.iap.dlc_sub_premium.1m"
+    },
+    "com.dencreak.dlcalculator.iap.dlc_sub_premium.1y": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.dencreak.dlcalculator.iap.dlc_sub_premium.1y"
+    }
+  }
+}
