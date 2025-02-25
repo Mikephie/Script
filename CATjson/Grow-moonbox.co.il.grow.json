@@ -1,0 +1,72 @@
+{
+  "user_agent": "Grow",
+  "bundle_id": "moonbox.co.il.grow",
+  "data": {
+    "il.co.moonbox.grow.month.trial": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "il.co.moonbox.grow.month.trial"
+    },
+    "io.innotent.yearly.discounted": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "io.innotent.yearly.discounted"
+    },
+    "moonbox.co.il.grow.lifetime.offer": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moonbox.co.il.grow.lifetime.offer"
+    },
+    "moonbox.co.il.grow.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moonbox.co.il.grow.monthly"
+    },
+    "moonbox.co.il.grow.weekly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moonbox.co.il.grow.weekly"
+    },
+    "moonbox.co.il.grow.weekly.new": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moonbox.co.il.grow.weekly.new"
+    },
+    "moonbox.co.il.grow.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moonbox.co.il.grow.yearly"
+    },
+    "moonbox.co.il.grow.yearly.blackfriday": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moonbox.co.il.grow.yearly.blackfriday"
+    },
+    "moonbox.co.il.grow.yearly.original": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moonbox.co.il.grow.yearly.original"
+    },
+    "moonbox.co.il.grow.yearly.trial": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moonbox.co.il.grow.yearly.trial"
+    },
+    "moonbox.co.il.grow.yearly.trial.blackfriday": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "moonbox.co.il.grow.yearly.trial.blackfriday"
+    }
+  }
+}
