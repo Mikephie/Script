@@ -1,0 +1,32 @@
+{
+  "user_agent": "Zen%20Flip%20Clock",
+  "bundle_id": "com.mad.FlipClock",
+  "data": {
+    "com.mad.FlipClock.BuyMeACoffee": {
+      "entitlements": [],
+      "product_identifier": "com.mad.FlipClock.BuyMeACoffee"
+    },
+    "com.mad.zenflipclock.iap.buymeacoffee": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.mad.zenflipclock.iap.buymeacoffee"
+    },
+    "com.mad.zenflipclock.ios.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.mad.zenflipclock.ios.monthly"
+    },
+    "com.mad.zenflipclock.ios.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.mad.zenflipclock.ios.yearly"
+    },
+    "com.mad.zenflipclock.monthly": {
+      "entitlements": [],
+      "product_identifier": "com.mad.zenflipclock.monthly"
+    }
+  }
+}
