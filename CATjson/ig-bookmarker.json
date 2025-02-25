@@ -1,0 +1,24 @@
+{
+  "user_agent": "ig-bookmarker",
+  "bundle_id": null,
+  "data": {
+    "annualID": {
+      "entitlements": [
+        "entitlement"
+      ],
+      "product_identifier": "annualID"
+    },
+    "lifetimeID": {
+      "entitlements": [
+        "entitlement"
+      ],
+      "product_identifier": "lifetimeID"
+    },
+    "monthlyID": {
+      "entitlements": [
+        "entitlement"
+      ],
+      "product_identifier": "monthlyID"
+    }
+  }
+}
