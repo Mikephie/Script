@@ -1,0 +1,42 @@
+{
+  "user_agent": "js_code_pad",
+  "bundle_id": "com.markodevcic.js-code-pad",
+  "data": {
+    "js_code_pad_developer_lite": {
+      "entitlements": [
+        "developer_lite"
+      ],
+      "product_identifier": "js_code_pad_developer_lite"
+    },
+    "js_code_pad_developer_upgrade": {
+      "entitlements": [
+        "developer"
+      ],
+      "product_identifier": "js_code_pad_developer_upgrade"
+    },
+    "js_code_pad_developer_upgrade_offer": {
+      "entitlements": [
+        "developer"
+      ],
+      "product_identifier": "js_code_pad_developer_upgrade_offer"
+    },
+    "js_codepad_developer_monthly": {
+      "entitlements": [
+        "developer"
+      ],
+      "product_identifier": "js_codepad_developer_monthly"
+    },
+    "js_codepad_developer_yearly": {
+      "entitlements": [
+        "developer"
+      ],
+      "product_identifier": "js_codepad_developer_yearly"
+    },
+    "remove_ads_upgrade": {
+      "entitlements": [
+        "Remove Ads"
+      ],
+      "product_identifier": "remove_ads_upgrade"
+    }
+  }
+}
