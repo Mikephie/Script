@@ -1,0 +1,24 @@
+{
+  "user_agent": "Vinyls",
+  "bundle_id": "com.shi.Vin",
+  "data": {
+    "com.shi.Vin.lifetime": {
+      "entitlements": [
+        "AllPro"
+      ],
+      "product_identifier": "com.shi.Vin.lifetime"
+    },
+    "com.shi.Vin.monthly": {
+      "entitlements": [
+        "AllPro"
+      ],
+      "product_identifier": "com.shi.Vin.monthly"
+    },
+    "com.shi.Vin.yearly": {
+      "entitlements": [
+        "AllPro"
+      ],
+      "product_identifier": "com.shi.Vin.yearly"
+    }
+  }
+}
