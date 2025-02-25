@@ -1,0 +1,24 @@
+{
+  "user_agent": "Translate%20-%20Talk%20Translator",
+  "bundle_id": "com.omerfarukgul.TranslateApp",
+  "data": {
+    "premiumAnnually": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "premiumAnnually"
+    },
+    "premiumMonthly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "premiumMonthly"
+    },
+    "premiumWeekly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "premiumWeekly"
+    }
+  }
+}
