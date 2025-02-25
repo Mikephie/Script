@@ -1,0 +1,93 @@
+{
+  "user_agent": "streaks",
+  "bundle_id": "com.andyworks.streaks",
+  "data": {
+    "com.andyworks.streaks.monthBeliever": {
+      "entitlements": [
+        "believer",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.streaks.monthBeliever"
+    },
+    "com.andyworks.streaks.skinAndy": {
+      "entitlements": [
+        "skinAndy"
+      ],
+      "product_identifier": "com.andyworks.streaks.skinAndy"
+    },
+    "com.andyworks.streaks.skinCedar": {
+      "entitlements": [
+        "skinCedar"
+      ],
+      "product_identifier": "com.andyworks.streaks.skinCedar"
+    },
+    "com.andyworks.streaks.skinChroma": {
+      "entitlements": [
+        "skinChroma"
+      ],
+      "product_identifier": "com.andyworks.streaks.skinChroma"
+    },
+    "com.andyworks.streaks.skinKarat": {
+      "entitlements": [
+        "skinKarat"
+      ],
+      "product_identifier": "com.andyworks.streaks.skinKarat"
+    },
+    "com.andyworks.streaks.skinMonster": {
+      "entitlements": [
+        "skinMonster"
+      ],
+      "product_identifier": "com.andyworks.streaks.skinMonster"
+    },
+    "com.andyworks.streaks.skinOpal": {
+      "entitlements": [
+        "skinOpal"
+      ],
+      "product_identifier": "com.andyworks.streaks.skinOpal"
+    },
+    "com.andyworks.streaks.skinPresstube": {
+      "entitlements": [
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.streaks.skinPresstube"
+    },
+    "com.andyworks.streaks.yearlyApp": {
+      "entitlements": [
+        "habitsApp"
+      ],
+      "product_identifier": "com.andyworks.streaks.yearlyApp"
+    },
+    "com.andyworks.streaks.yearlyBeliever": {
+      "entitlements": [
+        "believer",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.streaks.yearlyBeliever"
+    },
+    "com.andyworks.streaks.yearlyPatron": {
+      "entitlements": [
+        "patron",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.streaks.yearlyPatron"
+    }
+  }
+}
