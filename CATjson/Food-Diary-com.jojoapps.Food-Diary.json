@@ -1,0 +1,42 @@
+{
+  "user_agent": "Food-Diary",
+  "bundle_id": "com.jojoapps.Food-Diary",
+  "data": {
+    "fd_lifetime": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "fd_lifetime"
+    },
+    "fd_lifetime_discount": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "fd_lifetime_discount"
+    },
+    "fd_monthly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "fd_monthly"
+    },
+    "fd_monthly_discount": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "fd_monthly_discount"
+    },
+    "fd_yearly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "fd_yearly"
+    },
+    "fd_yearly_discount": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "fd_yearly_discount"
+    }
+  }
+}
