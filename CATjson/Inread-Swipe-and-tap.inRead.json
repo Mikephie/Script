@@ -1,0 +1,12 @@
+{
+  "user_agent": "Inread",
+  "bundle_id": "Swipe-and-tap.inRead",
+  "data": {
+    "inRead.premium.monthly": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "inRead.premium.monthly"
+    }
+  }
+}
