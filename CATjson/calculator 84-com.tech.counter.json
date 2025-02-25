@@ -1,0 +1,18 @@
+{
+  "user_agent": "calculator%2084",
+  "bundle_id": "com.tech.counter",
+  "data": {
+    "com.tech.counter.All": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.tech.counter.All"
+    },
+    "com.tech.counter.Year": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.tech.counter.Year"
+    }
+  }
+}
