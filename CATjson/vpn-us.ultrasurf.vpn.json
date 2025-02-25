@@ -1,0 +1,18 @@
+{
+  "user_agent": "vpn",
+  "bundle_id": "us.ultrasurf.vpn",
+  "data": {
+    "ultrasurf_monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ultrasurf_monthly"
+    },
+    "ultrasurf_yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ultrasurf_yearly"
+    }
+  }
+}
