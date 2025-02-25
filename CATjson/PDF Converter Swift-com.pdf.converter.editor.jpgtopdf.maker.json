@@ -1,0 +1,42 @@
+{
+  "user_agent": "PDF%20Converter%20Swift",
+  "bundle_id": "com.pdf.converter.editor.jpgtopdf.maker",
+  "data": {
+    "et.pdf.converter.pro.mac": {
+      "entitlements": [
+        "pdf.converter.mac"
+      ],
+      "product_identifier": "et.pdf.converter.pro.mac"
+    },
+    "pdf.converter.pro.lifetime": {
+      "entitlements": [
+        "pdf.converter.pro.lifetime"
+      ],
+      "product_identifier": "pdf.converter.pro.lifetime"
+    },
+    "pdf.converter.pro.monthly": {
+      "entitlements": [
+        "pdf.converter.pro.monthly"
+      ],
+      "product_identifier": "pdf.converter.pro.monthly"
+    },
+    "pdf.converter.pro.weekly": {
+      "entitlements": [
+        "pdf.converter.pro.weekly"
+      ],
+      "product_identifier": "pdf.converter.pro.weekly"
+    },
+    "pdf.converter.pro.yearly": {
+      "entitlements": [
+        "pdf.converter.pro.yearly"
+      ],
+      "product_identifier": "pdf.converter.pro.yearly"
+    },
+    "pdf.converter.yearly": {
+      "entitlements": [
+        "pdf.converter.yearly.no.trial"
+      ],
+      "product_identifier": "pdf.converter.yearly"
+    }
+  }
+}
