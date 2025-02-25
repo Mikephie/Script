@@ -1,0 +1,12 @@
+{
+  "user_agent": "iosApp",
+  "bundle_id": "net.smayer.bodydata",
+  "data": {
+    "RemoveAds": {
+      "entitlements": [
+        "ad_free"
+      ],
+      "product_identifier": "RemoveAds"
+    }
+  }
+}
