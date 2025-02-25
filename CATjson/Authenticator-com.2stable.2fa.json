@@ -1,0 +1,156 @@
+{
+  "user_agent": "Authenticator",
+  "bundle_id": "com.2stable.2fa",
+  "data": {
+    "2fa_0499_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_0499_1m"
+    },
+    "2fa_0499_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_0499_1y"
+    },
+    "2fa_0499_1y_no_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_0499_1y_no_trial"
+    },
+    "2fa_1y_0499": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_0499"
+    },
+    "2fa_1y_0499_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_0499_trial"
+    },
+    "2fa_1y_0999": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_0999"
+    },
+    "2fa_1y_0999_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_0999_trial"
+    },
+    "2fa_1y_1999": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_1999"
+    },
+    "2fa_1y_1999_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_1999_trial"
+    },
+    "2fa_1y_2999": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_2999"
+    },
+    "2fa_1y_2999_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_2999_trial"
+    },
+    "2fa_1y_3999": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_3999"
+    },
+    "2fa_1y_3999_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_3999_trial"
+    },
+    "2fa_1y_4999": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_4999"
+    },
+    "2fa_1y_4999_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_4999_trial"
+    },
+    "2fa_1y_6999": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_6999"
+    },
+    "2fa_1y_6999_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_6999_trial"
+    },
+    "2fa_1y_9999": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_9999"
+    },
+    "2fa_1y_9999_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_1y_9999_trial"
+    },
+    "2fa_lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_lifetime"
+    },
+    "2fa_shared_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_shared_1y"
+    },
+    "2fa_standalone_1w_tier1_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_standalone_1w_tier1_trial"
+    },
+    "2fa_standalone_1y_4999": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_standalone_1y_4999"
+    },
+    "2fa_standalone_1y_4999_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_standalone_1y_4999_trial"
+    },
+    "2fa_standalone_lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2fa_standalone_lifetime"
+    }
+  }
+}
