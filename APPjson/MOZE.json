@@ -1,5 +1,6 @@
 {
   "user_agent": "MOZE",
+  "bundle_id": null,
   "data": {
     "MOZE_IAP_ICONS_CN_01": {
       "entitlements": [
