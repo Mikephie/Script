@@ -1,0 +1,12 @@
+{
+  "user_agent": "Emoji",
+  "bundle_id": "com.dujinke.Emoji",
+  "data": {
+    "com.dujinke.Emoji.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.Emoji.Unlimited"
+    }
+  }
+}
