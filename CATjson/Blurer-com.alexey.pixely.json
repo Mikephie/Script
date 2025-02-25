@@ -1,0 +1,104 @@
+{
+  "user_agent": "Blurer",
+  "bundle_id": "com.alexey.pixely",
+  "data": {
+    "pixelify_2999_1y": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pixelify_2999_1y"
+    },
+    "pixelify_2999_1y_3d": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pixelify_2999_1y_3d"
+    },
+    "pixelify_399_1w_dynamic": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pixelify_399_1w_dynamic"
+    },
+    "pixelify_5.99_1m_dynamic": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pixelify_5.99_1m_dynamic"
+    },
+    "pixelify_599_1w": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pixelify_599_1w"
+    },
+    "pixelify_999_1m": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pixelify_999_1m"
+    },
+    "proOneDay2.99": {
+      "entitlements": [],
+      "product_identifier": "proOneDay2.99"
+    },
+    "proOneDay2.99_recreated": {
+      "entitlements": [],
+      "product_identifier": "proOneDay2.99_recreated"
+    },
+    "pro_19.99": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pro_19.99"
+    },
+    "pro_29.99": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pro_29.99"
+    },
+    "pro_3.99": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pro_3.99"
+    },
+    "pro_5.99": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pro_5.99"
+    },
+    "pro_59.99": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pro_59.99"
+    },
+    "pro_9.99_recreated": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pro_9.99_recreated"
+    },
+    "pro_free": {
+      "entitlements": [
+        "paid_access"
+      ],
+      "product_identifier": "pro_free"
+    },
+    "saves_ten_3.99": {
+      "entitlements": [],
+      "product_identifier": "saves_ten_3.99"
+    },
+    "saves_three_0.99": {
+      "entitlements": [],
+      "product_identifier": "saves_three_0.99"
+    },
+    "saves_three_1.99": {
+      "entitlements": [],
+      "product_identifier": "saves_three_1.99"
+    }
+  }
+}
