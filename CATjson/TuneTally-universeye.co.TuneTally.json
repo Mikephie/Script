@@ -1,0 +1,36 @@
+{
+  "user_agent": "TuneTally",
+  "bundle_id": "universeye.co.TuneTally",
+  "data": {
+    "tunetally_amazingtip": {
+      "entitlements": [
+        "Tips"
+      ],
+      "product_identifier": "tunetally_amazingtip"
+    },
+    "tunetally_greattip": {
+      "entitlements": [
+        "Tips"
+      ],
+      "product_identifier": "tunetally_greattip"
+    },
+    "tunetally_kindtip": {
+      "entitlements": [
+        "Tips"
+      ],
+      "product_identifier": "tunetally_kindtip"
+    },
+    "tunetally_outrageoustip": {
+      "entitlements": [
+        "Tips"
+      ],
+      "product_identifier": "tunetally_outrageoustip"
+    },
+    "tunetally_pro": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "tunetally_pro"
+    }
+  }
+}
