@@ -1,0 +1,60 @@
+{
+  "user_agent": "CapCap",
+  "bundle_id": "in.capcap.app",
+  "data": {
+    "in.capcap.subscription.pro.annual": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "in.capcap.subscription.pro.annual"
+    },
+    "in.capcap.subscription.pro.annual.discounted.299.v0": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "in.capcap.subscription.pro.annual.discounted.299.v0"
+    },
+    "in.capcap.subscription.pro.annual.pay_upfront_dollar": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "in.capcap.subscription.pro.annual.pay_upfront_dollar"
+    },
+    "in.capcap.subscription.pro.half_yearly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "in.capcap.subscription.pro.half_yearly"
+    },
+    "in.capcap.subscription.pro.monthly.non.trial": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "in.capcap.subscription.pro.monthly.non.trial"
+    },
+    "in.capcap.subscription.pro.monthly.v1": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "in.capcap.subscription.pro.monthly.v1"
+    },
+    "in.capcap.subscription.pro.quarterly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "in.capcap.subscription.pro.quarterly"
+    },
+    "in.capcap.subscription.pro.weekly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "in.capcap.subscription.pro.weekly"
+    },
+    "in.capcap.subscription.pro.weekly.non.trial": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "in.capcap.subscription.pro.weekly.non.trial"
+    }
+  }
+}
