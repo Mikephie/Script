@@ -1,0 +1,36 @@
+{
+  "user_agent": "iHabit",
+  "bundle_id": "com.gostraight.iHabit",
+  "data": {
+    "ihabit_forever_payment_vip": {
+      "entitlements": [
+        "ihabit_lTime_subscription",
+        "ihabit_subscription_pro"
+      ],
+      "product_identifier": "ihabit_forever_payment_vip"
+    },
+    "ihabit_forever_upgrade_vip": {
+      "entitlements": [
+        "ihabit_lTime_subscription",
+        "ihabit_subscription_pro"
+      ],
+      "product_identifier": "ihabit_forever_upgrade_vip"
+    },
+    "ihabit_quarter_payment_subscribe": {
+      "entitlements": [
+        "ihabit_subscription_pro",
+        "ihabit_tMonth_subscription",
+        "ihabit_upgradeable_pro"
+      ],
+      "product_identifier": "ihabit_quarter_payment_subscribe"
+    },
+    "ihabit_year_payment_subscribe": {
+      "entitlements": [
+        "ihabit_subscription_pro",
+        "ihabit_upgradeable_pro",
+        "ihabit_year_subscription"
+      ],
+      "product_identifier": "ihabit_year_payment_subscribe"
+    }
+  }
+}
