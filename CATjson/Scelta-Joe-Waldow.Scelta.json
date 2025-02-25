@@ -1,0 +1,84 @@
+{
+  "user_agent": "Scelta",
+  "bundle_id": "Joe-Waldow.Scelta",
+  "data": {
+    "BWTheme": {
+      "entitlements": [],
+      "product_identifier": "BWTheme"
+    },
+    "CupCoffee": {
+      "entitlements": [],
+      "product_identifier": "CupCoffee"
+    },
+    "DarkMode": {
+      "entitlements": [],
+      "product_identifier": "DarkMode"
+    },
+    "GoldTheme": {
+      "entitlements": [],
+      "product_identifier": "GoldTheme"
+    },
+    "NeonTheme": {
+      "entitlements": [],
+      "product_identifier": "NeonTheme"
+    },
+    "OceanTheme": {
+      "entitlements": [],
+      "product_identifier": "OceanTheme"
+    },
+    "PinkTheme": {
+      "entitlements": [],
+      "product_identifier": "PinkTheme"
+    },
+    "PotCoffee": {
+      "entitlements": [],
+      "product_identifier": "PotCoffee"
+    },
+    "RedAndBlackTheme": {
+      "entitlements": [],
+      "product_identifier": "RedAndBlackTheme"
+    },
+    "RedTheme": {
+      "entitlements": [],
+      "product_identifier": "RedTheme"
+    },
+    "SceltaPro": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "SceltaPro"
+    },
+    "SceltaProAnnually": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "SceltaProAnnually"
+    },
+    "SceltaProLifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "SceltaProLifetime"
+    },
+    "SceltaProMonthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "SceltaProMonthly"
+    },
+    "SceltaProYearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "SceltaProYearly"
+    },
+    "SceltaSpecialTheme": {
+      "entitlements": [],
+      "product_identifier": "SceltaSpecialTheme"
+    },
+    "WarpTheme": {
+      "entitlements": [],
+      "product_identifier": "WarpTheme"
+    }
+  }
+}
