@@ -1,0 +1,48 @@
+{
+  "user_agent": "RayGun",
+  "bundle_id": "com.nemoapps.tvremote",
+  "data": {
+    "tvremote.lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tvremote.lifetime"
+    },
+    "tvremote.subscription.annual": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tvremote.subscription.annual"
+    },
+    "tvremote.subscription.monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tvremote.subscription.monthly"
+    },
+    "tvremote.subscription.valyrian.annual": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tvremote.subscription.valyrian.annual"
+    },
+    "tvremote.subscription.valyrian.monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tvremote.subscription.valyrian.monthly"
+    },
+    "tvremote.subscription.valyrian.weekly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tvremote.subscription.valyrian.weekly"
+    },
+    "tvremote.subscription.weekly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tvremote.subscription.weekly"
+    }
+  }
+}
