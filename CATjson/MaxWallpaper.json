@@ -1,0 +1,24 @@
+{
+  "user_agent": "MaxWallpaper",
+  "bundle_id": null,
+  "data": {
+    "maxwallpaper_01_01": {
+      "entitlements": [
+        "maxwallpaper_common"
+      ],
+      "product_identifier": "maxwallpaper_01_01"
+    },
+    "maxwallpaper_vip_year_01": {
+      "entitlements": [
+        "maxwallpaper_common"
+      ],
+      "product_identifier": "maxwallpaper_vip_year_01"
+    },
+    "super_forever_vip": {
+      "entitlements": [
+        "maxwallpaper_common"
+      ],
+      "product_identifier": "super_forever_vip"
+    }
+  }
+}
