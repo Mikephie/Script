@@ -1,0 +1,24 @@
+{
+  "user_agent": "TQBrowser",
+  "bundle_id": "com.tk.browser.client",
+  "data": {
+    "com.tk.client.lifetime": {
+      "entitlements": [
+        "pro_lt"
+      ],
+      "product_identifier": "com.tk.client.lifetime"
+    },
+    "com.tk.client.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.tk.client.monthly"
+    },
+    "com.tk.client.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.tk.client.yearly"
+    }
+  }
+}
