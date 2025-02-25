@@ -1,0 +1,42 @@
+{
+  "user_agent": "Context_iOS",
+  "bundle_id": "com.visionapp.context",
+  "data": {
+    "ctx_01y_sspai_preorder_basic": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ctx_01y_sspai_preorder_basic"
+    },
+    "ctx_3y_sspai_preorder_angel": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ctx_3y_sspai_preorder_angel"
+    },
+    "ctx_sub_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ctx_sub_1m"
+    },
+    "ctx_sub_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ctx_sub_1y"
+    },
+    "ctx_sub_1y_sspai_preorder_angel": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ctx_sub_1y_sspai_preorder_angel"
+    },
+    "ctx_sub_1y_sspai_preorder_basic": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ctx_sub_1y_sspai_preorder_basic"
+    }
+  }
+}
