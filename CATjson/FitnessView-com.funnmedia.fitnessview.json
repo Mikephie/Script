@@ -1,0 +1,66 @@
+{
+  "user_agent": "FitnessView",
+  "bundle_id": "com.funnmedia.fitnessview",
+  "data": {
+    "fitnessview.premiumMonthly": {
+      "entitlements": [
+        "fitnessview-premium"
+      ],
+      "product_identifier": "fitnessview.premiumMonthly"
+    },
+    "fitnessview.premiumOnetime": {
+      "entitlements": [
+        "fitnessview-premium"
+      ],
+      "product_identifier": "fitnessview.premiumOnetime"
+    },
+    "fitnessview.premiumOnetime.offer3": {
+      "entitlements": [
+        "fitnessview-premium"
+      ],
+      "product_identifier": "fitnessview.premiumOnetime.offer3"
+    },
+    "fitnessview.premiumyearly": {
+      "entitlements": [
+        "fitnessview-premium"
+      ],
+      "product_identifier": "fitnessview.premiumyearly"
+    },
+    "fitnessview.singlesubscription": {
+      "entitlements": [
+        "single-subscription"
+      ],
+      "product_identifier": "fitnessview.singlesubscription"
+    },
+    "fitnessview.yearly.offer1": {
+      "entitlements": [
+        "fitnessview-premium"
+      ],
+      "product_identifier": "fitnessview.yearly.offer1"
+    },
+    "fitnessview.yearly.offer2": {
+      "entitlements": [
+        "fitnessview-premium"
+      ],
+      "product_identifier": "fitnessview.yearly.offer2"
+    },
+    "fv_subs_19.99_365_7": {
+      "entitlements": [
+        "fitnessview-premium"
+      ],
+      "product_identifier": "fv_subs_19.99_365_7"
+    },
+    "fv_subs_29.99_365_7": {
+      "entitlements": [
+        "fitnessview-premium"
+      ],
+      "product_identifier": "fv_subs_29.99_365_7"
+    },
+    "fv_subs_39.99_365_7": {
+      "entitlements": [
+        "fitnessview-premium"
+      ],
+      "product_identifier": "fv_subs_39.99_365_7"
+    }
+  }
+}
