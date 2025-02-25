@@ -1,0 +1,42 @@
+{
+  "user_agent": "whatsapp-web",
+  "bundle_id": "com.unwrap.my-quotes",
+  "data": {
+    "com.unwrap.myquotes.monthly": {
+      "entitlements": [],
+      "product_identifier": "com.unwrap.myquotes.monthly"
+    },
+    "myquotes_weekly": {
+      "entitlements": [],
+      "product_identifier": "myquotes_weekly"
+    },
+    "myquotes_yearly": {
+      "entitlements": [],
+      "product_identifier": "myquotes_yearly"
+    },
+    "rc_lifetime": {
+      "entitlements": [
+        "Lifetime"
+      ],
+      "product_identifier": "rc_lifetime"
+    },
+    "rc_monthly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "rc_monthly"
+    },
+    "rc_weekly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "rc_weekly"
+    },
+    "rc_yearly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "rc_yearly"
+    }
+  }
+}
