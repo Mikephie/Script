@@ -1,0 +1,156 @@
+{
+  "user_agent": "PDFScanner",
+  "bundle_id": "pdf.scanner.reader.online.pro",
+  "data": {
+    "6_months_f3_3999_scanner": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "6_months_f3_3999_scanner"
+    },
+    "annual_f7_5999": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "annual_f7_5999"
+    },
+    "annual_pro": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "annual_pro"
+    },
+    "lifetime_scanner_4499": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "lifetime_scanner_4499"
+    },
+    "monthly_s": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "monthly_s"
+    },
+    "pdf_converter": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "pdf_converter"
+    },
+    "quater_25": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "quater_25"
+    },
+    "quater_26": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "quater_26"
+    },
+    "quater_27": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "quater_27"
+    },
+    "quater_30": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "quater_30"
+    },
+    "quater_p_35": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "quater_p_35"
+    },
+    "quater_premium": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "quater_premium"
+    },
+    "quater_scanner_pro": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "quater_scanner_pro"
+    },
+    "weekly_discount": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_discount"
+    },
+    "weekly_f3_399_scanner": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_f3_399_scanner"
+    },
+    "weekly_f3_599_scanner": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_f3_599_scanner"
+    },
+    "weekly_f3_699_scanner": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_f3_699_scanner"
+    },
+    "weekly_f3_799_scanner": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_f3_799_scanner"
+    },
+    "weekly_f7_499": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_f7_499"
+    },
+    "weekly_f7_499_indiaspecial": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_f7_499_indiaspecial"
+    },
+    "weekly_f7_499_scanner": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_f7_499_scanner"
+    },
+    "weekly_f7_sptf_499_scan": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_f7_sptf_499_scan"
+    },
+    "weekly_optima": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_optima"
+    },
+    "weekly_p_499": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_p_499"
+    },
+    "weekly_pdf": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "weekly_pdf"
+    }
+  }
+}
