@@ -1,0 +1,348 @@
+{
+  "user_agent": "Loora",
+  "bundle_id": "ai.loora.Loora-iOS",
+  "data": {
+    "monthly_11_99": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_11_99"
+    },
+    "monthly_11_99_no_trial": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_11_99_no_trial"
+    },
+    "monthly_14_99_no_trial": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_14_99_no_trial"
+    },
+    "monthly_15_99": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_15_99"
+    },
+    "monthly_19_99": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_19_99"
+    },
+    "monthly_19_99_2024_discount": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_19_99_2024_discount"
+    },
+    "monthly_19_99_boost_20per": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_19_99_boost_20per"
+    },
+    "monthly_19_99_full": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_19_99_full"
+    },
+    "monthly_19_99_no_trial_2024_base": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_19_99_no_trial_2024_base"
+    },
+    "monthly_19_99_ref_10usd": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_19_99_ref_10usd"
+    },
+    "monthly_23_99_boost_20per": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_23_99_boost_20per"
+    },
+    "monthly_23_99_full": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_23_99_full"
+    },
+    "monthly_23_99_no_trial": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_23_99_no_trial"
+    },
+    "monthly_23_99_ref_10usd": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "monthly_23_99_ref_10usd"
+    },
+    "monthly_25_99_no_trial_11_11_2024": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_25_99_no_trial_11_11_2024"
+    },
+    "monthly_29_99_boost_20per": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_29_99_boost_20per"
+    },
+    "monthly_29_99_full": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_29_99_full"
+    },
+    "monthly_29_99_ref_10usd": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_29_99_ref_10usd"
+    },
+    "monthly_29_99_sale_50per": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_29_99_sale_50per"
+    },
+    "monthly_39_99_boost_20per": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_39_99_boost_20per"
+    },
+    "monthly_39_99_full": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_39_99_full"
+    },
+    "monthly_39_99_ref_10usd": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_39_99_ref_10usd"
+    },
+    "monthly_39_99_sale_50per": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_39_99_sale_50per"
+    },
+    "monthly_4999": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_4999"
+    },
+    "monthly_free_trial": {
+      "entitlements": [
+        "Monthly"
+      ],
+      "product_identifier": "monthly_free_trial"
+    },
+    "three_months_44_99_no_trial_2024_base": {
+      "entitlements": [
+        "Three-Months"
+      ],
+      "product_identifier": "three_months_44_99_no_trial_2024_base"
+    },
+    "three_months_59_99_no_trial_11_11_2024": {
+      "entitlements": [
+        "Three-Months"
+      ],
+      "product_identifier": "three_months_59_99_no_trial_11_11_2024"
+    },
+    "yearly_119_99_no_trial": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_119_99_no_trial"
+    },
+    "yearly_119_99_no_trial_11_11_2024": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_119_99_no_trial_11_11_2024"
+    },
+    "yearly_119_99_no_trial_2024_base": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_119_99_no_trial_2024_base"
+    },
+    "yearly_59_99_no_trial": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_59_99_no_trial"
+    },
+    "yearly_95_99_no_trial_2024_discount": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_95_99_no_trial_2024_discount"
+    },
+    "yearly_free_ref_10usd_off": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_ref_10usd_off"
+    },
+    "yearly_free_trial": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_trial"
+    },
+    "yearly_free_week_119": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_119"
+    },
+    "yearly_free_week_119_boost_20per": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_119_boost_20per"
+    },
+    "yearly_free_week_119_boost_20per_dis": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_119_boost_20per_dis"
+    },
+    "yearly_free_week_119_full": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_119_full"
+    },
+    "yearly_free_week_119_promo": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_119_promo"
+    },
+    "yearly_free_week_119_ref_10usd": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_119_ref_10usd"
+    },
+    "yearly_free_week_119_ref_10usd_off": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_119_ref_10usd_off"
+    },
+    "yearly_free_week_149_boost_20per": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_149_boost_20per"
+    },
+    "yearly_free_week_149_full": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_149_full"
+    },
+    "yearly_free_week_149_ref_10usd_v1": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_149_ref_10usd_v1"
+    },
+    "yearly_free_week_149_sale_50per": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_149_sale_50per"
+    },
+    "yearly_free_week_199_boost_20per": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_199_boost_20per"
+    },
+    "yearly_free_week_199_full": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_199_full"
+    },
+    "yearly_free_week_199_ref_10usd": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_199_ref_10usd"
+    },
+    "yearly_free_week_199_sale_50per": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_199_sale_50per"
+    },
+    "yearly_free_week_249": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_249"
+    },
+    "yearly_free_week_59_boost_20per_dis": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_59_boost_20per_dis"
+    },
+    "yearly_free_week_99": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_99"
+    },
+    "yearly_free_week_99_boost_20per": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_99_boost_20per"
+    },
+    "yearly_free_week_99_boost_20per_dis": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_99_boost_20per_dis"
+    },
+    "yearly_free_week_99_full": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_99_full"
+    },
+    "yearly_free_week_99_ref_10usd": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_99_ref_10usd"
+    },
+    "yearly_free_week_99_ref_10usd_off": {
+      "entitlements": [
+        "Yearly"
+      ],
+      "product_identifier": "yearly_free_week_99_ref_10usd_off"
+    }
+  }
+}
