@@ -1,0 +1,82 @@
+{
+  "user_agent": "Funexpected%20Math",
+  "bundle_id": "ltd.funexpected.math",
+  "data": {
+    "1m": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "1m"
+    },
+    "1m_mtr": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "1m_mtr"
+    },
+    "1m_tr": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "1m_tr"
+    },
+    "1y": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "1y"
+    },
+    "1y_fun": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "1y_fun"
+    },
+    "1y_mtr": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "1y_mtr"
+    },
+    "1y_tr": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "1y_tr"
+    },
+    "Plus1Month7DaysTrial": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Plus1Month7DaysTrial"
+    },
+    "Plus6Months14DaysTrial": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Plus6Months14DaysTrial"
+    },
+    "Plus6Months7DaysTrial": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Plus6Months7DaysTrial"
+    },
+    "PlusYear14DaysTrial": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "PlusYear14DaysTrial"
+    },
+    "PlusYear7DaysTrial": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "PlusYear7DaysTrial"
+    },
+    "product_1": {
+      "entitlements": [],
+      "product_identifier": "product_1"
+    }
+  }
+}
