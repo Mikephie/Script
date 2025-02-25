@@ -1,0 +1,83 @@
+{
+  "user_agent": "FengYe",
+  "bundle_id": "io.innerpeace.yiye",
+  "data": {
+    "io.innerpeace.tushu.vip.1m": {
+      "entitlements": [
+        "Monthly",
+        "Premium"
+      ],
+      "product_identifier": "io.innerpeace.tushu.vip.1m"
+    },
+    "io.innerpeace.tushu.vip.1m.nonauto": {
+      "entitlements": [],
+      "product_identifier": "io.innerpeace.tushu.vip.1m.nonauto"
+    },
+    "io.innerpeace.tushu.vip.1m.nonauto.new": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "io.innerpeace.tushu.vip.1m.nonauto.new"
+    },
+    "io.innerpeace.tushu.vip.1y": {
+      "entitlements": [
+        "Premium",
+        "Yearly"
+      ],
+      "product_identifier": "io.innerpeace.tushu.vip.1y"
+    },
+    "io.innerpeace.tushu.vip.1y.nonauto": {
+      "entitlements": [],
+      "product_identifier": "io.innerpeace.tushu.vip.1y.nonauto"
+    },
+    "io.innerpeace.yiye.018": {
+      "entitlements": [],
+      "product_identifier": "io.innerpeace.yiye.018"
+    },
+    "io.innerpeace.yiye.03": {
+      "entitlements": [],
+      "product_identifier": "io.innerpeace.yiye.03"
+    },
+    "io.innerpeace.yiye.12": {
+      "entitlements": [],
+      "product_identifier": "io.innerpeace.yiye.12"
+    },
+    "io.innerpeace.yiye.12.new": {
+      "entitlements": [],
+      "product_identifier": "io.innerpeace.yiye.12.new"
+    },
+    "io.innerpeace.yiye.30": {
+      "entitlements": [],
+      "product_identifier": "io.innerpeace.yiye.30"
+    },
+    "io.innerpeace.yiye.30.1": {
+      "entitlements": [],
+      "product_identifier": "io.innerpeace.yiye.30.1"
+    },
+    "io.innerpeace.yiye.6": {
+      "entitlements": [],
+      "product_identifier": "io.innerpeace.yiye.6"
+    },
+    "io.innerpeace.yiye.lifetime": {
+      "entitlements": [
+        "Lifetime",
+        "Premium"
+      ],
+      "product_identifier": "io.innerpeace.yiye.lifetime"
+    },
+    "io.innerpeace.yiye.lifetime.forMonthly": {
+      "entitlements": [
+        "Lifetime",
+        "Premium"
+      ],
+      "product_identifier": "io.innerpeace.yiye.lifetime.forMonthly"
+    },
+    "io.innerpeace.yiye.lifetime.forYearly": {
+      "entitlements": [
+        "Lifetime",
+        "Premium"
+      ],
+      "product_identifier": "io.innerpeace.yiye.lifetime.forYearly"
+    }
+  }
+}
