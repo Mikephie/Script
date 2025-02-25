@@ -1,0 +1,42 @@
+{
+  "user_agent": "Focuskeeper",
+  "bundle_id": "com.limepresso.pomodorofree",
+  "data": {
+    "PomodoroPro": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "PomodoroPro"
+    },
+    "com.limepresso.pomodorofree.subscription.month": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.limepresso.pomodorofree.subscription.month"
+    },
+    "com.limepresso.pomodorofree.subscription.month_trial_3_days": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.limepresso.pomodorofree.subscription.month_trial_3_days"
+    },
+    "com.limepresso.pomodorofree.subscription.year": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.limepresso.pomodorofree.subscription.year"
+    },
+    "com.limepresso.pomodorofree.subscription.year_no_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.limepresso.pomodorofree.subscription.year_no_trial"
+    },
+    "com.limepresso.pomodorofree.subscription.yearly.pay_up_front_introductory_1dollar": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.limepresso.pomodorofree.subscription.yearly.pay_up_front_introductory_1dollar"
+    }
+  }
+}
