@@ -1,0 +1,12 @@
+{
+  "user_agent": "Lead%20to%20Love",
+  "bundle_id": "com.dujinke.LeadToLove",
+  "data": {
+    "com.dujinke.36Questions.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.36Questions.Unlimited"
+    }
+  }
+}
