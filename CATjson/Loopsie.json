@@ -1,0 +1,214 @@
+{
+  "user_agent": "Loopsie",
+  "bundle_id": null,
+  "data": {
+    "com.gamelounge.loopsie.ios.generation_token": {
+      "entitlements": [],
+      "product_identifier": "com.gamelounge.loopsie.ios.generation_token"
+    },
+    "com.gamelounge.loopsie.ios.generation_token_discounted": {
+      "entitlements": [],
+      "product_identifier": "com.gamelounge.loopsie.ios.generation_token_discounted"
+    },
+    "com.gamelounge.loopsie.ios.model_token": {
+      "entitlements": [],
+      "product_identifier": "com.gamelounge.loopsie.ios.model_token"
+    },
+    "com.gamelounge.loopsie.ios.model_token_discounted": {
+      "entitlements": [],
+      "product_identifier": "com.gamelounge.loopsie.ios.model_token_discounted"
+    },
+    "com.gamelounge.loopsie.ios.one_time": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.one_time"
+    },
+    "com.gamelounge.loopsie.ios.one_time_l": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.one_time_l"
+    },
+    "com.gamelounge.loopsie.ios.one_time_s": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.one_time_s"
+    },
+    "com.gamelounge.loopsie.ios.subscription_monthly": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_monthly"
+    },
+    "com.gamelounge.loopsie.ios.subscription_monthly_01": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_monthly_01"
+    },
+    "com.gamelounge.loopsie.ios.subscription_monthly_big": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_monthly_big"
+    },
+    "com.gamelounge.loopsie.ios.subscription_monthly_china": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_monthly_china"
+    },
+    "com.gamelounge.loopsie.ios.subscription_monthly_s": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_monthly_s"
+    },
+    "com.gamelounge.loopsie.ios.subscription_monthly_trial": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_monthly_trial"
+    },
+    "com.gamelounge.loopsie.ios.subscription_monthly_xl": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_monthly_xl"
+    },
+    "com.gamelounge.loopsie.ios.subscription_quarterly_china": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_quarterly_china"
+    },
+    "com.gamelounge.loopsie.ios.subscription_weekly": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_weekly"
+    },
+    "com.gamelounge.loopsie.ios.subscription_weekly_01": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_weekly_01"
+    },
+    "com.gamelounge.loopsie.ios.subscription_weekly_high": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_weekly_high"
+    },
+    "com.gamelounge.loopsie.ios.subscription_weekly_high_2": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_weekly_high_2"
+    },
+    "com.gamelounge.loopsie.ios.subscription_weekly_s": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_weekly_s"
+    },
+    "com.gamelounge.loopsie.ios.subscription_weekly_sale": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_weekly_sale"
+    },
+    "com.gamelounge.loopsie.ios.subscription_weekly_sale_trial": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_weekly_sale_trial"
+    },
+    "com.gamelounge.loopsie.ios.subscription_weekly_trial": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_weekly_trial"
+    },
+    "com.gamelounge.loopsie.ios.subscription_weekly_xl": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_weekly_xl"
+    },
+    "com.gamelounge.loopsie.ios.subscription_yearly": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_yearly"
+    },
+    "com.gamelounge.loopsie.ios.subscription_yearly_01": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_yearly_01"
+    },
+    "com.gamelounge.loopsie.ios.subscription_yearly_china": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_yearly_china"
+    },
+    "com.gamelounge.loopsie.ios.subscription_yearly_direct": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_yearly_direct"
+    },
+    "com.gamelounge.loopsie.ios.subscription_yearly_intro": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_yearly_intro"
+    },
+    "com.gamelounge.loopsie.ios.subscription_yearly_no_trial": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_yearly_no_trial"
+    },
+    "com.gamelounge.loopsie.ios.subscription_yearly_s": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_yearly_s"
+    },
+    "com.gamelounge.loopsie.ios.subscription_yearly_sale": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_yearly_sale"
+    },
+    "com.gamelounge.loopsie.ios.subscription_yearly_xl": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.subscription_yearly_xl"
+    },
+    "com.gamelounge.loopsie.ios.video_token": {
+      "entitlements": [],
+      "product_identifier": "com.gamelounge.loopsie.ios.video_token"
+    },
+    "com.gamelounge.loopsie.ios.video_token2": {
+      "entitlements": [],
+      "product_identifier": "com.gamelounge.loopsie.ios.video_token2"
+    },
+    "com.gamelounge.loopsie.ios.video_token3": {
+      "entitlements": [],
+      "product_identifier": "com.gamelounge.loopsie.ios.video_token3"
+    },
+    "com.gamelounge.loopsie.ios.watermark": {
+      "entitlements": [
+        "pro-iOS"
+      ],
+      "product_identifier": "com.gamelounge.loopsie.ios.watermark"
+    }
+  }
+}
