@@ -1,0 +1,32 @@
+{
+  "user_agent": "MarkupAssistant",
+  "bundle_id": "com.smartitfarmer.MakeUpAssistant",
+  "data": {
+    "com.smartitfarmer.MakeUpAssistant.Month": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.smartitfarmer.MakeUpAssistant.Month"
+    },
+    "com.smartitfarmer.MakeUpAssistant.UNLIMITED": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.smartitfarmer.MakeUpAssistant.UNLIMITED"
+    },
+    "com.smartitfarmer.MakeUpAssistant.VIPDAY": {
+      "entitlements": [],
+      "product_identifier": "com.smartitfarmer.MakeUpAssistant.VIPDAY"
+    },
+    "com.smartitfarmer.MakeUpAssistant.VIPDAYALL": {
+      "entitlements": [],
+      "product_identifier": "com.smartitfarmer.MakeUpAssistant.VIPDAYALL"
+    },
+    "com.smartitfarmer.MakeUpAssistant.Year": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.smartitfarmer.MakeUpAssistant.Year"
+    }
+  }
+}
