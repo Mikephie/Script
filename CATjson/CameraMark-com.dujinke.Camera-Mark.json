@@ -1,0 +1,12 @@
+{
+  "user_agent": "CameraMark",
+  "bundle_id": "com.dujinke.Camera-Mark",
+  "data": {
+    "com.dujinke.CameraMark.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.CameraMark.Unlimited"
+    }
+  }
+}
