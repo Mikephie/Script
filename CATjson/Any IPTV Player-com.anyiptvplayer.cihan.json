@@ -1,0 +1,24 @@
+{
+  "user_agent": "Any%20IPTV%20Player",
+  "bundle_id": "com.anyiptvplayer.cihan",
+  "data": {
+    "any_premium_month": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "any_premium_month"
+    },
+    "any_premium_year": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "any_premium_year"
+    },
+    "lifetimepremium": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "lifetimepremium"
+    }
+  }
+}
