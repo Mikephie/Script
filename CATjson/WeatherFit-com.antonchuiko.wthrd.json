@@ -1,0 +1,64 @@
+{
+  "user_agent": "WeatherFit",
+  "bundle_id": "com.antonchuiko.wthrd",
+  "data": {
+    "com.antonchuiko.wthrd.premium_family_monthly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.antonchuiko.wthrd.premium_family_monthly"
+    },
+    "com.antonchuiko.wthrd.premium_family_onetime": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.antonchuiko.wthrd.premium_family_onetime"
+    },
+    "com.antonchuiko.wthrd.premium_family_yearly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.antonchuiko.wthrd.premium_family_yearly"
+    },
+    "com.antonchuiko.wthrd.premium_monthly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.antonchuiko.wthrd.premium_monthly"
+    },
+    "com.antonchuiko.wthrd.premium_monthly_2": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.antonchuiko.wthrd.premium_monthly_2"
+    },
+    "com.antonchuiko.wthrd.premium_onetime": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.antonchuiko.wthrd.premium_onetime"
+    },
+    "com.antonchuiko.wthrd.premium_onetime_1": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.antonchuiko.wthrd.premium_onetime_1"
+    },
+    "com.antonchuiko.wthrd.premium_yearly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.antonchuiko.wthrd.premium_yearly"
+    },
+    "com.antonchuiko.wthrd.premium_yearly_1": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.antonchuiko.wthrd.premium_yearly_1"
+    },
+    "com.antonchuiko.wthrd.removeadunits": {
+      "entitlements": [],
+      "product_identifier": "com.antonchuiko.wthrd.removeadunits"
+    }
+  }
+}
