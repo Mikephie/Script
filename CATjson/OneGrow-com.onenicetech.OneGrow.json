@@ -1,0 +1,24 @@
+{
+  "user_agent": "OneGrow",
+  "bundle_id": "com.onenicetech.OneGrow",
+  "data": {
+    "com.onenicetech.OneGrow.Lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.onenicetech.OneGrow.Lifetime"
+    },
+    "com.onenicetech.OneGrow.Monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.onenicetech.OneGrow.Monthly"
+    },
+    "com.onenicetech.OneGrow.Yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.onenicetech.OneGrow.Yearly"
+    }
+  }
+}
