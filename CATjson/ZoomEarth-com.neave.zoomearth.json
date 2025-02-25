@@ -1,0 +1,18 @@
+{
+  "user_agent": "ZoomEarth",
+  "bundle_id": "com.neave.zoomearth",
+  "data": {
+    "ze_pro_annual_v1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ze_pro_annual_v1"
+    },
+    "ze_pro_monthly_v1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "ze_pro_monthly_v1"
+    }
+  }
+}
