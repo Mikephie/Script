@@ -1,0 +1,96 @@
+{
+  "user_agent": "ScannerPro",
+  "bundle_id": "com.readdle.Scanner",
+  "data": {
+    "com.readdle.Scanner.fax2": {
+      "entitlements": [],
+      "product_identifier": "com.readdle.Scanner.fax2"
+    },
+    "com.readdle.Scanner.fax5": {
+      "entitlements": [],
+      "product_identifier": "com.readdle.Scanner.fax5"
+    },
+    "com.readdle.Scanner.fax5zone1": {
+      "entitlements": [],
+      "product_identifier": "com.readdle.Scanner.fax5zone1"
+    },
+    "com.readdle.Scanner.subscription.BlackFriday3mosTrial": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription.BlackFriday3mosTrial"
+    },
+    "com.readdle.Scanner.subscription.month10": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription.month10"
+    },
+    "com.readdle.Scanner.subscription.month4": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription.month4"
+    },
+    "com.readdle.Scanner.subscription.month7": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription.month7"
+    },
+    "com.readdle.Scanner.subscription.year20.discount": {
+      "entitlements": [],
+      "product_identifier": "com.readdle.Scanner.subscription.year20.discount"
+    },
+    "com.readdle.Scanner.subscription.year25": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription.year25"
+    },
+    "com.readdle.Scanner.subscription.year26": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription.year26"
+    },
+    "com.readdle.Scanner.subscription.year30": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription.year30"
+    },
+    "com.readdle.Scanner.subscription.year30_no_trial": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription.year30_no_trial"
+    },
+    "com.readdle.Scanner.subscription.year31": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription.year31"
+    },
+    "com.readdle.Scanner.subscription_ExpenseReport.month5.scanner7": {
+      "entitlements": [
+        "expense_report_subscription"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription_ExpenseReport.month5.scanner7"
+    },
+    "com.readdle.Scanner.subscription_ExpenseReport.month5.scanner8": {
+      "entitlements": [
+        "expense_report_subscription"
+      ],
+      "product_identifier": "com.readdle.Scanner.subscription_ExpenseReport.month5.scanner8"
+    },
+    "com.readdle.Scanner.subscription_ExpenseReport.year30.scanner8": {
+      "entitlements": [],
+      "product_identifier": "com.readdle.Scanner.subscription_ExpenseReport.year30.scanner8"
+    },
+    "com.readdle.scannerlite.full": {
+      "entitlements": [],
+      "product_identifier": "com.readdle.scannerlite.full"
+    }
+  }
+}
