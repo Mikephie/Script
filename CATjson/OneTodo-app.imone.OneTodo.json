@@ -1,0 +1,24 @@
+{
+  "user_agent": "OneTodo",
+  "bundle_id": "app.imone.OneTodo",
+  "data": {
+    "app.imone.OneTodo.Lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "app.imone.OneTodo.Lifetime"
+    },
+    "app.imone.OneTodo.Monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "app.imone.OneTodo.Monthly"
+    },
+    "app.imone.OneTodo.Yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "app.imone.OneTodo.Yearly"
+    }
+  }
+}
