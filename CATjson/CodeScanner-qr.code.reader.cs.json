@@ -1,0 +1,110 @@
+{
+  "user_agent": "CodeScanner",
+  "bundle_id": "qr.code.reader.cs",
+  "data": {
+    "annual_1999": {
+      "entitlements": [],
+      "product_identifier": "annual_1999"
+    },
+    "annual_2199": {
+      "entitlements": [],
+      "product_identifier": "annual_2199"
+    },
+    "annual_2299": {
+      "entitlements": [],
+      "product_identifier": "annual_2299"
+    },
+    "annual_3999_3d": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "annual_3999_3d"
+    },
+    "annual_p_2099": {
+      "entitlements": [],
+      "product_identifier": "annual_p_2099"
+    },
+    "annual_p_2399": {
+      "entitlements": [],
+      "product_identifier": "annual_p_2399"
+    },
+    "month_499_7d": {
+      "entitlements": [],
+      "product_identifier": "month_499_7d"
+    },
+    "pro_forever_399": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_forever_399"
+    },
+    "pro_monthly_499": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_monthly_499"
+    },
+    "pro_quarterly_1799_7d": {
+      "entitlements": [],
+      "product_identifier": "pro_quarterly_1799_7d"
+    },
+    "pro_quarterly_1899_3d": {
+      "entitlements": [],
+      "product_identifier": "pro_quarterly_1899_3d"
+    },
+    "pro_quarterly_1899_7d": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_quarterly_1899_7d"
+    },
+    "pro_week_499": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pro_week_499"
+    },
+    "qr_annual_29": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_annual_29"
+    },
+    "qr_quarter_2399": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_quarter_2399"
+    },
+    "qr_week_399_3d": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_week_399_3d"
+    },
+    "qr_week_699_58cny_3d": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_week_699_58cny_3d"
+    },
+    "qr_week_opt299_3d": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_week_opt299_3d"
+    },
+    "qr_week_opt599_3d": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_week_opt599_3d"
+    },
+    "weekly_799_3d": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "weekly_799_3d"
+    }
+  }
+}
