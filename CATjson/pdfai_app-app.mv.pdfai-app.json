@@ -1,0 +1,48 @@
+{
+  "user_agent": "pdfai_app",
+  "bundle_id": "app.mv.pdfai-app",
+  "data": {
+    "chatpdf_annual": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatpdf_annual"
+    },
+    "chatpdf_annual_2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatpdf_annual_2"
+    },
+    "chatpdf_biannual": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatpdf_biannual"
+    },
+    "chatpdf_biannual_2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatpdf_biannual_2"
+    },
+    "chatpdf_weekly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatpdf_weekly"
+    },
+    "chatpdf_weekly_2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatpdf_weekly_2"
+    },
+    "special_lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "special_lifetime"
+    }
+  }
+}
