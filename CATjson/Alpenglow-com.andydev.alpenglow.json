@@ -1,0 +1,128 @@
+{
+  "user_agent": "Alpenglow",
+  "bundle_id": "com.andydev.alpenglow",
+  "data": {
+    "Pro1Month": {
+      "entitlements": [
+        "newPro"
+      ],
+      "product_identifier": "Pro1Month"
+    },
+    "Pro1MonthWithTrial": {
+      "entitlements": [
+        "newPro"
+      ],
+      "product_identifier": "Pro1MonthWithTrial"
+    },
+    "Pro1Year": {
+      "entitlements": [
+        "newPro"
+      ],
+      "product_identifier": "Pro1Year"
+    },
+    "Pro1YearWithTrial": {
+      "entitlements": [
+        "newPro"
+      ],
+      "product_identifier": "Pro1YearWithTrial"
+    },
+    "ProLifetime": {
+      "entitlements": [
+        "newPro"
+      ],
+      "product_identifier": "ProLifetime"
+    },
+    "ProLifetimeGift": {
+      "entitlements": [],
+      "product_identifier": "ProLifetimeGift"
+    },
+    "extra_large_support_tip": {
+      "entitlements": [],
+      "product_identifier": "extra_large_support_tip"
+    },
+    "extra_large_tip": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "extra_large_tip"
+    },
+    "extra_large_user_tip_non_consumable": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "extra_large_user_tip_non_consumable"
+    },
+    "large_support_tip": {
+      "entitlements": [],
+      "product_identifier": "large_support_tip"
+    },
+    "large_user_tip": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "large_user_tip"
+    },
+    "large_user_tip_non_consumable": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "large_user_tip_non_consumable"
+    },
+    "medium_support_tip": {
+      "entitlements": [],
+      "product_identifier": "medium_support_tip"
+    },
+    "medium_user_tip": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "medium_user_tip"
+    },
+    "medium_user_tip_non_consumable": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "medium_user_tip_non_consumable"
+    },
+    "plus_extra_large_user_tip_non_consumable": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "plus_extra_large_user_tip_non_consumable"
+    },
+    "plus_large_user_tip_non_consumable": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "plus_large_user_tip_non_consumable"
+    },
+    "plus_medium_user_tip_non_consumable": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "plus_medium_user_tip_non_consumable"
+    },
+    "plus_small_user_tip_non_consumable": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "plus_small_user_tip_non_consumable"
+    },
+    "small_support_tip": {
+      "entitlements": [],
+      "product_identifier": "small_support_tip"
+    },
+    "small_user_tip": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "small_user_tip"
+    },
+    "small_user_tip_non_consumable": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "small_user_tip_non_consumable"
+    }
+  }
+}
