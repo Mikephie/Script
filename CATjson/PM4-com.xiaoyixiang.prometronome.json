@@ -1,0 +1,73 @@
+{
+  "user_agent": "PM4",
+  "bundle_id": "com.xiaoyixiang.prometronome",
+  "data": {
+    "com.xiaoyixiang.prometronome.display": {
+      "entitlements": [
+        "partial",
+        "pro"
+      ],
+      "product_identifier": "com.xiaoyixiang.prometronome.display"
+    },
+    "com.xiaoyixiang.prometronome.playlists": {
+      "entitlements": [
+        "partial",
+        "pro"
+      ],
+      "product_identifier": "com.xiaoyixiang.prometronome.playlists"
+    },
+    "com.xiaoyixiang.prometronome.polyrhythm": {
+      "entitlements": [
+        "partial",
+        "pro"
+      ],
+      "product_identifier": "com.xiaoyixiang.prometronome.polyrhythm"
+    },
+    "com.xiaoyixiang.prometronome.practicemode": {
+      "entitlements": [
+        "partial",
+        "pro"
+      ],
+      "product_identifier": "com.xiaoyixiang.prometronome.practicemode"
+    },
+    "com.xiaoyixiang.prometronome.rhythmtrainer": {
+      "entitlements": [
+        "partial",
+        "pro"
+      ],
+      "product_identifier": "com.xiaoyixiang.prometronome.rhythmtrainer"
+    },
+    "com.xiaoyixiang.prometronome.subdivisions": {
+      "entitlements": [
+        "partial",
+        "pro"
+      ],
+      "product_identifier": "com.xiaoyixiang.prometronome.subdivisions"
+    },
+    "com.xiaoyixiang.prometronome.tonegenerator": {
+      "entitlements": [
+        "partial",
+        "pro"
+      ],
+      "product_identifier": "com.xiaoyixiang.prometronome.tonegenerator"
+    },
+    "full": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "full"
+    },
+    "pm4_pro_1m_2w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm4_pro_1m_2w0"
+    },
+    "pm4_pro_1y_2w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "pm4_pro_1y_2w0"
+    }
+  }
+}
