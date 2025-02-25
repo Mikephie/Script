@@ -1,0 +1,92 @@
+{
+  "user_agent": "eTicket",
+  "bundle_id": "com.thedafeige.eTicket",
+  "data": {
+    "eticket_3_life": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "eticket_3_life"
+    },
+    "eticket_6_6m_3d0": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "eticket_6_6m_3d0"
+    },
+    "eticket_6_life": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "eticket_6_life"
+    },
+    "eticket_9.9_1y_7d0": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "eticket_9.9_1y_7d0"
+    },
+    "eticket_family_sharing_for_old_member": {
+      "entitlements": [
+        "family_sharing",
+        "family_sharing_for_old_member"
+      ],
+      "product_identifier": "eticket_family_sharing_for_old_member"
+    },
+    "eticket_only_watch_life_a": {
+      "entitlements": [
+        "watch_vip"
+      ],
+      "product_identifier": "eticket_only_watch_life_a"
+    },
+    "eticket_only_watch_life_b": {
+      "entitlements": [
+        "watch_vip"
+      ],
+      "product_identifier": "eticket_only_watch_life_b"
+    },
+    "eticket_remove_ad": {
+      "entitlements": [
+        "remove_ad"
+      ],
+      "product_identifier": "eticket_remove_ad"
+    },
+    "eticket_remove_ad_partial": {
+      "entitlements": [
+        "remove_ad_partial"
+      ],
+      "product_identifier": "eticket_remove_ad_partial"
+    },
+    "eticket_with_watch_1w": {
+      "entitlements": [
+        "vip+watch_vip"
+      ],
+      "product_identifier": "eticket_with_watch_1w"
+    },
+    "eticket_with_watch_1y_7d0": {
+      "entitlements": [
+        "vip+watch_vip"
+      ],
+      "product_identifier": "eticket_with_watch_1y_7d0"
+    },
+    "eticket_with_watch_6m_3d0": {
+      "entitlements": [
+        "vip+watch_vip"
+      ],
+      "product_identifier": "eticket_with_watch_6m_3d0"
+    },
+    "eticket_with_watch_life_a": {
+      "entitlements": [
+        "vip+watch_vip"
+      ],
+      "product_identifier": "eticket_with_watch_life_a"
+    },
+    "eticket_with_watch_life_b": {
+      "entitlements": [
+        "family_sharing",
+        "vip+watch_vip"
+      ],
+      "product_identifier": "eticket_with_watch_life_b"
+    }
+  }
+}
