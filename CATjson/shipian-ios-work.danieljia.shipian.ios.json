@@ -1,0 +1,24 @@
+{
+  "user_agent": "shipian-ios",
+  "bundle_id": "work.danieljia.shipian.ios",
+  "data": {
+    "shipian_12_1y": {
+      "entitlements": [
+        "yearvip"
+      ],
+      "product_identifier": "shipian_12_1y"
+    },
+    "shipian_25_forever": {
+      "entitlements": [
+        "lifevip"
+      ],
+      "product_identifier": "shipian_25_forever"
+    },
+    "shipian_3_1m": {
+      "entitlements": [
+        "monthvip"
+      ],
+      "product_identifier": "shipian_3_1m"
+    }
+  }
+}
