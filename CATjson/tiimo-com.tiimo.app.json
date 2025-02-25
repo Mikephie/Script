@@ -1,0 +1,162 @@
+{
+  "user_agent": "tiimo",
+  "bundle_id": "com.tiimo.app",
+  "data": {
+    "1.month.7daystrial": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.month.7daystrial"
+    },
+    "1.month.costabarrier": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.month.costabarrier"
+    },
+    "1.month.covermyself": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.month.covermyself"
+    },
+    "1.month.helpothers": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.month.helpothers"
+    },
+    "1.month.international": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.month.international"
+    },
+    "1.month.learn": {
+      "entitlements": [
+        "learn"
+      ],
+      "product_identifier": "1.month.learn"
+    },
+    "1.month.plan": {
+      "entitlements": [
+        "plan"
+      ],
+      "product_identifier": "1.month.plan"
+    },
+    "1.month.withoutTrial": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.month.withoutTrial"
+    },
+    "1.year": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.year"
+    },
+    "1.year.14daystrial": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.year.14daystrial"
+    },
+    "1.year.7daystrial": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.year.7daystrial"
+    },
+    "1.year.international": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.year.international"
+    },
+    "1.year.learn": {
+      "entitlements": [
+        "learn"
+      ],
+      "product_identifier": "1.year.learn"
+    },
+    "1.year.learn.noTrial": {
+      "entitlements": [
+        "learn"
+      ],
+      "product_identifier": "1.year.learn.noTrial"
+    },
+    "1.year.plan": {
+      "entitlements": [
+        "plan"
+      ],
+      "product_identifier": "1.year.plan"
+    },
+    "1.year.stable": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.year.stable"
+    },
+    "1.year.withoutTrial": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "1.year.withoutTrial"
+    },
+    "3.month.international": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "3.month.international"
+    },
+    "3months": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "3months"
+    },
+    "6.months.7daystrial": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "6.months.7daystrial"
+    },
+    "lifetime.iap": {
+      "entitlements": [
+        "learn"
+      ],
+      "product_identifier": "lifetime.iap"
+    },
+    "lifetime.iap.may2023": {
+      "entitlements": [
+        "learn"
+      ],
+      "product_identifier": "lifetime.iap.may2023"
+    },
+    "monthly": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "monthly"
+    },
+    "premium.1.month": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "premium.1.month"
+    },
+    "premium.1.year": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "premium.1.year"
+    },
+    "yearly": {
+      "entitlements": [
+        "full_access"
+      ],
+      "product_identifier": "yearly"
+    }
+  }
+}
