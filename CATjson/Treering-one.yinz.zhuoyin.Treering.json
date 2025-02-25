@@ -1,0 +1,24 @@
+{
+  "user_agent": "Treering",
+  "bundle_id": "one.yinz.zhuoyin.Treering",
+  "data": {
+    "Treering.ios.pro.lifetime.1": {
+      "entitlements": [
+        "lifetime"
+      ],
+      "product_identifier": "Treering.ios.pro.lifetime.1"
+    },
+    "Treering.pro.monthly1": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "Treering.pro.monthly1"
+    },
+    "Treering.pro.yearly1": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "Treering.pro.yearly1"
+    }
+  }
+}
