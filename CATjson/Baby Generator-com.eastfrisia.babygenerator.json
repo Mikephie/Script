@@ -1,0 +1,60 @@
+{
+  "user_agent": "Baby%20Generator",
+  "bundle_id": "com.eastfrisia.babygenerator",
+  "data": {
+    "aibabygen_1299_mant": {
+      "entitlements": [
+        "premium_features"
+      ],
+      "product_identifier": "aibabygen_1299_mant"
+    },
+    "aibabygen_149_la": {
+      "entitlements": [
+        "premium_features"
+      ],
+      "product_identifier": "aibabygen_149_la"
+    },
+    "aibabygen_1599_ybd": {
+      "entitlements": [
+        "premium_features"
+      ],
+      "product_identifier": "aibabygen_1599_ybd"
+    },
+    "aibabygen_2999_ybnt": {
+      "entitlements": [
+        "premium_features"
+      ],
+      "product_identifier": "aibabygen_2999_ybnt"
+    },
+    "aibabygen_699_wbnt": {
+      "entitlements": [
+        "premium_features"
+      ],
+      "product_identifier": "aibabygen_699_wbnt"
+    },
+    "aibabygen_999_yad": {
+      "entitlements": [
+        "premium_features"
+      ],
+      "product_identifier": "aibabygen_999_yad"
+    },
+    "babygenerator_1499_halfyear": {
+      "entitlements": [
+        "premium_features"
+      ],
+      "product_identifier": "babygenerator_1499_halfyear"
+    },
+    "babygenerator_1999_yearly": {
+      "entitlements": [
+        "premium_features"
+      ],
+      "product_identifier": "babygenerator_1999_yearly"
+    },
+    "babygenerator_499_weekly": {
+      "entitlements": [
+        "premium_features"
+      ],
+      "product_identifier": "babygenerator_499_weekly"
+    }
+  }
+}
