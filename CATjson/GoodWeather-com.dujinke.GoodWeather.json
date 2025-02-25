@@ -1,0 +1,12 @@
+{
+  "user_agent": "GoodWeather",
+  "bundle_id": "com.dujinke.GoodWeather",
+  "data": {
+    "com.dujinke.GoodWeather.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.GoodWeather.Unlimited"
+    }
+  }
+}
