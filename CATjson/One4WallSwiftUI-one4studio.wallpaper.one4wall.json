@@ -1,0 +1,238 @@
+{
+  "user_agent": "One4WallSwiftUI",
+  "bundle_id": "one4studio.wallpaper.one4wall",
+  "data": {
+    "8kbundle": {
+      "entitlements": [
+        "desktop"
+      ],
+      "product_identifier": "8kbundle"
+    },
+    "8kitem_01": {
+      "entitlements": [
+        "8kitem_01"
+      ],
+      "product_identifier": "8kitem_01"
+    },
+    "8kitem_02": {
+      "entitlements": [
+        "8kitem_02"
+      ],
+      "product_identifier": "8kitem_02"
+    },
+    "8kitem_03": {
+      "entitlements": [
+        "8kitem_03"
+      ],
+      "product_identifier": "8kitem_03"
+    },
+    "8kitem_04": {
+      "entitlements": [
+        "8kitem_04"
+      ],
+      "product_identifier": "8kitem_04"
+    },
+    "8kitem_05": {
+      "entitlements": [
+        "8kitem_05"
+      ],
+      "product_identifier": "8kitem_05"
+    },
+    "item_001": {
+      "entitlements": [
+        "item_01"
+      ],
+      "product_identifier": "item_001"
+    },
+    "item_002": {
+      "entitlements": [
+        "item_02"
+      ],
+      "product_identifier": "item_002"
+    },
+    "item_003": {
+      "entitlements": [
+        "item_03"
+      ],
+      "product_identifier": "item_003"
+    },
+    "item_004": {
+      "entitlements": [
+        "item_04"
+      ],
+      "product_identifier": "item_004"
+    },
+    "item_005": {
+      "entitlements": [
+        "item_05"
+      ],
+      "product_identifier": "item_005"
+    },
+    "item_006": {
+      "entitlements": [
+        "item_06"
+      ],
+      "product_identifier": "item_006"
+    },
+    "item_007": {
+      "entitlements": [
+        "item_07"
+      ],
+      "product_identifier": "item_007"
+    },
+    "item_008": {
+      "entitlements": [
+        "item_08"
+      ],
+      "product_identifier": "item_008"
+    },
+    "item_009": {
+      "entitlements": [
+        "item_09"
+      ],
+      "product_identifier": "item_009"
+    },
+    "item_010": {
+      "entitlements": [
+        "item_10"
+      ],
+      "product_identifier": "item_010"
+    },
+    "item_011": {
+      "entitlements": [
+        "item_11"
+      ],
+      "product_identifier": "item_011"
+    },
+    "item_012": {
+      "entitlements": [
+        "item_12"
+      ],
+      "product_identifier": "item_012"
+    },
+    "item_013": {
+      "entitlements": [
+        "item_13"
+      ],
+      "product_identifier": "item_013"
+    },
+    "item_014": {
+      "entitlements": [
+        "item_14"
+      ],
+      "product_identifier": "item_014"
+    },
+    "item_015": {
+      "entitlements": [
+        "item_15"
+      ],
+      "product_identifier": "item_015"
+    },
+    "item_016": {
+      "entitlements": [
+        "item_16"
+      ],
+      "product_identifier": "item_016"
+    },
+    "item_017": {
+      "entitlements": [
+        "item_17"
+      ],
+      "product_identifier": "item_017"
+    },
+    "item_018": {
+      "entitlements": [
+        "item_18"
+      ],
+      "product_identifier": "item_018"
+    },
+    "item_019": {
+      "entitlements": [
+        "item_19"
+      ],
+      "product_identifier": "item_019"
+    },
+    "item_09": {
+      "entitlements": [],
+      "product_identifier": "item_09"
+    },
+    "item_10": {
+      "entitlements": [],
+      "product_identifier": "item_10"
+    },
+    "item_14": {
+      "entitlements": [],
+      "product_identifier": "item_14"
+    },
+    "item_15": {
+      "entitlements": [],
+      "product_identifier": "item_15"
+    },
+    "lifetime_20": {
+      "entitlements": [
+        "lifetime_20"
+      ],
+      "product_identifier": "lifetime_20"
+    },
+    "lifetime_50": {
+      "entitlements": [
+        "lifetime_50"
+      ],
+      "product_identifier": "lifetime_50"
+    },
+    "lifetime_70": {
+      "entitlements": [
+        "lifetime_70"
+      ],
+      "product_identifier": "lifetime_70"
+    },
+    "lifetime_key": {
+      "entitlements": [
+        "lifetime"
+      ],
+      "product_identifier": "lifetime_key"
+    },
+    "lifetime_sale": {
+      "entitlements": [
+        "lifetime_sale"
+      ],
+      "product_identifier": "lifetime_sale"
+    },
+    "premium": {
+      "entitlements": [],
+      "product_identifier": "premium"
+    },
+    "pro": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "pro"
+    },
+    "sub_month": {
+      "entitlements": [],
+      "product_identifier": "sub_month"
+    },
+    "sub_monthly": {
+      "entitlements": [
+        "sub_month"
+      ],
+      "product_identifier": "sub_monthly"
+    },
+    "sub_weekly": {
+      "entitlements": [
+        "sub_weekly"
+      ],
+      "product_identifier": "sub_weekly"
+    },
+    "sub_year": {
+      "entitlements": [],
+      "product_identifier": "sub_year"
+    },
+    "sub_yearly": {
+      "entitlements": [
+        "sub_year"
+      ],
+      "product_identifier": "sub_yearly"
+    }
+  }
+}
