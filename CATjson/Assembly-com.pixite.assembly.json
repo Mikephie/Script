@@ -1,0 +1,198 @@
+{
+  "user_agent": "Assembly",
+  "bundle_id": "com.pixite.assembly",
+  "data": {
+    "com.pixite.assembly.1month": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1month"
+    },
+    "com.pixite.assembly.1monthN": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1monthN"
+    },
+    "com.pixite.assembly.1monthO": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1monthO"
+    },
+    "com.pixite.assembly.1monthP": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1monthP"
+    },
+    "com.pixite.assembly.1monthlyq": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1monthlyq"
+    },
+    "com.pixite.assembly.1week": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1week"
+    },
+    "com.pixite.assembly.1weekN": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1weekN"
+    },
+    "com.pixite.assembly.1weekO": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1weekO"
+    },
+    "com.pixite.assembly.1weekP": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1weekP"
+    },
+    "com.pixite.assembly.1weekq": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1weekq"
+    },
+    "com.pixite.assembly.1year": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1year"
+    },
+    "com.pixite.assembly.1yearN": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1yearN"
+    },
+    "com.pixite.assembly.1yearP": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1yearP"
+    },
+    "com.pixite.assembly.1yearlyq": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.1yearlyq"
+    },
+    "com.pixite.assembly.badge": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.badge"
+    },
+    "com.pixite.assembly.beyondbasics": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.beyondbasics"
+    },
+    "com.pixite.assembly.characters": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.characters"
+    },
+    "com.pixite.assembly.characters2": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.characters2"
+    },
+    "com.pixite.assembly.circus": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.circus"
+    },
+    "com.pixite.assembly.city": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.city"
+    },
+    "com.pixite.assembly.creatures": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.creatures"
+    },
+    "com.pixite.assembly.floral": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.floral"
+    },
+    "com.pixite.assembly.food": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.food"
+    },
+    "com.pixite.assembly.foreverunlock": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.foreverunlock"
+    },
+    "com.pixite.assembly.introbundle": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.introbundle"
+    },
+    "com.pixite.assembly.maps": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.maps"
+    },
+    "com.pixite.assembly.outerspace": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.outerspace"
+    },
+    "com.pixite.assembly.patterns": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.patterns"
+    },
+    "com.pixite.assembly.robots": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.robots"
+    },
+    "com.pixite.assembly.speechbubbles": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.speechbubbles"
+    },
+    "com.pixite.assembly.transporation": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.transporation"
+    },
+    "com.pixite.assembly.tribal": {
+      "entitlements": [
+        "premium_access"
+      ],
+      "product_identifier": "com.pixite.assembly.tribal"
+    }
+  }
+}
