@@ -1,0 +1,34 @@
+{
+  "user_agent": "CalendarArt",
+  "bundle_id": "com.bapaws.calendar",
+  "data": {
+    "com.bapaws.calendar.co_creator": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.bapaws.calendar.co_creator"
+    },
+    "com.bapaws.calendar.creator": {
+      "entitlements": [],
+      "product_identifier": "com.bapaws.calendar.creator"
+    },
+    "com.bapaws.calendar.lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.bapaws.calendar.lifetime"
+    },
+    "com.bapaws.calendar.month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.bapaws.calendar.month"
+    },
+    "com.bapaws.calendar.year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.bapaws.calendar.year"
+    }
+  }
+}
