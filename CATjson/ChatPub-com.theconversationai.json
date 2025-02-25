@@ -1,0 +1,90 @@
+{
+  "user_agent": "ChatPub",
+  "bundle_id": "com.theconversationai",
+  "data": {
+    "chatpub.weekly.01": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "chatpub.weekly.01"
+    },
+    "chatpub.weekly.02": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "chatpub.weekly.02"
+    },
+    "chatpub.weekly.03": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "chatpub.weekly.03"
+    },
+    "chatpub.yearly.01": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "chatpub.yearly.01"
+    },
+    "chatpub.yearly.02": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "chatpub.yearly.02"
+    },
+    "chatpub.yearly.03": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "chatpub.yearly.03"
+    },
+    "chatpub.yearly.04": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "chatpub.yearly.04"
+    },
+    "conversationai.annual": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "conversationai.annual"
+    },
+    "conversationai.monthly": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "conversationai.monthly"
+    },
+    "conversationai.quarterly": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "conversationai.quarterly"
+    },
+    "conversationai.secret.yearly": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "conversationai.secret.yearly"
+    },
+    "conversationai.week": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "conversationai.week"
+    },
+    "conversationai.weekly": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "conversationai.weekly"
+    },
+    "conversationai.year": {
+      "entitlements": [
+        "Unlimited Access"
+      ],
+      "product_identifier": "conversationai.year"
+    }
+  }
+}
