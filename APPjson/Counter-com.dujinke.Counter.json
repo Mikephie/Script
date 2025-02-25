@@ -1,0 +1,12 @@
+{
+  "user_agent": "Counter",
+  "bundle_id": "com.dujinke.Counter",
+  "data": {
+    "com.dujinke.Counter.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.Counter.Unlimited"
+    }
+  }
+}
