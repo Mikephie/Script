@@ -1,0 +1,24 @@
+{
+  "user_agent": "ShellBoxKit",
+  "bundle_id": "com.jump.ShellBoxKit",
+  "data": {
+    "ShellBoxKit.Lifetime": {
+      "entitlements": [
+        "ssh_pro"
+      ],
+      "product_identifier": "ShellBoxKit.Lifetime"
+    },
+    "ShellBoxKit.Month": {
+      "entitlements": [
+        "ssh_pro"
+      ],
+      "product_identifier": "ShellBoxKit.Month"
+    },
+    "ShellBoxKit.Year": {
+      "entitlements": [
+        "ssh_pro"
+      ],
+      "product_identifier": "ShellBoxKit.Year"
+    }
+  }
+}
