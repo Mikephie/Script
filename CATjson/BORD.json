@@ -1,0 +1,36 @@
+{
+  "user_agent": "BORD",
+  "bundle_id": null,
+  "data": {
+    "bord_plus_099_1m": {
+      "entitlements": [
+        "pro_membership"
+      ],
+      "product_identifier": "bord_plus_099_1m"
+    },
+    "bord_plus_2499_lifetime": {
+      "entitlements": [
+        "pro_membership"
+      ],
+      "product_identifier": "bord_plus_2499_lifetime"
+    },
+    "bord_plus_699_1y": {
+      "entitlements": [
+        "pro_membership"
+      ],
+      "product_identifier": "bord_plus_699_1y"
+    },
+    "bord_plus_999_lifetime": {
+      "entitlements": [
+        "pro_membership"
+      ],
+      "product_identifier": "bord_plus_999_lifetime"
+    },
+    "remove.ads": {
+      "entitlements": [
+        "remove_ads"
+      ],
+      "product_identifier": "remove.ads"
+    }
+  }
+}
