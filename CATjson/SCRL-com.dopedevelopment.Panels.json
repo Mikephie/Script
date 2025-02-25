@@ -1,0 +1,288 @@
+{
+  "user_agent": "SCRL",
+  "bundle_id": "com.dopedevelopment.Panels",
+  "data": {
+    "com.dopedevelopment.Panels.consumable.singleTemplate": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.consumable.singleTemplate",
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.consumable.singleTemplate"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.artist.louis1": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.artist.louis1"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.billboard": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.billboard"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.digital": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.digital"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.film1": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.film1"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.film2": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.film2"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.instant1": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.instant1"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.minimal": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.minimal"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.minimal2": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.minimal2"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.paper1": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.paper1"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.plastic1": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.plastic1"
+    },
+    "com.dopedevelopment.Panels.nonconsumable.tape1": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.nonconsumable.tape1"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro.Sale": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro.Sale"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro.Sale.FreeTrial": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro.Sale.FreeTrial"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_3499_7dtrial": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_3499_7dtrial"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_50percent_off_first_year": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_50percent_off_first_year"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_50percent_off_first_year_half_latam": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_50percent_off_first_year_half_latam"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_999_monthly_monthly": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_999_monthly_monthly"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_999_monthly_yearly": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_999_monthly_yearly"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Dynamic_Pricing": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro",
+        "com.dopedevelopment.Panels.subscription.Pro_Dynamic_Pricing"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Dynamic_Pricing"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Geo": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Geo"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Geo_Monthly": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Geo_Monthly"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant1": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant1"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant2": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant2"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant3": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant3"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant3_Sale": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant3_Sale"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant3_monthly": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant3_monthly"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant4": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant4"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant4_Sale": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant4_Sale"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant5": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant5"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant5_Sale": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant5_Sale"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant6": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant6"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant6_Sale": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant6_Sale"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant7": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant7"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_Variant7_Monthly": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_Variant7_Monthly"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_us_increase": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_us_increase"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_us_increase_30dtrial": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_us_increase_30dtrial"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_us_increase_50_off": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_us_increase_50_off"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_us_increase_5999": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_us_increase_5999"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_us_increase_weekly_free_trial": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_us_increase_weekly_free_trial"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_us_increase_without_free_trial": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_us_increase_without_free_trial"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_us_mexico_brazil_half_price_weekly": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_us_mexico_brazil_half_price_weekly"
+    },
+    "com.dopedevelopment.Panels.subscription.Pro_us_mexico_brazil_half_price_yearly": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.Pro_us_mexico_brazil_half_price_yearly"
+    },
+    "com.dopedevelopment.Panels.subscription.weekly_599": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.weekly_599"
+    },
+    "com.dopedevelopment.Panels.subscription.weekly_699_US_599_non_US": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.weekly_699_US_599_non_US"
+    },
+    "com.dopedevelopment.Panels.subscription.worldwide_yearly_5999_weekly_499_weekly": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.worldwide_yearly_5999_weekly_499_weekly"
+    },
+    "com.dopedevelopment.Panels.subscription.worldwide_yearly_5999_weekly_499_yearly": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.worldwide_yearly_5999_weekly_499_yearly"
+    },
+    "com.dopedevelopment.Panels.subscription.yearly_4999": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.yearly_4999"
+    },
+    "com.dopedevelopment.Panels.subscription.yearly_5999_US_4999_non_US": {
+      "entitlements": [
+        "com.dopedevelopment.Panels.subscription.Pro"
+      ],
+      "product_identifier": "com.dopedevelopment.Panels.subscription.yearly_5999_US_4999_non_US"
+    },
+    "com.dopedevelopment.PanelsDev.nonconsumable.minimal": {
+      "entitlements": [],
+      "product_identifier": "com.dopedevelopment.PanelsDev.nonconsumable.minimal"
+    }
+  }
+}
