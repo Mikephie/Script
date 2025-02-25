@@ -1,0 +1,664 @@
+{
+  "user_agent": "G%20E%20I%20S%20T",
+  "bundle_id": "com.memorado.app",
+  "data": {
+    "com.memorado.cancelled.offer.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.cancelled.offer.12month"
+    },
+    "com.memorado.cancelled.offer2.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.cancelled.offer2.12month"
+    },
+    "com.memorado.duobrainmind.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.duobrainmind.lifetime"
+    },
+    "com.memorado.g02.cancelled.offer2.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g02.cancelled.offer2.12month"
+    },
+    "com.memorado.g03.cancelled.offer.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g03.cancelled.offer.12month"
+    },
+    "com.memorado.g04.cancelled.offer.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.g04.cancelled.offer.12month"
+    },
+    "com.memorado.g05.cancelled.offer.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.g05.cancelled.offer.12month"
+    },
+    "com.memorado.g06.cancelled.offer.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.g06.cancelled.offer.12month"
+    },
+    "com.memorado.g06.cancelled.offer2.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g06.cancelled.offer2.12month"
+    },
+    "com.memorado.g07.cancelled.offer.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.g07.cancelled.offer.12month"
+    },
+    "com.memorado.g08.cancelled.offer.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g08.cancelled.offer.12month"
+    },
+    "com.memorado.g09.cancelled.offer.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g09.cancelled.offer.12month"
+    },
+    "com.memorado.g09.cancelled.offer2.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g09.cancelled.offer2.12month"
+    },
+    "com.memorado.g10.cancelled.offer.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.g10.cancelled.offer.12month"
+    },
+    "com.memorado.g10.cancelled.offer2.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.g10.cancelled.offer2.12month"
+    },
+    "com.memorado.g11.cancelled.offer.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g11.cancelled.offer.12month"
+    },
+    "com.memorado.g12.cancelled.offer.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g12.cancelled.offer.12month"
+    },
+    "com.memorado.g13.cancelled.offer.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g13.cancelled.offer.12month"
+    },
+    "com.memorado.g14.cancelled.offer.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.g14.cancelled.offer.12month"
+    },
+    "com.memorado.g14.cancelled.offer2.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.g14.cancelled.offer2.12month"
+    },
+    "com.memorado.g15.cancelled.offer.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g15.cancelled.offer.12month"
+    },
+    "com.memorado.g16.cancelled.offer.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g16.cancelled.offer.12month"
+    },
+    "com.memorado.g17.cancelled.offer.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.g17.cancelled.offer.12month"
+    },
+    "com.memorado.g17.cancelled.offer2.12month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.g17.cancelled.offer2.12month"
+    },
+    "com.memorado.g18.cancelled.offer.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g18.cancelled.offer.12month"
+    },
+    "com.memorado.g18.cancelled.offer2.12month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.g18.cancelled.offer2.12month"
+    },
+    "com.memorado.mind.12months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.mind.12months"
+    },
+    "com.memorado.mind.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.mind.lifetime"
+    },
+    "com.memorado.mind.lifetime.20pc": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.mind.lifetime.20pc"
+    },
+    "com.memorado.mind.lifetime.40pc": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.mind.lifetime.40pc"
+    },
+    "com.memorado.mind.lifetime.60pc": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.mind.lifetime.60pc"
+    },
+    "com.memorado.mind.lifetime.80pc": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.mind.lifetime.80pc"
+    },
+    "com.memorado.single.20pct.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.20pct.lifetime"
+    },
+    "com.memorado.single.40pct.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.40pct.lifetime"
+    },
+    "com.memorado.single.NewMemorado50.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.NewMemorado50.lifetime"
+    },
+    "com.memorado.single.NewMemorado60.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.NewMemorado60.lifetime"
+    },
+    "com.memorado.single.NewMemoradoNoDiscount.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.NewMemoradoNoDiscount.lifetime"
+    },
+    "com.memorado.single.ab.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.ab.lifetime"
+    },
+    "com.memorado.single.allvslt50.ALL.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.allvslt50.ALL.lifetime"
+    },
+    "com.memorado.single.allvslt50.LT.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.allvslt50.LT.lifetime"
+    },
+    "com.memorado.single.cny.50pct.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.cny.50pct.lifetime"
+    },
+    "com.memorado.single.cny.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.cny.lifetime"
+    },
+    "com.memorado.single.gbp.50pct.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.gbp.50pct.lifetime"
+    },
+    "com.memorado.single.gbp.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.gbp.lifetime"
+    },
+    "com.memorado.single.groupB.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.groupB.lifetime"
+    },
+    "com.memorado.single.groupa.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.groupa.lifetime"
+    },
+    "com.memorado.single.groupb.50pct.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.groupb.50pct.lifetime"
+    },
+    "com.memorado.single.groupc.50pct.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.groupc.50pct.lifetime"
+    },
+    "com.memorado.single.groupc.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.groupc.lifetime"
+    },
+    "com.memorado.single.groupd.50pct.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.groupd.50pct.lifetime"
+    },
+    "com.memorado.single.groupd.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.groupd.lifetime"
+    },
+    "com.memorado.single.lever.offer50LT.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.lever.offer50LT.lifetime"
+    },
+    "com.memorado.single.lever.offer65LT.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.lever.offer65LT.lifetime"
+    },
+    "com.memorado.single.lever.offer75LT.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.lever.offer75LT.lifetime"
+    },
+    "com.memorado.single.lifetime": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.single.lifetime"
+    },
+    "com.memorado.single.usd.50pct.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.usd.50pct.lifetime"
+    },
+    "com.memorado.single.usd.lifetime": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.single.usd.lifetime"
+    },
+    "com.memorado.subscription.12_month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.12_month"
+    },
+    "com.memorado.subscription.1_month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.1_month"
+    },
+    "com.memorado.subscription.20pct.12_month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.20pct.12_month"
+    },
+    "com.memorado.subscription.20pct.1_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.20pct.1_month"
+    },
+    "com.memorado.subscription.20pct.3_month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.20pct.3_month"
+    },
+    "com.memorado.subscription.2months_7day_freetrial": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.2months_7day_freetrial"
+    },
+    "com.memorado.subscription.3_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.3_month"
+    },
+    "com.memorado.subscription.40pct.12_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.40pct.12_month"
+    },
+    "com.memorado.subscription.40pct.1_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.40pct.1_month"
+    },
+    "com.memorado.subscription.40pct.3_month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.40pct.3_month"
+    },
+    "com.memorado.subscription.6_month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.6_month"
+    },
+    "com.memorado.subscription.NewMemorado50.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemorado50.12months"
+    },
+    "com.memorado.subscription.NewMemorado50.1months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemorado50.1months"
+    },
+    "com.memorado.subscription.NewMemorado50.3months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemorado50.3months"
+    },
+    "com.memorado.subscription.NewMemorado50.cancel.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemorado50.cancel.12months"
+    },
+    "com.memorado.subscription.NewMemorado50freetrial.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemorado50freetrial.12months"
+    },
+    "com.memorado.subscription.NewMemorado60.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemorado60.12months"
+    },
+    "com.memorado.subscription.NewMemorado60.1months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemorado60.1months"
+    },
+    "com.memorado.subscription.NewMemorado60.cancel.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemorado60.cancel.12months"
+    },
+    "com.memorado.subscription.NewMemoradoNoDiscount.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemoradoNoDiscount.12months"
+    },
+    "com.memorado.subscription.NewMemoradoNoDiscount.1months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemoradoNoDiscount.1months"
+    },
+    "com.memorado.subscription.NewMemoradoNoDiscount.cancel.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.NewMemoradoNoDiscount.cancel.12months"
+    },
+    "com.memorado.subscription.ab.12_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.ab.12_month"
+    },
+    "com.memorado.subscription.ab.1_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.ab.1_month"
+    },
+    "com.memorado.subscription.ab.3_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.ab.3_month"
+    },
+    "com.memorado.subscription.ab.6_month": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.ab.6_month"
+    },
+    "com.memorado.subscription.allvslt50.ALL.12months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.allvslt50.ALL.12months"
+    },
+    "com.memorado.subscription.allvslt50.ALL.3months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.allvslt50.ALL.3months"
+    },
+    "com.memorado.subscription.allvslt50.LT.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.allvslt50.LT.12months"
+    },
+    "com.memorado.subscription.allvslt50.LT.3months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.allvslt50.LT.3months"
+    },
+    "com.memorado.subscription.alt.12_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.alt.12_month"
+    },
+    "com.memorado.subscription.alt.1_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.alt.1_month"
+    },
+    "com.memorado.subscription.alt.3_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.alt.3_month"
+    },
+    "com.memorado.subscription.alt.6_month": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.alt.6_month"
+    },
+    "com.memorado.subscription.g23.cancel.12_months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.g23.cancel.12_months"
+    },
+    "com.memorado.subscription.g24.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.g24.12months"
+    },
+    "com.memorado.subscription.g24.cancel.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.g24.cancel.12months"
+    },
+    "com.memorado.subscription.g25.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.g25.12months"
+    },
+    "com.memorado.subscription.g25.cancel.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.g25.cancel.12months"
+    },
+    "com.memorado.subscription.groupB.12_months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.groupB.12_months"
+    },
+    "com.memorado.subscription.groupB.3_months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.groupB.3_months"
+    },
+    "com.memorado.subscription.groupB50pct.12_months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.groupB50pct.12_months"
+    },
+    "com.memorado.subscription.groupB_50pct.3_months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.groupB_50pct.3_months"
+    },
+    "com.memorado.subscription.groupc.12_months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.groupc.12_months"
+    },
+    "com.memorado.subscription.groupc.3_months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.groupc.3_months"
+    },
+    "com.memorado.subscription.groupc50pct.12_months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.groupc50pct.12_months"
+    },
+    "com.memorado.subscription.groupc_50pct.3_months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.groupc_50pct.3_months"
+    },
+    "com.memorado.subscription.groupd.12_months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.groupd.12_months"
+    },
+    "com.memorado.subscription.groupd.3_months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.groupd.3_months"
+    },
+    "com.memorado.subscription.groupd50pct.12_months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.groupd50pct.12_months"
+    },
+    "com.memorado.subscription.groupd_50pct.3_months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.groupd_50pct.3_months"
+    },
+    "com.memorado.subscription.intro.upfront.12_months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.intro.upfront.12_months"
+    },
+    "com.memorado.subscription.lever.offer50LT.12months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.lever.offer50LT.12months"
+    },
+    "com.memorado.subscription.lever.offer50LT.3months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subscription.lever.offer50LT.3months"
+    },
+    "com.memorado.subscription.lever.offer65LT.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.lever.offer65LT.12months"
+    },
+    "com.memorado.subscription.lever.offer65LT.3months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.lever.offer65LT.3months"
+    },
+    "com.memorado.subscription.lever.offer75LT.12months": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.lever.offer75LT.12months"
+    },
+    "com.memorado.subscription.monthly": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.monthly"
+    },
+    "com.memorado.subscription.yearly.v1": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.yearly.v1"
+    },
+    "com.memorado.subscription.yearly.v2": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.yearly.v2"
+    },
+    "com.memorado.subscription.yearly.v3": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.yearly.v3"
+    },
+    "com.memorado.subscription.yearly.v4": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.yearly.v4"
+    },
+    "com.memorado.subscription.yearly.v5": {
+      "entitlements": [
+        "memorado_premium"
+      ],
+      "product_identifier": "com.memorado.subscription.yearly.v5"
+    },
+    "com.memorado.subsription.limitedoffer60.12_months": {
+      "entitlements": [],
+      "product_identifier": "com.memorado.subsription.limitedoffer60.12_months"
+    }
+  }
+}
