@@ -1,0 +1,109 @@
+{
+  "user_agent": "simple-weather",
+  "bundle_id": "com.andyworks.weather",
+  "data": {
+    "com.andyworks.vibes.yearlyPatron": {
+      "entitlements": [],
+      "product_identifier": "com.andyworks.vibes.yearlyPatron"
+    },
+    "com.andyworks.weather.monthBeliever": {
+      "entitlements": [
+        "believer",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.weather.monthBeliever"
+    },
+    "com.andyworks.weather.monthlyBasic": {
+      "entitlements": [],
+      "product_identifier": "com.andyworks.weather.monthlyBasic"
+    },
+    "com.andyworks.weather.monthlyBeliever": {
+      "entitlements": [],
+      "product_identifier": "com.andyworks.weather.monthlyBeliever"
+    },
+    "com.andyworks.weather.monthlyPatron": {
+      "entitlements": [],
+      "product_identifier": "com.andyworks.weather.monthlyPatron"
+    },
+    "com.andyworks.weather.skinAndy": {
+      "entitlements": [
+        "skinAndy"
+      ],
+      "product_identifier": "com.andyworks.weather.skinAndy"
+    },
+    "com.andyworks.weather.skinCedar": {
+      "entitlements": [
+        "skinCedar"
+      ],
+      "product_identifier": "com.andyworks.weather.skinCedar"
+    },
+    "com.andyworks.weather.skinChroma": {
+      "entitlements": [
+        "skinChroma"
+      ],
+      "product_identifier": "com.andyworks.weather.skinChroma"
+    },
+    "com.andyworks.weather.skinKarat": {
+      "entitlements": [
+        "skinKarat"
+      ],
+      "product_identifier": "com.andyworks.weather.skinKarat"
+    },
+    "com.andyworks.weather.skinMonster": {
+      "entitlements": [
+        "skinMonster"
+      ],
+      "product_identifier": "com.andyworks.weather.skinMonster"
+    },
+    "com.andyworks.weather.skinOpal": {
+      "entitlements": [
+        "skinOpal"
+      ],
+      "product_identifier": "com.andyworks.weather.skinOpal"
+    },
+    "com.andyworks.weather.skinPresstube": {
+      "entitlements": [
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.weather.skinPresstube"
+    },
+    "com.andyworks.weather.yearlyApp": {
+      "entitlements": [
+        "weatherApp"
+      ],
+      "product_identifier": "com.andyworks.weather.yearlyApp"
+    },
+    "com.andyworks.weather.yearlyBeliever": {
+      "entitlements": [
+        "believer",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.weather.yearlyBeliever"
+    },
+    "com.andyworks.weather.yearlyPatron": {
+      "entitlements": [
+        "patron",
+        "skinAndy",
+        "skinCedar",
+        "skinChroma",
+        "skinKarat",
+        "skinMonster",
+        "skinOpal",
+        "skinPresstube"
+      ],
+      "product_identifier": "com.andyworks.weather.yearlyPatron"
+    }
+  }
+}
