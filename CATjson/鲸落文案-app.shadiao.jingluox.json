@@ -1,0 +1,66 @@
+{
+  "user_agent": "%E9%B2%B8%E8%90%BD%E6%96%87%E6%A1%88",
+  "bundle_id": "app.shadiao.jingluox",
+  "data": {
+    "AIPAY_15": {
+      "entitlements": [],
+      "product_identifier": "AIPAY_15"
+    },
+    "AIPAY_29.9": {
+      "entitlements": [],
+      "product_identifier": "AIPAY_29.9"
+    },
+    "AIPAY_9.9": {
+      "entitlements": [],
+      "product_identifier": "AIPAY_9.9"
+    },
+    "AI_PAY_15": {
+      "entitlements": [],
+      "product_identifier": "AI_PAY_15"
+    },
+    "AI_PAY_29.9": {
+      "entitlements": [],
+      "product_identifier": "AI_PAY_29.9"
+    },
+    "AI_PAY_9.9": {
+      "entitlements": [],
+      "product_identifier": "AI_PAY_9.9"
+    },
+    "COINS_AI_15": {
+      "entitlements": [
+        "ai"
+      ],
+      "product_identifier": "COINS_AI_15"
+    },
+    "COINS_AI_29.9": {
+      "entitlements": [
+        "ai"
+      ],
+      "product_identifier": "COINS_AI_29.9"
+    },
+    "COINS_AI_9.9": {
+      "entitlements": [
+        "ai"
+      ],
+      "product_identifier": "COINS_AI_9.9"
+    },
+    "jl_forever": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "jl_forever"
+    },
+    "jl_monthly": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "jl_monthly"
+    },
+    "jl_year": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "jl_year"
+    }
+  }
+}
