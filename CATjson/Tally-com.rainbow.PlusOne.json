@@ -1,0 +1,12 @@
+{
+  "user_agent": "Tally",
+  "bundle_id": "com.rainbow.PlusOne",
+  "data": {
+    "tally.remove_ad": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "tally.remove_ad"
+    }
+  }
+}
