@@ -1,0 +1,112 @@
+{
+  "user_agent": "TapeKit",
+  "bundle_id": "com.widget-kid",
+  "data": {
+    "com.widgetkid.annual": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "com.widgetkid.annual"
+    },
+    "com.widgetkid.discountannual": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "com.widgetkid.discountannual"
+    },
+    "com.widgetkid.gems5": {
+      "entitlements": [],
+      "product_identifier": "com.widgetkid.gems5"
+    },
+    "com.widgetkid.lifetime": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "com.widgetkid.lifetime"
+    },
+    "com.widgetkid.monthly1": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "com.widgetkid.monthly1"
+    },
+    "com.widgetkid.monthly3": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "com.widgetkid.monthly3"
+    },
+    "com.widgetkid.trialannual": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "com.widgetkid.trialannual"
+    },
+    "com.widgetkid.trialweekly": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "com.widgetkid.trialweekly"
+    },
+    "com.widgetkid.weekly": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "com.widgetkid.weekly"
+    },
+    "subs_0.99_7_0": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "subs_0.99_7_0"
+    },
+    "subs_1.99_30_0": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "subs_1.99_30_0"
+    },
+    "subs_19.99_365_0": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "subs_19.99_365_0"
+    },
+    "subs_19.99_365_3": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "subs_19.99_365_3"
+    },
+    "subs_19.99_365_7": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "subs_19.99_365_7"
+    },
+    "subs_2.99_7_0": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "subs_2.99_7_0"
+    },
+    "subs_23.99_365_0": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "subs_23.99_365_0"
+    },
+    "subs_29.99_365_0": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "subs_29.99_365_0"
+    },
+    "subs_3.99_30_0": {
+      "entitlements": [
+        "com.widgetkid.unlimited"
+      ],
+      "product_identifier": "subs_3.99_30_0"
+    }
+  }
+}
