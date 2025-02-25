@@ -1,0 +1,18 @@
+{
+  "user_agent": "PowerTimer",
+  "bundle_id": "net.tengl.powertimer",
+  "data": {
+    "powertimer.plus": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "powertimer.plus"
+    },
+    "powertimer_699_1y": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "powertimer_699_1y"
+    }
+  }
+}
