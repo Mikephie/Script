@@ -1,0 +1,30 @@
+{
+  "user_agent": "ShellBean",
+  "bundle_id": "com.ningle.shellbean",
+  "data": {
+    "com.ningle.shellbean.iap.forever": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.ningle.shellbean.iap.forever"
+    },
+    "com.ningle.shellbean.iap.forever.discount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.ningle.shellbean.iap.forever.discount"
+    },
+    "com.ningle.shellbean.subscription.year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.ningle.shellbean.subscription.year"
+    },
+    "com.ningle.shellbean.subscription.year.discount": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.ningle.shellbean.subscription.year.discount"
+    }
+  }
+}
