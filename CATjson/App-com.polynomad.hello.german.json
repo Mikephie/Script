@@ -1,0 +1,24 @@
+{
+  "user_agent": "App",
+  "bundle_id": "com.polynomad.hello.german",
+  "data": {
+    "com.hello.german.lifetime": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.hello.german.lifetime"
+    },
+    "com.hello.german.monthly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.hello.german.monthly"
+    },
+    "com.hello.german.yearly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "com.hello.german.yearly"
+    }
+  }
+}
