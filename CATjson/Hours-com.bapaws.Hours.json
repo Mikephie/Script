@@ -1,0 +1,24 @@
+{
+  "user_agent": "Hours",
+  "bundle_id": "com.bapaws.Hours",
+  "data": {
+    "com.bapaws.Hours.lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.bapaws.Hours.lifetime"
+    },
+    "com.bapaws.Hours.month": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.bapaws.Hours.month"
+    },
+    "com.bapaws.Hours.year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.bapaws.Hours.year"
+    }
+  }
+}
