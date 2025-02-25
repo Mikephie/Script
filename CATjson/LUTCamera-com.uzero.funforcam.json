@@ -1,0 +1,40 @@
+{
+  "user_agent": "LUTCamera",
+  "bundle_id": "com.uzero.funforcam",
+  "data": {
+    "com.uzero.funforcam.anualsub": {
+      "entitlements": [
+        "ProVersion"
+      ],
+      "product_identifier": "com.uzero.funforcam.anualsub"
+    },
+    "com.uzero.funforcam.lifetimepurchase": {
+      "entitlements": [
+        "ProVersionLifeTime"
+      ],
+      "product_identifier": "com.uzero.funforcam.lifetimepurchase"
+    },
+    "com.uzero.funforcam.lifetimepurchase.upfrommonth": {
+      "entitlements": [
+        "ProVersionLifeTime"
+      ],
+      "product_identifier": "com.uzero.funforcam.lifetimepurchase.upfrommonth"
+    },
+    "com.uzero.funforcam.lifetimepurchase.upgrade": {
+      "entitlements": [
+        "ProVersionLifeTime"
+      ],
+      "product_identifier": "com.uzero.funforcam.lifetimepurchase.upgrade"
+    },
+    "com.uzero.funforcam.monthlysub": {
+      "entitlements": [
+        "ProVersion"
+      ],
+      "product_identifier": "com.uzero.funforcam.monthlysub"
+    },
+    "com.uzero.funforcam.yearlysub": {
+      "entitlements": [],
+      "product_identifier": "com.uzero.funforcam.yearlysub"
+    }
+  }
+}
