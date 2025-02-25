@@ -1,0 +1,36 @@
+{
+  "user_agent": "AIKeyboard",
+  "bundle_id": "com.tappz.aikeyboard",
+  "data": {
+    "aiplus_keyboard_weekly": {
+      "entitlements": [
+        "plus_keyboard"
+      ],
+      "product_identifier": "aiplus_keyboard_weekly"
+    },
+    "aiplus_keyboard_weekly_0dt": {
+      "entitlements": [
+        "plus_keyboard"
+      ],
+      "product_identifier": "aiplus_keyboard_weekly_0dt"
+    },
+    "aiplus_keyboard_yearly": {
+      "entitlements": [
+        "plus_keyboard"
+      ],
+      "product_identifier": "aiplus_keyboard_yearly"
+    },
+    "tappz_aitype_1w_3dt_0499_sub01": {
+      "entitlements": [
+        "plus_keyboard"
+      ],
+      "product_identifier": "tappz_aitype_1w_3dt_0499_sub01"
+    },
+    "tappz_aitype_1y_3999_sub01": {
+      "entitlements": [
+        "plus_keyboard"
+      ],
+      "product_identifier": "tappz_aitype_1y_3999_sub01"
+    }
+  }
+}
