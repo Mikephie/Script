@@ -1,0 +1,60 @@
+{
+  "user_agent": "FretTrainer",
+  "bundle_id": "com.strongapps.frettrain",
+  "data": {
+    "frettrainer.allinstruments": {
+      "entitlements": [
+        "pro_all_instruments"
+      ],
+      "product_identifier": "frettrainer.allinstruments"
+    },
+    "frettrainer.banjo": {
+      "entitlements": [
+        "pro_banjo"
+      ],
+      "product_identifier": "frettrainer.banjo"
+    },
+    "frettrainer.bass": {
+      "entitlements": [
+        "pro_bass"
+      ],
+      "product_identifier": "frettrainer.bass"
+    },
+    "frettrainer.bass5string": {
+      "entitlements": [
+        "pro_bass_5"
+      ],
+      "product_identifier": "frettrainer.bass5string"
+    },
+    "frettrainer.guitar": {
+      "entitlements": [
+        "pro_guitar"
+      ],
+      "product_identifier": "frettrainer.guitar"
+    },
+    "frettrainer.mandolin": {
+      "entitlements": [
+        "pro_mandolin"
+      ],
+      "product_identifier": "frettrainer.mandolin"
+    },
+    "frettrainer.sub.monthly.pro": {
+      "entitlements": [
+        "pro_subscription"
+      ],
+      "product_identifier": "frettrainer.sub.monthly.pro"
+    },
+    "frettrainer.sub.yearly.pro": {
+      "entitlements": [
+        "pro_subscription"
+      ],
+      "product_identifier": "frettrainer.sub.yearly.pro"
+    },
+    "frettrainer.ukulele": {
+      "entitlements": [
+        "pro_ukulele"
+      ],
+      "product_identifier": "frettrainer.ukulele"
+    }
+  }
+}
