@@ -1,0 +1,188 @@
+{
+  "user_agent": "MorningAlarm",
+  "bundle_id": "com.danigil.alarm",
+  "data": {
+    "alarmify.monthly.1": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "alarmify.monthly.1"
+    },
+    "alarmify.weekly.1": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "alarmify.weekly.1"
+    },
+    "alarmify.yearly.1": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "alarmify.yearly.1"
+    },
+    "morning.group13.monthly.7df": {
+      "entitlements": [],
+      "product_identifier": "morning.group13.monthly.7df"
+    },
+    "morning.group13.weekly": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group13.weekly"
+    },
+    "morning.group13.weekly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group13.weekly.7df"
+    },
+    "morning.group13.yearly.7df": {
+      "entitlements": [],
+      "product_identifier": "morning.group13.yearly.7df"
+    },
+    "morning.group3.monthly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group3.monthly.7df"
+    },
+    "morning.group3.yearly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group3.yearly.7df"
+    },
+    "morning.group5.yearly": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group5.yearly"
+    },
+    "morning.group5.yearly.3df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group5.yearly.3df"
+    },
+    "morning.group5.yearly.3df.fs": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group5.yearly.3df.fs"
+    },
+    "morning.group5.yearly.fs": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group5.yearly.fs"
+    },
+    "morning.group6.monthly": {
+      "entitlements": [],
+      "product_identifier": "morning.group6.monthly"
+    },
+    "morning.group6.monthly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group6.monthly.7df"
+    },
+    "morning.group6.yearly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group6.yearly.7df"
+    },
+    "morning.group6.yearly.7df.fs": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group6.yearly.7df.fs"
+    },
+    "morning.group7.monthly": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group7.monthly"
+    },
+    "morning.group7.monthly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group7.monthly.7df"
+    },
+    "morning.group7.yearly": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group7.yearly"
+    },
+    "morning.group7.yearly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group7.yearly.7df"
+    },
+    "morning.group7.yearly.7df.fs": {
+      "entitlements": [],
+      "product_identifier": "morning.group7.yearly.7df.fs"
+    },
+    "morning.group8.yearly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "morning.group8.yearly.7df"
+    },
+    "night.group1.inapp.forever": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "night.group1.inapp.forever"
+    },
+    "night.group13.monthly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "night.group13.monthly.7df"
+    },
+    "night.group13.yearly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "night.group13.yearly.7df"
+    },
+    "night.group14.monthly": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "night.group14.monthly"
+    },
+    "night.group14.monthly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "night.group14.monthly.7df"
+    },
+    "night.group14.yearly": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "night.group14.yearly"
+    },
+    "night.group14.yearly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "night.group14.yearly.7df"
+    },
+    "night.group3.inapp.forever.students": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "night.group3.inapp.forever.students"
+    },
+    "night.group7.monthly.7df": {
+      "entitlements": [],
+      "product_identifier": "night.group7.monthly.7df"
+    }
+  }
+}
