@@ -1,0 +1,24 @@
+{
+  "user_agent": "metaslip",
+  "bundle_id": "com.metaslip.app",
+  "data": {
+    "ms_lifetime": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "ms_lifetime"
+    },
+    "ms_monthly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "ms_monthly"
+    },
+    "ms_yearly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "ms_yearly"
+    }
+  }
+}
