@@ -1,0 +1,120 @@
+{
+  "user_agent": "Teleprompter",
+  "bundle_id": "matekovacs.Teleprompter",
+  "data": {
+    "com.matekovacs.teleprompter.6months": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.matekovacs.teleprompter.6months"
+    },
+    "com.matekovacs.teleprompter.pro": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.matekovacs.teleprompter.pro"
+    },
+    "com.matekovacs.teleprompter.pro.lifetime": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.matekovacs.teleprompter.pro.lifetime"
+    },
+    "com.matekovacs.teleprompter.pro.yearly": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.matekovacs.teleprompter.pro.yearly"
+    },
+    "com.matekovacs.teleprompter.pro.yearly.longerTrial": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.matekovacs.teleprompter.pro.yearly.longerTrial"
+    },
+    "com.matekovacs.teleprompter.pro.yearly2": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.matekovacs.teleprompter.pro.yearly2"
+    },
+    "com.matekovacs.teleprompter.proMonthly": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.matekovacs.teleprompter.proMonthly"
+    },
+    "com.matekovacs.teleprompter.proMonthly.noTrial": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.matekovacs.teleprompter.proMonthly.noTrial"
+    },
+    "com.matekovacs.teleprompter.proWeekly": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.matekovacs.teleprompter.proWeekly"
+    },
+    "com.teleprompter.pro.annual": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.teleprompter.pro.annual"
+    },
+    "com.teleprompter.pro.annual.3day": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.teleprompter.pro.annual.3day"
+    },
+    "com.teleprompter.pro.annual.referral.offer": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.teleprompter.pro.annual.referral.offer"
+    },
+    "com.teleprompter.pro.annual.special": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.teleprompter.pro.annual.special"
+    },
+    "com.teleprompter.pro.biannual": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.teleprompter.pro.biannual"
+    },
+    "com.teleprompter.pro.halfprice": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.teleprompter.pro.halfprice"
+    },
+    "com.teleprompter.pro.monthly": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.teleprompter.pro.monthly"
+    },
+    "com.teleprompter.pro.monthly2": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.teleprompter.pro.monthly2"
+    },
+    "com.teleprompter.pro.weekly": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.teleprompter.pro.weekly"
+    },
+    "com.teleprompter.pro.weekly2": {
+      "entitlements": [
+        "Teleprompter Pro"
+      ],
+      "product_identifier": "com.teleprompter.pro.weekly2"
+    }
+  }
+}
