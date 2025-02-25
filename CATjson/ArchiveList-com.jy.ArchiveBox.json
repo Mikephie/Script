@@ -1,0 +1,12 @@
+{
+  "user_agent": "ArchiveList",
+  "bundle_id": "com.jy.ArchiveBox",
+  "data": {
+    "com.jy.ArchiveBox.pro_1": {
+      "entitlements": [
+        "pro_life"
+      ],
+      "product_identifier": "com.jy.ArchiveBox.pro_1"
+    }
+  }
+}
