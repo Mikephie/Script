@@ -1,0 +1,42 @@
+{
+  "user_agent": "PeachTree",
+  "bundle_id": "com.luohuanyu.PeachTree",
+  "data": {
+    "LifetimeGoldMembership": {
+      "entitlements": [
+        "GoldMember"
+      ],
+      "product_identifier": "LifetimeGoldMembership"
+    },
+    "LifetimePlatinumMembership": {
+      "entitlements": [
+        "PlatinumMember"
+      ],
+      "product_identifier": "LifetimePlatinumMembership"
+    },
+    "MappingMissionPackage": {
+      "entitlements": [
+        "MappingMission"
+      ],
+      "product_identifier": "MappingMissionPackage"
+    },
+    "MonthlyPlatinumMember": {
+      "entitlements": [
+        "PlatinumMember"
+      ],
+      "product_identifier": "MonthlyPlatinumMember"
+    },
+    "PlatinumMember": {
+      "entitlements": [
+        "PlatinumMember"
+      ],
+      "product_identifier": "PlatinumMember"
+    },
+    "SeasonPlatinumMember": {
+      "entitlements": [
+        "PlatinumMember"
+      ],
+      "product_identifier": "SeasonPlatinumMember"
+    }
+  }
+}
