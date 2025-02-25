@@ -1,0 +1,104 @@
+{
+  "user_agent": "Tide%20Guide",
+  "bundle_id": "com.condor.digital.Tide-Over",
+  "data": {
+    "3_Day_Pass": {
+      "entitlements": [],
+      "product_identifier": "3_Day_Pass"
+    },
+    "TideGuidePro_12Months": {
+      "entitlements": [],
+      "product_identifier": "TideGuidePro_12Months"
+    },
+    "TideGuidePro_12Months_29.99_7DayTrial": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TideGuidePro_12Months_29.99_7DayTrial"
+    },
+    "TideGuidePro_12Months_Family_49.99": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TideGuidePro_12Months_Family_49.99"
+    },
+    "TideGuidePro_12Months_Family_49.99_7DayTrial": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TideGuidePro_12Months_Family_49.99_7DayTrial"
+    },
+    "TideGuidePro_1Month_3.99_7DayTrial": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TideGuidePro_1Month_3.99_7DayTrial"
+    },
+    "TideGuidePro_Lifetime_Family_149.99": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TideGuidePro_Lifetime_Family_149.99"
+    },
+    "TideGuidePro_Month_4.99": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TideGuidePro_Month_4.99"
+    },
+    "TideGuidePro_Year_39.99": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TideGuidePro_Year_39.99"
+    },
+    "TidesPlus_12Months": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TidesPlus_12Months"
+    },
+    "TidesPlus_12Months_19.99": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TidesPlus_12Months_19.99"
+    },
+    "TidesPlus_12Months_29.99": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TidesPlus_12Months_29.99"
+    },
+    "TidesPlus_1Month": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TidesPlus_1Month"
+    },
+    "TidesPlus_1Month_3.99": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TidesPlus_1Month_3.99"
+    },
+    "TidesPlus_1Month_4.99": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TidesPlus_1Month_4.99"
+    },
+    "TidesPlus_Lifetime": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TidesPlus_Lifetime"
+    },
+    "TidesPlus_Lifetime_99.99": {
+      "entitlements": [
+        "Tides+"
+      ],
+      "product_identifier": "TidesPlus_Lifetime_99.99"
+    }
+  }
+}
