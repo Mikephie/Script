@@ -1,0 +1,24 @@
+{
+  "user_agent": "FastConnectLite",
+  "bundle_id": "com.freefastconnect.vpn.lite",
+  "data": {
+    "com.freefastconnect.vpn.lite.annual": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.freefastconnect.vpn.lite.annual"
+    },
+    "com.freefastconnect.vpn.lite.annual.trial": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.freefastconnect.vpn.lite.annual.trial"
+    },
+    "com.freefastconnect.vpn.lite.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.freefastconnect.vpn.lite.monthly"
+    }
+  }
+}
