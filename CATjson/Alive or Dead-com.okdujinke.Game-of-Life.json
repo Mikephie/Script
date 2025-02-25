@@ -1,0 +1,12 @@
+{
+  "user_agent": "Alive%20or%20Dead",
+  "bundle_id": "com.okdujinke.Game-of-Life",
+  "data": {
+    "com.dujinke.AliveOrDead.Unlimited": {
+      "entitlements": [
+        "Unlimited"
+      ],
+      "product_identifier": "com.dujinke.AliveOrDead.Unlimited"
+    }
+  }
+}
