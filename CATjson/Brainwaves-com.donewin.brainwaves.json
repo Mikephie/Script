@@ -1,0 +1,24 @@
+{
+  "user_agent": "Brainwaves",
+  "bundle_id": "com.donewin.brainwaves",
+  "data": {
+    "rive_premium_1_week": {
+      "entitlements": [
+        "rive_premium"
+      ],
+      "product_identifier": "rive_premium_1_week"
+    },
+    "rive_premium_1_year": {
+      "entitlements": [
+        "rive_premium"
+      ],
+      "product_identifier": "rive_premium_1_year"
+    },
+    "rive_premium_lifetime": {
+      "entitlements": [
+        "rive_premium"
+      ],
+      "product_identifier": "rive_premium_lifetime"
+    }
+  }
+}
