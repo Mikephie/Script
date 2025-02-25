@@ -1,0 +1,826 @@
+{
+  "user_agent": "Foodvisor",
+  "bundle_id": "com.foodvisor.Foodvisor",
+  "data": {
+    "com.foodvisor.Foodvisor.12month": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month"
+    },
+    "com.foodvisor.Foodvisor.12month.20discount": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.20discount"
+    },
+    "com.foodvisor.Foodvisor.12month.30discount": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.30discount"
+    },
+    "com.foodvisor.Foodvisor.12month.BFdiscount": {
+      "entitlements": [],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.BFdiscount"
+    },
+    "com.foodvisor.Foodvisor.12month.discount.l": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.discount.l"
+    },
+    "com.foodvisor.Foodvisor.12month.discount.m": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.discount.m"
+    },
+    "com.foodvisor.Foodvisor.12month.high": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.high"
+    },
+    "com.foodvisor.Foodvisor.12month.higher": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.higher"
+    },
+    "com.foodvisor.Foodvisor.12month.higher.family": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.higher.family"
+    },
+    "com.foodvisor.Foodvisor.12month.highest": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.highest"
+    },
+    "com.foodvisor.Foodvisor.12month.highest.family": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.highest.family"
+    },
+    "com.foodvisor.Foodvisor.12month.new": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.new"
+    },
+    "com.foodvisor.Foodvisor.12month.pro": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.12month.pro"
+    },
+    "com.foodvisor.Foodvisor.14free1month": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free1month"
+    },
+    "com.foodvisor.Foodvisor.14free1monthlight": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free1monthlight"
+    },
+    "com.foodvisor.Foodvisor.14free1monthpro": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free1monthpro"
+    },
+    "com.foodvisor.Foodvisor.14free1year": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free1year"
+    },
+    "com.foodvisor.Foodvisor.14free1year.high": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free1year.high"
+    },
+    "com.foodvisor.Foodvisor.14free1year.higher.family": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free1year.higher.family"
+    },
+    "com.foodvisor.Foodvisor.14free1year.highest": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free1year.highest"
+    },
+    "com.foodvisor.Foodvisor.14free1year.highest.family": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free1year.highest.family"
+    },
+    "com.foodvisor.Foodvisor.14free1year.light": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free1year.light"
+    },
+    "com.foodvisor.Foodvisor.14free1year.pro": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free1year.pro"
+    },
+    "com.foodvisor.Foodvisor.14free3month": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free3month"
+    },
+    "com.foodvisor.Foodvisor.14free3month.noworkout.nomealplan": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free3month.noworkout.nomealplan"
+    },
+    "com.foodvisor.Foodvisor.14free3monthhigh.noworkout.nomealplan": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free3monthhigh.noworkout.nomealplan"
+    },
+    "com.foodvisor.Foodvisor.14free3monthhigh.noworkout.norecipe": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free3monthhigh.noworkout.norecipe"
+    },
+    "com.foodvisor.Foodvisor.14free3monthpro": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free3monthpro"
+    },
+    "com.foodvisor.Foodvisor.14free6month": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.14free6month"
+    },
+    "com.foodvisor.Foodvisor.1month": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.1month"
+    },
+    "com.foodvisor.Foodvisor.1month.20discount": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.1month.20discount"
+    },
+    "com.foodvisor.Foodvisor.1month.30discount": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.1month.30discount"
+    },
+    "com.foodvisor.Foodvisor.1month.50discount": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.1month.50discount"
+    },
+    "com.foodvisor.Foodvisor.1month.50discount.noworkout.nomealplan": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.1month.50discount.noworkout.nomealplan"
+    },
+    "com.foodvisor.Foodvisor.1month.50discount.noworkout.norecipe": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.1month.50discount.noworkout.norecipe"
+    },
+    "com.foodvisor.Foodvisor.1month.high": {
+      "entitlements": [],
+      "product_identifier": "com.foodvisor.Foodvisor.1month.high"
+    },
+    "com.foodvisor.Foodvisor.1month.new": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.1month.new"
+    },
+    "com.foodvisor.Foodvisor.1month.platinum": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.1month.platinum"
+    },
+    "com.foodvisor.Foodvisor.1month.pro": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.1month.pro"
+    },
+    "com.foodvisor.Foodvisor.1monthfree1year": {
+      "entitlements": [],
+      "product_identifier": "com.foodvisor.Foodvisor.1monthfree1year"
+    },
+    "com.foodvisor.Foodvisor.1week": {
+      "entitlements": [],
+      "product_identifier": "com.foodvisor.Foodvisor.1week"
+    },
+    "com.foodvisor.Foodvisor.1week.platinum": {
+      "entitlements": [],
+      "product_identifier": "com.foodvisor.Foodvisor.1week.platinum"
+    },
+    "com.foodvisor.Foodvisor.2month.platinum": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.2month.platinum"
+    },
+    "com.foodvisor.Foodvisor.2monthsfree1year": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.2monthsfree1year"
+    },
+    "com.foodvisor.Foodvisor.3free1year": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3free1year"
+    },
+    "com.foodvisor.Foodvisor.3free3months": {
+      "entitlements": [],
+      "product_identifier": "com.foodvisor.Foodvisor.3free3months"
+    },
+    "com.foodvisor.Foodvisor.3free6months": {
+      "entitlements": [],
+      "product_identifier": "com.foodvisor.Foodvisor.3free6months"
+    },
+    "com.foodvisor.Foodvisor.3month": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3month"
+    },
+    "com.foodvisor.Foodvisor.3month.20discount": {
+      "entitlements": [],
+      "product_identifier": "com.foodvisor.Foodvisor.3month.20discount"
+    },
+    "com.foodvisor.Foodvisor.3month.30discount": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3month.30discount"
+    },
+    "com.foodvisor.Foodvisor.3month.high": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3month.high"
+    },
+    "com.foodvisor.Foodvisor.3month.high.noworkout.nomealplan": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3month.high.noworkout.nomealplan"
+    },
+    "com.foodvisor.Foodvisor.3month.high.noworkout.norecipe": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3month.high.noworkout.norecipe"
+    },
+    "com.foodvisor.Foodvisor.3month.new": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3month.new"
+    },
+    "com.foodvisor.Foodvisor.3month.platinum": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3month.platinum"
+    },
+    "com.foodvisor.Foodvisor.3month.pro": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3month.pro"
+    },
+    "com.foodvisor.Foodvisor.3month.pro.noworkout.nomealplan": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3month.pro.noworkout.nomealplan"
+    },
+    "com.foodvisor.Foodvisor.3month.pure": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3month.pure"
+    },
+    "com.foodvisor.Foodvisor.3monthsfree1year": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.3monthsfree1year"
+    },
+    "com.foodvisor.Foodvisor.6month.platinum": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.6month.platinum"
+    },
+    "com.foodvisor.Foodvisor.6month.platinum.noworkout.nomealplan": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.6month.platinum.noworkout.nomealplan"
+    },
+    "com.foodvisor.Foodvisor.6month.platinum.noworkout.norecipe": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.6month.platinum.noworkout.norecipe"
+    },
+    "com.foodvisor.Foodvisor.7free1year": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.7free1year"
+    },
+    "com.foodvisor.Foodvisor.7free1year.pro": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.7free1year.pro"
+    },
+    "com.foodvisor.Foodvisor.7free3month": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.7free3month"
+    },
+    "com.foodvisor.Foodvisor.7free3months": {
+      "entitlements": [],
+      "product_identifier": "com.foodvisor.Foodvisor.7free3months"
+    },
+    "com.foodvisor.Foodvisor.7free6months": {
+      "entitlements": [],
+      "product_identifier": "com.foodvisor.Foodvisor.7free6months"
+    },
+    "com.foodvisor.Foodvisor.7trial1month": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.7trial1month"
+    },
+    "com.foodvisor.Foodvisor.7trial3month": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "journal",
+        "nutritional_facts",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.7trial3month"
+    },
+    "com.foodvisor.Foodvisor.7trial3monthpro": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.7trial3monthpro"
+    },
+    "com.foodvisor.Foodvisor.7trial6month": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.7trial6month"
+    },
+    "com.foodvisor.Foodvisor.BundleSportRecipe": {
+      "entitlements": [
+        "recipe",
+        "workout"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.BundleSportRecipe"
+    },
+    "com.foodvisor.Foodvisor.BundleSportRecipeLight": {
+      "entitlements": [
+        "recipe",
+        "workout"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.BundleSportRecipeLight"
+    },
+    "com.foodvisor.Foodvisor.BundleSportRecipePlus": {
+      "entitlements": [
+        "recipe",
+        "workout"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.BundleSportRecipePlus"
+    },
+    "com.foodvisor.Foodvisor.BundleSportRecipePro": {
+      "entitlements": [
+        "recipe",
+        "workout"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.BundleSportRecipePro"
+    },
+    "com.foodvisor.Foodvisor.bundle.workout.mealplan": {
+      "entitlements": [
+        "meal_plan",
+        "workout"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.bundle.workout.mealplan"
+    },
+    "com.foodvisor.Foodvisor.bundlelight.workout.mealplan": {
+      "entitlements": [
+        "meal_plan",
+        "workout"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.bundlelight.workout.mealplan"
+    },
+    "com.foodvisor.Foodvisor.bundleplus.workout.mealplan": {
+      "entitlements": [
+        "meal_plan",
+        "workout"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.bundleplus.workout.mealplan"
+    },
+    "com.foodvisor.Foodvisor.bundlepro.workout.mealplan": {
+      "entitlements": [
+        "meal_plan",
+        "workout"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.bundlepro.workout.mealplan"
+    },
+    "com.foodvisor.Foodvisor.lifetime": {
+      "entitlements": [
+        "coaching",
+        "daily_assessment",
+        "diet_article",
+        "full_access",
+        "journal",
+        "nutritional_facts",
+        "premium",
+        "recipe"
+      ],
+      "product_identifier": "com.foodvisor.Foodvisor.lifetime"
+    }
+  }
+}
