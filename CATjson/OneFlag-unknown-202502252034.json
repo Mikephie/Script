@@ -1,0 +1,18 @@
+{
+  "user_agent": "OneFlag",
+  "bundle_id": "unknown-202502252034",
+  "data": {
+    "online.ohwe.OneFlag.Lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "online.ohwe.OneFlag.Lifetime"
+    },
+    "online.ohwe.OneFlag.Yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "online.ohwe.OneFlag.Yearly"
+    }
+  }
+}
