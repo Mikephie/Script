@@ -1,0 +1,39 @@
+{
+  "user_agent": "Sky%20Remote",
+  "bundle_id": "msdcangel.com.skyremote",
+  "data": {
+    "PremiumUser": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "PremiumUser"
+    },
+    "RCAnnual": {
+      "entitlements": [
+        "premium",
+        "premium_features"
+      ],
+      "product_identifier": "RCAnnual"
+    },
+    "RCWeekly": {
+      "entitlements": [
+        "premium",
+        "premium_features"
+      ],
+      "product_identifier": "RCWeekly"
+    },
+    "T1RemoveAds": {
+      "entitlements": [
+        "premium_features",
+        "remove_ads"
+      ],
+      "product_identifier": "T1RemoveAds"
+    },
+    "T2AllPremium": {
+      "entitlements": [
+        "premium_features"
+      ],
+      "product_identifier": "T2AllPremium"
+    }
+  }
+}
