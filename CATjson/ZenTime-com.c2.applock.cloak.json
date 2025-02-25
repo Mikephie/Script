@@ -1,0 +1,24 @@
+{
+  "user_agent": "ZenTime",
+  "bundle_id": "com.c2.applock.cloak",
+  "data": {
+    "com.c2.applock.cloak.lifetime": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.c2.applock.cloak.lifetime"
+    },
+    "com.c2.applock.cloak.weekly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.c2.applock.cloak.weekly"
+    },
+    "com.c2.applock.cloak.yearly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.c2.applock.cloak.yearly"
+    }
+  }
+}
