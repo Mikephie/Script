@@ -1,0 +1,28 @@
+{
+  "user_agent": "LazyBoard",
+  "bundle_id": "com.bokhary.magicboard",
+  "data": {
+    "com.bokhary.lazyboard.monthlyprosubscription": {
+      "entitlements": [
+        "lazyboardMonthlySubscription"
+      ],
+      "product_identifier": "com.bokhary.lazyboard.monthlyprosubscription"
+    },
+    "com.bokhary.lazyboard.yearlyprosubscription": {
+      "entitlements": [
+        "lazyboardYearlySubscription"
+      ],
+      "product_identifier": "com.bokhary.lazyboard.yearlyprosubscription"
+    },
+    "com.bokhary.magicboard.lazyboard50keys": {
+      "entitlements": [],
+      "product_identifier": "com.bokhary.magicboard.lazyboard50keys"
+    },
+    "com.bokhary.magicboard.magicboardpro": {
+      "entitlements": [
+        "lazyboardPro"
+      ],
+      "product_identifier": "com.bokhary.magicboard.magicboardpro"
+    }
+  }
+}
