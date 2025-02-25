@@ -1,0 +1,42 @@
+{
+  "user_agent": "PROVPN",
+  "bundle_id": "com.adpsafe.provpnwebshield",
+  "data": {
+    "com.provpn.month": {
+      "entitlements": [
+        "Monthly Plan with Trial"
+      ],
+      "product_identifier": "com.provpn.month"
+    },
+    "com.provpn.week": {
+      "entitlements": [
+        "Weekly Plan with Trial"
+      ],
+      "product_identifier": "com.provpn.week"
+    },
+    "com.provpn.year": {
+      "entitlements": [
+        "Yearly Plan with Trial"
+      ],
+      "product_identifier": "com.provpn.year"
+    },
+    "provpn.month": {
+      "entitlements": [
+        "Montly Plan"
+      ],
+      "product_identifier": "provpn.month"
+    },
+    "provpn.week": {
+      "entitlements": [
+        "Weekly Plan"
+      ],
+      "product_identifier": "provpn.week"
+    },
+    "provpn.year": {
+      "entitlements": [
+        "Yearly Plan"
+      ],
+      "product_identifier": "provpn.year"
+    }
+  }
+}
