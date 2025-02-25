@@ -1,0 +1,66 @@
+{
+  "user_agent": "Brushes",
+  "bundle_id": "com.DariaPletnova.BRUSH",
+  "data": {
+    "brs_3999_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "brs_3999_1y"
+    },
+    "brs_3999_1y_discounts": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "brs_3999_1y_discounts"
+    },
+    "brs_3999_1y_intro": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "brs_3999_1y_intro"
+    },
+    "brs_4799_lt": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "brs_4799_lt"
+    },
+    "brs_499_1w": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "brs_499_1w"
+    },
+    "brs_499_1w_discounts": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "brs_499_1w_discounts"
+    },
+    "brs_499_1w_intro": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "brs_499_1w_intro"
+    },
+    "brs_999_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "brs_999_1m"
+    },
+    "brs_999_1m_discounts": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "brs_999_1m_discounts"
+    },
+    "brs_999_1m_intro": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "brs_999_1m_intro"
+    }
+  }
+}
