@@ -1,0 +1,1452 @@
+{
+  "user_agent": "Drops",
+  "bundle_id": "com.planblabs.drops.italian",
+  "data": {
+    "drops_monthly_topup_nonrenew": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "drops_monthly_topup_nonrenew"
+    },
+    "drops_time_onetime_400": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "drops_time_onetime_400"
+    },
+    "drops_topup_forever_10mins_discounted": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "drops_topup_forever_10mins_discounted"
+    },
+    "drops_topup_forever_5mins": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "drops_topup_forever_5mins"
+    },
+    "drops_topup_forever_99mins": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "drops_topup_forever_99mins"
+    },
+    "drops_topup_forever_99mins_discounted": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "drops_topup_forever_99mins_discounted"
+    },
+    "drops_topup_monthly_10mins_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "drops_topup_monthly_10mins_int"
+    },
+    "drops_topup_yearly_10mins_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "drops_topup_yearly_10mins_int"
+    },
+    "forever_10_mins_discounted_40_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_10_mins_discounted_40_int"
+    },
+    "forever_10_mins_discounted_50_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_10_mins_discounted_50_int"
+    },
+    "forever_10_mins_discounted_80_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_10_mins_discounted_80_int"
+    },
+    "forever_all_languages_discounted_40_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_all_languages_discounted_40_int"
+    },
+    "forever_all_languages_discounted_50_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_all_languages_discounted_50_int"
+    },
+    "forever_all_languages_discounted_55_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_all_languages_discounted_55_int"
+    },
+    "forever_all_languages_discounted_60_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_all_languages_discounted_60_int"
+    },
+    "forever_all_languages_discounted_80_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_all_languages_discounted_80_int"
+    },
+    "forever_all_languages_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_all_languages_int"
+    },
+    "forever_unlimited_time_discounted_40_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_unlimited_time_discounted_40_int"
+    },
+    "forever_unlimited_time_discounted_50_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_unlimited_time_discounted_50_int"
+    },
+    "forever_unlimited_time_discounted_80_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "forever_unlimited_time_discounted_80_int"
+    },
+    "gift_lifetime_discount_50_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_discount_50_tier_0_int"
+    },
+    "gift_lifetime_discount_50_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_discount_50_tier_a_int"
+    },
+    "gift_lifetime_discount_50_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_discount_50_tier_b_int"
+    },
+    "gift_lifetime_discount_50_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_discount_50_tier_c_int"
+    },
+    "gift_lifetime_discount_50_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_discount_50_tier_d_int"
+    },
+    "gift_lifetime_discount_55_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_discount_55_tier_0_int"
+    },
+    "gift_lifetime_discount_55_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_discount_55_tier_b_int"
+    },
+    "gift_lifetime_discount_55_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_discount_55_tier_c_int"
+    },
+    "gift_lifetime_discount_55_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_discount_55_tier_d_int"
+    },
+    "gift_lifetime_full_price_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_full_price_tier_0_int"
+    },
+    "gift_lifetime_full_price_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_full_price_tier_a_int"
+    },
+    "gift_lifetime_full_price_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_full_price_tier_c_int"
+    },
+    "gift_lifetime_full_price_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "gift_lifetime_full_price_tier_d_int"
+    },
+    "italian_drops_topup": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "italian_drops_topup"
+    },
+    "premium_halfyear_40_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_halfyear_40_int"
+    },
+    "premium_lifetime_160_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_160_int_v2"
+    },
+    "premium_lifetime_180_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_180_int_v2"
+    },
+    "premium_lifetime_55_plus1_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_55_plus1_int"
+    },
+    "premium_lifetime_discount_40_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_0_int"
+    },
+    "premium_lifetime_discount_40_tier_0_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_0_int_2x"
+    },
+    "premium_lifetime_discount_40_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_a_int"
+    },
+    "premium_lifetime_discount_40_tier_a_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_a_int_2x"
+    },
+    "premium_lifetime_discount_40_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_b_int"
+    },
+    "premium_lifetime_discount_40_tier_b_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_b_int_2x"
+    },
+    "premium_lifetime_discount_40_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_c_int"
+    },
+    "premium_lifetime_discount_40_tier_c_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_c_int_2x"
+    },
+    "premium_lifetime_discount_40_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_d_int"
+    },
+    "premium_lifetime_discount_40_tier_d_int_2_5x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_d_int_2_5x"
+    },
+    "premium_lifetime_discount_40_tier_d_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_d_int_2x"
+    },
+    "premium_lifetime_discount_40_tier_d_int_3x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_d_int_3x"
+    },
+    "premium_lifetime_discount_40_tier_d_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_40_tier_d_int_v2"
+    },
+    "premium_lifetime_discount_45_bogo_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_bogo_tier_0_int"
+    },
+    "premium_lifetime_discount_45_bogo_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_bogo_tier_a_int"
+    },
+    "premium_lifetime_discount_45_bogo_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_bogo_tier_b_int"
+    },
+    "premium_lifetime_discount_45_bogo_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_bogo_tier_c_int"
+    },
+    "premium_lifetime_discount_45_bogo_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_bogo_tier_d_int"
+    },
+    "premium_lifetime_discount_45_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_tier_0_int"
+    },
+    "premium_lifetime_discount_45_tier_0_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_tier_0_int_2x"
+    },
+    "premium_lifetime_discount_45_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_tier_a_int"
+    },
+    "premium_lifetime_discount_45_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_tier_b_int"
+    },
+    "premium_lifetime_discount_45_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_tier_c_int"
+    },
+    "premium_lifetime_discount_45_tier_c_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_tier_c_int_2x"
+    },
+    "premium_lifetime_discount_45_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_45_tier_d_int"
+    },
+    "premium_lifetime_discount_50_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_0_int"
+    },
+    "premium_lifetime_discount_50_tier_0_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_0_int_2x"
+    },
+    "premium_lifetime_discount_50_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_a_int"
+    },
+    "premium_lifetime_discount_50_tier_a_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_a_int_2x"
+    },
+    "premium_lifetime_discount_50_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_b_int"
+    },
+    "premium_lifetime_discount_50_tier_b_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_b_int_2x"
+    },
+    "premium_lifetime_discount_50_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_c_int"
+    },
+    "premium_lifetime_discount_50_tier_c_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_c_int_2x"
+    },
+    "premium_lifetime_discount_50_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_d_int"
+    },
+    "premium_lifetime_discount_50_tier_d_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_d_int_2x"
+    },
+    "premium_lifetime_discount_50_tier_d_int_3x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_d_int_3x"
+    },
+    "premium_lifetime_discount_50_tier_d_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_50_tier_d_int_v2"
+    },
+    "premium_lifetime_discount_55_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_55_tier_0_int"
+    },
+    "premium_lifetime_discount_55_tier_0_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_55_tier_0_int_2x"
+    },
+    "premium_lifetime_discount_55_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_55_tier_a_int"
+    },
+    "premium_lifetime_discount_55_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_55_tier_b_int"
+    },
+    "premium_lifetime_discount_55_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_55_tier_c_int"
+    },
+    "premium_lifetime_discount_55_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_55_tier_d_int"
+    },
+    "premium_lifetime_discount_60_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_60_tier_0_int"
+    },
+    "premium_lifetime_discount_60_tier_0_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_60_tier_0_int_2x"
+    },
+    "premium_lifetime_discount_60_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_60_tier_a_int"
+    },
+    "premium_lifetime_discount_60_tier_a_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_60_tier_a_int_2x"
+    },
+    "premium_lifetime_discount_60_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_60_tier_b_int"
+    },
+    "premium_lifetime_discount_60_tier_b_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_60_tier_b_int_2x"
+    },
+    "premium_lifetime_discount_60_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_60_tier_c_int"
+    },
+    "premium_lifetime_discount_60_tier_c_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_60_tier_c_int_2x"
+    },
+    "premium_lifetime_discount_60_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_60_tier_d_int"
+    },
+    "premium_lifetime_discount_60_tier_d_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_60_tier_d_int_2x"
+    },
+    "premium_lifetime_discount_65_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_65_tier_0_int"
+    },
+    "premium_lifetime_discount_65_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_65_tier_a_int"
+    },
+    "premium_lifetime_discount_65_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_65_tier_b_int"
+    },
+    "premium_lifetime_discount_65_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_65_tier_c_int"
+    },
+    "premium_lifetime_discount_65_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_65_tier_d_int"
+    },
+    "premium_lifetime_full_price_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_0_int"
+    },
+    "premium_lifetime_full_price_tier_0_int_2_5x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_0_int_2_5x"
+    },
+    "premium_lifetime_full_price_tier_0_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_0_int_2x"
+    },
+    "premium_lifetime_full_price_tier_0_int_3x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_0_int_3x"
+    },
+    "premium_lifetime_full_price_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_a_int"
+    },
+    "premium_lifetime_full_price_tier_a_int_2_5x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_a_int_2_5x"
+    },
+    "premium_lifetime_full_price_tier_a_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_a_int_2x"
+    },
+    "premium_lifetime_full_price_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_b_int"
+    },
+    "premium_lifetime_full_price_tier_b_int_2_5x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_b_int_2_5x"
+    },
+    "premium_lifetime_full_price_tier_b_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_b_int_2x"
+    },
+    "premium_lifetime_full_price_tier_b_int_3x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_b_int_3x"
+    },
+    "premium_lifetime_full_price_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_c_int"
+    },
+    "premium_lifetime_full_price_tier_c_int_2_5x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_c_int_2_5x"
+    },
+    "premium_lifetime_full_price_tier_c_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_c_int_2x"
+    },
+    "premium_lifetime_full_price_tier_c_int_3x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_c_int_3x"
+    },
+    "premium_lifetime_full_price_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_d_int"
+    },
+    "premium_lifetime_full_price_tier_d_int_2_5x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_d_int_2_5x"
+    },
+    "premium_lifetime_full_price_tier_d_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_d_int_2x"
+    },
+    "premium_lifetime_full_price_tier_d_int_3x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_d_int_3x"
+    },
+    "premium_lifetime_full_price_tier_d_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_d_int_v2"
+    },
+    "premium_lifetime_full_price_tier_y_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_full_price_tier_y_int"
+    },
+    "premium_monthly_10_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_monthly_10_int_v2"
+    },
+    "premium_monthly_13_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_monthly_13_int_v2"
+    },
+    "premium_monthly_15_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_monthly_15_int_v2"
+    },
+    "premium_monthly_full_price_tier_0_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_monthly_full_price_tier_0_int_v2"
+    },
+    "premium_monthly_full_price_tier_a_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_monthly_full_price_tier_a_int_v2"
+    },
+    "premium_monthly_full_price_tier_b_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_monthly_full_price_tier_b_int_v2"
+    },
+    "premium_monthly_full_price_tier_c_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_monthly_full_price_tier_c_int_v2"
+    },
+    "premium_monthly_full_price_tier_d_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_monthly_full_price_tier_d_int_v2"
+    },
+    "premium_quarterly_20_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_quarterly_20_int"
+    },
+    "premium_quarterly_30_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_quarterly_30_int_v2"
+    },
+    "premium_quarterly_30_int_v3": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_quarterly_30_int_v3"
+    },
+    "premium_quarterly_full_price_tier_0_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_quarterly_full_price_tier_0_int_v2"
+    },
+    "premium_quarterly_full_price_tier_a_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_quarterly_full_price_tier_a_int_v2"
+    },
+    "premium_quarterly_full_price_tier_b_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_quarterly_full_price_tier_b_int_v2"
+    },
+    "premium_quarterly_full_price_tier_c_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_quarterly_full_price_tier_c_int_v2"
+    },
+    "premium_quarterly_full_price_tier_d_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_quarterly_full_price_tier_d_int_v2"
+    },
+    "premium_weekly_3_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_weekly_3_int"
+    },
+    "premium_weekly_5_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_weekly_5_int"
+    },
+    "premium_weekly_7_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_weekly_7_int"
+    },
+    "premium_yearly_30_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_30_int"
+    },
+    "premium_yearly_35_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_35_int"
+    },
+    "premium_yearly_35_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_35_int_v2"
+    },
+    "premium_yearly_36_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_36_int"
+    },
+    "premium_yearly_40_freetrial_int_v3": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_40_freetrial_int_v3"
+    },
+    "premium_yearly_40_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_40_int_v2"
+    },
+    "premium_yearly_42_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_42_int"
+    },
+    "premium_yearly_45_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_45_int_v2"
+    },
+    "premium_yearly_48_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_48_int"
+    },
+    "premium_yearly_50_int_v3": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_50_int_v3"
+    },
+    "premium_yearly_54_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_54_int"
+    },
+    "premium_yearly_55_int_v3": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_55_int_v3"
+    },
+    "premium_yearly_56_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_56_int"
+    },
+    "premium_yearly_60_free_trial_7_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_60_free_trial_7_int"
+    },
+    "premium_yearly_60_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_60_int"
+    },
+    "premium_yearly_64_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_64_int"
+    },
+    "premium_yearly_70_freetrial_ar_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_ar_int_v2"
+    },
+    "premium_yearly_70_freetrial_de_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_de_int_v2"
+    },
+    "premium_yearly_70_freetrial_en_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_en_int_v2"
+    },
+    "premium_yearly_70_freetrial_es_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_es_int_v2"
+    },
+    "premium_yearly_70_freetrial_fr_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_fr_int_v2"
+    },
+    "premium_yearly_70_freetrial_he_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_he_int_v2"
+    },
+    "premium_yearly_70_freetrial_hi_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_hi_int_v2"
+    },
+    "premium_yearly_70_freetrial_ic_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_ic_int_v2"
+    },
+    "premium_yearly_70_freetrial_id_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_id_int_v2"
+    },
+    "premium_yearly_70_freetrial_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_int_v2"
+    },
+    "premium_yearly_70_freetrial_it_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_it_int_v2"
+    },
+    "premium_yearly_70_freetrial_jp_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_jp_int_v2"
+    },
+    "premium_yearly_70_freetrial_ko_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_ko_int_v2"
+    },
+    "premium_yearly_70_freetrial_nl_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_nl_int_v2"
+    },
+    "premium_yearly_70_freetrial_no_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_no_int_v2"
+    },
+    "premium_yearly_70_freetrial_pl_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_pl_int_v2"
+    },
+    "premium_yearly_70_freetrial_pt_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_pt_int_v2"
+    },
+    "premium_yearly_70_freetrial_ru_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_ru_int_v2"
+    },
+    "premium_yearly_70_freetrial_th_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_th_int_v2"
+    },
+    "premium_yearly_70_freetrial_tl_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_tl_int_v2"
+    },
+    "premium_yearly_70_freetrial_tr_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_tr_int_v2"
+    },
+    "premium_yearly_70_freetrial_vi_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_vi_int_v2"
+    },
+    "premium_yearly_70_freetrial_zh_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_freetrial_zh_int_v2"
+    },
+    "premium_yearly_70_int_v2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_70_int_v2"
+    },
+    "premium_yearly_72_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_72_int"
+    },
+    "premium_yearly_80_free_trial_7_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_80_free_trial_7_int"
+    },
+    "premium_yearly_90_free_trial_7int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_90_free_trial_7int"
+    },
+    "premium_yearly_90_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_90_int"
+    },
+    "premium_yearly_discount_20_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_20_tier_0_int"
+    },
+    "premium_yearly_discount_20_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_20_tier_a_int"
+    },
+    "premium_yearly_discount_20_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_20_tier_b_int"
+    },
+    "premium_yearly_discount_20_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_20_tier_c_int"
+    },
+    "premium_yearly_discount_20_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_20_tier_d_int"
+    },
+    "premium_yearly_discount_40_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_40_tier_0_int"
+    },
+    "premium_yearly_discount_40_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_40_tier_a_int"
+    },
+    "premium_yearly_discount_40_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_40_tier_b_int"
+    },
+    "premium_yearly_discount_40_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_40_tier_c_int"
+    },
+    "premium_yearly_discount_40_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_40_tier_d_int"
+    },
+    "premium_yearly_discount_45_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_45_tier_0_int"
+    },
+    "premium_yearly_discount_45_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_45_tier_a_int"
+    },
+    "premium_yearly_discount_45_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_45_tier_b_int"
+    },
+    "premium_yearly_discount_45_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_45_tier_c_int"
+    },
+    "premium_yearly_discount_45_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_45_tier_d_int"
+    },
+    "premium_yearly_discount_50_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_50_tier_0_int"
+    },
+    "premium_yearly_discount_50_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_50_tier_a_int"
+    },
+    "premium_yearly_discount_50_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_50_tier_b_int"
+    },
+    "premium_yearly_discount_50_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_50_tier_c_int"
+    },
+    "premium_yearly_discount_50_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_50_tier_d_int"
+    },
+    "premium_yearly_discount_55_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_55_tier_0_int"
+    },
+    "premium_yearly_discount_55_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_55_tier_a_int"
+    },
+    "premium_yearly_discount_55_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_55_tier_b_int"
+    },
+    "premium_yearly_discount_55_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_55_tier_c_int"
+    },
+    "premium_yearly_discount_55_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_55_tier_d_int"
+    },
+    "premium_yearly_discount_60_bogo_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_60_bogo_tier_a_int"
+    },
+    "premium_yearly_discount_60_bogo_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_60_bogo_tier_b_int"
+    },
+    "premium_yearly_discount_60_bogo_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_60_bogo_tier_c_int"
+    },
+    "premium_yearly_discount_60_bogo_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_60_bogo_tier_d_int"
+    },
+    "premium_yearly_discount_60_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_60_tier_0_int"
+    },
+    "premium_yearly_discount_60_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_60_tier_a_int"
+    },
+    "premium_yearly_discount_60_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_60_tier_b_int"
+    },
+    "premium_yearly_discount_60_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_60_tier_c_int"
+    },
+    "premium_yearly_discount_60_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_60_tier_d_int"
+    },
+    "premium_yearly_discount_65_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_65_tier_0_int"
+    },
+    "premium_yearly_discount_65_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_discount_65_tier_d_int"
+    },
+    "premium_yearly_full_price_tier_0_free_trial_7_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_0_free_trial_7_int"
+    },
+    "premium_yearly_full_price_tier_0_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_0_int"
+    },
+    "premium_yearly_full_price_tier_a_free_trial_14_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_a_free_trial_14_int"
+    },
+    "premium_yearly_full_price_tier_a_free_trial_7_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_a_free_trial_7_int"
+    },
+    "premium_yearly_full_price_tier_a_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_a_int"
+    },
+    "premium_yearly_full_price_tier_b_free_trial_14_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_b_free_trial_14_int"
+    },
+    "premium_yearly_full_price_tier_b_free_trial_7_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_b_free_trial_7_int"
+    },
+    "premium_yearly_full_price_tier_b_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_b_int"
+    },
+    "premium_yearly_full_price_tier_c_free_trial_14_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_c_free_trial_14_int"
+    },
+    "premium_yearly_full_price_tier_c_free_trial_7_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_c_free_trial_7_int"
+    },
+    "premium_yearly_full_price_tier_c_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_c_int"
+    },
+    "premium_yearly_full_price_tier_d_free_trial_14_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_d_free_trial_14_int"
+    },
+    "premium_yearly_full_price_tier_d_free_trial_7_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_d_free_trial_7_int"
+    },
+    "premium_yearly_full_price_tier_d_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_yearly_full_price_tier_d_int"
+    },
+    "subscription_monthly_all_languages_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "subscription_monthly_all_languages_int"
+    },
+    "subscription_monthly_all_languages_trial_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "subscription_monthly_all_languages_trial_int"
+    },
+    "subscription_monthly_unliminted_time_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "subscription_monthly_unliminted_time_int"
+    },
+    "subscription_monthly_unliminted_time_trial_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "subscription_monthly_unliminted_time_trial_int"
+    },
+    "subscription_yearly_all_languages_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "subscription_yearly_all_languages_int"
+    },
+    "subscription_yearly_unliminted_time_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "subscription_yearly_unliminted_time_int"
+    },
+    "test": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "test"
+    },
+    "yearly_tier_0_free_trial_3_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "yearly_tier_0_free_trial_3_int"
+    },
+    "yearly_tier_b_free_trial_3_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "yearly_tier_b_free_trial_3_int"
+    },
+    "yearly_tier_c_free_trial_3_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "yearly_tier_c_free_trial_3_int"
+    },
+    "yearly_tier_d_free_trial_3_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "yearly_tier_d_free_trial_3_int"
+    }
+  }
+}
