@@ -1,0 +1,24 @@
+{
+  "user_agent": "AMood",
+  "bundle_id": "HengYi.AMood",
+  "data": {
+    "1001": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "1001"
+    },
+    "1003": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "1003"
+    },
+    "1008": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "1008"
+    }
+  }
+}
