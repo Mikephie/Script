@@ -1,0 +1,110 @@
+{
+  "user_agent": "ScoreSkills",
+  "bundle_id": "co.compoze.scoreskills",
+  "data": {
+    "co.compoze.scoreSkills3MonthSubscriptionWithTrial.22usd": {
+      "entitlements": [],
+      "product_identifier": "co.compoze.scoreSkills3MonthSubscriptionWithTrial.22usd"
+    },
+    "co.compoze.scoreSkills3MonthsSubscription.20usd": {
+      "entitlements": [],
+      "product_identifier": "co.compoze.scoreSkills3MonthsSubscription.20usd"
+    },
+    "co.compoze.scoreSkills3MonthsSubscription.21usd": {
+      "entitlements": [],
+      "product_identifier": "co.compoze.scoreSkills3MonthsSubscription.21usd"
+    },
+    "co.compoze.scoreSkills3MonthsSubscription.22usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkills3MonthsSubscription.22usd"
+    },
+    "co.compoze.scoreSkills3MonthsSubscriptionWithTrial.22usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkills3MonthsSubscriptionWithTrial.22usd"
+    },
+    "co.compoze.scoreSkills6MonthsSubscription.36usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkills6MonthsSubscription.36usd"
+    },
+    "co.compoze.scoreSkills6MonthsSubscriptionWithTrial.36usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkills6MonthsSubscriptionWithTrial.36usd"
+    },
+    "co.compoze.scoreSkillsAnnualSubscription": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkillsAnnualSubscription"
+    },
+    "co.compoze.scoreSkillsAnnualSubscription.40usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkillsAnnualSubscription.40usd"
+    },
+    "co.compoze.scoreSkillsAnnualSubscription.60usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkillsAnnualSubscription.60usd"
+    },
+    "co.compoze.scoreSkillsAnnualSubscriptionWithTrial.40usd": {
+      "entitlements": [],
+      "product_identifier": "co.compoze.scoreSkillsAnnualSubscriptionWithTrial.40usd"
+    },
+    "co.compoze.scoreSkillsAnnualSubscriptionWithTrial.60usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkillsAnnualSubscriptionWithTrial.60usd"
+    },
+    "co.compoze.scoreSkillsAnnualWithIntroSubscription.60usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkillsAnnualWithIntroSubscription.60usd"
+    },
+    "co.compoze.scoreSkillsLifeLongSubscription.85usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkillsLifeLongSubscription.85usd"
+    },
+    "co.compoze.scoreSkillsMonthlySubscription": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkillsMonthlySubscription"
+    },
+    "co.compoze.scoreSkillsMonthlySubscription.8usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkillsMonthlySubscription.8usd"
+    },
+    "co.compoze.scoreSkillsMonthlySubscriptionWithTrial.8usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkillsMonthlySubscriptionWithTrial.8usd"
+    },
+    "co.compoze.scoreSkillsMonthlySubscriptionWithTrial_2.8usd": {
+      "entitlements": [
+        "proScoreSkillsStudent"
+      ],
+      "product_identifier": "co.compoze.scoreSkillsMonthlySubscriptionWithTrial_2.8usd"
+    },
+    "co.compoze.scoreSkillsWeeklySubscription.10usd": {
+      "entitlements": [],
+      "product_identifier": "co.compoze.scoreSkillsWeeklySubscription.10usd"
+    }
+  }
+}
