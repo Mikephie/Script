@@ -1,0 +1,18 @@
+{
+  "user_agent": "Binsoo",
+  "bundle_id": "com.app.binsoo",
+  "data": {
+    "annual": {
+      "entitlements": [
+        "vibe"
+      ],
+      "product_identifier": "annual"
+    },
+    "monthly": {
+      "entitlements": [
+        "vibe"
+      ],
+      "product_identifier": "monthly"
+    }
+  }
+}
