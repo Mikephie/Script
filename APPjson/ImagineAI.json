@@ -1,5 +1,6 @@
 {
   "user_agent": "ImagineAI",
+  "bundle_id": null,
   "data": {
     "artistai.avatarPack.1": {
       "entitlements": [],
