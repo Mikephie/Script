@@ -1,0 +1,18 @@
+{
+  "user_agent": "Morphose",
+  "bundle_id": "com.pixery.morphose",
+  "data": {
+    "com.pixery.morphose.weekly": {
+      "entitlements": [
+        "ProStandard"
+      ],
+      "product_identifier": "com.pixery.morphose.weekly"
+    },
+    "com.pixery.morphose.yearly": {
+      "entitlements": [
+        "ProStandard"
+      ],
+      "product_identifier": "com.pixery.morphose.yearly"
+    }
+  }
+}
