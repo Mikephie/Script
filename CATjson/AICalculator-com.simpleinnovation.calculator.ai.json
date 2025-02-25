@@ -1,0 +1,30 @@
+{
+  "user_agent": "AICalculator",
+  "bundle_id": "com.simpleinnovation.calculator.ai",
+  "data": {
+    "com.simpleinnovation.calculator.ai.premium.monthly.base": {
+      "entitlements": [],
+      "product_identifier": "com.simpleinnovation.calculator.ai.premium.monthly.base"
+    },
+    "com.simpleinnovation.calculator.ai.premium.monthly.discount30": {
+      "entitlements": [],
+      "product_identifier": "com.simpleinnovation.calculator.ai.premium.monthly.discount30"
+    },
+    "com.simpleinnovation.calculator.ai.premium.weekly.base": {
+      "entitlements": [],
+      "product_identifier": "com.simpleinnovation.calculator.ai.premium.weekly.base"
+    },
+    "com.simpleinnovation.calculator.ai.premium.weekly.discount30": {
+      "entitlements": [],
+      "product_identifier": "com.simpleinnovation.calculator.ai.premium.weekly.discount30"
+    },
+    "com.simpleinnovation.calculator.ai.premium.yearly.base": {
+      "entitlements": [],
+      "product_identifier": "com.simpleinnovation.calculator.ai.premium.yearly.base"
+    },
+    "com.simpleinnovation.calculator.ai.premium.yearly.discount30": {
+      "entitlements": [],
+      "product_identifier": "com.simpleinnovation.calculator.ai.premium.yearly.discount30"
+    }
+  }
+}
