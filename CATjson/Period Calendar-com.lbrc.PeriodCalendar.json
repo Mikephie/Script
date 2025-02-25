@@ -1,0 +1,84 @@
+{
+  "user_agent": "Period%20Calendar",
+  "bundle_id": "com.lbrc.PeriodCalendar",
+  "data": {
+    "com.lbrc.PeriodCalendar.IAPRemoveAds": {
+      "entitlements": [
+        "Remove ads"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.IAPRemoveAds"
+    },
+    "com.lbrc.PeriodCalendar.IAPRemoveAds1": {
+      "entitlements": [
+        "Remove ads"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.IAPRemoveAds1"
+    },
+    "com.lbrc.PeriodCalendar.IAPRemoveAds2": {
+      "entitlements": [
+        "Remove ads"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.IAPRemoveAds2"
+    },
+    "com.lbrc.PeriodCalendar.pdf.guide.forever.base": {
+      "entitlements": [
+        "Workbook"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.pdf.guide.forever.base"
+    },
+    "com.lbrc.PeriodCalendar.premium.forever": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.premium.forever"
+    },
+    "com.lbrc.PeriodCalendar.premium.forever.discount30": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.premium.forever.discount30"
+    },
+    "com.lbrc.PeriodCalendar.premium.forever.inc20": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.premium.forever.inc20"
+    },
+    "com.lbrc.PeriodCalendar.premium.monthly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.premium.monthly"
+    },
+    "com.lbrc.PeriodCalendar.premium.monthly.discount30": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.premium.monthly.discount30"
+    },
+    "com.lbrc.PeriodCalendar.premium.monthly.inc20": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.premium.monthly.inc20"
+    },
+    "com.lbrc.PeriodCalendar.premium.year.inc20": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.premium.year.inc20"
+    },
+    "com.lbrc.PeriodCalendar.premium.yearly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.premium.yearly"
+    },
+    "com.lbrc.PeriodCalendar.premium.yearly.discount30": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.lbrc.PeriodCalendar.premium.yearly.discount30"
+    }
+  }
+}
