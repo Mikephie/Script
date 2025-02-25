@@ -1,0 +1,36 @@
+{
+  "user_agent": "com.dison.diary",
+  "bundle_id": "com.dison.diary",
+  "data": {
+    "half_year": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "half_year"
+    },
+    "lifetime": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "lifetime"
+    },
+    "quarterly": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "quarterly"
+    },
+    "timeDiary_month": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "timeDiary_month"
+    },
+    "timeDiary_year": {
+      "entitlements": [
+        "vip"
+      ],
+      "product_identifier": "timeDiary_year"
+    }
+  }
+}
