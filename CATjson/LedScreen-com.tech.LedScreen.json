@@ -1,0 +1,22 @@
+{
+  "user_agent": "LedScreen",
+  "bundle_id": "com.tech.LedScreen",
+  "data": {
+    "com.tech.LedScreen.Month": {
+      "entitlements": [],
+      "product_identifier": "com.tech.LedScreen.Month"
+    },
+    "com.tech.LedScreen.VIPALL": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.tech.LedScreen.VIPALL"
+    },
+    "com.tech.LedScreen.Year": {
+      "entitlements": [
+        "Pro access"
+      ],
+      "product_identifier": "com.tech.LedScreen.Year"
+    }
+  }
+}
