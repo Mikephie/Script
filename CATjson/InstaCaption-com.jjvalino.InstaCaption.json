@@ -1,0 +1,48 @@
+{
+  "user_agent": "InstaCaption",
+  "bundle_id": "com.jjvalino.InstaCaption",
+  "data": {
+    "credits_3": {
+      "entitlements": [
+        "consumable"
+      ],
+      "product_identifier": "credits_3"
+    },
+    "extra_credits": {
+      "entitlements": [
+        "consumable"
+      ],
+      "product_identifier": "extra_credits"
+    },
+    "photocaption_lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photocaption_lifetime"
+    },
+    "photocaption_lifetime_gift": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "photocaption_lifetime_gift"
+    },
+    "premium_month": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_month"
+    },
+    "premium_week": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_week"
+    },
+    "premium_year": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_year"
+    }
+  }
+}
