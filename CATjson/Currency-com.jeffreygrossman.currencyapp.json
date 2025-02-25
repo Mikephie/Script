@@ -1,0 +1,24 @@
+{
+  "user_agent": "Currency",
+  "bundle_id": "com.jeffreygrossman.currencyapp",
+  "data": {
+    "com.jeffreygrossman.currencyapp.iap.plus": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.jeffreygrossman.currencyapp.iap.plus"
+    },
+    "com.jeffreygrossman.currencyapp.iap.pro": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.jeffreygrossman.currencyapp.iap.pro"
+    },
+    "com.jeffreygrossman.currencyapp.iap.pro.crossgrade": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.jeffreygrossman.currencyapp.iap.pro.crossgrade"
+    }
+  }
+}
