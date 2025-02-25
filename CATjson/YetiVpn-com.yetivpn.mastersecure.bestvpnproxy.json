@@ -1,0 +1,90 @@
+{
+  "user_agent": "YetiVpn",
+  "bundle_id": "com.yetivpn.mastersecure.bestvpnproxy",
+  "data": {
+    "onemonthyetipro": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "onemonthyetipro"
+    },
+    "yetipro.lifetime.free": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.lifetime.free"
+    },
+    "yetipro.monthly": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.monthly"
+    },
+    "yetipro.monthly.intro": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.monthly.intro"
+    },
+    "yetipro.monthly.plus": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.monthly.plus"
+    },
+    "yetipro.monthly.premium": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.monthly.premium"
+    },
+    "yetipro.weekly": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.weekly"
+    },
+    "yetipro.weekly.plus": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.weekly.plus"
+    },
+    "yetipro.weekly.premium": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.weekly.premium"
+    },
+    "yetipro.yearly": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.yearly"
+    },
+    "yetipro.yearly.gift": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.yearly.gift"
+    },
+    "yetipro.yearly.intro": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.yearly.intro"
+    },
+    "yetipro.yearly.maxoffer": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.yearly.maxoffer"
+    },
+    "yetipro.yearly.trial": {
+      "entitlements": [
+        "Yeti Pro Subscription"
+      ],
+      "product_identifier": "yetipro.yearly.trial"
+    }
+  }
+}
