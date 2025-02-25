@@ -1,5 +1,6 @@
 {
   "user_agent": "SharkSMS",
+  "bundle_id": null,
   "data": {
     "com.gaapp.sms.monthly": {
       "entitlements": [
