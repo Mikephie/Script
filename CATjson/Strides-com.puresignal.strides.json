@@ -1,0 +1,60 @@
+{
+  "user_agent": "Strides",
+  "bundle_id": "com.puresignal.strides",
+  "data": {
+    "Annual": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Annual"
+    },
+    "Annual50": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Annual50"
+    },
+    "Lifetime2": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Lifetime2"
+    },
+    "Lifetime3": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Lifetime3"
+    },
+    "LifetimePlan": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "LifetimePlan"
+    },
+    "Monthly": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Monthly"
+    },
+    "Monthly2": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Monthly2"
+    },
+    "Monthly3": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Monthly3"
+    },
+    "Yearly": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "Yearly"
+    }
+  }
+}
