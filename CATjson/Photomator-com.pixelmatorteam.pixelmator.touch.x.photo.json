@@ -1,0 +1,54 @@
+{
+  "user_agent": "Photomator",
+  "bundle_id": "com.pixelmatorteam.pixelmator.touch.x.photo",
+  "data": {
+    "pixelmator_photo_lifetime_v1": {
+      "entitlements": [
+        "pixelmator_photo_pro_access"
+      ],
+      "product_identifier": "pixelmator_photo_lifetime_v1"
+    },
+    "pixelmator_photo_lifetime_v1_ab": {
+      "entitlements": [
+        "pixelmator_photo_pro_access"
+      ],
+      "product_identifier": "pixelmator_photo_lifetime_v1_ab"
+    },
+    "pixelmator_photo_lifetime_v1_pro_offer": {
+      "entitlements": [
+        "pixelmator_photo_pro_access"
+      ],
+      "product_identifier": "pixelmator_photo_lifetime_v1_pro_offer"
+    },
+    "pixelmator_photo_monthly_v1": {
+      "entitlements": [
+        "pixelmator_photo_pro_access"
+      ],
+      "product_identifier": "pixelmator_photo_monthly_v1"
+    },
+    "pixelmator_photo_monthly_v1_ab": {
+      "entitlements": [
+        "pixelmator_photo_pro_access"
+      ],
+      "product_identifier": "pixelmator_photo_monthly_v1_ab"
+    },
+    "pixelmator_photo_yearly_v1": {
+      "entitlements": [
+        "pixelmator_photo_pro_access"
+      ],
+      "product_identifier": "pixelmator_photo_yearly_v1"
+    },
+    "pixelmator_photo_yearly_v1_ab": {
+      "entitlements": [
+        "pixelmator_photo_pro_access"
+      ],
+      "product_identifier": "pixelmator_photo_yearly_v1_ab"
+    },
+    "pixelmator_photo_yearly_v1_sale": {
+      "entitlements": [
+        "pixelmator_photo_pro_access"
+      ],
+      "product_identifier": "pixelmator_photo_yearly_v1_sale"
+    }
+  }
+}
