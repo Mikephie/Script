@@ -1,0 +1,168 @@
+{
+  "user_agent": "Weather%20%C2%B4",
+  "bundle_id": "maxime.maheo.simple-weather",
+  "data": {
+    "app.weather.yearly.discount": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "app.weather.yearly.discount"
+    },
+    "maxime.maheo.simpleweather.lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.lifetime"
+    },
+    "maxime.maheo.simpleweather.monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.monthly"
+    },
+    "maxime.maheo.simpleweather.monthly.b": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.monthly.b"
+    },
+    "maxime.maheo.simpleweather.monthly.c": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.monthly.c"
+    },
+    "maxime.maheo.simpleweather.monthly.d": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.monthly.d"
+    },
+    "maxime.maheo.simpleweather.subscription.1week": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.subscription.1week"
+    },
+    "maxime.maheo.simpleweather.subscription.1week.b": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.subscription.1week.b"
+    },
+    "maxime.maheo.simpleweather.subscription.1week.c": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.subscription.1week.c"
+    },
+    "maxime.maheo.simpleweather.weekly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.weekly"
+    },
+    "maxime.maheo.simpleweather.weeklyB": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.weeklyB"
+    },
+    "maxime.maheo.simpleweather.year.c": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.year.c"
+    },
+    "maxime.maheo.simpleweather.yearly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.yearly"
+    },
+    "maxime.maheo.simpleweather.yearlyB": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "maxime.maheo.simpleweather.yearlyB"
+    },
+    "sw_799_1y_1m0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "sw_799_1y_1m0"
+    },
+    "tw_1999_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tw_1999_1y"
+    },
+    "tw_199_1w": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tw_199_1w"
+    },
+    "tw_2949_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tw_2949_1y"
+    },
+    "tw_2949_1y_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tw_2949_1y_1w0"
+    },
+    "tw_499_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tw_499_1m"
+    },
+    "tw_499_1m_3d0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tw_499_1m_3d0"
+    },
+    "tw_549_1m_1w0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tw_549_1m_1w0"
+    },
+    "tw_749_1m_3d0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tw_749_1m_3d0"
+    },
+    "tw_949_1m_3d0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tw_949_1m_3d0"
+    },
+    "tw_999_1m_3d0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tw_999_1m_3d0"
+    },
+    "weather.weekly.4_99.7d_trial": {
+      "entitlements": [],
+      "product_identifier": "weather.weekly.4_99.7d_trial"
+    },
+    "weather.yearly.69_99": {
+      "entitlements": [],
+      "product_identifier": "weather.yearly.69_99"
+    },
+    "weather.yearly.69_99.7d_trial": {
+      "entitlements": [],
+      "product_identifier": "weather.yearly.69_99.7d_trial"
+    }
+  }
+}
