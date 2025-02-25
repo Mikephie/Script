@@ -1,0 +1,74 @@
+{
+  "user_agent": "Gymnotize",
+  "bundle_id": "com.gymnotize",
+  "data": {
+    "com.gymnotize.upgrade.free.machines.color.pack.1": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.free.machines.color.pack.1"
+    },
+    "com.gymnotize.upgrade.free.machines.color.pack.2": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.free.machines.color.pack.2"
+    },
+    "com.gymnotize.upgrade.free.machines.color.pack.3": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.free.machines.color.pack.3"
+    },
+    "com.gymnotize.upgrade.free.machines.color.pack.4": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.free.machines.color.pack.4"
+    },
+    "com.gymnotize.upgrade.free.machines.color.pack.5": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.free.machines.color.pack.5"
+    },
+    "com.gymnotize.upgrade.machines.color.pack.1": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.machines.color.pack.1"
+    },
+    "com.gymnotize.upgrade.machines.color.pack.2": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.machines.color.pack.2"
+    },
+    "com.gymnotize.upgrade.machines.color.pack.3": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.machines.color.pack.3"
+    },
+    "com.gymnotize.upgrade.machines.color.pack.4": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.machines.color.pack.4"
+    },
+    "com.gymnotize.upgrade.machines.color.pack.5": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.machines.color.pack.5"
+    },
+    "com.gymnotize.upgrade.pro": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.pro"
+    },
+    "com.gymnotize.upgrade.pro.subscription.annual": {
+      "entitlements": [
+        "rc.gymnotize.pro.subscription"
+      ],
+      "product_identifier": "com.gymnotize.upgrade.pro.subscription.annual"
+    },
+    "com.gymnotize.upgrade.pro.subscription.monthly": {
+      "entitlements": [
+        "rc.gymnotize.pro.subscription"
+      ],
+      "product_identifier": "com.gymnotize.upgrade.pro.subscription.monthly"
+    },
+    "com.gymnotize.upgrade.routines.1": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.routines.1"
+    },
+    "com.gymnotize.upgrade.routines.2": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.routines.2"
+    },
+    "com.gymnotize.upgrade.routines.3": {
+      "entitlements": [],
+      "product_identifier": "com.gymnotize.upgrade.routines.3"
+    }
+  }
+}
