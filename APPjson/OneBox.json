@@ -1,5 +1,6 @@
 {
   "user_agent": "OneBox",
+  "bundle_id": null,
   "data": {
     "com.ziheng.pandora.lifetime": {
       "entitlements": [
