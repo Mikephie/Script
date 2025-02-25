@@ -1,0 +1,42 @@
+{
+  "user_agent": "Focus",
+  "bundle_id": "com.laser-focused.focus-ios",
+  "data": {
+    "iap.io.masterbuilders.focus.pro_early_bird_one_year": {
+      "entitlements": [
+        "subscribed"
+      ],
+      "product_identifier": "iap.io.masterbuilders.focus.pro_early_bird_one_year"
+    },
+    "iap.io.masterbuilders.focus.pro_one_month": {
+      "entitlements": [
+        "subscribed"
+      ],
+      "product_identifier": "iap.io.masterbuilders.focus.pro_one_month"
+    },
+    "iap.io.masterbuilders.focus.pro_one_year": {
+      "entitlements": [
+        "subscribed"
+      ],
+      "product_identifier": "iap.io.masterbuilders.focus.pro_one_year"
+    },
+    "iap.io.masterbuilders.focus.pro_one_year_early_bird": {
+      "entitlements": [
+        "subscribed"
+      ],
+      "product_identifier": "iap.io.masterbuilders.focus.pro_one_year_early_bird"
+    },
+    "iap.io.masterbuilders.focus.pro_promo15_one_year": {
+      "entitlements": [
+        "subscribed"
+      ],
+      "product_identifier": "iap.io.masterbuilders.focus.pro_promo15_one_year"
+    },
+    "iap.io.masterbuilders.focus.pro_supporter_one_year": {
+      "entitlements": [
+        "subscribed"
+      ],
+      "product_identifier": "iap.io.masterbuilders.focus.pro_supporter_one_year"
+    }
+  }
+}
