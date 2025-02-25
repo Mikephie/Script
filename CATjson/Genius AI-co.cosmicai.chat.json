@@ -1,0 +1,98 @@
+{
+  "user_agent": "Genius%20AI",
+  "bundle_id": "co.cosmicai.chat",
+  "data": {
+    "ca_monthly_unlimited": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "ca_monthly_unlimited"
+    },
+    "ca_monthly_unlimited_instant": {
+      "entitlements": [
+        "premium_instant"
+      ],
+      "product_identifier": "ca_monthly_unlimited_instant"
+    },
+    "ca_monthly_unlimited_instant_ext": {
+      "entitlements": [
+        "premium_instant_ext"
+      ],
+      "product_identifier": "ca_monthly_unlimited_instant_ext"
+    },
+    "ca_weekly_unlimited": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "ca_weekly_unlimited"
+    },
+    "ca_weekly_unlimited_instant": {
+      "entitlements": [
+        "premium_instant"
+      ],
+      "product_identifier": "ca_weekly_unlimited_instant"
+    },
+    "ca_weekly_unlimited_instant_ext": {
+      "entitlements": [
+        "premium_instant_ext"
+      ],
+      "product_identifier": "ca_weekly_unlimited_instant_ext"
+    },
+    "ca_yearly_unlimited": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "ca_yearly_unlimited"
+    },
+    "ca_yearly_unlimited_7day_trial": {
+      "entitlements": [],
+      "product_identifier": "ca_yearly_unlimited_7day_trial"
+    },
+    "ca_yearly_unlimited_instant": {
+      "entitlements": [
+        "premium_instant"
+      ],
+      "product_identifier": "ca_yearly_unlimited_instant"
+    },
+    "ca_yearly_unlimited_instant_ext": {
+      "entitlements": [
+        "premium_instant_ext"
+      ],
+      "product_identifier": "ca_yearly_unlimited_instant_ext"
+    },
+    "cai_ultimate_monthly": {
+      "entitlements": [],
+      "product_identifier": "cai_ultimate_monthly"
+    },
+    "genius_lifetime_19": {
+      "entitlements": [
+        "premium_instant"
+      ],
+      "product_identifier": "genius_lifetime_19"
+    },
+    "genius_lifetime_39": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "genius_lifetime_39"
+    },
+    "genius_lifetime_59": {
+      "entitlements": [
+        "premium_instant_ext"
+      ],
+      "product_identifier": "genius_lifetime_59"
+    },
+    "genus_yearly_15": {
+      "entitlements": [
+        "premium_instant"
+      ],
+      "product_identifier": "genus_yearly_15"
+    },
+    "lifetime_no_discount": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "lifetime_no_discount"
+    }
+  }
+}
