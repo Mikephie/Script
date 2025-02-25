@@ -1,0 +1,36 @@
+{
+  "user_agent": "Nightcam",
+  "bundle_id": "com.ahmetserdarkaradeniz.nightcam",
+  "data": {
+    "com.ahmetserdarkaradeniz.nightcamlifetime": {
+      "entitlements": [
+        "nightcam_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.nightcamlifetime"
+    },
+    "com.ahmetserdarkaradeniz.nightcammonthly": {
+      "entitlements": [
+        "nightcam_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.nightcammonthly"
+    },
+    "com.ahmetserdarkaradeniz.nightcamyearly": {
+      "entitlements": [
+        "nightcam_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.nightcamyearly"
+    },
+    "com.ahmetserdarkaradeniz.nightcamyearlyalternative": {
+      "entitlements": [
+        "nightcam_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.nightcamyearlyalternative"
+    },
+    "com.ahmetserdarkaradeniz.nightcamyearlyalternative1": {
+      "entitlements": [
+        "nightcam_pro"
+      ],
+      "product_identifier": "com.ahmetserdarkaradeniz.nightcamyearlyalternative1"
+    }
+  }
+}
