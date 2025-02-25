@@ -1,0 +1,24 @@
+{
+  "user_agent": "mark_cup",
+  "bundle_id": "me.xgmm.markacup",
+  "data": {
+    "202403162313": {
+      "entitlements": [
+        "premiun"
+      ],
+      "product_identifier": "202403162313"
+    },
+    "202403170036": {
+      "entitlements": [
+        "premiun"
+      ],
+      "product_identifier": "202403170036"
+    },
+    "202403180021": {
+      "entitlements": [
+        "premiun"
+      ],
+      "product_identifier": "202403180021"
+    }
+  }
+}
