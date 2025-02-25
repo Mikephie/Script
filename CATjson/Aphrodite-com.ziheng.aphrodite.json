@@ -1,0 +1,36 @@
+{
+  "user_agent": "Aphrodite",
+  "bundle_id": "com.ziheng.aphrodite",
+  "data": {
+    "com.ziheng.aphrodite.lifetime": {
+      "entitlements": [
+        "all"
+      ],
+      "product_identifier": "com.ziheng.aphrodite.lifetime"
+    },
+    "com.ziheng.aphrodite.month": {
+      "entitlements": [
+        "all"
+      ],
+      "product_identifier": "com.ziheng.aphrodite.month"
+    },
+    "com.ziheng.aphrodite.onetime": {
+      "entitlements": [
+        "all"
+      ],
+      "product_identifier": "com.ziheng.aphrodite.onetime"
+    },
+    "com.ziheng.aphrodite.year": {
+      "entitlements": [
+        "all"
+      ],
+      "product_identifier": "com.ziheng.aphrodite.year"
+    },
+    "com.ziheng.aphrodite.yearly": {
+      "entitlements": [
+        "all"
+      ],
+      "product_identifier": "com.ziheng.aphrodite.yearly"
+    }
+  }
+}
