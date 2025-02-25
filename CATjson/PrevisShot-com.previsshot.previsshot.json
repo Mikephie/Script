@@ -1,0 +1,24 @@
+{
+  "user_agent": "PrevisShot",
+  "bundle_id": "com.previsshot.previsshot",
+  "data": {
+    "com.previsshot.previsshot.1month_vip": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.previsshot.previsshot.1month_vip"
+    },
+    "com.previsshot.previsshot.continuous_subscribe_12month_vip": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.previsshot.previsshot.continuous_subscribe_12month_vip"
+    },
+    "com.previsshot.previsshot.continuous_subscribe_1month_vip": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.previsshot.previsshot.continuous_subscribe_1month_vip"
+    }
+  }
+}
