@@ -1,0 +1,36 @@
+{
+  "user_agent": "Storage%20Cleaner",
+  "bundle_id": "com.lilucat.storagecleaner",
+  "data": {
+    "storagecleaner_1m": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "storagecleaner_1m"
+    },
+    "storagecleaner_1w": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "storagecleaner_1w"
+    },
+    "storagecleaner_1y": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "storagecleaner_1y"
+    },
+    "storagecleaner_lifetime": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "storagecleaner_lifetime"
+    },
+    "storagecleaner_standalone_lifetime_free": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "storagecleaner_standalone_lifetime_free"
+    }
+  }
+}
