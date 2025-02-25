@@ -1,0 +1,24 @@
+{
+  "user_agent": "VibeCamera",
+  "bundle_id": "com.liangpin.vibecamera",
+  "data": {
+    "vibe_pro_forever": {
+      "entitlements": [
+        "forever"
+      ],
+      "product_identifier": "vibe_pro_forever"
+    },
+    "vibe_pro_forever_free": {
+      "entitlements": [
+        "forever_free"
+      ],
+      "product_identifier": "vibe_pro_forever_free"
+    },
+    "vibe_pro_year": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "vibe_pro_year"
+    }
+  }
+}
