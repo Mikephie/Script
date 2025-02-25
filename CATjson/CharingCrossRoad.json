@@ -1,0 +1,18 @@
+{
+  "user_agent": "CharingCrossRoad",
+  "bundle_id": null,
+  "data": {
+    "ready_pro_50_1y": {
+      "entitlements": [
+        "ready_pro"
+      ],
+      "product_identifier": "ready_pro_50_1y"
+    },
+    "ready_pro_6_1m": {
+      "entitlements": [
+        "ready_pro"
+      ],
+      "product_identifier": "ready_pro_6_1m"
+    }
+  }
+}
