@@ -1,0 +1,12 @@
+{
+  "user_agent": "Scale%20Finder",
+  "bundle_id": "com.doublecolourless.scalefinder",
+  "data": {
+    "sf_2999_1y_1w0": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "sf_2999_1y_1w0"
+    }
+  }
+}
