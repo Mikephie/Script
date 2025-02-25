@@ -1,0 +1,66 @@
+{
+  "user_agent": "GeniusScan",
+  "bundle_id": "com.geniussoftware.GeniusScan",
+  "data": {
+    "com.thegrizzlylabs.GeniusScan.Pro": {
+      "entitlements": [
+        "plus_legacy"
+      ],
+      "product_identifier": "com.thegrizzlylabs.GeniusScan.Pro"
+    },
+    "com.thegrizzlylabs.GeniusScan.Tips.1": {
+      "entitlements": [],
+      "product_identifier": "com.thegrizzlylabs.GeniusScan.Tips.1"
+    },
+    "com.thegrizzlylabs.GeniusScan.Tips.2": {
+      "entitlements": [],
+      "product_identifier": "com.thegrizzlylabs.GeniusScan.Tips.2"
+    },
+    "com.thegrizzlylabs.GeniusScan.Tips.3": {
+      "entitlements": [],
+      "product_identifier": "com.thegrizzlylabs.GeniusScan.Tips.3"
+    },
+    "com.thegrizzlylabs.geniusscan.geniuscloud.subscription.month.1": {
+      "entitlements": [
+        "ultra"
+      ],
+      "product_identifier": "com.thegrizzlylabs.geniusscan.geniuscloud.subscription.month.1"
+    },
+    "com.thegrizzlylabs.geniusscan.geniuscloud.subscription.year.1": {
+      "entitlements": [
+        "ultra"
+      ],
+      "product_identifier": "com.thegrizzlylabs.geniusscan.geniuscloud.subscription.year.1"
+    },
+    "com.thegrizzlylabs.geniusscan.plus.subscription.month.1": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.thegrizzlylabs.geniusscan.plus.subscription.month.1"
+    },
+    "com.thegrizzlylabs.geniusscan.plus.subscription.year.1": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.thegrizzlylabs.geniusscan.plus.subscription.year.1"
+    },
+    "ultra_3999_1y": {
+      "entitlements": [
+        "ultra"
+      ],
+      "product_identifier": "ultra_3999_1y"
+    },
+    "ultra_3999_1y_1w0": {
+      "entitlements": [
+        "ultra"
+      ],
+      "product_identifier": "ultra_3999_1y_1w0"
+    },
+    "ultra_4999_1y": {
+      "entitlements": [
+        "ultra"
+      ],
+      "product_identifier": "ultra_4999_1y"
+    }
+  }
+}
