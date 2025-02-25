@@ -1,0 +1,164 @@
+{
+  "user_agent": "Darkroom",
+  "bundle_id": "co.bergen.Darkroom",
+  "data": {
+    "co.bergen.Darkroom.CurvesTool": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.CurvesTool"
+    },
+    "co.bergen.Darkroom.SpecialOfferWithProKit": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.SpecialOfferWithProKit"
+    },
+    "co.bergen.Darkroom.SpecialOfferWithoutProKit": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.SpecialOfferWithoutProKit"
+    },
+    "co.bergen.Darkroom.d.CurvesTool": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.d.CurvesTool"
+    },
+    "co.bergen.Darkroom.d.SpecialOfferWithProKit": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.d.SpecialOfferWithProKit"
+    },
+    "co.bergen.Darkroom.d.SpecialOfferWithoutProKit": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.d.SpecialOfferWithoutProKit"
+    },
+    "co.bergen.Darkroom.d.filterpack.blackandwhite": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.d.filterpack.blackandwhite"
+    },
+    "co.bergen.Darkroom.d.filterpack.duotone": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.d.filterpack.duotone"
+    },
+    "co.bergen.Darkroom.d.filterpack.instant": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.d.filterpack.instant"
+    },
+    "co.bergen.Darkroom.d.filterpack.landscapes": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.d.filterpack.landscapes"
+    },
+    "co.bergen.Darkroom.d.filterpack.portraits": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.d.filterpack.portraits"
+    },
+    "co.bergen.Darkroom.d.filterpack.xpro": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.d.filterpack.xpro"
+    },
+    "co.bergen.Darkroom.filterpack.blackandwhite": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.filterpack.blackandwhite"
+    },
+    "co.bergen.Darkroom.filterpack.duotone": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.filterpack.duotone"
+    },
+    "co.bergen.Darkroom.filterpack.instant": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.filterpack.instant"
+    },
+    "co.bergen.Darkroom.filterpack.landscapes": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.filterpack.landscapes"
+    },
+    "co.bergen.Darkroom.filterpack.portraits": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.filterpack.portraits"
+    },
+    "co.bergen.Darkroom.filterpack.xpro": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters.legacy",
+        "iapkit_legacy"
+      ],
+      "product_identifier": "co.bergen.Darkroom.filterpack.xpro"
+    },
+    "co.bergen.Darkroom.product.forever.everything": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters",
+        "co.bergen.Darkroom.entitlement.selectiveAdjustments",
+        "iapkit_darkroomplus"
+      ],
+      "product_identifier": "co.bergen.Darkroom.product.forever.everything"
+    },
+    "co.bergen.Darkroom.product.month.everything": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters",
+        "co.bergen.Darkroom.entitlement.selectiveAdjustments",
+        "iapkit_darkroomplus"
+      ],
+      "product_identifier": "co.bergen.Darkroom.product.month.everything"
+    },
+    "co.bergen.Darkroom.product.year.discount.everything": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters",
+        "co.bergen.Darkroom.entitlement.selectiveAdjustments",
+        "iapkit_darkroomplus"
+      ],
+      "product_identifier": "co.bergen.Darkroom.product.year.discount.everything"
+    },
+    "co.bergen.Darkroom.product.year.everything": {
+      "entitlements": [
+        "co.bergen.Darkroom.entitlement.allToolsAndFilters",
+        "co.bergen.Darkroom.entitlement.selectiveAdjustments",
+        "iapkit_darkroomplus"
+      ],
+      "product_identifier": "co.bergen.Darkroom.product.year.everything"
+    }
+  }
+}
