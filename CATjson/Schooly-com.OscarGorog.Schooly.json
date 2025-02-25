@@ -1,0 +1,48 @@
+{
+  "user_agent": "Schooly",
+  "bundle_id": "com.OscarGorog.Schooly",
+  "data": {
+    "com.OscarGorog.Schooly.AnnualSubscription": {
+      "entitlements": [
+        "SchoolyPro"
+      ],
+      "product_identifier": "com.OscarGorog.Schooly.AnnualSubscription"
+    },
+    "com.OscarGorog.Schooly.FamilyTip": {
+      "entitlements": [
+        "SchoolyPro"
+      ],
+      "product_identifier": "com.OscarGorog.Schooly.FamilyTip"
+    },
+    "com.OscarGorog.Schooly.LargeTip": {
+      "entitlements": [
+        "SchoolyPro"
+      ],
+      "product_identifier": "com.OscarGorog.Schooly.LargeTip"
+    },
+    "com.OscarGorog.Schooly.Lifetime": {
+      "entitlements": [
+        "SchoolyPro"
+      ],
+      "product_identifier": "com.OscarGorog.Schooly.Lifetime"
+    },
+    "com.OscarGorog.Schooly.MediumTip": {
+      "entitlements": [
+        "SchoolyPro"
+      ],
+      "product_identifier": "com.OscarGorog.Schooly.MediumTip"
+    },
+    "com.OscarGorog.Schooly.MonthlySubscription": {
+      "entitlements": [
+        "SchoolyPro"
+      ],
+      "product_identifier": "com.OscarGorog.Schooly.MonthlySubscription"
+    },
+    "com.OscarGorog.Schooly.SmallTip": {
+      "entitlements": [
+        "SchoolyPro"
+      ],
+      "product_identifier": "com.OscarGorog.Schooly.SmallTip"
+    }
+  }
+}
