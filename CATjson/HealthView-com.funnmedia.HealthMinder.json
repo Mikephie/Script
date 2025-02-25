@@ -1,0 +1,80 @@
+{
+  "user_agent": "HealthView",
+  "bundle_id": "com.funnmedia.HealthMinder",
+  "data": {
+    "com.funnmedia.HealthMinder.freeTrial": {
+      "entitlements": [],
+      "product_identifier": "com.funnmedia.HealthMinder.freeTrial"
+    },
+    "com.funnmedia.HealthMinder.growth.bundle.monthly.v1": {
+      "entitlements": [
+        "Growth_Bundle_Subscription"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.growth.bundle.monthly.v1"
+    },
+    "com.funnmedia.HealthMinder.growth.bundle.monthly.v2": {
+      "entitlements": [
+        "Growth_Bundle_Subscription"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.growth.bundle.monthly.v2"
+    },
+    "com.funnmedia.HealthMinder.growth.bundle.yearly.v1": {
+      "entitlements": [
+        "Growth_Bundle_Subscription"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.growth.bundle.yearly.v1"
+    },
+    "com.funnmedia.HealthMinder.growth.bundle.yearly.v2": {
+      "entitlements": [
+        "Growth_Bundle_Subscription"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.growth.bundle.yearly.v2"
+    },
+    "com.funnmedia.HealthMinder.growth.bundle.yearly.v3": {
+      "entitlements": [],
+      "product_identifier": "com.funnmedia.HealthMinder.growth.bundle.yearly.v3"
+    },
+    "com.funnmedia.HealthMinder.onetimepurchase": {
+      "entitlements": [
+        "healthview_premium"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.onetimepurchase"
+    },
+    "com.funnmedia.HealthMinder.premiumMonthlySubscription": {
+      "entitlements": [
+        "healthview_premium"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.premiumMonthlySubscription"
+    },
+    "com.funnmedia.HealthMinder.premiumYearlySubscription": {
+      "entitlements": [
+        "healthview_premium"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.premiumYearlySubscription"
+    },
+    "com.funnmedia.HealthMinder.subscription.yearly.v1": {
+      "entitlements": [
+        "healthview_premium"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.subscription.yearly.v1"
+    },
+    "com.funnmedia.HealthMinder.subscription.yearly.v2": {
+      "entitlements": [
+        "healthview_premium"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.subscription.yearly.v2"
+    },
+    "com.funnmedia.HealthMinder.subscription.yearly.v3": {
+      "entitlements": [
+        "healthview_premium"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.subscription.yearly.v3"
+    },
+    "com.funnmedia.HealthMinder.subscription.yearly.v4": {
+      "entitlements": [
+        "healthview_premium"
+      ],
+      "product_identifier": "com.funnmedia.HealthMinder.subscription.yearly.v4"
+    }
+  }
+}
