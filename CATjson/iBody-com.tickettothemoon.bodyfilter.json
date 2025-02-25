@@ -1,0 +1,66 @@
+{
+  "user_agent": "iBody",
+  "bundle_id": "com.tickettothemoon.bodyfilter",
+  "data": {
+    "com.tickettothemoon.bodyfilter.one.time.120": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.tickettothemoon.bodyfilter.one.time.120"
+    },
+    "com.tickettothemoon.bodyfilter.one.time.purchase": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.tickettothemoon.bodyfilter.one.time.purchase"
+    },
+    "com.tickettothemoon.bodyfilter.one.time.purchase.": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.tickettothemoon.bodyfilter.one.time.purchase."
+    },
+    "com.tickettothemoon.bodyfilter.unlimited.monthly.10": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.tickettothemoon.bodyfilter.unlimited.monthly.10"
+    },
+    "com.tickettothemoon.bodyfilter.unlimited.monthly.2022": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.tickettothemoon.bodyfilter.unlimited.monthly.2022"
+    },
+    "com.tickettothemoon.bodyfilter.unlimited.monthly.2022.19": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.tickettothemoon.bodyfilter.unlimited.monthly.2022.19"
+    },
+    "com.tickettothemoon.bodyfilter.unlimited.yearly.2022": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.tickettothemoon.bodyfilter.unlimited.yearly.2022"
+    },
+    "com.tickettothemoon.bodyfilter.unlimited.yearly.2022.115": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.tickettothemoon.bodyfilter.unlimited.yearly.2022.115"
+    },
+    "com.tickettothemoon.bodyfilter.unlimited.yearly.50": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.tickettothemoon.bodyfilter.unlimited.yearly.50"
+    },
+    "com.tickettothemoon.bodyfilter.unlimited.yearly.without.trial": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.tickettothemoon.bodyfilter.unlimited.yearly.without.trial"
+    }
+  }
+}
