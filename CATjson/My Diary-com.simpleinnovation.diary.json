@@ -1,0 +1,42 @@
+{
+  "user_agent": "My%20Diary",
+  "bundle_id": "com.simpleinnovation.diary",
+  "data": {
+    "com.simpleinnovation.diary.premium.forever.base": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.simpleinnovation.diary.premium.forever.base"
+    },
+    "com.simpleinnovation.diary.premium.forever.discount30": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.simpleinnovation.diary.premium.forever.discount30"
+    },
+    "com.simpleinnovation.diary.premium.monthly.base": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.simpleinnovation.diary.premium.monthly.base"
+    },
+    "com.simpleinnovation.diary.premium.monthly.discount30": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.simpleinnovation.diary.premium.monthly.discount30"
+    },
+    "com.simpleinnovation.diary.premium.yearly.base": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.simpleinnovation.diary.premium.yearly.base"
+    },
+    "com.simpleinnovation.diary.premium.yearly.discount30": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.simpleinnovation.diary.premium.yearly.discount30"
+    }
+  }
+}
