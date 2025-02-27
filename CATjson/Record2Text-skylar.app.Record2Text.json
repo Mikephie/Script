@@ -1,0 +1,24 @@
+{
+  "user_agent": "Record2Text",
+  "bundle_id": "skylar.app.Record2Text",
+  "data": {
+    "Pro_Annual_Recnote": {
+      "entitlements": [
+        "afi.recnote.pro"
+      ],
+      "product_identifier": "Pro_Annual_Recnote"
+    },
+    "Pro_Monthly": {
+      "entitlements": [
+        "afi.recnote.pro"
+      ],
+      "product_identifier": "Pro_Monthly"
+    },
+    "afi.recnote.pro": {
+      "entitlements": [
+        "afi.recnote.pro"
+      ],
+      "product_identifier": "afi.recnote.pro"
+    }
+  }
+}
