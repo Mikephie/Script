@@ -1,0 +1,90 @@
+{
+  "user_agent": "Kotodama%20AI",
+  "bundle_id": "com.kotodama.app",
+  "data": {
+    "add_character_100k": {
+      "entitlements": [],
+      "product_identifier": "add_character_100k"
+    },
+    "add_character_10k": {
+      "entitlements": [],
+      "product_identifier": "add_character_10k"
+    },
+    "add_character_50k": {
+      "entitlements": [],
+      "product_identifier": "add_character_50k"
+    },
+    "kt_voice_slot": {
+      "entitlements": [],
+      "product_identifier": "kt_voice_slot"
+    },
+    "kt_weekly_campaign": {
+      "entitlements": [
+        "Subscription"
+      ],
+      "product_identifier": "kt_weekly_campaign"
+    },
+    "life_time_campaign": {
+      "entitlements": [],
+      "product_identifier": "life_time_campaign"
+    },
+    "life_time_final": {
+      "entitlements": [
+        "Subscription"
+      ],
+      "product_identifier": "life_time_final"
+    },
+    "life_time_offer": {
+      "entitlements": [
+        "Subscription"
+      ],
+      "product_identifier": "life_time_offer"
+    },
+    "subscription_annual": {
+      "entitlements": [
+        "Subscription"
+      ],
+      "product_identifier": "subscription_annual"
+    },
+    "subscription_best_value": {
+      "entitlements": [],
+      "product_identifier": "subscription_best_value"
+    },
+    "subscription_final_offer": {
+      "entitlements": [
+        "Subscription"
+      ],
+      "product_identifier": "subscription_final_offer"
+    },
+    "subscription_first_500": {
+      "entitlements": [
+        "Subscription"
+      ],
+      "product_identifier": "subscription_first_500"
+    },
+    "subscription_monthly": {
+      "entitlements": [],
+      "product_identifier": "subscription_monthly"
+    },
+    "subscription_monthly_1": {
+      "entitlements": [],
+      "product_identifier": "subscription_monthly_1"
+    },
+    "subscription_trial": {
+      "entitlements": [
+        "Subscription"
+      ],
+      "product_identifier": "subscription_trial"
+    },
+    "subscription_trial_1": {
+      "entitlements": [],
+      "product_identifier": "subscription_trial_1"
+    },
+    "subscription_weekly": {
+      "entitlements": [
+        "Subscription"
+      ],
+      "product_identifier": "subscription_weekly"
+    }
+  }
+}
