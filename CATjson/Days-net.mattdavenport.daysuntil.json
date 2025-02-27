@@ -1,0 +1,202 @@
+{
+  "user_agent": "Days",
+  "bundle_id": "net.mattdavenport.daysuntil",
+  "data": {
+    "net.mattdavenport.daysuntil.dayspremium": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremium"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumdiscounted": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumdiscounted"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumlifetime": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumlifetime"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumlifetimealt": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumlifetimealt"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumlifetimealt2": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumlifetimealt2"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumlifetimediscounted": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumlifetimediscounted"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumlifetimediscountedalt": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumlifetimediscountedalt"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumlifetimediscountedalt2": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumlifetimediscountedalt2"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumlifetimelargediscount": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumlifetimelargediscount"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumlifetimelargediscountalt": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumlifetimelargediscountalt"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumlifetimelargediscountalt2": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumlifetimelargediscountalt2"
+    },
+    "net.mattdavenport.daysuntil.dayspremiummonthly": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiummonthly"
+    },
+    "net.mattdavenport.daysuntil.dayspremiummonthlyalt": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiummonthlyalt"
+    },
+    "net.mattdavenport.daysuntil.dayspremiummonthlyalt2": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiummonthlyalt2"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumoffer": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumoffer"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumyearly": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumyearly"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumyearlyalt": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumyearlyalt"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumyearlyalt2": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumyearlyalt2"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumyearlydiscount": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumyearlydiscount"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumyearlydiscountalt": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumyearlydiscountalt"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumyearlydiscountalt2": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumyearlydiscountalt2"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumyearlyft": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumyearlyft"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumyearlyftalt": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumyearlyftalt"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumyearlyftalt2": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumyearlyftalt2"
+    },
+    "net.mattdavenport.daysuntil.dayspremiumyearlysmalldiscount": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.dayspremiumyearlysmalldiscount"
+    },
+    "net.mattdavenport.daysuntil.upgrade1": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.upgrade1"
+    },
+    "net.mattdavenport.daysuntil.upgrade2": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.upgrade2"
+    },
+    "net.mattdavenport.daysuntil.upgradefree": {
+      "entitlements": [
+        "premium",
+        "pro"
+      ],
+      "product_identifier": "net.mattdavenport.daysuntil.upgradefree"
+    }
+  }
+}
