@@ -1,0 +1,36 @@
+{
+  "user_agent": "CountDuck",
+  "bundle_id": "co.countduck.app",
+  "data": {
+    "Lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "Lifetime"
+    },
+    "Monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "Monthly"
+    },
+    "Yearly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "Yearly"
+    },
+    "YearlyDiscount": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "YearlyDiscount"
+    },
+    "YearlyFreeTrial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "YearlyFreeTrial"
+    }
+  }
+}
