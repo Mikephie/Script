@@ -1,0 +1,18 @@
+{
+  "user_agent": "TrancyET%20iOS",
+  "bundle_id": "org.trancy.extension.trancy-ios-extension",
+  "data": {
+    "org.trancy.extension_monthly": {
+      "entitlements": [
+        "Trancy Extension Premium"
+      ],
+      "product_identifier": "org.trancy.extension_monthly"
+    },
+    "org.trancy.extension_yearly": {
+      "entitlements": [
+        "Trancy Extension Premium"
+      ],
+      "product_identifier": "org.trancy.extension_yearly"
+    }
+  }
+}
