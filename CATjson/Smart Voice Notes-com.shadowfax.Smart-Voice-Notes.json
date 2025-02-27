@@ -1,0 +1,72 @@
+{
+  "user_agent": "Smart%20Voice%20Notes",
+  "bundle_id": "com.shadowfax.Smart-Voice-Notes",
+  "data": {
+    "voicenotes_0_lifetime": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_0_lifetime"
+    },
+    "voicenotes_1799_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_1799_1y"
+    },
+    "voicenotes_1999_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_1999_1m"
+    },
+    "voicenotes_1999_1y_3d": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_1999_1y_3d"
+    },
+    "voicenotes_4999_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_4999_1y"
+    },
+    "voicenotes_5999_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_5999_1y"
+    },
+    "voicenotes_699_1w": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_699_1w"
+    },
+    "voicenotes_8999_1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_8999_1y"
+    },
+    "voicenotes_8999_1y_3d": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_8999_1y_3d"
+    },
+    "voicenotes_8999_1y_7d": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_8999_1y_7d"
+    },
+    "voicenotes_8999_1y_offer": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "voicenotes_8999_1y_offer"
+    }
+  }
+}
