@@ -1,0 +1,48 @@
+{
+  "user_agent": "ReceiptiX",
+  "bundle_id": "com.receipticus.receiptix",
+  "data": {
+    "apple.basic.lifetime": {
+      "entitlements": [
+        "basic"
+      ],
+      "product_identifier": "apple.basic.lifetime"
+    },
+    "apple.basic.month": {
+      "entitlements": [
+        "basic"
+      ],
+      "product_identifier": "apple.basic.month"
+    },
+    "apple.basic.month.trial": {
+      "entitlements": [
+        "basic"
+      ],
+      "product_identifier": "apple.basic.month.trial"
+    },
+    "apple.basic.week": {
+      "entitlements": [
+        "basic"
+      ],
+      "product_identifier": "apple.basic.week"
+    },
+    "apple.basic.year": {
+      "entitlements": [
+        "basic"
+      ],
+      "product_identifier": "apple.basic.year"
+    },
+    "apple.tip.1": {
+      "entitlements": [],
+      "product_identifier": "apple.tip.1"
+    },
+    "apple.tip.2": {
+      "entitlements": [],
+      "product_identifier": "apple.tip.2"
+    },
+    "apple.tip.3": {
+      "entitlements": [],
+      "product_identifier": "apple.tip.3"
+    }
+  }
+}
