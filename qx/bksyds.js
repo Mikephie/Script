@@ -33,7 +33,7 @@ if ($request.url.includes("/auth/member")) {
     });  // 添加了这个闭合括号
 } else if ($request.url.includes("/verify")) {
     Object.assign(mikephie.result, {
-        Expire: 3742762088000,      // 更新添加
+        expire: 3742762088000,      // 更新添加
     });
 }
 
