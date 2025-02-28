@@ -1,0 +1,12 @@
+{
+  "user_agent": "alistTools",
+  "bundle_id": "com.jy.alistTools",
+  "data": {
+    "com.jy.alistTools.pro_lifetime": {
+      "entitlements": [
+        "pro_lifetime"
+      ],
+      "product_identifier": "com.jy.alistTools.pro_lifetime"
+    }
+  }
+}
