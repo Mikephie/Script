@@ -1,14 +1,11 @@
-/*************************************
+/*
 
-项目名称：apphud多合一
-下载地址：https://t.cn/A6m7WeMH
-下载地址：https://t.cn/A6WlGNDi
-更新日期：2024-11-24
-脚本作者：mikephie
-电报频道：https://t.me/mikephie
-使用声明：⚠️仅供参考，🈲转载与售卖！
+📜 AppHub合集 解锁 VIP 脚本
+📅 更新时间：2024年08月15日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
-**************************************
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
 ^https?:\/\/.*\.apphud\.com\/v\d\/(subscriptions|customers)$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/apphub.js
@@ -16,7 +13,7 @@
 [mitm]
 hostname = *.apphud.com
 
-*************************************/
+*/
 
 
 const mikephie = JSON.parse(typeof $response != "undefined" && $response.body || "{}");

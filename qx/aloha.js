@@ -1,14 +1,11 @@
-/*        
-          ➪：脚本名称:   aloha 
-            
-     ꫛꫀꪝ  ：2024年8月15日 16:37
+/*
 
-          ★：解锁永久🆅🅸🅿
-
-          𖣘：🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+📜 Aloha 解锁 VIP 脚本
+📅 更新时间：2024年08月15日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
- 
 
 [rewrite_local]
 ^https:\/\/api\.alohaprofile\.com\/v1\/profile_info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js
@@ -16,7 +13,8 @@
 [mitm]
 hostname = api.alohaprofile.com
 
-*************************************/
+*/
+ 
 
 var mikephie = JSON.parse($response.body);
 

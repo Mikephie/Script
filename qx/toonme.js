@@ -1,6 +1,11 @@
 /*
 
-ToonMe：https://apps.apple.com/app/id1508120751
+📜 ToonMe 解锁 VIP 脚本
+📅 更新时间：2024年12月06日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
 ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js
@@ -9,6 +14,8 @@ ToonMe：https://apps.apple.com/app/id1508120751
 hostname = purchases.ws.pho.to
 
 */
+
+
 var guding = {
   "environment": "Production",
   "receipt": {

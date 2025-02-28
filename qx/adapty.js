@@ -1,10 +1,11 @@
-/*************************************
+/*
 
-项目名称：adapty-合集
-更新日期：2024-11-09
-脚本作者：mikephie
+📜 adapty-合集 解锁 VIP 脚本
+📅 更新时间：2024年11月09日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
-**************************************
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
 ^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/adapty.js
@@ -12,7 +13,8 @@
 [mitm]
 hostname = api.adapty.io
 
-*************************************/
+*/
+
 
 let mikephie = JSON.parse($response.body);
 const headers = $request.headers;

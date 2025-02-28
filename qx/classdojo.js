@@ -1,19 +1,20 @@
-/*        
-        ➪：脚本名称:   classdojo 更新时间 ：2024年6月26日 13:36
+/*
 
-        ★：解锁永久🆅🅸🅿
-
-        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+📜 Classdojo 解锁 VIP 脚本
+📅 更新时间：2024年06月28日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
- 
+
 [rewrite_local]
 ^https:\\\\payments\.classdojo\.com\/v1\\subscribers\\5dc2e328587d3dcf1bee91e0$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js
 
 [mitm]
 hostname = payments.classdojo.com
 
-*******************************/
+*/
+
 
 let body = JSON.parse($response.body);
 

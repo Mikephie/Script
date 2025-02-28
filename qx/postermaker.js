@@ -1,20 +1,20 @@
-/*        
-        ➪：脚本名称: PosterMaker （永久会员）
+/*
 
-        ★：解锁永久🆅🅸🅿
+📜 PosterMaker 解锁 VIP 脚本
+📅 更新时间：2024年03月08日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
-        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
 ^https:\/\/dcdnposter\.leminet\.cn\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/postermaker.js
 
-
 [mitm] 
 hostname = dcdnposter.leminet.cn
 
-𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 */
+
 
 var aFengYe = $response.body;
 var obj =  JSON.parse(aFengYe); 

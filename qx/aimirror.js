@@ -1,19 +1,20 @@
-/*        
-        ➪：脚本名称:   AIMirror 
+/*
 
-        ★：解锁永久🆅🅸🅿
-
-        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+📜 AIMirror 解锁 VIP 脚本
+📅 更新时间：2024年11月09日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
- 
+
 [rewrite_local]
 ^https:\/\/be\.aimirror\.fun\/(query_is_vip|draw|users\/video_render_count|query_consumable_quota|users\/discount) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/aimirror.js
 
 [MITM]
 hostname = be.aimirror.fun
 
-*******************************/
+*/
+ 
 
 let body = $response.body;
 let url = $request.url;

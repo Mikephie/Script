@@ -1,19 +1,20 @@
-/*        
-        ➪：脚本名称:   FaceSwapper解锁VIP 更新时间 ：19 Jul 2024 at 10:09
+/*
 
-        ★：解锁永久🆅🅸🅿
-
-        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+📜 FaceSwapper 解锁 VIP 脚本
+📅 更新时间：2024年07月19日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
- 
+
 [rewrite_local]
 ^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceSwapper.js
 
 [MITM]
 hostname = api-*.facereplacerext.com
 
-*******************************/
+*/
+
 
 var mikephie = JSON.parse($response.body);
 

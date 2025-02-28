@@ -1,14 +1,11 @@
-/*        
-          ➪：脚本名称:   Ask AI 
-            
-     ꫛꫀꪝ  ：2024年10月28日 16:37
+/*
 
-          ★：解锁永久🆅🅸🅿
-
-          𖣘：🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+📜 AskAI 解锁 VIP 脚本
+📅 更新时间：2024年10月28日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
- 
 
 [rewrite_local]
 ^https:\/\/purchase-verifier\.cdwapi\.com\/ios url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/askai.js
@@ -16,7 +13,7 @@
 [mitm]
 hostname = purchase-verifier.cdwapi.com
 
-*************************************/
+*/
 
 
 let body = JSON.parse($response.body);

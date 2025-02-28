@@ -1,17 +1,20 @@
-/*************************************
-项目名称：图片转文字
-更新日期：2024-09-22
-脚本作者：Sheep
-使用声明：⚠️仅供参考，🈲转载与售卖！
-脚本说明：进入后点恢复购买，解锁会员
+/*
 
-**************************************
+📜 图片转文字 解锁 VIP 脚本
+📅 更新时间：2024年12月06日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^http://api\.528529\.com/apple_product/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/tpzwz.js  
+^http://api\.528529\.com/apple_product/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/tpzwz.js
+
 [mitm]
 hostname = api.528529.com
-*************************************/
+
+*/
+
 
 var mikephie = JSON.parse($response.body);
 

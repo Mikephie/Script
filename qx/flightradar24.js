@@ -1,18 +1,19 @@
-/*        
-        ➪：脚本名称: flightradar24 （永久会员）
+/*
 
-        ★：解锁永久🆅🅸🅿
-
-        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+📜 Flightradar24 解锁 VIP 脚本
+📅 更新时间：2024年03月08日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
+[rewrite_local]
 ^https://mobile.flightradar24.com/mobile/(user-session|subscribe) url script-echo-response https://raw.githubusercontent.com/Mikephie/Script/main/qx/flightradar24.js
 
 [mitm]
 hostname = mobile.flightradar24.com
 
-*******************************/
+*/
 
 
 var mikephie = JSON.parse($response.body);

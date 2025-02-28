@@ -1,20 +1,21 @@
-/*        
-        ➪：脚本名称: Notebook （永久会员）
+/*
 
-        ★：解锁永久🆅🅸🅿
-
-        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+📜 Notebook 解锁 VIP 脚本
+📅 更新时间：2024年03月08日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [Script]
 # VIP 订阅 & 多项权益
-^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=(get_current_plan_detail|get_feature_template)(&include_expired_plans=true|&include_purchase_platform=false|&platform=ios)? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notetest.js
-
+^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=(get_current_plan_detail|get_feature_template)(&include_expired_plans=true|&include_purchase_platform=false|&platform=ios)? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook.js
 
 [MITM]
 hostname = notebook.zoho.com
+
 */
+
 
 var url = $request.url;
 

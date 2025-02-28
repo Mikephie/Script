@@ -1,13 +1,11 @@
-/*************************************
+/*
 
-项目名称：Wallcraft-动态壁纸
-下载地址：http://t.cn/A6iO7Eht
-更新日期：2024-03-01
-脚本作者：chxm1023
-电报频道：https://t.me/chxm1023
-使用声明：⚠️仅供参考，🈲转载与售卖！
+📜 Wallcraft-动态壁纸 解锁 VIP 脚本
+📅 更新时间：2024年12月06日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
-**************************************
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
 ^https?:\/\/billing-ios\.wallpaperscraft\.com\/(verify_receipt|products)\/remove_ads$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/wall.js
@@ -15,7 +13,7 @@
 [mitm]
 hostname = billing-ios.wallpaperscraft.com
 
-*************************************/
+*/
 
 
 var chxm1023 = JSON.parse($response.body);

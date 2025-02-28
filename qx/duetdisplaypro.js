@@ -1,15 +1,20 @@
 /*
-‎Duet Display 2.18
-DuetAir 1.2.12
+
+📜 DuetDisplayPro 解锁 VIP 脚本
+📅 更新时间：2024年06月28日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 需登录
 
 [rewrite_local]
-
 https://rdp.duetdisplay.com/v1/users/validateReceipt url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/duetdisplaypro.js
 
 [mitm]
 hostname = rdp.duetdisplay.com
+
 */
 
 

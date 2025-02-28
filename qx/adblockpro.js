@@ -1,19 +1,20 @@
-/*        
-        ➪：脚本名称:   AdblockPro 
+/*
 
-        ★：解锁永久🆅🅸🅿
-
-        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+📜 AdblockPro 解锁 VIP 脚本
+📅 更新时间：2024年11月09日
+🔓 功能：解锁永久 VIP
+🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
- 
+
 [rewrite_local]
 ^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js
 
 [MITM]
 hostname = api.adblockpro.app
 
-*******************************/
+*/
+ 
 
 let body = JSON.parse($response.body);
 
