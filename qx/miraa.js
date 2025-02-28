@@ -5,6 +5,7 @@
 🔓 功能：解锁永久 VIP
 𖣘：🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
 ^https:\/\/(api|pay)\.myoland\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/miraa.js
