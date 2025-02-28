@@ -1,0 +1,30 @@
+{
+  "user_agent": "FindPhoneByClap",
+  "bundle_id": "com.viprak.phone.finder.by.clap.flash",
+  "data": {
+    "Month_Plan": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "Month_Plan"
+    },
+    "Special_Year_Plan": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "Special_Year_Plan"
+    },
+    "Year_Plan": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "Year_Plan"
+    },
+    "lifetime_pro_purchase": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "lifetime_pro_purchase"
+    }
+  }
+}
