@@ -8,7 +8,7 @@
 ^https?:\/\/appss\.(rhinoxky|baomingding|rhinoxlab)\.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js  
 
 [mitm]  
-hostname = appss.rhinoxlab.com  
+hostname = appss.rhinoxlab.com， appss.baomingding.com
 */
 
 let mikephie = JSON.parse($response.body);
