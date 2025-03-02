@@ -1,0 +1,30 @@
+{
+  "user_agent": "poster_maker",
+  "bundle_id": "app.arkStudio.posterMaker",
+  "data": {
+    "poster_maker_1299_yearly_3d_trial": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "poster_maker_1299_yearly_3d_trial"
+    },
+    "poster_maker_1999_lifetime": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "poster_maker_1999_lifetime"
+    },
+    "postermaker_2499_1y": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "postermaker_2499_1y"
+    },
+    "postermaker_599_1m": {
+      "entitlements": [
+        "all_access"
+      ],
+      "product_identifier": "postermaker_599_1m"
+    }
+  }
+}
