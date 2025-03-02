@@ -1,0 +1,30 @@
+{
+  "user_agent": "Filebar",
+  "bundle_id": "me.shuifeng.Filebox",
+  "data": {
+    "filebox_1y99_2w0": {
+      "entitlements": [
+        "filebox_yearly"
+      ],
+      "product_identifier": "filebox_1y99_2w0"
+    },
+    "filebox_99_monthly_0_3days": {
+      "entitlements": [
+        "filebox_monthly"
+      ],
+      "product_identifier": "filebox_99_monthly_0_3days"
+    },
+    "filebox_lifetime": {
+      "entitlements": [
+        "filebox_lifetime"
+      ],
+      "product_identifier": "filebox_lifetime"
+    },
+    "filebox_pro": {
+      "entitlements": [
+        "filebox_pro"
+      ],
+      "product_identifier": "filebox_pro"
+    }
+  }
+}
