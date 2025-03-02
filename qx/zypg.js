@@ -24,6 +24,7 @@ if ($request.url.includes("/getAccountInfo")) {
         type: "VIP",                          // 更新或添加字段
         freeFlag: "YES",                       // 更新或添加字段
         wordage: 8888888888,                  // 更新或添加字段
+        appleUserEmail: "888@gmail.com",              // 更新或添加字段
         email: "888@gmail.com",              // 更新或添加字段
         vipExpireTime: "2088-08-08 08:08:08", // 更新或添加字段
         vipExpireDays: 8888888888,           // 更新或添加字段
