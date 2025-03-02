@@ -1,0 +1,24 @@
+{
+  "user_agent": "Currency%20Widget%20Extension",
+  "bundle_id": "com.jeffreygrossman.currencyapp.Currency-Widget-Extension",
+  "data": {
+    "com.jeffreygrossman.currencyapp.iap.plus": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.jeffreygrossman.currencyapp.iap.plus"
+    },
+    "com.jeffreygrossman.currencyapp.iap.pro": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.jeffreygrossman.currencyapp.iap.pro"
+    },
+    "com.jeffreygrossman.currencyapp.iap.pro.crossgrade": {
+      "entitlements": [
+        "plus"
+      ],
+      "product_identifier": "com.jeffreygrossman.currencyapp.iap.pro.crossgrade"
+    }
+  }
+}

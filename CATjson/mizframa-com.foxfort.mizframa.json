@@ -1,0 +1,52 @@
+{
+  "user_agent": "mizframa",
+  "bundle_id": "com.foxfort.mizframa",
+  "data": {
+    "mf_10_1y_0_0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mf_10_1y_0_0"
+    },
+    "mf_15_1m_0_0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mf_15_1m_0_0"
+    },
+    "mf_20_1m_0_0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mf_20_1m_0_0"
+    },
+    "mf_20_lifetime": {
+      "entitlements": [],
+      "product_identifier": "mf_20_lifetime"
+    },
+    "mf_20_lifetime2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mf_20_lifetime2"
+    },
+    "mf_20_lifetime3": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mf_20_lifetime3"
+    },
+    "mf_20_lifetime_10": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mf_20_lifetime_10"
+    },
+    "mf_7_1y_0_0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "mf_7_1y_0_0"
+    }
+  }
+}

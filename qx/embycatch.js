@@ -1,3 +1,4 @@
+
 // 变量
 const $ = new Env('Emby播放记录');
 const NOTIFY_COUNT_KEY = 'notify_count';
@@ -9,24 +10,6 @@ const SERVERS = {
         prefix: 'th',
         storage_key: 'emby_th_playing',
         comment: '探花'
-    },
-    'viclub': {
-        domain: 'su.viclub.top',
-        prefix: 'vc',
-        storage_key: 'emby_vc_playing',
-        comment: 'VIP'
-    },
-    'jingzhe': {
-        domain: 'emby.jingzhe.pro',
-        prefix: 'jz',
-        storage_key: 'emby_jz_playing',
-        comment: '惊蛰'
-    },
-    'moe': {
-        domain: 'newplay.emby.moe',
-        prefix: 'moe',
-        storage_key: 'emby_moe_playing',
-        comment: 'MisakaF'
     },
     'nanflix': {
         domain: 'us.nanflix.net',
