@@ -8,7 +8,7 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local]
-^https?:\/\/appss.rhinoxlab.com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js
+^https?:\/\/appss.(rhinoxlab|rhinoxky).com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js
 
 [mitm] 
 hostname = appss.rhinoxlab.com
