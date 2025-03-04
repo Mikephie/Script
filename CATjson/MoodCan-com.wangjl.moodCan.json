@@ -1,0 +1,30 @@
+{
+  "user_agent": "MoodCan",
+  "bundle_id": "com.wangjl.moodCan",
+  "data": {
+    "MoodCan_168_Lifetime_Original": {
+      "entitlements": [
+        "moodJarPro"
+      ],
+      "product_identifier": "MoodCan_168_Lifetime_Original"
+    },
+    "MoodCan_58_yearly": {
+      "entitlements": [
+        "moodJarPro"
+      ],
+      "product_identifier": "MoodCan_58_yearly"
+    },
+    "MoodCan_6_monthly": {
+      "entitlements": [
+        "moodJarPro"
+      ],
+      "product_identifier": "MoodCan_6_monthly"
+    },
+    "MoodCan_98_Lifetime": {
+      "entitlements": [
+        "moodJarPro"
+      ],
+      "product_identifier": "MoodCan_98_Lifetime"
+    }
+  }
+}
