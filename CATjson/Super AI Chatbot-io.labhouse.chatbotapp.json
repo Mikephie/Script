@@ -1,0 +1,108 @@
+{
+  "user_agent": "Super%20AI%20Chatbot",
+  "bundle_id": "io.labhouse.chatbotapp",
+  "data": {
+    "chatbot_1199_1m_3dt": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_1199_1m_3dt"
+    },
+    "chatbot_3999_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_3999_1y"
+    },
+    "chatbot_699_1w_3dt": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_699_1w_3dt"
+    },
+    "chatbot_699_1w_7d049": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_699_1w_7d049"
+    },
+    "chatbot_899_1m_3dt": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_899_1m_3dt"
+    },
+    "chatbot_999_1w_7d049": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_999_1w_7d049"
+    },
+    "chatbot_v2_5999_1y_3dt": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v2_5999_1y_3dt"
+    },
+    "chatbot_v2_999_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v2_999_1m"
+    },
+    "chatbot_v3_5999_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v3_5999_1y"
+    },
+    "chatbot_v3_5999_1y_3dt": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v3_5999_1y_3dt"
+    },
+    "chatbot_v3_699_1w": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v3_699_1w"
+    },
+    "chatbot_v4_1999_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v4_1999_1y"
+    },
+    "chatbot_v6_5999_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v6_5999_1y"
+    },
+    "chatbot_v6_599_1w": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v6_599_1w"
+    },
+    "chatbot_v6_599_1w_3dt": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v6_599_1w_3dt"
+    },
+    "chatbot_v7_3999_1y_7dt": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v7_3999_1y_7dt"
+    },
+    "chatbot_v8_4999_1y_7dt": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "chatbot_v8_4999_1y_7dt"
+    }
+  }
+}
