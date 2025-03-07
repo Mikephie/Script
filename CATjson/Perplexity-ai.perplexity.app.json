@@ -1,0 +1,50 @@
+{
+  "user_agent": "Perplexity",
+  "bundle_id": "ai.perplexity.app",
+  "data": {
+    "pro_0_m_20_m": {
+      "entitlements": [
+        "Perplexity Pro"
+      ],
+      "product_identifier": "pro_0_m_20_m"
+    },
+    "pro_200_y_1w": {
+      "entitlements": [],
+      "product_identifier": "pro_200_y_1w"
+    },
+    "pro_200_yr_1w_new": {
+      "entitlements": [
+        "Perplexity Pro"
+      ],
+      "product_identifier": "pro_200_yr_1w_new"
+    },
+    "pro_2025_01_ca_0_m_20_m": {
+      "entitlements": [
+        "Perplexity Pro"
+      ],
+      "product_identifier": "pro_2025_01_ca_0_m_20_m"
+    },
+    "pro_20_m": {
+      "entitlements": [],
+      "product_identifier": "pro_20_m"
+    },
+    "pro_20_m_new": {
+      "entitlements": [
+        "Perplexity Pro"
+      ],
+      "product_identifier": "pro_20_m_new"
+    },
+    "pro_5_m_1m": {
+      "entitlements": [
+        "Perplexity Pro"
+      ],
+      "product_identifier": "pro_5_m_1m"
+    },
+    "pro_5_m_20_m": {
+      "entitlements": [
+        "Perplexity Pro"
+      ],
+      "product_identifier": "pro_5_m_20_m"
+    }
+  }
+}

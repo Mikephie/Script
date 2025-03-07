@@ -1,0 +1,48 @@
+{
+  "user_agent": "Logo%20Maker%20Pro",
+  "bundle_id": "com.coseymanagement.logomakerpro",
+  "data": {
+    "2lifetimeforlogomakerpro": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "2lifetimeforlogomakerpro"
+    },
+    "in_app_purchase_10": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "in_app_purchase_10"
+    },
+    "in_app_purchase_20": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "in_app_purchase_20"
+    },
+    "in_app_purchase_40": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "in_app_purchase_40"
+    },
+    "logomakerpro_3999_1y": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "logomakerpro_3999_1y"
+    },
+    "logomakerpro_499_1w": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "logomakerpro_499_1w"
+    },
+    "logomakerpro_999_1m": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "logomakerpro_999_1m"
+    }
+  }
+}
