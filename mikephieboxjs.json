@@ -85,10 +85,7 @@
       ],
       "author": "@Mikephie℡",
       "repo": "https://github.com/Mikephie",
-      "icons": [
-        "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/KKTV.png",
-        "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/KKTV.png"
-      ],
+      "icons": ["https://raw.githubusercontent.com/General74110/Scripts/master/img/kuwo.png"],
       "script": "https://raw.githubusercontent.com/Mikephie/Task/main/kuwotimes.js"
     },
     {
@@ -96,10 +93,7 @@
       "name": "TestFlight监控",
       "author": "@Mikephie",
       "script": "https://raw.githubusercontent.com/Mikephie/Script/main/qx/autojoinTF.js",
-      "icons": [ 
-        "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png",
-        "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png"
-      ],
+      "icons": ["https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png"],
       "keys": [
         "session_id",
         "session_digest",
