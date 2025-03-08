@@ -54,7 +54,10 @@
       ],
       "author": "@Mike",
       "repo": "https://github.com/mike/scripts",
-      "icons": ["https://raw.githubusercontent.com/deezertidal/private/main/icons/kuwosvip.png"],
+      "icons": [
+        "https://raw.githubusercontent.com/deezertidal/private/main/icons/kuwosvip.png",
+        "https://raw.githubusercontent.com/deezertidal/private/main/icons/kuwosvip.png"
+      ],
       "script": "https://raw.githubusercontent.com/Mikephie/Task/main/kuwogold.js"
     },
     {
@@ -85,7 +88,10 @@
       ],
       "author": "@Mikephie℡",
       "repo": "https://github.com/Mikephie",
-      "icons": ["https://raw.githubusercontent.com/General74110/Scripts/master/img/kuwo.png"],
+      "icons": [
+        "https://raw.githubusercontent.com/General74110/Scripts/master/img/kuwo.png",
+        "https://raw.githubusercontent.com/General74110/Scripts/master/img/kuwo.png"
+      ],
       "script": "https://raw.githubusercontent.com/Mikephie/Task/main/kuwotimes.js"
     },
     {
