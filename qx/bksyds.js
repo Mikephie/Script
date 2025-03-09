@@ -1,10 +1,5 @@
 /*
-
-📜 边框水印大师 解锁 VIP 脚本
-📅 更新时间：2024年10月28日
-🔓 功能：解锁永久 VIP
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+📜 ✨ 边框水印大师 ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local] 
@@ -12,29 +7,27 @@
 
 [MITM]
 hostname = photoby.hasmash.com
-
 */
 
-let mikephie = JSON.parse($response.body);
+const appName = "✨边框水印大师✨";
+const Author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+const expire = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
+const notifyEnabled = true;
+
+let resp = JSON.parse($response.body || '{}');
+resp.result = resp.result || {};
 
 if ($request.url.includes("/auth/member")) {
-    Object.assign(mikephie.result, {
-        memberExpire: 3742762088000,      // 更新或添加字段
-        phone: "15546907888",      // 更新添加
-        uid: "f7d62252b11144ee8193f85fa95fcf0b",      // 更新添加
-    });
+    resp.result.memberExpire = 3742762088000;
 } else if ($request.url.includes("/clickEvent")) {
-    Object.assign(mikephie.result, {
-        id: 45111084,      // 更新添加
-        isVip: 1,      // 更新或添加字段
-        vipTime: "2088-08-08 08:08:08",      // 更新或添加字段
-        uid: "C4957375-2D67-4728-B3E1-2696A3DFA5C8",      // 更新添加
-        deviceId: "39B810B4-B42D-4208-90CF-2F1573394270"      // 更新添加
-    });  // 添加了这个闭合括号
+    resp.result.isVip = 1;
+    resp.result.vipTime = "2088-08-08 08:08:08";
 } else if ($request.url.includes("/verify")) {
-    Object.assign(mikephie.result, {
-        expire: 3742762088000,      // 更新添加
-    });
+    resp.result.expire = 3742762088000;
 }
 
-$done({ body: JSON.stringify(mikephie) });
+if (notifyEnabled && typeof $notification?.post === 'function') {
+    $notification.post(appName, Author, expire);
+}
+
+$done({ body: JSON.stringify(resp) });
