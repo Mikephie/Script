@@ -3,16 +3,16 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local] // Quantumult X
-^https?:\/\/gql(-fed)?\.reddit\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js
+^https:\/\/gql-fed\.reddit\.com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js
 
 [Script] // Surge
-redditvip = type=http-response, pattern=^https?:\/\/gql(-fed)?\.reddit\.com, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, timeout=60
+gql-fed_vip = type=http-response, pattern=^https:\/\/gql-fed\.reddit\.com\/, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, timeout=60
 
 [Script] // Loon
-http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, requires-body=true, timeout=60
+http-response ^https:\/\/gql-fed\.reddit\.com\/ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, requires-body=true, timeout=60
 
 [MITM]
-hostname = gql.reddit.com, gql-fed.reddit.com
+hostname = gql-fed.reddit.com
 
 */
 
