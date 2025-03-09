@@ -171,12 +171,7 @@ Flightradar24 = type=http-response, pattern=^https://mobile.flightradar24.com/mo
 yygdsc = type=http-response, pattern=^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/getUserInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# gg
-# hostname = isi.*.g*.com*
-gg = type=http-response,pattern=^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js
-ggg = type=http-request,pattern=^https:\/\/isi\..*\.g.*\.(com\..*|com)\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=http://git.yycm.link/chxm1023/Rewrite/raw/main/gg.js
 
-#************************************#
 # GP4o（永久会员）
 # hostname = nichousha.sjrjyffs.top
 GTP4ohd = type=http-request, pattern=https://nichousha.sjrjyffs.top/api/img/aiSketch, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/GP4ohd.js, requires-body=true, max-size=-1, timeout=60
@@ -196,11 +191,6 @@ hbqj = type=http-response, pattern=^https:\/\/h5\.hunbei\.com\/m\/member\/getUse
 # 婚礼精选 （永久会员）
 # hostname = www.lovewith.me
 hljx = type=http-response, pattern=^https:\/\/www\.lovewith\.me\/golove\/v05\/profile, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, max-size=-1, timeout=60
-
-#************************************#
-# Notability
-# hostname = notability.com
-Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
 
 #************************************#
 # Notebook （永久会员）
@@ -239,11 +229,7 @@ redditvip = type=http-response, pattern=^https:\/\/gql-fed\.reddit\.com\/, requi
 Replica-屏幕镜像 = type=http-response,pattern=^https?:\/\/api\.apphud\.com\/v1\/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/replica.js
 
 #************************************#
-# 让我喵喵
-# hostname = www.pdreamer.com
-rwmm = type=http-response, pattern=https://www.pdreamer.com/aymyProd/api/getUserInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/rwmm.js, requires-body=true, max-size=-1, timeout=60
 
-#************************************#
 # Ringtonemaker （永久会员）
 # hostname = clip.tto321.cn
 ringtonemaker = type=http-response, pattern=^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ringtonemaker.js, requires-body=true, max-size=-1, timeout=60
@@ -296,4 +282,4 @@ zmbz = type=http-response, pattern=^https:\/\/api\.fzxhmy\.com\/(?:unique\/(?:ba
 
 
 [MITM]
-hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, appv3.filmix.com.cn, waterqnwa.yunxiaoguo.cn, rdp.duetdisplay.com, api.revenuecat.com, buy.itunes.apple.com, api.adapty.io, *.apphud.com, *.lrts.me, api.adblockpro.app, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, notability.com, qisi.*.g*.com*, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com, be.aimirror.fun, api.528529.com, newappapi.fntmob.com, dreamfaceapp.com, pptdashi.kuoliang.cn, billing.chaton.ai, video-svr.perfect365.com, paperwork.szshht.cn, *.pdfexpert.com, purchase-verifier.cdwapi.com, format-api.netpock.com, www.pdreamer.com, api.fzxhmy.com, *.snow.me, *.xiangha.com, chenghu.kuaixuanwo.com, appss.rhinoxky.com
+hostname = %APPEND% buy.itunes.apple.com, gql.reddit.com, gql-fed.reddit.com, appv3.filmix.com.cn, waterqnwa.yunxiaoguo.cn, rdp.duetdisplay.com, api.revenuecat.com, api.adapty.io, *.apphud.com, *.lrts.me, api.adblockpro.app, mobile.flightradar24.com, *.cyapi.cn, *.caiyunapp.com, subscription.grammarly.com, purchases.ws.pho.to, billing-ios.wallpaperscraft.com, leancloud.emotionwp.com, subscription-api.lyrebirdstudio.net, api-*.facereplacerext.com, bd-api.kuwo.cn, baimiao.uzero.cn, api.apphud.com, app-v1.ecoliving168.com, appss.baomingding.com, appss.rhinoxlab.com, appraven.net, sm.szsszykj.com, notebook.zoho.com, clip.tto321.cn, api-drive.mypikpak.com, kkyun.com, photoby.hasmash.com, www.lovewith.me, apps-api.lianaishouce.cn, apps-api.lingege.cn, api-poster.ycase.cn, payments.classdojo.com, nichousha.sjrjyffs.top, h5.hunbei.com, accounts.felo.me,translator.felo.me, api.alohaprofile.com, mb3admin.com, be.aimirror.fun, api.528529.com, newappapi.fntmob.com, dreamfaceapp.com, pptdashi.kuoliang.cn, billing.chaton.ai, video-svr.perfect365.com, paperwork.szshht.cn, *.pdfexpert.com, purchase-verifier.cdwapi.com, format-api.netpock.com, api.fzxhmy.com, *.snow.me, *.xiangha.com, chenghu.kuaixuanwo.com, appss.rhinoxky.com
