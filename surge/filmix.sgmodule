@@ -5,8 +5,7 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/filmix.png
 
 [Script]
-Filmix = type=http-response,pattern=https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
-
+Filmix = type=http-response,pattern=https:\/\/appv3\.filmix\.com\.cn\/api\/v1\/user\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
 
 [MITM]
-hostname = %APPEND% appv2.filmix.com.cn
+hostname = appv3.filmix.com.cn
