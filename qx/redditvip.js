@@ -63,7 +63,7 @@ try {
   console.log(`[${appName}] 解锁失败: ${e}`);
 } finally {
   // 发送会话通知 (提前调用，避免在 $done 后可能执行不到)
-  sessionNotify(appName, author, message, 1 * 60 * 1000);
+  sessionNotify(appName, author, message, 10 * 60 * 1000);
   $done(body ? { body } : {});
 }
 
