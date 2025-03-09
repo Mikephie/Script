@@ -156,7 +156,7 @@ felotk = type=http-request, pattern=^https?:\/\/translator.felo.me\/api\/transla
 #************************************#
 # Filmix
 # hostname = appv3.filmix.com.cn
-Filmix = type=http-response,pattern=https:\/\/appv3\.filmix\.com\.cn\/api\/v1\/user\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
+filmix = type=http-response, pattern=^https:\/\appv3\.filmix\.com\.cn\/api\/v1\/user\/user, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, requires-body=true, max-size=0, timeout=60
 
 #************************************#
 # Flightradar24 解锁系列
