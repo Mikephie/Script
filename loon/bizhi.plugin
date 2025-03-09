@@ -4,7 +4,7 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/bizhi.png
 
 [Script]
-http-response ^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_account? script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, timeout=60
+http-response ^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_（account|subscribe)? script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, timeout=60
 
 
 [MITM]

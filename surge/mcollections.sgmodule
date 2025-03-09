@@ -85,7 +85,7 @@ bksyds = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com, script-p
 #************************************#
 # 壁纸-需登录
 # hostname = leancloud.emotionwp.com
-壁纸 = type=http-response, pattern=^https?:\/\/leancloud.emotionwp.com\/.*\/classes\/wpf_account, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, max-size=-1, timeout=60
+壁纸 = type=http-response, pattern=^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_（account|subscribe)?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
 # 彩豆视频水印宝 – 视频加水印制作视频剪辑（永久会员） V1.1.1 @GieGie777
