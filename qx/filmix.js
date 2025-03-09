@@ -16,6 +16,22 @@ hostname = appv3.filmix.com.cn
 
 */
 
+/********** 主逻辑：解锁VIP **********/
+const appName = "✨Filmix PRO+✨";
+const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
+
+// 主逻辑：解锁 VIP
+let body = $response.body;
+let data = JSON.parse(body);
+data.vip_level = 5;
+data.is_vip = true;
+data.vip_end_time = "2088-08-08T08:08:08Z";
+body = JSON.stringify(data);
+
+// 发送会话通知（会话时长设为10分钟）
+sessionNotify(appName, author, message, 10 * 60 * 1000);
+
 /*
 📱 精简版会话通知模块 📱
 */
@@ -66,21 +82,5 @@ function sessionNotify(appName, author, message, timeout = 1 * 60 * 1000) {
     
     return isNewSession;
 }
-
-/********** 主逻辑：解锁VIP **********/
-const appName = "✨Filmix PRO+✨";
-const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
-
-// 主逻辑：解锁 VIP
-let body = $response.body;
-let data = JSON.parse(body);
-data.vip_level = 5;
-data.is_vip = true;
-data.vip_end_time = "2088-08-08T08:08:08Z";
-body = JSON.stringify(data);
-
-// 发送会话通知（会话时长设为10分钟）
-sessionNotify(appName, author, message, 10 * 60 * 1000);
 
 $done({ body });
