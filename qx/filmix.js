@@ -1,45 +1,30 @@
 /*
 
-📜 Filmix 解锁 VIP 脚本
-📅 更新时间：2024年03月08日
-🔓 功能：解锁永久 VIP
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+📜 ✨ Filmix PRO+ ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local]
-^https?:\/\/appv3\.filmix\.com\.cn\/api\/v1\/user\/user url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js
+[Script]
+filmix_vip = type=http-response, pattern=^https:\/\/appv3\.filmix\.com\.cn\/api\/v1\/user\/user, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js, timeout=60
 
-[mitm]
+[MITM]
 hostname = appv3.filmix.com.cn
 
 */
 
+const appName = "✨Filmix PRO+✨";
+const Author  = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+const expire  = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
+const notifyEnabled = true;
 
-var mikephie = JSON.parse($response.body);
+let body = $response.body;
+let data = JSON.parse(body);
+data.vip_level = 5;
+data.is_vip = true;
+data.vip_end_time = "2088-08-08T08:08:08Z";
+body = JSON.stringify(data);
 
-    mikephie = {
-  "year_total_match" : 9,
-  "hash_version" : 0,
-  "created_at" : "2024-03-08T12:27:47.759205+08:00",
-  "userprofile_id" : "_d371b7f768661f4ccaca1e6eac2f1278",
-  "vip_start_time" : "2024-06-13T17:57:17+08:00",
-  "year_reset_time" : "2088-08-08T08:08:08+08:00",
-  "token" : "aaff0c12a53257b29d6e1cbab698447672b7d846",
-  "year_total_match_max" : 88888,
-  "updated_at" : "2024-06-13T18:05:56.543849+08:00",
-  "app_account_token" : "a4c5606d-15ab-49a8-b1c6-33c918ffcbc0",
-  "week_total_match" : 33,
-  "week_reset_time" : "2024-06-14T17:00:02.800985+08:00",
-  "is_need_refresh" : false,
-  "is_vip" : true,
-  "user" : {
-    "username" : "Mikephie",
-    "id" : 1265,
-    "email" : "",
-    "is_active" : true
-  },
-  "vip_end_time" : "2088-08-08T08:08:08+08:00" 
+if (notifyEnabled && $notification?.post) {
+    $notification.post(`${appName}`, `${Author}`, `${expire}`);
 }
- 
-$done({body : JSON.stringify(mikephie)});
+
+$done({ body });
