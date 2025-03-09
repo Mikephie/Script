@@ -12,7 +12,7 @@ gql-fed_vip = type=http-response, pattern=^https:\/\/gql-fed\.reddit\.com\/, req
 http-response ^https:\/\/gql-fed\.reddit\.com\/ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, requires-body=true, timeout=60
 
 [MITM]
-hostname = gql-fed.reddit.com
+hostname = gql.reddit.com, gql-fed.reddit.com
 
 */
 
