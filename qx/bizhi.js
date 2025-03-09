@@ -3,13 +3,13 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local] // Quantumult X
-^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_（account|subscribe)? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
+^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_[a-z]+ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
 
 [Script] // Surge
-leancloud_vip = type=http-response, pattern=^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_（account|subscribe)?, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, timeout=60
+leancloud_vip = type=http-response, pattern=^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_[a-z]+, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, timeout=60
 
 [Script] // Loon
-http-response ^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_（account|subscribe)? script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, timeout=60
+http-response ^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_[a-z]+ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = leancloud.emotionwp.com

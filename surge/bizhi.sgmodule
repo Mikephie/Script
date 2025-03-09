@@ -6,7 +6,7 @@
 
 
 [Script]
-壁纸 = type=http-response,pattern=https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_（account|subscribe)?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
+壁纸 = type=http-response,pattern=https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_[a-z]+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
 
 
 [MITM]
