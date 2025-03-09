@@ -229,6 +229,11 @@ qqjsq = type=http-response, pattern=^http:\/\/chenghu\.kuaixuanwo\.com\/user\/in
 qjsm = type=http-response, pattern=^https?:\/\/sm.szsszykj.com\/api\/user\/vip, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/qjsm.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
+# RedditVIP
+# hostname = gql.reddit.com, gql-fed.reddit.com
+redditvip = type=http-response, pattern=^https:\/\/gql-fed\.reddit\.com\/, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, timeout=60
+
+#************************************#
 # Replica-屏幕镜像
 # hostname = api.apphud.com
 Replica-屏幕镜像 = type=http-response,pattern=^https?:\/\/api\.apphud\.com\/v1\/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/replica.js
