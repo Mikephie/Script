@@ -72,7 +72,7 @@ const appName = "✨Classdojo✨";
 const author  = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
 
-// 解析响应
+// 主脚本函数...
 let body = JSON.parse($response.body);
 
 function modifyObject(obj) {
@@ -89,10 +89,11 @@ function modifyObject(obj) {
         }
     }
 }
+modifyObject(body);
+// 主脚本函数...
 
 // 发送会话通知（会话时长设为10分钟）
 sessionNotify(appName, author, message, 10 * 60 * 1000);
 
 // 修改对象
-modifyObject(body);
 $done({ body: JSON.stringify(body) });
