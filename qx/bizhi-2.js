@@ -16,17 +16,16 @@ hostname = leancloud.emotionwp.com
 
 */
 
-/********** 会话通知模块 **********/
-function sNotify(a,b,c,d=60000){const e=`${a.replace(/[^a-zA-Z]/g,'').toLowerCase()}_session`;const f=typeof $prefs!=='undefined';const g=typeof $persistentStore!=='undefined'&&typeof $notify!=='undefined';const h=typeof $persistentStore!=='undefined'&&typeof $notification!=='undefined';const i=f?$prefs:$persistentStore;const j=f?$notification:(g?$notify:$notification);if(!i||!j)return false;try{const k=f?i.valueForKey(e):i.read(e);const l=Date.now();if(!k||(l-parseInt(k)>d)){j.post(a,b,c);f?i.setValueForKey(l.toString(),e):i.write(l.toString(),e);return true;}}catch(m){console.log(`[${a}] 错误: ${m}`);}return false;}
-
-/********** 应用配置信息 **********/
+/********** 主逻辑：解锁VIP **********/
 const appName = "✨Bizhi壁纸✨";
 const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
 
-// 主脚本函数...
+// 解析响应体
 let body = $response.body;
 let data = JSON.parse(body);
+
+// 解锁 VIP
 data.results = data.results.map(user => {
   return Object.assign(user, {
     isVIP: 1,
@@ -41,7 +40,37 @@ data.results = data.results.map(user => {
     headImageUrl: "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
   });
 });
-// 主脚本函数...
 
-sNotify(appName, author, message, 10 * 60 * 1000);
+// 会话通知
+sessionNotify(appName, author, message, 10 * 60 * 1000);
+
+/********** 会话通知模块 **********/
+function sessionNotify(appName, author, message, timeout = 1 * 60 * 1000) {
+  const keyPrefix = appName.replace(/[^a-zA-Z]/g, '').toLowerCase();
+  const storeKey = `${keyPrefix}_session_key`;
+
+  const isQuanX = typeof $prefs !== 'undefined';
+  const isSurge = typeof $persistentStore !== 'undefined' && typeof $notify !== 'undefined';
+  const isLoon = typeof $persistentStore !== 'undefined' && typeof $notification !== 'undefined';
+
+  const store = isQuanX ? $prefs : (isSurge || isLoon ? $persistentStore : null);
+  const notify = isQuanX || isLoon ? $notification : (isSurge ? $notify : null);
+
+  if (!store || !notify) return false;
+
+  let lastTime = store[isQuanX ? 'valueForKey' : 'read'](storeKey);
+  const currentTime = Date.now();
+  const isNewSession = !lastTime || (currentTime - parseInt(lastTime) > timeout);
+
+  if (isNewSession) {
+    notify.post(appName, author, message);
+    store[isQuanX ? 'setValueForKey' : 'write'](currentTime.toString(), storeKey);
+    console.log(`[${appName}] 新会话通知已发送，键名: ${storeKey}`);
+  } else {
+    console.log(`[${appName}] 同一会话内，跳过通知，键名: ${storeKey}`);
+  }
+
+  return isNewSession;
+}
+
 $done({ body: JSON.stringify(data) });

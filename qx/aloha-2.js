@@ -1,40 +1,67 @@
 /*
-📜 ✨ 边框水印大师 ✨
+📜 ✨ Aloha ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local] // Quantumult X
-^https:\/\/photoby\.hasmash\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js
+^https:\/\/api\.alohaprofile\.com\/v1\/profile_info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js
 
 [Script] // Surge
-photoby_vip = type=http-response, pattern=^https:\/\/photoby\.hasmash\.com, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js, timeout=60
+api_vip = type=http-response, pattern=^https:\/\/api\.alohaprofile\.com\/v1\/profile_info, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js, timeout=60
 
 [Script] // Loon
-http-response ^https:\/\/photoby\.hasmash\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js, requires-body=true, timeout=60
+http-response ^https:\/\/api\.alohaprofile\.com\/v1\/profile_info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aloha.js, requires-body=true, timeout=60
 
 [MITM]
-hostname = photoby.hasmash.com
+hostname = api.alohaprofile.com
 
 */
 
-/********** 会话通知函数 **********/
+/********** 主逻辑：解锁VIP **********/
+const appName = "✨Aloha✨";
+const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
+
+// 主逻辑：解锁 VIP
+let body = $response.body;
+let data = JSON.parse(body);
+
+data.profile = Object.assign(data.profile || {}, {
+  is_premium: true,
+  end_of_premium: 3742762088,
+  email: "888@gmail.com",
+  _end_of_premium: "2088-08-08 08:08:08.000"
+});
+
+
+// 发送会话通知（会话时长设为10分钟）
+sessionNotify(appName, author, message, 10 * 60 * 1000);
+
+/*
+📱 精简版会话通知模块 📱
+*/
+
 function sessionNotify(appName, author, message, timeout = 1 * 60 * 1000) {
-    // 从应用名提取英文字母作为键名前缀
+    // 动态生成存储键名（从应用名提取字母作为前缀）
     const keyPrefix = appName.replace(/[^a-zA-Z]/g, '').toLowerCase();
-    // 创建唯一的存储键名
     const storeKey = `${keyPrefix}_session_key`;
     
+    // 环境判断
     const isQuanX = typeof $prefs !== 'undefined';
     const isSurge = typeof $persistentStore !== 'undefined' && typeof $notify !== 'undefined';
     const isLoon = typeof $persistentStore !== 'undefined' && typeof $notification !== 'undefined';
     
+    // 获取存储和通知实例
     const store = isQuanX ? $prefs : (isSurge || isLoon ? $persistentStore : null);
     const notify = isQuanX || isLoon ? $notification : (isSurge ? $notify : null);
     
     if (!store || !notify) return false;
     
+    // 读取上次会话时间
     let lastTime;
     try {
-        lastTime = isQuanX ? store.valueForKey(storeKey) : store.read(storeKey);
+        lastTime = isQuanX ? 
+            store.valueForKey(storeKey) : 
+            store.read(storeKey);
     } catch (e) {
         console.log(`[${appName}] 读取会话时间失败`);
     }
@@ -42,6 +69,7 @@ function sessionNotify(appName, author, message, timeout = 1 * 60 * 1000) {
     const currentTime = Date.now();
     const isNewSession = !lastTime || (currentTime - parseInt(lastTime) > timeout);
     
+    // 如果是新会话，发送通知并更新时间
     if (isNewSession) {
         try {
             notify.post(appName, author, message);
@@ -59,26 +87,4 @@ function sessionNotify(appName, author, message, timeout = 1 * 60 * 1000) {
     return isNewSession;
 }
 
-/********** 主逻辑：解锁VIP **********/
-const appName = "✨边框水印大师✨";
-const author  = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
-
-// 解析响应
-let resp = JSON.parse($response.body || '{}');
-resp.result = resp.result || {};
-
-// 解锁会员
-if ($request.url.includes("/auth/member")) {
-    resp.result.memberExpire = 3742762088000;
-} else if ($request.url.includes("/clickEvent")) {
-    resp.result.isVip = 1;
-    resp.result.vipTime = "2088-08-08 08:08:08";
-} else if ($request.url.includes("/verify")) {
-    resp.result.expire = 3742762088000;
-}
-
-// 发送会话通知（会话时长设为1分钟）
-sessionNotify(appName, author, message, 10 * 60 * 1000);
-
-$done({ body: JSON.stringify(resp) });
+$done({ body: JSON.stringify(data) });

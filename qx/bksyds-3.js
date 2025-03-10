@@ -1,54 +1,84 @@
-/*        
-        ➪：脚本名称: 边框水印大师
-        
-        ★：解锁永久🆅🅸🅿
-
-        𖣘： 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+/*
+📜 ✨ 边框水印大师 ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local] 
-^https?:\/\/photoby\.hasmash\.com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds-3.js
+[rewrite_local] // Quantumult X
+^https:\/\/photoby\.hasmash\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js
+
+[Script] // Surge
+photoby_vip = type=http-response, pattern=^https:\/\/photoby\.hasmash\.com, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js, timeout=60
+
+[Script] // Loon
+http-response ^https:\/\/photoby\.hasmash\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bksyds.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = photoby.hasmash.com
 
-*******************************/
+*/
 
-// 处理响应体
-if ($response.body) {
-    let mikephie = JSON.parse($response.body);
-
-    if ($request.url.includes("/auth/member")) {
-        Object.assign(mikephie.result, {
-            memberExpire: 3742762088000,
-            phone: "15546907888",
-            uid: "f7d62252b11144ee8193f85fa95fcf0b"
-        });
-    } else if ($request.url.includes("/clickEvent")) {
-        Object.assign(mikephie.result, {
-            id: 38476625,
-            isVip: 1,
-            vipTime: "2088-08-08 08:08:08",
-            uid: "C4957375-2D67-4728-B3E1-2696A3DFA5C8",
-            deviceId: "39B810B4-B42D-4208-90CF-2F1573394270"
-        });
+/********** 会话通知函数 **********/
+function sessionNotify(appName, author, message, timeout = 1 * 60 * 1000) {
+    // 从应用名提取英文字母作为键名前缀
+    const keyPrefix = appName.replace(/[^a-zA-Z]/g, '').toLowerCase();
+    // 创建唯一的存储键名
+    const storeKey = `${keyPrefix}_session_key`;
+    
+    const isQuanX = typeof $prefs !== 'undefined';
+    const isSurge = typeof $persistentStore !== 'undefined' && typeof $notify !== 'undefined';
+    const isLoon = typeof $persistentStore !== 'undefined' && typeof $notification !== 'undefined';
+    
+    const store = isQuanX ? $prefs : (isSurge || isLoon ? $persistentStore : null);
+    const notify = isQuanX || isLoon ? $notification : (isSurge ? $notify : null);
+    
+    if (!store || !notify) return false;
+    
+    let lastTime;
+    try {
+        lastTime = isQuanX ? store.valueForKey(storeKey) : store.read(storeKey);
+    } catch (e) {
+        console.log(`[${appName}] 读取会话时间失败`);
     }
-
-    $done({ 
-        body: JSON.stringify(mikephie),
-        headers: $request.headers // 保持原有请求头不变
-    });
-} 
-// 如果只需要修改请求头
-else {
-    let headers = Object.fromEntries(
-        Object.entries($request.headers).map(([key, value]) => [key.toLowerCase(), value])
-    );
     
-    Object.assign(headers, {
-        authorization: "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmN2Q2MjI1MmIxMTE0NGVlODE5M2Y4NWZhOTVmY2YwYiIsImV4cCI6MTczNzc4Mjc3M30.cb8RAuzrdFMJZZnDwDXo1D9pOIp4JechPurVA5fnFFPvXTOr95vQokAJwTAFkpBuOnGlGxyTdR8PK_aQLUmQqg"
-    });
+    const currentTime = Date.now();
+    const isNewSession = !lastTime || (currentTime - parseInt(lastTime) > timeout);
     
-    $done({ headers: headers });
+    if (isNewSession) {
+        try {
+            notify.post(appName, author, message);
+            isQuanX ? 
+                store.setValueForKey(currentTime.toString(), storeKey) : 
+                store.write(currentTime.toString(), storeKey);
+            console.log(`[${appName}] 新会话通知已发送，键名: ${storeKey}`);
+        } catch (e) {
+            console.log(`[${appName}] 发送通知失败`);
+        }
+    } else {
+        console.log(`[${appName}] 同一会话内，跳过通知，键名: ${storeKey}`);
+    }
+    
+    return isNewSession;
 }
+
+/********** 主逻辑：解锁VIP **********/
+const appName = "✨边框水印大师✨";
+const author  = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
+
+// 解析响应
+let resp = JSON.parse($response.body || '{}');
+resp.result = resp.result || {};
+
+// 解锁会员
+if ($request.url.includes("/auth/member")) {
+    resp.result.memberExpire = 3742762088000;
+} else if ($request.url.includes("/clickEvent")) {
+    resp.result.isVip = 1;
+    resp.result.vipTime = "2088-08-08 08:08:08";
+} else if ($request.url.includes("/verify")) {
+    resp.result.expire = 3742762088000;
+}
+
+// 发送会话通知（会话时长设为1分钟）
+sessionNotify(appName, author, message, 10 * 60 * 1000);
+
+$done({ body: JSON.stringify(resp) });
