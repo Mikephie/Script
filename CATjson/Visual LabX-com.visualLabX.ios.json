@@ -1,0 +1,48 @@
+{
+  "user_agent": "Visual%20LabX",
+  "bundle_id": "com.visualLabX.ios",
+  "data": {
+    "vlx_1599_1y_1w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "vlx_1599_1y_1w0"
+    },
+    "vlx_1w_0d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "vlx_1w_0d0"
+    },
+    "vlx_1w_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "vlx_1w_3d0"
+    },
+    "vlx_1y_0w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "vlx_1y_0w0"
+    },
+    "vlx_499_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "vlx_499_1m"
+    },
+    "vlx_annual_0w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "vlx_annual_0w0"
+    },
+    "vlx_lifetime_free": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "vlx_lifetime_free"
+    }
+  }
+}
