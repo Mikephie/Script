@@ -25,6 +25,7 @@ const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
 
 // 主脚本函数...
+// 主脚本函数
 let body = $response.body;
 let url = $request.url;
 
@@ -57,6 +58,10 @@ if (url.includes("/query_is_vip")) {
 // 主脚本函数...
 
 sNotify(appName, author, message, 10 * 60 * 1000);
+// 主脚本函数
+
+sNotify(appName, author, message, 10 * 60 * 1000);
+
 // 根据条件选择返回方式
 if (typeof body === 'object') {
     $done({ body: JSON.stringify(body) }); // JSON格式返回
