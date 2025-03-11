@@ -23,6 +23,17 @@ const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
 
 // 主脚本函数...
+let body = $response.body;
+const replacements = [
+  { pattern: /"premium":false/g, replacement: '"premium":true' },
+  { pattern: /"hasInAppPurchases":false/g, replacement: '"hasInAppPurchases":true' },
+  { pattern: /"youOwn":false/g, replacement: '"youOwn":true' },
+  { pattern: /"arcade":false/g, replacement: '"arcade":true' },
+  { pattern: /"preorder":false/g, replacement: '"preorder":true' }
+];
+replacements.forEach(({ pattern, replacement }) => {
+  body = body.replace(pattern, replacement);
+});
 // 主脚本函数...
 
 sNotify(appName, author, message, 10 * 60 * 1000);
