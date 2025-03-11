@@ -24,21 +24,12 @@ const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️�
 
 // 主脚本函数...
 function sendNotification(title, subtitle, message) {
-    // 定义一个静态变量来跟踪通知状态
-    if (typeof sendNotification.hasNotified === 'undefined') {
-        sendNotification.hasNotified = false;
-    }
-    
-    if (!sendNotification.hasNotified) {
-        if (typeof $notification != 'undefined') {
-            // Surge
-            $notification.post(title, subtitle, message);
-        } else if (typeof $notify != 'undefined') {
-            // Quantumult X
-            $notify(title, subtitle, message);
-        }
-        // 通知显示后设置为 true
-        sendNotification.hasNotified = true;
+    if (typeof $notification != 'undefined') {
+        // Surge
+        $notification.post(title, subtitle, message);
+    } else if (typeof $notify != 'undefined') {
+        // Quantumult X
+        $notify(title, subtitle, message);
     }
 }
 
