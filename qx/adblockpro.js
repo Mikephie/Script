@@ -6,7 +6,7 @@
 ^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js
 
 [Script] // Surge
-AdblockPro = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js
+AdblockPro = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, timeout=60
 
 [Script] // Loon
 http-response ^https:\/\/api\.adblockpro\.app\/verify script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, requires-body=true, timeout=60
@@ -16,7 +16,7 @@ hostname = api.adblockpro.app
 
 /********** 会话通知模块 **********/
 function sNotify(app, author, message, duration = 60000) {
-    const sessionKey = `${app.replace(/[^a-zA-Z]/g, '').toLowerCase()}_session`;
+    const sessionKey = app.replace(/[^a-zA-Z]/g, '').toLowerCase() + '_session';
     const supportsPrefs = typeof $prefs !== 'undefined';
     const supportsPersistentStore = typeof $persistentStore !== 'undefined' && typeof $notify !== 'undefined';
     const lastNotification = supportsPrefs ? $prefs.valueForKey(sessionKey) : supportsPersistentStore ? $persistentStore.read(sessionKey) : null;
