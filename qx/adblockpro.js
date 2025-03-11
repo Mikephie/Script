@@ -6,7 +6,7 @@
 ^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js
 
 [Script] // Surge
-api_vip = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, timeout=60
+api_vip = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js
 
 [Script] // Loon
 http-response ^https:\/\/api\.adblockpro\.app\/verify script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, requires-body=true, timeout=60
@@ -14,20 +14,41 @@ http-response ^https:\/\/api\.adblockpro\.app\/verify script-path=https://raw.gi
 [MITM]
 hostname = api.adblockpro.app
 
-*/
-
 /********** 会话通知模块 **********/
-function sNotify(a,b,c,d=60000){const e=`${a.replace(/[^a-zA-Z]/g,'').toLowerCase()}_session`;const f=typeof $prefs!=='undefined';const g=typeof $persistentStore!=='undefined'&&typeof $notify!=='undefined';const h=typeof $persistentStore!=='undefined'&&typeof $notification!=='undefined';const i=f?$prefs:$persistentStore;const j=f?$notification:(g?$notify:$notification);if(!i||!j)return false;try{const k=f?i.valueForKey(e):i.read(e);const l=Date.now();if(!k||(l-parseInt(k)>d)){j.post(a,b,c);f?i.setValueForKey(l.toString(),e):i.write(l.toString(),e);return true;}}catch(m){console.log(`[${a}] 错误: ${m}`);}return false;}
+function sNotify(app, author, message, duration = 60000) {
+    const sessionKey = `${app.replace(/[^a-zA-Z]/g, '').toLowerCase()}_session`;
+    const supportsPrefs = typeof $prefs !== 'undefined';
+    const supportsPersistentStore = typeof $persistentStore !== 'undefined' && typeof $notify !== 'undefined';
+    const lastNotification = supportsPrefs ? $prefs.valueForKey(sessionKey) : supportsPersistentStore ? $persistentStore.read(sessionKey) : null;
+    
+    if (lastNotification) {
+        $notify(app, author, message);
+    }
+    
+    const expiration = Date.now() + duration;
+    if (supportsPrefs) {
+        $prefs.setValueForKey(expiration, sessionKey);
+    } else if (supportsPersistentStore) {
+        $persistentStore.write(expiration, sessionKey);
+    }
+}
 
 /********** 应用配置信息 **********/
 const appName = "✨AdblockPro✨";
 const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
 
-// 主脚本函数
-let body = JSON.parse($response.body);
+// 主脚本函数...
+let body;
+try {
+    body = JSON.parse($response.body);
+} catch (e) {
+    $done({ body: $response.body });
+    return;
+}
+
 function modifyObject(obj) {
-    for (let key in obj) {
+    for (const key in obj) {
         if (obj.hasOwnProperty(key)) {
             if (typeof obj[key] === 'number' && obj[key] === 0) {
                 obj[key] = 1;
@@ -37,18 +58,19 @@ function modifyObject(obj) {
         }
     }
 }
+
 // Modify the object
 modifyObject(body);
+
 // Additional modifications as per your requirements
 if (body.hasOwnProperty('v')) {
-    body.v = true;  // Keeping 'v' as true since it's already true in the original
+    body.v = true;
 }
-// 主脚本函数
+// 主脚本函数...
 
 sNotify(appName, author, message, 10 * 60 * 1000);
-// 根据条件选择返回方式
 if (typeof body === 'object') {
-    $done({ body: JSON.stringify(body) }); // JSON格式返回
+    $done({ body: JSON.stringify(body) });
 } else {
-    $done({ body }); // 字符串直接返回
+    $done({ body });
 }
