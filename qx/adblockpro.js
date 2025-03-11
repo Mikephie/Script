@@ -51,3 +51,4 @@ if (typeof body === 'object') {
     $done({ body: JSON.stringify(body) }); // JSON格式返回
 } else {
     $done({ body }); // 字符串直接返回
+}
