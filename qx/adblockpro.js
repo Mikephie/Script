@@ -23,6 +23,27 @@ const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
 
 // 主脚本函数...
+let body = JSON.parse($response.body);
+
+function modifyObject(obj) {
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            if (typeof obj[key] === 'number' && obj[key] === 0) {
+                obj[key] = 1;
+            } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+                modifyObject(obj[key]);
+            }
+        }
+    }
+}
+
+// Modify the object
+modifyObject(body);
+
+// Additional modifications as per your requirements
+if (body.hasOwnProperty('v')) {
+    body.v = true;  // Keeping 'v' as true since it's already true in the original
+}
 // 主脚本函数...
 
 sNotify(appName, author, message, 10 * 60 * 1000);
