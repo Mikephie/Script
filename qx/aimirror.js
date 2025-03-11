@@ -23,32 +23,80 @@ const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
 
 // 主脚本函数...
-function sendNotification(title, subtitle, message) {
-    if (typeof $notification != 'undefined') {
-        // Surge
-        $notification.post(title, subtitle, message);
-    } else if (typeof $notify != 'undefined') {
-        // Quantumult X
-        $notify(title, subtitle, message);
+let body = $response.body;
+let url = $request.url;
+
+// 记录请求信息到控制台
+console.log(`[AIMirror] 请求URL: ${url}`);
+console.log(`[AIMirror] 原始响应: ${body}`);
+
+// 针对不同端点的处理
+if (url.includes("query_is_vip")) {
+    // 如果是纯文本的 false 直接替换为 true
+    if (body === 'false') {
+        body = 'true';
+    } else {
+        // 尝试解析JSON
+        try {
+            let data = JSON.parse(body);
+            // 修改JSON中的所有VIP相关状态
+            if (data.hasOwnProperty("is_vip")) data.is_vip = true;
+            if (data.hasOwnProperty("vip")) data.vip = true;
+            body = JSON.stringify(data);
+        } catch (e) {
+            // 如果不是有效JSON，尝试直接替换
+            body = body.replace(/false/g, 'true');
+        }
+    }
+} else if (url.includes("draw")) {
+    // 替换所有可能的VIP状态
+    body = body.replace(/"is_vip"\s*:\s*false/g, '"is_vip":true');
+    body = body.replace(/"vip"\s*:\s*false/g, '"vip":true');
+} else if (url.includes("video_render_count")) {
+    // 特殊情况，只有在值不为"0"时才修改
+    if (body !== '0') {
+        try {
+            let data = JSON.parse(body);
+            // 尝试找到并增加计数
+            if (typeof data === 'number') {
+                data = 999;
+                body = JSON.stringify(data);
+            }
+        } catch (e) {
+            // 如果不是有效JSON并且是数字字符串
+            if (!isNaN(body) && parseInt(body) > 0) {
+                body = '999';
+            }
+        }
+    }
+} else if (url.includes("consumable_quota")) {
+    // 处理配额相关字段
+    body = body.replace(/"has_quota"\s*:\s*false/g, '"has_quota":true');
+    body = body.replace(/"quota"\s*:\s*0/g, '"quota":999');
+} else if (url.includes("discount")) {
+    // 处理折扣相关字段
+    body = body.replace(/"discount"\s*:\s*false/g, '"discount":true');
+} else {
+    // 通用处理：尝试解析JSON并修改可能的VIP状态
+    try {
+        let data = JSON.parse(body);
+        
+        // 检查并修改常见的VIP标识
+        if (typeof data === 'object' && data !== null) {
+            const vipKeys = ['is_vip', 'vip', 'isVip', 'premium', 'isPremium'];
+            vipKeys.forEach(key => {
+                if (data.hasOwnProperty(key) && data[key] === false) {
+                    data[key] = true;
+                }
+            });
+            body = JSON.stringify(data);
+        }
+    } catch (e) {
+        // 如果不是有效JSON，不做修改
     }
 }
 
-if (url.includes("/query_is_vip")) {
-    if (body === 'false') {
-        body = 'true';  // Set VIP status to true
-    }
-} else if (url.includes("/draw")) {
-    body = body.replace(/"is_vip"\s*:\s*false/g, '"is_vip":true');  // Change VIP status in draw results
-} else if (url.includes("/users/video_render_count")) {
-    if (body === '0') {
-        body = '这个没解锁别用了';  // Inform the user that the feature is not unlocked
-        sendNotification("提示", "", "这个视频ai无法解锁，请返回上一个界面");
-    }
-} else if (url.includes("/query_consumable_quota")) {
-    body = body.replace(/"has_quota"\s*:\s*false/g, '"has_quota":true');  // Set quota to true
-} else if (url.includes("/users/discount")) {
-    body = body.replace(/"discount"\s*:\s*false/g, '"discount":true');  // Apply discount
-}
+console.log(`[AIMirror] 修改后响应: ${body}`);
 // 主脚本函数...
 
 sNotify(appName, author, message, 10 * 60 * 1000);
