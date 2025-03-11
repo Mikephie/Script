@@ -46,6 +46,8 @@ if (body.hasOwnProperty('v')) {
 // 主脚本函数
 
 sNotify(appName, author, message, 10 * 60 * 1000);
-// 响应返回方式（取消注释需要的一行，注释另一行）
-$done({ body: JSON.stringify(body) }); // 1. 标准JSON响应返回
-// $done({ body }); // 2. 直接返回字符串响应
+// 根据条件选择返回方式
+if (typeof body === 'object') {
+    $done({ body: JSON.stringify(body) }); // JSON格式返回
+} else {
+    $done({ body }); // 字符串直接返回
