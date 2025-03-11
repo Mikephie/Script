@@ -39,16 +39,10 @@ const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
 
 // 主脚本函数...
-let body;
-try {
-    body = JSON.parse($response.body);
-} catch (e) {
-    $done({ body: $response.body });
-    return;
-}
+let body = JSON.parse($response.body);
 
 function modifyObject(obj) {
-    for (const key in obj) {
+    for (let key in obj) {
         if (obj.hasOwnProperty(key)) {
             if (typeof obj[key] === 'number' && obj[key] === 0) {
                 obj[key] = 1;
@@ -64,7 +58,7 @@ modifyObject(body);
 
 // Additional modifications as per your requirements
 if (body.hasOwnProperty('v')) {
-    body.v = true;
+    body.v = true;  // Keeping 'v' as true since it's already true in the original
 }
 // 主脚本函数...
 
