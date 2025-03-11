@@ -25,10 +25,8 @@ const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
 
 // 主脚本函数...
-// 主脚本函数
 let body = $response.body;
 let url = $request.url;
-
 function sendNotification(title, subtitle, message) {
     if (typeof $notification != 'undefined') {
         // Surge
@@ -38,7 +36,6 @@ function sendNotification(title, subtitle, message) {
         $notify(title, subtitle, message);
     }
 }
-
 if (url.includes("/query_is_vip")) {
     if (body === 'false') {
         body = 'true';  // Set VIP status to true
@@ -56,9 +53,6 @@ if (url.includes("/query_is_vip")) {
     body = body.replace(/"discount"\s*:\s*false/g, '"discount":true');  // Apply discount
 }
 // 主脚本函数...
-
-sNotify(appName, author, message, 10 * 60 * 1000);
-// 主脚本函数
 
 sNotify(appName, author, message, 10 * 60 * 1000);
 
