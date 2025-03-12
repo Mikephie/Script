@@ -20,7 +20,7 @@ function sNotify(a,b,c,d=60000){const e=`${a.replace(/[^a-zA-Z]/g,'').toLowerCas
 /********** 应用配置信息 **********/
 const appName = "✨Aloha✨";
 const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
+const message = "会员解锁至 ⓿❽-⓿❽-❷⓿❽❽";
 
 // 主脚本函数...
 let body = $response.body;
