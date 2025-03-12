@@ -25,24 +25,14 @@ const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️�
 // 主脚本函数...
 let body = JSON.parse($response.body);
 
-function modifyObject(obj) {
-    for (let key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            if (typeof obj[key] === 'number' && obj[key] === 0) {
-                obj[key] = 1;
-            } else if (typeof obj[key] === 'object' && obj[key] !== null) {
-                modifyObject(obj[key]);
-            }
-        }
-    }
-}
+// Only modify specific keys needed for unlock
+body.p = 1;  // Premium status
+body.s = 1;  // Subscription status
+body.l = 1;  // Possibly "locked" or "license" flag
 
-// Modify the object
-modifyObject(body);
-
-// Additional modifications as per your requirements
+// Optional: Keep v as true if it matters
 if (body.hasOwnProperty('v')) {
-    body.v = true;  // Keeping 'v' as true since it's already true in the original
+    body.v = true;
 }
 // 主脚本函数...
 
