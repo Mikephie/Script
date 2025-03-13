@@ -104,8 +104,13 @@ if (body.hasOwnProperty('v')) {
 // 主脚本函数...
 
 sNotify(appName, author, message, 10 * 60 * 1000);
-if (typeof body === 'object') {
-    $done({ body: JSON.stringify(body) });
+// 判断返回数据的类型并处理响应
+if (typeof body === 'object' && typeof data === 'object') {
+    $done({ body: JSON.stringify(body), data: JSON.stringify(data) });
+} else if (typeof body === 'object') {
+    $done({ body: JSON.stringify(body), data });
+} else if (typeof data === 'object') {
+    $done({ body, data: JSON.stringify(data) });
 } else {
-    $done({ body });
+    $done({ body, data });
 }
