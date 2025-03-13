@@ -23,6 +23,10 @@ const profileid = headers['adapty-sdk-profile-id'] || headers['ADAPTY-SDK-PROFIL
 const time = Date.now(); // 当前时间戳
 
 const list = {
+  'Flight%20Tracker': { dy: 'dypda', id: "com.iaftt.flightplusfree.49.99year", bundle_id: "com.iaftt.flightplusfree" },
+  '$%7BPRODUCT_NAME%7D': { dy: 'dypda', id: "com.iaftt.flightplusfree.49.99year", bundle_id: "com.iaftt.flightplusfree" },  //FlightTracker - 飞机追踪
+  'AvA': { dy: 'dypda', id: "momo_yearly_subs_pro", bundle_id: "com.scaleup.dreame" },  //Momo
+  'PlantApp': { dy: 'dypda', id: "plantapp.lifetime.promoted.sub", bundle_id: "com.scaleup.plantid" },  //PlantApp-植物识别
   'KeyboardGPT': { dy: 'dypda', id: "smart.keyboard.yearly.01", bundle_id: "com.smart.keyboard" },  //AiChatbot
   'SketchAR': { dy: 'dypda', id: "tech.sketchar.subscription.yearly", bundle_id: "tech.sketchar.ios" },  //Sketchar-AR画图应用
   'universal': { dy: 'dypda', id: "remotetv.yearly.01", bundle_id: "com.universal.remotetv", },  //TVRemote万能遥控器
