@@ -25,29 +25,18 @@ const message = "会员解锁至 ⓿❽-⓿❽-❷⓿❽❽";
 // 主脚本函数...
 /********** 通用响应体修改模板 **********/
 
-let body = $response.body;
-let data;
+let body = JSON.parse($response.body);
 
-try {
-  data = JSON.parse(body); // 尝试解析 JSON
-} catch (e) {
-  console.log("响应体不是 JSON:", e);
+// Only modify specific keys needed for unlock
+body.p = 1;  // Premium status
+body.s = 1;  // Subscription status
+body.l = 1;  // Possibly "locked" or "license" flag
+
+// Optional: Keep v as true if it matters
+if (body.hasOwnProperty('v')) {
+    body.v = true;
 }
-
-// 修改逻辑
-if (data && typeof data === 'object') {
-  // 解锁相关字段
-  data.p = 1; // Premium status
-  data.s = 1; // Subscription status
-  data.l = 1; // License flag
-
-  if (data.hasOwnProperty('v')) {
-    data.v = true; // 保持 v 为 true
-  }
 // 主脚本函数...
 
 sNotify(appName, author, message, 10 * 60 * 1000);
-  $done({ body: JSON.stringify(data) });
-} else {
-  $done({ body });
-}
+$done({ body: JSON.stringify(body) });
