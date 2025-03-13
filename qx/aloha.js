@@ -23,19 +23,33 @@ const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 ⓿❽-⓿❽-❷⓿❽❽";
 
 // 主脚本函数...
+/********** 通用响应体修改模板 **********/
+
+// 解析响应体
 let body = $response.body;
-let data = JSON.parse(body);
-data.profile = Object.assign(data.profile || {}, {
-  is_premium: true,
-  end_of_premium: 3742762088,
-  email: "888@gmail.com",
-  _end_of_premium: "2088-08-08 08:08:08.000"
-});
+let data;
+
+try {
+  data = JSON.parse(body); // 尝试解析为 JSON
+} catch (e) {
+  console.log("响应体不是 JSON，按原样处理:", e);
+}
+
+// 修改逻辑
+if (data && typeof data === 'object') {
+  // 修改 JSON 数据
+  data.profile = Object.assign(data.profile || {}, {
+    is_premium: true,
+    end_of_premium: 3742762088,
+    email: "888@gmail.com",
+    _end_of_premium: "2088-08-08 08:08:08.000"
+  });
 // 主脚本函数...
 
 sNotify(appName, author, message, 10 * 60 * 1000);
-if (typeof body === 'object') {
-    $done({ body: JSON.stringify(body) });
+  // 返回 JSON 格式的响应体
+  $done({ body: JSON.stringify(data) });
 } else {
-    $done({ body });
+  // 非 JSON 格式，直接返回原始 body
+  $done({ body });
 }
