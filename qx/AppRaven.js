@@ -18,8 +18,10 @@ hostname = appraven.net
 
 // 主脚本函数...
 let body = $response.body;
-
 try {
+    if (typeof body === "object") {
+        body = JSON.stringify(body);
+    }
     const replacements = [
         { pattern: /"premium":false/g, replacement: '"premium":true' },
         { pattern: /"hasInAppPurchases":false/g, replacement: '"hasInAppPurchases":true' },
@@ -30,6 +32,10 @@ try {
     replacements.forEach(({ pattern, replacement }) => {
         body = body.replace(pattern, replacement);
     });
+    $done({ body });
+} catch (e) {
+    $done({ body: $response.body });
+}
 // 主脚本函数...
 
 /********** 应用配置信息 **********/
