@@ -17,15 +17,22 @@ hostname = appraven.net
 */
 
 // 主脚本函数...
-try {    
-    let body = JSON.parse($response.body);
+try {
+    let body = $response.body;
+    let isJson = true;
 
+    try {
+        body = JSON.parse(body);
+    } catch (e) {
+        isJson = false;
+    }
+    
     const replacements = [
-        { pattern: /"premium":\s*false/g, replacement: '"premium":true' }, // 支持空格
-        { pattern: /"hasInAppPurchases":\s*false/g, replacement: '"hasInAppPurchases":true' },
-        { pattern: /"youOwn":\s*false/g, replacement: '"youOwn":true' },
-        { pattern: /"arcade":\s*false/g, replacement: '"arcade":true' },
-        { pattern: /"preorder":\s*false/g, replacement: '"preorder":true' }
+        { pattern: /"premium":false/g, replacement: '"premium":true' },
+        { pattern: /"hasInAppPurchases":false/g, replacement: '"hasInAppPurchases":true' },
+        { pattern: /"youOwn":false/g, replacement: '"youOwn":true' },
+        { pattern: /"arcade":false/g, replacement: '"arcade":true' },
+        { pattern: /"preorder":false/g, replacement: '"preorder":true' }
     ];
     replacements.forEach(({ pattern, replacement }) => {
         body = body.replace(pattern, replacement);

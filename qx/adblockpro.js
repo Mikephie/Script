@@ -17,8 +17,15 @@ hostname = api.adblockpro.app
 */
 
 // 主脚本函数...
-try {    
-    let body = JSON.parse($response.body);
+try {
+    let body = $response.body;
+    let isJson = true;
+
+    try {
+        body = JSON.parse(body);
+    } catch (e) {
+        isJson = false;
+    }
 
     if (body.hasOwnProperty('p')) body.p = 1; // Premium status
     if (body.hasOwnProperty('s')) body.s = 1; // Subscription status

@@ -17,8 +17,15 @@ hostname = api.alohaprofile.com
 */
 
 // 主脚本函数...
-try {    
-    let body = JSON.parse($response.body);
+try {
+    let body = $response.body;
+    let isJson = true;
+
+    try {
+        body = JSON.parse(body);
+    } catch (e) {
+        isJson = false;
+    }
 
     if (body.hasOwnProperty('profile')) {
         body.profile.is_premium = true;

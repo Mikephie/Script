@@ -17,6 +17,9 @@ hostname = be.aimirror.fun
 */
 
 // 主脚本函数...
+let body = $response.body;
+const url = $request.url;
+
 try {
     if (url.includes("query_is_vip")) {
         if (body === 'false') {
@@ -66,7 +69,6 @@ try {
                 body = JSON.stringify(data);
             }
         } catch (e) {
-            // 不做修改
         }
     }
 // 主脚本函数...
