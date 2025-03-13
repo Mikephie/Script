@@ -37,7 +37,7 @@ try {
 const appName = "✨AdblockPRO✨";
 const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-const cooldown = 10 * 60 * 1000; // 1分钟冷却时间
+const cooldown = 10 * 60 * 1000;
 const notifyKey = "lastNotifyTime";
 const now = Date.now();
 const lastNotifyTime = $persistentStore.read(notifyKey) || 0;

@@ -32,17 +32,13 @@ try {
     replacements.forEach(({ pattern, replacement }) => {
         body = body.replace(pattern, replacement);
     });
-    $done({ body });
-} catch (e) {
-    $done({ body: $response.body });
-}
 // 主脚本函数...
 
 /********** 应用配置信息 **********/
 const appName = "✨AppRaven✨";
 const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-const cooldown = 10 * 60 * 1000; // 1分钟冷却时间
+const cooldown = 10 * 60 * 1000;
 const notifyKey = "lastNotifyTime";
 const now = Date.now();
 const lastNotifyTime = $persistentStore.read(notifyKey) || 0;
@@ -54,8 +50,8 @@ if (now - lastNotifyTime > cooldown) {
   }
   $persistentStore.write(now.toString(), notifyKey);
 }
-
-    $done({ body: JSON.stringify(body) });
+    
+    $done({ body });
 } catch (e) {
     $done({ body: $response.body });
 }
