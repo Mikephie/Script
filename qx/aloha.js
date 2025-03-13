@@ -14,23 +14,38 @@ http-response ^https:\/\/api\.alohaprofile\.com\/v1\/profile_info script-path=ht
 [MITM]
 hostname = api.alohaprofile.com
 
-/********** 会话通知模块 **********/
-function sNotify(a,b,c,d=60000){const e=`${a.replace(/[^a-zA-Z]/g,'').toLowerCase()}_session`;const f=typeof $prefs!=='undefined';const g=typeof $persistentStore!=='undefined'&&typeof $notify!=='undefined';const h=typeof $persistentStore!=='undefined'&&typeof $notification!=='undefined';const i=f?$prefs:$persistentStore;const j=f?$notification:(g?$notify:$notification);if(!i||!j)return false;try{const k=f?i.valueForKey(e):i.read(e);const l=Date.now();if(!k||(l-parseInt(k)>d)){j.post(a,b,c);f?i.setValueForKey(l.toString(),e):i.write(l.toString(),e);return true;}}catch(m){console.log(`[${a}] 错误: ${m}`);}return false;}
+*/
 
-/********** 主逻辑：解锁VIP **********/
+// 主脚本函数...
+try {    
+    let body = JSON.parse($response.body);
+
+    if (body.hasOwnProperty('profile')) {
+        body.profile.is_premium = true;
+        body.profile.end_of_premium = 3742762088;
+        body.profile.email = "888@gmail.com";
+        body.profile._end_of_premium = "2088-08-08 08:08:08.000";
+    }
+// 主脚本函数...
+
+/********** 应用配置信息 **********/
 const appName = "✨Aloha✨";
 const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
+const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
+const cooldown = 10 * 60 * 1000; // 1分钟冷却时间
+const notifyKey = "lastNotifyTime";
+const now = Date.now();
+const lastNotifyTime = $persistentStore.read(notifyKey) || 0;
+if (now - lastNotifyTime > cooldown) {
+  if (typeof $notification !== 'undefined') {
+    $notification.post(appName, author, message);
+  } else if (typeof $notify !== 'undefined') {
+    $notify(appName, author, message);
+  }
+  $persistentStore.write(now.toString(), notifyKey);
+}
 
-// 主逻辑：解锁 VIP
-let body = $response.body;
-let data = JSON.parse(body);
-
-data.profile = Object.assign(data.profile || {}, {
-  is_premium: true,
-  end_of_premium: 3742762088,
-  email: "888@gmail.com",
-  _end_of_premium: "2088-08-08 08:08:08.000"
-});
-
-$done({ body: JSON.stringify(data) });
+    $done({ body: JSON.stringify(body) });
+} catch (e) {
+    $done({ body: $response.body });
+}
