@@ -17,16 +17,9 @@ hostname = appraven.net
 */
 
 // 主脚本函数...
-try {
-    let body = $response.body;
-    let isJson = true;
+let body = $response.body;
 
-    try {
-        body = JSON.parse(body);
-    } catch (e) {
-        isJson = false;
-    }
-    
+try {
     const replacements = [
         { pattern: /"premium":false/g, replacement: '"premium":true' },
         { pattern: /"hasInAppPurchases":false/g, replacement: '"hasInAppPurchases":true' },
