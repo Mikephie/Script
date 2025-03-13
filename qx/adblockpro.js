@@ -24,28 +24,30 @@ const appName = "✨AdblockPRO✨";
 const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "会员解锁至 ⓿❽-⓿❽-❷⓿❽❽";
 
-// 主脚本函数...
-let body = JSON.parse($response.body);
+// 解析 $response.body 并确保安全访问
+let body = typeof $response !== 'undefined' && $response.body ? JSON.parse($response.body) : {};
+let data = typeof data !== 'undefined' ? data : null;
 
-// Only modify specific keys needed for unlock
-body.p = 1;  // Premium status
-body.s = 1;  // Subscription status
-body.l = 1;  // Possibly "locked" or "license" flag
-
-// Optional: Keep v as true if it matters
-if (body.hasOwnProperty('v')) {
-    body.v = true;
+// 解锁会员逻辑
+if (body && typeof body === 'object') {
+    body.p = 1;  // Premium status
+    body.s = 1;  // Subscription status
+    body.l = 1;  // License flag
+    if (body.hasOwnProperty('v')) {
+        body.v = true;  // 保留 v 为 true
+    }
 }
-// 主脚本函数...
 
+// 发送通知
 sNotify(appName, author, message, 10 * 60 * 1000);
-// 判断返回数据的类型并处理响应
-if (typeof body === 'object' && typeof data === 'object') {
+
+// 根据条件选择返回方式
+if (body && data && typeof body === 'object' && typeof data === 'object') {
     $done({ body: JSON.stringify(body), data: JSON.stringify(data) });
-} else if (typeof body === 'object') {
-    $done({ body: JSON.stringify(body), data });
-} else if (typeof data === 'object') {
-    $done({ body, data: JSON.stringify(data) });
+} else if (body && typeof body === 'object') {
+    $done({ body: JSON.stringify(body), data: data || '' });
+} else if (data && typeof data === 'object') {
+    $done({ body: body || '', data: JSON.stringify(data) });
 } else {
-    $done({ body, data });
+    $done({ body: body || '', data: data || '' });
 }
