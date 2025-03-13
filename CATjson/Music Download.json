@@ -1,0 +1,30 @@
+{
+  "user_agent": "Music%20Download",
+  "bundle_id": null,
+  "data": {
+    "nova_3999_1y_3d0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "nova_3999_1y_3d0"
+    },
+    "nova_399_1w_3d0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "nova_399_1w_3d0"
+    },
+    "nova_799_1m_3d0": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "nova_799_1m_3d0"
+    },
+    "nova_lifetime": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "nova_lifetime"
+    }
+  }
+}
