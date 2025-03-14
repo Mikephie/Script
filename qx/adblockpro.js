@@ -18,19 +18,12 @@ hostname = api.adblockpro.app
 
 // 主脚本函数...
 try {
-    let body = $response.body;
-    let isJson = true;
+    let body = JSON.parse($response.body);
 
-    try {
-        body = JSON.parse(body);
-    } catch (e) {
-        isJson = false;
-    }
-
-    if (body.hasOwnProperty('p')) body.p = 1; // Premium status
-    if (body.hasOwnProperty('s')) body.s = 1; // Subscription status
-    if (body.hasOwnProperty('l')) body.l = 1; // License flag
-    if (body.hasOwnProperty('v')) body.v = true; // VIP/Verified
+    ['p', 's', 'l'].forEach(key => {
+        if (body.hasOwnProperty(key)) body[key] = 1;
+    });
+    if (body.hasOwnProperty('v')) body.v = true;
 // 主脚本函数...
 
 /********** 应用配置信息 **********/
