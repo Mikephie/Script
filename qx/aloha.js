@@ -18,20 +18,15 @@ hostname = api.alohaprofile.com
 
 // 主脚本函数...
 try {
-    let body = $response.body;
-    let isJson = true;
+    let body = JSON.parse($response.body);
 
-    try {
-        body = JSON.parse(body);
-    } catch (e) {
-        isJson = false;
-    }
-
-    if (body.hasOwnProperty('profile')) {
-        body.profile.is_premium = true;
-        body.profile.end_of_premium = 3742762088;
-        body.profile.email = "888@gmail.com";
-        body.profile._end_of_premium = "2088-08-08 08:08:08.000";
+    if (body?.profile) {
+        Object.assign(body.profile, {
+            is_premium: true,
+            end_of_premium: 3742762088,
+            email: "888@gmail.com",
+            _end_of_premium: "2088-08-08 08:08:08.000"
+        });
     }
 // 主脚本函数...
 
