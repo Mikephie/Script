@@ -22,10 +22,12 @@ try {
     const url = $request.url;
 
     const user = /classes\/wpf_account/;
+    
     if (user.test(url)) {
         body.results = [{
-            "vipEndTime": 4092599349,
+            "vipEndTime": 3742762088,
             "svipEndTimeFormat": "2088-08-08",
+            "sex": "1",
             "isSVIP": 1,
             "isVIP": 1,
             "loginType": 1,
@@ -54,7 +56,7 @@ if (now - lastNotifyTime > cooldown) {
   $persistentStore.write(now.toString(), notifyKey);
 }
     
-    $done({ body });
+    $done({ body: JSON.stringify(body) });
 } catch (e) {
     $done({ body: $response.body });
 }

@@ -50,7 +50,7 @@ if (now - lastNotifyTime > cooldown) {
   $persistentStore.write(now.toString(), notifyKey);
 }
     
-    $done({ body });
+    $done({ body: JSON.stringify(body) });
 } catch (e) {
     $done({ body: $response.body });
 }
