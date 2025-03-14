@@ -17,7 +17,24 @@ hostname = leancloud.emotionwp.com
 */
 
 // 主脚本函数...
-    let body = typeof $response.body === "object" 
+try {
+    let body = JSON.parse($response.body);
+
+    if (body.results && Array.isArray(body.results)) {
+        body.results = body.results.map(user => ({
+            ...user,
+            isVIP: 1,
+            isSVIP: 1,
+            vipEndTime: 3742762088,
+            svipEndTime: 3742762088,
+            vipEndTimeFormat: "2088-08-08",
+            svipEndTimeFormat: "2088-08-08",
+            coin: 88888888,
+            email: "888@gmail.com",
+            nickName: "Mikephie",
+            headImageUrl: "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
+        }));
+    }
 // 主脚本函数...
 
 /********** 应用配置信息 **********/
