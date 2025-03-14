@@ -14,37 +14,45 @@ http-response ^https:\/\/payments\.classdojo\.com\/v1\/subscribers\/5dc2e328587d
 [MITM]
 hostname = payments.classdojo.com
 
-/********** 会话通知模块 **********/
-function sNotify(a,b,c,d=60000){const e=`${a.replace(/[^a-zA-Z]/g,'').toLowerCase()}_session`;const f=typeof $prefs!=='undefined';const g=typeof $persistentStore!=='undefined'&&typeof $notify!=='undefined';const h=typeof $persistentStore!=='undefined'&&typeof $notification!=='undefined';const i=f?$prefs:$persistentStore;const j=f?$notification:(g?$notify:$notification);if(!i||!j)return false;try{const k=f?i.valueForKey(e):i.read(e);const l=Date.now();if(!k||(l-parseInt(k)>d)){j.post(a,b,c);f?i.setValueForKey(l.toString(),e):i.write(l.toString(),e);return true;}}catch(m){console.log(`[${a}] 错误: ${m}`);}return false;}
-
-/********** 应用配置信息 **********/
-const appName = "✨Classdojo✨";
-const author  = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
+*/
 
 // 主脚本函数...
-let body = JSON.parse($response.body);
+try {
+    let body = JSON.parse($response.body);
 
-function modifyObject(obj) {
-    for (let key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            if (typeof obj[key] === 'object' && obj[key] !== null) {
-                modifyObject(obj[key]);
-            } else {
-                // 修改 expires_date 的值
-                if (key === 'expires_date') {
+
+    function modifyObject(obj) {
+        for (let key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                if (typeof obj[key] === 'object' && obj[key] !== null) {
+                    modifyObject(obj[key]);
+                } else if (key === 'expires_date') {
                     obj[key] = "2088-08-08T08:08:08Z";
                 }
             }
         }
     }
-}
-modifyObject(body);
+    modifyObject(body);
 // 主脚本函数...
 
-sNotify(appName, author, message, 10 * 60 * 1000);
-if (typeof body === 'object') {
-    $done({ body: JSON.stringify(body) });
-} else {
+/********** 应用配置信息 **********/
+const appName = "✨Classdojo✨";
+const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
+const cooldown = 10 * 60 * 1000;
+const notifyKey = "lastNotifyTime";
+const now = Date.now();
+const lastNotifyTime = $persistentStore.read(notifyKey) || 0;
+if (now - lastNotifyTime > cooldown) {
+  if (typeof $notification !== 'undefined') {
+    $notification.post(appName, author, message);
+  } else if (typeof $notify !== 'undefined') {
+    $notify(appName, author, message);
+  }
+  $persistentStore.write(now.toString(), notifyKey);
+}
+    
     $done({ body });
+} catch (e) {
+    $done({ body: $response.body });
 }
