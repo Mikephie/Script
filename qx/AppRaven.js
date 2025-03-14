@@ -18,9 +18,7 @@ hostname = appraven.net
 
 // 主脚本函数...
 try {
-    let body = typeof $response.body === "object" 
-        ? JSON.stringify($response.body) 
-        : $response.body;
+    let body = $response.body;
 
     [
         { pattern: /"premium":false/g, replacement: '"premium":true' },
@@ -31,26 +29,26 @@ try {
     ].forEach(({ pattern, replacement }) => {
         body = body.replace(pattern, replacement);
     });
-// 主脚本函数...
 
-/********** 应用配置信息 **********/
-const appName = "✨AppRaven✨";
-const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-const cooldown = 10 * 60 * 1000;
-const notifyKey = "lastNotifyTime";
-const now = Date.now();
-const lastNotifyTime = $persistentStore.read(notifyKey) || 0;
-if (now - lastNotifyTime > cooldown) {
-  if (typeof $notification !== 'undefined') {
-    $notification.post(appName, author, message);
-  } else if (typeof $notify !== 'undefined') {
-    $notify(appName, author, message);
-  }
-  $persistentStore.write(now.toString(), notifyKey);
-}
-    
-    $done({ body: JSON.stringify(body) });
+    /********** 应用配置信息 **********/
+    const appName = "✨AppRaven✨";
+    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
+    const cooldown = 10 * 60 * 1000;
+    const notifyKey = "lastNotifyTime";
+    const now = Date.now();
+    const lastNotifyTime = $persistentStore.read(notifyKey) || 0;
+
+    if (now - lastNotifyTime > cooldown) {
+        if (typeof $notification !== 'undefined') {
+            $notification.post(appName, author, message);
+        } else if (typeof $notify !== 'undefined') {
+            $notify(appName, author, message);
+        }
+        $persistentStore.write(now.toString(), notifyKey);
+    }
+
+    $done({ body: JSON.stringify(JSON.parse(body)) });
 } catch (e) {
     $done({ body: $response.body });
 }
