@@ -14,13 +14,7 @@ http-response ^https:\/\/photoby\.hasmash\.com script-path=https://raw.githubuse
 [MITM]
 hostname = photoby.hasmash.com
 
-/********** 会话通知模块 **********/
-function sNotify(a,b,c,d=60000){const e=`${a.replace(/[^a-zA-Z]/g,'').toLowerCase()}_session`;const f=typeof $prefs!=='undefined';const g=typeof $persistentStore!=='undefined'&&typeof $notify!=='undefined';const h=typeof $persistentStore!=='undefined'&&typeof $notification!=='undefined';const i=f?$prefs:$persistentStore;const j=f?$notification:(g?$notify:$notification);if(!i||!j)return false;try{const k=f?i.valueForKey(e):i.read(e);const l=Date.now();if(!k||(l-parseInt(k)>d)){j.post(a,b,c);f?i.setValueForKey(l.toString(),e):i.write(l.toString(),e);return true;}}catch(m){console.log(`[${a}] 错误: ${m}`);}return false;}
-
-/********** 应用配置信息 **********/
-const appName = "✨边框水印大师✨";
-const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
+*/
 
 // 主脚本函数...
 let resp = JSON.parse($response.body || '{}');
@@ -35,9 +29,28 @@ if ($request.url.includes("/auth/member")) {
 }
 // 主脚本函数...
 
-sNotify(appName, author, message, 10 * 60 * 1000);
-if (typeof body === 'object') {
+    /********** 应用配置信息 **********/
+    const appName = "✨边框水印大师✨";
+    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
+    
+    const cooldownMinutes = 10; 
+    const cooldownMs = cooldownMinutes * 60 * 1000;
+    
+    const appSpecificKey = `${appName}_lastNotifyTime`;
+    const now = Date.now();
+    const lastNotifyTime = $persistentStore.read(appSpecificKey) || 0;
+    
+    if (now - lastNotifyTime > cooldownMs) {
+        if (typeof $notification !== 'undefined') {
+            $notification.post(appName, author, message);
+        } else if (typeof $notify !== 'undefined') {
+            $notify(appName, author, message);
+        }
+        $persistentStore.write(now.toString(), appSpecificKey);
+    }
+
     $done({ body: JSON.stringify(body) });
-} else {
-    $done({ body });
+} catch (e) {
+    $done({ body: $response.body });
 }

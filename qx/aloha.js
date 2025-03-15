@@ -30,22 +30,26 @@ try {
     }
 // 主脚本函数...
 
-/********** 应用配置信息 **********/
-const appName = "✨Aloha✨";
-const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-const cooldown = 10 * 60 * 1000;
-const notifyKey = "lastNotifyTime";
-const now = Date.now();
-const lastNotifyTime = $persistentStore.read(notifyKey) || 0;
-if (now - lastNotifyTime > cooldown) {
-  if (typeof $notification !== 'undefined') {
-    $notification.post(appName, author, message);
-  } else if (typeof $notify !== 'undefined') {
-    $notify(appName, author, message);
-  }
-  $persistentStore.write(now.toString(), notifyKey);
-}
+    /********** 应用配置信息 **********/
+    const appName = "✨Aloha✨";
+    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
+    
+    const cooldownMinutes = 10; 
+    const cooldownMs = cooldownMinutes * 60 * 1000;
+    
+    const appSpecificKey = `${appName}_lastNotifyTime`;
+    const now = Date.now();
+    const lastNotifyTime = $persistentStore.read(appSpecificKey) || 0;
+    
+    if (now - lastNotifyTime > cooldownMs) {
+        if (typeof $notification !== 'undefined') {
+            $notification.post(appName, author, message);
+        } else if (typeof $notify !== 'undefined') {
+            $notify(appName, author, message);
+        }
+        $persistentStore.write(now.toString(), appSpecificKey);
+    }
 
     $done({ body: JSON.stringify(body) });
 } catch (e) {

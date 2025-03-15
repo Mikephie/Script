@@ -1,28 +1,56 @@
 /*
-
-📜 百转格 解锁 VIP 脚本
-📅 更新时间：2024年10月28日
-🔓 功能：解锁永久 VIP
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+📜 ✨ 百转格 ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local]
+[rewrite_local] // Quantumult X
 ^http:\/\/format-api\.netpock\.com\/api\/user_info url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bzg.js
 
+[Script] // Surge
+百转格 = type=http-response, pattern=^http:\/\/format-api\.netpock\.com\/api\/user_info, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bzg.js, timeout=60
 
-[mitm] 
+[Script] // Loon
+http-response ^http:\/\/format-api\.netpock\.com\/api\/user_info script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bzg.js, requires-body=true, timeout=60
+
+[MITM]
 hostname = format-api.netpock.com
 
 */
 
+// 主脚本函数...
+try {
+    var obj = JSON.parse($response.body);
+    
+    obj.data = {
+      ...obj.data,
+        "user_name" : "MIKEPHIE",
+        "is_vip" : true,
+        "wps_size" : 88888888,
+        "vip_expiration_time" : 3742762088,
+    };
+// 主脚本函数...
 
-var mikephie = JSON.parse($response.body);
-
-mikephie.data = {
-  ...mikephie.data,
-    "is_vip" : true,
-    "wps_size" : 88888888,
-};
- 
-$done({body: JSON.stringify(mikephie)});
+    /********** 应用配置信息 **********/
+    const appName = "✨百转格✨";
+    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
+    
+    const cooldownMinutes = 10; 
+    const cooldownMs = cooldownMinutes * 60 * 1000;
+    
+    const appSpecificKey = `${appName}_lastNotifyTime`;
+    const now = Date.now();
+    const lastNotifyTime = $persistentStore.read(appSpecificKey) || 0;
+    
+    if (now - lastNotifyTime > cooldownMs) {
+        if (typeof $notification !== 'undefined') {
+            $notification.post(appName, author, message);
+        } else if (typeof $notify !== 'undefined') {
+            $notify(appName, author, message);
+        }
+        $persistentStore.write(now.toString(), appSpecificKey);
+    }
+    
+    $done({body: JSON.stringify(obj)});
+} catch (e) {
+    $done({body: $response.body});
+}
