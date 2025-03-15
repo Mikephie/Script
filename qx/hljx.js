@@ -1,41 +1,73 @@
 /*
-
-📜 婚礼精选 解锁 VIP 脚本
-📅 更新时间：2024年03月08日
-🔓 功能：解锁永久 VIP
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+📜 ✨ 婚礼精选 ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local] 
+[rewrite_local] // Quantumult X
 ^https:\/\/www\.lovewith\.me\/golove\/v05\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js
 
+[Script] // Surge
+婚礼精选 = type=http-response, pattern=^https:\/\/www\.lovewith\.me\/golove\/v05\/profile, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, timeout=60
+
+[Script] // Loon
+http-response ^https:\/\/www\.lovewith\.me\/golove\/v05\/profile script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = www.lovewith.me
 
 */
 
+// 主脚本函数...
+try {
+    var body = JSON.parse($response.body);
 
-var mikephie = JSON.parse($response.body);
+    body = {
+      "success" : true,
+      "data" : {
+        "id" : 1163222,
+        "phone" : "",
+        "balance" : 888888,
+        "is_guest" : 0,
+        "avatar" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
+        "city_id" : 0,
+        "group_id" : 1,
+        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjE5ODY3MjQsInN0YXR1cyI6MSwidXNlcl9pZCI6MTE2MzIyMn0.QcqjpzCLTJ3f1bP_TH1yzxqHqRTCTAOoamnsoyUuOIk",
+        "username" : "MIKEPHIE",
+        "is_admin" : 0,
+        "email" : "888@gmail.com",
+        "untried" : false,
+        "vip_expire" : 3742762088000
+      }
+    };
 
-    mikephie = {
-  "success" : true,
-  "data" : {
-    "id" : 1163222,
-    "phone" : "",
-    "balance" : 888888,
-    "is_guest" : 0,
-    "avatar" : "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
-    "city_id" : 0,
-    "group_id" : 1,
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjE5ODY3MjQsInN0YXR1cyI6MSwidXNlcl9pZCI6MTE2MzIyMn0.QcqjpzCLTJ3f1bP_TH1yzxqHqRTCTAOoamnsoyUuOIk",
-    "username" : "Mikephie",
-    "is_admin" : 0,
-    "email" : "mikephiemy@gmail.com",
-    "untried" : false,
-    "vip_expire" : 3742762088000
-  }
+    /********** 应用配置信息 **********/
+    const appName = "✨婚礼精选✨";
+    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
+    
+    const cooldownMinutes = 10;
+    const cooldownMs = cooldownMinutes * 60 * 1000;
+    const notifyKey = "wedding_select_notify_key_v1";
+    const now = Date.now();
+    let lastNotifyTime = 0;
+    try {
+        const storedTime = $persistentStore.read(notifyKey);
+        if (storedTime) {
+            lastNotifyTime = parseInt(storedTime);
+            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
+        }
+    } catch (e) {
+        lastNotifyTime = 0;
+    }
+    if (now - lastNotifyTime > cooldownMs) {
+        if (typeof $notification !== 'undefined') {
+            $notification.post(appName, author, message);
+        } else if (typeof $notify !== 'undefined') {
+            $notify(appName, author, message);
+        }
+        $persistentStore.write(now.toString(), notifyKey);
+    }
+
+    $done({ body: JSON.stringify(body) });
+} catch (e) {
+    $done({ body: $response.body });
 }
-
-$done({body : JSON.stringify(mikephie)});
