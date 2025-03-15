@@ -17,22 +17,30 @@ hostname = payments.classdojo.com
 */
 
 // 主脚本函数...
-try {
-    let body = JSON.parse($response.body);
+let obj = JSON.parse($response.body);
 
-
-    function modifyObject(obj) {
-        for (let key in obj) {
-            if (obj.hasOwnProperty(key)) {
-                if (typeof obj[key] === 'object' && obj[key] !== null) {
-                    modifyObject(obj[key]);
-                } else if (key === 'expires_date') {
-                    obj[key] = "2088-08-08T08:08:08Z";
-                }
-            }
-        }
+obj = {
+  "request_date_ms": 1719384796877,
+  "request_date": "2024-06-26T06:53:16Z",
+  "subscriber": {
+    "entitlements": {
+      "Beyond": {
+        "expires_date": "2088-08-08T08:08:08Z",
+        "product_identifier": "com.classdojo.storekit.afterschool.annual",
+        "purchase_date": "2024-06-26T05:21:54Z"
+      }
+    },
+    "subscriptions": {
+      "com.classdojo.storekit.afterschool.annual": {
+        "expires_date": "2088-08-08T08:08:08Z",
+        "original_purchase_date": "2024-06-26T05:21:56Z",
+        "purchase_date": "2024-06-26T05:21:54Z",
+        "ownership_type": "PURCHASED",
+        "store": "app_store"
+      }
     }
-    modifyObject(body);
+  }
+};
 // 主脚本函数...
 
 /********** 应用配置信息 **********/
@@ -52,7 +60,4 @@ if (now - lastNotifyTime > cooldown) {
   $persistentStore.write(now.toString(), notifyKey);
 }
     
-    $done({ body });
-} catch (e) {
-    $done({ body: $response.body });
-}
+$done({body: JSON.stringify(obj)});
