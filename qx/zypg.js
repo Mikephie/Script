@@ -1,68 +1,132 @@
 /*
-📜 作业批改|试卷扫描|错题打印机 解锁 VIP 脚本  
-📅 更新时间：2024年12月06日  
-🔓 功能：解锁永久 VIP  
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ  
+📜 ✨ 作业批改|试卷扫描|错题打印机 ✨
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local]  
-^https?:\/\/appss\.(rhinoxky|baomingding|rhinoxlab)\.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js  
+[rewrite_local] // Quantumult X
+^https?:\/\/appss\.(rhinoxky|baomingding|rhinoxlab)\.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js
 
-[mitm]  
+[Script] // Surge
+作业批改扫描打印机 = type=http-response, pattern=^https?:\/\/appss\.(rhinoxky|baomingding|rhinoxlab)\.com\/app\/account\/getAccountInfo, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, timeout=60
+
+[Script] // Loon
+http-response ^https?:\/\/appss\.(rhinoxky|baomingding|rhinoxlab)\.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, timeout=60
+
+[MITM]
 hostname = appss.rhinoxlab.com, appss.baomingding.com
+
 */
 
-let mikephie = JSON.parse($response.body);
-
-if ($request.url.includes("rhinoxky") || $request.url.includes("rhinoxlab")) {
-    Object.assign(mikephie.result, {
-        headImg: "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
-        type: "VIP",
-        freeFlag: "YES",
-        wordage: 8888888888,
-        appleUserEmail: "888@gmail.com",
-        email: "888@gmail.com",
-        vipExpireTime: "2088-08-08 08:08:08",
-        vipExpireDays: 8888888888,
-        remainTimeSeconds: 8888888,
-        times: 8888888888,
-        vipGroupInfos: [
-            {
+// 主脚本函数...
+try {
+    let mikephie = JSON.parse($response.body);
+    const avatarUrl = "https://i.ibb.co/f1cgnGT/IMG-1215.jpg";
+    if ($request.url.includes("rhinoxky") || $request.url.includes("rhinoxlab")) {
+        if (mikephie.result) {
+            mikephie.result.headImg = avatarUrl;
+            mikephie.result.type = "VIP";
+            mikephie.result.freeFlag = "YES";
+            mikephie.result.wordage = 8888888888;
+            mikephie.result.appleUserEmail = "888@gmail.com";
+            mikephie.result.email = "888@gmail.com";
+            mikephie.result.vipExpireTime = "2088-08-08 08:08:08";
+            mikephie.result.vipExpireDays = 8888888888;
+            mikephie.result.remainTimeSeconds = 8888888;
+            mikephie.result.times = 8888888888;
+            mikephie.result.nickname = "Mikephie";
+            mikephie.result.vipGroupInfos = [{
                 groupType: "TYPE_ONE",
                 vipType: "VIP",
                 autoPay: "YES"
-            }
-        ]
-    });
-} 
-
-else if ($request.url.includes("baomingding")) {
-    Object.assign(mikephie.result, {
-        headImg: "https://i.ibb.co/f1cgnGT/IMG-1215.jpg",
-        type: "VIP",
-        freeFlag: "YES",
-        wordage: 8888888888,
-        appleUserEmail: "888@gmail.com",
-        email: "888@gmail.com",
-        vipExpireTime: "2088-08-08 08:08:08",
-        vipExpireDays: 8888888888,
-        remainTimeSeconds: 8888888,
-        times: 8888888888,
-        vipGroupInfos: [
-            {
+            }];
+        }
+    } 
+    else if ($request.url.includes("baomingding")) {
+        if (mikephie.result) {
+            mikephie.result.headImg = avatarUrl;
+            mikephie.result.type = "VIP";
+            mikephie.result.freeFlag = "YES";
+            mikephie.result.wordage = 8888888888;
+            mikephie.result.appleUserEmail = "888@gmail.com";
+            mikephie.result.email = "888@gmail.com";
+            mikephie.result.vipExpireTime = "2088-08-08 08:08:08";
+            mikephie.result.vipExpireDays = 8888888888;
+            mikephie.result.remainTimeSeconds = 8888888;
+            mikephie.result.times = 8888888888;
+            mikephie.result.nickname = "Mikephie";
+            mikephie.result.vipGroupInfos = [{
                 groupType: "TYPE_ONE",
                 vipType: "VIP",
                 autoPay: "YES"
-            }
-        ]
-    });
+            }];
+        }
 
-    Object.assign(mikephie.data ?? {}, { // 确保 data 对象存在
-        isEligible: true,
-        isSubscribing: true,
-        productId: "subscription_year",
-        expireTime: "3742762088000",
-        isYearlyConversion: true
-    });
+        if (!mikephie.data) mikephie.data = {};
+        mikephie.data.isEligible = true;
+        mikephie.data.isSubscribing = true;
+        mikephie.data.productId = "subscription_year";
+        mikephie.data.expireTime = "3742762088000";
+        mikephie.data.isYearlyConversion = true;
+    }
+
+    // 添加通知功能
+    try {
+        let appType = "";
+        let appName = "";
+        
+        if ($request.url.includes("rhinoxlab")) {
+            appType = "rhinoxlab";
+            appName = "✨作业批改✨";
+        } 
+        else if ($request.url.includes("rhinoxky")) {
+            appType = "rhinoxky";
+            appName = "✨错题打印机✨";
+        }
+        else if ($request.url.includes("baomingding")) {
+            appType = "baomingding";
+            appName = "✨试卷扫描✨";
+        }
+        else {
+            appType = "unknown";
+            appName = "✨学习工具✨";
+        }
+
+        const notifyConfig = {
+            appName: appName,
+            notifyKey: `scan_app_${appType}_0428_v5`,
+            author: "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ",
+            message: "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽"
+        };
+        
+        const cooldownMinutes = 10; 
+        const cooldownMs = cooldownMinutes * 60 * 1000;
+        
+        const now = Date.now();
+        let lastNotifyTime = 0;
+        
+        try {
+            const storedTime = $persistentStore.read(notifyConfig.notifyKey);
+            if (storedTime) {
+                lastNotifyTime = parseInt(storedTime);
+                if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
+            }
+        } catch (e) {
+            lastNotifyTime = 0;
+        }
+        
+        if (now - lastNotifyTime > cooldownMs) {
+            if (typeof $notification !== 'undefined') {
+                $notification.post(notifyConfig.appName, notifyConfig.author, notifyConfig.message);
+            } else if (typeof $notify !== 'undefined') {
+                $notify(notifyConfig.appName, notifyConfig.author, notifyConfig.message);
+            }
+            $persistentStore.write(now.toString(), notifyConfig.notifyKey);
+        }
+    } catch (e) {
+        // 通知功能出错不影响主要功能
+    }
+
+    $done({ body: JSON.stringify(mikephie) });
+} catch (e) {
+    $done({ body: $response.body });
 }
-
-$done({ body: JSON.stringify(mikephie) });
+// 主脚本函数...
