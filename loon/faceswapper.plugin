@@ -8,4 +8,4 @@ http-response ^https?:\/\/api-sgp\.facereplacerext\.com\/api\/rest\/commerce\/in
 
 
 [MITM]
-hostname = api-sgp.facereplacerext.com
+hostname = api-*.facereplacerext.com

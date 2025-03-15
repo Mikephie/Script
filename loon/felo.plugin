@@ -4,8 +4,8 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/felo.png
 
 [Script]
-http-response ^https?:\/\/(translator|accounts).felo.me\/api\/user.*$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js, requires-body=true, timeout=60, tag=felo
-http-request ^https?:\/\/translator.felo.me\/api\/translation\/thirdToken\?token_channel script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js, requires-body=true, timeout=60, tag=felotk
+http-response ^https?:\/\/(translator|accounts).felo.me script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js, requires-body=true, timeout=60, tag=felo
+http-request ^https?:\/\/translator.felo.me script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js, requires-body=true, timeout=60, tag=felotk
 
 
 [MITM]
