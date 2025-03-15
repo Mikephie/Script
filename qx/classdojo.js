@@ -48,16 +48,8 @@ const appName = "✨Classdojo✨";
 const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
 const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
 const cooldown = 10 * 60 * 1000;
-const notifyKey = "lastNotifyTime";
-const now = Date.now();
-const lastNotifyTime = $persistentStore.read(notifyKey) || 0;
-if (now - lastNotifyTime > cooldown) {
-  if (typeof $notification !== 'undefined') {
-    $notification.post(appName, author, message);
-  } else if (typeof $notify !== 'undefined') {
-    $notify(appName, author, message);
-  }
-  $persistentStore.write(now.toString(), notifyKey);
-}
+function sNotify(a,b,c,d=60000){const e=`${a.replace(/[^a-zA-Z]/g,'').toLowerCase()}_session`;const f=typeof $prefs!=='undefined';const g=typeof $persistentStore!=='undefined'&&typeof $notify!=='undefined';const h=typeof $persistentStore!=='undefined'&&typeof $notification!=='undefined';const i=f?$prefs:$persistentStore;const j=f?$notification:(g?$notify:$notification);if(!i||!j)return false;try{const k=f?i.valueForKey(e):i.read(e);const l=Date.now();if(!k||(l-parseInt(k)>d)){j.post(a,b,c);f?i.setValueForKey(l.toString(),e):i.write(l.toString(),e);return true;}}catch(m){console.log(`[${a}] 错误: ${m}`);}return false;}
     
+sNotify(appName, author, message, 10 * 60 * 1000);
+  
 $done({body: JSON.stringify(obj)});
