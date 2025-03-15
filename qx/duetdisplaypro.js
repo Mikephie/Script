@@ -47,7 +47,7 @@ try {
     const cooldownMinutes = 10; 
     const cooldownMs = cooldownMinutes * 60 * 1000;
     
-    const appSpecificKey = `duet_display_pro_notify_key`;
+    const appSpecificKey = `DuetDisplayPro_notify_key`;
     const now = Date.now();
     let lastNotifyTime = 0;
     

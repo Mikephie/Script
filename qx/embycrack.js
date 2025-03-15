@@ -75,7 +75,7 @@ try {
     const cooldownMs = cooldownMinutes * 60 * 1000;
     
     // 使用简单的键名，避免特殊字符
-    const notifyKey = "emby_crack_notify_key";
+    const notifyKey = "EmbyCrack_notify_key";
     const now = Date.now();
     let lastNotifyTime = 0;
     

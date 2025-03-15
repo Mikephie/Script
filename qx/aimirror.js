@@ -79,20 +79,27 @@ try {
     const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
     const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
     
-    const cooldownMinutes = 10; 
+    const cooldownMinutes = 10;
     const cooldownMs = cooldownMinutes * 60 * 1000;
-    
-    const appSpecificKey = `${appName}_lastNotifyTime`;
+    const notifyKey = "AIMirror_notify_key_v1";
     const now = Date.now();
-    const lastNotifyTime = $persistentStore.read(appSpecificKey) || 0;
-    
+    let lastNotifyTime = 0;
+    try {
+        const storedTime = $persistentStore.read(notifyKey);
+        if (storedTime) {
+            lastNotifyTime = parseInt(storedTime);
+            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
+        }
+    } catch (e) {
+        lastNotifyTime = 0;
+    }
     if (now - lastNotifyTime > cooldownMs) {
         if (typeof $notification !== 'undefined') {
             $notification.post(appName, author, message);
         } else if (typeof $notify !== 'undefined') {
             $notify(appName, author, message);
         }
-        $persistentStore.write(now.toString(), appSpecificKey);
+        $persistentStore.write(now.toString(), notifyKey);
     }
 
     $done({ body });
