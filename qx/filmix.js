@@ -16,71 +16,46 @@ hostname = appv3.filmix.com.cn
 
 */
 
-/********** 主逻辑：解锁VIP **********/
-const appName = "✨Filmix PRO+✨";
-const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-const message = "会员解锁至 0️⃣8️⃣0️⃣8️⃣2️⃣0️⃣8️⃣8️⃣";
-
-// 主逻辑：解锁 VIP
+// 主脚本函数...
 let body = $response.body;
 let data = JSON.parse(body);
 data.vip_level = 5;
 data.is_vip = true;
 data.vip_end_time = "2088-08-08T08:08:08Z";
-body = JSON.stringify(data);
+// 主脚本函数...
 
-// 发送会话通知（会话时长设为10分钟）
-sessionNotify(appName, author, message, 10 * 60 * 1000);
-
-/*
-📱 精简版会话通知模块 📱
-*/
-
-function sessionNotify(appName, author, message, timeout = 1 * 60 * 1000) {
-    // 动态生成存储键名（从应用名提取字母作为前缀）
-    const keyPrefix = appName.replace(/[^a-zA-Z]/g, '').toLowerCase();
-    const storeKey = `${keyPrefix}_session_key`;
+    /********** 应用配置信息 **********/
+    const appName = "✨Filmix PRO+✨";
+    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
+    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
     
-    // 环境判断
-    const isQuanX = typeof $prefs !== 'undefined';
-    const isSurge = typeof $persistentStore !== 'undefined' && typeof $notify !== 'undefined';
-    const isLoon = typeof $persistentStore !== 'undefined' && typeof $notification !== 'undefined';
+    const cooldownMinutes = 10; 
+    const cooldownMs = cooldownMinutes * 60 * 1000;
     
-    // 获取存储和通知实例
-    const store = isQuanX ? $prefs : (isSurge || isLoon ? $persistentStore : null);
-    const notify = isQuanX || isLoon ? $notification : (isSurge ? $notify : null);
+    const notifyKey = "Filmix PRO+_notify_key";
+    const now = Date.now();
+    let lastNotifyTime = 0;
     
-    if (!store || !notify) return false;
-    
-    // 读取上次会话时间
-    let lastTime;
     try {
-        lastTime = isQuanX ? 
-            store.valueForKey(storeKey) : 
-            store.read(storeKey);
-    } catch (e) {
-        console.log(`[${appName}] 读取会话时间失败`);
-    }
-    
-    const currentTime = Date.now();
-    const isNewSession = !lastTime || (currentTime - parseInt(lastTime) > timeout);
-    
-    // 如果是新会话，发送通知并更新时间
-    if (isNewSession) {
-        try {
-            notify.post(appName, author, message);
-            isQuanX ? 
-                store.setValueForKey(currentTime.toString(), storeKey) : 
-                store.write(currentTime.toString(), storeKey);
-            console.log(`[${appName}] 新会话通知已发送，键名: ${storeKey}`);
-        } catch (e) {
-            console.log(`[${appName}] 发送通知失败`);
+        const storedTime = $persistentStore.read(notifyKey);
+        if (storedTime) {
+            lastNotifyTime = parseInt(storedTime);
+            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
         }
-    } else {
-        console.log(`[${appName}] 同一会话内，跳过通知，键名: ${storeKey}`);
+    } catch (e) {
+        lastNotifyTime = 0;
     }
     
-    return isNewSession;
-}
+    if (now - lastNotifyTime > cooldownMs) {
+        if (typeof $notification !== 'undefined') {
+            $notification.post(appName, author, message);
+        } else if (typeof $notify !== 'undefined') {
+            $notify(appName, author, message);
+        }
+        $persistentStore.write(now.toString(), notifyKey);
+    }
 
-$done({ body });
+    $done({ body: JSON.stringify(data) });
+} catch (e) {
+    $done({ body: $response.body });
+}
