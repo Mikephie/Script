@@ -17,16 +17,18 @@ hostname = photoby.hasmash.com
 */
 
 // 主脚本函数...
-let resp = JSON.parse($response.body || '{}');
-resp.result = resp.result || {};
-if ($request.url.includes("/auth/member")) {
-    resp.result.memberExpire = 3742762088000;
-} else if ($request.url.includes("/clickEvent")) {
-    resp.result.isVip = 1;
-    resp.result.vipTime = "2088-08-08 08:08:08";
-} else if ($request.url.includes("/verify")) {
-    resp.result.expire = 3742762088000;
-}
+try {
+    let body = JSON.parse($response.body || '{}');
+    body.result = body.result || {};
+    
+    if ($request.url.includes("/auth/member")) {
+        body.result.memberExpire = 3742762088000;
+    } else if ($request.url.includes("/clickEvent")) {
+        body.result.isVip = 1;
+        body.result.vipTime = "2088-08-08 08:08:08";
+    } else if ($request.url.includes("/verify")) {
+        body.result.expire = 3742762088000;
+    }
 // 主脚本函数...
 
     /********** 应用配置信息 **********/
