@@ -25,9 +25,15 @@ try {
       "vipState": true,
       "end_time": 3742762088,
       "allLifeVip": true,
+      "tel": "8888888888",
       "status": 2,
-      "level": 2,
-      "wx_name": "Mikephie",
+      "level": 4,
+      "card_count": 888,
+      "card_10": {
+      "count": 888,
+      "amount": 888
+    },
+      "wx_name": "MIKEPHIE",
       "headimg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
     };
 // 主脚本函数...
