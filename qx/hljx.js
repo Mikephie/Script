@@ -1,22 +1,22 @@
 /*
-📜 ✨ 婚礼精选 ✨
+📜 ✨ 婚禮精選 ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
 [rewrite_local] // Quantumult X
-^https:\/\/www\.lovewith\.me\/golove\/v05\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js
+^https:\/\/love\.leminet\.cn\/golove\/v05\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js
 
 [Script] // Surge
-婚礼精选 = type=http-response, pattern=^https:\/\/www\.lovewith\.me\/golove\/v05\/profile, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, timeout=60
+婚礼精选 = type=http-response, pattern=^https:\/\/love\.leminet\.cn\/golove\/v05\/profile, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, timeout=60
 
 [Script] // Loon
-http-response ^https:\/\/www\.lovewith\.me\/golove\/v05\/profile script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, timeout=60
+http-response ^https:\/\/love\.leminet\.cn\/golove\/v05\/profile script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, tag=婚礼精选
 
 [MITM]
-hostname = www.lovewith.me
+hostname = love.leminet.cn
 
 */
 
-// 主脚本函数...
+// 主腳本函數...
 try {
     var body = JSON.parse($response.body);
 
@@ -39,10 +39,10 @@ try {
       }
     };
 
-    /********** 应用配置信息 **********/
-    const appName = "✨婚礼精选✨";
+    /********** 應用配置信息 **********/
+    const appName = "✨婚禮精選✨";
     const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
+    const message = "永久解鎖或 ⓿❽-⓿❽-❷⓿❽❽";
     
     const cooldownMinutes = 10;
     const cooldownMs = cooldownMinutes * 60 * 1000;
