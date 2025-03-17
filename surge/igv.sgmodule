@@ -1,5 +1,7 @@
-#!name=GV广告跳过
+#!name=GV广告跳过🚫广告
 #!desc=自动跳过GV网站广告
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🚫广告
 
 [Map Local]
 ^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/.*\.(jpg|jpeg|png|gif)$ data-type=tiny-gif status-code=200
