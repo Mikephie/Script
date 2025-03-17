@@ -1,0 +1,17 @@
+#!name = iGV🚫广告
+#!desc = 去广告 - 模块
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🚫广告
+https://raw.githubusercontent.com/Mikephie/icons/main/icon/igv.png
+
+[Map Local]
+# 重写规则 - 拦截广告图片
+^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/.*\.(jpg|jpeg|png|gif)$ data-type=tiny-gif status-code=200
+
+[Script]
+# 脚本 - 自动点击跳过广告按钮
+igv = type=http-response, pattern=^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js, requires-body=true, max-size=-1, timeout=60
+
+
+[MITM]
+hostname = %APPEND% m.gv.com.sg, media.gv.com.sg
