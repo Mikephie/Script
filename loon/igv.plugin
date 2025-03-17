@@ -1,0 +1,16 @@
+#!name=iGB
+#!desc=AXS Payment 去广告
+#!author=mike
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/axs.png
+#!homepage=https://mike
+
+[Rewrite]
+# 重写规则 - 拦截广告图片
+^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/(CorpSales_NowAllowed_600x1200|OnlineF&BDeal)\.jpg - reject-img
+
+[Script]
+# 脚本 - 自动点击跳过广告按钮
+http-response ^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js, requires-body=true, timeout=60, tag=igv
+
+[MITM]
+hostname = m.gv.com.sg, media.gv.com.sg
