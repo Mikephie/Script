@@ -11,6 +11,8 @@
 [MITM]
 hostname = m.gv.com.sg, media.gv.com.sg
 
+*/
+
 let body = $response.body;
 
 // 添加自动点击脚本
