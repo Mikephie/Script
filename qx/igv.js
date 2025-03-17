@@ -15,22 +15,30 @@ hostname = m.gv.com.sg, media.gv.com.sg
 
 let body = $response.body;
 
-// 添加自动点击脚本
+// 自动点击广告跳过按钮的 JavaScript 代码
 const autoSkip = `
 <script>
 window.addEventListener('load', function() {
-  // 立即尝试点击Skip按钮
-  var skipBtn = document.querySelector('.skipBtn');
-  if (skipBtn) skipBtn.click();
-  
-  // 再尝试一次（以防万一）
-  setTimeout(function() {
+  function clickSkipButton() {
     var skipBtn = document.querySelector('.skipBtn');
-    if (skipBtn) skipBtn.click();
-  }, 500);
+    if (skipBtn) {
+      skipBtn.click();
+      console.log('Skip button clicked');
+    }
+  }
+
+  // 初次尝试点击
+  clickSkipButton();
+  
+  // 延迟再尝试一次（以防按钮延迟加载）
+  setTimeout(clickSkipButton, 500);
+  
+  // 监听 DOM 变化，自动点击新加载的 Skip 按钮
+  const observer = new MutationObserver(() => clickSkipButton());
+  observer.observe(document.body, { childList: true, subtree: true });
 });
 </script>
 `;
 
 body = body.replace('</body>', autoSkip + '</body>');
-$done({body});
+$done({ body });
