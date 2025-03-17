@@ -1,0 +1,36 @@
+{
+  "user_agent": "DocumentSign",
+  "bundle_id": "com.farrukhmalik.DocumentSign",
+  "data": {
+    "signhub_1m": {
+      "entitlements": [
+        "signhub_premium_access"
+      ],
+      "product_identifier": "signhub_1m"
+    },
+    "signhub_1y": {
+      "entitlements": [
+        "signhub_premium_access"
+      ],
+      "product_identifier": "signhub_1y"
+    },
+    "signhub_1y_3d": {
+      "entitlements": [
+        "signhub_premium_access"
+      ],
+      "product_identifier": "signhub_1y_3d"
+    },
+    "signhub_1y_discounted": {
+      "entitlements": [
+        "signhub_premium_access"
+      ],
+      "product_identifier": "signhub_1y_discounted"
+    },
+    "signhub_lifetime": {
+      "entitlements": [
+        "signhub_premium_access"
+      ],
+      "product_identifier": "signhub_lifetime"
+    }
+  }
+}
