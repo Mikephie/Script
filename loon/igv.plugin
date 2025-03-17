@@ -1,8 +1,7 @@
-#!name=iGV 
-#!desc=AXS Payment 去广告
-#!author=mike
-#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/loon/axs.png
-#!homepage=https://mike
+#!name=iGV 广告跳过
+#!desc=自动点击跳过广告按钮
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/igv.png
 
 [Rewrite]
 # 重写规则 - 拦截广告图片
