@@ -4,11 +4,15 @@
 #!category=🚫广告
 
 [Map Local]
-^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/.*\.(jpg|jpeg|png|gif)$ data-type=tiny-gif status-code=200
+# Replace ad images with a tiny GIF
+^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/.*\.(jpg|jpeg|png|gif)$ data-type=tiny-gif
 
 [Script]
-GV广告跳过 = type=http-response,pattern=^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
-Guest跳过 = type=http-response,pattern=^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/login\.html,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
+# Auto-skip ads on the ad page
+GV广告跳过 = type=http-response, pattern=^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
+# Auto-click Guest on the login page
+Guest跳过 = type=http-response, pattern=^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/login\.html, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
 
 [MITM]
+# Append hostnames to MITM (adjust if standalone config)
 hostname = %APPEND% m.gv.com.sg, media.gv.com.sg
