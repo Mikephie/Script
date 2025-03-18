@@ -10,6 +10,8 @@
 
 # 脚本 - 自动点击跳过广告按钮
 ^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html url script-response-body igv.js
+# 脚本 - 自动点击Guest按钮
+^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/login\.html url script-response-body igv.js
 
 [MITM]
 hostname = m.gv.com.sg, media.gv.com.sg
@@ -51,11 +53,20 @@ const autoActions = `
     function tryAction() {
       let skipSuccess = clickElement('.skipBtn');
       let closeSuccess = clickElement('.whatsnew_close') || submitForm('formWhatsNewClose');
+      
+      // 自动点击 guest 按钮
+      let guestSuccess = false;
+      const guestBtn = document.querySelector('[ng-click="onAsGuest()"]');
+      if (guestBtn) {
+        guestBtn.click();
+        console.log('点击成功: Guest按钮');
+        guestSuccess = true;
+      }
 
-      if (!(skipSuccess || closeSuccess)) {
+      if (!(skipSuccess || closeSuccess || guestSuccess)) {
         attempts++;
         if (attempts < 20) {
-          requestAnimationFrame(tryAction); // 每一帧尝试一次，直到成功或达到最大次数
+          setTimeout(tryAction, 500); // 每500ms尝试一次，直到成功或达到最大次数
         } else {
           console.log('多次尝试仍未成功，停止执行。');
         }
@@ -65,8 +76,16 @@ const autoActions = `
   }
 
   // 页面加载 & DOM 变化时执行
-  window.addEventListener('load', autoSkipAndClose);
-  new MutationObserver(autoSkipAndClose).observe(document.body, { childList: true, subtree: true });
+  window.addEventListener('load', function() {
+    console.log('页面加载完成，开始自动操作');
+    setTimeout(autoSkipAndClose, 1000); // 页面加载后等待1秒再执行
+  });
+  
+  // 监听DOM变化
+  new MutationObserver(function(mutations) {
+    console.log('DOM发生变化，尝试自动操作');
+    autoSkipAndClose();
+  }).observe(document.body, { childList: true, subtree: true });
 })();
 </script>
 `;
