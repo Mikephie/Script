@@ -17,15 +17,15 @@ hostname = m.gv.com.sg, media.gv.com.sg
 
 let body = $response.body;
 
-const autoActions = `
+const autoClose = `
 <script>
 (function() {
   function clickElement(selector) {
     const element = document.querySelector(selector);
     if (element) {
-      element.style.display = 'block'; // 强制可见
-      element.style.opacity = '1';     // 取消透明度
-      element.style.pointerEvents = 'auto'; // 确保可点击
+      element.style.display = 'block'; // 确保可见
+      element.style.opacity = '1';
+      element.style.pointerEvents = 'auto'; // 允许交互
       element.click();
       console.log('点击成功:', selector);
       return true;
@@ -45,16 +45,16 @@ const autoActions = `
     return false;
   }
 
-  function autoSkipAndClose() {
+  function autoSkipAndClose(doc) {
     let attempts = 0;
     function tryAction() {
-      let skipSuccess = clickElement('.skipBtn');
-      let closeSuccess = clickElement('.whatsnew_close') || submitForm('formWhatsNewClose');
+      let skipSuccess = clickElement.call(doc, '.skipBtn');
+      let closeSuccess = clickElement.call(doc, '.whatsnew_close') || submitForm.call(doc, 'formWhatsNewClose');
 
       if (!(skipSuccess || closeSuccess)) {
         attempts++;
         if (attempts < 20) {
-          requestAnimationFrame(tryAction); // 每一帧尝试一次，直到成功或达到最大次数
+          requestAnimationFrame(tryAction); // 每帧检测
         } else {
           console.log('多次尝试仍未成功，停止执行。');
         }
@@ -63,17 +63,27 @@ const autoActions = `
     tryAction();
   }
 
-  // 页面加载 & DOM 变化时执行
-  window.addEventListener('load', autoSkipAndClose);
-  new MutationObserver(autoSkipAndClose).observe(document.body, { childList: true, subtree: true });
+  // 监听页面加载并执行
+  window.addEventListener('load', function() {
+    autoSkipAndClose(document);
+  });
+
+  // 监听 DOM 变化（适用于 AJAX 及部分动态跳转）
+  new MutationObserver(() => autoSkipAndClose(document)).observe(document.body, { childList: true, subtree: true });
+
+  // 监听页面跳转（单页应用）
+  window.addEventListener('popstate', function() {
+    autoSkipAndClose(document);
+  });
+
 })();
 </script>
 `;
 
 if (body.includes('</body>')) {
-  body = body.replace('</body>', autoActions + '</body>');
+  body = body.replace('</body>', autoClose + '</body>');
 } else {
-  body += autoActions;
+  body += autoClose;
 }
 
 $done({ body });
