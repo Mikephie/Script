@@ -9,9 +9,9 @@
 ^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/OnlineF&BDeal\.jpg url reject-img
 
 # 脚本 - 自动点击跳过广告按钮
-^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html url script-response-body igv.js
+^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
 # 脚本 - 自动点击Guest按钮
-^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/login\.html url script-response-body igv.js
+^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/login\.html url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
 
 [MITM]
 hostname = m.gv.com.sg, media.gv.com.sg

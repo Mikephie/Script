@@ -7,8 +7,8 @@
 ^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/.*\.(jpg|jpeg|png|gif)$ data-type=tiny-gif status-code=200
 
 [Script]
-GV广告跳过 = type=http-response,pattern=^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html,requires-body=1,max-size=-1,script-path=gv_skip_ad.js
-Guest跳过 = type=http-response,pattern=^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/login\.html,requires-body=1,max-size=-1,script-path=gv_skip_ad.js
+GV广告跳过 = type=http-response,pattern=^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
+Guest跳过 = type=http-response,pattern=^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/login\.html,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
 
 [MITM]
 hostname = %APPEND% m.gv.com.sg, media.gv.com.sg
