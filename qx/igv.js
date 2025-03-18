@@ -4,10 +4,10 @@
 
 [rewrite_local] // Quantumult X
 
-# 重写规则 - 拦截广告图片
+# 重寫規則 - 攔截廣告圖片
 ^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/(CorpSales_NowAllowed_600x1200|OnlineF&BDeal)\.jpg url reject-img
 
-# 脚本 - 自动点击跳过广告按钮
+# 腳本 - 自動點擊跳過廣告按鈕
 ^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
 
 [MITM]
@@ -17,7 +17,7 @@ hostname = m.gv.com.sg, media.gv.com.sg
 
 let body = $response.body;
 
-// 自动点击广告跳过按钮的 JavaScript 代码
+// 自動點擊廣告跳過按鈕的 JavaScript 代碼
 const autoSkip = `
 <script>
 window.addEventListener('load', function() {
@@ -29,13 +29,13 @@ window.addEventListener('load', function() {
     }
   }
 
-  // 初次尝试点击
+  // 初次嘗試點擊
   clickSkipButton();
   
-  // 延迟再尝试一次（以防按钮延迟加载）
+  // 延遲再嘗試一次（以防按鈕延遲加載）
   setTimeout(clickSkipButton, 500);
   
-  // 监听 DOM 变化，自动点击新加载的 Skip 按钮
+  // 監聽 DOM 變化，自動點擊新加載的 Skip 按鈕
   const observer = new MutationObserver(() => clickSkipButton());
   observer.observe(document.body, { childList: true, subtree: true });
 });
