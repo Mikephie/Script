@@ -23,58 +23,60 @@ const autoClose = `
   function clickElement(selector) {
     const element = document.querySelector(selector);
     if (element) {
-      element.style.display = 'block'; // 确保可见
-      element.style.opacity = '1';
-      element.style.pointerEvents = 'auto'; // 允许交互
+      element.style.display = 'none'; // 隐藏元素，防止 UI 阻塞
+      element.style.opacity = '0';
+      element.style.pointerEvents = 'none'; // 禁止交互
       element.click();
       console.log('点击成功:', selector);
       return true;
     }
-    console.log('未找到:', selector);
     return false;
   }
 
   function submitForm(formId) {
     const form = document.getElementById(formId) || document.forms[formId];
     if (form) {
+      form.style.display = 'none'; // 隐藏表单，防止 UI 卡顿
       form.submit();
       console.log('表单提交成功:', formId);
       return true;
     }
-    console.log('表单未找到:', formId);
     return false;
   }
 
   function autoSkipAndClose(doc) {
     let attempts = 0;
     function tryAction() {
-      let skipSuccess = clickElement.call(doc, '.skipBtn');
-      let closeSuccess = clickElement.call(doc, '.whatsnew_close') || submitForm.call(doc, 'formWhatsNewClose');
+      let success = clickElement.call(doc, '.skipBtn') || 
+                    clickElement.call(doc, '.whatsnew_close') || 
+                    submitForm.call(doc, 'formWhatsNewClose');
 
-      if (!(skipSuccess || closeSuccess)) {
+      if (!success) {
         attempts++;
-        if (attempts < 20) {
-          requestAnimationFrame(tryAction); // 每帧检测
+        if (attempts < 10) {
+          setTimeout(tryAction, 200); // 限制执行次数，减少性能开销
         } else {
-          console.log('多次尝试仍未成功，停止执行。');
+          console.log('多次尝试未成功，停止执行。');
         }
       }
     }
     tryAction();
   }
 
-  // 监听页面加载并执行
+  // 页面加载时执行
   window.addEventListener('load', function() {
-    autoSkipAndClose(document);
+    setTimeout(() => autoSkipAndClose(document), 300);
   });
 
-  // 监听 DOM 变化（适用于 AJAX 及部分动态跳转）
-  new MutationObserver(() => autoSkipAndClose(document)).observe(document.body, { childList: true, subtree: true });
-
-  // 监听页面跳转（单页应用）
-  window.addEventListener('popstate', function() {
-    autoSkipAndClose(document);
+  // 监听 DOM 变化，但减少触发频率
+  let observer = new MutationObserver(() => {
+    observer.disconnect(); // 先断开监听，避免高频触发
+    setTimeout(() => {
+      autoSkipAndClose(document);
+      observer.observe(document.body, { childList: true, subtree: true });
+    }, 500);
   });
+  observer.observe(document.body, { childList: true, subtree: true });
 
 })();
 </script>
