@@ -2,15 +2,14 @@
 📜 ✨ iGV ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local] // Quantumult X
+[rewrite_local]
+# Ad Image Blocking - Intercept and reject ad images
+^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/.*\.(jpg|png|gif) url reject-img
 
-# 重写规则 - 拦截广告图片
-^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/CorpSales_NowAllowed_600x1200\.jpg url reject-img
-^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/OnlineF&BDeal\.jpg url reject-img
-
-# 脚本 - 自动点击跳过广告按钮
+# Script - Auto-click "Skip Ad" button on ad page
 ^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/advpage\.html url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
-# 脚本 - 自动点击Guest按钮
+
+# Script - Auto-click "Guest" button on login page
 ^https:\/\/m\.gv\.com\.sg\/iGV2\/general\/login\.html url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/igv.js
 
 [MITM]
