@@ -235,8 +235,6 @@ if (body.datas) {
     });
   }
 }
-
-$done({ body: JSON.stringify(body) });
 // 主脚本函数...
 
     /********** 应用配置信息 **********/
