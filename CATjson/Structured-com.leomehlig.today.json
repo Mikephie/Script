@@ -1,0 +1,108 @@
+{
+  "user_agent": "Structured",
+  "bundle_id": "com.leomehlig.today",
+  "data": {
+    "app.structured.free": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "app.structured.free"
+    },
+    "app.structured.pro.monthly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "app.structured.pro.monthly"
+    },
+    "app.structured.pro.monthly_trial": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "app.structured.pro.monthly_trial"
+    },
+    "app.structured.pro.yearly": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "app.structured.pro.yearly"
+    },
+    "app.structured.pro.yearly_trial": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "app.structured.pro.yearly_trial"
+    },
+    "today.structured.non_consumable.tip.1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.non_consumable.tip.1"
+    },
+    "today.structured.non_consumable.tip.10": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.non_consumable.tip.10"
+    },
+    "today.structured.non_consumable.tip.2": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.non_consumable.tip.2"
+    },
+    "today.structured.non_consumable.tip.3": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.non_consumable.tip.3"
+    },
+    "today.structured.non_consumable.tip.5": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.non_consumable.tip.5"
+    },
+    "today.structured.pro": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.pro"
+    },
+    "today.structured.pro_v1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.pro_v1"
+    },
+    "today.structured.pro_v2": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.pro_v2"
+    },
+    "today.structured.tip.1": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.tip.1"
+    },
+    "today.structured.tip.2": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.tip.2"
+    },
+    "today.structured.tip.3": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.tip.3"
+    },
+    "today.structured.tip.5": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "today.structured.tip.5"
+    }
+  }
+}

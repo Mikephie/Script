@@ -1,0 +1,42 @@
+{
+  "user_agent": "Supplies",
+  "bundle_id": null,
+  "data": {
+    "supplies.plus.annual.tier16": {
+      "entitlements": [
+        "supplies.deluxe"
+      ],
+      "product_identifier": "supplies.plus.annual.tier16"
+    },
+    "supplies.plus.lifetime.tier11": {
+      "entitlements": [
+        "supplies.deluxe"
+      ],
+      "product_identifier": "supplies.plus.lifetime.tier11"
+    },
+    "supplies.plus.monthly.tier2": {
+      "entitlements": [
+        "supplies.deluxe"
+      ],
+      "product_identifier": "supplies.plus.monthly.tier2"
+    },
+    "supplies.tip.tier2": {
+      "entitlements": [
+        "supplies.deluxe"
+      ],
+      "product_identifier": "supplies.tip.tier2"
+    },
+    "supplies.tip.tier5": {
+      "entitlements": [
+        "supplies.deluxe"
+      ],
+      "product_identifier": "supplies.tip.tier5"
+    },
+    "supplies.tip.tier8": {
+      "entitlements": [
+        "supplies.deluxe"
+      ],
+      "product_identifier": "supplies.tip.tier8"
+    }
+  }
+}
