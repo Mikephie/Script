@@ -5,6 +5,8 @@
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/reddit.png
 #appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
+[General]
+force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
 
 [Script]
 # 统一广告去除和会员解锁处理
