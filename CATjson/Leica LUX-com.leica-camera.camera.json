@@ -1,0 +1,24 @@
+{
+  "user_agent": "Leica%20LUX",
+  "bundle_id": "com.leica-camera.camera",
+  "data": {
+    "lux_7999_1y_2w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "lux_7999_1y_2w0"
+    },
+    "lux_799_1mo_2w0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "lux_799_1mo_2w0"
+    },
+    "lux_annual_product_registration": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "lux_annual_product_registration"
+    }
+  }
+}
