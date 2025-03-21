@@ -17,47 +17,27 @@ hostname = format-api.netpock.com
 */
 
 // 主脚本函数...
-try {
-    var obj = JSON.parse($response.body);
-    
-    obj.data = {
-      ...obj.data,
-        "user_name" : "MIKEPHIE",
-        "is_vip" : true,
-        "wps_size" : 88888888,
-        "vip_expiration_time" : 3742762088,
-    };
+var obj = JSON.parse($response.body);
+if (!obj) { $done({}); }
+
+obj.data = {
+    ...obj.data,
+    "user_name": "MIKEPHIE",
+    "is_vip": true,
+    "wps_size": 88888888,
+    "vip_expiration_time": 3742762088
+};
 // 主脚本函数...
 
-    /********** 应用配置信息 **********/
-    const appName = "✨百转格✨";
-    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-    
-    const cooldownMinutes = 10;
-    const cooldownMs = cooldownMinutes * 60 * 1000;
-    const notifyKey = "百转格_notify_key_v1";
-    const now = Date.now();
-    let lastNotifyTime = 0;
-    try {
-        const storedTime = $persistentStore.read(notifyKey);
-        if (storedTime) {
-            lastNotifyTime = parseInt(storedTime);
-            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
-        }
-    } catch (e) {
-        lastNotifyTime = 0;
-    }
-    if (now - lastNotifyTime > cooldownMs) {
-        if (typeof $notification !== 'undefined') {
-            $notification.post(appName, author, message);
-        } else if (typeof $notify !== 'undefined') {
-            $notify(appName, author, message);
-        }
-        $persistentStore.write(now.toString(), notifyKey);
-    }
-    
-    $done({body: JSON.stringify(obj)});
-} catch (e) {
-    $done({body: $response.body});
+/********** 应用配置信息 **********/
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "百转格_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨百转格✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $persistentStore.write(now.toString(), notifyKey);
 }
+
+$done({ body: JSON.stringify(obj) });

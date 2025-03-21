@@ -17,49 +17,30 @@ hostname = appraven.net
 */
 
 // 主脚本函数...
-try {
-    let body = $response.body;
+let body = $response.body;
+if (!body) { $done({}); }
 
-    [
-        { pattern: /"premium":false/g, replacement: '"premium":true' },
-        { pattern: /"hasInAppPurchases":false/g, replacement: '"hasInAppPurchases":true' },
-        { pattern: /"youOwn":false/g, replacement: '"youOwn":true' },
-        { pattern: /"arcade":false/g, replacement: '"arcade":true' },
-        { pattern: /"preorder":false/g, replacement: '"preorder":true' }
-    ].forEach(({ pattern, replacement }) => {
-        body = body.replace(pattern, replacement);
-    });
+// Apply replacements
+[
+    { pattern: /"premium":false/g, replacement: '"premium":true' },
+    { pattern: /"hasInAppPurchases":false/g, replacement: '"hasInAppPurchases":true' },
+    { pattern: /"youOwn":false/g, replacement: '"youOwn":true' },
+    { pattern: /"arcade":false/g, replacement: '"arcade":true' },
+    { pattern: /"preorder":false/g, replacement: '"preorder":true' }
+].forEach(({ pattern, replacement }) => {
+    body = body.replace(pattern, replacement);
+});
 // 主脚本函数...
 
-    /********** 应用配置信息 **********/
-    const appName = "✨AppRaven✨";
-    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-    
-    const cooldownMinutes = 10;
-    const cooldownMs = cooldownMinutes * 60 * 1000;
-    const notifyKey = "AppRaven_notify_key_v1";
-    const now = Date.now();
-    let lastNotifyTime = 0;
-    try {
-        const storedTime = $persistentStore.read(notifyKey);
-        if (storedTime) {
-            lastNotifyTime = parseInt(storedTime);
-            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
-        }
-    } catch (e) {
-        lastNotifyTime = 0;
-    }
-    if (now - lastNotifyTime > cooldownMs) {
-        if (typeof $notification !== 'undefined') {
-            $notification.post(appName, author, message);
-        } else if (typeof $notify !== 'undefined') {
-            $notify(appName, author, message);
-        }
-        $persistentStore.write(now.toString(), notifyKey);
-    }
+/********** 应用配置信息 **********/
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "AppRaven_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 
-    $done({ body: JSON.stringify(JSON.parse(body)) });
-} catch (e) {
-    $done({ body: $response.body });
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨AppRaven✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $persistentStore.write(now.toString(), notifyKey);
 }
+
+$done({ body });

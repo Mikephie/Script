@@ -20,14 +20,15 @@ hostname = api.adblockpro.app
 let body = $response.body;
 if (!body) { $done({}); }
 
-body = JSON.parse(body); // Parse the JSON string into an object
+body = JSON.parse(body);
 ['p', 's', 'l'].forEach(key => {
     if (body.hasOwnProperty(key)) body[key] = 1;
 });
 if (body.hasOwnProperty('v')) body.v = true;
+// 主脚本函数...
 
 /********** 应用配置信息 **********/
-const cooldownMs = 10 * 60 * 1000; // 10 minutes
+const cooldownMs = 10 * 60 * 1000;
 const notifyKey = "AdblockPRO_notify_key";
 const now = Date.now();
 let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;

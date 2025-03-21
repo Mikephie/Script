@@ -17,55 +17,35 @@ hostname = payments.classdojo.com
 */
 
 // 主脚本函数...
-try {
-    let obj = JSON.parse($response.body);
-    
-    if (obj.subscriber && obj.subscriber.subscriptions) {
-        for (const key in obj.subscriber.subscriptions) {
-            if (obj.subscriber.subscriptions.hasOwnProperty(key)) {
-                obj.subscriber.subscriptions[key].expires_date = "2088-08-08T08:08:08Z";
-            }
+let obj = JSON.parse($response.body);
+if (!obj) { $done({}); }
+
+if (obj.subscriber && obj.subscriber.subscriptions) {
+    for (const key in obj.subscriber.subscriptions) {
+        if (obj.subscriber.subscriptions.hasOwnProperty(key)) {
+            obj.subscriber.subscriptions[key].expires_date = "2088-08-08T08:08:08Z";
         }
     }
-    
-    if (obj.subscriber && obj.subscriber.entitlements) {
-        for (const key in obj.subscriber.entitlements) {
-            if (obj.subscriber.entitlements.hasOwnProperty(key)) {
-                obj.subscriber.entitlements[key].expires_date = "2088-08-08T08:08:08Z";
-            }
+}
+
+if (obj.subscriber && obj.subscriber.entitlements) {
+    for (const key in obj.subscriber.entitlements) {
+        if (obj.subscriber.entitlements.hasOwnProperty(key)) {
+            obj.subscriber.entitlements[key].expires_date = "2088-08-08T08:08:08Z";
         }
     }
+}
 // 主脚本函数...
 
-    /********** 应用配置信息 **********/
-    const appName = "✨Classdojo✨";
-    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-    
-    const cooldownMinutes = 10;
-    const cooldownMs = cooldownMinutes * 60 * 1000;
-    const notifyKey = "Classdojo_notify_key_v1";
-    const now = Date.now();
-    let lastNotifyTime = 0;
-    try {
-        const storedTime = $persistentStore.read(notifyKey);
-        if (storedTime) {
-            lastNotifyTime = parseInt(storedTime);
-            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
-        }
-    } catch (e) {
-        lastNotifyTime = 0;
-    }
-    if (now - lastNotifyTime > cooldownMs) {
-        if (typeof $notification !== 'undefined') {
-            $notification.post(appName, author, message);
-        } else if (typeof $notify !== 'undefined') {
-            $notify(appName, author, message);
-        }
-        $persistentStore.write(now.toString(), notifyKey);
-    }
+/********** 应用配置信息 **********/
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "Classdojo_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 
-    $done({ body: JSON.stringify(obj) });
-} catch (e) {
-    $done({ body: $response.body });
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨Classdojo✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $persistentStore.write(now.toString(), notifyKey);
 }
+
+$done({ body: JSON.stringify(obj) });
