@@ -1,0 +1,30 @@
+{
+  "user_agent": "LaunchX",
+  "bundle_id": "com.launcherx",
+  "data": {
+    "com.launcherx.Annual": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.launcherx.Annual"
+    },
+    "com.launcherx.Lifetime": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.launcherx.Lifetime"
+    },
+    "com.launcherx.monthly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.launcherx.monthly"
+    },
+    "com.launcherx.weekly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.launcherx.weekly"
+    }
+  }
+}
