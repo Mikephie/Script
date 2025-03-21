@@ -17,44 +17,24 @@ hostname = api.adblockpro.app
 */
 
 // 主脚本函数...
-try {
-    let body = JSON.parse($response.body);
+let body = $response.body;
+if (!body) { $done({}); }
 
-    ['p', 's', 'l'].forEach(key => {
-        if (body.hasOwnProperty(key)) body[key] = 1;
-    });
-    if (body.hasOwnProperty('v')) body.v = true;
-// 主脚本函数...
+body = JSON.parse(body); // Parse the JSON string into an object
+['p', 's', 'l'].forEach(key => {
+    if (body.hasOwnProperty(key)) body[key] = 1;
+});
+if (body.hasOwnProperty('v')) body.v = true;
 
-    /********** 应用配置信息 **********/
-    const appName = "✨AdblockPRO✨";
-    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-    
-    const cooldownMinutes = 10;
-    const cooldownMs = cooldownMinutes * 60 * 1000;
-    const notifyKey = "AdblockPRO_notify_key_v1";
-    const now = Date.now();
-    let lastNotifyTime = 0;
-    try {
-        const storedTime = $persistentStore.read(notifyKey);
-        if (storedTime) {
-            lastNotifyTime = parseInt(storedTime);
-            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
-        }
-    } catch (e) {
-        lastNotifyTime = 0;
-    }
-    if (now - lastNotifyTime > cooldownMs) {
-        if (typeof $notification !== 'undefined') {
-            $notification.post(appName, author, message);
-        } else if (typeof $notify !== 'undefined') {
-            $notify(appName, author, message);
-        }
-        $persistentStore.write(now.toString(), notifyKey);
-    }
+/********** 应用配置信息 **********/
+const cooldownMs = 10 * 60 * 1000; // 10 minutes
+const notifyKey = "AdblockPRO_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 
-    $done({ body: JSON.stringify(body) });
-} catch (e) {
-    $done({ body: $response.body });
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨AdblockPRO✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $persistentStore.write(now.toString(), notifyKey);
 }
+
+$done({ body: JSON.stringify(body) });
