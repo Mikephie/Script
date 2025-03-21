@@ -6,8 +6,9 @@
 #!date = 2024-10-26 03:35:00
 
 [Script]
-http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, requires-body=true, timeout=60, tag=redditvip
+http-response ^https:\/\/gql-fed\.reddit\.com\/ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, requires-body=true, timeout=60, tag=redditvip
 
+http-response ^https:\/\/gql-fed\.reddit\.com\/ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, requires-body=true, timeout=60, tag=gql-fed_vip
 
-[MitM]
+[MITM]
 hostname = gql.reddit.com, gql-fed.reddit.com
