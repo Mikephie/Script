@@ -19,58 +19,35 @@ hostname = rdp.duetdisplay.com
 */
 
 // 主脚本函数...
-try {
-    var obj = JSON.parse($response.body);
+var obj = JSON.parse($response.body);
+if (!obj) { $done({}); }
 
-    obj = {
-      "success": true,
-      "products": [
+obj = {
+    "success": true,
+    "products": [
         {
-          "vendor": "apple",
-          "product": "DuetStudioAnnual",
-          "subscriptionId": 434779,
-          "purchaseDate": "2024-05-27T04:25:43Z",
-          "cancelled": false,
-          "expiresDate": "2088-08-08T08:08:08Z",
-          "inTrial": true
+            "vendor": "apple",
+            "product": "DuetStudioAnnual",
+            "subscriptionId": 434779,
+            "purchaseDate": "2024-05-27T04:25:43Z",
+            "cancelled": false,
+            "expiresDate": "2088-08-08T08:08:08Z",
+            "inTrial": true
         }
-      ],
-      "hasStripeAccount": false
-    };
+    ],
+    "hasStripeAccount": false
+};
 // 主脚本函数...
 
-    /********** 应用配置信息 **********/
-    const appName = "✨DuetDisplayPro✨";
-    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-    
-    const cooldownMinutes = 10; 
-    const cooldownMs = cooldownMinutes * 60 * 1000;
-    
-    const appSpecificKey = `DuetDisplayPro_notify_key`;
-    const now = Date.now();
-    let lastNotifyTime = 0;
-    
-    try {
-        const storedTime = $persistentStore.read(appSpecificKey);
-        if (storedTime) {
-            lastNotifyTime = parseInt(storedTime);
-            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
-        }
-    } catch (e) {
-        lastNotifyTime = 0;
-    }
-    
-    if (now - lastNotifyTime > cooldownMs) {
-        if (typeof $notification !== 'undefined') {
-            $notification.post(appName, author, message);
-        } else if (typeof $notify !== 'undefined') {
-            $notify(appName, author, message);
-        }
-        $persistentStore.write(now.toString(), appSpecificKey);
-    }
+/********** 应用配置信息 **********/
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "Subscription_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 
-    $done({ body: JSON.stringify(obj) });
-} catch (e) {
-    $done({ body: $response.body });
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨Subscription Unlock✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $persistentStore.write(now.toString(), notifyKey);
 }
+
+$done({ body: JSON.stringify(obj) });
