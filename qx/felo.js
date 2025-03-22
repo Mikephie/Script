@@ -74,7 +74,7 @@ if (url.includes("user")) {
     let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 
     if (now - lastNotifyTime > cooldownMs) {
-        $notification.post("✨User Unlock✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+        $notification.post("✨Felo✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
         $persistentStore.write(now.toString(), notifyKey);
     }
 
