@@ -17,56 +17,36 @@ hostname = h5.hunbei.com
 */
 
 // 主脚本函数...
-try {
-    var body = JSON.parse($response.body);
+let body = $response.body;
+if (!body) { $done({}); }
 
-    body.data = {
-      ...body.data,
-      "vipState": true,
-      "end_time": 3742762088,
-      "allLifeVip": true,
-      "tel": "8888888888",
-      "status": 2,
-      "level": 4,
-      "card_count": 888,
-      "card_10": {
-      "count": 888,
-      "amount": 888
+let data = JSON.parse(body);
+data.data = {
+    ...data.data,
+    "vipState": true,
+    "end_time": 3742762088,
+    "allLifeVip": true,
+    "tel": "8888888888",
+    "status": 2,
+    "level": 4,
+    "card_count": 888,
+    "card_10": {
+        "count": 888,
+        "amount": 888
     },
-      "wx_name": "MIKEPHIE",
-      "headimg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
-    };
+    "wx_name": "MIKEPHIE",
+    "headimg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
+};
 // 主脚本函数...
 
-    /********** 应用配置信息 **********/
-    const appName = "✨婚贝请柬✨";
-    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-    
-    const cooldownMinutes = 10;
-    const cooldownMs = cooldownMinutes * 60 * 1000;
-    const notifyKey = "hunbei_invitation_notify_key_v1"; // 使用英文键名，避免潜在问题
-    const now = Date.now();
-    let lastNotifyTime = 0;
-    try {
-        const storedTime = $persistentStore.read(notifyKey);
-        if (storedTime) {
-            lastNotifyTime = parseInt(storedTime);
-            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
-        }
-    } catch (e) {
-        lastNotifyTime = 0;
-    }
-    if (now - lastNotifyTime > cooldownMs) {
-        if (typeof $notification !== 'undefined') {
-            $notification.post(appName, author, message);
-        } else if (typeof $notify !== 'undefined') {
-            $notify(appName, author, message);
-        }
-        $persistentStore.write(now.toString(), notifyKey);
-    }
-
-    $done({ body: JSON.stringify(body) });
-} catch (e) {
-    $done({ body: $response.body });
+/********** 应用配置信息 **********/
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "婚贝请柬_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨婚贝请柬✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $persistentStore.write(now.toString(), notifyKey);
 }
+
+$done({ body: JSON.stringify(data) });
