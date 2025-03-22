@@ -69,7 +69,7 @@ if (url.includes("user")) {
 
 /********** 应用配置信息 **********/
     const cooldownMs = 10 * 60 * 1000;
-    const notifyKey = "User_notify_key";
+    const notifyKey = "Felo_notify_key";
     const now = Date.now();
     let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 
@@ -99,7 +99,7 @@ if (url.includes("user")) {
     let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 
     if (now - lastNotifyTime > cooldownMs) {
-        $notification.post("✨Token Unlock✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+        $notification.post("✨FeloToken Unlock✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
         $persistentStore.write(now.toString(), notifyKey);
     }
 
