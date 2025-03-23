@@ -6,9 +6,11 @@
 #!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/axs.png
 
+[filter_local]
+url-regex,^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/WebView\/MarketPlace,reject
+url-regex,^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight,reject
+
 [rewrite_local]
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/WebView\/MarketPlace reject
-^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight reject
 ^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/.*$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/axs.js
 
 [mitm]
