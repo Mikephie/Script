@@ -7,17 +7,9 @@
 
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local] // Quantumult X
+[rewrite_local]
 ^https?:\/\/(translator|accounts).felo.me url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js
 ^https?:\/\/(translator|accounts).felo.me url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js
-
-[Script] // Surge
-Felo = type=http-response, pattern=^https?:\/\/(translator|accounts).felo.me, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js, timeout=60
-Felo = type=http-request, pattern=^https?:\/\/(translator|accounts).felo.me, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js, timeout=60
-
-[Script] // Loon
-http-response ^https?:\/\/(translator|accounts).felo.me script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js, requires-body=true, timeout=60
-http-request ^https?:\/\/(translator|accounts).felo.me script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js, requires-body=true, timeout=60
 
 [mitm] 
 hostname = accounts.felo.me,translator.felo.me

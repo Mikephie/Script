@@ -2,14 +2,8 @@
 📜 ✨ 婚禮精選 ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local] // Quantumult X
+[rewrite_local]
 ^https:\/\/love\.leminet\.cn\/golove\/v05\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js
-
-[Script] // Surge
-婚礼精选 = type=http-response, pattern=^https:\/\/love\.leminet\.cn\/golove\/v05\/profile, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, timeout=60
-
-[Script] // Loon
-http-response ^https:\/\/love\.leminet\.cn\/golove\/v05\/profile script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js, requires-body=true, tag=婚礼精选
 
 [MITM]
 hostname = love.leminet.cn

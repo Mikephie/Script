@@ -2,14 +2,8 @@
 📜 ✨ 婚贝请柬 ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local] // Quantumult X
+[rewrite_local]
 ^https:\/\/h5\.hunbei\.com\/m\/member\/getUserInfo\? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbqj.js
-
-[Script] // Surge
-婚贝请柬 = type=http-response, pattern=^https:\/\/h5\.hunbei\.com\/m\/member\/getUserInfo\?, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbqj.js, timeout=60
-
-[Script] // Loon
-http-response ^https:\/\/h5\.hunbei\.com\/m\/member\/getUserInfo\? script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbqj.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = h5.hunbei.com
