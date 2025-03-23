@@ -3,7 +3,8 @@
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 #!desc=模块
 #!category=🚫广告
-#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/axs.png
 
 [rewrite_local]
 ^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/WebView\/MarketPlace reject
