@@ -1,0 +1,36 @@
+{
+  "user_agent": "QRGenie",
+  "bundle_id": "app.qrgenie.QRGenie",
+  "data": {
+    "qr_0299_1w_3d0": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_0299_1w_3d0"
+    },
+    "qr_lifetime_0499": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_lifetime_0499"
+    },
+    "qr_lifetime_0999": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_lifetime_0999"
+    },
+    "qr_lifetime_1999": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_lifetime_1999"
+    },
+    "qr_lifetime_free": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qr_lifetime_free"
+    }
+  }
+}
