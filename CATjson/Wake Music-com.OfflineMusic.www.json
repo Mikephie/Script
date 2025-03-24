@@ -1,0 +1,42 @@
+{
+  "user_agent": "Wake%20Music",
+  "bundle_id": "com.OfflineMusic.www",
+  "data": {
+    "com.OfflineMusic.www.12": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.OfflineMusic.www.12"
+    },
+    "com.OfflineMusic.www.18": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.OfflineMusic.www.18"
+    },
+    "com.OfflineMusic.www.6": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.OfflineMusic.www.6"
+    },
+    "com.OfflineMusic.www.Annual": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.OfflineMusic.www.Annual"
+    },
+    "com.OfflineMusic.www.lifetime198": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.OfflineMusic.www.lifetime198"
+    },
+    "com.OfflineMusic.www.lifetime298": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.OfflineMusic.www.lifetime298"
+    }
+  }
+}
