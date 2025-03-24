@@ -2,14 +2,8 @@
 📜 ✨ 菜谱大全/烘焙小屋/香哈菜谱 ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local] // Quantumult X
+[rewrite_local]
 ^https:\/\/api.*\.xiangha\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caipu.js
-
-[Script] // Surge
-菜谱大全 = type=http-response, pattern=^https:\/\/api.*\.xiangha\.com, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caipu.js, timeout=60
-
-[Script] // Loon
-http-response ^https:\/\/api.*\.xiangha\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caipu.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = *.xiangha.com

@@ -2,14 +2,8 @@
 📜 ✨ 海报制作大师 ✨
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-[rewrite_local] // Quantumult X
+[rewrite_local]
 ^https?:\/\/poster\.leminet\.cn\/v01\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbzzds.js
-
-[Script] // Surge
-海报制作大师 = type=http-response, pattern=^https?:\/\/poster\.leminet\.cn\/v01\/profile, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbzzds.js, timeout=60
-
-[Script] // Loon
-http-response ^https?:\/\/poster\.leminet\.cn\/v01\/profile script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbzzds.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = poster.leminet.cn

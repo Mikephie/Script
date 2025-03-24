@@ -4,14 +4,8 @@
 
 需登录
 
-[rewrite_local] // Quantumult X
+[rewrite_local]
 ^https:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/duetdisplaypro.js
-
-[Script] // Surge
-DuetDisplayPro = type=http-response, pattern=^https:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/duetdisplaypro.js, timeout=60
-
-[Script] // Loon
-http-response ^https:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/duetdisplaypro.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = rdp.duetdisplay.com
