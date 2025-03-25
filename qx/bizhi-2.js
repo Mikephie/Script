@@ -20,8 +20,13 @@ const user = /classes\/wpf_account/;
 
 if (user.test(url)) {
     body.results = [{
+        "svipEndTimeFormat": "2088-08-08",
+        "sex": "1",
+        "isSVIP": 1,
+        "loginType": 1,
         "nickName": "MIKEPHIE",
         "headImageUrl": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
+        "svipEndTime": 3742762088,
         "coin": 88888888
     }];
 }
