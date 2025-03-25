@@ -20,7 +20,6 @@ const user = /classes\/wpf_account/;
 
 if (user.test(url)) {
     body.results = [{
-        "vipEndTime": 3742762088,
         "svipEndTimeFormat": "2088-08-08",
         "sex": "1",
         "isSVIP": 1,
