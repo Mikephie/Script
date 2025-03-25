@@ -24,7 +24,6 @@ if (user.test(url)) {
         "svipEndTimeFormat": "2088-08-08",
         "sex": "1",
         "isSVIP": 1,
-        "isVIP": 1,
         "loginType": 1,
         "nickName": "MIKEPHIE",
         "headImageUrl": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
