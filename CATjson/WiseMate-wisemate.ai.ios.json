@@ -1,0 +1,42 @@
+{
+  "user_agent": "WiseMate",
+  "bundle_id": "wisemate.ai.ios",
+  "data": {
+    "wiseart.ai.ios.week.nofree": {
+      "entitlements": [
+        "vip_no_free_entitlement"
+      ],
+      "product_identifier": "wiseart.ai.ios.week.nofree"
+    },
+    "wiseart.ai.ios.year.nofree": {
+      "entitlements": [
+        "vip_no_free_entitlement"
+      ],
+      "product_identifier": "wiseart.ai.ios.year.nofree"
+    },
+    "wiseart.ai.ios.year.nofree.half": {
+      "entitlements": [
+        "vip_no_free_entitlement"
+      ],
+      "product_identifier": "wiseart.ai.ios.year.nofree.half"
+    },
+    "wisemate.ai.ios.3month": {
+      "entitlements": [
+        "vip_entitlement"
+      ],
+      "product_identifier": "wisemate.ai.ios.3month"
+    },
+    "wisemate.ai.ios.month": {
+      "entitlements": [
+        "vip_entitlement"
+      ],
+      "product_identifier": "wisemate.ai.ios.month"
+    },
+    "wisemate.ai.ios.week": {
+      "entitlements": [
+        "vip_entitlement"
+      ],
+      "product_identifier": "wisemate.ai.ios.week"
+    }
+  }
+}
