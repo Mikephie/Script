@@ -1,0 +1,100 @@
+{
+  "user_agent": "Impresso",
+  "bundle_id": "com.avcr.impresso",
+  "data": {
+    "com.avcr.impresso.AutoRenewProSubscription.monthly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.monthly"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.monthly.a": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.monthly.a"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.monthly.c": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.monthly.c"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.monthly.d": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.monthly.d"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.monthly.high": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.monthly.high"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.weekly.c": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.weekly.c"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.yearly": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.yearly"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.yearly.c": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.yearly.c"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.yearly.d": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.yearly.d"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.yearly.discounted": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.yearly.discounted"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.yearly.discounted.b": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.yearly.discounted.b"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.yearly.e": {
+      "entitlements": [],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.yearly.e"
+    },
+    "com.avcr.impresso.AutoRenewProSubscription.yearly.high": {
+      "entitlements": [
+        "Pro"
+      ],
+      "product_identifier": "com.avcr.impresso.AutoRenewProSubscription.yearly.high"
+    },
+    "com.avcr.impresso.creditPack1": {
+      "entitlements": [
+        "Credits"
+      ],
+      "product_identifier": "com.avcr.impresso.creditPack1"
+    },
+    "com.avcr.impresso.creditPack2": {
+      "entitlements": [
+        "Credits"
+      ],
+      "product_identifier": "com.avcr.impresso.creditPack2"
+    },
+    "com.avcr.impresso.creditPack3": {
+      "entitlements": [
+        "Credits"
+      ],
+      "product_identifier": "com.avcr.impresso.creditPack3"
+    }
+  }
+}
