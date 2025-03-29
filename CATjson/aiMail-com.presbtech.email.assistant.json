@@ -1,0 +1,78 @@
+{
+  "user_agent": "aiMail",
+  "bundle_id": "com.presbtech.email.assistant",
+  "data": {
+    "com.4email.monthly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.monthly"
+    },
+    "com.4email.monthly.sale": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.monthly.sale"
+    },
+    "com.4email.monthly.trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.monthly.trial"
+    },
+    "com.4email.weekly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.weekly"
+    },
+    "com.4email.weekly.sale": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.weekly.sale"
+    },
+    "com.4email.weekly.trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.weekly.trial"
+    },
+    "com.4email.weekly.trial.gift": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.weekly.trial.gift"
+    },
+    "com.4email.yearly": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.yearly"
+    },
+    "com.4email.yearly.bigsale": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.yearly.bigsale"
+    },
+    "com.4email.yearly.flashsale": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.yearly.flashsale"
+    },
+    "com.4email.yearly.trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.yearly.trial"
+    },
+    "com.4email.yearly.trial.gift": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "com.4email.yearly.trial.gift"
+    }
+  }
+}
