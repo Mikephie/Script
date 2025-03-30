@@ -1,0 +1,52 @@
+{
+  "user_agent": "PXCEditor",
+  "bundle_id": "com.seawardhyacinth.pokecut",
+  "data": {
+    "com.seawardhyacinth.pokecut.lifetimepro": {
+      "entitlements": [],
+      "product_identifier": "com.seawardhyacinth.pokecut.lifetimepro"
+    },
+    "com.seawardhyacinth.pokecut.lifetimevip": {
+      "entitlements": [],
+      "product_identifier": "com.seawardhyacinth.pokecut.lifetimevip"
+    },
+    "com.seawardhyacinth.pokecut.monthly": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.seawardhyacinth.pokecut.monthly"
+    },
+    "com.seawardhyacinth.pokecut.monthly20210922": {
+      "entitlements": [],
+      "product_identifier": "com.seawardhyacinth.pokecut.monthly20210922"
+    },
+    "com.seawardhyacinth.pokecut.weekly": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.seawardhyacinth.pokecut.weekly"
+    },
+    "com.seawardhyacinth.pokecut.yearly": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.seawardhyacinth.pokecut.yearly"
+    },
+    "com.seawardhyacinth.pokecut.yearly20210922": {
+      "entitlements": [],
+      "product_identifier": "com.seawardhyacinth.pokecut.yearly20210922"
+    },
+    "com.seawardhyacinth.pokecut.yearlysubscription": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.seawardhyacinth.pokecut.yearlysubscription"
+    },
+    "com.seawardhyacinth.pokecut.yearlyvipsales": {
+      "entitlements": [
+        "VIP"
+      ],
+      "product_identifier": "com.seawardhyacinth.pokecut.yearlyvipsales"
+    }
+  }
+}
