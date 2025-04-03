@@ -1,0 +1,44 @@
+{
+  "user_agent": "WAPlanner",
+  "bundle_id": null,
+  "data": {
+    "WAPlannerLifetime": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "WAPlannerLifetime"
+    },
+    "WAPlannerMonthly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "WAPlannerMonthly"
+    },
+    "WAPlannerMonthlyTrial": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "WAPlannerMonthlyTrial"
+    },
+    "WAPlannerYearly": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "WAPlannerYearly"
+    },
+    "WAPlannerYearly2": {
+      "entitlements": [],
+      "product_identifier": "WAPlannerYearly2"
+    },
+    "WAPlannerYearlyTrial": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "WAPlannerYearlyTrial"
+    },
+    "WAPlannerYearlyTrial2": {
+      "entitlements": [],
+      "product_identifier": "WAPlannerYearlyTrial2"
+    }
+  }
+}
