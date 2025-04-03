@@ -1,0 +1,28 @@
+{
+  "user_agent": "Quick%20Whats",
+  "bundle_id": "com.mahmutkara.Quick-Whats",
+  "data": {
+    "lifetime_9999_qw": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "lifetime_9999_qw"
+    },
+    "pro_1144_monthly": {
+      "entitlements": [],
+      "product_identifier": "pro_1144_monthly"
+    },
+    "qw_999__1y": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qw_999__1y"
+    },
+    "qw_99_1m": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "qw_99_1m"
+    }
+  }
+}
