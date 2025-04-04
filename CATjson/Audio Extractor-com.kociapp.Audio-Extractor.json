@@ -1,0 +1,30 @@
+{
+  "user_agent": "Audio%20Extractor",
+  "bundle_id": "com.kociapp.Audio-Extractor",
+  "data": {
+    "audio_extractor_1w": {
+      "entitlements": [
+        "proversion"
+      ],
+      "product_identifier": "audio_extractor_1w"
+    },
+    "audio_extractor_1y": {
+      "entitlements": [
+        "proversion"
+      ],
+      "product_identifier": "audio_extractor_1y"
+    },
+    "audio_extractor_offer": {
+      "entitlements": [
+        "proversion"
+      ],
+      "product_identifier": "audio_extractor_offer"
+    },
+    "audio_extractor_pro": {
+      "entitlements": [
+        "proversion"
+      ],
+      "product_identifier": "audio_extractor_pro"
+    }
+  }
+}
