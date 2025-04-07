@@ -36,24 +36,24 @@ host, gather.colorfulclouds.net ,reject
 ^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/40day\/conditions\/local$ url reject-dict
 
 # 赏叶赏花模块
-^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyun.js
 # 解锁旧版vip(7.20.0之前)
-^https:\/\/biz\.cyapi\.cn\/v2\/user url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+^https:\/\/biz\.cyapi\.cn\/v2\/user url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyun.js
 # 卫星云图 48小时预报
-^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyun.js
 # 7.20.0版本显示VIP
-^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$ url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyun.js
 # 7.22.0版本 40天趋势/60天潮汐/风 等等有时候无法加载
-^https:\/\/starplucker\.cyapi\.cn\/v3\/ url script-request-header https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/ url script-request-header https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyun.js
 
 # 发现-轮播
-^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/banners\?user_type=paid$ url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/banners\?user_type=paid$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyun.js
 # 发现-宫格
-^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/features\?user_type=paid$ url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/features\?user_type=paid$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyun.js
 # 发现-官方活动
-^https:\/\/starplucker\.cyapi\.cn\/v3\/campaigns$ url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/campaigns$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyun.js
 # 发现-瀑布流
-^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/feeds url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/feeds url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyun.js
 
 [mitm]
 hostname = *.cyapi.cn
