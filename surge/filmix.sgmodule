@@ -2,7 +2,6 @@
 #!desc = 媒体制作 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/filmix.png
 
 [Script]
 Filmix = type=http-response,pattern=https:\/\/appv3\.filmix\.com\.cn\/api\/v1\/user\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/filmix.js

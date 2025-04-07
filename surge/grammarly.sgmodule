@@ -2,12 +2,9 @@
 #!desc = 工作效率 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/grammarly.png
-
 
 [Script]
 grammarlypremiumcrack = type=http-response, pattern=^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js, requires-body=true, max-size=-1, timeout=60
-
 
 [MITM]
 hostname = %APPEND% subscription.grammarly.com

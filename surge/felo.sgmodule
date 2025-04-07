@@ -2,12 +2,10 @@
 #!desc = 工作效率 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/grammarly.png
 
 [Script]
 felosubs = type=http-response, pattern=^https?:\/\/(translator|accounts).felo.me\/api\/user.*$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felosubs.js, requires-body=true, max-size=-1, timeout=60
 felotk = type=http-request, pattern=^https?:\/\/translator.felo.me\/api\/translation\/thirdToken\?token_channel, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/felotk.js, requires-body=true, timeout=60
-
 
 [MITM]
 hostname = %APPEND% accounts.felo.me,translator.felo.me

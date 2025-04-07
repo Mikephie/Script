@@ -2,11 +2,9 @@
 #!desc = 图像制作 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/facelab.png
 
 [Script]
 aimirror = type=http-response, pattern=^https:\/\/be\.aimirror\.fun\/(query_is_vip|draw|users\/video_render_count|query_consumable_quota|users\/discount), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aimirror.js, requires-body=true, max-size=-1, timeout=60
-
 
 [MITM]
 hostname = %APPEND% be.aimirror.fun

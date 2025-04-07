@@ -2,8 +2,6 @@
 #!desc = Adapty - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/itunes.png
-#appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
 [Script]
 adapty = type=http-response, pattern=^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adapty.js, requires-body=true, max-size=-1, timeout=60

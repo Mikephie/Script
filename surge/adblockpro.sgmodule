@@ -2,12 +2,9 @@
 #!desc = 网页游览 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/adblock.png
-#appCategory = select,"✅签到","🚫广告","🔐APP","🛠️工具"
 
 [Script]
 Adblock Pro = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adblockpro.js, requires-body=true, max-size=-1, timeout=60
-
 
 [MITM]
 hostname = %APPEND% api.adblockpro.app

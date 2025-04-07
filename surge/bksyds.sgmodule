@@ -2,12 +2,10 @@
 #!desc = 图像制作 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/facelab.png
 
 [Script]
 ds1 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/app\/browseEvent, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds1.js, requires-body=true, max-size=-1, timeout=60
 ds2 = type=http-response, pattern=^https?:\/\/photoby\.hasmash\.com\/auth\/member, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ds2.js, requires-body=true, max-size=-1, timeout=60
-
 
 [MITM]
 hostname = %APPEND% photoby.hasmash.com

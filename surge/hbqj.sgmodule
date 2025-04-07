@@ -6,6 +6,5 @@
 [Script]
 hbqj = type=http-response, pattern=^https:\/\/h5\.hunbei\.com\/m\/member\/getUserInfo\?, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbqj.js, requires-body=true, max-size=-1, timeout=60
 
-
 [MITM]
 hostname = %APPEND% h5.hunbei.com

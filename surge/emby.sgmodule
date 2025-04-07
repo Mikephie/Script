@@ -6,6 +6,5 @@
 [Script]
 embycrack = type=http-request, pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embycrack.js, timeout=60
 
-
 [MITM]
 hostname = %APPEND% mb3admin.com

@@ -2,12 +2,9 @@
 #!desc = 图像制作 - 模块
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/bizhi.png
-
 
 [Script]
 壁纸 = type=http-response,pattern=https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_[a-z]+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
-
 
 [MITM]
 hostname = %APPEND% leancloud.emotionwp.com
