@@ -1,0 +1,42 @@
+{
+  "user_agent": "Whisperr",
+  "bundle_id": "com.takutosuzuki.whisper",
+  "data": {
+    "lifetime.free.promotion.v1.20250124": {
+      "entitlements": [],
+      "product_identifier": "lifetime.free.promotion.v1.20250124"
+    },
+    "recurring.monthly.20240728": {
+      "entitlements": [],
+      "product_identifier": "recurring.monthly.20240728"
+    },
+    "recurring.monthly.v1.20240728": {
+      "entitlements": [],
+      "product_identifier": "recurring.monthly.v1.20240728"
+    },
+    "recurring.weekly.notrial.v1.20250321": {
+      "entitlements": [],
+      "product_identifier": "recurring.weekly.notrial.v1.20250321"
+    },
+    "recurring.weekly.v1.20250321": {
+      "entitlements": [],
+      "product_identifier": "recurring.weekly.v1.20250321"
+    },
+    "recurring.yearly.cheaper.v1.20250220": {
+      "entitlements": [],
+      "product_identifier": "recurring.yearly.cheaper.v1.20250220"
+    },
+    "recurring.yearly.notrial.cheaper.v1.20250227": {
+      "entitlements": [],
+      "product_identifier": "recurring.yearly.notrial.cheaper.v1.20250227"
+    },
+    "recurring.yearly.notrial.v1.20250227": {
+      "entitlements": [],
+      "product_identifier": "recurring.yearly.notrial.v1.20250227"
+    },
+    "recurring.yearly.v1.20240728": {
+      "entitlements": [],
+      "product_identifier": "recurring.yearly.v1.20240728"
+    }
+  }
+}
