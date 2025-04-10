@@ -1,0 +1,36 @@
+{
+  "user_agent": "DHWaterMarkManager",
+  "bundle_id": null,
+  "data": {
+    "HalfYear_001": {
+      "entitlements": [
+        "WaterManager_common"
+      ],
+      "product_identifier": "HalfYear_001"
+    },
+    "MonthVip_001": {
+      "entitlements": [
+        "WaterManager_common"
+      ],
+      "product_identifier": "MonthVip_001"
+    },
+    "WeeklyVip_001": {
+      "entitlements": [
+        "WaterManager_common"
+      ],
+      "product_identifier": "WeeklyVip_001"
+    },
+    "YearVip_001": {
+      "entitlements": [
+        "WaterManager_common"
+      ],
+      "product_identifier": "YearVip_001"
+    },
+    "lifetimeVIP_001": {
+      "entitlements": [
+        "WaterManager_common"
+      ],
+      "product_identifier": "lifetimeVIP_001"
+    }
+  }
+}
