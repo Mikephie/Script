@@ -1,8 +1,7 @@
-#!name = 彩云天气
-#!desc = 天气预测报告
-#!category = 🔐APP
-#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon = https://raw.githubusercontent.com/Mikephie/icons/main/icon/caiyun.png
+#!name=✨ 彩云天气 ✨
+#!desc=天气预测
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/caiyun.png
 
 [Rule]
 # 上传信息
@@ -10,21 +9,21 @@ DOMAIN, gather.colorfulclouds.net ,reject
 
 [Rewrite]
 # 普通版开屏广告(此广告不定时出现)
-^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather - reject-dict
+^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather - reject
 # 7.1.9 限时福利Svip
-^https:\/\/biz\.cyapi\.cn\/p\/v1\/trial_card\/info - reject-dict
+^https:\/\/biz\.cyapi\.cn\/p\/v1\/trial_card\/info - reject
 # 7.2.0普通版修改VIP后提示账号迁移
-^https:\/\/biz\.cyapi\.cn\/api\/v1\/token\/device$ - reject-dict
+^https:\/\/biz\.cyapi\.cn\/api\/v1\/token\/device$ - reject
 # 亲友卡
-^https:\/\/biz\.cyapi\.cn\/p\/v1\/entries - reject-dict
+^https:\/\/biz\.cyapi\.cn\/p\/v1\/entries - reject
 # 左上角+进去推荐
-^https:\/\/starplucker\.cyapi\.cn\/v3\/config$ - reject-dict
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config$ - reject
 # 通知
-^https:\/\/starplucker\.cyapi\.cn\/v3\/notification\/message_center - reject-dict
+^https:\/\/starplucker\.cyapi\.cn\/v3\/notification\/message_center - reject
 # 会员限时弹窗
-^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/home\/conditions\/local$ - reject-dict
-^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/home_activity\/conditions$ - reject-dict
-^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/40day\/conditions\/local$ - reject-dict
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/home\/conditions\/local$ - reject
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/home_activity\/conditions$ - reject
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/40day\/conditions\/local$ - reject
 
 [Script]
 # 赏叶赏花模块
