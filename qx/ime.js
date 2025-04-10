@@ -1,11 +1,10 @@
 /*
-📜 ✨ iMe ✨
-𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-#!desc=iMe
+#!name= ✨ iMe ✨
+#!desc=社交平台
 #!category=🔐APP
 #!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/ime.png
-
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 [rewrite_local]
 https:\/\/api\.imem\.app\/api\/premium\/getOwnStatus url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/ime.js
 
