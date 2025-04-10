@@ -1,13 +1,11 @@
 /*
-
-📜 Notebook 解锁 VIP 脚本
-📅 更新时间：2024年03月08日
-🔓 功能：解锁永久 VIP
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+#!name= ✨ Notebook ✨
+#!desc=效率
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/notebook.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
-[Script]
+[rewrite_local] 
 # VIP 订阅 & 多项权益
 ^https:\/\/notebook\.zoho\.com\/api\/v1\/userprofile\/accounts\/payment\?action=(get_current_plan_detail|get_feature_template)(&include_expired_plans=true|&include_purchase_platform=false|&platform=ios)? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/notebook.js
 
@@ -16,7 +14,18 @@ hostname = notebook.zoho.com
 
 */
 
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "Notebook_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨Notebook✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
 
+// 主脚本函数...
 var url = $request.url;
 
 if (url.indexOf('get_current_plan_detail') !== -1) {
@@ -106,3 +115,4 @@ if (url.indexOf('get_current_plan_detail') !== -1) {
 } else {
     $done({});
 }
+// 主脚本函数...

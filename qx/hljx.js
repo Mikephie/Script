@@ -1,7 +1,10 @@
 /*
-📜 ✨ 婚禮精選 ✨
+#!name= ✨ 婚礼精选 ✨
+#!desc=图像编辑
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/hljx.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local]
 ^https:\/\/love\.leminet\.cn\/golove\/v05\/profile url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hljx.js
 
@@ -10,7 +13,18 @@ hostname = love.leminet.cn
 
 */
 
-// 主腳本函數...
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "婚礼精选_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨婚礼精选✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
+
+// 主脚本函数...
 try {
     var body = JSON.parse($response.body);
 
@@ -33,35 +47,8 @@ try {
       }
     };
 
-    /********** 應用配置信息 **********/
-    const appName = "✨婚禮精選✨";
-    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-    const message = "永久解鎖或 ⓿❽-⓿❽-❷⓿❽❽";
-    
-    const cooldownMinutes = 10;
-    const cooldownMs = cooldownMinutes * 60 * 1000;
-    const notifyKey = "wedding_select_notify_key_v1";
-    const now = Date.now();
-    let lastNotifyTime = 0;
-    try {
-        const storedTime = $persistentStore.read(notifyKey);
-        if (storedTime) {
-            lastNotifyTime = parseInt(storedTime);
-            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
-        }
-    } catch (e) {
-        lastNotifyTime = 0;
-    }
-    if (now - lastNotifyTime > cooldownMs) {
-        if (typeof $notification !== 'undefined') {
-            $notification.post(appName, author, message);
-        } else if (typeof $notify !== 'undefined') {
-            $notify(appName, author, message);
-        }
-        $persistentStore.write(now.toString(), notifyKey);
-    }
-
     $done({ body: JSON.stringify(body) });
 } catch (e) {
     $done({ body: $response.body });
 }
+// 主脚本函数...

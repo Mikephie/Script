@@ -1,7 +1,10 @@
 /*
-📜 ✨ iGV ✨
+#!name= ✨ iGV ✨
+#!desc=电影院购票
+#!category=🚫广告
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/igv.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local]
 # Ad Image Blocking - Intercept and reject ad images
 ^https:\/\/media\.gv\.com\.sg\/cms\/images\/ads\/.*\.(jpg|png|gif) url reject-img
@@ -17,6 +20,18 @@ hostname = m.gv.com.sg, media.gv.com.sg
 
 */
 
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "iGV_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨iGV✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
+
+// 主脚本函数...
 let body = $response.body;
 
 const autoActions = `
@@ -96,3 +111,4 @@ if (body.includes('</body>')) {
 }
 
 $done({ body });
+// 主脚本函数...

@@ -1,7 +1,10 @@
 /*
-📜 ✨ Grammarly ✨
+#!name= ✨ Grammarly ✨
+#!desc=效率
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/grammarly.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local]
 ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/grammarlypremiumcrack.js
 
@@ -9,6 +12,17 @@
 hostname = subscription.grammarly.com
 
 */
+
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "Grammarly_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨Grammarly✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
 
 // 主脚本函数...
 var body = $response.body;
@@ -113,17 +127,6 @@ body = {
     "lastSubscribedDate": "Oct 20, 2021 4:56:55 AM",
     "state": "DEFAULT"
 };
-// 主脚本函数...
-
-/********** 应用配置信息 **********/
-const cooldownMs = 10 * 60 * 1000;
-const notifyKey = "Grammarly_notify_key";
-const now = Date.now();
-let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
-
-if (now - lastNotifyTime > cooldownMs) {
-    $notification.post("✨Grammarly✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
-    $persistentStore.write(now.toString(), notifyKey);
-}
 
 $done({ body: JSON.stringify(body) });
+// 主脚本函数...

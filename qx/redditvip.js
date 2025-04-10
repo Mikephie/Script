@@ -1,27 +1,31 @@
 /*
-📜 ✨ RedditVIP ✨
+#!name= ✨ RedditVIP ✨
+#!desc=效率
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/reddit.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local] // Quantumult X
 ^https:\/\/gql-fed\.reddit\.com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js
-
-[Script] // Surge
-RedditVIP = type=http-response, pattern=^https:\/\/gql-fed\.reddit\.com\/, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, timeout=60
-
-[Script] // Loon
-http-response ^https:\/\/gql-fed\.reddit\.com\/ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = gql-fed.reddit.com
 
 */
 
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "RedditVIP_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨RedditVIP✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
+
+// 主脚本函数...
 try {
-    // 设置应用配置信息
-    const appName = "✨RedditVIP✨";
-    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-    
     // 解析和修改响应体
     let body;
     try {
@@ -58,33 +62,8 @@ try {
         body = JSON.parse($response.body);
     }
 
-    // 通知功能
-    const cooldownMinutes = 10;
-    const cooldownMs = cooldownMinutes * 60 * 1000;
-    const notifyKey = "reddit_vip_notify_key_v1";
-    const now = Date.now();
-    let lastNotifyTime = 0;
-    
-    try {
-        const storedTime = $persistentStore.read(notifyKey);
-        if (storedTime) {
-            lastNotifyTime = parseInt(storedTime);
-            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
-        }
-    } catch (e) {
-        lastNotifyTime = 0;
-    }
-    
-    if (now - lastNotifyTime > cooldownMs) {
-        if (typeof $notification !== 'undefined') {
-            $notification.post(appName, author, message);
-        } else if (typeof $notify !== 'undefined') {
-            $notify(appName, author, message);
-        }
-        $persistentStore.write(now.toString(), notifyKey);
-    }
-
     $done({ body: JSON.stringify(body) });
 } catch (e) {
     $done({ body: $response.body });
 }
+// 主脚本函数...

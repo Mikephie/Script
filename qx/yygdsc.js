@@ -1,12 +1,10 @@
 /*
-
-📜 雅俗共赏/高定素材大师 解锁 VIP 脚本
-📅 更新时间：2024年12月06日
-🔓 功能：解锁永久 VIP
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+#!name= ✨ 雅俗共赏/高定素材大师 ✨
+#!desc=影像编辑
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/scds.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local]
 # >雅俗共赏/高定素材大师（永久会员）需要登录！
 ^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/getUserInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/yygdsc.js
@@ -16,10 +14,21 @@ hostname = apps-api.lianaishouce.cn, apps-api.lingege.cn
 
 */
 
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "雅俗共赏/高定素材大师_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨雅俗共赏/高定素材大师✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
 
-var mikephie = JSON.parse($response.body);
+// 主脚本函数...
+var obj = JSON.parse($response.body);
 
-    mikephie = {
+    obj = {
   "msg" : "操作成功",
   "data" : {
     "memberExpireTimeStr" : "2088-08-08 08:08:08",
@@ -44,4 +53,5 @@ var mikephie = JSON.parse($response.body);
   "code" : 0
 }
 
-$done({body : JSON.stringify(mikephie)});
+$done({body : JSON.stringify(obj)});
+// 主脚本函数...

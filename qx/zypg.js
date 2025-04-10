@@ -1,15 +1,12 @@
 /*
-📜 ✨ 作业批改|试卷扫描|错题打印机 ✨
+#!name= ✨ 作业批改|试卷扫描|错题打印机 ✨
+#!desc=效率
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/zypg.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local] // Quantumult X
 ^https?:\/\/appss\.(rhinoxky|baomingding|rhinoxlab)\.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js
-
-[Script] // Surge
-作业批改扫描打印机 = type=http-response, pattern=^https?:\/\/appss\.(rhinoxky|baomingding|rhinoxlab)\.com\/app\/account\/getAccountInfo, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, timeout=60
-
-[Script] // Loon
-http-response ^https?:\/\/appss\.(rhinoxky|baomingding|rhinoxlab)\.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/zypg.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = appss.rhinoxlab.com, appss.baomingding.com

@@ -1,20 +1,28 @@
 /*
-📜 ✨ iTranscreen ✨
+#!name= ✨ iTranscreen ✨
+#!desc=效率
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/itranscreen.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local] // Quantumult X
 ^https?:\/\/.+.(itranscreen|tencentcs).+\/(settings|api\/v1\/user\/quota\?user_id).*$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/itranscreen.js
-
-[Script] // Surge
-iTranscreen = type=http-response, pattern=^https?:\/\/.+.(itranscreen|tencentcs).+\/(settings|api\/v1\/user\/quota\?user_id).*$, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/itranscreen.js, timeout=60
-
-[Script] // Loon
-http-response ^https?:\/\/.+.(itranscreen|tencentcs).+\/(settings|api\/v1\/user\/quota\?user_id).*$ script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/itranscreen.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = .+.(itranscreen|tencentcs).+
 
 */
+
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "iTranscreen_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨iTranscreen✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
 
 // 主脚本函数...
 try {
@@ -48,39 +56,9 @@ try {
   } catch (error) {
     // JSON 解析错误，静默处理
   }
-// 主脚本函数...
-
-  /********** 应用配置信息 **********/
-  const appName = "✨iTranscreen✨";
-  const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-  const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-  
-  const cooldownMinutes = 10;
-  const cooldownMs = cooldownMinutes * 60 * 1000;
-  const notifyKey = "itranscreen_notify_key_v1";
-  const now = Date.now();
-  let lastNotifyTime = 0;
-  
-  try {
-    const storedTime = $persistentStore.read(notifyKey);
-    if (storedTime) {
-      lastNotifyTime = parseInt(storedTime);
-      if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
-    }
-  } catch (e) {
-    lastNotifyTime = 0;
-  }
-  
-  if (now - lastNotifyTime > cooldownMs) {
-    if (typeof $notification !== 'undefined') {
-      $notification.post(appName, author, message);
-    } else if (typeof $notify !== 'undefined') {
-      $notify(appName, author, message);
-    }
-    $persistentStore.write(now.toString(), notifyKey);
-  }
 
   $done({ body });
 } catch (e) {
   $done({ body: $response.body });
 }
+// 主脚本函数...

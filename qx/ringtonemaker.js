@@ -1,12 +1,10 @@
 /*
-
-📜 ringtonemaker 解锁 VIP 脚本
-📅 更新时间：2024年06月15日
-🔓 功能：解锁永久 VIP
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+#!name= ✨ Ringtonemaker ✨
+#!desc=娱乐
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/ringtonemaker.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local]
 ^http:\/\/clip\.tto321\.cn\/v1\/api\/query\/userInfo url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/ringtonemaker.js
 
@@ -15,10 +13,21 @@ hostname = clip.tto321.cn
 
 */
 
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "Ringtonemaker_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨Ringtonemaker✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
 
-var mikephie = JSON.parse($response.body);
+// 主脚本函数...
+var obj = JSON.parse($response.body);
 
-    mikephie = {
+    obj = {
   "msg" : "OK",
   "data" : {
     "uid" : 88888888,
@@ -34,6 +43,6 @@ var mikephie = JSON.parse($response.body);
   },
   "code" : 200
 }
-  
 
-$done({body : JSON.stringify(mikephie)});
+$done({body : JSON.stringify(obj)});
+// 主脚本函数...

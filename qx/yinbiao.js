@@ -1,21 +1,30 @@
 /*
-📜 ✨ 英语音标 ✨
+#!name= ✨ 英语音标 ✨
+#!desc=图像壁纸
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/yinbiao.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local] // Quantumult X
 ^https:\/\/flipped\.binfenyingyu\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/yinbiao.js
-
-[Script] // Surge
-英语音标 = type=http-response, pattern=^https:\/\/flipped\.binfenyingyu\.com, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yinbiao.js, timeout=60
-
-[Script] // Loon
-http-response ^https:\/\/flipped\.binfenyingyu\.com script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/yinbiao.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = flipped.binfenyingyu.com
 
 */
 
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "英语音标_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨英语音标✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
+
+// 主脚本函数...
 try {
     let body = JSON.parse($response.body);
 
@@ -236,35 +245,8 @@ try {
         }
     }
 
-    /********** 应用配置信息 **********/
-    const appName = "✨英语音标✨";
-    const author = "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ";
-    const message = "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽";
-    
-    const cooldownMinutes = 10;
-    const cooldownMs = cooldownMinutes * 60 * 1000;
-    const notifyKey = "english_phonetic_notify_key_v1";
-    const now = Date.now();
-    let lastNotifyTime = 0;
-    try {
-        const storedTime = $persistentStore.read(notifyKey);
-        if (storedTime) {
-            lastNotifyTime = parseInt(storedTime);
-            if (isNaN(lastNotifyTime)) lastNotifyTime = 0;
-        }
-    } catch (e) {
-        lastNotifyTime = 0;
-    }
-    if (now - lastNotifyTime > cooldownMs) {
-        if (typeof $notification !== 'undefined') {
-            $notification.post(appName, author, message);
-        } else if (typeof $notify !== 'undefined') {
-            $notify(appName, author, message);
-        }
-        $persistentStore.write(now.toString(), notifyKey);
-    }
-
     $done({ body: JSON.stringify(body) });
 } catch (e) {
     $done({ body: $response.body });
 }
+// 主脚本函数...

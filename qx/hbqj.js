@@ -1,7 +1,10 @@
 /*
-📜 ✨ 婚贝请柬 ✨
+#!name= ✨ 婚贝请柬 ✨
+#!desc=图像编辑
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/hbqj.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local]
 ^https:\/\/h5\.hunbei\.com\/m\/member\/getUserInfo\? url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/hbqj.js
 
@@ -9,6 +12,17 @@
 hostname = h5.hunbei.com
 
 */
+
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "婚贝请柬_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨婚贝请柬✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
 
 // 主脚本函数...
 let body = $response.body;
@@ -31,16 +45,6 @@ data.data = {
     "wx_name": "MIKEPHIE",
     "headimg": "https://i.ibb.co/wM5z10N/IMG-1287.jpg"
 };
-// 主脚本函数...
-
-/********** 应用配置信息 **********/
-const cooldownMs = 10 * 60 * 1000;
-const notifyKey = "婚贝请柬_notify_key";
-const now = Date.now();
-let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
-if (now - lastNotifyTime > cooldownMs) {
-    $notification.post("✨婚贝请柬✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
-    $persistentStore.write(now.toString(), notifyKey);
-}
 
 $done({ body: JSON.stringify(data) });
+// 主脚本函数...

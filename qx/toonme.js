@@ -1,12 +1,10 @@
 /*
-
-📜 ToonMe 解锁 VIP 脚本
-📅 更新时间：2024年12月06日
-🔓 功能：解锁永久 VIP
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+#!name= ✨ ToonMe ✨
+#!desc=图像编辑
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/toonme.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local]
 ^https?:\/\/purchases\.ws\.pho\.to\/api\/v2\/apple\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/toonme.js
 
@@ -15,8 +13,19 @@ hostname = purchases.ws.pho.to
 
 */
 
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "ToonMe_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨ToonMe✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
 
-var guding = {
+// 主脚本函数...
+var obj = {
   "environment": "Production",
   "receipt": {
     "receipt_type": "Production",
@@ -69,4 +78,5 @@ var guding = {
     }
   ]
 };
-$done({ body: JSON.stringify(guding) });
+$done({ body: JSON.stringify(obj) });
+// 主脚本函数...
