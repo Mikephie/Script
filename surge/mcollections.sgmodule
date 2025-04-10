@@ -98,18 +98,6 @@ cdsp = type=http-response, pattern=^https?:\/\/appss.baomingding.com\/app\/accou
 caipu = type=http-response, pattern=^https:\/\/api.*\.xiangha\.com, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caipu.js, requires-body=true, max-size=-1, timeout=60
 
 #************************************#
-# 彩云天气
-# hostname = *.cyapi.cn
-# 广告净化/弹窗AD/去除亲友卡/去除悬浮模块
-caiyuntianqi = type=http-response, pattern=^https?:\/\/api.*\.xiangha\.com\/.+\/([Uu]ser\/(getUserData|info)|pay\/home|dish|home\/getUser|school), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
-
-# VIP信息
-caiyuntianqi = type=http-response, pattern=^https?:\/\/(biz|wrapper|starplucker)\.cyapi\.cn\/(v\d\/user\?app_name|.+\/v\d\/(vip_info|user_detail)), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
-
-# SVIP地图-48小时预报
-caiyuntianqi = type=http-request, pattern=^https?:\/\/(api|wrapper)\.cyapi\.cn\/v\d\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/caiyuntianqi.js, timeout=60
-
-#************************************#
 # classdojo （永久会员）
 # hostname = payments.classdojo.com
 classdojo = type=http-response, pattern=^https:\/\/payments\.classdojo\.com\/v1\/subscribers\/5dc2e328587d3dcf1bee91e0$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/classdojo.js, requires-body=true, max-size=-1, timeout=60
