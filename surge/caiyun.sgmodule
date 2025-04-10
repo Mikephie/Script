@@ -5,7 +5,7 @@
 
 [Rule]
 # 上传信息
-DOMAIN, gather.colorfulclouds.net ,reject
+DOMAIN,gather.colorfulclouds.net,REJECT
 
 [Map Local]
 # 普通版开屏广告(此广告不定时出现)
