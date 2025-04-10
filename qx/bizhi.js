@@ -1,7 +1,10 @@
 /*
-📜 ✨ Bizhi壁纸 ✨
+#!name= ✨ Bizhi壁纸 ✨
+#!desc=图像壁纸
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/bizhi.js
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local]
 ^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_[a-z]+ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
 
@@ -9,6 +12,17 @@
 hostname = leancloud.emotionwp.com
 
 */
+
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "Bizhi壁纸_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨Bizhi壁纸✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
 
 // 主脚本函数...
 let body = JSON.parse($response.body);
@@ -25,17 +39,6 @@ if (user.test(url)) {
         "coin": 88888888
     }];
 }
-// 主脚本函数...
-
-/********** 应用配置信息 **********/
-const cooldownMs = 10 * 60 * 1000;
-const notifyKey = "Bizhi壁纸_notify_key";
-const now = Date.now();
-let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
-
-if (now - lastNotifyTime > cooldownMs) {
-    $notification.post("✨Bizhi壁纸✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
-    $persistentStore.write(now.toString(), notifyKey);
-}
 
 $done({ body: JSON.stringify(body) });
+// 主脚本函数...

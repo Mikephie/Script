@@ -1,11 +1,10 @@
 /*
-📜 AXS Payment
-𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-#!desc=去弹窗+主页广告
+#!name= ✨ AXS Payment ✨
+#!desc=缴费账单
 #!category=🚫广告
 #!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/axs.png
-
+𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 [filter_local]
 url-regex,^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/WebView\/MarketPlace,reject
 url-regex,^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight,reject
@@ -17,6 +16,17 @@ url-regex,^https:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight,reject
 hostname = m-station2.axs.com.sg
 
 */
+
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "AXS_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨AXS✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
 
 // 主脚本函数...
 // 广告关闭专用脚本
@@ -80,3 +90,4 @@ if (url.includes("/InfoPage/") && url.includes("whatsnew.php")) {
 } else {
   $done({});
 }
+// 主脚本函数...

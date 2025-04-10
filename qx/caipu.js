@@ -1,7 +1,10 @@
 /*
-📜 ✨ 菜谱大全/烘焙小屋/香哈菜谱 ✨
+#!name= ✨ 菜谱大全/烘焙小屋/香哈菜谱 ✨
+#!desc=效率
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/caipu.js
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local]
 ^https:\/\/api.*\.xiangha\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/caipu.js
 

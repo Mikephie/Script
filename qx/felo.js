@@ -1,12 +1,10 @@
 /*
-
-📜 Felo 解锁 VIP 脚本
-📅 更新时间：2024年07月19日
-🔓 功能：解锁永久 VIP
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+#!name= ✨ Felo ✨
+#!desc=效率
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/felo.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
 [rewrite_local]
 ^https?:\/\/(translator|accounts).felo.me url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js
 ^https?:\/\/(translator|accounts).felo.me url script-request-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/felo.js
@@ -15,6 +13,17 @@
 hostname = accounts.felo.me,translator.felo.me
 
 */
+
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "Felo_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨Felo✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❾-⓿❾-❷⓿❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------
 
 // 主脚本函数...
 let url = $request.url;
@@ -56,21 +65,21 @@ if (url.includes("user")) {
             ]
         },
         "code": "OK"
-    };
-// 主脚本函数...
-
-/********** 应用配置信息 **********/
-    const cooldownMs = 10 * 60 * 1000;
-    const notifyKey = "Felo_notify_key";
-    const now = Date.now();
-    let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
-
-    if (now - lastNotifyTime > cooldownMs) {
-        $notification.post("✨Felo✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
-        $persistentStore.write(now.toString(), notifyKey);
-    }
+    }; 
 
     $done({ body: JSON.stringify(body) });
+    
+// -------- 通知（带冷却）逻辑开始 --------
+const cooldownMs = 10 * 60 * 1000;
+const notifyKey = "FeloToken_notify_key";
+const now = Date.now();
+let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨FeloToken✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❾-⓿❾-❷⓿❾❾");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+// -------- 通知（带冷却）逻辑结束 --------  
+    
 } else if (url.includes("thirdToken")) {
 // 修改请求头
     let headers = Object.fromEntries(
@@ -82,20 +91,9 @@ if (url.includes("user")) {
         deviceid: "902C611A-A12A-4D48-9DEF-562EF8155908",
         cookie: "_clsk=1e3ji69%7C1723606564421%7C1%7C1%7Cw.clarity.ms%2Fcollect; _ga_70F8QP140X=GS1.1.1723606552.4.1.1723606558.0.0.0; _ga=GA1.1.347029008.1723476322; _clck=8lm7fs%7C2%7Cfob%7C0%7C1685"
     });
-// 修改请求头
-
-/********** 应用配置信息 **********/
-    const cooldownMs = 10 * 60 * 1000;
-    const notifyKey = "ThirdToken_notify_key";
-    const now = Date.now();
-    let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
-
-    if (now - lastNotifyTime > cooldownMs) {
-        $notification.post("✨FeloToken Unlock✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
-        $persistentStore.write(now.toString(), notifyKey);
-    }
 
     $done({ headers });
 } else {
     $done({});
 }
+// 主脚本函数...
