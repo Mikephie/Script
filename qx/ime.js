@@ -15,11 +15,11 @@ hostname = api.imem.app
 
 // -------- 通知（带冷却）逻辑开始 --------
 const cooldownMs = 10 * 60 * 1000;
-const notifyKey = "ime_notify_key";
+const notifyKey = "iMe_notify_key";
 const now = Date.now();
 let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 if (now - lastNotifyTime > cooldownMs) {
-    $notification.post("✨ime✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $notification.post("✨iMe✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
     $persistentStore.write(now.toString(), notifyKey);
 }
 // -------- 通知（带冷却）逻辑结束 --------
