@@ -24,8 +24,10 @@ if (now - lastNotifyTime > cooldownMs) {
 }
 // -------- 通知（带冷却）逻辑结束 --------
 
+// 主脚本函数...
 var obj = JSON.parse($response.body);
 obj.payload.active = true;
 $done({
   "body": JSON.stringify(obj)
 });
+// 主脚本函数...
