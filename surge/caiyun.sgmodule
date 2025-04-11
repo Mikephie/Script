@@ -10,21 +10,21 @@ DOMAIN,gather.colorfulclouds.net,REJECT
 
 [Map Local]
 # 普通版开屏广告(此广告不定时出现)
-^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather data="{}" status-code=200
+^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather data-type=text data="{}" status-code=200
 # 7.1.9 限时福利Svip
-^https:\/\/biz\.cyapi\.cn\/p\/v1\/trial_card\/info data="{}" status-code=200
+^https:\/\/biz\.cyapi\.cn\/p\/v1\/trial_card\/info data-type=text data="{}" status-code=200
 # 7.2.0普通版修改VIP后提示账号迁移
-^https:\/\/biz\.cyapi\.cn\/api\/v1\/token\/device$ data="{}" status-code=200
+^https:\/\/biz\.cyapi\.cn\/api\/v1\/token\/device$ data-type=text data="{}" status-code=200
 # 亲友卡
-^https:\/\/biz\.cyapi\.cn\/p\/v1\/entries data="{}" status-code=200
+^https:\/\/biz\.cyapi\.cn\/p\/v1\/entries data-type=text data="{}" status-code=200
 # 左上角+进去推荐
-^https:\/\/starplucker\.cyapi\.cn\/v3\/config$ data="{}" status-code=200
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config$ data-type=text data="{}" status-code=200
 # 通知
-^https:\/\/starplucker\.cyapi\.cn\/v3\/notification\/message_center data="{}" status-code=200
+^https:\/\/starplucker\.cyapi\.cn\/v3\/notification\/message_center data-type=text data="{}" status-code=200
 # 会员限时弹窗
-^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/home\/conditions\/local$ data="{}" status-code=200
-^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/home_activity\/conditions$ data="{}" status-code=200
-^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/40day\/conditions\/local$ data="{}" status-code=200
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/home\/conditions\/local$ data-type=text data="{}" status-code=200
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/home_activity\/conditions$ data-type=text data="{}" status-code=200
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/40day\/conditions\/local$ data-type=text data="{}" status-code=200
 
 [Script]
 # 赏叶赏花模块
