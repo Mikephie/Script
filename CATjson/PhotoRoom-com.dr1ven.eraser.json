@@ -2,6 +2,18 @@
   "user_agent": "PhotoRoom",
   "bundle_id": "com.dr1ven.eraser",
   "data": {
+    "com.background.business.experiment.weekly": {
+      "entitlements": [
+        "business"
+      ],
+      "product_identifier": "com.background.business.experiment.weekly"
+    },
+    "com.background.business.experiment.yearly": {
+      "entitlements": [
+        "business"
+      ],
+      "product_identifier": "com.background.business.experiment.yearly"
+    },
     "com.background.business.monthly": {
       "entitlements": [
         "business"
