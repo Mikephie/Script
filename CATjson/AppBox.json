@@ -1,0 +1,30 @@
+{
+  "user_agent": "AppBox",
+  "bundle_id": null,
+  "data": {
+    "GAB_Lifetime_VIP": {
+      "entitlements": [
+        "appbookmark_vip"
+      ],
+      "product_identifier": "GAB_Lifetime_VIP"
+    },
+    "GAB_Monthly_VIP": {
+      "entitlements": [
+        "appbookmark_vip"
+      ],
+      "product_identifier": "GAB_Monthly_VIP"
+    },
+    "GAB_Weekly_VIP": {
+      "entitlements": [
+        "appbookmark_vip"
+      ],
+      "product_identifier": "GAB_Weekly_VIP"
+    },
+    "GAB_Yearly_VIP": {
+      "entitlements": [
+        "appbookmark_vip"
+      ],
+      "product_identifier": "GAB_Yearly_VIP"
+    }
+  }
+}
