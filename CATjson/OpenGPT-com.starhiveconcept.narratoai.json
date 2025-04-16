@@ -1,0 +1,36 @@
+{
+  "user_agent": "OpenGPT",
+  "bundle_id": "com.starhiveconcept.narratoai",
+  "data": {
+    "narrato_1999_6m": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "narrato_1999_6m"
+    },
+    "narrato_2999_1y": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "narrato_2999_1y"
+    },
+    "narrato_2999_1y_cancel": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "narrato_2999_1y_cancel"
+    },
+    "narrato_499_1m": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "narrato_499_1m"
+    },
+    "narrato_9999_lifetime": {
+      "entitlements": [
+        "Premium"
+      ],
+      "product_identifier": "narrato_9999_lifetime"
+    }
+  }
+}
