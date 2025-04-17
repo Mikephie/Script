@@ -1,0 +1,42 @@
+{
+  "user_agent": "Relax",
+  "bundle_id": null,
+  "data": {
+    "com.happydogteam.relax.earlyvip": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.happydogteam.relax.earlyvip"
+    },
+    "com.happydogteam.relax.lifetimePro": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.happydogteam.relax.lifetimePro"
+    },
+    "com.happydogteam.relax.lifetimeProForYearlyPro": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.happydogteam.relax.lifetimeProForYearlyPro"
+    },
+    "com.happydogteam.relax.monthlyPro": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.happydogteam.relax.monthlyPro"
+    },
+    "com.happydogteam.relax.yearlyPro": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.happydogteam.relax.yearlyPro"
+    },
+    "com.happydogteam.relax.yearlyPro2": {
+      "entitlements": [
+        "pro"
+      ],
+      "product_identifier": "com.happydogteam.relax.yearlyPro2"
+    }
+  }
+}
