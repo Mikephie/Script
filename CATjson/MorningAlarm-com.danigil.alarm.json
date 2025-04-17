@@ -2,6 +2,30 @@
   "user_agent": "MorningAlarm",
   "bundle_id": "com.danigil.alarm",
   "data": {
+    "alarmify.group15.monthly": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "alarmify.group15.monthly"
+    },
+    "alarmify.group15.monthly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "alarmify.group15.monthly.7df"
+    },
+    "alarmify.group15.yearly": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "alarmify.group15.yearly"
+    },
+    "alarmify.group15.yearly.7df": {
+      "entitlements": [
+        "morning_premium"
+      ],
+      "product_identifier": "alarmify.group15.yearly.7df"
+    },
     "alarmify.monthly.1": {
       "entitlements": [
         "morning_premium"
