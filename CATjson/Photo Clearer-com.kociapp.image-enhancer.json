@@ -1,0 +1,36 @@
+{
+  "user_agent": "Photo%20Clearer",
+  "bundle_id": "com.kociapp.image-enhancer",
+  "data": {
+    "image_enhancer_1m": {
+      "entitlements": [
+        "proversion"
+      ],
+      "product_identifier": "image_enhancer_1m"
+    },
+    "image_enhancer_1w": {
+      "entitlements": [
+        "proversion"
+      ],
+      "product_identifier": "image_enhancer_1w"
+    },
+    "image_enhancer_1y": {
+      "entitlements": [
+        "proversion"
+      ],
+      "product_identifier": "image_enhancer_1y"
+    },
+    "image_enhancer_offer": {
+      "entitlements": [
+        "proversion"
+      ],
+      "product_identifier": "image_enhancer_offer"
+    },
+    "image_enhancer_pro": {
+      "entitlements": [
+        "proversion"
+      ],
+      "product_identifier": "image_enhancer_pro"
+    }
+  }
+}
