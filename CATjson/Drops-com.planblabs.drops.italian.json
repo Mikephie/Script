@@ -476,6 +476,12 @@
       ],
       "product_identifier": "premium_lifetime_discount_55_tier_b_int"
     },
+    "premium_lifetime_discount_55_tier_b_int_2x": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "premium_lifetime_discount_55_tier_b_int_2x"
+    },
     "premium_lifetime_discount_55_tier_c_int": {
       "entitlements": [
         "premium"
@@ -1429,6 +1435,12 @@
         "premium"
       ],
       "product_identifier": "yearly_tier_0_free_trial_3_int"
+    },
+    "yearly_tier_a_free_trial_3_int": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "yearly_tier_a_free_trial_3_int"
     },
     "yearly_tier_b_free_trial_3_int": {
       "entitlements": [
