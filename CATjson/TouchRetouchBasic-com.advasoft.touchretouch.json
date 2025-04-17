@@ -52,6 +52,12 @@
       ],
       "product_identifier": "tr5_yearlysubsc_15dlrs_2"
     },
+    "tr5_yearlysubsc_20_dlrs_1_cencel_discounted": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_20_dlrs_1_cencel_discounted"
+    },
     "tr5_yearlysubsc_20_dlrs_1_discounted": {
       "entitlements": [
         "premium"
