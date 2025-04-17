@@ -2,11 +2,103 @@
   "user_agent": "TouchRetouchBasic",
   "bundle_id": "com.advasoft.touchretouch",
   "data": {
-    "tr5_yearlysubsc_30_and_20_dlrs": {
+    "tr5_monthlysubsc_1": {
+      "entitlements": [],
+      "product_identifier": "tr5_monthlysubsc_1"
+    },
+    "tr5_monthlysubsc_4_test": {
       "entitlements": [
         "premium"
       ],
-      "product_identifier": "tr5_yearlysubsc_30_and_20_dlrs"
+      "product_identifier": "tr5_monthlysubsc_4_test"
+    },
+    "tr5_monthlysubsc_4dlrs": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_monthlysubsc_4dlrs"
+    },
+    "tr5_monthlysubsc_8dlrs": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_monthlysubsc_8dlrs"
+    },
+    "tr5_weeklysubsc_1": {
+      "entitlements": [],
+      "product_identifier": "tr5_weeklysubsc_1"
+    },
+    "tr5_weeklysubsc_10dlrs_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_weeklysubsc_10dlrs_1"
+    },
+    "tr5_weeklysubsc_2dlrs_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_weeklysubsc_2dlrs_1"
+    },
+    "tr5_yearlysubsc_15dlrs_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_15dlrs_1"
+    },
+    "tr5_yearlysubsc_15dlrs_2": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_15dlrs_2"
+    },
+    "tr5_yearlysubsc_20_dlrs_1_cencel_discounted": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_20_dlrs_1_cencel_discounted"
+    },
+    "tr5_yearlysubsc_20_dlrs_1_discounted": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_20_dlrs_1_discounted"
+    },
+    "tr5_yearlysubsc_20dlrs_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_20dlrs_1"
+    },
+    "tr5_yearlysubsc_20dlrs_1_no_trial": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_20dlrs_1_no_trial"
+    },
+    "tr5_yearlysubsc_20dlrs_lower_price_for_less2percent_cr": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_20dlrs_lower_price_for_less2percent_cr"
+    },
+    "tr5_yearlysubsc_29dlrs_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_29dlrs_1"
+    },
+    "tr5_yearlysubsc_30_and_20_dlrs_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_30_and_20_dlrs_1"
+    },
+    "tr5_yearlysubsc_50dlrs_1": {
+      "entitlements": [
+        "premium"
+      ],
+      "product_identifier": "tr5_yearlysubsc_50dlrs_1"
     }
   }
 }
