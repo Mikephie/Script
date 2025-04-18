@@ -1,0 +1,10 @@
+#!name=✨ iMe ✨
+#!desc=社交平台
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/ime.png
+
+[Script]
+http-response https:\/\/api\.imem\.app\/api\/premium\/getOwnStatus script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/ime.js, requires-body=true, timeout=60, tag=ime
+
+[MITM]
+hostname = api.imem.app
