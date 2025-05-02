@@ -19,7 +19,7 @@ const notifyKey = "水印宝_notify_key";
 const now = Date.now();
 let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 if (now - lastNotifyTime > cooldownMs) {
-    $notification.post("✨水印宝✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ❷❾-❾❾-❷❾❾❾");
+    $notification.post("✨水印宝✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
     $persistentStore.write(now.toString(), notifyKey);
 }
 // -------- 通知（带冷却）逻辑结束 --------
