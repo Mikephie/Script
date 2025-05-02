@@ -25,32 +25,28 @@ if (now - lastNotifyTime > cooldownMs) {
 // -------- 通知（带冷却）逻辑结束 --------
 
 // 主脚本函数...
-let ddm = JSON.parse($response.body), id = "com.wallpaperscraft.wallpapers.year.1.5baks";
+let body = JSON.parse($response.body);
+const url = $request.url;
 
-if(/verify_receipt\/remove_ads/.test($request.url)){
-  ddm.items["all_time"] = {
-    "type" : "nonconsumable",
-    "is_active" : true
-  };
-  ddm.items[id] = {
-    "type" : "subscription",
-    "already_used_introductory_price" : false,
-    "is_active" : true
-  };
+if (/\/verify_receipt\/remove_ads/i.test(url)) {
+  for (const k in body.items) {
+    if (typeof body.items[k] === "object") {
+      body.items[k].is_active = true;
+      if (body.items[k].type === "subscription") {
+        body.items[k].already_used_introductory_price = false;
+      }
+    }
+  }
 }
 
-if(/products\/remove_ads/.test($request.url)){
-  ddm = {
-    "items" : {
-      "nonconsumables" : [
-        "all_time"
-      ],
-      "subscriptions" : [
-        id
-      ]
+if (/\/products\/remove_ads/i.test(url)) {
+  body = {
+    items: {
+      nonconsumables: ["all_time"],
+      subscriptions: ["com.wallpaperscraft.wallpapers.year.1.5baks"]
     }
   };
 }
 
-$done({body : JSON.stringify(ddm)});
+$done({ body: JSON.stringify(body) });
 // 主脚本函数...
