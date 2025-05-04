@@ -1,23 +1,15 @@
 /*
-
-📜 FaceSwapper 解锁 VIP 脚本
-📅 更新时间：2024年07月19日
-🔓 功能：解锁永久 VIP
-🔆 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-
+#!name= ✨ FaceSwapper ✨
+#!desc=图像编辑
+#!category=🔐APP
+#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!icon=https://raw.githubusercontent.com/Mikephie/Script/main/qx/aimirror.js
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-
-[rewrite_local] // Quantumult X
-^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceSwapper.js
-
-[Script] // Surge
-FaceSwapper = type=http-response, pattern=^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceSwapper.js, timeout=60
-
-[Script] // Loon
-http-response ^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceSwapper.js, requires-body=true, timeout=60
+[rewrite_local]
+^https?:\/\/api-.*\.facereplacerext\.com\/api\/rest\/commerce\/integrate\/vip\/perform url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/faceswapper.js
 
 [MITM]
-hostname = api-*.facereplacerext.com
+hostname = be.aimirror.fun
 
 */
 
