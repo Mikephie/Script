@@ -1,7 +1,7 @@
 #!name=Paga US Card
 #!desc=by niuniujun Telegram @niuniujunGroup
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!category=🔐APP
+#!category=Chipper
 
 [MITM]
 hostname = %APPEND% www.mypaga.com
