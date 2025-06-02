@@ -13,24 +13,20 @@ hostname = gql-fed.reddit.com
 
 */
 
-// -------- 通知（带冷却）逻辑开始 --------
-const cooldownMs = 10 * 60 * 1000;
-const notifyKey = "RedditVIP_notify_key";
-const now = Date.now();
-let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
-if (now - lastNotifyTime > cooldownMs) {
-    $notification.post("✨RedditVIP✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
-    $persistentStore.write(now.toString(), notifyKey);
-}
-// -------- 通知（带冷却）逻辑结束 --------
+// Reddit 去广告 + 解锁 VIP（推荐合成版）by Mikephie
 
-// 主脚本函数...
 const operationName = $request?.headers?.["X-APOLLO-OPERATION-NAME"] || "";
 const cooldownMs = 10 * 60 * 1000, notifyKey = "RedditVIP_notify_key";
 const now = Date.now();
 let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 
-// 拦截广告接口请求体
+// [1] 通知（可注释关闭）
+if (now - lastNotifyTime > cooldownMs) {
+    $notification.post("✨RedditVIP✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+    $persistentStore.write(now.toString(), notifyKey);
+}
+
+// [2] 拦截广告接口请求体
 if (/Ads/i.test(operationName)) {
     $done({ body: "{}" });
 } else {
@@ -88,4 +84,3 @@ function removeAdsAndNsfw(data) {
     }
     return result;
 }
-// 主脚本函数...
