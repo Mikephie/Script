@@ -1,91 +1,78 @@
 /*
-#!name= ✨ RedditVIP ✨
-#!desc=Reddit去广告+解锁VIP
-#!category=🔐APP
-#!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/reddit.png
-𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-[rewrite_local] // Quantumult X
-^https:\/\/gql-fed\.reddit\.com\/ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js
+ * Reddit Premium 解锁&去广告全兼容脚本
+ * 作者：Mikephie
+ * 适配：Quantumult X / Surge / Loon
+ * 用法：[MITM] + [rewrite_local] 已配置，不赘述
+ */
 
-[MITM]
-hostname = gql-fed.reddit.com
-
-*/
-
-// -------- 通知（带冷却）逻辑开始 --------
+// ======= 可选通知（带冷却）=======
 const cooldownMs = 10 * 60 * 1000;
 const notifyKey = "RedditVIP_notify_key";
 const now = Date.now();
-let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+let lastNotifyTime = $persistentStore?.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
 if (now - lastNotifyTime > cooldownMs) {
-    $notification.post("✨RedditVIP✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
-    $persistentStore.write(now.toString(), notifyKey);
-}
-// -------- 通知（带冷却）逻辑结束 --------
-
-// 主脚本函数...
-function patchVip(obj) {
-  Object.assign(obj, {
-    isPremiumMember: true,
-    isSubscribed: true,
-    isEmployee: true,
-    has_gold_subscription: true,
-    pref_autoplay: false,
-    has_subscribed_to_premium: true,
-    has_visited_new_profile: true,
-    pref_video_autoplay: false,
-    features: { promoted_trend_blanks: false },
-    is_mod: true,
-    user_is_subscriber: true,
-    hide_ads: true,
-    is_gold: true,
-    isBrandAffiliate: true,
-    has_ios_subscription: true,
-    seen_premium_adblock_modal: true,
-    has_external_account: true,
-    skus: [{
-      kind: "Premium",
-      subscriptionType: "Premium",
-      name: "Premium Subscription",
-      description: "Mobile Annual Premium Subscription",
-      duration: { amount: 1, unit: "YEAR" },
-      id: "1",
-      quantity: "1",
-      renewInterval: "YEAR",
-      requiredPaymentProviders: ["APPLE_INAPP", "GOOGLE_INAPP"],
-      externalProductId: "com.reddit.premium_2",
-      promos: [],
-      tags: []
-    }]
-  });
+    $notification?.post("✨RedditVIP✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "Reddit Premium已解锁");
+    $persistentStore?.write(now.toString(), notifyKey);
 }
 
-function fastFilterAds(obj) {
+// ======= 主处理逻辑 =======
+
+// 递归patch所有可能的会员/图标/广告/NSFW字段
+function deepPatch(obj) {
   if (!obj || typeof obj !== 'object') return obj;
-  // 过滤典型广告节点
-  if (Array.isArray(obj)) {
-    return obj
-      .filter(item => !(item && (
-        item.__typename === 'AdPost' ||
-        (item.node && (
-          (item.node.cells && item.node.cells.some(cell => cell && cell.__typename === 'AdMetadataCell')) ||
-          item.node.adPayload
-        ))
-      )))
-      .map(fastFilterAds);
-  }
-  // 常规 edges/posts/children 递归过滤
-  for (const key of ['edges', 'posts', 'items', 'children', 'commentsPageAds']) {
-    if (obj[key] && Array.isArray(obj[key])) {
-      obj[key] = fastFilterAds(obj[key]);
+  if (Array.isArray(obj)) return obj
+    .filter(item => !(item && (
+      item.__typename === 'AdPost' ||
+      (item.node && (
+        (item.node.cells && item.node.cells.some(cell => cell && cell.__typename === 'AdMetadataCell')) ||
+        item.node.adPayload
+      ))
+    )))
+    .map(deepPatch);
+
+  for (const key in obj) {
+    if (key === 'isPremiumMember' && obj[key] === false) obj[key] = true;
+    if (key === 'isSubscribed' && obj[key] === false) obj[key] = true;
+    if (key === 'isEmployee' && obj[key] === false) obj[key] = true;
+    if (key === 'has_gold_subscription' && obj[key] === false) obj[key] = true;
+    if (key === 'hasGoldSubscription' && obj[key] === false) obj[key] = true;
+    if (key === 'isGold' && obj[key] === false) obj[key] = true;
+    if (key === 'isGoldMember' && obj[key] === false) obj[key] = true;
+    if (key === 'has_subscribed_to_premium' && obj[key] === false) obj[key] = true;
+    if (key === 'isBrandAffiliate' && obj[key] === false) obj[key] = true;
+    if (key === 'user_is_subscriber' && obj[key] === false) obj[key] = true;
+    if (key === 'hide_ads' && obj[key] === false) obj[key] = true;
+    if (key === 'has_ios_subscription' && obj[key] === false) obj[key] = true;
+    if (key === 'seen_premium_adblock_modal' && obj[key] === false) obj[key] = true;
+    if (key === 'has_external_account' && obj[key] === false) obj[key] = true;
+    if (key === 'is_mod' && obj[key] === false) obj[key] = true;
+    if (key === 'locked' && obj[key] === true) obj[key] = false; // 解锁图标
+    if (key === 'commentsPageAds' && Array.isArray(obj[key])) obj[key] = []; // 清空广告
+    if (key === 'isNsfw' && obj[key] === true) obj[key] = false;
+    if (key === 'isNsfwMediaBlocked' && obj[key] === true) obj[key] = false;
+    if (key === 'isNsfwContentShown' && obj[key] === false) obj[key] = true;
+
+    // 自动补全skus字段（如有必要）
+    if (key === 'skus' && Array.isArray(obj[key]) && obj[key].length === 0) {
+      obj[key] = [{
+        kind: "Premium",
+        subscriptionType: "Premium",
+        name: "Premium Subscription",
+        description: "Mobile Annual Premium Subscription",
+        duration: { amount: 1, unit: "YEAR" },
+        id: "1",
+        quantity: "1",
+        renewInterval: "YEAR",
+        requiredPaymentProviders: ["APPLE_INAPP", "GOOGLE_INAPP"],
+        externalProductId: "com.reddit.premium_2",
+        promos: [],
+        tags: []
+      }];
     }
-    if (key === 'commentsPageAds') obj[key] = []; // 清空广告
+
+    // 递归
+    if (typeof obj[key] === 'object') obj[key] = deepPatch(obj[key]);
   }
-  // NSFW 处理
-  if ('isNsfw' in obj) obj.isNsfw = false;
-  if ('isNsfwMediaBlocked' in obj) obj.isNsfwMediaBlocked = false;
-  if ('isNsfwContentShown' in obj) obj.isNsfwContentShown = true;
   return obj;
 }
 
@@ -93,15 +80,34 @@ function processResponse() {
   let body = $response.body;
   try {
     let obj = JSON.parse(body);
-    patchVip(obj);
-    fastFilterAds(obj);
-    return JSON.stringify(obj);
+    obj = deepPatch(obj);
+    // 双保险：全局字符串替换，补漏
+    body = JSON.stringify(obj)
+      .replace(/"isPremiumMember":false/g, '"isPremiumMember":true')
+      .replace(/"isSubscribed":false/g, '"isSubscribed":true')
+      .replace(/"isEmployee":false/g, '"isEmployee":true')
+      .replace(/"has_gold_subscription":false/g, '"has_gold_subscription":true')
+      .replace(/"hasGoldSubscription":false/g, '"hasGoldSubscription":true')
+      .replace(/"isGold":false/g, '"isGold":true')
+      .replace(/"isGoldMember":false/g, '"isGoldMember":true')
+      .replace(/"has_subscribed_to_premium":false/g, '"has_subscribed_to_premium":true')
+      .replace(/"isBrandAffiliate":false/g, '"isBrandAffiliate":true')
+      .replace(/"user_is_subscriber":false/g, '"user_is_subscriber":true')
+      .replace(/"hide_ads":false/g, '"hide_ads":true')
+      .replace(/"has_ios_subscription":false/g, '"has_ios_subscription":true')
+      .replace(/"seen_premium_adblock_modal":false/g, '"seen_premium_adblock_modal":true')
+      .replace(/"has_external_account":false/g, '"has_external_account":true')
+      .replace(/"is_mod":false/g, '"is_mod":true')
+      .replace(/"locked":true/g, '"locked":false')
+      .replace(/"isNsfw":true/g, '"isNsfw":false')
+      .replace(/"isNsfwMediaBlocked":true/g, '"isNsfwMediaBlocked":false')
+      .replace(/"isNsfwContentShown":false/g, '"isNsfwContentShown":true');
+    return body;
   } catch (e) {
-    console.log(`Reddit脚本处理错误: ${e.message}`);
+    console.log(`Reddit解锁脚本处理错误: ${e.message}`);
     return body;
   }
 }
 
 const modifiedBody = processResponse();
-$done({body: modifiedBody});
-// 主脚本函数...
+$done({ body: modifiedBody });
