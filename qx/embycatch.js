@@ -11,6 +11,12 @@ const SERVERS = {
         storage_key: 'emby_th_playing',
         comment: '探花'
     },
+    'tanhuatv': {
+        domain: 'gy.meowfly.de',
+        prefix: 'ml',
+        storage_key: 'emby_ml_playing',
+        comment: '喵了'
+    },
     'nanflix': {
         domain: 'us.nanflix.net',
         prefix: 'nf',
