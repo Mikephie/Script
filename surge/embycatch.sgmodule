@@ -4,7 +4,6 @@
 #!category=✅签到
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/emby.png
 
-
 [Script]
 
 # 探花服务器
@@ -14,7 +13,7 @@ tanhua = type=http-request,pattern=^https?:\/\/(tanhuatv\.site|.*?\.tanhuatv\.si
 nanflix = type=http-request,pattern=^https?:\/\/us\.nanflix\.net:2231\/emby\/videos\/[^\/]+\/(original|stream),requires-body=1,max-size=0,script-path=Scripts/embycatch.js
 
 # 喵了服务器
-meowfly = type=http-request,pattern=^pattern=^https?:\/\/gy\.meowfly\.de\/emby\/videos\/\d+\/original,requires-body=1,max-size=0,script-path=Scripts/embycatch.js
+meowfly = type=http-request,pattern=^https?:\/\/gy\.meowfly\.de\/emby\/videos\/\d+\/original(\.mkv)?(\?.*)?,script-path=Scripts/embycatch.js
 
 # 定时任务
 emby_task = type=cron,cronexp="0 20 9,14,21,28 * *",wake-system=1,timeout=15,script-path=Scripts/embytask.js
