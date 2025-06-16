@@ -13,8 +13,11 @@ tanhua = type=http-request,pattern=^https?:\/\/(tanhuatv\.site|.*?\.tanhuatv\.si
 # Nanflix服务器
 nanflix = type=http-request,pattern=^https?:\/\/us\.nanflix\.net:2231\/emby\/videos\/[^\/]+\/(original|stream),requires-body=1,max-size=0,script-path=Scripts/embycatch.js
 
+# 喵了服务器
+meowfly = type=http-request,pattern=^https?:\/\/gy\.meowfly\.de:443\/emby\/videos\/[^\/]+\/(original|stream),requires-body=1,max-size=0,script-path=Scripts/embycatch.js
+
 # 定时任务
 emby_task = type=cron,cronexp="0 20 9,14,21,28 * *",wake-system=1,timeout=15,script-path=Scripts/embytask.js
 
 [MITM]
-hostname = %APPEND% su.viclub.top:8090, tanhuatv.site, tanhuatv.site:443, us.nanflix.net:2231
+hostname = %APPEND% su.viclub.top:8090, tanhuatv.site, tanhuatv.site:443, us.nanflix.net:2231, gy.meowfly.de:443
