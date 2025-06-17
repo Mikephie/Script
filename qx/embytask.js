@@ -51,6 +51,7 @@ const $ = new Env('Emby保号任务');
 
 const SERVER_KEYS = {
     'th': { key: 'emby_th_playing', name: 'tanhuatv', comment: '探花' },
+    'ml': { key: 'emby_th_playing', name: 'meowfly', comment: '喵了' },
     'nf': { key: 'emby_nf_playing', name: 'Nanflix', comment: 'Nanflix' }
 };
 
