@@ -1,0 +1,10 @@
+#!name = MyShiftPlanner🔐APP
+#!desc = 工作排期 - 模块
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=🔐APP
+
+[Script]
+MyShiftPlanner = type=http-response,pattern=^https:\/\/myshiftplannercloud-live\.azurewebsites\.net\/api\/Purchase\/(validatereceipt|Get)\/?.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/myshiftplanner.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% myshiftplannercloud-live.azurewebsites.net
