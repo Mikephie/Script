@@ -1,6 +1,6 @@
 /*
 #!name= ✨ MyShiftPlanner ✨
-#!desc=工作排期
+#!desc=工作排期 - 需试用
 #!category=🔐APP
 #!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/myshiftplanner.png
