@@ -10,13 +10,13 @@
 
 [rewrite_local]
 # Adapty解锁
-^https?:\/\/api\.adapty\.io\/api\/v\d\/(sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store)) url script-response-body https://raw.githubusercontent.com/your-repo/unified-subscription.js
+^https?:\/\/api\.adapty\.io\/api\/v\d\/(sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store)) url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/adaptyhub.js
 
 # Apphud解锁
-^https?:\/\/.*\.apphud\.com\/v\d\/(subscriptions|customers)$ url script-response-body https://raw.githubusercontent.com/your-repo/unified-subscription.js
+^https?:\/\/.*\.apphud\.com\/v\d\/(subscriptions|customers)$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/adaptyhub.js
 
 # SNOW系列解锁
-^https?:\/\/.*\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status url script-response-body https://raw.githubusercontent.com/your-repo/unified-subscription.js
+^https?:\/\/.*\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/adaptyhub.js
 
 [mitm]
 hostname = api.adapty.io, *.apphud.com, *.snow.me
