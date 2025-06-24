@@ -1,8 +1,13 @@
 /*
  * Reddit Premium 解锁&去广告全兼容脚本
  * 作者：Mikephie
- * 适配：Quantumult X / Surge / Loon
- * 用法：[MITM] + [rewrite_local] 已配置，不赘述
+ 
+[rewrite_local]
+^https?:\/\/gql(-fed)?\.reddit\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip.js
+
+[MITM]
+hostname = gql.reddit.com, gql-fed.reddit.com
+
  */
 
 // ======= 可选通知（带冷却）=======
