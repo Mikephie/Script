@@ -1,0 +1,12 @@
+#!name = ADAPTYHUB🔐APP
+#!desc = 尝试解锁🔓VIP
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
+#!category=通杀脚本
+
+[Script]
+apphub = type=http-response, pattern=^https?:\/\/.*\.apphud\.com\/v\d\/(subscriptions|customers)$, script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adaptyhub.js, requires-body=true, max-size=-1, timeout=60
+
+adapty = type=http-response, pattern=^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/adaptyhub.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.adapty.io, *.apphud.com
