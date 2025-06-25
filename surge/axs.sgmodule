@@ -1,9 +1,18 @@
-#!name=AXS Payment
-#!desc=AXS Payment 去广告
-#!category=🛠️ NoAds
+#!name=AXS广告即时隐藏
+#!desc=完全替换广告页面内容，避免任何白框闪现
+#!category=🚫广告
+#!author = 🅜ⓘ🅚ⓔ🅟ⓗⓘⓔ
 
 [Map Local]
-^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/(InfoPage|highlight)\/.*\.(png|jpg|jpeg|gif|js|css)(\?.*)?$ data-type=text data=" " status-code=200
+# 完全替换广告页面
+^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/.*\/whatsnew\.php.* data="instant_close.html"
+
+[Rule]
+# Backup rules in case the specific rules don't catch everything
+URL-REGEX,^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage,REJECT
+#URL-REGEX,^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/WebView\/MarketPlace,REJECT
+URL-REGEX,^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/highlight,REJECT
+#URL-REGEX,^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/CT_include\/CT153_src\/banner_image,REJECT
 
 [MITM]
 hostname = %APPEND% m-station2.axs.com.sg
