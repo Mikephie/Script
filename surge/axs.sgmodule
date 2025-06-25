@@ -5,8 +5,8 @@
 
 [Map Local]
 # 完全替换广告页面
-^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/.*\/whatsnew\.php.* data="instant_close.html"
-
+^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage\/.*\/whatsnew\.php.* data="https://raw.githubusercontent.com/Mikephie/Script/main/qx/instant_close.html"
+ 
 [Rule]
 # Backup rules in case the specific rules don't catch everything
 URL-REGEX,^https?:\/\/m-station2\.axs\.com\.sg\/AXSMobile\/InfoPage,REJECT

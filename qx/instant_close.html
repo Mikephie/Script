@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Close</title>
+    <style>
+        body, html {
+            background-color: transparent !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            overflow: hidden !important;
+        }
+        #closeButton {
+            display: none;
+        }
+        /* 避免出现任何内容闪现 */
+        * {
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建一个隐藏的表单，模拟原始广告页面中的关闭表单 -->
+    <form id="formWhatsNew" name="formWhatsNew" action="closebutton://" method="POST"></form>
+    
+    <!-- 隐藏的关闭按钮 -->
+    <div id="closeButton"></div>
+    
+    <script>
+        // 立即执行关闭操作
+        (function() {
+            // 尝试多种关闭方法
+            function closeAd() {
+                try {
+                    // 方法1: 提交表单
+                    document.getElementById('formWhatsNew').submit();
+                } catch(e) {
+                    console.error('表单提交失败:', e);
+                }
+                
+                try {
+                    // 方法2: 直接跳转到关闭URL
+                    window.location.href = 'closebutton://';
+                } catch(e) {
+                    console.error('URL跳转失败:', e);
+                }
+            }
+            
+            // 立即执行一次
+            closeAd();
+            
+            // 100ms后再次尝试
+            setTimeout(closeAd, 100);
+            
+            // 确保页面加载完毕后也会执行
+            window.addEventListener('load', function() {
+                closeAd();
+                setTimeout(closeAd, 50);
+            });
+            
+            // 如果1秒后还未关闭，使用更激进的方法
+            setTimeout(function() {
+                try {
+                    // 创建并触发点击事件
+                    var clickEvent = document.createEvent('MouseEvents');
+                    clickEvent.initEvent('click', true, true);
+                    document.getElementById('closeButton').dispatchEvent(clickEvent);
+                    
+                    // 尝试调用可能存在的关闭函数
+                    if (typeof window.close === 'function') {
+                        window.close();
+                    }
+                    
+                    // 最后尝试通过history返回
+                    history.back();
+                } catch(e) {
+                    console.error('激进关闭方法失败:', e);
+                }
+            }, 1000);
+        })();
+    </script>
+</body>
+</html>
