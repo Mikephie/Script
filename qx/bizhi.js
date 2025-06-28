@@ -3,7 +3,7 @@
 #!desc=图像壁纸
 #!category=🔐APP
 #!author=🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
-#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/bizhi.js
+#!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/bizhi.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 [rewrite_local]
 ^https:\/\/leancloud\.emotionwp\.com\/1\.1\/classes\/wpf_[a-z]+ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/bizhi.js
@@ -35,7 +35,7 @@ const user = /classes\/wpf_account/;
 if (user.test(url)) {
     body.results = [{
         "nickName": "MIKEPHIE",
-        "headImageUrl": "https://i.ibb.co/wM5z10N/IMG-1287.jpg",
+        "headImageUrl": "https://raw.githubusercontent.com/Mikephie/icons/main/icon/mike.jpg",
         "svipType" : "year_pro",
         "coin": 88888888,
         "isVIP": 0,
