@@ -21,6 +21,13 @@ DOMAIN-SUFFIX,nmobi.kuwo.cn
 DOMAIN-SUFFIX,music.126.net
 DOMAIN-SUFFIX,music.163.com
 DOMAIN-SUFFIX,netease.com
+DOMAIN-SUFFIX,pstatp.com
+DOMAIN-SUFFIX,douyinstatic.com
+DOMAIN-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,douyinpic.com
+DOMAIN-SUFFIX,amemv.com
+DOMAIN-SUFFIX,douyinvod.com
+DOMAIN-SUFFIX,bytedance.com
 DOMAIN-SUFFIX,zhibo.tv
 DOMAIN-SUFFIX,growingio.com
 DOMAIN-SUFFIX,ximalaya.com
@@ -358,6 +365,7 @@ DOMAIN-SUFFIX,iqiyiedge.com
 DOMAIN-SUFFIX,iqiyiedge.net
 DOMAIN-SUFFIX,iqiyipic.com
 DOMAIN-SUFFIX,itc.cn
+DOMAIN-SUFFIX,ixigua.com
 DOMAIN-SUFFIX,jiangbing.cn
 DOMAIN-SUFFIX,jstucdn.com
 DOMAIN-SUFFIX,koowo.com
