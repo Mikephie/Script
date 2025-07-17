@@ -1,0 +1,249 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+experimental:
+  ignore-resolve-fail: true
+# 代理订阅
+proxy-providers:
+  Ednovas:
+    type: http
+    url: "https://1.ednovas.org/api/v1/client/subscribe?token=cb04773c87424ba5a8ed8059f4d6e4e8"
+    interval: 3600
+    path: ./Server/Ednovas.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 600
+  海归:
+    type: http
+    url: "https://getconf.oss-accelerate.aliyuncs.com/clash/138399/l0138253"
+    interval: 3600
+    path: ./Server/海归.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 600
+  极速:
+    type: http
+    url: "https://jsjc.cfd/api/v1/client/subscribe?token=0b227697b4fb0c42302f415ed382e944"
+    interval: 3600
+    path: ./Server/极速.yaml
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 600
+      
+# 代理策略组
+proxy-groups:
+  - name: "自行选择"
+    type: select
+    proxies:
+      - DIRECT
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 狮城节点
+      - 美国节点
+      - 英国节点
+      - 马来西亚节点
+      - 阿根廷节点
+      - 土耳其节点
+        
+  - name: "港台番剧"
+    type: select
+    proxies:
+      - 回国节点
+      - DIRECT
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+        
+  - name: "国内媒体"
+    type: select
+    proxies:
+      - 回国节点
+      - DIRECT
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+        
+  - name: "Disney"
+    type: select
+    proxies:
+      - DIRECT
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 狮城节点
+      - 美国节点
+      - 英国节点
+      - 马来西亚节点
+      - 阿根廷节点
+      - 土耳其节点
+        
+  - name: "Netflix"
+    type: select
+    proxies:
+      - DIRECT
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 狮城节点
+      - 美国节点
+      - 英国节点
+      - 马来西亚节点
+      - 阿根廷节点
+      - 土耳其节点
+        
+  - name: "自动选择"
+    type: url-test
+    use:
+      - Ednovas
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+  - name: "香港节点"
+    type: url-test
+    filter: "香港|港|HK|🇭🇰|(?i)Hong"
+    use:
+      - Ednovas
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+  - name: "台湾节点"
+    type: url-test
+    filter: "台湾|台|TW|🇹🇼|(?i)Taiwan"
+    use:
+      - Ednovas
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+  - name: "日本节点"
+    type: url-test
+    filter: "日本|日|JP|🇯🇵|(?i)Japan"
+    use:
+      - Ednovas
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+  - name: "狮城节点"
+    type: url-test
+    filter: "新加坡|狮|SG|🇸🇬|(?i)Singapore"
+    use:
+      - Ednovas
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+  - name: "美国节点"
+    type: url-test
+    filter: "美国|美|US|🇺🇸|(?i)States"
+    use:
+      - Ednovas
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+  - name: "马来西亚节点"
+    type: url-test
+    filter: "马来西亚|MY|🇲🇾|(?i)Malaysia"
+    use:
+      - Ednovas
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+  - name: "英国节点"
+    type: url-test
+    filter: "英国|英|UK|🇬🇧|(?i)United Kingdom"
+    use:
+      - Ednovas
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+  - name: "阿根廷节点"
+    type: url-test
+    filter: "阿根廷|AR|🇦🇷|(?i)Argentina"
+    use:
+      - Ednovas
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+  - name: "土耳其节点"
+    type: url-test
+    filter: "土耳其|TR|🇹🇷|(?i)Turkey"
+    use:
+      - Ednovas
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800
+  - name: "回国节点"
+    type: url-test
+    filter: "中转|直连"
+    use: 
+      - 海归
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 1800 
+
+# 本地规则
+rules:
+  - RULE-SET,Fenliu,DIRECT
+  - RULE-SET,AdBlock,REJECT
+  - RULE-SET,应用净化,REJECT
+  - RULE-SET,隐私防护,REJECT
+  - RULE-SET,港台番剧,港台番剧
+  - RULE-SET,国内媒体,国内媒体
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,Disney,Disney
+ # - GEOIP,CN,国内媒体
+  - MATCH,DIRECT
+
+rule-providers:
+  Fenliu:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./Ruleset/Fenliu.yaml
+    url: https://raw.githubusercontent.com/Mikephie/Script/main/clash/Fenliu.yaml
+  AdBlock:
+    type: http
+    behavior: domain
+    format: http
+    interval: 43200
+    path: ./Ruleset/AdBlock.yaml
+    url: https://raw.githubusercontent.com/Mikephie/Script/main/clash/AdBlock.yaml
+	应用净化:
+    type: http
+    behavior: domain
+    format: http
+    interval: 43200
+    path: ./Ruleset/AppClean.yaml
+    url: https://raw.githubusercontent.com/Mikephie/Script/main/clash/AppClean.yaml
+  隐私防护:
+    type: http
+    behavior: domain
+    format: http
+    interval: 43200
+    path: ./Ruleset/Privacy.yaml
+    url: https://raw.githubusercontent.com/Mikephie/Script/main/clash/Privacy.yaml
+  港台番剧:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./Ruleset/StreamingSE.yaml
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/StreamingSE.yaml
+  国内媒体:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./Ruleset/StreamingCN.yaml
+    url: https://raw.githubusercontent.com/mikephie/Script/main/clash/chinamedia.yaml
+  Netflix:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./Ruleset/Netflix.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical.yaml
+  Disney:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./Ruleset/Disney.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml
+  Alibaba:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./Ruleset/Alibaba.yaml
+    url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Alibaba.yaml
