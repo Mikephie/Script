@@ -1,4 +1,4 @@
-rules:
+payload:
   - DOMAIN-SUFFIX,0sbm.consobaby.co.uk,隐私防护
   - DOMAIN-SUFFIX,0x1f4b0.com,隐私防护
   - DOMAIN-SUFFIX,16ao.mathon.fr,隐私防护

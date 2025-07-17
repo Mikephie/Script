@@ -1,4 +1,4 @@
-rules:
+payload:
   - DOMAIN-SUFFIX,a.youdao.com,应用净化
   - DOMAIN-SUFFIX,adgeo.corp.163.com,应用净化
   - DOMAIN-SUFFIX,analytics.126.net,应用净化

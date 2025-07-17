@@ -1,4 +1,4 @@
-rules:
+payload:
   - DOMAIN-SUFFIX,006a039c957c142bb.com,AdBlock
   - DOMAIN-SUFFIX,00aaa2d81c1d174.com,AdBlock
   - DOMAIN-SUFFIX,0127538a552.com,AdBlock
