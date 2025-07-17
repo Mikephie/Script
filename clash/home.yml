@@ -203,7 +203,7 @@ rule-providers:
     interval: 43200
     path: ./Ruleset/AdBlock.yaml
     url: https://raw.githubusercontent.com/Mikephie/Script/main/clash/AdBlock.yaml
-	应用净化:
+  应用净化:
     type: http
     behavior: domain
     format: http
@@ -228,7 +228,7 @@ rule-providers:
     interval: 86400
     type: http
     path: ./Ruleset/StreamingCN.yaml
-    url: https://raw.githubusercontent.com/mikephie/Script/main/clash/chinamedia.yaml
+    url: https://raw.githubusercontent.com/mikephie/Script/main/clash/Chinamedia.yaml
   Netflix:
     behavior: classical
     interval: 86400
