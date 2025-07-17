@@ -1,33 +1,46 @@
-# 规则名称:Fenliu
-# 规则统计:13
-
 payload:
+
   #Mix
   - DOMAIN-SUFFIX,byteimg.com
+  
   # Ryde
   - DOMAIN-KEYWORD,ryde
+  
   # Tada
   - DOMAIN-KEYWORD,driver.tada
+  
   # Gov SG
   - DOMAIN-KEYWORD,gov.sg
-  # Streamlink org
+  
+  # Stream-link.org
   - DOMAIN-KEYWORD,stream-link
+  
   # Spotify
   - DOMAIN,wl.spotify.com
+  
   # Telco
-  - DOMAIN-KEYWORD,m1.com.sg
-  - DOMAIN-KEYWORD,singtel.com
-  - DOMAIN-KEYWORD,starhub.com
-  # Citibank
-  - DOMAIN-KEYWORD,citibank.com.sg
-  #- DOMAIN-SUFFIX,glassboxdigital.io
-  #- DOMAIN-SUFFIX,omtrdc.net
-  # Panda Pub
+  - DOMAIN-SUFFIX,m1.com.sg
+  - DOMAIN-SUFFIX,singtel.com
+  - DOMAIN-SUFFIX,starhub.com
+  
+  # Banking
+  - DOMAIN-SUFFIX,maybank2u.com
+  - DOMAIN-SUFFIX,dbs.com
+  - DOMAIN-SUFFIX,posb.com
+  - DOMAIN-SUFFIX,ocbc.com
+  - DOMAIN-SUFFIX,uob.com
+  - DOMAIN-SUFFIX,citibank.com
+
+  # Circuit Route
+  - DOMAIN,firebaselogging-pa.googleapis
+  - DOMAIN-SUFFIX,firestore.googleapis.com
+  
+  # PandaPub Fenliu
   - DOMAIN,pandafan.pub
   - DOMAIN,widget.intercom.io
   - DOMAIN,api-iam.intercom.io
-  # 4D King
-  - DOMAIN-SUFFIX,firebaseinstallations.googleapis.com
-  #- DOMAIN-SUFFIX,firebasedynamiclinks.googleapis.com
+  
+  # 4D King v2
+  - DOMAIN-SUFFIX,firebasedynamiclinks.googleapis.com
   - DOMAIN-SUFFIX,firebaselogging.googleapis.com
   - DOMAIN-SUFFIX,firebaseremoteconfig.googleapis.com
