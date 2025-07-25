@@ -8,4 +8,4 @@
 emby_task = type=cron,cronexp="0 20 9,14,21,28 * *",wake-system=1,timeout=15,script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/embytask.js
 
 [MITM]
-hostname = %APPEND% su.viclub.top:8090, tanhuatv.site, tanhuatv.site:443, us.nanflix.net:2231
+hostname = %APPEND% su.viclub.top:8090, tanhuatv.site, tanhuatv.site:443, us.nanflix.net:2231, gy.meowfly.de, gy.meowfly.de:443, lite.cn2gias.uk, lite.cn2gias.uk:443

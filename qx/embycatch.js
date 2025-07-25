@@ -17,6 +17,12 @@ const SERVERS = {
         storage_key: 'emby_ml_playing',
         comment: '喵了'
     },
+    'SNTP': {
+        domain: 'lite.cn2gias.uk',
+        prefix: 'sntp',
+        storage_key: 'emby_sntp_playing',
+        comment: 'SNTP'
+    },
     'nanflix': {
         domain: 'us.nanflix.net',
         prefix: 'nf',
