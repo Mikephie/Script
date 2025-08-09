@@ -16,7 +16,7 @@ http://s1.an94tv.cfd/aktv/channeluhd/AKTV.m3u8
 #EXTINF:-1 tvg-id="aktv2/skysportsf1" tvg-name="Sky Sports F1" tvg-logo="https://img.mikephie.site/skysportf1.png" group-title="Sport",Sky Sports F1
 http://s1.an94tv.cfd/aktv2/skysportsf1/AKTV.m3u8
 
-#EXTINF:-1 tvg-id="astro/CH-0" tvg-name="Astro Football" tvg-logo="https://img.mikephie.site/astrofootball.png" group-title="Sport",Astro Football
+#EXTINF:-1 tvg-id="astro/CH-0" tvg-name="Astro Football" tvg-logo="https://img.mikephie.site/astrosport.png" group-title="Sport",Astro Football
 http://s1.an94tv.cfd/astro/CH-0/AKTV.m3u8
 
 #EXTINF:-1 tvg-id="astro/astrosportuhd" tvg-name="Astro Sport UHD" tvg-logo="https://img.mikephie.site/astrosport.png" group-title="Sport",Astro Sport UHD
