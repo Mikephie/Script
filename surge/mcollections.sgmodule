@@ -3,7 +3,7 @@
 #!author = 🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ
 #!category=🔐APP
 #!icon = https://raw.githubusercontent.com/Mikephie/icons/main/loon/heji.gif
-#!arguments=revenuecat1:revenuecat1,revenuecat2:revenuecat2,iTunes:iTunes,reserve:reserve
+#!arguments=revenuecat1:revenuecat1,revenuecat2:revenuecat2,iTunes:iTunes,adapty:adapty,apphub:apphub,snow:snow
 #!arguments-desc=[参数设置]\n1 revenuecat1,[脚本]\n2 revenuecat2,[响应头]\n3 iTunes,[脚本]\n4 Adapty,[脚本],[脚本]\n5 AppHub,[脚本]\n6 Snow,[脚本]
 
 [General]
