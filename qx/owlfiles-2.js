@@ -24,26 +24,15 @@ if (now - lastNotifyTime > cooldownMs) {
 }
 // -------- 通知（带冷却）逻辑结束 --------
 
-// 主脚本函数...
-var mikephie = JSON.parse($response.body);
-
-    mikephie = {
-  "accountRegistTime" : 0,
-  "connectedWeixin" : false,
-  "externalUid" : "",
-  "uid" : 122617,
-  "expireAt" : 2754094349450,
-  "avatarName" : "",
-  "memberLevel" : 3,
-  "connectedGoogle" : false,
-  "dispName" : "mikephiemy@gmail.com",
-  "errorMessage" : "",
-  "connectedApple" : true,
-  "errorCode" : 0,
-  "withoutPasswd" : true,
-  "email" : "000213.691bca3f41474ad18bcd31c191282cbd.1408",
-  "succ" : true,
-  "lastPasswordModifiedTime" : 1754143713794
-
-$done({body : JSON.stringify(mikephie)});
-// 主脚本函数...
+console.log("Raw response body: " + $response.body);
+try {
+  let obj = JSON.parse($response.body);
+  console.log("Parsed JSON: " + JSON.stringify(obj));
+  obj.memberLevel = 3;
+  obj.expireAt = 2754094349450; // ~2057 timestamp
+  console.log("Modified JSON: " + JSON.stringify(obj));
+  $done({ body: JSON.stringify(obj) });
+} catch (err) {
+  console.log("Skyjos 解锁失败: " + err.message);
+  $done({});
+}
