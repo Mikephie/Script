@@ -28,7 +28,7 @@ if (now - lastNotifyTime > cooldownMs) {
 try {
   let obj = JSON.parse($response.body);
   obj.memberLevel = 3;
-  obj.expireAt = 2754094349450;
+  obj.expireAt = 3742762088000;
   $done({ body: JSON.stringify(obj) });
 } catch (err) {
   console.log("Skyjos 解锁失败: " + err.message);
