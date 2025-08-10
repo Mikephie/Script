@@ -14,23 +14,20 @@ hostname = www.skyjos.com
 */
 
 // -------- 通知（带冷却）逻辑开始 --------
-const cooldownMs = 10 * 60 * 1000;
-const notifyKey = "Owlfiles_notify_key";
-const now = Date.now();
-let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
-if (now - lastNotifyTime > cooldownMs) {
-    $notification.post("✨Owlfiles✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
-    $persistentStore.write(now.toString(), notifyKey);
-}
+// const cooldownMs = 10 * 60 * 1000;
+// const notifyKey = "Owlfiles_notify_key";
+// const now = Date.now();
+// let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
+// if (now - lastNotifyTime > cooldownMs) {
+//     $notification.post("✨Owlfiles✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
+//     $persistentStore.write(now.toString(), notifyKey);
+// }
 // -------- 通知（带冷却）逻辑结束 --------
 
-console.log("Raw response body: " + $response.body);
 try {
   let obj = JSON.parse($response.body);
-  console.log("Parsed JSON: " + JSON.stringify(obj));
   obj.memberLevel = 3;
-  obj.expireAt = 2754094349450; // ~2057 timestamp
-  console.log("Modified JSON: " + JSON.stringify(obj));
+  obj.expireAt = 2754094349450;
   $done({ body: JSON.stringify(obj) });
 } catch (err) {
   console.log("Skyjos 解锁失败: " + err.message);
