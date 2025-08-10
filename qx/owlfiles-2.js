@@ -6,7 +6,7 @@
 #!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/owlfiles.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 [rewrite_local]
-^https?:\/\/www\.skyjos\.com(?::58080)?\/ws\/(?:validate|loadaccountinfo)\b url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/owlfiles.js
+^https?:\/\/www\.skyjos\.com(?::58080)?\/ws\/(?:validate|loadaccountinfo)\b url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/owlfiles-2.js
 
 [mitm]
 hostname = www.skyjos.com
