@@ -9,7 +9,7 @@
 ^https?:\/\/www\.skyjos\.com(?::58080)?\/ws\/(?:validate|loadaccountinfo)\b url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/owlfiles.js
 
 [mitm]
-hostname = www.skyjos.com
+hostname = *.skyjos.com:58080, *.skyjos.com
 
 */
 
