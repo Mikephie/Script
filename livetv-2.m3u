@@ -1,0 +1,35 @@
+#EXTM3U x-tvg-url=""
+
+########## 📺 Mediacorp ##########
+#EXTINF:1 aktv-group="mediacorp" tvg-id="aktv/channel5hd" tvg-logo="https://img.mikephie.site/channel5hd.png" provider-type="iptv",Channel 5 HD
+http://s1.an94tv.cfd/aktv/channel5hd/AKTV.m3u8
+#EXTINF:2 aktv-group="mediacorp" tvg-id="aktv/channel8hd" tvg-logo="https://img.mikephie.site/channel8hd.png" provider-type="iptv",Channel 8 HD
+http://s1.an94tv.cfd/aktv/channel8hd/AKTV.m3u8
+
+########## 📺 Hongkong ##########
+#EXTINF:3 aktv-group="hongkong" tvg-id="aktv/tvbplus" tvg-logo="https://img.mikephie.site/tvbplus.png" provider-type="iptv",TVB Plus
+http://s1.an94tv.cfd/aktv/tvbplus/AKTV.m3u8
+
+########## 📺 Aktv2 ##########
+#EXTINF:4 aktv-group="AKTV2" tvg-id="aktv2/viu6" tvg-logo="https://img.mikephie.site/viu6.png" provider-type="iptv",Viu6
+http://s1.an94tv.cfd/aktv2/viu6/AKTV.m3u8
+
+########## 📺 Astro ##########
+#EXTINF:5 aktv-group="astro" tvg-id="astro/8tv" tvg-logo="https://img.mikephie.site/8tv.png" provider-type="iptv",8TV
+http://s1.an94tv.cfd/astro/8tv/AKTV.m3u8
+
+########## 📺 Taiwan ##########
+#EXTINF:6 aktv-group="taiwan" tvg-id="taiwan/cinemaworld" tvg-logo="https://img.mikephie.site/cinemaworld.png" provider-type="iptv",CinemaWorld
+http://s1.an94tv.cfd/taiwan/cinemaworld/AKTV.m3u8
+
+########## 📺 Aktv-jp ##########
+#EXTINF:7 aktv-group="AKTV-JP" tvg-id="aktvjp/japannews24hlive" tvg-logo="https://img.mikephie.site/japannews24hlive.png" provider-type="iptv",Japan News 24H LIVE
+http://s1.an94tv.cfd/aktvjp/japannews24hlive/AKTV.m3u8
+
+########## 📺 Aktv ##########
+#EXTINF:8 aktv-group="AKTV" tvg-id="aktv/animaxhk" tvg-logo="https://img.mikephie.site/animaxhk.png" provider-type="iptv",Animax (HK)
+http://s1.an94tv.cfd/aktv/animaxhk/AKTV.m3u8
+
+########## 📺 Aktv3 ##########
+#EXTINF:9 aktv-group="AKTV3" tvg-id="aktv3/cna" tvg-logo="https://img.mikephie.site/cna.png" provider-type="iptv",CNA
+http://s1.an94tv.cfd/aktv3/cna/AKTV.m3u8
