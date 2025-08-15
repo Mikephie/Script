@@ -5,31 +5,131 @@
 http://s1.an94tv.cfd/aktv/channel5hd/AKTV.m3u8
 #EXTINF:2 aktv-group="mediacorp" tvg-id="aktv/channel8hd" tvg-logo="https://img.mikephie.site/channel8hd.png" provider-type="iptv",Channel 8 HD
 http://s1.an94tv.cfd/aktv/channel8hd/AKTV.m3u8
+#EXTINF:3 aktv-group="mediacorp" tvg-id="aktv/channeluhd" tvg-logo="https://img.mikephie.site/channeluhd.png" provider-type="iptv",Channel U HD
+http://s1.an94tv.cfd/aktv/channeluhd/AKTV.m3u8
+#EXTINF:4 aktv-group="mediacorp" tvg-id="astro/8tv" tvg-logo="https://img.mikephie.site/8tv.png" provider="astro" provider-logo="" provider-type="iptv",8TV
+http://s1.an94tv.cfd/astro/8tv/AKTV.m3u8
+#EXTINF:5 aktv-group="mediacorp" tvg-id="aktv3/cna" tvg-logo="https://img.mikephie.site/cna.png" provider="AKTV3" provider-logo="" provider-type="iptv",CNA
+http://s1.an94tv.cfd/aktv3/cna/AKTV.m3u8
 
-########## 📺 Hongkong ##########
-#EXTINF:3 aktv-group="hongkong" tvg-id="aktv/tvbplus" tvg-logo="https://img.mikephie.site/tvbplus.png" provider-type="iptv",TVB Plus
+########## 📺 HongKong ##########
+#EXTINF:6 aktv-group="hongkong" tvg-id="aktv/tvbplus" tvg-logo="https://img.mikephie.site/tvbplus.png" provider-type="iptv",TVB Plus
 http://s1.an94tv.cfd/aktv/tvbplus/AKTV.m3u8
+#EXTINF:7 aktv-group="hongkong" tvg-id="aktv/tvn" tvg-logo="https://img.mikephie.site/tvn.png" provider-type="iptv",tvN
+http://s1.an94tv.cfd/aktv/tvn/AKTV.m3u8
+#EXTINF:8 aktv-group="hongkong" tvg-id="aktv/1080" tvg-logo="https://img.mikephie.site/1080.png" provider-type="iptv",天映經典(1080)
+http://s1.an94tv.cfd/aktv/1080/AKTV.m3u8
+#EXTINF:9 aktv-group="hongkong" tvg-id="aktv/CH-19" tvg-logo="https://img.mikephie.site/CH-19.png" provider-type="iptv",明珠剧集台(北美)
+http://s1.an94tv.cfd/aktv/CH-19/AKTV.m3u8
+#EXTINF:10 aktv-group="hongkong" tvg-id="aktv/CH-2" tvg-logo="https://img.mikephie.site/CH-2.png" provider-type="iptv",明珠台
+http://s1.an94tv.cfd/aktv/CH-2/AKTV.m3u8
+#EXTINF:11 aktv-group="hongkong" tvg-id="aktv/CH-1" tvg-logo="https://img.mikephie.site/CH-1.png" provider-type="iptv",無線新聞台
+http://s1.an94tv.cfd/aktv/CH-1/AKTV.m3u8
+#EXTINF:12 aktv-group="hongkong" tvg-id="aktv/hk" tvg-logo="https://img.mikephie.site/hk.png" provider-type="iptv",美亞電影台(HK)
+http://s1.an94tv.cfd/aktv/hk/AKTV.m3u8
+#EXTINF:13 aktv-group="hongkong" tvg-id="aktv/CH-8" tvg-logo="https://img.mikephie.site/CH-8.png" provider-type="iptv",翡翠一台(北美)
+http://s1.an94tv.cfd/aktv/CH-8/AKTV.m3u8
+#EXTINF:14 aktv-group="hongkong" tvg-id="aktv/CH-18" tvg-logo="https://img.mikephie.site/CH-18.png" provider-type="iptv",翡翠剧集台(北美)
+http://s1.an94tv.cfd/aktv/CH-18/AKTV.m3u8
+#EXTINF:15 aktv-group="hongkong" tvg-id="aktv/CH-0" tvg-logo="https://img.mikephie.site/CH-0.png" provider-type="iptv",翡翠台
+http://s1.an94tv.cfd/aktv/CH-0/AKTV.m3u8
+#EXTINF:16 aktv-group="hongkong" tvg-id="aktv/CH-7" tvg-logo="https://img.mikephie.site/CH-7.png" provider-type="iptv",翡翠娛樂台(北美)
+http://s1.an94tv.cfd/aktv/CH-7/AKTV.m3u8
+#EXTINF:17 aktv-group="hongkong" tvg-id="aktv/CH-17" tvg-logo="https://img.mikephie.site/CH-17.png" provider-type="iptv",翡翠综合台(北美)
+http://s1.an94tv.cfd/aktv/CH-17/AKTV.m3u8
+#EXTINF:18 aktv-group="hongkong" tvg-id="aktv/CH-3" tvg-logo="https://img.mikephie.site/CH-3.png" provider-type="iptv",鳳凰衛視中文台
+http://s1.an94tv.cfd/aktv/CH-3/AKTV.m3u8
+#EXTINF:19 aktv-group="hongkong" tvg-id="aktv/CH-4" tvg-logo="https://img.mikephie.site/CH-4.png" provider-type="iptv",鳳凰衛視資訊台
+http://s1.an94tv.cfd/aktv/CH-4/AKTV.m3u8
+#EXTINF:20 aktv-group="hongkong" tvg-id="aktv/CH-5" tvg-logo="https://img.mikephie.site/CH-5.png" provider-type="iptv",鳳凰衛視香港台
+http://s1.an94tv.cfd/aktv/CH-5/AKTV.m3u8
+#EXTINF:21 aktv-group="hongkong" tvg-id="aktv/CH-6" tvg-logo="https://img.mikephie.site/CH-6.png" provider-type="iptv",黃金翡翠台
+http://s1.an94tv.cfd/aktv/CH-6/AKTV.m3u8
 
-########## 📺 Aktv2 ##########
-#EXTINF:4 aktv-group="AKTV2" tvg-id="aktv2/viu6" tvg-logo="https://img.mikephie.site/viu6.png" provider-type="iptv",Viu6
+########## 📺 AKTV2 ##########
+#EXTINF:22 aktv-group="AKTV2" tvg-id="aktv2/viu6" tvg-logo="https://img.mikephie.site/viu6.png" provider="AKTV2" provider-logo="" provider-type="iptv",Viu6
 http://s1.an94tv.cfd/aktv2/viu6/AKTV.m3u8
+#EXTINF:23 aktv-group="AKTV2" tvg-id="aktv2/viutv1" tvg-logo="https://img.mikephie.site/viutv1.png" provider="AKTV2" provider-logo="" provider-type="iptv",VIUTV1
+http://s1.an94tv.cfd/aktv2/viutv1/AKTV.m3u8
+#EXTINF:24 aktv-group="AKTV2" tvg-id="aktv2/CH-1" tvg-logo="https://img.mikephie.site/CH-1.png" provider="AKTV2" provider-logo="" provider-type="iptv",好萊塢電影台
+http://s1.an94tv.cfd/aktv2/CH-1/AKTV.m3u8
+#EXTINF:25 aktv-group="AKTV2" tvg-id="aktv2/CH-2" tvg-logo="https://img.mikephie.site/CH-2.png" provider="AKTV2" provider-logo="" provider-type="iptv",東森洋片
+http://s1.an94tv.cfd/aktv2/CH-2/AKTV.m3u8
 
 ########## 📺 Astro ##########
-#EXTINF:5 aktv-group="astro" tvg-id="astro/8tv" tvg-logo="https://img.mikephie.site/8tv.png" provider-type="iptv",8TV
-http://s1.an94tv.cfd/astro/8tv/AKTV.m3u8
+#EXTINF:26 aktv-group="astro" tvg-id="aktv2/skysportsf1" tvg-logo="https://img.mikephie.site/skysportsf1.png" provider="AKTV2" provider-logo="" provider-type="iptv",Sky Sports F1
+http://s1.an94tv.cfd/aktv2/skysportsf1/AKTV.m3u8
+#EXTINF:27 aktv-group="astro" tvg-id="astro/CH-0" tvg-logo="https://img.mikephie.site/CH-0.png" provider="astro" provider-logo="" provider-type="iptv",Astro Football
+http://s1.an94tv.cfd/astro/CH-0/AKTV.m3u8
+#EXTINF:28 aktv-group="astro" tvg-id="astro/astrosportuhd" tvg-logo="https://img.mikephie.site/astrosportuhd.png" provider="astro" provider-logo="" provider-type="iptv",Astro Sport UHD
+http://s1.an94tv.cfd/astro/astrosportuhd/AKTV.m3u8
+#EXTINF:29 aktv-group="astro" tvg-id="astro/celestialmovies" tvg-logo="https://img.mikephie.site/celestialmovies.png" provider="astro" provider-logo="" provider-type="iptv",Celestial Movies
+http://s1.an94tv.cfd/astro/celestialmovies/AKTV.m3u8
+#EXTINF:30 aktv-group="astro" tvg-id="astro/eurosport1" tvg-logo="https://img.mikephie.site/eurosport1.png" provider="astro" provider-logo="" provider-type="iptv",EuroSport 1
+http://s1.an94tv.cfd/astro/eurosport1/AKTV.m3u8
+#EXTINF:31 aktv-group="astro" tvg-id="astro/eurosport2" tvg-logo="https://img.mikephie.site/eurosport2.png" provider="astro" provider-logo="" provider-type="iptv",EuroSport 2
+http://s1.an94tv.cfd/astro/eurosport2/AKTV.m3u8
+#EXTINF:32 aktv-group="astro" tvg-id="astro/tntsports1" tvg-logo="https://img.mikephie.site/tntsports1.png" provider="astro" provider-logo="" provider-type="iptv",TNT SPORTS 1
+http://s1.an94tv.cfd/astro/tntsports1/AKTV.m3u8
+#EXTINF:33 aktv-group="astro" tvg-id="astro/tntsports2" tvg-logo="https://img.mikephie.site/tntsports2.png" provider="astro" provider-logo="" provider-type="iptv",TNT SPORTS 2
+http://s1.an94tv.cfd/astro/tntsports2/AKTV.m3u8
+#EXTINF:34 aktv-group="astro" tvg-id="astro/tntsports3" tvg-logo="https://img.mikephie.site/tntsports3.png" provider="astro" provider-logo="" provider-type="iptv",TNT SPORTS 3
+http://s1.an94tv.cfd/astro/tntsports3/AKTV.m3u8
+#EXTINF:35 aktv-group="astro" tvg-id="astro/CH-1" tvg-logo="https://img.mikephie.site/CH-1.png" provider="astro" provider-logo="" provider-type="iptv",中天亚洲台
+http://s1.an94tv.cfd/astro/CH-1/AKTV.m3u8
 
 ########## 📺 Taiwan ##########
-#EXTINF:6 aktv-group="taiwan" tvg-id="taiwan/cinemaworld" tvg-logo="https://img.mikephie.site/cinemaworld.png" provider-type="iptv",CinemaWorld
+#EXTINF:36 aktv-group="taiwan" tvg-id="taiwan/cinemaworld" tvg-logo="https://img.mikephie.site/cinemaworld.png" provider="taiwan" provider-logo="" provider-type="iptv",CinemaWorld
 http://s1.an94tv.cfd/taiwan/cinemaworld/AKTV.m3u8
+#EXTINF:37 aktv-group="taiwan" tvg-id="taiwan/hits" tvg-logo="https://img.mikephie.site/hits.png" provider="taiwan" provider-logo="" provider-type="iptv",HITS
+http://s1.an94tv.cfd/taiwan/hits/AKTV.m3u8
+#EXTINF:38 aktv-group="taiwan" tvg-id="taiwan/CH-3" tvg-logo="https://img.mikephie.site/CH-3.png" provider="taiwan" provider-logo="" provider-type="iptv",KLT-靖天國際台
+http://s1.an94tv.cfd/taiwan/CH-3/AKTV.m3u8
+#EXTINF:39 aktv-group="taiwan" tvg-id="taiwan/magellantv" tvg-logo="https://img.mikephie.site/magellantv.png" provider="taiwan" provider-logo="" provider-type="iptv",MagellanTV頻道
+http://s1.an94tv.cfd/taiwan/magellantv/AKTV.m3u8
+#EXTINF:40 aktv-group="taiwan" tvg-id="taiwan/tvbs" tvg-logo="https://img.mikephie.site/tvbs.png" provider="taiwan" provider-logo="" provider-type="iptv",TVBS
+http://s1.an94tv.cfd/taiwan/tvbs/AKTV.m3u8
+#EXTINF:41 aktv-group="taiwan" tvg-id="taiwan/tvbs-1" tvg-logo="https://img.mikephie.site/tvbs-1.png" provider="taiwan" provider-logo="" provider-type="iptv",TVBS新聞
+http://s1.an94tv.cfd/taiwan/tvbs-1/AKTV.m3u8
+#EXTINF:42 aktv-group="taiwan" tvg-id="taiwan/CH-1" tvg-logo="https://img.mikephie.site/CH-1.png" provider="taiwan" provider-logo="" provider-type="iptv",民視
+http://s1.an94tv.cfd/taiwan/CH-1/AKTV.m3u8
+#EXTINF:43 aktv-group="taiwan" tvg-id="taiwan/CH-0" tvg-logo="https://img.mikephie.site/CH-0.png" provider="taiwan" provider-logo="" provider-type="iptv",民視第一台
+http://s1.an94tv.cfd/taiwan/CH-0/AKTV.m3u8
+#EXTINF:44 aktv-group="taiwan" tvg-id="aktv2/CH-4" tvg-logo="https://img.mikephie.site/CH-4.png" provider="AKTV2" provider-logo="" provider-type="iptv",緯來電影台
+http://s1.an94tv.cfd/aktv2/CH-4/AKTV.m3u8
+#EXTINF:45 aktv-group="taiwan" tvg-id="aktv2/CH-0" tvg-logo="https://img.mikephie.site/CH-0.png" provider="AKTV2" provider-logo="" provider-type="iptv",緯來體育台
+http://s1.an94tv.cfd/aktv2/CH-0/AKTV.m3u8
+#EXTINF:46 aktv-group="taiwan" tvg-id="aktv2/CH-3" tvg-logo="https://img.mikephie.site/CH-3.png" provider="AKTV2" provider-logo="" provider-type="iptv",華視
+http://s1.an94tv.cfd/aktv2/CH-3/AKTV.m3u8
+#EXTINF:47 aktv-group="taiwan" tvg-id="taiwan/CH-5" tvg-logo="https://img.mikephie.site/CH-5.png" provider="taiwan" provider-logo="" provider-type="iptv",龍華日韓台
+http://s1.an94tv.cfd/taiwan/CH-5/AKTV.m3u8
+#EXTINF:48 aktv-group="taiwan" tvg-id="taiwan2/tvb" tvg-logo="https://img.mikephie.site/tvb.png" provider="taiwan2" provider-logo="" provider-type="iptv",TVB 星河
+http://s1.an94tv.cfd/taiwan2/tvb/AKTV.m3u8
+#EXTINF:49 aktv-group="taiwan" tvg-id="zhongtian/CH-0" tvg-logo="https://img.mikephie.site/CH-0.png" provider="zhongtian" provider-logo="" provider-type="iptv",中天新闻台
+http://s1.an94tv.cfd/zhongtian/CH-0/AKTV.m3u8
+#EXTINF:50 aktv-group="taiwan" tvg-id="zhongtian/CH-1" tvg-logo="https://img.mikephie.site/CH-1.png" provider="zhongtian" provider-logo="" provider-type="iptv",東森新聞
+http://s1.an94tv.cfd/zhongtian/CH-1/AKTV.m3u8
 
-########## 📺 Aktv-jp ##########
-#EXTINF:7 aktv-group="AKTV-JP" tvg-id="aktvjp/japannews24hlive" tvg-logo="https://img.mikephie.site/japannews24hlive.png" provider-type="iptv",Japan News 24H LIVE
+########## 📺 AKTV-JP ##########
+#EXTINF:51 aktv-group="AKTV-JP" tvg-id="aktvjp/japannews24hlive" tvg-logo="https://img.mikephie.site/japannews24hlive.png" provider="AKTV-JP" provider-logo="" provider-type="iptv",Japan News 24H LIVE
 http://s1.an94tv.cfd/aktvjp/japannews24hlive/AKTV.m3u8
+#EXTINF:52 aktv-group="AKTV-JP" tvg-id="aktvjp/ntv" tvg-logo="https://img.mikephie.site/ntv.png" provider="AKTV-JP" provider-logo="" provider-type="iptv",日テレNEWS LIVE
+http://s1.an94tv.cfd/aktvjp/ntv/AKTV.m3u8
 
-########## 📺 Aktv ##########
-#EXTINF:8 aktv-group="AKTV" tvg-id="aktv/animaxhk" tvg-logo="https://img.mikephie.site/animaxhk.png" provider-type="iptv",Animax (HK)
+########## 📺 AKTV ##########
+#EXTINF:53 aktv-group="AKTV" tvg-id="aktv/animaxhk" tvg-logo="https://img.mikephie.site/animaxhk.png" provider-type="iptv",Animax (HK)
 http://s1.an94tv.cfd/aktv/animaxhk/AKTV.m3u8
+#EXTINF:54 aktv-group="AKTV" tvg-id="aktv/axn" tvg-logo="https://img.mikephie.site/axn.png" provider-type="iptv",AXN
+http://s1.an94tv.cfd/aktv/axn/AKTV.m3u8
+#EXTINF:55 aktv-group="AKTV" tvg-id="aktv/lovenaturehd" tvg-logo="https://img.mikephie.site/lovenaturehd.png" provider-type="iptv",Love Nature HD
+http://s1.an94tv.cfd/aktv/lovenaturehd/AKTV.m3u8
+#EXTINF:56 aktv-group="AKTV" tvg-id="aktv/popc" tvg-logo="https://img.mikephie.site/popc.png" provider-type="iptv",PopC
+http://s1.an94tv.cfd/aktv/popc/AKTV.m3u8
+#EXTINF:57 aktv-group="AKTV" tvg-id="aktv/rockaction" tvg-logo="https://img.mikephie.site/rockaction.png" provider-type="iptv",ROCK Action
+http://s1.an94tv.cfd/aktv/rockaction/AKTV.m3u8
 
-########## 📺 Aktv3 ##########
-#EXTINF:9 aktv-group="AKTV3" tvg-id="aktv3/cna" tvg-logo="https://img.mikephie.site/cna.png" provider-type="iptv",CNA
-http://s1.an94tv.cfd/aktv3/cna/AKTV.m3u8
+########## 📺 AKTV3 ##########
+#EXTINF:58 aktv-group="AKTV3" tvg-id="aktv3/rthk32" tvg-logo="https://img.mikephie.site/rthk32.png" provider="AKTV3" provider-logo="" provider-type="iptv",RTHK32
+http://s1.an94tv.cfd/aktv3/rthk32/AKTV.m3u8
+#EXTINF:59 aktv-group="AKTV3" tvg-id="aktv3/CH-0" tvg-logo="https://img.mikephie.site/CH-0.png" provider="AKTV3" provider-logo="" provider-type="iptv",朝鲜恩情台
+http://s1.an94tv.cfd/aktv3/CH-0/AKTV.m3u8
