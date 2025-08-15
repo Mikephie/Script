@@ -84,7 +84,7 @@ http://s1.an94tv.cfd/aktvjp/japannews24hlive/AKTV.m3u8
 #EXTINF:28 aktv-group="AKTV-JP" group-title="AKTV-JP" tvg-id="aktvjp/ntv" tvg-logo="https://img.mikephie.site/日テレNEWSLIVE.png" provider="AKTV-JP" provider-logo="" provider-type="iptv",日テレNEWS LIVE
 http://s1.an94tv.cfd/aktvjp/ntv/AKTV.m3u8
 
-#EXTINF:29 aktv-group="astro" group-title="astro" tvg-id="astro/8tv" tvg-logo="https://img.mikephie.site/8TV.png" provider="astro" provider-logo="" provider-type="iptv",8TV
+#EXTINF:29 aktv-group="astro" group-title="mediacorp" tvg-id="astro/8tv" tvg-logo="https://img.mikephie.site/8TV.png" provider="astro" provider-logo="" provider-type="iptv",8TV
 http://s1.an94tv.cfd/astro/8tv/AKTV.m3u8
 
 #EXTINF:30 aktv-group="astro" group-title="astro" tvg-id="astro/CH-0" tvg-logo="https://img.mikephie.site/AstroFootball.png" provider="astro" provider-logo="" provider-type="iptv",Astro Football
@@ -117,7 +117,7 @@ http://s1.an94tv.cfd/astro/tntsports3/AKTV.m3u8
 #EXTINF:39 aktv-group="astro" group-title="astro" tvg-id="astro/unifisports1" tvg-logo="https://img.mikephie.site/unifiSports1.png" provider="astro" provider-logo="" provider-type="iptv",unifi Sports 1
 http://s1.an94tv.cfd/astro/unifisports1/AKTV.m3u8
 
-#EXTINF:40 aktv-group="astro" group-title="astro" tvg-id="astro/CH-1" tvg-logo="https://img.mikephie.site/中天亚洲台.png" provider="astro" provider-logo="" provider-type="iptv",中天亚洲台
+#EXTINF:40 aktv-group="taiwan" group-title="astro" tvg-id="astro/CH-1" tvg-logo="https://img.mikephie.site/中天亚洲台.png" provider="astro" provider-logo="" provider-type="iptv",中天亚洲台
 http://s1.an94tv.cfd/astro/CH-1/AKTV.m3u8
 
 #EXTINF:41 aktv-group="taiwan" group-title="taiwan" tvg-id="taiwan/cinemaworld" tvg-logo="https://img.mikephie.site/CinemaWorld.png" provider="taiwan" provider-logo="" provider-type="iptv",CinemaWorld
