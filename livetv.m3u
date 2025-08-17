@@ -1,6 +1,6 @@
 #EXTM3U x-tvg-url=""
 
-#EXTINF:1 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/animaxhk" tvg-logo="https://img.mikephie.site/Animax(HK).png" provider-type="iptv",Animax (HK)
+#EXTINF:1 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/animaxhk" tvg-logo="https://img.mikephie.site/Animax.png" provider-type="iptv",Animax (HK)
 http://s1.an94tv.cfd/aktv/animaxhk/AKTV.m3u8
 
 #EXTINF:2 aktv-group="AKTV" group-title="taiwan" tvg-id="aktv/axn" tvg-logo="https://img.mikephie.site/AXN.png" provider-type="iptv",AXN
@@ -30,7 +30,7 @@ http://s1.an94tv.cfd/aktv/tvbplus/AKTV.m3u8
 #EXTINF:10 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/tvn" tvg-logo="https://img.mikephie.site/tvN.png" provider-type="iptv",tvN
 http://s1.an94tv.cfd/aktv/tvn/AKTV.m3u8
 
-#EXTINF:11 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/1080" tvg-logo="https://img.mikephie.site/天映經典(1080).png" provider-type="iptv",天映經典(1080)
+#EXTINF:11 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/1080" tvg-logo="https://img.mikephie.site/TYJD.png" provider-type="iptv",天映經典(1080)
 http://s1.an94tv.cfd/aktv/1080/AKTV.m3u8
 
 #EXTINF:12 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-19" tvg-logo="https://img.mikephie.site/明珠剧集台(北美).png" provider-type="iptv",明珠剧集台(北美)
