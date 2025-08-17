@@ -33,31 +33,31 @@ http://s1.an94tv.cfd/aktv/tvn/AKTV.m3u8
 #EXTINF:11 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/1080" tvg-logo="https://img.mikephie.site/TYJD.png" provider-type="iptv",天映經典(1080)
 http://s1.an94tv.cfd/aktv/1080/AKTV.m3u8
 
-#EXTINF:12 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-19" tvg-logo="https://img.mikephie.site/明珠剧集台(北美).png" provider-type="iptv",明珠剧集台(北美)
+#EXTINF:12 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-19" tvg-logo="https://img.mikephie.site/MZJJT.png" provider-type="iptv",明珠剧集台(北美)
 http://s1.an94tv.cfd/aktv/CH-19/AKTV.m3u8
 
 #EXTINF:13 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-2" tvg-logo="https://img.mikephie.site/明珠台.png" provider-type="iptv",明珠台
 http://s1.an94tv.cfd/aktv/CH-2/AKTV.m3u8
 
-#EXTINF:14 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-1" tvg-logo="https://img.mikephie.site/無線新聞台.png" provider-type="iptv",無線新聞台
+#EXTINF:14 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-1" tvg-logo="https://img.mikephie.site/WXXWT.png" provider-type="iptv",無線新聞台
 http://s1.an94tv.cfd/aktv/CH-1/AKTV.m3u8
 
-#EXTINF:15 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/hk" tvg-logo="https://img.mikephie.site/美亞電影台(HK).png" provider-type="iptv",美亞電影台(HK)
+#EXTINF:15 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/hk" tvg-logo="https://img.mikephie.site/MYDYT.png" provider-type="iptv",美亞電影台(HK)
 http://s1.an94tv.cfd/aktv/hk/AKTV.m3u8
 
-#EXTINF:16 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-8" tvg-logo="https://img.mikephie.site/翡翠一台(北美).png" provider-type="iptv",翡翠一台(北美)
+#EXTINF:16 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-8" tvg-logo="https://img.mikephie.site/FCYT.png" provider-type="iptv",翡翠一台(北美)
 http://s1.an94tv.cfd/aktv/CH-8/AKTV.m3u8
 
-#EXTINF:17 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-18" tvg-logo="https://img.mikephie.site/翡翠剧集台(北美).png" provider-type="iptv",翡翠剧集台(北美)
+#EXTINF:17 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-18" tvg-logo="https://img.mikephie.site/FCJJT.png" provider-type="iptv",翡翠剧集台(北美)
 http://s1.an94tv.cfd/aktv/CH-18/AKTV.m3u8
 
 #EXTINF:18 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-0" tvg-logo="https://img.mikephie.site/翡翠台.png" provider-type="iptv",翡翠台
 http://s1.an94tv.cfd/aktv/CH-0/AKTV.m3u8
 
-#EXTINF:19 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-7" tvg-logo="https://img.mikephie.site/翡翠娛樂台(北美).png" provider-type="iptv",翡翠娛樂台(北美)
+#EXTINF:19 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-7" tvg-logo="https://img.mikephie.site/FCYLT.png" provider-type="iptv",翡翠娛樂台(北美)
 http://s1.an94tv.cfd/aktv/CH-7/AKTV.m3u8
 
-#EXTINF:20 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-17" tvg-logo="https://img.mikephie.site/翡翠综合台(北美).png" provider-type="iptv",翡翠综合台(北美)
+#EXTINF:20 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-17" tvg-logo="https://img.mikephie.site/FCZHT.png" provider-type="iptv",翡翠综合台(北美)
 http://s1.an94tv.cfd/aktv/CH-17/AKTV.m3u8
 
 #EXTINF:21 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-3" tvg-logo="https://img.mikephie.site/鳳凰衛視中文台.png" provider-type="iptv",鳳凰衛視中文台
@@ -69,7 +69,7 @@ http://s1.an94tv.cfd/aktv/CH-4/AKTV.m3u8
 #EXTINF:23 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-5" tvg-logo="https://img.mikephie.site/鳳凰衛視香港台.png" provider-type="iptv",鳳凰衛視香港台
 http://s1.an94tv.cfd/aktv/CH-5/AKTV.m3u8
 
-#EXTINF:24 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-6" tvg-logo="https://img.mikephie.site/黃金翡翠台.png" provider-type="iptv",黃金翡翠台
+#EXTINF:24 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/CH-6" tvg-logo="https://img.mikephie.site/HJFCT.png" provider-type="iptv",黃金翡翠台
 http://s1.an94tv.cfd/aktv/CH-6/AKTV.m3u8
 
 #EXTINF:25 aktv-group="AKTV3" group-title="mediacorp" tvg-id="aktv3/cna" tvg-logo="https://img.mikephie.site/CNA.png" provider="AKTV3" provider-logo="" provider-type="iptv",CNA
