@@ -27,7 +27,7 @@ http://s1.an94tv.cfd/aktv/rockaction/AKTV.m3u8
 #EXTINF:9 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/tvbplus" tvg-logo="https://img.mikephie.site/tvbplus.png" provider-type="iptv",TVB Plus
 http://s1.an94tv.cfd/aktv/tvbplus/AKTV.m3u8
 
-#EXTINF:10 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/tvn" tvg-logo="https://img.mikephie.site/tvN.png" provider-type="iptv",tvN
+#EXTINF:10 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/tvn" tvg-logo="https://img.mikephie.site/tvn.png" provider-type="iptv",tvN
 http://s1.an94tv.cfd/aktv/tvn/AKTV.m3u8
 
 #EXTINF:11 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/1080" tvg-logo="https://img.mikephie.site/TYJD.png" provider-type="iptv",天映經典(1080)
@@ -93,7 +93,7 @@ http://s1.an94tv.cfd/astro/CH-0/AKTV.m3u8
 #EXTINF:31 aktv-group="astro" group-title="astro" tvg-id="astro/astrosportuhd" tvg-logo="https://img.mikephie.site/AstroSportUHD.png" provider="astro" provider-logo="" provider-type="iptv",Astro Sport UHD
 http://s1.an94tv.cfd/astro/astrosportuhd/AKTV.m3u8
 
-#EXTINF:32 aktv-group="astro" group-title="astro" tvg-id="astro/celestialmovies" tvg-logo="https://img.mikephie.site/CelestialMovies.png" provider="astro" provider-logo="" provider-type="iptv",Celestial Movies
+#EXTINF:32 aktv-group="astro" group-title="astro" tvg-id="astro/celestialmovies" tvg-logo="https://img.mikephie.site/celestialmovies.png" provider="astro" provider-logo="" provider-type="iptv",Celestial Movies
 http://s1.an94tv.cfd/astro/celestialmovies/AKTV.m3u8
 
 #EXTINF:33 aktv-group="astro" group-title="astro" tvg-id="astro/eurosport1" tvg-logo="https://img.mikephie.site/EuroSport1.png" provider="astro" provider-logo="" provider-type="iptv",EuroSport 1
