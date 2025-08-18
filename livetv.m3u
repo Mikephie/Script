@@ -18,13 +18,13 @@ http://s1.an94tv.cfd/aktv/channeluhd/AKTV.m3u8
 #EXTINF:6 aktv-group="AKTV" group-title="taiwan" tvg-id="aktv/lovenaturehd" tvg-logo="https://img.mikephie.site/LoveNatureHD.png" provider-type="iptv",Love Nature HD
 http://s1.an94tv.cfd/aktv/lovenaturehd/AKTV.m3u8
 
-#EXTINF:7 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/popc" tvg-logo="https://img.mikephie.site/PopC.png" provider-type="iptv",PopC
+#EXTINF:7 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/popc" tvg-logo="https://img.mikephie.site/popc.png" provider-type="iptv",PopC
 http://s1.an94tv.cfd/aktv/popc/AKTV.m3u8
 
 #EXTINF:8 aktv-group="AKTV" group-title="taiwan" tvg-id="aktv/rockaction" tvg-logo="https://img.mikephie.site/ROCKAction.png" provider-type="iptv",ROCK Action
 http://s1.an94tv.cfd/aktv/rockaction/AKTV.m3u8
 
-#EXTINF:9 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/tvbplus" tvg-logo="https://img.mikephie.site/TVBPlus.png" provider-type="iptv",TVB Plus
+#EXTINF:9 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/tvbplus" tvg-logo="https://img.mikephie.site/tvbplus.png" provider-type="iptv",TVB Plus
 http://s1.an94tv.cfd/aktv/tvbplus/AKTV.m3u8
 
 #EXTINF:10 aktv-group="AKTV" group-title="hongkong" tvg-id="aktv/tvn" tvg-logo="https://img.mikephie.site/tvN.png" provider-type="iptv",tvN
