@@ -1,7 +1,7 @@
 // 电视直播插件（支持私有图标清单与别名扩展）
 WidgetMetadata = {
     id: "live",
-    title: "直播(电视+网络)",
+    title: "MIKEPHIE 直播(电视+网络)",
     detailCacheDuration: 60,
     modules: [
         {
@@ -122,7 +122,7 @@ WidgetMetadata = {
     ],
     version: "1.2.0",
     requiredVersion: "0.0.1",
-    description: "解析直播订阅链接（支持自定义图标与别名扩展）【五折码：CHEAP.5;七折码：CHEAP】",
+    description: "解析直播订阅链接（支持自定义图标与别名扩展）【MIKEPHIE】",
     author: "huangxd",
     site: "https://github.com/huangxd-/ForwardWidgets"
 };
