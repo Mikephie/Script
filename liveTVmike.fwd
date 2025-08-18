@@ -1,0 +1,552 @@
+// 电视直播插件（支持私有图标清单与别名扩展）
+WidgetMetadata = {
+    id: "live",
+    title: "直播(电视+网络)",
+    detailCacheDuration: 60,
+    modules: [
+        {
+            title: "直播(电视+网络)",
+            requiresWebView: false,
+            functionName: "loadLiveItems",
+            cacheDuration: 21600,
+            params: [
+                // 订阅源（默认你的链接）
+                {
+                    name: "url",
+                    title: "订阅链接",
+                    type: "input",
+                    description: "输入直播订阅链接地址",
+                    placeholders: [
+                        {
+                            title: "Mikephie-LiveTV (默认)",
+                            value: "https://raw.githubusercontent.com/Mikephie/Script/main/livetv.m3u"
+                        }
+                    ]
+                },
+
+                // 内置分组分类（基于 group-title）
+                {
+                    name: "group_filter",
+                    title: "频道分类（按组筛选，可留空）",
+                    type: "input",
+                    description: "按 group-title 关键字筛选（支持正则），留空为全部",
+                    placeholders: [
+                        { title: "全部", value: "" },
+                        { title: "香港台（hongkong）", value: "hongkong" },
+                        { title: "台湾台（taiwan）", value: "taiwan" },
+                        { title: "新加坡 MediaCorp（mediacorp）", value: "mediacorp" },
+                        { title: "Astro 体育/电影（astro）", value: "astro" },
+                        { title: "日本台（AKTV-JP）", value: "AKTV-JP" },
+                        { title: "其他（AKTV3，如 CNA/朝鲜）", value: "AKTV3" }
+                    ]
+                },
+
+                // 名称关键字（与分组可叠加）
+                {
+                    name: "name_filter",
+                    title: "按频道名关键字（可留空）",
+                    type: "input",
+                    description: "按频道名筛选（支持正则），如 TVB | 翡翠 | 凤凰 | 民视 | TVBS | CNA | Astro | NBA",
+                    placeholders: [
+                        { title: "全部", value: "" },
+                        { title: "TVB/翡翠", value: "TVB|翡翠" },
+                        { title: "凤凰中文/资讯/香港", value: "鳳凰|凤凰" },
+                        { title: "民视系列", value: "民視|民视" },
+                        { title: "TVBS/TVBS新聞", value: "TVBS" },
+                        { title: "三立/东森/寰宇", value: "三立|東森|东森|寰宇" },
+                        { title: "CNA（新加坡）", value: "CNA" },
+                        { title: "Astro 体育/电影", value: "Astro|Sport|NBA|EuroSport|TNT" },
+                        { title: "日本新闻", value: "Japan|日テレ|NTV|NEWS" }
+                    ]
+                },
+
+                // 台标外观
+                {
+                    name: "bg_color",
+                    title: "台标背景色(只对源里不自带台标的起作用)",
+                    type: "input",
+                    description: "支持RGB颜色，如DCDCDC",
+                    value: "DCDCDC",
+                    placeholders: [
+                        { title: "亮灰色", value: "DCDCDC" },
+                        { title: "钢蓝", value: "4682B4" },
+                        { title: "浅海洋蓝", value: "20B2AA" },
+                        { title: "浅粉红", value: "FFB6C1" },
+                        { title: "小麦色", value: "F5DEB3" }
+                    ]
+                },
+                {
+                    name: "direction",
+                    title: "台标优先显示方向",
+                    type: "enumeration",
+                    description: "台标优先显示方向，默认为竖向",
+                    value: "V",
+                    enumOptions: [
+                        { title: "竖向", value: "V" },
+                        { title: "横向", value: "H" }
+                    ]
+                },
+
+                // ===== 私有图标与别名扩展（可留空） =====
+                {
+                    name: "custom_icon_index",
+                    title: "自定义图标清单（可选）",
+                    type: "input",
+                    description: "支持 JSON/纯文本。你的结构 icons:[{name,url},...] 也支持。",
+                    placeholders: [
+                        { title: "留空", value: "" },
+                        { title: "Mikephie icons.json", value: "https://img.mikephie.site/icons.json" }
+                    ]
+                },
+                {
+                    name: "custom_icon_base",
+                    title: "自定义图标 CDN 基址（可选）",
+                    type: "input",
+                    description: "当清单未提供 url 时，优先使用 base/<Name>.png；留空则用公共库 imagekit 回退。",
+                    placeholders: [
+                        { title: "留空", value: "" },
+                        { title: "示例", value: "https://img.mikephie.site" }
+                    ]
+                },
+                {
+                    name: "custom_alias_map",
+                    title: "自定义别名映射 JSON（可选）",
+                    type: "input",
+                    description: "形如 {\"TVBS新闻\":\"TVBS新聞\",\"翡翠一台\":\"翡翠台\"}",
+                    placeholders: [
+                        { title: "留空", value: "" }
+                    ]
+                }
+            ],
+        },
+    ],
+    version: "1.2.0",
+    requiredVersion: "0.0.1",
+    description: "解析直播订阅链接（支持自定义图标与别名扩展）【五折码：CHEAP.5;七折码：CHEAP】",
+    author: "huangxd",
+    site: "https://github.com/huangxd-/ForwardWidgets"
+};
+
+// =================== 内部缓存 ===================
+const __cache = {
+    myIcons: { ts: 0, data: null, url: null },
+    myAlias: { ts: 0, data: null, url: null },
+    fmIcons: { ts: 0, data: null },
+};
+const CACHE_TTL_MS = 10 * 60 * 1000; // 10分钟
+
+// =================== 主流程 ===================
+async function loadLiveItems(params = {}) {
+    try {
+        const url = params.url || "";
+        const groupFilter = params.group_filter || "";
+        const nameFilter = params.name_filter || "";
+        const bgColor = params.bg_color || "DCDCDC";
+        const direction = params.direction || "V";
+
+        const customIconIndex = (params.custom_icon_index || "").trim();
+        const customIconBaseParam = (params.custom_icon_base || "").trim().replace(/\/+$/,''); // 去末尾斜杠
+        const customAliasMapUrl = (params.custom_alias_map || "").trim();
+
+        if (!url) throw new Error("必须提供电视直播订阅链接");
+
+        // 拉取 M3U
+        const m3uText = await fetchM3UContent(url);
+        if (!m3uText) return [];
+
+        // 取公共图标 & 私有图标 & 私有别名
+        const [fmIcons, myIconsBundle, myAlias] = await Promise.all([
+            fetchFanmingmingIcons(),    // string[]
+            fetchMyIcons(customIconIndex), // {names:[], urlMap:{}, urlMapNorm:{}, baseFromFile?:string}
+            fetchMyAlias(customAliasMapUrl) // object
+        ]);
+
+        const myNames = myIconsBundle.names || [];
+        const iconNamesUnion = [...new Set([...myNames, ...(fmIcons || [])])];
+
+        const aliasMap = Object.assign({}, defaultAlias(), myAlias || {});
+        const customIconBase = customIconBaseParam || myIconsBundle.baseFromFile || ""; // 参数优先
+
+        const items = parseM3UContent(m3uText, iconNamesUnion, bgColor, direction, {
+            aliasMap,
+            customIconBase,
+            customUrlMap: myIconsBundle.urlMap || {},
+            customUrlMapNorm: myIconsBundle.urlMapNorm || {}
+        });
+
+        // 过滤
+        const filtered = items.filter(item => {
+            const groupMatch = !groupFilter || (() => {
+                try { return new RegExp(groupFilter, 'i').test(item.metadata?.group || ''); }
+                catch { return (item.metadata?.group?.toLowerCase() || '').includes(groupFilter.toLowerCase()); }
+            })();
+
+            const nameMatch = !nameFilter || (() => {
+                try { return new RegExp(nameFilter, 'i').test(item.title || ''); }
+                catch { return (item.title?.toLowerCase() || '').includes(nameFilter.toLowerCase()); }
+            })();
+
+            return groupMatch && nameMatch;
+        });
+
+        const total = filtered.length;
+        return filtered.map((it, idx) => ({ ...it, title: `${it.title} (${idx + 1}/${total})` }));
+    } catch (err) {
+        console.error(`解析电视直播链接时出错: ${err.message}`);
+        return [];
+    }
+}
+
+// =================== 网络请求 ===================
+async function fetchM3UContent(url) {
+    try {
+        const response = await Widget.http.get(url, {
+            headers: { 'User-Agent': 'AptvPlayer/1.4.6' }
+        });
+        if (response.data && response.data.includes("#EXTINF")) return response.data;
+        return null;
+    } catch (error) {
+        console.error(`获取M3U内容时出错: ${error.message}`);
+        return null;
+    }
+}
+
+async function fetchFanmingmingIcons() {
+    const now = Date.now();
+    if (__cache.fmIcons.data && now - __cache.fmIcons.ts < CACHE_TTL_MS) return __cache.fmIcons.data;
+    try {
+        const resp = await Widget.http.get(
+            "https://api.github.com/repos/fanmingming/live/contents/tv",
+            { headers: { 'Accept': 'application/vnd.github.v3+json' } }
+        );
+        const names = Array.isArray(resp.data)
+            ? resp.data
+                .filter(it => typeof it?.name === 'string' && it.name.toLowerCase().endsWith('.png'))
+                .map(it => it.name.replace(/\.png$/i, ''))
+            : [];
+        __cache.fmIcons = { ts: now, data: names };
+        return names;
+    } catch (e) {
+        console.error("获取公共图标失败：", e.message);
+        __cache.fmIcons = { ts: now, data: [] };
+        return [];
+    }
+}
+
+// 支持：
+// 1) 你的结构：{ title, desc, icons:[{name,url},...], base? }
+// 2) JSON 数组：["TVBS","翡翠台"] 或 ["TVBS.png", ...]
+// 3) 纯文本：每行一个名字（可带 .png）
+async function fetchMyIcons(indexUrl) {
+    if (!indexUrl) return { names: [], urlMap: {}, urlMapNorm: {}, baseFromFile: "" };
+
+    const now = Date.now();
+    if (__cache.myIcons.data && __cache.myIcons.url === indexUrl && now - __cache.myIcons.ts < CACHE_TTL_MS) {
+        return __cache.myIcons.data;
+    }
+
+    const bundle = { names: [], urlMap: {}, urlMapNorm: {}, baseFromFile: "" };
+
+    try {
+        const resp = await Widget.http.get(indexUrl, { headers: { 'User-Agent': 'AptvPlayer/1.4.6' } });
+        const textMaybe = typeof resp.data === 'string' ? resp.data : null;
+
+        if (textMaybe) {
+            // 尝试 JSON
+            try {
+                const j = JSON.parse(textMaybe);
+                parseIconsJson(j, bundle);
+            } catch {
+                // 纯文本
+                const lines = textMaybe
+                    .split(/\r?\n/)
+                    .map(s => s.trim())
+                    .filter(s => s && !s.startsWith('#'))
+                    .map(s => s.replace(/\.png$/i, ''));
+                bundle.names = [...new Set(lines)];
+            }
+        } else if (Array.isArray(resp.data)) {
+            // JSON 数组
+            const arr = resp.data.map(x => (x || '').toString().replace(/\.png$/i, ''));
+            bundle.names = [...new Set(arr)];
+        } else if (resp.data && typeof resp.data === 'object') {
+            // JSON 对象
+            parseIconsJson(resp.data, bundle);
+        }
+    } catch (e) {
+        console.error("获取自定义图标清单失败：", e.message);
+    }
+
+    // 归一化 map
+    const norm = normString;
+    for (const [k, v] of Object.entries(bundle.urlMap)) {
+        bundle.urlMapNorm[norm(k)] = v;
+    }
+
+    __cache.myIcons = { ts: now, data: bundle, url: indexUrl };
+    return bundle;
+}
+
+function parseIconsJson(obj, bundle) {
+    if (!obj || typeof obj !== 'object') return;
+    if (obj.base && typeof obj.base === 'string') {
+        bundle.baseFromFile = obj.base.replace(/\/+$/,'');
+    }
+    if (Array.isArray(obj.icons)) {
+        for (const it of obj.icons) {
+            if (!it || typeof it !== 'object') continue;
+            const rawName = (it.name || '').toString().replace(/\.png$/i, '').trim();
+            const url = (it.url || '').toString().trim();
+            if (!rawName) continue;
+            bundle.names.push(rawName);
+            if (url) bundle.urlMap[rawName] = url;
+        }
+        bundle.names = [...new Set(bundle.names)];
+    } else if (Array.isArray(obj)) {
+        const arr = obj.map(x => (x || '').toString().replace(/\.png$/i, ''));
+        bundle.names = [...new Set(arr)];
+    }
+}
+
+async function fetchMyAlias(url) {
+    if (!url) return {};
+    const now = Date.now();
+    if (__cache.myAlias.data && __cache.myAlias.url === url && now - __cache.myAlias.ts < CACHE_TTL_MS) {
+        return __cache.myAlias.data;
+    }
+    try {
+        const resp = await Widget.http.get(url, { headers: { 'User-Agent': 'AptvPlayer/1.4.6' } });
+        let obj = {};
+        if (typeof resp.data === 'string') {
+            try { obj = JSON.parse(resp.data) || {}; } catch { obj = {}; }
+        } else if (resp.data && typeof resp.data === 'object') {
+            obj = resp.data || {};
+        }
+        __cache.myAlias = { ts: now, data: obj, url };
+        return obj;
+    } catch (e) {
+        console.error("获取自定义别名失败：", e.message);
+        __cache.myAlias = { ts: now, data: {}, url };
+        return {};
+    }
+}
+
+// =================== 工具 & 解析 ===================
+function normString(s) {
+    return (s || '')
+        .toLowerCase()
+        .replace(/\s+/g, '')
+        .replace(/[\(\)（）\[\]【】]/g, '')
+        .replace(/hd$/i, '')
+        .replace(/台|臺|頻道|频道|台灣|台湾|北美|第一台|新聞|新闻/g, '')
+        .replace(/-+/g, '')
+        .replace(/_/g, '');
+}
+
+function defaultAlias() {
+    return {
+        "tvbs新闻": "TVBS新聞",
+        "翡翠一台": "翡翠台",
+        "翡翠一台北美": "翡翠台",
+        "鳳凰衛視中文": "鳳凰衛視中文台",
+        "鳳凰衛視資訊": "鳳凰衛視資訊台",
+        "鳳凰衛視香港": "鳳凰衛視香港台",
+        "民视": "民視",
+        "民視第一": "民視第一台",
+        "三立live": "三立LIVE",
+        "东森新闻": "東森新聞",
+        "寰宇新闻台": "寰宇新聞台",
+        "japannews24hlive": "Japan News 24H LIVE",
+        "日テレnewslive": "日テレNEWS LIVE",
+        "eurosport 1": "EuroSport1",
+        "eurosport 2": "EuroSport2",
+        "nba tv": "NBA TV",
+        "unifi sports 1": "unifi Sports 1"
+    };
+}
+
+function makeIconMatcher(iconList, aliasMap) {
+    const index = new Map();
+    for (const name of iconList || []) {
+        if (!name) continue;
+        index.set(normString(name), name);
+    }
+
+    const pickName = (title, tvgName) => {
+        const candidates = [title, tvgName].filter(Boolean);
+
+        // 直接命中
+        for (const c of candidates) {
+            const n = normString(c);
+            if (index.has(n)) return index.get(n);
+        }
+
+        // 别名 → 命中
+        const tryAlias = (c) => {
+            if (!aliasMap) return null;
+            const rawAli = aliasMap[c] || aliasMap[normString(c)];
+            if (!rawAli) return null;
+            const nAli = normString(rawAli);
+            if (index.has(nAli)) return index.get(nAli);
+            if (index.has(rawAli)) return rawAli;
+            return null;
+        };
+        for (const c of candidates) {
+            const hit = tryAlias(c);
+            if (hit) return hit;
+        }
+
+        // 再剪尾缀试一次
+        for (const c of candidates) {
+            const n2 = normString(c).replace(/(live|news|高清|uhd)$/i, '');
+            if (index.has(n2)) return index.get(n2);
+        }
+        return null;
+    };
+
+    return { pickName };
+}
+
+function buildIconUrls({ cover, iconName, bgColor, customIconBase, customUrlMap, customUrlMapNorm }) {
+    // 1) m3u 自带 tvg-logo 最优先
+    if (cover) return { poster: cover, backdrop: cover };
+
+    // 2) 命中匹配名 → 优先使用你 icons.json 里的 URL
+    if (iconName) {
+        const norm = normString(iconName);
+        const fromJsonUrl = (customUrlMap && customUrlMap[iconName]) || (customUrlMapNorm && customUrlMapNorm[norm]);
+        if (fromJsonUrl) return { poster: fromJsonUrl, backdrop: fromJsonUrl };
+
+        // 3) 若提供了基址，拼 base/<Name>.png
+        if (customIconBase) {
+            const u = `${customIconBase}/${encodeURIComponent(iconName)}.png`;
+            return { poster: u, backdrop: u };
+        }
+
+        // 4) 回退公共库（imagekit 合成）
+        const poster = `https://ik.imagekit.io/huangxd/tr:l-image,i-transparent.png,w-bw_mul_3.5,h-bh_mul_3,bg-${bgColor},lfo-center,l-image,i-${encodeURIComponent(iconName)}.png,lfo-center,l-end,l-end/${encodeURIComponent(iconName)}.png`;
+        const backdrop = `https://ik.imagekit.io/huangxd/tr:l-image,i-transparent.png,w-bw_mul_1.5,h-bh_mul_4,bg-${bgColor},lfo-center,l-image,i-${encodeURIComponent(iconName)}.png,lfo-center,l-end,l-end/${encodeURIComponent(iconName)}.png`;
+        return { poster, backdrop };
+    }
+
+    // 5) 最终兜底
+    return {
+        poster: "https://i.miji.bid/2025/05/17/343e3416757775e312197588340fc0d3.png",
+        backdrop: "https://i.miji.bid/2025/05/17/c4a0703b68a4d2313a27937d82b72b6a.png"
+    };
+}
+
+function parseM3UContent(content, iconList, bgColor, direction, options = {}) {
+    if (!content || !content.trim()) return [];
+    const { aliasMap = {}, customIconBase = "", customUrlMap = {}, customUrlMapNorm = {} } = options;
+
+    const { pickName } = makeIconMatcher(iconList, aliasMap);
+
+    const lines = content.split(/\r?\n/);
+    const items = [];
+    let currentItem = null;
+
+    const extInfRegex = /^#EXTINF:(-?\d+)(.*),(.*)$/;
+    const groupRegex = /group-title="([^"]+)"/;
+    const tvgNameRegex = /tvg-name="([^"]+)"/;
+    const tvgLogoRegex = /tvg-logo="([^"]+)"/;
+    const tvgIdRegex = /tvg-id="([^"]+)"/;
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line || line.startsWith('#EXTM3U')) continue;
+
+        if (line.startsWith('#EXTINF:')) {
+            const match = line.match(extInfRegex);
+            if (match) {
+                const duration = match[1];
+                const attributes = match[2];
+                const title = match[3].trim();
+
+                const groupMatch = attributes.match(groupRegex);
+                const tvgNameMatch = attributes.match(tvgNameRegex);
+                const tvgLogoMatch = attributes.match(tvgLogoRegex);
+                const tvgIdMatch = attributes.match(tvgIdRegex);
+
+                const group = groupMatch ? groupMatch[1] : '未分类';
+                const tvgName = tvgNameMatch ? tvgNameMatch[1] : title;
+                const cover = tvgLogoMatch ? tvgLogoMatch[1] : '';
+                const tvgId = tvgIdMatch ? tvgIdMatch[1] : '';
+
+                currentItem = { duration, title, group, tvgName, tvgId, cover, url: null };
+            }
+        } else if (currentItem && line && !line.startsWith('#')) {
+            const url = line;
+
+            const iconName = pickName(currentItem.title, currentItem.tvgName);
+            const { poster, backdrop } = buildIconUrls({
+                cover: currentItem.cover,
+                iconName,
+                bgColor,
+                customIconBase,
+                customUrlMap,
+                customUrlMapNorm
+            });
+
+            const item = {
+                id: url,
+                type: "url",
+                title: currentItem.title,
+                backdropPath: backdrop,
+                previewUrl: "",
+                link: url,
+                metadata: {
+                    group: currentItem.group,
+                    tvgName: currentItem.tvgName,
+                    tvgId: currentItem.tvgId
+                }
+            };
+
+            if (!direction || direction === "V") {
+                item.posterPath = poster;
+            }
+
+            items.push(item);
+            currentItem = null;
+        }
+    }
+    return items;
+}
+
+// =================== 详情页（直链探测） ===================
+async function loadDetail(link) {
+    let videoUrl = link;
+    let childItems = [];
+
+    const formats = ['m3u8', 'mp4', 'mp3', 'flv', 'avi', 'mov', 'wmv', 'webm', 'ogg', 'mkv', 'ts'];
+    if (!formats.some(fmt => link.includes(fmt))) {
+        const url = `https://redirect-check.hxd.ip-ddns.com/redirect-check?url=${encodeURIComponent(link)}`;
+        const resp = await Widget.http.get(url, { headers: { "User-Agent": "AptvPlayer/1.4.6" } });
+
+        if (resp.data && resp.data.location && formats.some(fmt => resp.data.location.includes(fmt))) {
+            videoUrl = resp.data.location;
+        }
+
+        if (resp.data && resp.data.error && resp.data.error.includes("超时")) {
+            childItems = [{
+                id: videoUrl,
+                type: "url",
+                title: "超时/上面直播不可用",
+                posterPath: "https://i.miji.bid/2025/05/17/561121fb0ba6071d4070627d187b668b.png",
+                backdropPath: "https://i.miji.bid/2025/05/17/561121fb0ba6071d4070627d187b668b.png",
+                link: videoUrl,
+            }];
+        }
+    }
+
+    return {
+        id: link,
+        type: "detail",
+        videoUrl,
+        customHeaders: {
+            "Referer": link,
+            "User-Agent": "AptvPlayer/1.4.6",
+        },
+        childItems,
+    };
+}
