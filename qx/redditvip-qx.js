@@ -1,8 +1,13 @@
 /*
- * Reddit Premium 解锁&去广告 兼容版（QX/Surge/Loon）
- * 作者：Mikephie（兼容修订）
- *
- * 提示：本文件仅是脚本。重写与 MITM 请放在各工具的配置里（下方已给出示例）。
+ * Reddit Premium 解锁&去广告全兼容脚本
+ * 作者：Mikephie
+ 
+[rewrite_local]
+^https?:\/\/gql(-fed)?\.reddit\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip-qx.js
+
+[MITM]
+hostname = gql.reddit.com, gql-fed.reddit.com
+
  */
 
 // ===== 轻量通知 + 冷却 =====
