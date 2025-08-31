@@ -14,17 +14,31 @@ hostname = rdp.duetdisplay.com
 
 */
 
-// -------- 通知（带冷却）逻辑开始 --------
-const cooldownMs = 10 * 60 * 1000;
-const notifyKey = "DuetDisplayPro_notify_key";
-const now = Date.now();
-let lastNotifyTime = $persistentStore.read(notifyKey) ? parseInt($persistentStore.read(notifyKey)) : 0;
-if (now - lastNotifyTime > cooldownMs) {
-    $notification.post("✨DuetDisplayPro✨", "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ", "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽");
-    $persistentStore.write(now.toString(), notifyKey);
-}
-// -------- 通知（带冷却）逻辑结束 --------
+// ===== 轻量通知 + 冷却 =====
+const APP_NAME = "✨ DuetDisplayPro ✨";   // ← 只改这个显示名
+const ID = "duetdisplaypro";              // ← 对应键名，保持纯字母数字（无 emoji）
 
+const EN = "n:"+ID+":e";             // 开关
+const TS = "n:"+ID+":t";             // 时间戳
+const CD = 600000;                   // 冷却时长：10 分钟（毫秒）
+
+// ---- 通知函数（兼容 QX / Surge / Loon）----
+function notify(t,s,b){
+  if (typeof $notify==="function") $notify(t,s,b);
+  else if ($notification?.post) $notification.post(t,s,b);
+  else console.log("[Notify]", t, s, b);
+}
+
+// ---- 判定逻辑 ----
+let enabled = (($persistentStore.read(EN) || "1") === "1");
+if (enabled) {
+  let now  = Date.now();
+  let last = parseInt($persistentStore.read(TS) || "0",10) || 0;
+  if (last===0 || now-last>CD) {
+    notify(APP_NAME,"💖永久解锁 🆚 ⓿❽-⓿❽-❷⓿❽❽💗");
+    $persistentStore.write(String(now), TS);
+  }
+}
 // 主脚本函数...
 var obj = JSON.parse($response.body);
 if (!obj) { $done({}); }
