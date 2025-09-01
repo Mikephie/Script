@@ -91,7 +91,7 @@ try {
             appName: appName,
             notifyKey: `scan_app_${appType}_0428_v5`,
             author: "🅜ⓘ🅚ⓔ🅟ⓗ🅘ⓔ",
-            message: "永久解锁或 ⓿❽-⓿❽-❷⓿❽❽"
+            message: "💖永久解锁 🆚 ⓿❽-⓿❽-❷⓿❽❽💗"
         };
         
         const cooldownMinutes = 10; 
