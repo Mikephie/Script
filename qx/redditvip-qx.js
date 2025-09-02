@@ -11,158 +11,153 @@ hostname = gql.reddit.com, gql-fed.reddit.com
 
  */
 
-// == Reddit GQL Cleaner (Full) ==
-// 2025-09-02T11:47:12+08:00  (Asia/Singapore)
-// 解密后可读版，包含首屏空白修复与广告过滤兜底
-;var encode_version = 'jsjiami.com.v7'; // 按要求保留，避免被清理器误删检测段
-const VERSION = '1.1.1-20250902';
+// == Reddit Cleaner (Full, Stable) ==
+// 2025-09-02T12:18:00+08:00  Asia/Singapore
+// 说明：仅做"响应清洗"，不再拦"请求"，防止首屏空白；扩展识别 gateway 接口；三级兜底。
+// 标记保留：
+;var encode_version = 'jsjiami.com.v7';
+const VERSION = '1.2.0-20250902';
 
-// 统一入口：根据 $request / $response 判断执行分支
+// ---- 可选：从 argument 里读开关（Surge/QX/Loon 均支持 $argument）----
+const ARG = (typeof $argument === 'string' && $argument) ? Object.fromEntries(
+  $argument.split('&').map(kv => kv.split('=').map(decodeURIComponent))
+) : {};
+const DEBUG = ARG.debug === '1';
+const MODE  = (ARG.mode || 'auto'); // auto / wide / strict
+
 (function main() {
   try {
-    if (typeof $request !== 'undefined' && $request) {
-      // === 请求阶段（首屏兼容：不再拦截 Ads；仅透传） ===
-      // 你也可以在此做 header 微调/统计，但为避免空白首屏，这里不改动
-      $done({});
-      return;
-    }
-
     if (typeof $response !== 'undefined' && $response) {
-      // === 响应阶段：清洗 + 兜底 ===
-      handleResponse();
-      return;
+      return handleResponse();
     }
-
-    // 既不是请求也不是响应（极少数环境），直接结束
+    // 请求阶段：不做任何拦截，防止首屏空白
     $done({});
   } catch (e) {
-    console.log('[reddit_cleaner][fatal]', e && (e.stack || e));
-    // 出错也尽量不阻断
-    if (typeof $response !== 'undefined' && $response && typeof $response.body === 'string') {
-      $done({ body: $response.body });
-    } else {
-      $done({});
-    }
+    log('fatal', e);
+    if (typeof $response !== 'undefined' && $response?.body) return $done({ body: $response.body });
+    $done({});
   }
 })();
 
-/** ========== 工具集 ========== **/
+/*** 工具 ***/
+function log(...a){ if (DEBUG) console.log('[reddit-cleaner]', ...a); }
 const S = {
-  safeParse(txt) {
-    try { return JSON.parse(txt); } catch { return null; }
-  },
-  safeStringify(obj) {
-    try { return JSON.stringify(obj); } catch { return ''; }
-  },
+  parse(s){ try{ return JSON.parse(s) }catch{ return null } },
+  str(o){ try{ return JSON.stringify(o) }catch{ return '' } },
 
-  // ---- 明确广告（保守）----仅剔除 100% 确认是广告的节点
-  isAdNodeStrict(node) {
-    if (!node || typeof node !== 'object') return false;
-    const t = String(node.__typename || '');
-    if (/^Ad[A-Z0-9_]*$/i.test(t)) return true; // Ad / AdPost / AdSomething...
-    if (node.adPayload) return true;
+  // ---- 广告判定（更全）----
+  isAdStrict(obj){
+    if (!obj || typeof obj !== 'object') return false;
+    const t = String(obj.__typename || '');
+    if (/^Ad([A-Z0-9_]+)?$/i.test(t)) return true;
+    if (obj.adPayload) return true;
+    // REST 风格常见标志
+    if (obj.isSponsored === true) return true;
+    if (obj.promoted === true) return true;
+    if (obj.ad_metadata || obj.adServing || obj.promo || obj.promotedBy) return true;
     return false;
   },
-
-  // ---- 广谱广告（激进）----尽可能多识别广告
-  isAdNodeWide(node) {
-    if (!node || typeof node !== 'object') return false;
-    const t = String(node.__typename || '');
+  isAdWide(obj){
+    if (!obj || typeof obj !== 'object') return false;
+    const t = String(obj.__typename || '');
     if (/Ad/i.test(t)) return true;
-    if (node.adPayload) return true;
-    if (Array.isArray(node.cells) && node.cells.some(c => /Ad/i.test(String(c?.__typename || '')))) return true;
+    if (obj.adPayload) return true;
+    if (Array.isArray(obj.cells) && obj.cells.some(c => /Ad/i.test(String(c?.__typename || '')))) return true;
+    // 其他宽判定
+    if (obj.isSponsored || obj.promoted) return true;
+    if (obj.ad_metadata || obj.adServing || obj.promo || obj.promotedBy) return true;
     return false;
   },
 
-  // 深度修正字段 + 过滤广告 edges（带兜底）
-  deepFix(x) {
-    if (Array.isArray(x)) {
-      const arrBefore = x.map(S.deepFix);
-      const looksLikeEdges =
-        arrBefore.length &&
-        (arrBefore[0]?.node !== undefined || typeof arrBefore[0] === 'object');
+  // ---- 字段修正 ----（与旧版等效）
+  fixFields(k, obj){
+    switch (k){
+      case 'isObfuscated': obj[k] = false; break;
+      case 'obfuscatedPath': obj[k] = null; break;
 
-      if (!looksLikeEdges) return arrBefore;
+      case 'isNsfw':
+      case 'isNsfwMediaBlocked':
+      case 'isNsfwContentShown':
+        obj[k] = false; break;
 
-      // 1) 广谱过滤
-      let filtered = arrBefore.filter(item => {
-        const n = item?.node ?? item;
-        return !S.isAdNodeWide(n);
-      });
+      case 'isAdPersonalizationAllowed':
+      case 'isThirdPartyInfoAdPersonalizationAllowed':
+        obj[k] = false; break;
 
-      // 2) 兜底①：若被清空但原先有内容 → 退回严格过滤
-      if (filtered.length === 0 && arrBefore.length > 0) {
-        filtered = arrBefore.filter(item => {
-          const n = item?.node ?? item;
-          return !S.isAdNodeStrict(n);
-        });
+      case 'isPremiumMember':
+      case 'isEmployee':
+        obj[k] = true; break;
+    }
+  },
 
-        // 3) 兜底②：仍为空 → 全量保留，避免首屏空白
-        if (filtered.length === 0) filtered = arrBefore;
+  // ---- 深度修正 + 过滤（带兜底）----
+  deepFix(x){
+    if (Array.isArray(x)){
+      const a0 = x.map(S.deepFix);
+
+      // 是否像 edges / items 列表
+      const looksLikeList = a0.length && (a0[0]?.node !== undefined || typeof a0[0] === 'object');
+
+      if (!looksLikeList) return a0;
+
+      const strict = it => !S.isAdStrict(it?.node ?? it);
+      const wide   = it => !S.isAdWide(it?.node ?? it);
+
+      let filtered;
+      if (MODE === 'strict') {
+        filtered = a0.filter(strict);
+      } else if (MODE === 'wide') {
+        filtered = a0.filter(wide);
+        if (filtered.length === 0 && a0.length > 0) filtered = a0.filter(strict);
+        if (filtered.length === 0) filtered = a0; // 兜底保留
+      } else { // auto：先宽后严再保留
+        filtered = a0.filter(wide);
+        if (filtered.length === 0 && a0.length > 0) filtered = a0.filter(strict);
+        if (filtered.length === 0) filtered = a0;
       }
-
       return filtered;
     }
 
-    if (x && typeof x === 'object') {
-      for (const k of Object.keys(x)) {
-        const v = x[k];
-
-        // ---- 字段修正（与原混淆脚本等效）----
-        if (k === 'isObfuscated') x[k] = false;
-        else if (k === 'obfuscatedPath') x[k] = null;
-
-        else if (k === 'isNsfw') x[k] = false;
-        else if (k === 'isNsfwMediaBlocked') x[k] = false;
-        else if (k === 'isNsfwContentShown') x[k] = false;
-
-        else if (k === 'isAdPersonalizationAllowed') x[k] = false;
-        else if (k === 'isThirdPartyInfoAdPersonalizationAllowed') x[k] = false;
-
-        else if (k === 'isPremiumMember') x[k] = true;
-        else if (k === 'isEmployee') x[k] = true;
-
-        x[k] = S.deepFix(v);
+    if (x && typeof x === 'object'){
+      for (const k of Object.keys(x)){
+        S.fixFields(k, x);
+        x[k] = S.deepFix(x[k]);
       }
       return x;
     }
-
     return x;
   }
 };
 
-/** ========== 响应处理 ========== **/
-function handleResponse() {
+/*** 响应处理 ***/
+function handleResponse(){
   let raw = $response.body || '';
 
-  // 文本层预清洗（与原脚本的多段 .replace 等效，先粗修布尔/路径）
-  try {
+  // 文本层粗修（与旧混淆脚本多段 replace 等效）
+  try{
     raw = raw
       .replace(/"isObfuscated":\s*true/g, '"isObfuscated":false')
       .replace(/"obfuscatedPath":"[^"]*"/g, '"obfuscatedPath":null')
-
       .replace(/"isNsfw":\s*true/g, '"isNsfw":false')
       .replace(/"isNsfwMediaBlocked":\s*true/g, '"isNsfwMediaBlocked":false')
       .replace(/"isNsfwContentShown":\s*true/g, '"isNsfwContentShown":false')
-
       .replace(/"isAdPersonalizationAllowed":\s*true/g, '"isAdPersonalizationAllowed":false')
       .replace(/"isThirdPartyInfoAdPersonalizationAllowed":\s*true/g, '"isThirdPartyInfoAdPersonalizationAllowed":false')
-
       .replace(/"isPremiumMember":\s*false/g, '"isPremiumMember":true')
       .replace(/"isEmployee":\s*false/g, '"isEmployee":true');
-  } catch (_) {}
+  }catch(_){}
 
-  const obj = S.safeParse(raw);
-  if (!obj) {
-    // JSON 解析失败，原样回传以防断流
-    $done({ body: raw });
-    return;
+  const obj = S.parse(raw);
+  if (!obj){
+    // 不是 JSON（或解析失败）→ 原样回传，避免断流
+    log('non-json or parse fail; passthrough');
+    return $done({ body: raw });
   }
 
   const fixed = S.deepFix(obj);
-  const out = S.safeStringify(fixed) || raw;
+  const out = S.str(fixed) || raw;
   $done({ body: out });
 }
 
-// 兼容某些检测脚本/清理器
+// 兼容检测/清理器标识
 var version_ = 'jsjiami.com.v7';
