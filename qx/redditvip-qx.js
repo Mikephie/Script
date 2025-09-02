@@ -4,7 +4,7 @@
  
 [rewrite_local]
 #^https?:\/\/gql(-fed)?\.reddit\.com url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip-qx.js
-^https?:\/\/gql(-fed)?\.reddit\.com\/.+ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip-qx.js
+^https?:\/\/gql-fed\.reddit\.com\/$ url script-response-body https://raw.githubusercontent.com/Mikephie/Script/main/qx/redditvip-qx.js
 
 [MITM]
 hostname = gql.reddit.com, gql-fed.reddit.com
