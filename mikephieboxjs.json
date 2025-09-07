@@ -95,6 +95,51 @@
       "script": "https://raw.githubusercontent.com/Mikephie/Task/main/kuwotimes.js"
     },
     {
+      "id": "QQreader",
+      "name": "QQ阅读",
+      "keys": ["ywguid", "ywkey", "ywtoken", "csigs"],
+      "desc": "自动完成QQ阅读任务",
+      "settings": [
+        {
+          "id": "ywguid",
+          "name": "ywguid",
+          "val": "",
+          "type": "text",
+          "placeholder": "",
+          "desc": ""
+        },
+        {
+          "id": "ywkey",
+          "name": "ywkey",
+          "val": "",
+          "type": "text",
+          "placeholder": "",
+          "desc": ""
+        },
+        {
+          "id": "ywtoken",
+          "name": "ywtoken",
+          "val": "",
+          "type": "text",
+          "placeholder": "",
+          "desc": ""
+        },
+        {
+          "id": "csigs",
+          "name": "csigs",
+          "val": "",
+          "type": "text",
+          "placeholder": "",
+          "desc": ""
+        }
+      ],
+      "script": "https://raw.githubusercontent.com/Mikephie/Task/main/QQreader.js",
+      "icons": [
+        "https://raw.githubusercontent.com/General74110/Scripts/master/img/qqreader.png",
+        "https://raw.githubusercontent.com/General74110/Scripts/master/img/qqreader.png"
+      ]
+    },
+    {
       "id": "Auto_join_TF",
       "name": "TestFlight监控",
       "author": "@Mikephie",
