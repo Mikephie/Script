@@ -101,37 +101,5 @@
       "name": "小猫咪资源",
       "detail": "https://zy.xmm.hk"
     }
-  },
-  "custom_category": [
-    {
-      "name": "电影",
-      "type": "movie",
-      "query": "电影|动作|喜剧|爱情|恐怖|科幻|剧情"
-    },
-    {
-      "name": "电视剧",
-      "type": "tv",
-      "query": "连续剧|国产剧|美剧|韩剧|日剧"
-    },
-    {
-      "name": "综艺",
-      "type": "variety",
-      "query": "综艺|真人秀"
-    },
-    {
-      "name": "动漫",
-      "type": "anime",
-      "query": "动画|动漫|番剧"
-    },
-    {
-      "name": "短剧",
-      "type": "tv",
-      "query": "短剧|微剧"
-    },
-    {
-      "name": "4K专区",
-      "type": "movie",
-      "query": "4K|2160p|超清"
-    }
-  ]
+  }
 }
