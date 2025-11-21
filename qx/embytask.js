@@ -50,7 +50,7 @@ function Env(name) {
 const $ = new Env('Emby保号任务');
 
 const SERVER_KEYS = {
-    'th': { key: 'emby_th_playing', name: 'tanhuatv', comment: '探花' },
+    'OkEmby': { key: 'emby_OkEmby_playing', name: 'OkEmby', comment: 'OkEmby' },
     'ml': { key: 'emby_th_playing', name: 'meowfly', comment: '喵了' },
     'sntp': { key: 'emby_sntp_playing', name: 'SNTP', comment: 'SNTP' },
     'nf': { key: 'emby_nf_playing', name: 'Nanflix', comment: 'Nanflix' }

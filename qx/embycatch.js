@@ -5,11 +5,11 @@ const NOTIFY_COUNT_KEY = 'notify_count';
 
 // 服务器配置
 const SERVERS = {
-    'tanhuatv': {
-        domain: 'tanhuatv.site',
-        prefix: 'th',
-        storage_key: 'emby_th_playing',
-        comment: '探花'
+    'OkEmby': {
+        domain: 'link00.okemby.org',
+        prefix: 'OkEmby',
+        storage_key: 'emby_OkEmby_playing',
+        comment: 'OkEmby'
     },
     'meowfly': {
         domain: 'gy.meowfly.de',
