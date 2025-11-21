@@ -1,193 +1,71 @@
-function Env(name) {
-    this.name = name;
-    this.startTime = Date.now();
-    
-    this.isLoon = typeof $loon !== 'undefined';
-    this.isQuanX = typeof $task !== 'undefined';
-    this.isSurge = typeof $httpClient !== 'undefined' && !this.isLoon;
-    
-    this.notify = (title, subtitle, message) => {
-        if (this.isLoon || this.isSurge) {
-            $notification.post(title, subtitle, message);
-        } else if (this.isQuanX) {
-            $notify(title, subtitle, message);
-        }
-    };
-    
-    this.persist = {
-        read: (key) => {
-            if (this.isLoon || this.isSurge) {
-                return $persistentStore.read(key);
-            } else if (this.isQuanX) {
-                return $prefs.valueForKey(key);
-            }
-        }
-    };
-    
-    this.http = {
-        post: (options) => {
-            if (this.isLoon || this.isSurge) {
-                return new Promise((resolve, reject) => {
-                    $httpClient.post(options, (error, response, data) => {
-                        if (error) reject(error);
-                        else resolve({ response, data });
-                    });
-                });
-            } else if (this.isQuanX) {
-                options.method = 'POST';
-                return $task.fetch(options);
-            }
-        }
-    };
-    
-    this.done = (value) => {
-        if (this.isLoon || this.isQuanX || this.isSurge) $done(value);
-    };
+// embytask.min.js -- 精简版（定时保号任务）
+const $ = new Env('EmbyTask');
+const SERVERS = {
+  OkEmby: { domain: 'link00.okemby.org', key: 'emby_OkEmby_playing', name: 'OkEmby' },
+  meowfly: { domain: 'gy.meowfly.de', key: 'emby_meowfly_playing', name: 'meowfly' },
+  SNTP: { domain: 'lite.cn2gias.uk', key: 'emby_sntp_playing', name: 'SNTP' },
+  一之濑琴美: { domain: 'emby.191920.xyz', key: 'emby_191920_playing', name: '一之濑琴美' },
+	㬋閡: { domain: 'emby.hohai.eu.org', key: 'emby_hohai_playing', name: '㬋閡' },
+  占位: { domain: '占位', key: 'emby_占位_playing', name: '占位' }
+};
 
-    console.log(`[ENV] 脚本运行环境: ${this.isLoon ? 'Loon' : this.isQuanX ? 'QuantumultX' : this.isSurge ? 'Surge' : 'unknown'}`);
+const formatTime = ()=>{const n=new Date();return `${String(n.getHours()).padStart(2,'0')}:${String(n.getMinutes()).padStart(2,'0')}:${String(n.getSeconds()).padStart(2,'0')}`};
+
+const postJson = (opts) => {
+  // small wrapper: supports Surge/Loon/QuanX
+  return $.http.post(opts);
+};
+
+const process = async (srv, stored) => {
+  try {
+    const req = JSON.parse(stored);
+    const urlObj = new URL(req.url);
+    const host = urlObj.port ? `${urlObj.hostname}:${urlObj.port}` : urlObj.hostname;
+    const videoId = req.url.match(/videos\/([^\/]+)/)?.[1] || req.url.match(/md5=([^&]+)/)?.[1];
+    const userId = (req.headers && req.headers['X-Emby-Authorization'] && req.headers['X-Emby-Authorization'].match(/UserId="([^"]+)"/)?.[1]) || '';
+    if (!videoId || !userId) throw new Error('缺少 videoId 或 userId');
+
+    const headers = Object.assign({}, req.headers, { 'Content-Type': 'application/json' });
+    const playSessionId = req.url.match(/PlaySessionId=([^&]+)/)?.[1] || '';
+
+    const startUrl = `${urlObj.protocol}//${host}/emby/Sessions/Playing`;
+    const startBody = JSON.stringify({ ItemId: videoId, PlayMethod: 'DirectStream', PlaySessionId: playSessionId });
+
+    console.log(`[${srv.name}] 开始请求 ${startUrl}`);
+    await Promise.race([postJson({ url: startUrl, headers, body: startBody }), new Promise((_,r)=>setTimeout(()=>r(new Error('timeout')),5000))]);
+
+    const progressUrl = `${urlObj.protocol}//${host}/emby/Sessions/Playing/Progress`;
+    const progressBody = JSON.stringify({ ItemId: videoId, PositionTicks: 10000000, IsPaused: false, PlayMethod: 'DirectStream', PlaySessionId: playSessionId });
+
+    const resp = await Promise.race([postJson({ url: progressUrl, headers, body: progressBody }), new Promise((_,r)=>setTimeout(()=>r(new Error('timeout')),5000))]);
+    const status = (resp && resp.response && resp.response.status) || (resp && resp.status) || 0;
+
+    console.log(`[${srv.name}] 进度响应: ${status}`);
+    return status === 204 || status === 200 ? { success: true, host } : { success: false, host };
+  } catch (e) {
+    console.log(`[${srv.name}] 错误: ${e.message}`);
+    return { success: false, host: (stored && JSON.parse(stored).url ? new URL(JSON.parse(stored).url).hostname : '-') };
+  }
+};
+
+(async ()=>{
+  console.log(`[Task] 开始执行 ${formatTime()}`);
+  const results = {};
+  for (const key of Object.keys(SERVERS)) {
+    const srv = SERVERS[key];
+    const stored = $.persist.read(srv.key);
+    if (!stored) { console.log(`[${srv.name}] 无存储数据`); results[srv.name] = { success: 0, host: '-' }; continue; }
+    const r = await process(srv, stored);
+    results[srv.name] = { success: r.success ? 1 : 0, host: r.host || '-' };
+    await new Promise(r=>setTimeout(r,200)); // 小间隔
+  }
+
+  const message = Object.entries(results).map(([n,s])=>`${n} (${s.host}) ${s.success? '✅':'❌'}`).join('\n');
+  const allOk = Object.values(results).every(r=>r.success===1);
+  $.notify('Emby保号任务', allOk ? '全部成功 ✅' : '部分/全部失败', `${message}`);
+  $.done({ results });
+})();
+ 
+/* 简易 Env：请替换为你的执行环境中已有的 Env 实现（或把上面的 Env 合并复用） */
+function Env(name){ /* 同上：保留平台兼容的 http.post、persist.read、notify、done */ return new (function(){this.name=name;this.http={post:(opts)=>{return new Promise((res,rej)=>{if(typeof $httpClient!=='undefined'){$httpClient.post(opts,(e,r,d)=>e?rej(e):res({response:r,data:d}));}else if(typeof $task!=='undefined'){opts.method='POST';$task.fetch(opts).then(res).catch(rej);}else rej(new Error('No http'))})}};this.persist={read:(k)=>{if(typeof $persistentStore!=='undefined')return $persistentStore.read(k); if(typeof $prefs!=='undefined')return $prefs.valueForKey(k); return null}};this.notify=(t,s,m)=>{if(typeof $notification!=='undefined')$notification.post(t,s,m); if(typeof $notify!=='undefined')$notify(t,s,m)};this.done=(v)=>{if(typeof $done!=='undefined')$done(v)} })();
 }
-
-const $ = new Env('Emby保号任务');
-
-const SERVER_KEYS = {
-    'OkEmby': { key: 'emby_OkEmby_playing', name: 'OkEmby', comment: 'OkEmby' },
-    'meowfly': { key: 'emby_meowfly_playing', name: 'meowfly', comment: 'meowfly' },
-    'sntp': { key: 'emby_sntp_playing', name: 'SNTP', comment: 'SNTP' },
-    'nf': { key: 'emby_nf_playing', name: 'Nanflix', comment: 'Nanflix' }
-};
-
-const formatTime = () => {
-    const now = new Date();
-    return `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
-};
-
-const processRequest = async (server, requestData) => {
-    return new Promise((resolve) => {
-        const timeoutPromise = new Promise((_, reject) => {
-            setTimeout(() => reject(new Error('请求超时')), 5000);
-        });
-
-        const requestPromise = (async () => {
-            try {
-                const urlObj = new URL(requestData.url);
-                const domainWithPort = urlObj.port ? `${urlObj.hostname}:${urlObj.port}` : urlObj.hostname;
-
-                const videoId = requestData.url.match(/videos\/([^\/]+)/)?.[1] || requestData.url.match(/md5=([^&]+)/)?.[1];
-                if (!videoId) throw new Error('无法提取 VideoId');
-
-                const userIdMatch = requestData.headers['X-Emby-Authorization'].match(/UserId="([^"]+)"/);
-                const userId = userIdMatch ? userIdMatch[1] : null;
-                if (!userId) throw new Error('无法提取 UserId');
-
-                const headers = {
-                    ...requestData.headers,
-                    'Content-Type': 'application/json'
-                };
-                const playSessionId = requestData.url.match(/PlaySessionId=([^&]+)/)?.[1] || '';
-
-                // Step 1: 初始化播放会话
-                const startUrl = `${urlObj.protocol}//${domainWithPort}/emby/Sessions/Playing`;
-                const startBody = JSON.stringify({
-                    ItemId: videoId,
-                    PlayMethod: 'DirectStream',
-                    PlaySessionId: playSessionId
-                });
-                console.log(`[Task] 执行 ${server.comment} 开始请求: ${startUrl}`);
-                console.log(`[Task] 开始请求体: ${startBody}`);
-                const startResponse = await $.http.post({ url: startUrl, headers, body: startBody });
-                console.log(`[Task] ${server.comment} 开始响应: HTTP ${startResponse.response.status}, 数据: ${startResponse.data || '无内容'}`);
-
-                // Step 2: 更新播放进度
-                const progressUrl = `${urlObj.protocol}//${domainWithPort}/emby/Sessions/Playing/Progress`;
-                const progressBody = JSON.stringify({
-                    ItemId: videoId,
-                    PositionTicks: 10000000,
-                    IsPaused: false,
-                    PlayMethod: 'DirectStream',
-                    PlaySessionId: playSessionId
-                });
-                console.log(`[Task] 执行 ${server.comment} 进度请求: ${progressUrl}`);
-                console.log(`[Task] 进度请求体: ${progressBody}`);
-                const { response, data } = await $.http.post({
-                    url: progressUrl,
-                    headers,
-                    body: progressBody
-                });
-
-                console.log(`[Task] ${server.comment} 进度响应: HTTP ${response.status}, 数据: ${data || '无内容'}`);
-                if (response.status === 204 || response.status === 200) {
-                    if (data && (data.includes('invalid') || data.includes('expired'))) {
-                        throw new Error(`服务器响应错误: ${data}`);
-                    }
-                    console.log(`[Task] ${server.comment} 请求成功: ${data || '无响应内容 (204 No Content)'}`);
-                    return { success: true, domain: domainWithPort, comment: server.comment };
-                } else {
-                    throw new Error(`HTTP 状态码异常: ${response.status}`);
-                }
-            } catch (error) {
-                console.log(`[Task] ${server.comment} 请求失败: ${error.message || '未知错误'}`);
-                console.log(`[Task] ${server.comment} 错误详情: ${JSON.stringify(error)}`);
-                return { success: false, domain: new URL(requestData.url).hostname || '-', comment: server.comment };
-            }
-        })();
-
-        Promise.race([requestPromise, timeoutPromise])
-            .then(resolve)
-            .catch((error) => {
-                console.log(`[Task] ${server.comment} 请求异常: ${error.message || '未知异常'}`);
-                console.log(`[Task] ${server.comment} 异常详情: ${JSON.stringify(error)}`);
-                resolve({ success: false, domain: new URL(requestData.url).hostname || '-', comment: server.comment });
-            });
-    });
-};
-
-const doTask = async () => {
-    console.log(`[Task] 开始执行定时任务 [${formatTime()}]`);
-    const startTime = Date.now();
-    const serverResults = {};
-
-    for (const [serverId, server] of Object.entries(SERVER_KEYS)) {
-        const data = $.persist.read(server.key);
-        if (data) {
-            try {
-                const parsedData = JSON.parse(data);
-                const result = await processRequest(server, parsedData);
-                serverResults[server.comment] = {
-                    success: result.success ? 1 : 0,
-                    total: 1,
-                    domain: result.domain
-                };
-            } catch (e) {
-                console.log(`[Task] ${server.comment} 数据解析失败: ${e.message}`);
-                serverResults[server.comment] = { success: 0, total: 1, domain: '-' };
-            }
-        } else {
-            console.log(`[Task] ${server.comment} 无存储数据`);
-            serverResults[server.comment] = { success: 0, total: 1, domain: '-' };
-        }
-        await new Promise(r => setTimeout(r, 200));
-    }
-
-    const duration = ((Date.now() - startTime) / 1000).toFixed(1);
-    const serverCount = Object.keys(serverResults).length;
-
-    if (serverCount > 0) {
-        const message = Object.entries(serverResults)
-            .map(([name, stats]) => `${name} (${stats.domain})\n${stats.success}/1 ${stats.success ? '✅' : '❌'}`)
-            .join('\n');
-
-        const allSuccess = Object.values(serverResults).every(stats => stats.success === 1);
-        console.log(`[Task] 通知内容: ${message}`);
-        $.notify('Emby保号任务',
-            allSuccess ? '全部成功 ✅' : '部分成功 ⚠️',
-            `${message}\n执行耗时: ${duration}秒`
-        );
-    } else {
-        console.log('[Task] 无数据');
-        $.notify('Emby保号任务', '无数据 ❌', '未找到任何播放记录');
-    }
-
-    $.done({ status: serverCount > 0 ? 'completed' : 'no_data', results: serverResults });
-};
-
-doTask();
