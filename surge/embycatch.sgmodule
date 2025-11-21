@@ -14,4 +14,4 @@ Emby_task = type=cron,cronexp="0 20 */2 * *",wake-system=1,timeout=15,script-pat
 
 
 [MITM]
-hostname = %APPEND% link00.okemby.org, link00.okemby.org:8443, us.nanflix.net:2231, gy.meowfly.de:443, lite.cn2gias.uk:443
+hostname = %APPEND% link00.okemby.org, link00.okemby.org:8443, gy.meowfly.de, lite.cn2gias.uk:443, emby.191920.xyz, emby.hohai.eu.org
