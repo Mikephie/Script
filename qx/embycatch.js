@@ -13,9 +13,9 @@ const SERVERS = {
     },
     'meowfly': {
         domain: 'gy.meowfly.de',
-        prefix: 'ml',
-        storage_key: 'emby_ml_playing',
-        comment: '喵了'
+        prefix: 'meowfly',
+        storage_key: 'emby_meowfly_playing',
+        comment: 'meowfly'
     },
     'SNTP': {
         domain: 'lite.cn2gias.uk',
