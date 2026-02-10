@@ -67,20 +67,20 @@ hostname = %APPEND% www.52pojie.cn
 (() => {
   'use strict';
 
-  const _0x21940b = (() => {
-    const _0x33ffc6 = Object.keys(globalThis);
+  const runtimeEnv = (() => {
+    const tmpVar1 = Object.keys(globalThis);
     switch (true) {
-      case _0x33ffc6.includes("$task"):
+      case tmpVar1.includes("$task"):
         return "Quantumult X";
-      case _0x33ffc6.includes("$loon"):
+      case tmpVar1.includes("$loon"):
         return "Loon";
-      case _0x33ffc6.includes("$rocket"):
+      case tmpVar1.includes("$rocket"):
         return "Shadowrocket";
       case typeof module != "undefined":
         return "Node.js";
-      case _0x33ffc6.includes("Egern"):
+      case tmpVar1.includes("Egern"):
         return "Egern";
-      case _0x33ffc6.includes("$environment"):
+      case tmpVar1.includes("$environment"):
         if ($environment["surge-version"]) {
           return "Surge";
         } else if ($environment["stash-version"]) {
@@ -92,40 +92,40 @@ hostname = %APPEND% www.52pojie.cn
         return;
     }
   })();
-  class _0x56c73a {
+  class Logger {
     static #e = new Map([]);
     static #t = [];
     static #r = new Map([]);
     static clear = () => {};
-    static count = (_0x27f052 = "default") => {
-      switch (_0x56c73a.#e.has(_0x27f052)) {
+    static count = (tmpVar2 = "default") => {
+      switch (Logger.#e.has(tmpVar2)) {
         case true:
-          _0x56c73a.#e.set(_0x27f052, _0x56c73a.#e.get(_0x27f052) + 1);
+          Logger.#e.set(tmpVar2, Logger.#e.get(tmpVar2) + 1);
           break;
         case false:
-          _0x56c73a.#e.set(_0x27f052, 0);
+          Logger.#e.set(tmpVar2, 0);
       }
-      _0x56c73a.log(_0x27f052 + ": " + _0x56c73a.#e.get(_0x27f052));
+      Logger.log(tmpVar2 + ": " + Logger.#e.get(tmpVar2));
     };
-    static countReset = (_0x47db29 = "default") => {
-      switch (_0x56c73a.#e.has(_0x47db29)) {
+    static countReset = (tmpVar3 = "default") => {
+      switch (Logger.#e.has(tmpVar3)) {
         case true:
-          _0x56c73a.#e.set(_0x47db29, 0);
-          _0x56c73a.log(_0x47db29 + ": " + _0x56c73a.#e.get(_0x47db29));
+          Logger.#e.set(tmpVar3, 0);
+          Logger.log(tmpVar3 + ": " + Logger.#e.get(tmpVar3));
           break;
         case false:
-          _0x56c73a.warn("Counter \"" + _0x47db29 + "\" doesn’t exist");
+          Logger.warn("Counter \"" + tmpVar3 + "\" doesn’t exist");
       }
     };
-    static debug = (..._0x38b7c8) => {
-      if (!(_0x56c73a.#o < 4)) {
-        _0x38b7c8 = _0x38b7c8.map(_0x2e9e8c => "🅱️ " + _0x2e9e8c);
-        _0x56c73a.log(..._0x38b7c8);
+    static debug = (...tmpVar4) => {
+      if (!(Logger.#o < 4)) {
+        tmpVar4 = tmpVar4.map(tmpVar5 => "🅱️ " + tmpVar5);
+        Logger.log(...tmpVar4);
       }
     };
-    static error(..._0x4d64c6) {
-      if (!(_0x56c73a.#o < 1)) {
-        switch (_0x21940b) {
+    static error(...tmpVar6) {
+      if (!(Logger.#o < 1)) {
+        switch (runtimeEnv) {
           case "Surge":
           case "Loon":
           case "Stash":
@@ -133,26 +133,26 @@ hostname = %APPEND% www.52pojie.cn
           case "Shadowrocket":
           case "Quantumult X":
           default:
-            _0x4d64c6 = _0x4d64c6.map(_0x15a3fd => "❌ " + _0x15a3fd);
+            tmpVar6 = tmpVar6.map(tmpVar7 => "❌ " + tmpVar7);
             break;
           case "Node.js":
-            _0x4d64c6 = _0x4d64c6.map(_0x2a2ad1 => "❌ " + _0x2a2ad1.stack);
+            tmpVar6 = tmpVar6.map(tmpVar8 => "❌ " + tmpVar8.stack);
         }
-        _0x56c73a.log(..._0x4d64c6);
+        Logger.log(...tmpVar6);
       }
     }
-    static exception = (..._0x57cf41) => _0x56c73a.error(..._0x57cf41);
-    static group = _0x3d7687 => _0x56c73a.#t.unshift(_0x3d7687);
-    static groupEnd = () => _0x56c73a.#t.shift();
-    static info(..._0x512c61) {
-      if (!(_0x56c73a.#o < 3)) {
-        _0x512c61 = _0x512c61.map(_0x1d2228 => "ℹ️ " + _0x1d2228);
-        _0x56c73a.log(..._0x512c61);
+    static exception = (...tmpVar9) => Logger.error(...tmpVar9);
+    static group = tmpVar10 => Logger.#t.unshift(tmpVar10);
+    static groupEnd = () => Logger.#t.shift();
+    static info(...tmpVar11) {
+      if (!(Logger.#o < 3)) {
+        tmpVar11 = tmpVar11.map(tmpVar12 => "ℹ️ " + tmpVar12);
+        Logger.log(...tmpVar11);
       }
     }
     static #o = 2;
     static get logLevel() {
-      switch (_0x56c73a.#o) {
+      switch (Logger.#o) {
         case 0:
           return "OFF";
         case 1:
@@ -168,135 +168,135 @@ hostname = %APPEND% www.52pojie.cn
           return "ALL";
       }
     }
-    static set logLevel(_0x3a9596) {
-      switch (typeof _0x3a9596) {
+    static set logLevel(tmpVar13) {
+      switch (typeof tmpVar13) {
         case "string":
-          _0x3a9596 = _0x3a9596.toLowerCase();
+          tmpVar13 = tmpVar13.toLowerCase();
           break;
         case "number":
           break;
         default:
-          _0x3a9596 = "warn";
+          tmpVar13 = "warn";
       }
-      switch (_0x3a9596) {
+      switch (tmpVar13) {
         case 0:
         case "off":
-          _0x56c73a.#o = 0;
+          Logger.#o = 0;
           break;
         case 1:
         case "error":
-          _0x56c73a.#o = 1;
+          Logger.#o = 1;
           break;
         case 2:
         case "warn":
         case "warning":
         default:
-          _0x56c73a.#o = 2;
+          Logger.#o = 2;
           break;
         case 3:
         case "info":
-          _0x56c73a.#o = 3;
+          Logger.#o = 3;
           break;
         case 4:
         case "debug":
-          _0x56c73a.#o = 4;
+          Logger.#o = 4;
           break;
         case 5:
         case "all":
-          _0x56c73a.#o = 5;
+          Logger.#o = 5;
       }
     }
-    static log = (..._0xe5a2a) => {
-      if (_0x56c73a.#o !== 0) {
-        _0xe5a2a = _0xe5a2a.map(_0x1a2199 => {
-          switch (typeof _0x1a2199) {
+    static log = (...tmpVar14) => {
+      if (Logger.#o !== 0) {
+        tmpVar14 = tmpVar14.map(tmpVar15 => {
+          switch (typeof tmpVar15) {
             case "object":
-              _0x1a2199 = JSON.stringify(_0x1a2199);
+              tmpVar15 = JSON.stringify(tmpVar15);
               break;
             case "bigint":
             case "number":
             case "boolean":
             case "string":
-              _0x1a2199 = _0x1a2199.toString();
+              tmpVar15 = tmpVar15.toString();
           }
-          return _0x1a2199;
+          return tmpVar15;
         });
-        _0x56c73a.#t.forEach(_0x3c3da3 => {
-          _0xe5a2a = _0xe5a2a.map(_0x1120fe => "  " + _0x1120fe);
-          _0xe5a2a.unshift("▼ " + _0x3c3da3 + ":");
+        Logger.#t.forEach(tmpVar16 => {
+          tmpVar14 = tmpVar14.map(tmpVar17 => "  " + tmpVar17);
+          tmpVar14.unshift("▼ " + tmpVar16 + ":");
         });
-        _0xe5a2a = ["", ..._0xe5a2a];
-        console.log(_0xe5a2a.join("\n"));
+        tmpVar14 = ["", ...tmpVar14];
+        console.log(tmpVar14.join("\n"));
       }
     };
-    static time = (_0x4a280f = "default") => _0x56c73a.#r.set(_0x4a280f, Date.now());
-    static timeEnd = (_0x53fb5f = "default") => _0x56c73a.#r.delete(_0x53fb5f);
-    static timeLog = (_0x1da69e = "default") => {
-      const _0x4295ed = _0x56c73a.#r.get(_0x1da69e);
-      if (_0x4295ed) {
-        _0x56c73a.log(_0x1da69e + ": " + (Date.now() - _0x4295ed) + "ms");
+    static time = (tmpVar18 = "default") => Logger.#r.set(tmpVar18, Date.now());
+    static timeEnd = (tmpVar19 = "default") => Logger.#r.delete(tmpVar19);
+    static timeLog = (tmpVar20 = "default") => {
+      const tmpVar21 = Logger.#r.get(tmpVar20);
+      if (tmpVar21) {
+        Logger.log(tmpVar20 + ": " + (Date.now() - tmpVar21) + "ms");
       } else {
-        _0x56c73a.warn("Timer \"" + _0x1da69e + "\" doesn’t exist");
+        Logger.warn("Timer \"" + tmpVar20 + "\" doesn’t exist");
       }
     };
-    static warn(..._0xf1c0fa) {
-      if (!(_0x56c73a.#o < 2)) {
-        _0xf1c0fa = _0xf1c0fa.map(_0x52db1b => "⚠️ " + _0x52db1b);
-        _0x56c73a.log(..._0xf1c0fa);
+    static warn(...tmpVar22) {
+      if (!(Logger.#o < 2)) {
+        tmpVar22 = tmpVar22.map(tmpVar23 => "⚠️ " + tmpVar23);
+        Logger.log(...tmpVar22);
       }
     }
   }
-  class _0x2c098a {
-    static get(_0x1a3d5b = {}, _0x5979f7 = "", _0x47497c = undefined) {
-      if (!Array.isArray(_0x5979f7)) {
-        _0x5979f7 = _0x2c098a.toPath(_0x5979f7);
+  class PathUtils {
+    static get(tmpVar24 = {}, tmpVar25 = "", tmpVar26 = undefined) {
+      if (!Array.isArray(tmpVar25)) {
+        tmpVar25 = PathUtils.toPath(tmpVar25);
       }
-      const _0x57e98d = _0x5979f7.reduce((_0x579e52, _0x5f1f4e) => Object(_0x579e52)[_0x5f1f4e], _0x1a3d5b);
-      if (_0x57e98d === undefined) {
-        return _0x47497c;
+      const tmpVar27 = tmpVar25.reduce((tmpVar28, tmpVar29) => Object(tmpVar28)[tmpVar29], tmpVar24);
+      if (tmpVar27 === undefined) {
+        return tmpVar26;
       } else {
-        return _0x57e98d;
+        return tmpVar27;
       }
     }
-    static set(_0x5f0900, _0x58dd1a, _0x196b72) {
-      if (!Array.isArray(_0x58dd1a)) {
-        _0x58dd1a = _0x2c098a.toPath(_0x58dd1a);
+    static set(tmpVar30, tmpVar31, tmpVar32) {
+      if (!Array.isArray(tmpVar31)) {
+        tmpVar31 = PathUtils.toPath(tmpVar31);
       }
-      _0x58dd1a.slice(0, -1).reduce((_0x56a884, _0xe1363c, _0x1ff379) => Object(_0x56a884[_0xe1363c]) === _0x56a884[_0xe1363c] ? _0x56a884[_0xe1363c] : _0x56a884[_0xe1363c] = /^\d+$/.test(_0x58dd1a[_0x1ff379 + 1]) ? [] : {}, _0x5f0900)[_0x58dd1a[_0x58dd1a.length - 1]] = _0x196b72;
-      return _0x5f0900;
+      tmpVar31.slice(0, -1).reduce((tmpVar33, tmpVar34, tmpVar35) => Object(tmpVar33[tmpVar34]) === tmpVar33[tmpVar34] ? tmpVar33[tmpVar34] : tmpVar33[tmpVar34] = /^\d+$/.test(tmpVar31[tmpVar35 + 1]) ? [] : {}, tmpVar30)[tmpVar31[tmpVar31.length - 1]] = tmpVar32;
+      return tmpVar30;
     }
-    static unset(_0xde9de2 = {}, _0x1bbc4a = "") {
-      if (!Array.isArray(_0x1bbc4a)) {
-        _0x1bbc4a = _0x2c098a.toPath(_0x1bbc4a);
+    static unset(tmpVar36 = {}, tmpVar37 = "") {
+      if (!Array.isArray(tmpVar37)) {
+        tmpVar37 = PathUtils.toPath(tmpVar37);
       }
-      const _0x1137b6 = _0x1bbc4a.reduce((_0x2110d2, _0x1e0229, _0x9f10d0) => _0x9f10d0 === _0x1bbc4a.length - 1 ? (delete _0x2110d2[_0x1e0229], true) : Object(_0x2110d2)[_0x1e0229], _0xde9de2);
-      return _0x1137b6;
+      const tmpVar38 = tmpVar37.reduce((tmpVar39, tmpVar40, tmpVar41) => tmpVar41 === tmpVar37.length - 1 ? (delete tmpVar39[tmpVar40], true) : Object(tmpVar39)[tmpVar40], tmpVar36);
+      return tmpVar38;
     }
-    static toPath(_0x183bea) {
-      return _0x183bea.replace(/\[(\d+)\]/g, ".$1").split(".").filter(Boolean);
+    static toPath(tmpVar42) {
+      return tmpVar42.replace(/\[(\d+)\]/g, ".$1").split(".").filter(Boolean);
     }
-    static escape(_0xdd12f8) {
-      const _0x3bdf23 = {
+    static escape(tmpVar43) {
+      const tmpVar44 = {
         "&": "&amp;",
         "<": "&lt;",
         ">": "&gt;",
         "\"": "&quot;",
         "'": "&#39;"
       };
-      return _0xdd12f8.replace(/[&<>"']/g, _0x4a4ade => _0x3bdf23[_0x4a4ade]);
+      return tmpVar43.replace(/[&<>"']/g, tmpVar45 => tmpVar44[tmpVar45]);
     }
-    static unescape(_0x4baa22) {
-      const _0x1764bf = {
+    static unescape(tmpVar46) {
+      const tmpVar47 = {
         "&amp;": "&",
         "&lt;": "<",
         "&gt;": ">",
         "&quot;": "\"",
         "&#39;": "'"
       };
-      return _0x4baa22.replace(/&amp;|&lt;|&gt;|&quot;|&#39;/g, _0x2aba47 => _0x1764bf[_0x2aba47]);
+      return tmpVar46.replace(/&amp;|&lt;|&gt;|&quot;|&#39;/g, tmpVar48 => tmpVar47[tmpVar48]);
     }
   }
-  const _0x4a834b = {
+  const HTTP_STATUS_LINES = {
     "100": "HTTP/1.1 100 Continue",
     "101": "HTTP/1.1 101 Switching Protocols",
     "102": "HTTP/1.1 102 Processing",
@@ -358,201 +358,201 @@ hostname = %APPEND% www.52pojie.cn
     "510": "HTTP/1.1 510 Not Extended",
     "511": "HTTP/1.1 511 Network Authentication Required"
   };
-  function _0x136460(_0x4484af = "ℹ️ " + _0x21940b + " 通知", _0x14eafe = "", _0x91d7d6 = "", _0x2476f8 = {}) {
-    switch (_0x21940b) {
+  function showSystemNotification(tmpVar49 = "ℹ️ " + runtimeEnv + " 通知", tmpVar50 = "", tmpVar51 = "", tmpVar52 = {}) {
+    switch (runtimeEnv) {
       case "Surge":
       case "Loon":
       case "Stash":
       case "Egern":
       case "Shadowrocket":
       default:
-        $notification.post(_0x4484af, _0x14eafe, _0x91d7d6, _0x3dc115(_0x2476f8));
+        $notification.post(tmpVar49, tmpVar50, tmpVar51, normalizeNotificationParams(tmpVar52));
         break;
       case "Quantumult X":
-        $notify(_0x4484af, _0x14eafe, _0x91d7d6, _0x3dc115(_0x2476f8));
+        $notify(tmpVar49, tmpVar50, tmpVar51, normalizeNotificationParams(tmpVar52));
       case "Node.js":
     }
-    _0x56c73a.log("==============📣系统通知📣==============", _0x4484af, _0x14eafe, _0x91d7d6, JSON.stringify(_0x3dc115(_0x2476f8), null, 2));
+    Logger.log("==============📣系统通知📣==============", tmpVar49, tmpVar50, tmpVar51, JSON.stringify(normalizeNotificationParams(tmpVar52), null, 2));
   }
-  const _0x3dc115 = _0x25b262 => {
-    const _0xa7c8af = {};
-    switch (typeof _0x25b262) {
+  const normalizeNotificationParams = tmpVar53 => {
+    const tmpVar54 = {};
+    switch (typeof tmpVar53) {
       case undefined:
         break;
       case "string":
       case "number":
       case "boolean":
-        switch (_0x21940b) {
+        switch (runtimeEnv) {
           case "Surge":
           case "Stash":
           case "Egern":
           default:
-            _0xa7c8af.url = _0x25b262;
+            tmpVar54.url = tmpVar53;
             break;
           case "Loon":
           case "Shadowrocket":
-            _0xa7c8af.openUrl = _0x25b262;
+            tmpVar54.openUrl = tmpVar53;
             break;
           case "Quantumult X":
-            _0xa7c8af["open-url"] = _0x25b262;
+            tmpVar54["open-url"] = tmpVar53;
           case "Node.js":
         }
         break;
       case "object":
         {
-          const _0x259f5b = _0x25b262.open || _0x25b262["open-url"] || _0x25b262.url || _0x25b262.openUrl;
-          const _0x121753 = _0x25b262.copy || _0x25b262["update-pasteboard"] || _0x25b262.updatePasteboard;
-          const _0x597f01 = _0x25b262.media || _0x25b262["media-url"] || _0x25b262.mediaUrl;
-          switch (_0x21940b) {
+          const tmpVar55 = tmpVar53.open || tmpVar53["open-url"] || tmpVar53.url || tmpVar53.openUrl;
+          const tmpVar56 = tmpVar53.copy || tmpVar53["update-pasteboard"] || tmpVar53.updatePasteboard;
+          const tmpVar57 = tmpVar53.media || tmpVar53["media-url"] || tmpVar53.mediaUrl;
+          switch (runtimeEnv) {
             case "Surge":
             case "Stash":
             case "Egern":
             case "Shadowrocket":
             default:
-              if (_0x259f5b) {
-                _0xa7c8af.action = "open-url";
-                _0xa7c8af.url = _0x259f5b;
+              if (tmpVar55) {
+                tmpVar54.action = "open-url";
+                tmpVar54.url = tmpVar55;
               }
-              if (_0x121753) {
-                _0xa7c8af.action = "clipboard";
-                _0xa7c8af.text = _0x121753;
+              if (tmpVar56) {
+                tmpVar54.action = "clipboard";
+                tmpVar54.text = tmpVar56;
               }
-              if (_0x597f01) {
+              if (tmpVar57) {
                 switch (true) {
-                  case _0x597f01.startsWith("http"):
-                    _0xa7c8af["media-url"] = _0x597f01;
+                  case tmpVar57.startsWith("http"):
+                    tmpVar54["media-url"] = tmpVar57;
                     break;
-                  case _0x597f01.startsWith("data:"):
+                  case tmpVar57.startsWith("data:"):
                     {
-                      const _0xdb6c2d = /^data:(?<MIME>\w+\/\w+);base64,(?<Base64>.+)/;
+                      const tmpVar58 = /^data:(?<MIME>\w+\/\w+);base64,(?<Base64>.+)/;
                       const {
-                        MIME: _0x30830b,
-                        Base64: _0x4611f0
-                      } = _0x597f01.match(_0xdb6c2d).groups;
-                      _0xa7c8af["media-base64"] = _0x4611f0;
-                      _0xa7c8af["media-base64-mime"] = _0x25b262.mime || _0x30830b;
+                        MIME: tmpVar59,
+                        Base64: tmpVar60
+                      } = tmpVar57.match(tmpVar58).groups;
+                      tmpVar54["media-base64"] = tmpVar60;
+                      tmpVar54["media-base64-mime"] = tmpVar53.mime || tmpVar59;
                       break;
                     }
                   default:
-                    _0xa7c8af["media-base64"] = _0x597f01;
+                    tmpVar54["media-base64"] = tmpVar57;
                     switch (true) {
-                      case _0x597f01.startsWith("CiVQREYt"):
-                      case _0x597f01.startsWith("JVBERi0"):
-                        _0xa7c8af["media-base64-mime"] = "application/pdf";
+                      case tmpVar57.startsWith("CiVQREYt"):
+                      case tmpVar57.startsWith("JVBERi0"):
+                        tmpVar54["media-base64-mime"] = "application/pdf";
                         break;
-                      case _0x597f01.startsWith("R0lGODdh"):
-                      case _0x597f01.startsWith("R0lGODlh"):
-                        _0xa7c8af["media-base64-mime"] = "image/gif";
+                      case tmpVar57.startsWith("R0lGODdh"):
+                      case tmpVar57.startsWith("R0lGODlh"):
+                        tmpVar54["media-base64-mime"] = "image/gif";
                         break;
-                      case _0x597f01.startsWith("iVBORw0KGgo"):
-                        _0xa7c8af["media-base64-mime"] = "image/png";
+                      case tmpVar57.startsWith("iVBORw0KGgo"):
+                        tmpVar54["media-base64-mime"] = "image/png";
                         break;
-                      case _0x597f01.startsWith("/9j/"):
-                        _0xa7c8af["media-base64-mime"] = "image/jpg";
+                      case tmpVar57.startsWith("/9j/"):
+                        tmpVar54["media-base64-mime"] = "image/jpg";
                         break;
-                      case _0x597f01.startsWith("Qk02U"):
-                        _0xa7c8af["media-base64-mime"] = "image/bmp";
+                      case tmpVar57.startsWith("Qk02U"):
+                        tmpVar54["media-base64-mime"] = "image/bmp";
                     }
                 }
               }
-              if (_0x25b262["auto-dismiss"]) {
-                _0xa7c8af["auto-dismiss"] = _0x25b262["auto-dismiss"];
+              if (tmpVar53["auto-dismiss"]) {
+                tmpVar54["auto-dismiss"] = tmpVar53["auto-dismiss"];
               }
-              if (_0x25b262.sound) {
-                _0xa7c8af.sound = _0x25b262.sound;
+              if (tmpVar53.sound) {
+                tmpVar54.sound = tmpVar53.sound;
               }
               break;
             case "Loon":
-              if (_0x259f5b) {
-                _0xa7c8af.openUrl = _0x259f5b;
+              if (tmpVar55) {
+                tmpVar54.openUrl = tmpVar55;
               }
-              if (_0x597f01?.startsWith("http")) {
-                _0xa7c8af.mediaUrl = _0x597f01;
+              if (tmpVar57?.startsWith("http")) {
+                tmpVar54.mediaUrl = tmpVar57;
               }
               break;
             case "Quantumult X":
-              if (_0x259f5b) {
-                _0xa7c8af["open-url"] = _0x259f5b;
+              if (tmpVar55) {
+                tmpVar54["open-url"] = tmpVar55;
               }
-              if (_0x597f01?.startsWith("http")) {
-                _0xa7c8af["media-url"] = _0x597f01;
+              if (tmpVar57?.startsWith("http")) {
+                tmpVar54["media-url"] = tmpVar57;
               }
-              if (_0x121753) {
-                _0xa7c8af["update-pasteboard"] = _0x121753;
+              if (tmpVar56) {
+                tmpVar54["update-pasteboard"] = tmpVar56;
               }
             case "Node.js":
           }
           break;
         }
       default:
-        _0x56c73a.error("不支持的通知参数类型: " + typeof _0x25b262, "");
+        Logger.error("不支持的通知参数类型: " + typeof tmpVar53, "");
     }
-    return _0xa7c8af;
+    return tmpVar54;
   };
-  async function _0x517ee6(_0x47b8eb, _0x30966d) {
-    switch (_0x47b8eb.constructor) {
+  async function request(tmpVar61, tmpVar62) {
+    switch (tmpVar61.constructor) {
       case Object:
-        _0x47b8eb = {
-          ..._0x30966d,
-          ..._0x47b8eb
+        tmpVar61 = {
+          ...tmpVar62,
+          ...tmpVar61
         };
         break;
       case String:
-        _0x47b8eb = {
-          ..._0x30966d,
-          url: _0x47b8eb
+        tmpVar61 = {
+          ...tmpVar62,
+          url: tmpVar61
         };
     }
-    if (!_0x47b8eb.method) {
-      _0x47b8eb.method = "GET";
-      if (_0x47b8eb.body ?? _0x47b8eb.bodyBytes) {
-        _0x47b8eb.method = "POST";
+    if (!tmpVar61.method) {
+      tmpVar61.method = "GET";
+      if (tmpVar61.body ?? tmpVar61.bodyBytes) {
+        tmpVar61.method = "POST";
       }
     }
-    delete _0x47b8eb.headers?.Host;
-    delete _0x47b8eb.headers?.[":authority"];
-    delete _0x47b8eb.headers?.["Content-Length"];
-    delete _0x47b8eb.headers?.["content-length"];
-    const _0x2652d9 = _0x47b8eb.method.toLocaleLowerCase();
-    switch (_0x21940b) {
+    delete tmpVar61.headers?.Host;
+    delete tmpVar61.headers?.[":authority"];
+    delete tmpVar61.headers?.["Content-Length"];
+    delete tmpVar61.headers?.["content-length"];
+    const tmpVar63 = tmpVar61.method.toLocaleLowerCase();
+    switch (runtimeEnv) {
       case "Loon":
       case "Surge":
       case "Stash":
       case "Egern":
       case "Shadowrocket":
       default:
-        if (_0x47b8eb.timeout) {
-          _0x47b8eb.timeout = Number.parseInt(_0x47b8eb.timeout, 10);
-          switch (_0x21940b) {
+        if (tmpVar61.timeout) {
+          tmpVar61.timeout = Number.parseInt(tmpVar61.timeout, 10);
+          switch (runtimeEnv) {
             case "Loon":
             case "Shadowrocket":
             case "Stash":
             case "Egern":
             default:
-              _0x47b8eb.timeout = _0x47b8eb.timeout / 1000;
+              tmpVar61.timeout = tmpVar61.timeout / 1000;
             case "Surge":
           }
         }
-        if (_0x47b8eb.policy) {
-          switch (_0x21940b) {
+        if (tmpVar61.policy) {
+          switch (runtimeEnv) {
             case "Loon":
-              _0x47b8eb.node = _0x47b8eb.policy;
+              tmpVar61.node = tmpVar61.policy;
               break;
             case "Stash":
-              _0x2c098a.set(_0x47b8eb, "headers.X-Stash-Selected-Proxy", encodeURI(_0x47b8eb.policy));
+              PathUtils.set(tmpVar61, "headers.X-Stash-Selected-Proxy", encodeURI(tmpVar61.policy));
               break;
             case "Shadowrocket":
-              _0x2c098a.set(_0x47b8eb, "headers.X-Surge-Proxy", _0x47b8eb.policy);
+              PathUtils.set(tmpVar61, "headers.X-Surge-Proxy", tmpVar61.policy);
           }
         }
-        if (typeof _0x47b8eb.redirection == "boolean") {
-          _0x47b8eb["auto-redirect"] = _0x47b8eb.redirection;
+        if (typeof tmpVar61.redirection == "boolean") {
+          tmpVar61["auto-redirect"] = tmpVar61.redirection;
         }
-        if (_0x47b8eb.bodyBytes && !_0x47b8eb.body) {
-          _0x47b8eb.body = _0x47b8eb.bodyBytes;
-          _0x47b8eb.bodyBytes = undefined;
+        if (tmpVar61.bodyBytes && !tmpVar61.body) {
+          tmpVar61.body = tmpVar61.bodyBytes;
+          tmpVar61.bodyBytes = undefined;
         }
-        switch ((_0x47b8eb.headers?.Accept || _0x47b8eb.headers?.accept)?.split(";")?.[0]) {
+        switch ((tmpVar61.headers?.Accept || tmpVar61.headers?.accept)?.split(";")?.[0]) {
           case "application/protobuf":
           case "application/x-protobuf":
           case "application/vnd.google.protobuf":
@@ -560,45 +560,45 @@ hostname = %APPEND% www.52pojie.cn
           case "application/grpc":
           case "application/grpc+proto":
           case "application/octet-stream":
-            _0x47b8eb["binary-mode"] = true;
+            tmpVar61["binary-mode"] = true;
         }
-        return await new Promise((_0x1bb8c4, _0x523d7f) => {
-          $httpClient[_0x2652d9](_0x47b8eb, (_0x182b8f, _0x2ae300, _0x5cbf59) => {
-            if (_0x182b8f) {
-              _0x523d7f(_0x182b8f);
+        return await new Promise((tmpVar64, tmpVar65) => {
+          $httpClient[tmpVar63](tmpVar61, (tmpVar66, tmpVar67, tmpVar68) => {
+            if (tmpVar66) {
+              tmpVar65(tmpVar66);
             } else {
-              _0x2ae300.ok = /^2\d\d$/.test(_0x2ae300.status);
-              _0x2ae300.statusCode = _0x2ae300.status;
-              if (_0x5cbf59) {
-                _0x2ae300.body = _0x5cbf59;
-                if (_0x47b8eb["binary-mode"] == 1) {
-                  _0x2ae300.bodyBytes = _0x5cbf59;
+              tmpVar67.ok = /^2\d\d$/.test(tmpVar67.status);
+              tmpVar67.statusCode = tmpVar67.status;
+              if (tmpVar68) {
+                tmpVar67.body = tmpVar68;
+                if (tmpVar61["binary-mode"] == 1) {
+                  tmpVar67.bodyBytes = tmpVar68;
                 }
               }
-              _0x1bb8c4(_0x2ae300);
+              tmpVar64(tmpVar67);
             }
           });
         });
       case "Quantumult X":
-        if (_0x47b8eb.policy) {
-          _0x2c098a.set(_0x47b8eb, "opts.policy", _0x47b8eb.policy);
+        if (tmpVar61.policy) {
+          PathUtils.set(tmpVar61, "opts.policy", tmpVar61.policy);
         }
-        if (typeof _0x47b8eb["auto-redirect"] == "boolean") {
-          _0x2c098a.set(_0x47b8eb, "opts.redirection", _0x47b8eb["auto-redirect"]);
+        if (typeof tmpVar61["auto-redirect"] == "boolean") {
+          PathUtils.set(tmpVar61, "opts.redirection", tmpVar61["auto-redirect"]);
         }
-        if (_0x47b8eb.body instanceof ArrayBuffer) {
-          _0x47b8eb.bodyBytes = _0x47b8eb.body;
-          _0x47b8eb.body = undefined;
-        } else if (ArrayBuffer.isView(_0x47b8eb.body)) {
-          _0x47b8eb.bodyBytes = _0x47b8eb.body.buffer.slice(_0x47b8eb.body.byteOffset, _0x47b8eb.body.byteLength + _0x47b8eb.body.byteOffset);
-          _0x47b8eb.body = undefined;
-        } else if (_0x47b8eb.body) {
-          _0x47b8eb.bodyBytes = undefined;
+        if (tmpVar61.body instanceof ArrayBuffer) {
+          tmpVar61.bodyBytes = tmpVar61.body;
+          tmpVar61.body = undefined;
+        } else if (ArrayBuffer.isView(tmpVar61.body)) {
+          tmpVar61.bodyBytes = tmpVar61.body.buffer.slice(tmpVar61.body.byteOffset, tmpVar61.body.byteLength + tmpVar61.body.byteOffset);
+          tmpVar61.body = undefined;
+        } else if (tmpVar61.body) {
+          tmpVar61.bodyBytes = undefined;
         }
-        return await $task.fetch(_0x47b8eb).then(_0x7e4042 => {
-          _0x7e4042.ok = /^2\d\d$/.test(_0x7e4042.statusCode);
-          _0x7e4042.status = _0x7e4042.statusCode;
-          switch ((_0x7e4042.headers?.["Content-Type"] ?? _0x7e4042.headers?.["content-type"])?.split(";")?.[0]) {
+        return await $task.fetch(tmpVar61).then(tmpVar69 => {
+          tmpVar69.ok = /^2\d\d$/.test(tmpVar69.statusCode);
+          tmpVar69.status = tmpVar69.statusCode;
+          switch ((tmpVar69.headers?.["Content-Type"] ?? tmpVar69.headers?.["content-type"])?.split(";")?.[0]) {
             case "application/protobuf":
             case "application/x-protobuf":
             case "application/vnd.google.protobuf":
@@ -606,165 +606,165 @@ hostname = %APPEND% www.52pojie.cn
             case "application/grpc":
             case "application/grpc+proto":
             case "application/octet-stream":
-              _0x7e4042.body = _0x7e4042.bodyBytes;
+              tmpVar69.body = tmpVar69.bodyBytes;
           }
-          _0x7e4042.bodyBytes = undefined;
-          return _0x7e4042;
-        }, _0x55294a => Promise.reject(_0x55294a.error));
+          tmpVar69.bodyBytes = undefined;
+          return tmpVar69;
+        }, tmpVar70 => Promise.reject(tmpVar70.error));
       case "Node.js":
         {
-          const _0xe6cc79 = require("iconv-lite");
-          const _0x578fbf = globalThis.got ? globalThis.got : require("got");
-          const _0x2fc0f2 = globalThis.cktough ? globalThis.cktough : require("tough-cookie");
-          const _0x4ab4e9 = globalThis.ckjar ? globalThis.ckjar : new _0x2fc0f2.CookieJar();
-          if (_0x47b8eb) {
-            _0x47b8eb.headers = _0x47b8eb.headers ? _0x47b8eb.headers : {};
-            if (_0x47b8eb.headers.Cookie === undefined && _0x47b8eb.cookieJar === undefined) {
-              _0x47b8eb.cookieJar = _0x4ab4e9;
+          const tmpVar71 = require("iconv-lite");
+          const tmpVar72 = globalThis.got ? globalThis.got : require("got");
+          const tmpVar73 = globalThis.cktough ? globalThis.cktough : require("tough-cookie");
+          const tmpVar74 = globalThis.ckjar ? globalThis.ckjar : new tmpVar73.CookieJar();
+          if (tmpVar61) {
+            tmpVar61.headers = tmpVar61.headers ? tmpVar61.headers : {};
+            if (tmpVar61.headers.Cookie === undefined && tmpVar61.cookieJar === undefined) {
+              tmpVar61.cookieJar = tmpVar74;
             }
           }
           const {
-            url: _0x506428,
-            ..._0x700560
-          } = _0x47b8eb;
-          return await _0x578fbf[_0x2652d9](_0x506428, _0x700560).on("redirect", (_0x177bba, _0x35f741) => {
+            url: tmpVar75,
+            ...tmpVar76
+          } = tmpVar61;
+          return await tmpVar72[tmpVar63](tmpVar75, tmpVar76).on("redirect", (tmpVar77, tmpVar78) => {
             try {
-              if (_0x177bba.headers["set-cookie"]) {
-                const _0x3cb8b8 = _0x177bba.headers["set-cookie"].map(_0x2fc0f2.Cookie.parse).toString();
-                if (_0x3cb8b8) {
-                  _0x4ab4e9.setCookieSync(_0x3cb8b8, null);
+              if (tmpVar77.headers["set-cookie"]) {
+                const tmpVar79 = tmpVar77.headers["set-cookie"].map(tmpVar73.Cookie.parse).toString();
+                if (tmpVar79) {
+                  tmpVar74.setCookieSync(tmpVar79, null);
                 }
-                _0x35f741.cookieJar = _0x4ab4e9;
+                tmpVar78.cookieJar = tmpVar74;
               }
-            } catch (_0x312dc1) {
-              _0x56c73a.error(_0x312dc1);
+            } catch (tmpVar80) {
+              Logger.error(tmpVar80);
             }
-          }).then(_0x126736 => {
-            _0x126736.statusCode = _0x126736.status;
-            _0x126736.body = _0xe6cc79.decode(_0x126736.rawBody, "utf-8");
-            _0x126736.bodyBytes = _0x126736.rawBody;
-            _0x126736.ok = /^2\d\d$/.test(_0x126736.statusCode) || !_0x126736.statusCode && _0x126736.statusMessage === "OK";
-            return _0x126736;
-          }, _0x11e36b => Promise.reject(_0x11e36b.message));
+          }).then(tmpVar81 => {
+            tmpVar81.statusCode = tmpVar81.status;
+            tmpVar81.body = tmpVar71.decode(tmpVar81.rawBody, "utf-8");
+            tmpVar81.bodyBytes = tmpVar81.rawBody;
+            tmpVar81.ok = /^2\d\d$/.test(tmpVar81.statusCode) || !tmpVar81.statusCode && tmpVar81.statusMessage === "OK";
+            return tmpVar81;
+          }, tmpVar82 => Promise.reject(tmpVar82.message));
         }
     }
   }
-  class _0x1a6861 {
+  class PersistStore {
     static data = null;
     static dataFile = "box.dat";
     static #a = /^@(?<key>[^.]+)(?:\.(?<path>.*))?$/;
-    static getItem(_0x2bbd3d, _0x9d876c = null) {
-      let _0x50c0c6 = _0x9d876c;
-      switch (_0x2bbd3d.startsWith("@")) {
+    static getItem(tmpVar83, tmpVar84 = null) {
+      let tmpVar85 = tmpVar84;
+      switch (tmpVar83.startsWith("@")) {
         case true:
           {
             const {
-              key: _0x530ed8,
-              path: _0x47b46c
-            } = _0x2bbd3d.match(_0x1a6861.#a)?.groups;
-            _0x2bbd3d = _0x530ed8;
-            let _0x21cfde = _0x1a6861.getItem(_0x2bbd3d, {});
-            if (typeof _0x21cfde != "object") {
-              _0x21cfde = {};
+              key: tmpVar86,
+              path: tmpVar87
+            } = tmpVar83.match(PersistStore.#a)?.groups;
+            tmpVar83 = tmpVar86;
+            let tmpVar88 = PersistStore.getItem(tmpVar83, {});
+            if (typeof tmpVar88 != "object") {
+              tmpVar88 = {};
             }
-            _0x50c0c6 = _0x2c098a.get(_0x21cfde, _0x47b46c);
+            tmpVar85 = PathUtils.get(tmpVar88, tmpVar87);
             try {
-              _0x50c0c6 = JSON.parse(_0x50c0c6);
-            } catch (_0x23266c) {}
+              tmpVar85 = JSON.parse(tmpVar85);
+            } catch (tmpVar89) {}
             break;
           }
         default:
-          switch (_0x21940b) {
+          switch (runtimeEnv) {
             case "Surge":
             case "Loon":
             case "Stash":
             case "Egern":
             case "Shadowrocket":
-              _0x50c0c6 = $persistentStore.read(_0x2bbd3d);
+              tmpVar85 = $persistentStore.read(tmpVar83);
               break;
             case "Quantumult X":
-              _0x50c0c6 = $prefs.valueForKey(_0x2bbd3d);
+              tmpVar85 = $prefs.valueForKey(tmpVar83);
               break;
             case "Node.js":
-              _0x1a6861.data = _0x1a6861.#n(_0x1a6861.dataFile);
-              _0x50c0c6 = _0x1a6861.data?.[_0x2bbd3d];
+              PersistStore.data = PersistStore.#n(PersistStore.dataFile);
+              tmpVar85 = PersistStore.data?.[tmpVar83];
               break;
             default:
-              _0x50c0c6 = _0x1a6861.data?.[_0x2bbd3d] || null;
+              tmpVar85 = PersistStore.data?.[tmpVar83] || null;
           }
           try {
-            _0x50c0c6 = JSON.parse(_0x50c0c6);
-          } catch (_0x50a74d) {}
+            tmpVar85 = JSON.parse(tmpVar85);
+          } catch (tmpVar90) {}
       }
-      return _0x50c0c6 ?? _0x9d876c;
+      return tmpVar85 ?? tmpVar84;
     }
-    static setItem(_0x102f01 = new String(), _0x7ebceb = new String()) {
-      let _0x34a032 = false;
-      if (typeof _0x7ebceb == "object") {
-        _0x7ebceb = JSON.stringify(_0x7ebceb);
+    static setItem(tmpVar91 = new String(), tmpVar92 = new String()) {
+      let tmpVar93 = false;
+      if (typeof tmpVar92 == "object") {
+        tmpVar92 = JSON.stringify(tmpVar92);
       } else {
-        _0x7ebceb = String(_0x7ebceb);
+        tmpVar92 = String(tmpVar92);
       }
-      switch (_0x102f01.startsWith("@")) {
+      switch (tmpVar91.startsWith("@")) {
         case true:
           {
             const {
-              key: _0x233b02,
-              path: _0x35c362
-            } = _0x102f01.match(_0x1a6861.#a)?.groups;
-            _0x102f01 = _0x233b02;
-            let _0x3ecc79 = _0x1a6861.getItem(_0x102f01, {});
-            if (typeof _0x3ecc79 != "object") {
-              _0x3ecc79 = {};
+              key: tmpVar94,
+              path: tmpVar95
+            } = tmpVar91.match(PersistStore.#a)?.groups;
+            tmpVar91 = tmpVar94;
+            let tmpVar96 = PersistStore.getItem(tmpVar91, {});
+            if (typeof tmpVar96 != "object") {
+              tmpVar96 = {};
             }
-            _0x2c098a.set(_0x3ecc79, _0x35c362, _0x7ebceb);
-            _0x34a032 = _0x1a6861.setItem(_0x102f01, _0x3ecc79);
+            PathUtils.set(tmpVar96, tmpVar95, tmpVar92);
+            tmpVar93 = PersistStore.setItem(tmpVar91, tmpVar96);
             break;
           }
         default:
-          switch (_0x21940b) {
+          switch (runtimeEnv) {
             case "Surge":
             case "Loon":
             case "Stash":
             case "Egern":
             case "Shadowrocket":
-              _0x34a032 = $persistentStore.write(_0x7ebceb, _0x102f01);
+              tmpVar93 = $persistentStore.write(tmpVar92, tmpVar91);
               break;
             case "Quantumult X":
-              _0x34a032 = $prefs.setValueForKey(_0x7ebceb, _0x102f01);
+              tmpVar93 = $prefs.setValueForKey(tmpVar92, tmpVar91);
               break;
             case "Node.js":
-              _0x1a6861.data = _0x1a6861.#n(_0x1a6861.dataFile);
-              _0x1a6861.data[_0x102f01] = _0x7ebceb;
-              _0x1a6861.#i(_0x1a6861.dataFile);
-              _0x34a032 = true;
+              PersistStore.data = PersistStore.#n(PersistStore.dataFile);
+              PersistStore.data[tmpVar91] = tmpVar92;
+              PersistStore.#i(PersistStore.dataFile);
+              tmpVar93 = true;
               break;
             default:
-              _0x34a032 = _0x1a6861.data?.[_0x102f01] || null;
+              tmpVar93 = PersistStore.data?.[tmpVar91] || null;
           }
       }
-      return _0x34a032;
+      return tmpVar93;
     }
-    static removeItem(_0x26437c) {
-      let _0x1a8a2b = false;
-      switch (_0x26437c.startsWith("@")) {
+    static removeItem(tmpVar97) {
+      let tmpVar98 = false;
+      switch (tmpVar97.startsWith("@")) {
         case true:
           {
             const {
-              key: _0x3bb08f,
-              path: _0x56963d
-            } = _0x26437c.match(_0x1a6861.#a)?.groups;
-            _0x26437c = _0x3bb08f;
-            let _0xc4ba21 = _0x1a6861.getItem(_0x26437c);
-            if (typeof _0xc4ba21 != "object") {
-              _0xc4ba21 = {};
+              key: tmpVar99,
+              path: tmpVar100
+            } = tmpVar97.match(PersistStore.#a)?.groups;
+            tmpVar97 = tmpVar99;
+            let tmpVar101 = PersistStore.getItem(tmpVar97);
+            if (typeof tmpVar101 != "object") {
+              tmpVar101 = {};
             }
-            keyValue = _0x2c098a.unset(_0xc4ba21, _0x56963d);
-            _0x1a8a2b = _0x1a6861.setItem(_0x26437c, _0xc4ba21);
+            keyValue = PathUtils.unset(tmpVar101, tmpVar100);
+            tmpVar98 = PersistStore.setItem(tmpVar97, tmpVar101);
             break;
           }
         default:
-          switch (_0x21940b) {
+          switch (runtimeEnv) {
             case "Surge":
             case "Loon":
             case "Stash":
@@ -772,17 +772,17 @@ hostname = %APPEND% www.52pojie.cn
             case "Shadowrocket":
             case "Node.js":
             default:
-              _0x1a8a2b = false;
+              tmpVar98 = false;
               break;
             case "Quantumult X":
-              _0x1a8a2b = $prefs.removeValueForKey(_0x26437c);
+              tmpVar98 = $prefs.removeValueForKey(tmpVar97);
           }
       }
-      return _0x1a8a2b;
+      return tmpVar98;
     }
     static clear() {
-      let _0xfd2a0d = false;
-      switch (_0x21940b) {
+      let tmpVar102 = false;
+      switch (runtimeEnv) {
         case "Surge":
         case "Loon":
         case "Stash":
@@ -790,204 +790,204 @@ hostname = %APPEND% www.52pojie.cn
         case "Shadowrocket":
         case "Node.js":
         default:
-          _0xfd2a0d = false;
+          tmpVar102 = false;
           break;
         case "Quantumult X":
-          _0xfd2a0d = $prefs.removeAllValues();
+          tmpVar102 = $prefs.removeAllValues();
       }
-      return _0xfd2a0d;
+      return tmpVar102;
     }
-    static #n = _0x424eb0 => {
-      if (_0x21940b !== "Node.js") {
+    static #n = tmpVar103 => {
+      if (runtimeEnv !== "Node.js") {
         return {};
       }
       {
         this.fs = this.fs ? this.fs : require("node:fs");
         this.path = this.path ? this.path : require("node:path");
-        const _0x3f5a6f = this.path.resolve(_0x424eb0);
-        const _0x551a61 = this.path.resolve(process.cwd(), _0x424eb0);
-        const _0x1ed302 = this.fs.existsSync(_0x3f5a6f);
-        const _0x54bec2 = !_0x1ed302 && this.fs.existsSync(_0x551a61);
-        if (!_0x1ed302 && !_0x54bec2) {
+        const tmpVar104 = this.path.resolve(tmpVar103);
+        const tmpVar105 = this.path.resolve(process.cwd(), tmpVar103);
+        const tmpVar106 = this.fs.existsSync(tmpVar104);
+        const tmpVar107 = !tmpVar106 && this.fs.existsSync(tmpVar105);
+        if (!tmpVar106 && !tmpVar107) {
           return {};
         }
         {
-          const _0x540160 = _0x1ed302 ? _0x3f5a6f : _0x551a61;
+          const tmpVar108 = tmpVar106 ? tmpVar104 : tmpVar105;
           try {
-            return JSON.parse(this.fs.readFileSync(_0x540160));
-          } catch (_0x3f9887) {
+            return JSON.parse(this.fs.readFileSync(tmpVar108));
+          } catch (tmpVar109) {
             return {};
           }
         }
       }
     };
-    static #i = (_0x191ebf = this.dataFile) => {
-      if (_0x21940b === "Node.js") {
+    static #i = (tmpVar110 = this.dataFile) => {
+      if (runtimeEnv === "Node.js") {
         this.fs = this.fs ? this.fs : require("node:fs");
         this.path = this.path ? this.path : require("node:path");
-        const _0x5634b6 = this.path.resolve(_0x191ebf);
-        const _0x19195e = this.path.resolve(process.cwd(), _0x191ebf);
-        const _0x2bbaca = this.fs.existsSync(_0x5634b6);
-        const _0x2a3158 = !_0x2bbaca && this.fs.existsSync(_0x19195e);
-        const _0x29126b = JSON.stringify(this.data);
-        if (_0x2bbaca) {
-          this.fs.writeFileSync(_0x5634b6, _0x29126b);
-        } else if (_0x2a3158) {
-          this.fs.writeFileSync(_0x19195e, _0x29126b);
+        const tmpVar111 = this.path.resolve(tmpVar110);
+        const tmpVar112 = this.path.resolve(process.cwd(), tmpVar110);
+        const tmpVar113 = this.fs.existsSync(tmpVar111);
+        const tmpVar114 = !tmpVar113 && this.fs.existsSync(tmpVar112);
+        const tmpVar115 = JSON.stringify(this.data);
+        if (tmpVar113) {
+          this.fs.writeFileSync(tmpVar111, tmpVar115);
+        } else if (tmpVar114) {
+          this.fs.writeFileSync(tmpVar112, tmpVar115);
         } else {
-          this.fs.writeFileSync(_0x5634b6, _0x29126b);
+          this.fs.writeFileSync(tmpVar111, tmpVar115);
         }
       }
     };
   }
-  function _0x3c056e(_0x7af867, _0x3c2229) {
-    return function (_0x34acbb) {
-      if (Array.isArray(_0x34acbb)) {
-        return _0x34acbb;
+  function _arrayWithHolesOrIterator(tmpVar116, tmpVar117) {
+    return function (tmpVar118) {
+      if (Array.isArray(tmpVar118)) {
+        return tmpVar118;
       }
-    }(_0x7af867) || function (_0x589a88, _0x36d90b) {
-      var _0x1d6e44 = _0x589a88 == null ? null : typeof Symbol != "undefined" && _0x589a88[Symbol.iterator] || _0x589a88["@@iterator"];
-      if (_0x1d6e44 != null) {
-        var _0x2dd3ef;
-        var _0x729f86;
-        var _0xdf87b1;
-        var _0x5975cf;
-        var _0xb14d5c = [];
-        var _0x26aa21 = true;
-        var _0x268122 = false;
+    }(tmpVar116) || function (tmpVar119, tmpVar120) {
+      var tmpVar121 = tmpVar119 == null ? null : typeof Symbol != "undefined" && tmpVar119[Symbol.iterator] || tmpVar119["@@iterator"];
+      if (tmpVar121 != null) {
+        var tmpVar122;
+        var tmpVar123;
+        var tmpVar124;
+        var tmpVar125;
+        var tmpVar126 = [];
+        var tmpVar127 = true;
+        var tmpVar128 = false;
         try {
-          _0xdf87b1 = (_0x1d6e44 = _0x1d6e44.call(_0x589a88)).next;
-          if (_0x36d90b === 0) {
-            if (Object(_0x1d6e44) !== _0x1d6e44) {
+          tmpVar124 = (tmpVar121 = tmpVar121.call(tmpVar119)).next;
+          if (tmpVar120 === 0) {
+            if (Object(tmpVar121) !== tmpVar121) {
               return;
             }
-            _0x26aa21 = false;
+            tmpVar127 = false;
           } else {
-            for (; !(_0x26aa21 = (_0x2dd3ef = _0xdf87b1.call(_0x1d6e44)).done) && (_0xb14d5c.push(_0x2dd3ef.value), _0xb14d5c.length !== _0x36d90b); _0x26aa21 = true);
+            for (; !(tmpVar127 = (tmpVar122 = tmpVar124.call(tmpVar121)).done) && (tmpVar126.push(tmpVar122.value), tmpVar126.length !== tmpVar120); tmpVar127 = true);
           }
-        } catch (_0x33af20) {
-          _0x268122 = true;
-          _0x729f86 = _0x33af20;
+        } catch (tmpVar129) {
+          tmpVar128 = true;
+          tmpVar123 = tmpVar129;
         } finally {
           try {
-            if (!_0x26aa21 && _0x1d6e44.return != null && (_0x5975cf = _0x1d6e44.return(), Object(_0x5975cf) !== _0x5975cf)) {
+            if (!tmpVar127 && tmpVar121.return != null && (tmpVar125 = tmpVar121.return(), Object(tmpVar125) !== tmpVar125)) {
               return;
             }
           } finally {
-            if (_0x268122) {
-              throw _0x729f86;
+            if (tmpVar128) {
+              throw tmpVar123;
             }
           }
         }
-        return _0xb14d5c;
+        return tmpVar126;
       }
-    }(_0x7af867, _0x3c2229) || function (_0x1db1fc, _0x1a0955) {
-      if (_0x1db1fc) {
-        if (typeof _0x1db1fc == "string") {
-          return _0x5bed21(_0x1db1fc, _0x1a0955);
+    }(tmpVar116, tmpVar117) || function (tmpVar130, tmpVar131) {
+      if (tmpVar130) {
+        if (typeof tmpVar130 == "string") {
+          return _arrayLikeToArray(tmpVar130, tmpVar131);
         }
-        var _0x3a4e5e = {}.toString.call(_0x1db1fc).slice(8, -1);
-        if (_0x3a4e5e === "Object" && _0x1db1fc.constructor) {
-          _0x3a4e5e = _0x1db1fc.constructor.name;
+        var tmpVar132 = {}.toString.call(tmpVar130).slice(8, -1);
+        if (tmpVar132 === "Object" && tmpVar130.constructor) {
+          tmpVar132 = tmpVar130.constructor.name;
         }
-        if (_0x3a4e5e === "Map" || _0x3a4e5e === "Set") {
-          return Array.from(_0x1db1fc);
-        } else if (_0x3a4e5e === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(_0x3a4e5e)) {
-          return _0x5bed21(_0x1db1fc, _0x1a0955);
+        if (tmpVar132 === "Map" || tmpVar132 === "Set") {
+          return Array.from(tmpVar130);
+        } else if (tmpVar132 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(tmpVar132)) {
+          return _arrayLikeToArray(tmpVar130, tmpVar131);
         } else {
           return undefined;
         }
       }
-    }(_0x7af867, _0x3c2229) || function () {
+    }(tmpVar116, tmpVar117) || function () {
       throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
     }();
   }
-  function _0x5bed21(_0x159ac4, _0x14f5d2) {
-    if (_0x14f5d2 == null || _0x14f5d2 > _0x159ac4.length) {
-      _0x14f5d2 = _0x159ac4.length;
+  function _arrayLikeToArray(tmpVar133, tmpVar134) {
+    if (tmpVar134 == null || tmpVar134 > tmpVar133.length) {
+      tmpVar134 = tmpVar133.length;
     }
-    for (var _0x126543 = 0, _0x4eba24 = Array(_0x14f5d2); _0x126543 < _0x14f5d2; _0x126543++) {
-      _0x4eba24[_0x126543] = _0x159ac4[_0x126543];
+    for (var tmpVar135 = 0, tmpVar136 = Array(tmpVar134); tmpVar135 < tmpVar134; tmpVar135++) {
+      tmpVar136[tmpVar135] = tmpVar133[tmpVar135];
     }
-    return _0x4eba24;
+    return tmpVar136;
   }
-  function _0x8489b5(_0x417119) {
-    if (typeof _0x417119 == "string") {
-      return _0x417119;
+  function safeJSONStringify(tmpVar137) {
+    if (typeof tmpVar137 == "string") {
+      return tmpVar137;
     }
     try {
-      for (var _0xdda91a = arguments.length, _0x2dcd06 = new Array(_0xdda91a > 1 ? _0xdda91a - 1 : 0), _0x3e479b = 1; _0x3e479b < _0xdda91a; _0x3e479b++) {
-        _0x2dcd06[_0x3e479b - 1] = arguments[_0x3e479b];
+      for (var tmpVar138 = arguments.length, tmpVar139 = new Array(tmpVar138 > 1 ? tmpVar138 - 1 : 0), tmpVar140 = 1; tmpVar140 < tmpVar138; tmpVar140++) {
+        tmpVar139[tmpVar140 - 1] = arguments[tmpVar140];
       }
-      return JSON.stringify.apply(JSON, [_0x417119].concat(_0x2dcd06));
-    } catch (_0x3494ee) {
-      return _0x417119;
+      return JSON.stringify.apply(JSON, [tmpVar137].concat(tmpVar139));
+    } catch (tmpVar141) {
+      return tmpVar137;
     }
   }
-  function _0x2e4911(_0x123123, _0x49cde6) {
-    if (_0x49cde6) {
-      return _0x123123.replace(/\/+$/, "") + "/" + _0x49cde6.replace(/^\/+/, "");
+  function joinUrl(tmpVar142, tmpVar143) {
+    if (tmpVar143) {
+      return tmpVar142.replace(/\/+$/, "") + "/" + tmpVar143.replace(/^\/+/, "");
     } else {
-      return _0x123123;
+      return tmpVar142;
     }
   }
-  function _0x5b1b22(_0x2131cb) {
-    _0x5b1b22 = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (_0x45c848) {
-      return typeof _0x45c848;
-    } : function (_0x38f3b6) {
-      if (_0x38f3b6 && typeof Symbol == "function" && _0x38f3b6.constructor === Symbol && _0x38f3b6 !== Symbol.prototype) {
+  function _typeofSymbolSafe(tmpVar144) {
+    _typeofSymbolSafe = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (tmpVar145) {
+      return typeof tmpVar145;
+    } : function (tmpVar146) {
+      if (tmpVar146 && typeof Symbol == "function" && tmpVar146.constructor === Symbol && tmpVar146 !== Symbol.prototype) {
         return "symbol";
       } else {
-        return typeof _0x38f3b6;
+        return typeof tmpVar146;
       }
     };
-    return _0x5b1b22(_0x2131cb);
+    return _typeofSymbolSafe(tmpVar144);
   }
-  function _0x170a8d(_0x46b7e6) {
-    var _0x4aa59b = _0x46b7e6.LZ;
-    var _0x5ed2be = _0x46b7e6.LJ;
-    var _0x45f11b = _0x46b7e6.LE;
-    if (_0x4aa59b && _0x5ed2be && _0x45f11b) {
-      var _0x19b696 = {
+  function buildVerifyPayload(tmpVar147) {
+    var tmpVar148 = tmpVar147.LZ;
+    var tmpVar149 = tmpVar147.LJ;
+    var tmpVar150 = tmpVar147.LE;
+    if (tmpVar148 && tmpVar149 && tmpVar150) {
+      var tmpVar151 = {
         name: "PDF Viewer",
         description: "Portable Document Format",
         filename: "internal-pdf-viewer",
         mimetypes: [Array]
       };
-      var _0x480b9d = {
+      var tmpVar152 = {
         name: "Chrome PDF Viewer",
         description: "Portable Document Format",
         filename: "internal-pdf-viewer",
         mimetypes: [Array]
       };
-      var _0x32eb8e = {
+      var tmpVar153 = {
         name: "Chromium PDF Viewer",
         description: "Portable Document Format",
         filename: "internal-pdf-viewer",
         mimetypes: [Array]
       };
-      var _0x11a25a = {
+      var tmpVar154 = {
         name: "Microsoft Edge PDF Viewer",
         description: "Portable Document Format",
         filename: "internal-pdf-viewer",
         mimetypes: [Array]
       };
-      var _0x1bf04e = {
+      var tmpVar155 = {
         name: "WebKit built-in PDF",
         description: "Portable Document Format",
         filename: "internal-pdf-viewer",
         mimetypes: [Array]
       };
-      var _0x358c78 = {
-        details: [_0x19b696, _0x480b9d, _0x32eb8e, _0x11a25a, _0x1bf04e],
+      var tmpVar156 = {
+        details: [tmpVar151, tmpVar152, tmpVar153, tmpVar154, tmpVar155],
         names: ["Chrome PDF Viewer", "Chromium PDF Viewer", "Microsoft Edge PDF Viewer", "PDF Viewer", "WebKit built-in PDF"],
         fp: "9772d5556d57fcc8177f76029bfd92ef"
       };
-      var _0x50e9f6 = {
+      var tmpVar157 = {
         key: "plugins",
-        value: _0x358c78
+        value: tmpVar156
       };
-      var _0x5c231a = {
+      var tmpVar158 = {
         screenResolution: [1707, 1067],
         availableScreenResolution: [1707, 1027],
         colorDepth: 24,
@@ -1002,11 +1002,11 @@ hostname = %APPEND% www.52pojie.cn
           type: "landscape-primary"
         }
       };
-      var _0x45a0c7 = {
+      var tmpVar159 = {
         key: "screenObject",
-        value: _0x5c231a
+        value: tmpVar158
       };
-      var _0xdfe6c7 = {
+      var tmpVar160 = {
         locale: "zh-CN",
         calendar: "gregory",
         numberingSystem: "latn",
@@ -1016,156 +1016,156 @@ hostname = %APPEND% www.52pojie.cn
         day: "numeric",
         timezoneOffset: -480
       };
-      var _0x6c2d8 = {
+      var tmpVar161 = {
         key: "intlObject",
-        value: _0xdfe6c7
+        value: tmpVar160
       };
-      function _0xe140a9(_0x3f2173, _0x400561) {
-        _0x3f2173 = [_0x3f2173[0] >>> 16, _0x3f2173[0] & 65535, _0x3f2173[1] >>> 16, _0x3f2173[1] & 65535];
-        _0x400561 = [_0x400561[0] >>> 16, _0x400561[0] & 65535, _0x400561[1] >>> 16, _0x400561[1] & 65535];
-        var _0x3d209b = [0, 0, 0, 0];
-        _0x3d209b[3] += _0x3f2173[3] + _0x400561[3];
-        _0x3d209b[2] += _0x3d209b[3] >>> 16;
-        _0x3d209b[3] &= 65535;
-        _0x3d209b[2] += _0x3f2173[2] + _0x400561[2];
-        _0x3d209b[1] += _0x3d209b[2] >>> 16;
-        _0x3d209b[2] &= 65535;
-        _0x3d209b[1] += _0x3f2173[1] + _0x400561[1];
-        _0x3d209b[0] += _0x3d209b[1] >>> 16;
-        _0x3d209b[1] &= 65535;
-        _0x3d209b[0] += _0x3f2173[0] + _0x400561[0];
-        _0x3d209b[0] &= 65535;
-        return [_0x3d209b[0] << 16 | _0x3d209b[1], _0x3d209b[2] << 16 | _0x3d209b[3]];
+      function helperFn1(tmpVar162, tmpVar163) {
+        tmpVar162 = [tmpVar162[0] >>> 16, tmpVar162[0] & 65535, tmpVar162[1] >>> 16, tmpVar162[1] & 65535];
+        tmpVar163 = [tmpVar163[0] >>> 16, tmpVar163[0] & 65535, tmpVar163[1] >>> 16, tmpVar163[1] & 65535];
+        var tmpVar164 = [0, 0, 0, 0];
+        tmpVar164[3] += tmpVar162[3] + tmpVar163[3];
+        tmpVar164[2] += tmpVar164[3] >>> 16;
+        tmpVar164[3] &= 65535;
+        tmpVar164[2] += tmpVar162[2] + tmpVar163[2];
+        tmpVar164[1] += tmpVar164[2] >>> 16;
+        tmpVar164[2] &= 65535;
+        tmpVar164[1] += tmpVar162[1] + tmpVar163[1];
+        tmpVar164[0] += tmpVar164[1] >>> 16;
+        tmpVar164[1] &= 65535;
+        tmpVar164[0] += tmpVar162[0] + tmpVar163[0];
+        tmpVar164[0] &= 65535;
+        return [tmpVar164[0] << 16 | tmpVar164[1], tmpVar164[2] << 16 | tmpVar164[3]];
       }
-      function _0x580edf(_0x4aafee, _0x56055) {
-        _0x4aafee = [_0x4aafee[0] >>> 16, _0x4aafee[0] & 65535, _0x4aafee[1] >>> 16, _0x4aafee[1] & 65535];
-        _0x56055 = [_0x56055[0] >>> 16, _0x56055[0] & 65535, _0x56055[1] >>> 16, _0x56055[1] & 65535];
-        var _0x31ed5b = [0, 0, 0, 0];
-        _0x31ed5b[3] += _0x4aafee[3] * _0x56055[3];
-        _0x31ed5b[2] += _0x31ed5b[3] >>> 16;
-        _0x31ed5b[3] &= 65535;
-        _0x31ed5b[2] += _0x4aafee[2] * _0x56055[3];
-        _0x31ed5b[1] += _0x31ed5b[2] >>> 16;
-        _0x31ed5b[2] &= 65535;
-        _0x31ed5b[2] += _0x4aafee[3] * _0x56055[2];
-        _0x31ed5b[1] += _0x31ed5b[2] >>> 16;
-        _0x31ed5b[2] &= 65535;
-        _0x31ed5b[1] += _0x4aafee[1] * _0x56055[3];
-        _0x31ed5b[0] += _0x31ed5b[1] >>> 16;
-        _0x31ed5b[1] &= 65535;
-        _0x31ed5b[1] += _0x4aafee[2] * _0x56055[2];
-        _0x31ed5b[0] += _0x31ed5b[1] >>> 16;
-        _0x31ed5b[1] &= 65535;
-        _0x31ed5b[1] += _0x4aafee[3] * _0x56055[1];
-        _0x31ed5b[0] += _0x31ed5b[1] >>> 16;
-        _0x31ed5b[1] &= 65535;
-        _0x31ed5b[0] += _0x4aafee[0] * _0x56055[3] + _0x4aafee[1] * _0x56055[2] + _0x4aafee[2] * _0x56055[1] + _0x4aafee[3] * _0x56055[0];
-        _0x31ed5b[0] &= 65535;
-        return [_0x31ed5b[0] << 16 | _0x31ed5b[1], _0x31ed5b[2] << 16 | _0x31ed5b[3]];
+      function helperFn2(tmpVar165, tmpVar166) {
+        tmpVar165 = [tmpVar165[0] >>> 16, tmpVar165[0] & 65535, tmpVar165[1] >>> 16, tmpVar165[1] & 65535];
+        tmpVar166 = [tmpVar166[0] >>> 16, tmpVar166[0] & 65535, tmpVar166[1] >>> 16, tmpVar166[1] & 65535];
+        var tmpVar167 = [0, 0, 0, 0];
+        tmpVar167[3] += tmpVar165[3] * tmpVar166[3];
+        tmpVar167[2] += tmpVar167[3] >>> 16;
+        tmpVar167[3] &= 65535;
+        tmpVar167[2] += tmpVar165[2] * tmpVar166[3];
+        tmpVar167[1] += tmpVar167[2] >>> 16;
+        tmpVar167[2] &= 65535;
+        tmpVar167[2] += tmpVar165[3] * tmpVar166[2];
+        tmpVar167[1] += tmpVar167[2] >>> 16;
+        tmpVar167[2] &= 65535;
+        tmpVar167[1] += tmpVar165[1] * tmpVar166[3];
+        tmpVar167[0] += tmpVar167[1] >>> 16;
+        tmpVar167[1] &= 65535;
+        tmpVar167[1] += tmpVar165[2] * tmpVar166[2];
+        tmpVar167[0] += tmpVar167[1] >>> 16;
+        tmpVar167[1] &= 65535;
+        tmpVar167[1] += tmpVar165[3] * tmpVar166[1];
+        tmpVar167[0] += tmpVar167[1] >>> 16;
+        tmpVar167[1] &= 65535;
+        tmpVar167[0] += tmpVar165[0] * tmpVar166[3] + tmpVar165[1] * tmpVar166[2] + tmpVar165[2] * tmpVar166[1] + tmpVar165[3] * tmpVar166[0];
+        tmpVar167[0] &= 65535;
+        return [tmpVar167[0] << 16 | tmpVar167[1], tmpVar167[2] << 16 | tmpVar167[3]];
       }
-      function _0x281e26(_0x12399d, _0x314b42) {
-        if ((_0x314b42 %= 64) == 32) {
-          return [_0x12399d[1], _0x12399d[0]];
-        } else if (_0x314b42 < 32) {
-          return [_0x12399d[0] << _0x314b42 | _0x12399d[1] >>> 32 - _0x314b42, _0x12399d[1] << _0x314b42 | _0x12399d[0] >>> 32 - _0x314b42];
+      function helperFn3(tmpVar168, tmpVar169) {
+        if ((tmpVar169 %= 64) == 32) {
+          return [tmpVar168[1], tmpVar168[0]];
+        } else if (tmpVar169 < 32) {
+          return [tmpVar168[0] << tmpVar169 | tmpVar168[1] >>> 32 - tmpVar169, tmpVar168[1] << tmpVar169 | tmpVar168[0] >>> 32 - tmpVar169];
         } else {
-          _0x314b42 -= 32;
-          return [_0x12399d[1] << _0x314b42 | _0x12399d[0] >>> 32 - _0x314b42, _0x12399d[0] << _0x314b42 | _0x12399d[1] >>> 32 - _0x314b42];
+          tmpVar169 -= 32;
+          return [tmpVar168[1] << tmpVar169 | tmpVar168[0] >>> 32 - tmpVar169, tmpVar168[0] << tmpVar169 | tmpVar168[1] >>> 32 - tmpVar169];
         }
       }
-      function _0x5a862c(_0x21febd, _0x32b5f4) {
-        if ((_0x32b5f4 %= 64) == 0) {
-          return _0x21febd;
-        } else if (_0x32b5f4 < 32) {
-          return [_0x21febd[0] << _0x32b5f4 | _0x21febd[1] >>> 32 - _0x32b5f4, _0x21febd[1] << _0x32b5f4];
+      function helperFn4(tmpVar170, tmpVar171) {
+        if ((tmpVar171 %= 64) == 0) {
+          return tmpVar170;
+        } else if (tmpVar171 < 32) {
+          return [tmpVar170[0] << tmpVar171 | tmpVar170[1] >>> 32 - tmpVar171, tmpVar170[1] << tmpVar171];
         } else {
-          return [_0x21febd[1] << _0x32b5f4 - 32, 0];
+          return [tmpVar170[1] << tmpVar171 - 32, 0];
         }
       }
-      function _0x37f737(_0x279d16, _0x5a6463) {
-        return [_0x279d16[0] ^ _0x5a6463[0], _0x279d16[1] ^ _0x5a6463[1]];
+      function helperFn5(tmpVar172, tmpVar173) {
+        return [tmpVar172[0] ^ tmpVar173[0], tmpVar172[1] ^ tmpVar173[1]];
       }
-      function _0x5f5525(_0x132587) {
-        _0x132587 = _0x37f737(_0x132587, [0, _0x132587[0] >>> 1]);
-        _0x132587 = _0x580edf(_0x132587, [4283543511, 3981806797]);
-        _0x132587 = _0x37f737(_0x132587, [0, _0x132587[0] >>> 1]);
-        _0x132587 = _0x580edf(_0x132587, [3301882366, 444984403]);
-        return _0x37f737(_0x132587, [0, _0x132587[0] >>> 1]);
+      function helperFn6(tmpVar174) {
+        tmpVar174 = helperFn5(tmpVar174, [0, tmpVar174[0] >>> 1]);
+        tmpVar174 = helperFn2(tmpVar174, [4283543511, 3981806797]);
+        tmpVar174 = helperFn5(tmpVar174, [0, tmpVar174[0] >>> 1]);
+        tmpVar174 = helperFn2(tmpVar174, [3301882366, 444984403]);
+        return helperFn5(tmpVar174, [0, tmpVar174[0] >>> 1]);
       }
-      function _0xe60fb9(_0x37a980, _0x277f7d) {
-        _0x277f7d = _0x277f7d || 0;
-        var _0x9ce8de = (_0x37a980 = _0x37a980 || "").length % 16;
-        for (var _0x5d3762 = _0x37a980.length - _0x9ce8de, _0x25d387 = [0, _0x277f7d], _0x2a3d64 = [0, _0x277f7d], _0x1ad967 = [0, 0], _0x1fbb5c = [0, 0], _0x1edff5 = [2277735313, 289559509], _0x5de1e6 = [1291169091, 658871167], _0x5c92ce = 0; _0x5c92ce < _0x5d3762; _0x5c92ce += 16) {
-          _0x1ad967 = [_0x37a980.charCodeAt(_0x5c92ce + 4) & 255 | (_0x37a980.charCodeAt(_0x5c92ce + 5) & 255) << 8 | (_0x37a980.charCodeAt(_0x5c92ce + 6) & 255) << 16 | (_0x37a980.charCodeAt(_0x5c92ce + 7) & 255) << 24, _0x37a980.charCodeAt(_0x5c92ce) & 255 | (_0x37a980.charCodeAt(_0x5c92ce + 1) & 255) << 8 | (_0x37a980.charCodeAt(_0x5c92ce + 2) & 255) << 16 | (_0x37a980.charCodeAt(_0x5c92ce + 3) & 255) << 24];
-          _0x1fbb5c = [_0x37a980.charCodeAt(_0x5c92ce + 12) & 255 | (_0x37a980.charCodeAt(_0x5c92ce + 13) & 255) << 8 | (_0x37a980.charCodeAt(_0x5c92ce + 14) & 255) << 16 | (_0x37a980.charCodeAt(_0x5c92ce + 15) & 255) << 24, _0x37a980.charCodeAt(_0x5c92ce + 8) & 255 | (_0x37a980.charCodeAt(_0x5c92ce + 9) & 255) << 8 | (_0x37a980.charCodeAt(_0x5c92ce + 10) & 255) << 16 | (_0x37a980.charCodeAt(_0x5c92ce + 11) & 255) << 24];
-          _0x1ad967 = _0x580edf(_0x1ad967, _0x1edff5);
-          _0x1ad967 = _0x281e26(_0x1ad967, 31);
-          _0x1ad967 = _0x580edf(_0x1ad967, _0x5de1e6);
-          _0x25d387 = _0x37f737(_0x25d387, _0x1ad967);
-          _0x25d387 = _0x281e26(_0x25d387, 27);
-          _0x25d387 = _0xe140a9(_0x25d387, _0x2a3d64);
-          _0x25d387 = _0xe140a9(_0x580edf(_0x25d387, [0, 5]), [0, 1390208809]);
-          _0x1fbb5c = _0x580edf(_0x1fbb5c, _0x5de1e6);
-          _0x1fbb5c = _0x281e26(_0x1fbb5c, 33);
-          _0x1fbb5c = _0x580edf(_0x1fbb5c, _0x1edff5);
-          _0x2a3d64 = _0x37f737(_0x2a3d64, _0x1fbb5c);
-          _0x2a3d64 = _0x281e26(_0x2a3d64, 31);
-          _0x2a3d64 = _0xe140a9(_0x2a3d64, _0x25d387);
-          _0x2a3d64 = _0xe140a9(_0x580edf(_0x2a3d64, [0, 5]), [0, 944331445]);
+      function helperFn7(tmpVar175, tmpVar176) {
+        tmpVar176 = tmpVar176 || 0;
+        var tmpVar177 = (tmpVar175 = tmpVar175 || "").length % 16;
+        for (var tmpVar178 = tmpVar175.length - tmpVar177, tmpVar179 = [0, tmpVar176], tmpVar180 = [0, tmpVar176], tmpVar181 = [0, 0], tmpVar182 = [0, 0], tmpVar183 = [2277735313, 289559509], tmpVar184 = [1291169091, 658871167], tmpVar185 = 0; tmpVar185 < tmpVar178; tmpVar185 += 16) {
+          tmpVar181 = [tmpVar175.charCodeAt(tmpVar185 + 4) & 255 | (tmpVar175.charCodeAt(tmpVar185 + 5) & 255) << 8 | (tmpVar175.charCodeAt(tmpVar185 + 6) & 255) << 16 | (tmpVar175.charCodeAt(tmpVar185 + 7) & 255) << 24, tmpVar175.charCodeAt(tmpVar185) & 255 | (tmpVar175.charCodeAt(tmpVar185 + 1) & 255) << 8 | (tmpVar175.charCodeAt(tmpVar185 + 2) & 255) << 16 | (tmpVar175.charCodeAt(tmpVar185 + 3) & 255) << 24];
+          tmpVar182 = [tmpVar175.charCodeAt(tmpVar185 + 12) & 255 | (tmpVar175.charCodeAt(tmpVar185 + 13) & 255) << 8 | (tmpVar175.charCodeAt(tmpVar185 + 14) & 255) << 16 | (tmpVar175.charCodeAt(tmpVar185 + 15) & 255) << 24, tmpVar175.charCodeAt(tmpVar185 + 8) & 255 | (tmpVar175.charCodeAt(tmpVar185 + 9) & 255) << 8 | (tmpVar175.charCodeAt(tmpVar185 + 10) & 255) << 16 | (tmpVar175.charCodeAt(tmpVar185 + 11) & 255) << 24];
+          tmpVar181 = helperFn2(tmpVar181, tmpVar183);
+          tmpVar181 = helperFn3(tmpVar181, 31);
+          tmpVar181 = helperFn2(tmpVar181, tmpVar184);
+          tmpVar179 = helperFn5(tmpVar179, tmpVar181);
+          tmpVar179 = helperFn3(tmpVar179, 27);
+          tmpVar179 = helperFn1(tmpVar179, tmpVar180);
+          tmpVar179 = helperFn1(helperFn2(tmpVar179, [0, 5]), [0, 1390208809]);
+          tmpVar182 = helperFn2(tmpVar182, tmpVar184);
+          tmpVar182 = helperFn3(tmpVar182, 33);
+          tmpVar182 = helperFn2(tmpVar182, tmpVar183);
+          tmpVar180 = helperFn5(tmpVar180, tmpVar182);
+          tmpVar180 = helperFn3(tmpVar180, 31);
+          tmpVar180 = helperFn1(tmpVar180, tmpVar179);
+          tmpVar180 = helperFn1(helperFn2(tmpVar180, [0, 5]), [0, 944331445]);
         }
-        _0x1ad967 = [0, 0];
-        _0x1fbb5c = [0, 0];
-        switch (_0x9ce8de) {
+        tmpVar181 = [0, 0];
+        tmpVar182 = [0, 0];
+        switch (tmpVar177) {
           case 15:
-            _0x1fbb5c = _0x37f737(_0x1fbb5c, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 14)], 48));
+            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 14)], 48));
           case 14:
-            _0x1fbb5c = _0x37f737(_0x1fbb5c, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 13)], 40));
+            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 13)], 40));
           case 13:
-            _0x1fbb5c = _0x37f737(_0x1fbb5c, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 12)], 32));
+            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 12)], 32));
           case 12:
-            _0x1fbb5c = _0x37f737(_0x1fbb5c, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 11)], 24));
+            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 11)], 24));
           case 11:
-            _0x1fbb5c = _0x37f737(_0x1fbb5c, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 10)], 16));
+            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 10)], 16));
           case 10:
-            _0x1fbb5c = _0x37f737(_0x1fbb5c, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 9)], 8));
+            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 9)], 8));
           case 9:
-            _0x1fbb5c = _0x37f737(_0x1fbb5c, [0, _0x37a980.charCodeAt(_0x5c92ce + 8)]);
-            _0x1fbb5c = _0x580edf(_0x1fbb5c, _0x5de1e6);
-            _0x1fbb5c = _0x281e26(_0x1fbb5c, 33);
-            _0x1fbb5c = _0x580edf(_0x1fbb5c, _0x1edff5);
-            _0x2a3d64 = _0x37f737(_0x2a3d64, _0x1fbb5c);
+            tmpVar182 = helperFn5(tmpVar182, [0, tmpVar175.charCodeAt(tmpVar185 + 8)]);
+            tmpVar182 = helperFn2(tmpVar182, tmpVar184);
+            tmpVar182 = helperFn3(tmpVar182, 33);
+            tmpVar182 = helperFn2(tmpVar182, tmpVar183);
+            tmpVar180 = helperFn5(tmpVar180, tmpVar182);
           case 8:
-            _0x1ad967 = _0x37f737(_0x1ad967, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 7)], 56));
+            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 7)], 56));
           case 7:
-            _0x1ad967 = _0x37f737(_0x1ad967, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 6)], 48));
+            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 6)], 48));
           case 6:
-            _0x1ad967 = _0x37f737(_0x1ad967, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 5)], 40));
+            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 5)], 40));
           case 5:
-            _0x1ad967 = _0x37f737(_0x1ad967, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 4)], 32));
+            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 4)], 32));
           case 4:
-            _0x1ad967 = _0x37f737(_0x1ad967, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 3)], 24));
+            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 3)], 24));
           case 3:
-            _0x1ad967 = _0x37f737(_0x1ad967, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 2)], 16));
+            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 2)], 16));
           case 2:
-            _0x1ad967 = _0x37f737(_0x1ad967, _0x5a862c([0, _0x37a980.charCodeAt(_0x5c92ce + 1)], 8));
+            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 1)], 8));
           case 1:
-            _0x1ad967 = _0x37f737(_0x1ad967, [0, _0x37a980.charCodeAt(_0x5c92ce)]);
-            _0x1ad967 = _0x580edf(_0x1ad967, _0x1edff5);
-            _0x1ad967 = _0x281e26(_0x1ad967, 31);
-            _0x1ad967 = _0x580edf(_0x1ad967, _0x5de1e6);
-            _0x25d387 = _0x37f737(_0x25d387, _0x1ad967);
+            tmpVar181 = helperFn5(tmpVar181, [0, tmpVar175.charCodeAt(tmpVar185)]);
+            tmpVar181 = helperFn2(tmpVar181, tmpVar183);
+            tmpVar181 = helperFn3(tmpVar181, 31);
+            tmpVar181 = helperFn2(tmpVar181, tmpVar184);
+            tmpVar179 = helperFn5(tmpVar179, tmpVar181);
         }
-        _0x25d387 = _0x37f737(_0x25d387, [0, _0x37a980.length]);
-        _0x2a3d64 = _0x37f737(_0x2a3d64, [0, _0x37a980.length]);
-        _0x25d387 = _0xe140a9(_0x25d387, _0x2a3d64);
-        _0x2a3d64 = _0xe140a9(_0x2a3d64, _0x25d387);
-        _0x25d387 = _0x5f5525(_0x25d387);
-        _0x2a3d64 = _0x5f5525(_0x2a3d64);
-        _0x25d387 = _0xe140a9(_0x25d387, _0x2a3d64);
-        _0x2a3d64 = _0xe140a9(_0x2a3d64, _0x25d387);
-        return ("00000000" + (_0x25d387[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (_0x25d387[1] >>> 0).toString(16)).slice(-8) + ("00000000" + (_0x2a3d64[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (_0x2a3d64[1] >>> 0).toString(16)).slice(-8);
+        tmpVar179 = helperFn5(tmpVar179, [0, tmpVar175.length]);
+        tmpVar180 = helperFn5(tmpVar180, [0, tmpVar175.length]);
+        tmpVar179 = helperFn1(tmpVar179, tmpVar180);
+        tmpVar180 = helperFn1(tmpVar180, tmpVar179);
+        tmpVar179 = helperFn6(tmpVar179);
+        tmpVar180 = helperFn6(tmpVar180);
+        tmpVar179 = helperFn1(tmpVar179, tmpVar180);
+        tmpVar180 = helperFn1(tmpVar180, tmpVar179);
+        return ("00000000" + (tmpVar179[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (tmpVar179[1] >>> 0).toString(16)).slice(-8) + ("00000000" + (tmpVar180[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (tmpVar180[1] >>> 0).toString(16)).slice(-8);
       }
-      var _0x3ef8e9 = {
+      var tmpVar186 = {
         ancestorOrigins: {},
         href: "https://www.52pojie.cn//",
         origin: "https://www.52pojie.cn",
@@ -1177,59 +1177,59 @@ hostname = %APPEND% www.52pojie.cn
         search: "",
         hash: ""
       };
-      var _0xeb0399 = {
-        fp_infos: function (_0x54fbf8) {
-          var _0x5eb307 = {
+      var tmpVar187 = {
+        fp_infos: function (tmpVar188) {
+          var tmpVar189 = {
             errors: {}
           };
-          for (var _0x49d1c6 in _0x54fbf8) {
-            var _0x1af161 = _0x54fbf8[_0x49d1c6];
-            var _0x5d1bd6 = _0x1af161.key;
-            var _0x36fd3f = _0x1af161.value;
-            if (typeof _0x36fd3f == "string" && _0x36fd3f.indexOf("Error: ") != -1) {
-              _0x5eb307.errors[_0x5d1bd6] = _0x36fd3f;
+          for (var tmpVar190 in tmpVar188) {
+            var tmpVar191 = tmpVar188[tmpVar190];
+            var tmpVar192 = tmpVar191.key;
+            var tmpVar193 = tmpVar191.value;
+            if (typeof tmpVar193 == "string" && tmpVar193.indexOf("Error: ") != -1) {
+              tmpVar189.errors[tmpVar192] = tmpVar193;
             } else {
-              _0x5eb307[_0x5d1bd6] = _0x36fd3f;
+              tmpVar189[tmpVar192] = tmpVar193;
             }
           }
-          var _0x946fc = new Date();
-          _0x5eb307.dateTime = {
-            timestamp: _0x946fc.getTime()
+          var tmpVar194 = new Date();
+          tmpVar189.dateTime = {
+            timestamp: tmpVar194.getTime()
           };
-          _0x5eb307.fp = function (_0x3f7d30, _0x39ac38) {
-            var _0x80bde2 = [_0x3f7d30.plugins && _0x3f7d30.plugins.fp, _0x3f7d30.fonts && _0x3f7d30.fonts.fp, _0x3f7d30.screenObject.colorDepth, _0x3f7d30.intlObject, _0x3f7d30.deviceInfos, _0x3f7d30.touchSupport, _0x3f7d30.navigatorObject.platform, _0x3f7d30.navigatorObject.vendor, _0x3f7d30.storageObject, _0x3f7d30.functions, _0x3f7d30.audio, _0x5b1b22(_0x3f7d30.webGL) == "object" ? _0x3f7d30.webGL.fp : undefined, _0x5b1b22(_0x3f7d30.canvas) == "object" ? _0x3f7d30.canvas.fp : undefined];
-            for (var _0x3aff4 in _0x80bde2) {
-              if (_0x80bde2[_0x3aff4] === undefined) {
-                _0x80bde2[_0x3aff4] = "";
+          tmpVar189.fp = function (tmpVar195, tmpVar196) {
+            var tmpVar197 = [tmpVar195.plugins && tmpVar195.plugins.fp, tmpVar195.fonts && tmpVar195.fonts.fp, tmpVar195.screenObject.colorDepth, tmpVar195.intlObject, tmpVar195.deviceInfos, tmpVar195.touchSupport, tmpVar195.navigatorObject.platform, tmpVar195.navigatorObject.vendor, tmpVar195.storageObject, tmpVar195.functions, tmpVar195.audio, _typeofSymbolSafe(tmpVar195.webGL) == "object" ? tmpVar195.webGL.fp : undefined, _typeofSymbolSafe(tmpVar195.canvas) == "object" ? tmpVar195.canvas.fp : undefined];
+            for (var tmpVar198 in tmpVar197) {
+              if (tmpVar197[tmpVar198] === undefined) {
+                tmpVar197[tmpVar198] = "";
               }
             }
-            return _0x39ac38(_0x80bde2.toString(), 31);
-          }(_0x5eb307, _0xe60fb9);
-          _0x5eb307.protocol = _0x3ef8e9.protocol.replace(":", "");
+            return tmpVar196(tmpVar197.toString(), 31);
+          }(tmpVar189, helperFn7);
+          tmpVar189.protocol = tmpVar186.protocol.replace(":", "");
           (function () {
-            var _0x47a4c3 = _0x5eb307.dateTime.timestamp % 10 || 10;
-            for (var _0x2ff932 in _0x5eb307) {
-              var _0xd48855 = _0x5eb307[_0x2ff932];
-              if (_0x5b1b22(_0xd48855) == "object") {
-                var _0x38724f = 0;
-                for (var _0x30f2d3 in _0xd48855) {
-                  var _0x15f5aa = _0xd48855[_0x30f2d3];
-                  _0x38724f += typeof _0x15f5aa == "number" ? parseInt(_0x15f5aa) : typeof _0x15f5aa == "string" ? _0x15f5aa.length : _0x47a4c3;
+            var tmpVar199 = tmpVar189.dateTime.timestamp % 10 || 10;
+            for (var tmpVar200 in tmpVar189) {
+              var tmpVar201 = tmpVar189[tmpVar200];
+              if (_typeofSymbolSafe(tmpVar201) == "object") {
+                var tmpVar202 = 0;
+                for (var tmpVar203 in tmpVar201) {
+                  var tmpVar204 = tmpVar201[tmpVar203];
+                  tmpVar202 += typeof tmpVar204 == "number" ? parseInt(tmpVar204) : typeof tmpVar204 == "string" ? tmpVar204.length : tmpVar199;
                 }
-                if (_0x38724f) {
-                  _0x5eb307[_0x2ff932].verify = _0x38724f * _0x47a4c3;
+                if (tmpVar202) {
+                  tmpVar189[tmpVar200].verify = tmpVar202 * tmpVar199;
                 }
               }
             }
           })();
-          return _0x5eb307;
-        }([_0x50e9f6, {
+          return tmpVar189;
+        }([tmpVar157, {
           key: "fonts",
           value: {
             names: ["Arial", "Arial Black", "Arial Narrow", "Calibri", "Cambria", "Cambria Math", "Comic Sans MS", "Consolas", "Courier", "Courier New", "Georgia", "Helvetica", "Impact", "Lucida Console", "Lucida Sans Unicode", "Microsoft Sans Serif", "MS Gothic", "MS PGothic", "MS Sans Serif", "MS Serif", "Palatino Linotype", "Segoe Print", "Segoe Script", "Segoe UI", "Segoe UI Light", "Segoe UI Semibold", "Segoe UI Symbol", "Tahoma", "Times", "Times New Roman", "Trebuchet MS", "Verdana", "Wingdings"],
             fp: "f730c0cc627b3b3d7db9f459836db692"
           }
-        }, _0x45a0c7, _0x6c2d8, {
+        }, tmpVar159, tmpVar161, {
           key: "touchSupport",
           value: [0, false, false]
         }, {
@@ -1288,749 +1288,749 @@ hostname = %APPEND% www.52pojie.cn
           }
         }]),
         answer: function () {
-          var _0x59c88d = 0;
-          var _0x4ad292 = 1;
-          for (var _0x52371e = 0; _0x52371e < _0x4aa59b.length; _0x52371e++) {
-            _0x59c88d = (_0x59c88d + _0x4aa59b.charCodeAt(_0x52371e)) * 2;
-            _0x4ad292 = (_0x4ad292 + _0x52371e + 1) * 2;
+          var tmpVar205 = 0;
+          var tmpVar206 = 1;
+          for (var tmpVar207 = 0; tmpVar207 < tmpVar148.length; tmpVar207++) {
+            tmpVar205 = (tmpVar205 + tmpVar148.charCodeAt(tmpVar207)) * 2;
+            tmpVar206 = (tmpVar206 + tmpVar207 + 1) * 2;
           }
-          _0x59c88d *= _0x5ed2be;
-          return "WZWS_CONFIRM_PREFIX_LABEL" + (_0x59c88d + _0x4ad292);
+          tmpVar205 *= tmpVar149;
+          return "WZWS_CONFIRM_PREFIX_LABEL" + (tmpVar205 + tmpVar206);
         }(),
-        hostname: _0x3ef8e9.hostname,
-        scheme: _0x3ef8e9.protocol.replace(":", "")
+        hostname: tmpVar186.hostname,
+        scheme: tmpVar186.protocol.replace(":", "")
       };
-      return function (_0x847268) {
-        var _0x3cfea0;
-        var _0x1700af;
-        var _0x4aab1;
-        var _0x44c87b;
-        var _0x580d49;
-        var _0x594a11;
-        var _0x9ae7fb = _0x45f11b;
-        _0x4aab1 = _0x847268.length;
-        _0x1700af = 0;
-        _0x3cfea0 = "";
-        while (_0x1700af < _0x4aab1) {
-          _0x44c87b = _0x847268.charCodeAt(_0x1700af++) & 255;
-          if (_0x1700af == _0x4aab1) {
-            _0x3cfea0 += _0x9ae7fb.charAt(_0x44c87b >> 2);
-            _0x3cfea0 += _0x9ae7fb.charAt((_0x44c87b & 3) << 4);
-            _0x3cfea0 += "==";
+      return function (tmpVar208) {
+        var tmpVar209;
+        var tmpVar210;
+        var tmpVar211;
+        var tmpVar212;
+        var tmpVar213;
+        var tmpVar214;
+        var tmpVar215 = tmpVar150;
+        tmpVar211 = tmpVar208.length;
+        tmpVar210 = 0;
+        tmpVar209 = "";
+        while (tmpVar210 < tmpVar211) {
+          tmpVar212 = tmpVar208.charCodeAt(tmpVar210++) & 255;
+          if (tmpVar210 == tmpVar211) {
+            tmpVar209 += tmpVar215.charAt(tmpVar212 >> 2);
+            tmpVar209 += tmpVar215.charAt((tmpVar212 & 3) << 4);
+            tmpVar209 += "==";
             break;
           }
-          _0x580d49 = _0x847268.charCodeAt(_0x1700af++);
-          if (_0x1700af == _0x4aab1) {
-            _0x3cfea0 += _0x9ae7fb.charAt(_0x44c87b >> 2);
-            _0x3cfea0 += _0x9ae7fb.charAt((_0x44c87b & 3) << 4 | (_0x580d49 & 240) >> 4);
-            _0x3cfea0 += _0x9ae7fb.charAt((_0x580d49 & 15) << 2);
-            _0x3cfea0 += "=";
+          tmpVar213 = tmpVar208.charCodeAt(tmpVar210++);
+          if (tmpVar210 == tmpVar211) {
+            tmpVar209 += tmpVar215.charAt(tmpVar212 >> 2);
+            tmpVar209 += tmpVar215.charAt((tmpVar212 & 3) << 4 | (tmpVar213 & 240) >> 4);
+            tmpVar209 += tmpVar215.charAt((tmpVar213 & 15) << 2);
+            tmpVar209 += "=";
             break;
           }
-          _0x594a11 = _0x847268.charCodeAt(_0x1700af++);
-          _0x3cfea0 += _0x9ae7fb.charAt(_0x44c87b >> 2);
-          _0x3cfea0 += _0x9ae7fb.charAt((_0x44c87b & 3) << 4 | (_0x580d49 & 240) >> 4);
-          _0x3cfea0 += _0x9ae7fb.charAt((_0x580d49 & 15) << 2 | (_0x594a11 & 192) >> 6);
-          _0x3cfea0 += _0x9ae7fb.charAt(_0x594a11 & 63);
+          tmpVar214 = tmpVar208.charCodeAt(tmpVar210++);
+          tmpVar209 += tmpVar215.charAt(tmpVar212 >> 2);
+          tmpVar209 += tmpVar215.charAt((tmpVar212 & 3) << 4 | (tmpVar213 & 240) >> 4);
+          tmpVar209 += tmpVar215.charAt((tmpVar213 & 15) << 2 | (tmpVar214 & 192) >> 6);
+          tmpVar209 += tmpVar215.charAt(tmpVar214 & 63);
         }
-        return _0x3cfea0;
-      }(JSON.stringify(_0xeb0399));
+        return tmpVar209;
+      }(JSON.stringify(tmpVar187));
     }
   }
-  function _0x5a8d63(_0x1f75e0) {
-    _0x5a8d63 = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (_0x2af9c5) {
-      return typeof _0x2af9c5;
-    } : function (_0x2bca75) {
-      if (_0x2bca75 && typeof Symbol == "function" && _0x2bca75.constructor === Symbol && _0x2bca75 !== Symbol.prototype) {
+  function _typeofArgumentSafe(tmpVar216) {
+    _typeofArgumentSafe = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (tmpVar217) {
+      return typeof tmpVar217;
+    } : function (tmpVar218) {
+      if (tmpVar218 && typeof Symbol == "function" && tmpVar218.constructor === Symbol && tmpVar218 !== Symbol.prototype) {
         return "symbol";
       } else {
-        return typeof _0x2bca75;
+        return typeof tmpVar218;
       }
     };
-    return _0x5a8d63(_0x1f75e0);
+    return _typeofArgumentSafe(tmpVar216);
   }
-  var _0x4d8b07 = typeof $argument != "undefined" ? (typeof $argument == "undefined" ? "undefined" : _0x5a8d63($argument)) == "object" ? $argument : Object.fromEntries($argument.split("&").map(function (_0x21561a) {
-    return _0x21561a.split("=");
+  var scriptArgs = typeof $argument != "undefined" ? (typeof $argument == "undefined" ? "undefined" : _typeofArgumentSafe($argument)) == "object" ? $argument : Object.fromEntries($argument.split("&").map(function (tmpVar219) {
+    return tmpVar219.split("=");
   })) : {};
-  function _0x4c2b88(_0x14fd11) {
-    _0x4c2b88 = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (_0x1d821d) {
-      return typeof _0x1d821d;
-    } : function (_0x575c35) {
-      if (_0x575c35 && typeof Symbol == "function" && _0x575c35.constructor === Symbol && _0x575c35 !== Symbol.prototype) {
+  function _typeofValueSafe(tmpVar220) {
+    _typeofValueSafe = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (tmpVar221) {
+      return typeof tmpVar221;
+    } : function (tmpVar222) {
+      if (tmpVar222 && typeof Symbol == "function" && tmpVar222.constructor === Symbol && tmpVar222 !== Symbol.prototype) {
         return "symbol";
       } else {
-        return typeof _0x575c35;
+        return typeof tmpVar222;
       }
     };
-    return _0x4c2b88(_0x14fd11);
+    return _typeofValueSafe(tmpVar220);
   }
-  function _0x49d68e(_0x4324aa, _0x3a6445) {
-    var _0x36a5be = Object.keys(_0x4324aa);
+  function _ownKeys(tmpVar223, tmpVar224) {
+    var tmpVar225 = Object.keys(tmpVar223);
     if (Object.getOwnPropertySymbols) {
-      var _0x212209 = Object.getOwnPropertySymbols(_0x4324aa);
-      if (_0x3a6445) {
-        _0x212209 = _0x212209.filter(function (_0x17ef30) {
-          return Object.getOwnPropertyDescriptor(_0x4324aa, _0x17ef30).enumerable;
+      var tmpVar226 = Object.getOwnPropertySymbols(tmpVar223);
+      if (tmpVar224) {
+        tmpVar226 = tmpVar226.filter(function (tmpVar227) {
+          return Object.getOwnPropertyDescriptor(tmpVar223, tmpVar227).enumerable;
         });
       }
-      _0x36a5be.push.apply(_0x36a5be, _0x212209);
+      tmpVar225.push.apply(tmpVar225, tmpVar226);
     }
-    return _0x36a5be;
+    return tmpVar225;
   }
-  function _0x22ec9e(_0x9925ce) {
-    for (var _0x5445e1 = 1; _0x5445e1 < arguments.length; _0x5445e1++) {
-      var _0x458053 = arguments[_0x5445e1] ?? {};
-      if (_0x5445e1 % 2) {
-        _0x49d68e(Object(_0x458053), true).forEach(function (_0x46602b) {
-          _0x1f3244(_0x9925ce, _0x46602b, _0x458053[_0x46602b]);
+  function _objectSpread(tmpVar228) {
+    for (var tmpVar229 = 1; tmpVar229 < arguments.length; tmpVar229++) {
+      var tmpVar230 = arguments[tmpVar229] ?? {};
+      if (tmpVar229 % 2) {
+        _ownKeys(Object(tmpVar230), true).forEach(function (tmpVar231) {
+          _defineProperty(tmpVar228, tmpVar231, tmpVar230[tmpVar231]);
         });
       } else if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(_0x9925ce, Object.getOwnPropertyDescriptors(_0x458053));
+        Object.defineProperties(tmpVar228, Object.getOwnPropertyDescriptors(tmpVar230));
       } else {
-        _0x49d68e(Object(_0x458053)).forEach(function (_0x11be2b) {
-          Object.defineProperty(_0x9925ce, _0x11be2b, Object.getOwnPropertyDescriptor(_0x458053, _0x11be2b));
+        _ownKeys(Object(tmpVar230)).forEach(function (tmpVar232) {
+          Object.defineProperty(tmpVar228, tmpVar232, Object.getOwnPropertyDescriptor(tmpVar230, tmpVar232));
         });
       }
     }
-    return _0x9925ce;
+    return tmpVar228;
   }
-  function _0x1f3244(_0x4b67b, _0x406078, _0x3a4a60) {
-    if ((_0x406078 = function (_0x42e3ed) {
-      var _0x2b36e3 = function (_0x137758, _0x3554dc) {
-        if (_0x4c2b88(_0x137758) != "object" || !_0x137758) {
-          return _0x137758;
+  function _defineProperty(tmpVar233, tmpVar234, tmpVar235) {
+    if ((tmpVar234 = function (tmpVar236) {
+      var tmpVar237 = function (tmpVar238, tmpVar239) {
+        if (_typeofValueSafe(tmpVar238) != "object" || !tmpVar238) {
+          return tmpVar238;
         }
-        var _0x331e34 = _0x137758[Symbol.toPrimitive];
-        if (_0x331e34 !== undefined) {
-          var _0x490b47 = _0x331e34.call(_0x137758, _0x3554dc || "default");
-          if (_0x4c2b88(_0x490b47) != "object") {
-            return _0x490b47;
+        var tmpVar240 = tmpVar238[Symbol.toPrimitive];
+        if (tmpVar240 !== undefined) {
+          var tmpVar241 = tmpVar240.call(tmpVar238, tmpVar239 || "default");
+          if (_typeofValueSafe(tmpVar241) != "object") {
+            return tmpVar241;
           }
           throw new TypeError("@@toPrimitive must return a primitive value.");
         }
-        return (_0x3554dc === "string" ? String : Number)(_0x137758);
-      }(_0x42e3ed, "string");
-      if (_0x4c2b88(_0x2b36e3) == "symbol") {
-        return _0x2b36e3;
+        return (tmpVar239 === "string" ? String : Number)(tmpVar238);
+      }(tmpVar236, "string");
+      if (_typeofValueSafe(tmpVar237) == "symbol") {
+        return tmpVar237;
       } else {
-        return _0x2b36e3 + "";
+        return tmpVar237 + "";
       }
-    }(_0x406078)) in _0x4b67b) {
-      Object.defineProperty(_0x4b67b, _0x406078, {
-        value: _0x3a4a60,
+    }(tmpVar234)) in tmpVar233) {
+      Object.defineProperty(tmpVar233, tmpVar234, {
+        value: tmpVar235,
         enumerable: true,
         configurable: true,
         writable: true
       });
     } else {
-      _0x4b67b[_0x406078] = _0x3a4a60;
+      tmpVar233[tmpVar234] = tmpVar235;
     }
-    return _0x4b67b;
+    return tmpVar233;
   }
-  function _0x2570ae(_0x337e2a, _0x12feeb) {
-    return function (_0x1592e2) {
-      if (Array.isArray(_0x1592e2)) {
-        return _0x1592e2;
+  function _slicedToArray(tmpVar242, tmpVar243) {
+    return function (tmpVar244) {
+      if (Array.isArray(tmpVar244)) {
+        return tmpVar244;
       }
-    }(_0x337e2a) || function (_0xd0d733, _0xe9779c) {
-      var _0x5030b4 = _0xd0d733 == null ? null : typeof Symbol != "undefined" && _0xd0d733[Symbol.iterator] || _0xd0d733["@@iterator"];
-      if (_0x5030b4 != null) {
-        var _0x2ed9c6;
-        var _0x302cdc;
-        var _0x2c0afc;
-        var _0xda6749;
-        var _0x149501 = [];
-        var _0x23c759 = true;
-        var _0x6f1bb9 = false;
+    }(tmpVar242) || function (tmpVar245, tmpVar246) {
+      var tmpVar247 = tmpVar245 == null ? null : typeof Symbol != "undefined" && tmpVar245[Symbol.iterator] || tmpVar245["@@iterator"];
+      if (tmpVar247 != null) {
+        var tmpVar248;
+        var tmpVar249;
+        var tmpVar250;
+        var tmpVar251;
+        var tmpVar252 = [];
+        var tmpVar253 = true;
+        var tmpVar254 = false;
         try {
-          _0x2c0afc = (_0x5030b4 = _0x5030b4.call(_0xd0d733)).next;
-          if (_0xe9779c === 0) {
-            if (Object(_0x5030b4) !== _0x5030b4) {
+          tmpVar250 = (tmpVar247 = tmpVar247.call(tmpVar245)).next;
+          if (tmpVar246 === 0) {
+            if (Object(tmpVar247) !== tmpVar247) {
               return;
             }
-            _0x23c759 = false;
+            tmpVar253 = false;
           } else {
-            for (; !(_0x23c759 = (_0x2ed9c6 = _0x2c0afc.call(_0x5030b4)).done) && (_0x149501.push(_0x2ed9c6.value), _0x149501.length !== _0xe9779c); _0x23c759 = true);
+            for (; !(tmpVar253 = (tmpVar248 = tmpVar250.call(tmpVar247)).done) && (tmpVar252.push(tmpVar248.value), tmpVar252.length !== tmpVar246); tmpVar253 = true);
           }
-        } catch (_0x4e94b2) {
-          _0x6f1bb9 = true;
-          _0x302cdc = _0x4e94b2;
+        } catch (tmpVar255) {
+          tmpVar254 = true;
+          tmpVar249 = tmpVar255;
         } finally {
           try {
-            if (!_0x23c759 && _0x5030b4.return != null && (_0xda6749 = _0x5030b4.return(), Object(_0xda6749) !== _0xda6749)) {
+            if (!tmpVar253 && tmpVar247.return != null && (tmpVar251 = tmpVar247.return(), Object(tmpVar251) !== tmpVar251)) {
               return;
             }
           } finally {
-            if (_0x6f1bb9) {
-              throw _0x302cdc;
+            if (tmpVar254) {
+              throw tmpVar249;
             }
           }
         }
-        return _0x149501;
+        return tmpVar252;
       }
-    }(_0x337e2a, _0x12feeb) || function (_0x139ca4, _0x3d8f8e) {
-      if (_0x139ca4) {
-        if (typeof _0x139ca4 == "string") {
-          return _0x32324b(_0x139ca4, _0x3d8f8e);
+    }(tmpVar242, tmpVar243) || function (tmpVar256, tmpVar257) {
+      if (tmpVar256) {
+        if (typeof tmpVar256 == "string") {
+          return _arrayLikeToArrayLoose(tmpVar256, tmpVar257);
         }
-        var _0x57251b = {}.toString.call(_0x139ca4).slice(8, -1);
-        if (_0x57251b === "Object" && _0x139ca4.constructor) {
-          _0x57251b = _0x139ca4.constructor.name;
+        var tmpVar258 = {}.toString.call(tmpVar256).slice(8, -1);
+        if (tmpVar258 === "Object" && tmpVar256.constructor) {
+          tmpVar258 = tmpVar256.constructor.name;
         }
-        if (_0x57251b === "Map" || _0x57251b === "Set") {
-          return Array.from(_0x139ca4);
-        } else if (_0x57251b === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(_0x57251b)) {
-          return _0x32324b(_0x139ca4, _0x3d8f8e);
+        if (tmpVar258 === "Map" || tmpVar258 === "Set") {
+          return Array.from(tmpVar256);
+        } else if (tmpVar258 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(tmpVar258)) {
+          return _arrayLikeToArrayLoose(tmpVar256, tmpVar257);
         } else {
           return undefined;
         }
       }
-    }(_0x337e2a, _0x12feeb) || function () {
+    }(tmpVar242, tmpVar243) || function () {
       throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
     }();
   }
-  function _0x32324b(_0x5318f8, _0x262eec) {
-    if (_0x262eec == null || _0x262eec > _0x5318f8.length) {
-      _0x262eec = _0x5318f8.length;
+  function _arrayLikeToArrayLoose(tmpVar259, tmpVar260) {
+    if (tmpVar260 == null || tmpVar260 > tmpVar259.length) {
+      tmpVar260 = tmpVar259.length;
     }
-    for (var _0x30349c = 0, _0x4a9599 = Array(_0x262eec); _0x30349c < _0x262eec; _0x30349c++) {
-      _0x4a9599[_0x30349c] = _0x5318f8[_0x30349c];
+    for (var tmpVar261 = 0, tmpVar262 = Array(tmpVar260); tmpVar261 < tmpVar260; tmpVar261++) {
+      tmpVar262[tmpVar261] = tmpVar259[tmpVar261];
     }
-    return _0x4a9599;
+    return tmpVar262;
   }
-  function _0x4ab11a() {
-    _0x4ab11a = function () {
-      return _0x5623eb;
+  function _regeneratorRuntime() {
+    _regeneratorRuntime = function () {
+      return tmpVar263;
     };
-    var _0x4ad9a7;
-    var _0x5623eb = {};
-    var _0x5bf2b5 = Object.prototype;
-    var _0x395f14 = _0x5bf2b5.hasOwnProperty;
-    var _0xfa9370 = Object.defineProperty || function (_0x15caab, _0x370eba, _0x53ef99) {
-      _0x15caab[_0x370eba] = _0x53ef99.value;
+    var tmpVar264;
+    var tmpVar263 = {};
+    var tmpVar265 = Object.prototype;
+    var tmpVar266 = tmpVar265.hasOwnProperty;
+    var tmpVar267 = Object.defineProperty || function (tmpVar268, tmpVar269, tmpVar270) {
+      tmpVar268[tmpVar269] = tmpVar270.value;
     };
-    var _0x43a95c = typeof Symbol == "function" ? Symbol : {};
-    var _0x360c05 = _0x43a95c.iterator || "@@iterator";
-    var _0x1f8a33 = _0x43a95c.asyncIterator || "@@asyncIterator";
-    var _0x513db4 = _0x43a95c.toStringTag || "@@toStringTag";
-    function _0x4d9b01(_0x448c21, _0x2679d3, _0x3d3e7f) {
-      var _0x3acd1f = {
-        value: _0x3d3e7f,
+    var tmpVar271 = typeof Symbol == "function" ? Symbol : {};
+    var tmpVar272 = tmpVar271.iterator || "@@iterator";
+    var tmpVar273 = tmpVar271.asyncIterator || "@@asyncIterator";
+    var tmpVar274 = tmpVar271.toStringTag || "@@toStringTag";
+    function helperFn8(tmpVar275, tmpVar276, tmpVar277) {
+      var tmpVar278 = {
+        value: tmpVar277,
         enumerable: true,
         configurable: true,
         writable: true
       };
-      Object.defineProperty(_0x448c21, _0x2679d3, _0x3acd1f);
-      return _0x448c21[_0x2679d3];
+      Object.defineProperty(tmpVar275, tmpVar276, tmpVar278);
+      return tmpVar275[tmpVar276];
     }
     try {
-      _0x4d9b01({}, "");
-    } catch (_0x2b941b) {
-      _0x4d9b01 = function (_0x2c199b, _0x4f8c65, _0x293a29) {
-        return _0x2c199b[_0x4f8c65] = _0x293a29;
+      helperFn8({}, "");
+    } catch (tmpVar279) {
+      helperFn8 = function (tmpVar280, tmpVar281, tmpVar282) {
+        return tmpVar280[tmpVar281] = tmpVar282;
       };
     }
-    function _0x478057(_0x35f3d4, _0x156348, _0x37e853, _0xf65620) {
-      var _0x1fa42a = _0x156348 && _0x156348.prototype instanceof _0x480752 ? _0x156348 : _0x480752;
-      var _0x4ec85e = Object.create(_0x1fa42a.prototype);
-      var _0x451cda = new _0x171cee(_0xf65620 || []);
-      _0xfa9370(_0x4ec85e, "_invoke", {
-        value: _0x403057(_0x35f3d4, _0x37e853, _0x451cda)
+    function helperFn9(tmpVar283, tmpVar284, tmpVar285, tmpVar286) {
+      var tmpVar287 = tmpVar284 && tmpVar284.prototype instanceof helperFn10 ? tmpVar284 : helperFn10;
+      var tmpVar288 = Object.create(tmpVar287.prototype);
+      var tmpVar289 = new helperFn11(tmpVar286 || []);
+      tmpVar267(tmpVar288, "_invoke", {
+        value: helperFn12(tmpVar283, tmpVar285, tmpVar289)
       });
-      return _0x4ec85e;
+      return tmpVar288;
     }
-    function _0x43713d(_0x33a547, _0x4aaf86, _0x4895be) {
+    function helperFn13(tmpVar290, tmpVar291, tmpVar292) {
       try {
         return {
           type: "normal",
-          arg: _0x33a547.call(_0x4aaf86, _0x4895be)
+          arg: tmpVar290.call(tmpVar291, tmpVar292)
         };
-      } catch (_0x441bb4) {
-        var _0x1c0677 = {
+      } catch (tmpVar293) {
+        var tmpVar294 = {
           type: "throw",
-          arg: _0x441bb4
+          arg: tmpVar293
         };
-        return _0x1c0677;
+        return tmpVar294;
       }
     }
-    _0x5623eb.wrap = _0x478057;
-    var _0x2b9996 = "suspendedStart";
-    var _0x4f22ac = "suspendedYield";
-    var _0x4c3b5d = "executing";
-    var _0x427aaa = "completed";
-    var _0x2f41e3 = {};
-    function _0x480752() {}
-    function _0x2e0426() {}
-    function _0x423f29() {}
-    var _0x2c8607 = {};
-    _0x4d9b01(_0x2c8607, _0x360c05, function () {
+    tmpVar263.wrap = helperFn9;
+    var tmpVar295 = "suspendedStart";
+    var tmpVar296 = "suspendedYield";
+    var tmpVar297 = "executing";
+    var tmpVar298 = "completed";
+    var tmpVar299 = {};
+    function helperFn10() {}
+    function helperFn14() {}
+    function helperFn15() {}
+    var tmpVar300 = {};
+    helperFn8(tmpVar300, tmpVar272, function () {
       return this;
     });
-    var _0x1ea908 = Object.getPrototypeOf;
-    var _0x5431af = _0x1ea908 && _0x1ea908(_0x1ea908(_0x2a355a([])));
-    if (_0x5431af && _0x5431af !== _0x5bf2b5 && _0x395f14.call(_0x5431af, _0x360c05)) {
-      _0x2c8607 = _0x5431af;
+    var tmpVar301 = Object.getPrototypeOf;
+    var tmpVar302 = tmpVar301 && tmpVar301(tmpVar301(helperFn16([])));
+    if (tmpVar302 && tmpVar302 !== tmpVar265 && tmpVar266.call(tmpVar302, tmpVar272)) {
+      tmpVar300 = tmpVar302;
     }
-    var _0x302201 = _0x423f29.prototype = _0x480752.prototype = Object.create(_0x2c8607);
-    function _0x301f58(_0xe10dfe) {
-      ["next", "throw", "return"].forEach(function (_0x5aa17e) {
-        _0x4d9b01(_0xe10dfe, _0x5aa17e, function (_0x44fd5a) {
-          return this._invoke(_0x5aa17e, _0x44fd5a);
+    var tmpVar303 = helperFn15.prototype = helperFn10.prototype = Object.create(tmpVar300);
+    function helperFn17(tmpVar304) {
+      ["next", "throw", "return"].forEach(function (tmpVar305) {
+        helperFn8(tmpVar304, tmpVar305, function (tmpVar306) {
+          return this._invoke(tmpVar305, tmpVar306);
         });
       });
     }
-    function _0x26476b(_0x4fc67c, _0x4807a1) {
-      function _0x593ec3(_0x177772, _0x4a9761, _0x5898f5, _0x5c8de4) {
-        var _0x34baf5 = _0x43713d(_0x4fc67c[_0x177772], _0x4fc67c, _0x4a9761);
-        if (_0x34baf5.type !== "throw") {
-          var _0x2fc002 = _0x34baf5.arg;
-          var _0x2474ed = _0x2fc002.value;
-          if (_0x2474ed && _0x4c2b88(_0x2474ed) == "object" && _0x395f14.call(_0x2474ed, "__await")) {
-            return _0x4807a1.resolve(_0x2474ed.__await).then(function (_0x4c2acb) {
-              _0x593ec3("next", _0x4c2acb, _0x5898f5, _0x5c8de4);
-            }, function (_0x338ec5) {
-              _0x593ec3("throw", _0x338ec5, _0x5898f5, _0x5c8de4);
+    function helperFn18(tmpVar307, tmpVar308) {
+      function helperFn19(tmpVar309, tmpVar310, tmpVar311, tmpVar312) {
+        var tmpVar313 = helperFn13(tmpVar307[tmpVar309], tmpVar307, tmpVar310);
+        if (tmpVar313.type !== "throw") {
+          var tmpVar314 = tmpVar313.arg;
+          var tmpVar315 = tmpVar314.value;
+          if (tmpVar315 && _typeofValueSafe(tmpVar315) == "object" && tmpVar266.call(tmpVar315, "__await")) {
+            return tmpVar308.resolve(tmpVar315.__await).then(function (tmpVar316) {
+              helperFn19("next", tmpVar316, tmpVar311, tmpVar312);
+            }, function (tmpVar317) {
+              helperFn19("throw", tmpVar317, tmpVar311, tmpVar312);
             });
           } else {
-            return _0x4807a1.resolve(_0x2474ed).then(function (_0x1d9325) {
-              _0x2fc002.value = _0x1d9325;
-              _0x5898f5(_0x2fc002);
-            }, function (_0x4bd841) {
-              return _0x593ec3("throw", _0x4bd841, _0x5898f5, _0x5c8de4);
+            return tmpVar308.resolve(tmpVar315).then(function (tmpVar318) {
+              tmpVar314.value = tmpVar318;
+              tmpVar311(tmpVar314);
+            }, function (tmpVar319) {
+              return helperFn19("throw", tmpVar319, tmpVar311, tmpVar312);
             });
           }
         }
-        _0x5c8de4(_0x34baf5.arg);
+        tmpVar312(tmpVar313.arg);
       }
-      var _0x4e8072;
-      _0xfa9370(this, "_invoke", {
-        value: function (_0x17819b, _0x2c3375) {
-          function _0x44bad6() {
-            return new _0x4807a1(function (_0xb3fe76, _0x117dfc) {
-              _0x593ec3(_0x17819b, _0x2c3375, _0xb3fe76, _0x117dfc);
+      var tmpVar320;
+      tmpVar267(this, "_invoke", {
+        value: function (tmpVar321, tmpVar322) {
+          function helperFn20() {
+            return new tmpVar308(function (tmpVar323, tmpVar324) {
+              helperFn19(tmpVar321, tmpVar322, tmpVar323, tmpVar324);
             });
           }
-          return _0x4e8072 = _0x4e8072 ? _0x4e8072.then(_0x44bad6, _0x44bad6) : _0x44bad6();
+          return tmpVar320 = tmpVar320 ? tmpVar320.then(helperFn20, helperFn20) : helperFn20();
         }
       });
     }
-    function _0x403057(_0x587afb, _0x780499, _0x539ff) {
-      var _0x4272ad = _0x2b9996;
-      return function (_0x5f780a, _0x5ee4a3) {
-        if (_0x4272ad === _0x4c3b5d) {
+    function helperFn12(tmpVar325, tmpVar326, tmpVar327) {
+      var tmpVar328 = tmpVar295;
+      return function (tmpVar329, tmpVar330) {
+        if (tmpVar328 === tmpVar297) {
           throw Error("Generator is already running");
         }
-        if (_0x4272ad === _0x427aaa) {
-          if (_0x5f780a === "throw") {
-            throw _0x5ee4a3;
+        if (tmpVar328 === tmpVar298) {
+          if (tmpVar329 === "throw") {
+            throw tmpVar330;
           }
-          var _0x2b359d = {
-            value: _0x4ad9a7,
+          var tmpVar331 = {
+            value: tmpVar264,
             done: true
           };
-          return _0x2b359d;
+          return tmpVar331;
         }
-        _0x539ff.method = _0x5f780a;
-        _0x539ff.arg = _0x5ee4a3;
+        tmpVar327.method = tmpVar329;
+        tmpVar327.arg = tmpVar330;
         while (true) {
-          var _0x2cc83c = _0x539ff.delegate;
-          if (_0x2cc83c) {
-            var _0x12ceb3 = _0x30cb86(_0x2cc83c, _0x539ff);
-            if (_0x12ceb3) {
-              if (_0x12ceb3 === _0x2f41e3) {
+          var tmpVar332 = tmpVar327.delegate;
+          if (tmpVar332) {
+            var tmpVar333 = helperFn21(tmpVar332, tmpVar327);
+            if (tmpVar333) {
+              if (tmpVar333 === tmpVar299) {
                 continue;
               }
-              return _0x12ceb3;
+              return tmpVar333;
             }
           }
-          if (_0x539ff.method === "next") {
-            _0x539ff.sent = _0x539ff._sent = _0x539ff.arg;
-          } else if (_0x539ff.method === "throw") {
-            if (_0x4272ad === _0x2b9996) {
-              _0x4272ad = _0x427aaa;
-              throw _0x539ff.arg;
+          if (tmpVar327.method === "next") {
+            tmpVar327.sent = tmpVar327._sent = tmpVar327.arg;
+          } else if (tmpVar327.method === "throw") {
+            if (tmpVar328 === tmpVar295) {
+              tmpVar328 = tmpVar298;
+              throw tmpVar327.arg;
             }
-            _0x539ff.dispatchException(_0x539ff.arg);
-          } else if (_0x539ff.method === "return") {
-            _0x539ff.abrupt("return", _0x539ff.arg);
+            tmpVar327.dispatchException(tmpVar327.arg);
+          } else if (tmpVar327.method === "return") {
+            tmpVar327.abrupt("return", tmpVar327.arg);
           }
-          _0x4272ad = _0x4c3b5d;
-          var _0x18c354 = _0x43713d(_0x587afb, _0x780499, _0x539ff);
-          if (_0x18c354.type === "normal") {
-            _0x4272ad = _0x539ff.done ? _0x427aaa : _0x4f22ac;
-            if (_0x18c354.arg === _0x2f41e3) {
+          tmpVar328 = tmpVar297;
+          var tmpVar334 = helperFn13(tmpVar325, tmpVar326, tmpVar327);
+          if (tmpVar334.type === "normal") {
+            tmpVar328 = tmpVar327.done ? tmpVar298 : tmpVar296;
+            if (tmpVar334.arg === tmpVar299) {
               continue;
             }
-            var _0x5f51d9 = {
-              value: _0x18c354.arg,
-              done: _0x539ff.done
+            var tmpVar335 = {
+              value: tmpVar334.arg,
+              done: tmpVar327.done
             };
-            return _0x5f51d9;
+            return tmpVar335;
           }
-          if (_0x18c354.type === "throw") {
-            _0x4272ad = _0x427aaa;
-            _0x539ff.method = "throw";
-            _0x539ff.arg = _0x18c354.arg;
+          if (tmpVar334.type === "throw") {
+            tmpVar328 = tmpVar298;
+            tmpVar327.method = "throw";
+            tmpVar327.arg = tmpVar334.arg;
           }
         }
       };
     }
-    function _0x30cb86(_0xcba7c7, _0x4c08b9) {
-      var _0x42ed4e = _0x4c08b9.method;
-      var _0x3073c9 = _0xcba7c7.iterator[_0x42ed4e];
-      if (_0x3073c9 === _0x4ad9a7) {
-        _0x4c08b9.delegate = null;
-        if (_0x42ed4e !== "throw" || !_0xcba7c7.iterator.return || !(_0x4c08b9.method = "return", _0x4c08b9.arg = _0x4ad9a7, _0x30cb86(_0xcba7c7, _0x4c08b9), _0x4c08b9.method === "throw")) {
-          if (_0x42ed4e !== "return") {
-            _0x4c08b9.method = "throw";
-            _0x4c08b9.arg = new TypeError("The iterator does not provide a '" + _0x42ed4e + "' method");
+    function helperFn21(tmpVar336, tmpVar337) {
+      var tmpVar338 = tmpVar337.method;
+      var tmpVar339 = tmpVar336.iterator[tmpVar338];
+      if (tmpVar339 === tmpVar264) {
+        tmpVar337.delegate = null;
+        if (tmpVar338 !== "throw" || !tmpVar336.iterator.return || !(tmpVar337.method = "return", tmpVar337.arg = tmpVar264, helperFn21(tmpVar336, tmpVar337), tmpVar337.method === "throw")) {
+          if (tmpVar338 !== "return") {
+            tmpVar337.method = "throw";
+            tmpVar337.arg = new TypeError("The iterator does not provide a '" + tmpVar338 + "' method");
           }
         }
-        return _0x2f41e3;
+        return tmpVar299;
       }
-      var _0x4865f8 = _0x43713d(_0x3073c9, _0xcba7c7.iterator, _0x4c08b9.arg);
-      if (_0x4865f8.type === "throw") {
-        _0x4c08b9.method = "throw";
-        _0x4c08b9.arg = _0x4865f8.arg;
-        _0x4c08b9.delegate = null;
-        return _0x2f41e3;
+      var tmpVar340 = helperFn13(tmpVar339, tmpVar336.iterator, tmpVar337.arg);
+      if (tmpVar340.type === "throw") {
+        tmpVar337.method = "throw";
+        tmpVar337.arg = tmpVar340.arg;
+        tmpVar337.delegate = null;
+        return tmpVar299;
       }
-      var _0x4b589e = _0x4865f8.arg;
-      if (_0x4b589e) {
-        if (_0x4b589e.done) {
-          _0x4c08b9[_0xcba7c7.resultName] = _0x4b589e.value;
-          _0x4c08b9.next = _0xcba7c7.nextLoc;
-          if (_0x4c08b9.method !== "return") {
-            _0x4c08b9.method = "next";
-            _0x4c08b9.arg = _0x4ad9a7;
+      var tmpVar341 = tmpVar340.arg;
+      if (tmpVar341) {
+        if (tmpVar341.done) {
+          tmpVar337[tmpVar336.resultName] = tmpVar341.value;
+          tmpVar337.next = tmpVar336.nextLoc;
+          if (tmpVar337.method !== "return") {
+            tmpVar337.method = "next";
+            tmpVar337.arg = tmpVar264;
           }
-          _0x4c08b9.delegate = null;
-          return _0x2f41e3;
+          tmpVar337.delegate = null;
+          return tmpVar299;
         } else {
-          return _0x4b589e;
+          return tmpVar341;
         }
       } else {
-        _0x4c08b9.method = "throw";
-        _0x4c08b9.arg = new TypeError("iterator result is not an object");
-        _0x4c08b9.delegate = null;
-        return _0x2f41e3;
+        tmpVar337.method = "throw";
+        tmpVar337.arg = new TypeError("iterator result is not an object");
+        tmpVar337.delegate = null;
+        return tmpVar299;
       }
     }
-    function _0x535c24(_0x2ee799) {
-      var _0x1f5e98 = {
-        tryLoc: _0x2ee799[0]
+    function helperFn22(tmpVar342) {
+      var tmpVar343 = {
+        tryLoc: tmpVar342[0]
       };
-      var _0x12afb8 = _0x1f5e98;
-      if (1 in _0x2ee799) {
-        _0x12afb8.catchLoc = _0x2ee799[1];
+      var tmpVar344 = tmpVar343;
+      if (1 in tmpVar342) {
+        tmpVar344.catchLoc = tmpVar342[1];
       }
-      if (2 in _0x2ee799) {
-        _0x12afb8.finallyLoc = _0x2ee799[2];
-        _0x12afb8.afterLoc = _0x2ee799[3];
+      if (2 in tmpVar342) {
+        tmpVar344.finallyLoc = tmpVar342[2];
+        tmpVar344.afterLoc = tmpVar342[3];
       }
-      this.tryEntries.push(_0x12afb8);
+      this.tryEntries.push(tmpVar344);
     }
-    function _0x2f848d(_0x2e47e6) {
-      var _0x18edc3 = _0x2e47e6.completion || {};
-      _0x18edc3.type = "normal";
-      delete _0x18edc3.arg;
-      _0x2e47e6.completion = _0x18edc3;
+    function helperFn23(tmpVar345) {
+      var tmpVar346 = tmpVar345.completion || {};
+      tmpVar346.type = "normal";
+      delete tmpVar346.arg;
+      tmpVar345.completion = tmpVar346;
     }
-    function _0x171cee(_0x2c5a3f) {
+    function helperFn11(tmpVar347) {
       this.tryEntries = [{
         tryLoc: "root"
       }];
-      _0x2c5a3f.forEach(_0x535c24, this);
+      tmpVar347.forEach(helperFn22, this);
       this.reset(true);
     }
-    function _0x2a355a(_0x5260dc) {
-      if (_0x5260dc || _0x5260dc === "") {
-        var _0x2f067a = _0x5260dc[_0x360c05];
-        if (_0x2f067a) {
-          return _0x2f067a.call(_0x5260dc);
+    function helperFn16(tmpVar348) {
+      if (tmpVar348 || tmpVar348 === "") {
+        var tmpVar349 = tmpVar348[tmpVar272];
+        if (tmpVar349) {
+          return tmpVar349.call(tmpVar348);
         }
-        if (typeof _0x5260dc.next == "function") {
-          return _0x5260dc;
+        if (typeof tmpVar348.next == "function") {
+          return tmpVar348;
         }
-        if (!isNaN(_0x5260dc.length)) {
-          var _0x275eab = -1;
-          var _0x166f84 = function _0x541a4a() {
-            while (++_0x275eab < _0x5260dc.length) {
-              if (_0x395f14.call(_0x5260dc, _0x275eab)) {
-                _0x541a4a.value = _0x5260dc[_0x275eab];
-                _0x541a4a.done = false;
-                return _0x541a4a;
+        if (!isNaN(tmpVar348.length)) {
+          var tmpVar350 = -1;
+          var tmpVar351 = function helperFn24() {
+            while (++tmpVar350 < tmpVar348.length) {
+              if (tmpVar266.call(tmpVar348, tmpVar350)) {
+                helperFn24.value = tmpVar348[tmpVar350];
+                helperFn24.done = false;
+                return helperFn24;
               }
             }
-            _0x541a4a.value = _0x4ad9a7;
-            _0x541a4a.done = true;
-            return _0x541a4a;
+            helperFn24.value = tmpVar264;
+            helperFn24.done = true;
+            return helperFn24;
           };
-          return _0x166f84.next = _0x166f84;
+          return tmpVar351.next = tmpVar351;
         }
       }
-      throw new TypeError(_0x4c2b88(_0x5260dc) + " is not iterable");
+      throw new TypeError(_typeofValueSafe(tmpVar348) + " is not iterable");
     }
-    _0x2e0426.prototype = _0x423f29;
-    _0xfa9370(_0x302201, "constructor", {
-      value: _0x423f29,
+    helperFn14.prototype = helperFn15;
+    tmpVar267(tmpVar303, "constructor", {
+      value: helperFn15,
       configurable: true
     });
-    _0xfa9370(_0x423f29, "constructor", {
-      value: _0x2e0426,
+    tmpVar267(helperFn15, "constructor", {
+      value: helperFn14,
       configurable: true
     });
-    _0x2e0426.displayName = _0x4d9b01(_0x423f29, _0x513db4, "GeneratorFunction");
-    _0x5623eb.isGeneratorFunction = function (_0x902acc) {
-      var _0x345452 = typeof _0x902acc == "function" && _0x902acc.constructor;
-      return !!_0x345452 && (_0x345452 === _0x2e0426 || (_0x345452.displayName || _0x345452.name) === "GeneratorFunction");
+    helperFn14.displayName = helperFn8(helperFn15, tmpVar274, "GeneratorFunction");
+    tmpVar263.isGeneratorFunction = function (tmpVar352) {
+      var tmpVar353 = typeof tmpVar352 == "function" && tmpVar352.constructor;
+      return !!tmpVar353 && (tmpVar353 === helperFn14 || (tmpVar353.displayName || tmpVar353.name) === "GeneratorFunction");
     };
-    _0x5623eb.mark = function (_0x384d7e) {
+    tmpVar263.mark = function (tmpVar354) {
       if (Object.setPrototypeOf) {
-        Object.setPrototypeOf(_0x384d7e, _0x423f29);
+        Object.setPrototypeOf(tmpVar354, helperFn15);
       } else {
-        _0x384d7e.__proto__ = _0x423f29;
-        _0x4d9b01(_0x384d7e, _0x513db4, "GeneratorFunction");
+        tmpVar354.__proto__ = helperFn15;
+        helperFn8(tmpVar354, tmpVar274, "GeneratorFunction");
       }
-      _0x384d7e.prototype = Object.create(_0x302201);
-      return _0x384d7e;
+      tmpVar354.prototype = Object.create(tmpVar303);
+      return tmpVar354;
     };
-    _0x5623eb.awrap = function (_0x3271c1) {
-      var _0x1b1dd6 = {
-        __await: _0x3271c1
+    tmpVar263.awrap = function (tmpVar355) {
+      var tmpVar356 = {
+        __await: tmpVar355
       };
-      return _0x1b1dd6;
+      return tmpVar356;
     };
-    _0x301f58(_0x26476b.prototype);
-    _0x4d9b01(_0x26476b.prototype, _0x1f8a33, function () {
+    helperFn17(helperFn18.prototype);
+    helperFn8(helperFn18.prototype, tmpVar273, function () {
       return this;
     });
-    _0x5623eb.AsyncIterator = _0x26476b;
-    _0x5623eb.async = function (_0x1b904d, _0x1fd780, _0x2e1592, _0x108254, _0x575372 = Promise) {
-      var _0x580e20 = new _0x26476b(_0x478057(_0x1b904d, _0x1fd780, _0x2e1592, _0x108254), _0x575372);
-      if (_0x5623eb.isGeneratorFunction(_0x1fd780)) {
-        return _0x580e20;
+    tmpVar263.AsyncIterator = helperFn18;
+    tmpVar263.async = function (tmpVar357, tmpVar358, tmpVar359, tmpVar360, tmpVar361 = Promise) {
+      var tmpVar362 = new helperFn18(helperFn9(tmpVar357, tmpVar358, tmpVar359, tmpVar360), tmpVar361);
+      if (tmpVar263.isGeneratorFunction(tmpVar358)) {
+        return tmpVar362;
       } else {
-        return _0x580e20.next().then(function (_0x3ca9fd) {
-          if (_0x3ca9fd.done) {
-            return _0x3ca9fd.value;
+        return tmpVar362.next().then(function (tmpVar363) {
+          if (tmpVar363.done) {
+            return tmpVar363.value;
           } else {
-            return _0x580e20.next();
+            return tmpVar362.next();
           }
         });
       }
     };
-    _0x301f58(_0x302201);
-    _0x4d9b01(_0x302201, _0x513db4, "Generator");
-    _0x4d9b01(_0x302201, _0x360c05, function () {
+    helperFn17(tmpVar303);
+    helperFn8(tmpVar303, tmpVar274, "Generator");
+    helperFn8(tmpVar303, tmpVar272, function () {
       return this;
     });
-    _0x4d9b01(_0x302201, "toString", function () {
+    helperFn8(tmpVar303, "toString", function () {
       return "[object Generator]";
     });
-    _0x5623eb.keys = function (_0x53d83a) {
-      var _0xdb906b = Object(_0x53d83a);
-      var _0x4b2779 = [];
-      for (var _0x455f17 in _0xdb906b) {
-        _0x4b2779.push(_0x455f17);
+    tmpVar263.keys = function (tmpVar364) {
+      var tmpVar365 = Object(tmpVar364);
+      var tmpVar366 = [];
+      for (var tmpVar367 in tmpVar365) {
+        tmpVar366.push(tmpVar367);
       }
-      _0x4b2779.reverse();
-      return function _0x45d70c() {
-        while (_0x4b2779.length) {
-          var _0x16b1b0 = _0x4b2779.pop();
-          if (_0x16b1b0 in _0xdb906b) {
-            _0x45d70c.value = _0x16b1b0;
-            _0x45d70c.done = false;
-            return _0x45d70c;
+      tmpVar366.reverse();
+      return function helperFn25() {
+        while (tmpVar366.length) {
+          var tmpVar368 = tmpVar366.pop();
+          if (tmpVar368 in tmpVar365) {
+            helperFn25.value = tmpVar368;
+            helperFn25.done = false;
+            return helperFn25;
           }
         }
-        _0x45d70c.done = true;
-        return _0x45d70c;
+        helperFn25.done = true;
+        return helperFn25;
       };
     };
-    _0x5623eb.values = _0x2a355a;
-    _0x171cee.prototype = {
-      constructor: _0x171cee,
-      reset: function (_0x3fbfb5) {
+    tmpVar263.values = helperFn16;
+    helperFn11.prototype = {
+      constructor: helperFn11,
+      reset: function (tmpVar369) {
         this.prev = 0;
         this.next = 0;
-        this.sent = this._sent = _0x4ad9a7;
+        this.sent = this._sent = tmpVar264;
         this.done = false;
         this.delegate = null;
         this.method = "next";
-        this.arg = _0x4ad9a7;
-        this.tryEntries.forEach(_0x2f848d);
-        if (!_0x3fbfb5) {
-          for (var _0x206800 in this) {
-            if (_0x206800.charAt(0) === "t" && _0x395f14.call(this, _0x206800) && !isNaN(+_0x206800.slice(1))) {
-              this[_0x206800] = _0x4ad9a7;
+        this.arg = tmpVar264;
+        this.tryEntries.forEach(helperFn23);
+        if (!tmpVar369) {
+          for (var tmpVar370 in this) {
+            if (tmpVar370.charAt(0) === "t" && tmpVar266.call(this, tmpVar370) && !isNaN(+tmpVar370.slice(1))) {
+              this[tmpVar370] = tmpVar264;
             }
           }
         }
       },
       stop: function () {
         this.done = true;
-        var _0x1a6181 = this.tryEntries[0].completion;
-        if (_0x1a6181.type === "throw") {
-          throw _0x1a6181.arg;
+        var tmpVar371 = this.tryEntries[0].completion;
+        if (tmpVar371.type === "throw") {
+          throw tmpVar371.arg;
         }
         return this.rval;
       },
-      dispatchException: function (_0x25b295) {
+      dispatchException: function (tmpVar372) {
         if (this.done) {
-          throw _0x25b295;
+          throw tmpVar372;
         }
-        var _0x516f0c = this;
-        function _0xee2256(_0x2a6aaf, _0x43d7a5) {
-          _0x513461.type = "throw";
-          _0x513461.arg = _0x25b295;
-          _0x516f0c.next = _0x2a6aaf;
-          if (_0x43d7a5) {
-            _0x516f0c.method = "next";
-            _0x516f0c.arg = _0x4ad9a7;
+        var tmpVar373 = this;
+        function helperFn26(tmpVar374, tmpVar375) {
+          tmpVar376.type = "throw";
+          tmpVar376.arg = tmpVar372;
+          tmpVar373.next = tmpVar374;
+          if (tmpVar375) {
+            tmpVar373.method = "next";
+            tmpVar373.arg = tmpVar264;
           }
-          return !!_0x43d7a5;
+          return !!tmpVar375;
         }
-        for (var _0x48a2bf = this.tryEntries.length - 1; _0x48a2bf >= 0; --_0x48a2bf) {
-          var _0x150175 = this.tryEntries[_0x48a2bf];
-          var _0x513461 = _0x150175.completion;
-          if (_0x150175.tryLoc === "root") {
-            return _0xee2256("end");
+        for (var tmpVar377 = this.tryEntries.length - 1; tmpVar377 >= 0; --tmpVar377) {
+          var tmpVar378 = this.tryEntries[tmpVar377];
+          var tmpVar376 = tmpVar378.completion;
+          if (tmpVar378.tryLoc === "root") {
+            return helperFn26("end");
           }
-          if (_0x150175.tryLoc <= this.prev) {
-            var _0x3b58f2 = _0x395f14.call(_0x150175, "catchLoc");
-            var _0x518d3d = _0x395f14.call(_0x150175, "finallyLoc");
-            if (_0x3b58f2 && _0x518d3d) {
-              if (this.prev < _0x150175.catchLoc) {
-                return _0xee2256(_0x150175.catchLoc, true);
+          if (tmpVar378.tryLoc <= this.prev) {
+            var tmpVar379 = tmpVar266.call(tmpVar378, "catchLoc");
+            var tmpVar380 = tmpVar266.call(tmpVar378, "finallyLoc");
+            if (tmpVar379 && tmpVar380) {
+              if (this.prev < tmpVar378.catchLoc) {
+                return helperFn26(tmpVar378.catchLoc, true);
               }
-              if (this.prev < _0x150175.finallyLoc) {
-                return _0xee2256(_0x150175.finallyLoc);
+              if (this.prev < tmpVar378.finallyLoc) {
+                return helperFn26(tmpVar378.finallyLoc);
               }
-            } else if (_0x3b58f2) {
-              if (this.prev < _0x150175.catchLoc) {
-                return _0xee2256(_0x150175.catchLoc, true);
+            } else if (tmpVar379) {
+              if (this.prev < tmpVar378.catchLoc) {
+                return helperFn26(tmpVar378.catchLoc, true);
               }
             } else {
-              if (!_0x518d3d) {
+              if (!tmpVar380) {
                 throw Error("try statement without catch or finally");
               }
-              if (this.prev < _0x150175.finallyLoc) {
-                return _0xee2256(_0x150175.finallyLoc);
+              if (this.prev < tmpVar378.finallyLoc) {
+                return helperFn26(tmpVar378.finallyLoc);
               }
             }
           }
         }
       },
-      abrupt: function (_0xad083e, _0x3b54e4) {
-        for (var _0x31304a = this.tryEntries.length - 1; _0x31304a >= 0; --_0x31304a) {
-          var _0x48b4dd = this.tryEntries[_0x31304a];
-          if (_0x48b4dd.tryLoc <= this.prev && _0x395f14.call(_0x48b4dd, "finallyLoc") && this.prev < _0x48b4dd.finallyLoc) {
-            var _0x2cfb64 = _0x48b4dd;
+      abrupt: function (tmpVar381, tmpVar382) {
+        for (var tmpVar383 = this.tryEntries.length - 1; tmpVar383 >= 0; --tmpVar383) {
+          var tmpVar384 = this.tryEntries[tmpVar383];
+          if (tmpVar384.tryLoc <= this.prev && tmpVar266.call(tmpVar384, "finallyLoc") && this.prev < tmpVar384.finallyLoc) {
+            var tmpVar385 = tmpVar384;
             break;
           }
         }
-        if (_0x2cfb64 && (_0xad083e === "break" || _0xad083e === "continue") && _0x2cfb64.tryLoc <= _0x3b54e4 && _0x3b54e4 <= _0x2cfb64.finallyLoc) {
-          _0x2cfb64 = null;
+        if (tmpVar385 && (tmpVar381 === "break" || tmpVar381 === "continue") && tmpVar385.tryLoc <= tmpVar382 && tmpVar382 <= tmpVar385.finallyLoc) {
+          tmpVar385 = null;
         }
-        var _0x912f71 = _0x2cfb64 ? _0x2cfb64.completion : {};
-        _0x912f71.type = _0xad083e;
-        _0x912f71.arg = _0x3b54e4;
-        if (_0x2cfb64) {
+        var tmpVar386 = tmpVar385 ? tmpVar385.completion : {};
+        tmpVar386.type = tmpVar381;
+        tmpVar386.arg = tmpVar382;
+        if (tmpVar385) {
           this.method = "next";
-          this.next = _0x2cfb64.finallyLoc;
-          return _0x2f41e3;
+          this.next = tmpVar385.finallyLoc;
+          return tmpVar299;
         } else {
-          return this.complete(_0x912f71);
+          return this.complete(tmpVar386);
         }
       },
-      complete: function (_0x53f4ec, _0x1725a3) {
-        if (_0x53f4ec.type === "throw") {
-          throw _0x53f4ec.arg;
+      complete: function (tmpVar387, tmpVar388) {
+        if (tmpVar387.type === "throw") {
+          throw tmpVar387.arg;
         }
-        if (_0x53f4ec.type === "break" || _0x53f4ec.type === "continue") {
-          this.next = _0x53f4ec.arg;
-        } else if (_0x53f4ec.type === "return") {
-          this.rval = this.arg = _0x53f4ec.arg;
+        if (tmpVar387.type === "break" || tmpVar387.type === "continue") {
+          this.next = tmpVar387.arg;
+        } else if (tmpVar387.type === "return") {
+          this.rval = this.arg = tmpVar387.arg;
           this.method = "return";
           this.next = "end";
-        } else if (_0x53f4ec.type === "normal" && _0x1725a3) {
-          this.next = _0x1725a3;
+        } else if (tmpVar387.type === "normal" && tmpVar388) {
+          this.next = tmpVar388;
         }
-        return _0x2f41e3;
+        return tmpVar299;
       },
-      finish: function (_0x3b10cd) {
-        for (var _0x283676 = this.tryEntries.length - 1; _0x283676 >= 0; --_0x283676) {
-          var _0x5876fe = this.tryEntries[_0x283676];
-          if (_0x5876fe.finallyLoc === _0x3b10cd) {
-            this.complete(_0x5876fe.completion, _0x5876fe.afterLoc);
-            _0x2f848d(_0x5876fe);
-            return _0x2f41e3;
+      finish: function (tmpVar389) {
+        for (var tmpVar390 = this.tryEntries.length - 1; tmpVar390 >= 0; --tmpVar390) {
+          var tmpVar391 = this.tryEntries[tmpVar390];
+          if (tmpVar391.finallyLoc === tmpVar389) {
+            this.complete(tmpVar391.completion, tmpVar391.afterLoc);
+            helperFn23(tmpVar391);
+            return tmpVar299;
           }
         }
       },
-      catch: function (_0x5e3cc4) {
-        for (var _0x285891 = this.tryEntries.length - 1; _0x285891 >= 0; --_0x285891) {
-          var _0x9625d8 = this.tryEntries[_0x285891];
-          if (_0x9625d8.tryLoc === _0x5e3cc4) {
-            var _0x5423eb = _0x9625d8.completion;
-            if (_0x5423eb.type === "throw") {
-              var _0x7996c5 = _0x5423eb.arg;
-              _0x2f848d(_0x9625d8);
+      catch: function (tmpVar392) {
+        for (var tmpVar393 = this.tryEntries.length - 1; tmpVar393 >= 0; --tmpVar393) {
+          var tmpVar394 = this.tryEntries[tmpVar393];
+          if (tmpVar394.tryLoc === tmpVar392) {
+            var tmpVar395 = tmpVar394.completion;
+            if (tmpVar395.type === "throw") {
+              var tmpVar396 = tmpVar395.arg;
+              helperFn23(tmpVar394);
             }
-            return _0x7996c5;
+            return tmpVar396;
           }
         }
         throw Error("illegal catch attempt");
       },
-      delegateYield: function (_0x3711f3, _0x4315b5, _0x4eacdc) {
+      delegateYield: function (tmpVar397, tmpVar398, tmpVar399) {
         this.delegate = {
-          iterator: _0x2a355a(_0x3711f3),
-          resultName: _0x4315b5,
-          nextLoc: _0x4eacdc
+          iterator: helperFn16(tmpVar397),
+          resultName: tmpVar398,
+          nextLoc: tmpVar399
         };
         if (this.method === "next") {
-          this.arg = _0x4ad9a7;
+          this.arg = tmpVar264;
         }
-        return _0x2f41e3;
+        return tmpVar299;
       }
     };
-    return _0x5623eb;
+    return tmpVar263;
   }
-  function _0x2d149a(_0x2ccb27, _0x1d757a, _0x8ac7c, _0x1373fb, _0x4bfc5e, _0x23014e, _0x261d4c) {
+  function _asyncGeneratorStep(tmpVar400, tmpVar401, tmpVar402, tmpVar403, tmpVar404, tmpVar405, tmpVar406) {
     try {
-      var _0x2bc622 = _0x2ccb27[_0x23014e](_0x261d4c);
-      var _0xba2173 = _0x2bc622.value;
-    } catch (_0xefcc8e) {
-      _0x8ac7c(_0xefcc8e);
+      var tmpVar407 = tmpVar400[tmpVar405](tmpVar406);
+      var tmpVar408 = tmpVar407.value;
+    } catch (tmpVar409) {
+      tmpVar402(tmpVar409);
       return;
     }
-    if (_0x2bc622.done) {
-      _0x1d757a(_0xba2173);
+    if (tmpVar407.done) {
+      tmpVar401(tmpVar408);
     } else {
-      Promise.resolve(_0xba2173).then(_0x1373fb, _0x4bfc5e);
+      Promise.resolve(tmpVar408).then(tmpVar403, tmpVar404);
     }
   }
-  function _0x44708d(_0x348083) {
+  function _asyncToGenerator(tmpVar410) {
     return function () {
-      var _0x36513a = this;
-      var _0x50814f = arguments;
-      return new Promise(function (_0x386d06, _0x2792dd) {
-        var _0x4a2d1f = _0x348083.apply(_0x36513a, _0x50814f);
-        function _0xd26d2(_0x1bd9aa) {
-          _0x2d149a(_0x4a2d1f, _0x386d06, _0x2792dd, _0xd26d2, _0x207380, "next", _0x1bd9aa);
+      var tmpVar411 = this;
+      var tmpVar412 = arguments;
+      return new Promise(function (tmpVar413, tmpVar414) {
+        var tmpVar415 = tmpVar410.apply(tmpVar411, tmpVar412);
+        function helperFn27(tmpVar416) {
+          _asyncGeneratorStep(tmpVar415, tmpVar413, tmpVar414, helperFn27, helperFn28, "next", tmpVar416);
         }
-        function _0x207380(_0x117f72) {
-          _0x2d149a(_0x4a2d1f, _0x386d06, _0x2792dd, _0xd26d2, _0x207380, "throw", _0x117f72);
+        function helperFn28(tmpVar417) {
+          _asyncGeneratorStep(tmpVar415, tmpVar413, tmpVar414, helperFn27, helperFn28, "throw", tmpVar417);
         }
-        _0xd26d2(undefined);
+        helperFn27(undefined);
       });
     };
   }
-  var _0x1e3570;
-  var _0x4fc00b = "52破解";
-  var _0x2856f1 = "https://www.52pojie.cn";
-  var _0x10537a = {
+  var disclaimerLines;
+  var notifyTitle = "52破解";
+  var siteBaseUrl = "https://www.52pojie.cn";
+  var defaultHeaders = {
     Host: "www.52pojie.cn",
     Connection: "keep-alive",
     "sec-ch-ua": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Microsoft Edge\";v=\"122\"",
@@ -2047,604 +2047,604 @@ hostname = %APPEND% www.52pojie.cn
     "Accept-Encoding": "gzip, deflate, br",
     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"
   };
-  function _0x10f784() {
-    return _0x21940b === "Node.js";
+  function isNodeEnv() {
+    return runtimeEnv === "Node.js";
   }
-  _0x1e3570 = ["本脚本仅用于学习研究，禁止用于商业用途", "本脚本不保证准确性、可靠性、完整性和及时性", "任何个人或组织均可无需经过通知而自由使用", "作者对任何脚本问题概不负责，包括由此产生的任何损失", "如有单位或个人认为本脚本侵权，请通知并提供证明，我将删除", "请勿将本脚本用于商业用途，由此引起的问题与作者无关", "本脚本及其更新版权归作者所有", "", `⌚ ${new Date().toLocaleString("zh-CN", {
+  disclaimerLines = ["本脚本仅用于学习研究，禁止用于商业用途", "本脚本不保证准确性、可靠性、完整性和及时性", "任何个人或组织均可无需经过通知而自由使用", "作者对任何脚本问题概不负责，包括由此产生的任何损失", "如有单位或个人认为本脚本侵权，请通知并提供证明，我将删除", "请勿将本脚本用于商业用途，由此引起的问题与作者无关", "本脚本及其更新版权归作者所有", "", `⌚ ${new Date().toLocaleString("zh-CN", {
     timeZone: "PRC"
   })}`];
-  _0x56c73a.log.apply(_0x56c73a, ["==============📣免责声明📣=============="].concat(_0x1e3570));
-  _0x56c73a.logLevel = `${_0x10f784() ? process.env.WUAI_DEBUG : _0x4d8b07.debug || _0x1a6861.getItem("wuai_debug")}` === "true" ? "debug" : "info";
-  _0x56c73a.info(`日志等级: ${_0x56c73a.logLevel}`);
-  var _0x5cbb5a = _0x10f784() ? process.env.WUAI_BARK_KEY : _0x1a6861.getItem("wuai_bark_key");
-  _0x56c73a.debug(_0x5cbb5a ? "Bark密钥: " + _0x5cbb5a : "未开启Bark推送");
-  var _0x4a7700 = _0x10f784() ? process.env.WUAI_COOKIE : _0x1a6861.getItem("wuai_cookie");
-  function _0x4155c3() {
-    return _0x389acc.apply(this, arguments);
+  Logger.log.apply(Logger, ["==============📣免责声明📣=============="].concat(disclaimerLines));
+  Logger.logLevel = `${isNodeEnv() ? process.env.WUAI_DEBUG : scriptArgs.debug || PersistStore.getItem("wuai_debug")}` === "true" ? "debug" : "info";
+  Logger.info(`日志等级: ${Logger.logLevel}`);
+  var barkPushKey = isNodeEnv() ? process.env.WUAI_BARK_KEY : PersistStore.getItem("wuai_bark_key");
+  Logger.debug(barkPushKey ? "Bark密钥: " + barkPushKey : "未开启Bark推送");
+  var currentCookie = isNodeEnv() ? process.env.WUAI_COOKIE : PersistStore.getItem("wuai_cookie");
+  function runMainTask() {
+    return runMainTaskAsync.apply(this, arguments);
   }
-  function _0x389acc() {
-    _0x389acc = _0x44708d(_0x4ab11a().mark(function _0x34857d() {
-      var _0x1613ee;
-      return _0x4ab11a().wrap(function (_0x21b43d) {
+  function runMainTaskAsync() {
+    runMainTaskAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn29() {
+      var tmpVar418;
+      return _regeneratorRuntime().wrap(function (tmpVar419) {
         while (true) {
-          switch (_0x21b43d.prev = _0x21b43d.next) {
+          switch (tmpVar419.prev = tmpVar419.next) {
             case 0:
-              if (_0x4a7700) {
-                _0x21b43d.next = 4;
+              if (currentCookie) {
+                tmpVar419.next = 4;
                 break;
               }
-              _0x21b43d.next = 3;
-              return _0x579114(_0x4fc00b, "", "未填写/未获取Cookie!!");
+              tmpVar419.next = 3;
+              return pushNotification(notifyTitle, "", "未填写/未获取Cookie!!");
             case 3:
             case 7:
             case 14:
             case 20:
             case 27:
-              return _0x21b43d.abrupt("return");
+              return tmpVar419.abrupt("return");
             case 4:
-              if (_0x4a7700.includes("auth=")) {
-                _0x21b43d.next = 8;
+              if (currentCookie.includes("auth=")) {
+                tmpVar419.next = 8;
                 break;
               }
-              _0x21b43d.next = 7;
-              return _0x579114(_0x4fc00b, "", "Cookie关键授权字段缺失, 需重新获取!!");
+              tmpVar419.next = 7;
+              return pushNotification(notifyTitle, "", "Cookie关键授权字段缺失, 需重新获取!!");
             case 8:
-              _0x4a7700 = _0x5706a9(_0x4a7700);
-              _0x21b43d.next = 11;
-              return _0xf6d4de();
+              currentCookie = normalizeCookieFields(currentCookie);
+              tmpVar419.next = 11;
+              return fetchUserProfile();
             case 11:
-              if (_0x2c098a.get(globalThis, "user.id")) {
-                _0x21b43d.next = 15;
+              if (PathUtils.get(globalThis, "user.id")) {
+                tmpVar419.next = 15;
                 break;
               }
-              _0x21b43d.next = 14;
-              return _0x579114(_0x4fc00b, "❌ 获取用户信息失败", "Cookie失效 ‼️‼️");
+              tmpVar419.next = 14;
+              return pushNotification(notifyTitle, "❌ 获取用户信息失败", "Cookie失效 ‼️‼️");
             case 15:
-              _0x21b43d.next = 17;
-              return _0x4cc923();
+              tmpVar419.next = 17;
+              return fetchVerifyParams();
             case 17:
-              if (verifyBody) {
-                _0x21b43d.next = 21;
+              if (globalThis.verifyBody) {
+                tmpVar419.next = 21;
                 break;
               }
-              _0x21b43d.next = 20;
-              return _0x579114(_0x4fc00b, "❌ 获取混淆参数失败", "请等待修复!!");
+              tmpVar419.next = 20;
+              return pushNotification(notifyTitle, "❌ 获取混淆参数失败", "请等待修复!!");
             case 21:
-              _0x21b43d.next = 23;
-              return _0x2ca2d4();
+              tmpVar419.next = 23;
+              return validateVerifyPayload();
             case 23:
-              _0x1613ee = _0x21b43d.sent;
-              if (_0x1613ee) {
-                _0x21b43d.next = 28;
+              tmpVar418 = tmpVar419.sent;
+              if (tmpVar418) {
+                tmpVar419.next = 28;
                 break;
               }
-              _0x21b43d.next = 27;
-              return _0x579114(_0x4fc00b, "❌ 参数校验失败", "请等待修复!!");
+              tmpVar419.next = 27;
+              return pushNotification(notifyTitle, "❌ 参数校验失败", "请等待修复!!");
             case 28:
-              _0x21b43d.next = 30;
-              return _0x3c1176();
+              tmpVar419.next = 30;
+              return executeSignIn();
             case 30:
-              _0x21b43d.next = 32;
-              return _0x579114(_0x4fc00b, `${user.name}[${`${user.id}`.replace(/(\d{3})\d+(\d{2})/, "$1****$2")}]`, msgBody);
+              tmpVar419.next = 32;
+              return pushNotification(notifyTitle, `${globalThis.user.name}[${`${globalThis.user.id}`.replace(/(\d{3})\d+(\d{2})/, "$1****$2")}]`, globalThis.msgBody);
             case 32:
             case "end":
-              return _0x21b43d.stop();
+              return tmpVar419.stop();
           }
         }
-      }, _0x34857d);
+      }, helperFn29);
     }));
-    return _0x389acc.apply(this, arguments);
+    return runMainTaskAsync.apply(this, arguments);
   }
-  function _0xf6d4de() {
-    return _0x130d25.apply(this, arguments);
+  function fetchUserProfile() {
+    return fetchUserProfileAsync.apply(this, arguments);
   }
-  function _0x130d25() {
-    _0x130d25 = _0x44708d(_0x4ab11a().mark(function _0x18b6ba() {
-      var _0x5c2c01;
-      var _0x41c724;
-      var _0x42b89b;
-      var _0x292f62;
-      var _0x3ca9d0;
-      var _0x2181f5;
-      var _0x484458;
-      return _0x4ab11a().wrap(function (_0x1b2e49) {
+  function fetchUserProfileAsync() {
+    fetchUserProfileAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn30() {
+      var tmpVar420;
+      var tmpVar421;
+      var tmpVar422;
+      var tmpVar423;
+      var tmpVar424;
+      var tmpVar425;
+      var tmpVar426;
+      return _regeneratorRuntime().wrap(function (tmpVar427) {
         while (true) {
-          switch (_0x1b2e49.prev = _0x1b2e49.next) {
+          switch (tmpVar427.prev = tmpVar427.next) {
             case 0:
-              var _0xc19db8 = {
-                Cookie: _0x4a7700
+              var tmpVar428 = {
+                Cookie: currentCookie
               };
-              _0x5c2c01 = {
-                url: _0x2e4911(_0x2856f1, "/home.php?mod=spacecp&ac=credit&showcredit=1"),
-                headers: Object.assign(_0x10537a, _0xc19db8)
+              tmpVar420 = {
+                url: joinUrl(siteBaseUrl, "/home.php?mod=spacecp&ac=credit&showcredit=1"),
+                headers: Object.assign(defaultHeaders, tmpVar428)
               };
-              _0x1b2e49.next = 3;
-              return _0x517ee6(_0x5c2c01);
+              tmpVar427.next = 3;
+              return request(tmpVar420);
             case 3:
-              _0x41c724 = _0x1b2e49.sent;
-              if (!_0x41c724.ok) {
-                _0x1b2e49.next = 16;
+              tmpVar421 = tmpVar427.sent;
+              if (!tmpVar421.ok) {
+                tmpVar427.next = 16;
                 break;
               }
-              _0x42b89b = _0x41c724.body;
-              if (!_0x42b89b.match(/(ÏÈµÇÂ¼|\u9700\u8981\u5148\u767b\u5f55|�Ҫ�ȵ�¼���ܼ�)/)) {
-                _0x1b2e49.next = 10;
+              tmpVar422 = tmpVar421.body;
+              if (!tmpVar422.match(/(ÏÈµÇÂ¼|\u9700\u8981\u5148\u767b\u5f55|�Ҫ�ȵ�¼���ܼ�)/)) {
+                tmpVar427.next = 10;
                 break;
               }
-              _0x1b2e49.next = 9;
-              return _0x579114(_0x4fc00b, "", "Cookie失效 ‼️‼️");
+              tmpVar427.next = 9;
+              return pushNotification(notifyTitle, "", "Cookie失效 ‼️‼️");
             case 9:
               throw new Error("Cookie失效 ‼️‼️");
             case 10:
-              _0x292f62 = /<strong[^>]*><a[^>]*href="[^"]*uid=(\d+)"[^>]*>([^<]*)<\/a><\/strong>/i.exec(_0x42b89b);
-              _0x3ca9d0 = _0x2570ae(_0x292f62, 3);
-              _0x2181f5 = _0x3ca9d0[1];
-              _0x484458 = _0x3ca9d0[2];
-              _0x2c098a.set(globalThis, "user.id", _0x2181f5, "");
-              _0x2c098a.set(globalThis, "user.name", _0x484458, "");
-              _0x56c73a.log(`用户信息: ${_0x2181f5} - ${_0x484458}`);
-              _0x1b2e49.next = 17;
+              tmpVar423 = /<strong[^>]*><a[^>]*href="[^"]*uid=(\d+)"[^>]*>([^<]*)<\/a><\/strong>/i.exec(tmpVar422);
+              tmpVar424 = _slicedToArray(tmpVar423, 3);
+              tmpVar425 = tmpVar424[1];
+              tmpVar426 = tmpVar424[2];
+              PathUtils.set(globalThis, "user.id", tmpVar425, "");
+              PathUtils.set(globalThis, "user.name", tmpVar426, "");
+              Logger.log(`用户信息: ${tmpVar425} - ${tmpVar426}`);
+              tmpVar427.next = 17;
               break;
             case 16:
-              _0x56c73a.error("获取个人信息失败", _0x41c724.body || "");
+              Logger.error("获取个人信息失败", tmpVar421.body || "");
             case 17:
             case "end":
-              return _0x1b2e49.stop();
+              return tmpVar427.stop();
           }
         }
-      }, _0x18b6ba);
+      }, helperFn30);
     }));
-    return _0x130d25.apply(this, arguments);
+    return fetchUserProfileAsync.apply(this, arguments);
   }
-  function _0x4cc923() {
-    return _0x1b3522.apply(this, arguments);
+  function fetchVerifyParams() {
+    return fetchVerifyParamsAsync.apply(this, arguments);
   }
-  function _0x1b3522() {
-    _0x1b3522 = _0x44708d(_0x4ab11a().mark(function _0x1f1d35() {
-      var _0x268a05;
-      var _0x29f874;
-      var _0x39fdfa;
-      var _0x4e6340;
-      var _0x4d515b;
-      var _0x37721e;
-      return _0x4ab11a().wrap(function (_0x35b8fa) {
+  function fetchVerifyParamsAsync() {
+    fetchVerifyParamsAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn31() {
+      var tmpVar429;
+      var tmpVar430;
+      var tmpVar431;
+      var tmpVar432;
+      var tmpVar433;
+      var tmpVar434;
+      return _regeneratorRuntime().wrap(function (tmpVar435) {
         while (true) {
-          switch (_0x35b8fa.prev = _0x35b8fa.next) {
+          switch (tmpVar435.prev = tmpVar435.next) {
             case 0:
-              var _0x28c378 = {
-                Cookie: _0x4a7700
+              var tmpVar436 = {
+                Cookie: currentCookie
               };
-              _0x268a05 = {
-                url: _0x2e4911(_0x2856f1, "/home.php?mod=task&do=apply&id=2&referer=%2F"),
-                headers: Object.assign(_0x10537a, _0x28c378)
+              tmpVar429 = {
+                url: joinUrl(siteBaseUrl, "/home.php?mod=task&do=apply&id=2&referer=%2F"),
+                headers: Object.assign(defaultHeaders, tmpVar436)
               };
-              _0x35b8fa.next = 3;
-              return _0x517ee6(_0x268a05);
+              tmpVar435.next = 3;
+              return request(tmpVar429);
             case 3:
-              _0x29f874 = _0x35b8fa.sent;
-              if (!_0x29f874.ok) {
-                _0x35b8fa.next = 24;
+              tmpVar430 = tmpVar435.sent;
+              if (!tmpVar430.ok) {
+                tmpVar435.next = 24;
                 break;
               }
-              _0x4a7700 = _0x4b899f(_0x4a7700, _0x1a2461(_0x29f874));
-              _0x56c73a.debug(`[混淆接口]更新Cookie: ${_0x4a7700}`);
-              _0x39fdfa = /(?:LZ|ZL)\s*=\s*['"]([0-9]{5,6})['"]/.exec(_0x29f874.body)?.[1];
-              if (_0x39fdfa) {
-                _0x35b8fa.next = 10;
+              currentCookie = mergeCookieStrings(currentCookie, extractSetCookieHeader(tmpVar430));
+              Logger.debug(`[混淆接口]更新Cookie: ${currentCookie}`);
+              tmpVar431 = /(?:LZ|ZL)\s*=\s*['"]([0-9]{5,6})['"]/.exec(tmpVar430.body)?.[1];
+              if (tmpVar431) {
+                tmpVar435.next = 10;
                 break;
               }
               throw new Error("[LZ] 长度参数获取失败");
             case 10:
-              _0x4e6340 = /(?:LJ|ZR)\s*=\s*['"]([0-9]{5,6})['"]/.exec(_0x29f874.body)?.[1];
-              if (_0x4e6340) {
-                _0x35b8fa.next = 13;
+              tmpVar432 = /(?:LJ|ZR)\s*=\s*['"]([0-9]{5,6})['"]/.exec(tmpVar430.body)?.[1];
+              if (tmpVar432) {
+                tmpVar435.next = 13;
                 break;
               }
               throw new Error("[LJ] 乘数因子获取失败");
             case 13:
-              _0x4d515b = /(?:Zn|LE)\s*=\s*['"]([0-9a-zA-Z\/+.-]+={0,2})['"];/.exec(_0x29f874.body)?.[1];
-              if (_0x4d515b) {
-                _0x35b8fa.next = 16;
+              tmpVar433 = /(?:Zn|LE)\s*=\s*['"]([0-9a-zA-Z\/+.-]+={0,2})['"];/.exec(tmpVar430.body)?.[1];
+              if (tmpVar433) {
+                tmpVar435.next = 16;
                 break;
               }
               throw new Error("[LE] 加密参数获取失败");
             case 16:
-              var _0x13e8b0 = {
-                LZ: _0x39fdfa,
-                LJ: _0x4e6340,
-                LE: _0x4d515b
+              var tmpVar437 = {
+                LZ: tmpVar431,
+                LJ: tmpVar432,
+                LE: tmpVar433
               };
-              _0x37721e = _0x13e8b0;
-              _0x56c73a.group("[请求参数]");
-              _0x56c73a.debug(`[LZ] 长度参数: ${_0x37721e.LZ}`, `[LJ] 乘数因子: ${_0x37721e.LJ}`, `[LE] 加密参数: ${_0x37721e.LE}`);
-              _0x56c73a.groupEnd();
-              globalThis.verifyBody = _0x170a8d(_0x37721e);
-              _0x56c73a.debug(`[verifyBody] 加密结果: ${globalThis.verifyBody}`);
-              _0x35b8fa.next = 25;
+              tmpVar434 = tmpVar437;
+              Logger.group("[请求参数]");
+              Logger.debug(`[LZ] 长度参数: ${tmpVar434.LZ}`, `[LJ] 乘数因子: ${tmpVar434.LJ}`, `[LE] 加密参数: ${tmpVar434.LE}`);
+              Logger.groupEnd();
+              globalThis.verifyBody = buildVerifyPayload(tmpVar434);
+              Logger.debug(`[verifyBody] 加密结果: ${globalThis.verifyBody}`);
+              tmpVar435.next = 25;
               break;
             case 24:
-              _0x56c73a.error("获取混淆参数失败", _0x29f874.body || "");
+              Logger.error("获取混淆参数失败", tmpVar430.body || "");
             case 25:
             case "end":
-              return _0x35b8fa.stop();
+              return tmpVar435.stop();
           }
         }
-      }, _0x1f1d35);
+      }, helperFn31);
     }));
-    return _0x1b3522.apply(this, arguments);
+    return fetchVerifyParamsAsync.apply(this, arguments);
   }
-  function _0x2ca2d4() {
-    return _0x3a1964.apply(this, arguments);
+  function validateVerifyPayload() {
+    return validateVerifyPayloadAsync.apply(this, arguments);
   }
-  function _0x3a1964() {
-    _0x3a1964 = _0x44708d(_0x4ab11a().mark(function _0xa88a61() {
-      var _0x4e76f8;
-      var _0x584632;
-      return _0x4ab11a().wrap(function (_0x3ff0b5) {
+  function validateVerifyPayloadAsync() {
+    validateVerifyPayloadAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn32() {
+      var tmpVar438;
+      var tmpVar439;
+      return _regeneratorRuntime().wrap(function (tmpVar440) {
         while (true) {
-          switch (_0x3ff0b5.prev = _0x3ff0b5.next) {
+          switch (tmpVar440.prev = tmpVar440.next) {
             case 0:
-              var _0x489c77 = {
-                Cookie: _0x4a7700
+              var tmpVar441 = {
+                Cookie: currentCookie
               };
-              _0x4e76f8 = {
-                url: _0x2e4911(_0x2856f1, "/waf_zw_verify"),
-                headers: Object.assign(_0x10537a, _0x489c77),
-                body: verifyBody
+              tmpVar438 = {
+                url: joinUrl(siteBaseUrl, "/waf_zw_verify"),
+                headers: Object.assign(defaultHeaders, tmpVar441),
+                body: globalThis.verifyBody
               };
-              _0x3ff0b5.next = 3;
-              return _0x517ee6(_0x4e76f8);
+              tmpVar440.next = 3;
+              return request(tmpVar438);
             case 3:
-              _0x584632 = _0x3ff0b5.sent;
-              if (!_0x584632.ok) {
-                _0x3ff0b5.next = 10;
+              tmpVar439 = tmpVar440.sent;
+              if (!tmpVar439.ok) {
+                tmpVar440.next = 10;
                 break;
               }
-              _0x4a7700 = _0x4b899f(_0x4a7700, _0x1a2461(_0x584632));
-              _0x56c73a.debug("🎉 参数校验接口通过!!");
-              return _0x3ff0b5.abrupt("return", true);
+              currentCookie = mergeCookieStrings(currentCookie, extractSetCookieHeader(tmpVar439));
+              Logger.debug("🎉 参数校验接口通过!!");
+              return tmpVar440.abrupt("return", true);
             case 10:
-              _0x56c73a.error("参数校验失败", _0x584632.body || "");
+              Logger.error("参数校验失败", tmpVar439.body || "");
             case 11:
             case "end":
-              return _0x3ff0b5.stop();
+              return tmpVar440.stop();
           }
         }
-      }, _0xa88a61);
+      }, helperFn32);
     }));
-    return _0x3a1964.apply(this, arguments);
+    return validateVerifyPayloadAsync.apply(this, arguments);
   }
-  function _0x3c1176() {
-    return _0x2353d1.apply(this, arguments);
+  function executeSignIn() {
+    return executeSignInAsync.apply(this, arguments);
   }
-  function _0x2353d1() {
-    _0x2353d1 = _0x44708d(_0x4ab11a().mark(function _0x37a37e() {
-      var _0x13229a;
-      var _0x389c57;
-      var _0x2ea368;
-      var _0x2e0a86;
-      var _0x4a92b9;
-      return _0x4ab11a().wrap(function (_0x3bfdd3) {
+  function executeSignInAsync() {
+    executeSignInAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn33() {
+      var tmpVar442;
+      var tmpVar443;
+      var tmpVar444;
+      var tmpVar445;
+      var tmpVar446;
+      return _regeneratorRuntime().wrap(function (tmpVar447) {
         while (true) {
-          switch (_0x3bfdd3.prev = _0x3bfdd3.next) {
+          switch (tmpVar447.prev = tmpVar447.next) {
             case 0:
-              var _0x36c72f = {
-                Cookie: _0x4a7700
+              var tmpVar448 = {
+                Cookie: currentCookie
               };
-              _0x13229a = {
-                url: _0x2e4911(_0x2856f1, "/home.php?mod=task&do=apply&id=2&referer=%2Fforum.php"),
-                headers: Object.assign(_0x10537a, _0x36c72f)
+              tmpVar442 = {
+                url: joinUrl(siteBaseUrl, "/home.php?mod=task&do=apply&id=2&referer=%2Fforum.php"),
+                headers: Object.assign(defaultHeaders, tmpVar448)
               };
-              _0x3bfdd3.next = 3;
-              return _0x517ee6(_0x13229a);
+              tmpVar447.next = 3;
+              return request(tmpVar442);
             case 3:
-              _0x389c57 = _0x3bfdd3.sent;
-              _0x2ea368 = globalThis;
-              _0x2e0a86 = _0x389c57.body;
-              _0x4a92b9 = new Date();
-              if (_0x2e0a86.match(/(ÒÑÍê³É|\u606d\u559c\u60a8|��̳΢�š��ᰮ�ƽ�)/)) {
-                _0x2ea368.msgBody = _0x4a92b9.getMonth() + 1 + "月" + _0x4a92b9.getDate() + "日, 签到成功 🎉";
-              } else if (_0x2e0a86.match(/(ÄúÒÑ|\u4e0b\u671f\u518d\u6765|>��Ǹ������)/)) {
-                _0x2ea368.msgBody = _0x4a92b9.getMonth() + 1 + "月" + _0x4a92b9.getDate() + "日, 已签过 ⚠️";
-              } else if (_0x2e0a86.match(/(ÏÈµÇÂ¼|\u9700\u8981\u5148\u767b\u5f55|�Ҫ�ȵ�¼���ܼ�)/)) {
-                _0x2ea368.msgBody = "签到失败, Cookie失效 ‼️‼️";
-              } else if (_0x389c57.statusCode == 403) {
-                _0x2ea368.msgBody = "服务器暂停签到 ⚠️";
+              tmpVar443 = tmpVar447.sent;
+              tmpVar444 = globalThis;
+              tmpVar445 = tmpVar443.body;
+              tmpVar446 = new Date();
+              if (tmpVar445.match(/(ÒÑÍê³É|\u606d\u559c\u60a8|��̳΢�š��ᰮ�ƽ�)/)) {
+                tmpVar444.msgBody = tmpVar446.getMonth() + 1 + "月" + tmpVar446.getDate() + "日, 签到成功 🎉";
+              } else if (tmpVar445.match(/(ÄúÒÑ|\u4e0b\u671f\u518d\u6765|>��Ǹ������)/)) {
+                tmpVar444.msgBody = tmpVar446.getMonth() + 1 + "月" + tmpVar446.getDate() + "日, 已签过 ⚠️";
+              } else if (tmpVar445.match(/(ÏÈµÇÂ¼|\u9700\u8981\u5148\u767b\u5f55|�Ҫ�ȵ�¼���ܼ�)/)) {
+                tmpVar444.msgBody = "签到失败, Cookie失效 ‼️‼️";
+              } else if (tmpVar443.statusCode == 403) {
+                tmpVar444.msgBody = "服务器暂停签到 ⚠️";
               } else {
-                _0x2ea368.msgBody = "脚本待更新 ‼️‼️";
+                tmpVar444.msgBody = "脚本待更新 ‼️‼️";
               }
             case 8:
             case "end":
-              return _0x3bfdd3.stop();
+              return tmpVar447.stop();
           }
         }
-      }, _0x37a37e);
+      }, helperFn33);
     }));
-    return _0x2353d1.apply(this, arguments);
+    return executeSignInAsync.apply(this, arguments);
   }
-  function _0x5706a9(_0x278df9) {
-    var _0x495efb;
-    var _0x33c658;
-    if (!_0x278df9) {
-      _0x136460(_0x4fc00b, "❌ 获取Cookie失败", "Cookie为空, 不进行初始化");
+  function normalizeCookieFields(tmpVar449) {
+    var tmpVar450;
+    var tmpVar451;
+    if (!tmpVar449) {
+      showSystemNotification(notifyTitle, "❌ 获取Cookie失败", "Cookie为空, 不进行初始化");
       throw new Error("Cookie为空, 不进行初始化");
     }
-    _0x278df9 = _0x4d66d7(_0x278df9);
-    if ((_0x495efb = _0x278df9) === null || _0x495efb === undefined || !_0x495efb.htVC_2132_auth) {
+    tmpVar449 = parseCookieToObject(tmpVar449);
+    if ((tmpVar450 = tmpVar449) === null || tmpVar450 === undefined || !tmpVar450.htVC_2132_auth) {
       throw new Error("获取Cookie失败, 关键值[auth]缺失");
     }
-    if ((_0x33c658 = _0x278df9) === null || _0x33c658 === undefined || !_0x33c658.htVC_2132_saltkey) {
+    if ((tmpVar451 = tmpVar449) === null || tmpVar451 === undefined || !tmpVar451.htVC_2132_saltkey) {
       throw new Error("获取Cookie失败, 关键值[saltkey]缺失");
     }
-    return `htVC_2132_auth=${_0x278df9.htVC_2132_auth}; htVC_2132_saltkey=${_0x278df9.htVC_2132_saltkey};`;
+    return `htVC_2132_auth=${tmpVar449.htVC_2132_auth}; htVC_2132_saltkey=${tmpVar449.htVC_2132_saltkey};`;
   }
-  function _0x4d66d7(_0x5559a8) {
-    return _0x5559a8.split(";").reduce(function (_0x3c93f4, _0xf7ad96) {
-      var _0x136878 = _0xf7ad96.split("=").map(function (_0x2bb587) {
-        return _0x2bb587.trim();
+  function parseCookieToObject(tmpVar452) {
+    return tmpVar452.split(";").reduce(function (tmpVar453, tmpVar454) {
+      var tmpVar455 = tmpVar454.split("=").map(function (tmpVar456) {
+        return tmpVar456.trim();
       });
-      var _0x3e0000 = _0x2570ae(_0x136878, 2);
-      var _0x3e95f2 = _0x3e0000[0];
-      var _0x9a2a3a = _0x3e0000[1];
-      if (_0x3e95f2 && _0x9a2a3a) {
-        _0x3c93f4[_0x3e95f2] = _0x9a2a3a;
+      var tmpVar457 = _slicedToArray(tmpVar455, 2);
+      var tmpVar458 = tmpVar457[0];
+      var tmpVar459 = tmpVar457[1];
+      if (tmpVar458 && tmpVar459) {
+        tmpVar453[tmpVar458] = tmpVar459;
       }
-      return _0x3c93f4;
+      return tmpVar453;
     }, {});
   }
-  function _0x140e1c() {
-    var _0x263abb = _0x5706a9($request.headers.Cookie ?? $request.headers.cookie ?? "");
-    if (!_0x263abb || !_0x263abb.includes("auth=")) {
-      _0x136460(_0x4fc00b, "❌ 获取Cookie失败", "请检查Cookie是否正确");
+  function captureCookieFromRequest() {
+    var tmpVar460 = normalizeCookieFields($request.headers.Cookie ?? $request.headers.cookie ?? "");
+    if (!tmpVar460 || !tmpVar460.includes("auth=")) {
+      showSystemNotification(notifyTitle, "❌ 获取Cookie失败", "请检查Cookie是否正确");
       throw new Error("请检查Cookie是否正确");
     }
-    _0x1a6861.setItem("wuai_cookie", _0x263abb);
-    _0x56c73a.debug(`Cookie: ${_0x263abb}`);
-    _0x136460(_0x4fc00b, "", "写入Cookie成功 🎉");
+    PersistStore.setItem("wuai_cookie", tmpVar460);
+    Logger.debug(`Cookie: ${tmpVar460}`);
+    showSystemNotification(notifyTitle, "", "写入Cookie成功 🎉");
   }
-  function _0x579114(_0x4bddc2, _0x3128e4, _0xd4b218, _0x312d9d) {
-    return _0x3260d6.apply(this, arguments);
+  function pushNotification(tmpVar461, tmpVar462, tmpVar463, tmpVar464) {
+    return pushNotificationAsync.apply(this, arguments);
   }
-  function _0x3260d6() {
-    _0x3260d6 = _0x44708d(_0x4ab11a().mark(function _0x3b5c68(_0x42dbbc, _0x506b18, _0x11eb0d, _0x301899) {
-      return _0x4ab11a().wrap(function (_0x330b8b) {
+  function pushNotificationAsync() {
+    pushNotificationAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn34(tmpVar465, tmpVar466, tmpVar467, tmpVar468) {
+      return _regeneratorRuntime().wrap(function (tmpVar469) {
         while (true) {
-          switch (_0x330b8b.prev = _0x330b8b.next) {
+          switch (tmpVar469.prev = tmpVar469.next) {
             case 0:
-              if (!_0x5cbb5a) {
-                _0x330b8b.next = 5;
+              if (!barkPushKey) {
+                tmpVar469.next = 5;
                 break;
               }
-              _0x330b8b.next = 3;
-              return _0x2b25f7(_0x42dbbc, _0x506b18, _0x11eb0d, _0x301899);
+              tmpVar469.next = 3;
+              return pushByBark(tmpVar465, tmpVar466, tmpVar467, tmpVar468);
             case 3:
-              _0x330b8b.next = 6;
+              tmpVar469.next = 6;
               break;
             case 5:
-              _0x136460(_0x42dbbc, _0x506b18, _0x11eb0d, _0x301899);
+              showSystemNotification(tmpVar465, tmpVar466, tmpVar467, tmpVar468);
             case 6:
             case "end":
-              return _0x330b8b.stop();
+              return tmpVar469.stop();
           }
         }
-      }, _0x3b5c68);
+      }, helperFn34);
     }));
-    return _0x3260d6.apply(this, arguments);
+    return pushNotificationAsync.apply(this, arguments);
   }
-  function _0x2b25f7(_0x36d46a, _0x2bd4bf, _0x53f0b0) {
-    return _0x2dc448.apply(this, arguments);
+  function pushByBark(tmpVar470, tmpVar471, tmpVar472) {
+    return pushByBarkAsync.apply(this, arguments);
   }
-  function _0x2dc448() {
-    _0x2dc448 = _0x44708d(_0x4ab11a().mark(function _0x3d4b58(_0xa80df7, _0x219be7, _0x473e12) {
-      var _0xd90bdd;
-      var _0x266799;
-      var _0x4e6faf;
-      var _0xba54cb;
-      var _0x5a1183;
-      var _0x2ef7cf;
-      var _0x273d5a;
-      var _0x4c96e8;
-      var _0x16377f;
-      var _0x320017 = arguments;
-      return _0x4ab11a().wrap(function (_0x3bdbd8) {
+  function pushByBarkAsync() {
+    pushByBarkAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn35(tmpVar473, tmpVar474, tmpVar475) {
+      var tmpVar476;
+      var tmpVar477;
+      var tmpVar478;
+      var tmpVar479;
+      var tmpVar480;
+      var tmpVar481;
+      var tmpVar482;
+      var tmpVar483;
+      var tmpVar484;
+      var tmpVar485 = arguments;
+      return _regeneratorRuntime().wrap(function (tmpVar486) {
         while (true) {
-          switch (_0x3bdbd8.prev = _0x3bdbd8.next) {
+          switch (tmpVar486.prev = tmpVar486.next) {
             case 0:
-              var _0x2cd493 = {
+              var tmpVar487 = {
                 "content-type": "application/json; charset=utf-8"
               };
-              _0xd90bdd = _0x320017.length > 3 && _0x320017[3] !== undefined ? _0x320017[3] : {};
-              _0x266799 = (_0xd90bdd == null ? undefined : _0xd90bdd["open-url"]) || (_0xd90bdd == null ? undefined : _0xd90bdd.openUrl) || (_0xd90bdd == null ? undefined : _0xd90bdd.$open) || (_0xd90bdd == null ? undefined : _0xd90bdd.url) || "";
-              _0x4e6faf = (_0xd90bdd == null ? undefined : _0xd90bdd["update-pasteboard"]) || (_0xd90bdd == null ? undefined : _0xd90bdd.updatePasteboard) || (_0xd90bdd == null ? undefined : _0xd90bdd.$copy) || (_0xd90bdd == null ? undefined : _0xd90bdd.copy) || "";
-              _0xba54cb = (_0xd90bdd == null ? undefined : _0xd90bdd["media-url"]) || (_0xd90bdd == null ? undefined : _0xd90bdd.mediaUrl) || (_0xd90bdd == null ? undefined : _0xd90bdd.$media) || "";
-              ["open-url", "openUrl", "$open", "url", "update-pasteboard", "updatePasteboard", "$copy", "copy", "media-url", "mediaUrl", "$media"].forEach(function (_0x53ec5e) {
-                return delete _0xd90bdd[_0x53ec5e];
+              tmpVar476 = tmpVar485.length > 3 && tmpVar485[3] !== undefined ? tmpVar485[3] : {};
+              tmpVar477 = (tmpVar476 == null ? undefined : tmpVar476["open-url"]) || (tmpVar476 == null ? undefined : tmpVar476.openUrl) || (tmpVar476 == null ? undefined : tmpVar476.$open) || (tmpVar476 == null ? undefined : tmpVar476.url) || "";
+              tmpVar478 = (tmpVar476 == null ? undefined : tmpVar476["update-pasteboard"]) || (tmpVar476 == null ? undefined : tmpVar476.updatePasteboard) || (tmpVar476 == null ? undefined : tmpVar476.$copy) || (tmpVar476 == null ? undefined : tmpVar476.copy) || "";
+              tmpVar479 = (tmpVar476 == null ? undefined : tmpVar476["media-url"]) || (tmpVar476 == null ? undefined : tmpVar476.mediaUrl) || (tmpVar476 == null ? undefined : tmpVar476.$media) || "";
+              ["open-url", "openUrl", "$open", "url", "update-pasteboard", "updatePasteboard", "$copy", "copy", "media-url", "mediaUrl", "$media"].forEach(function (tmpVar488) {
+                return delete tmpVar476[tmpVar488];
               });
-              if (_0x219be7) {
-                _0x473e12 = _0x219be7 + "\n" + _0x473e12;
+              if (tmpVar474) {
+                tmpVar475 = tmpVar474 + "\n" + tmpVar475;
               }
-              _0x5a1183 = _0x22ec9e(_0x22ec9e({}, _0xd90bdd), {}, {
-                url: _0x266799,
-                copy: _0x4e6faf,
-                icon: _0xba54cb,
-                title: _0xa80df7,
-                body: _0x473e12
+              tmpVar480 = _objectSpread(_objectSpread({}, tmpVar476), {}, {
+                url: tmpVar477,
+                copy: tmpVar478,
+                icon: tmpVar479,
+                title: tmpVar473,
+                body: tmpVar475
               });
-              _0x2ef7cf = {
-                url: "https://api.day.app/" + _0x5cbb5a,
-                headers: _0x2cd493,
-                body: _0x8489b5(_0x5a1183)
+              tmpVar481 = {
+                url: "https://api.day.app/" + barkPushKey,
+                headers: tmpVar487,
+                body: safeJSONStringify(tmpVar480)
               };
-              _0x273d5a = 0;
+              tmpVar482 = 0;
             case 9:
-              if (!(_0x273d5a < 3)) {
-                _0x3bdbd8.next = 27;
+              if (!(tmpVar482 < 3)) {
+                tmpVar486.next = 27;
                 break;
               }
-              _0x56c73a.info(`Bark第${_0x273d5a + 1}次推送尝试`);
-              _0x3bdbd8.next = 13;
-              return _0x517ee6(_0x2ef7cf);
+              Logger.info(`Bark第${tmpVar482 + 1}次推送尝试`);
+              tmpVar486.next = 13;
+              return request(tmpVar481);
             case 13:
-              _0x4c96e8 = _0x3bdbd8.sent;
-              if (!_0x4c96e8.ok) {
-                _0x3bdbd8.next = 23;
+              tmpVar483 = tmpVar486.sent;
+              if (!tmpVar483.ok) {
+                tmpVar486.next = 23;
                 break;
               }
-              _0x16377f = ["=========📣推送成功📣=========", _0xa80df7, _0x473e12];
-              if (_0x266799) {
-                _0x16377f.push(`跳转链接: ${_0x266799}`);
+              tmpVar484 = ["=========📣推送成功📣=========", tmpVar473, tmpVar475];
+              if (tmpVar477) {
+                tmpVar484.push(`跳转链接: ${tmpVar477}`);
               }
-              if (_0x4e6faf) {
-                _0x16377f.push(`复制内容: ${_0x4e6faf}`);
+              if (tmpVar478) {
+                tmpVar484.push(`复制内容: ${tmpVar478}`);
               }
-              if (_0xba54cb) {
-                _0x16377f.push(`媒体链接: ${_0xba54cb}`);
+              if (tmpVar479) {
+                tmpVar484.push(`媒体链接: ${tmpVar479}`);
               }
-              _0x56c73a.log.apply(_0x56c73a, _0x16377f);
-              return _0x3bdbd8.abrupt("break", 27);
+              Logger.log.apply(Logger, tmpVar484);
+              return tmpVar486.abrupt("break", 27);
             case 23:
-              _0x56c73a.warn("Bark推送失败", _0x4c96e8.body || "");
+              Logger.warn("Bark推送失败", tmpVar483.body || "");
             case 24:
-              _0x273d5a++;
-              _0x3bdbd8.next = 9;
+              tmpVar482++;
+              tmpVar486.next = 9;
               break;
             case 27:
             case "end":
-              return _0x3bdbd8.stop();
+              return tmpVar486.stop();
           }
         }
-      }, _0x3d4b58);
+      }, helperFn35);
     }));
-    return _0x2dc448.apply(this, arguments);
+    return pushByBarkAsync.apply(this, arguments);
   }
-  function _0x1a2461(_0x42dfca) {
-    var _0x4f43a9;
-    var _0x5aeac1;
-    _0x5aeac1 = _0x42dfca.headers;
-    var _0x2ff6dd = Object.fromEntries(Object.entries(_0x5aeac1).map(function (_0x276787) {
-      var _0x2087b3 = _0x3c056e(_0x276787, 2);
-      var _0x18e0d1 = _0x2087b3[0];
-      var _0x2f3c4a = _0x2087b3[1];
-      return [_0x18e0d1.toLowerCase(), _0x2f3c4a];
+  function extractSetCookieHeader(tmpVar489) {
+    var tmpVar490;
+    var tmpVar491;
+    tmpVar491 = tmpVar489.headers;
+    var tmpVar492 = Object.fromEntries(Object.entries(tmpVar491).map(function (tmpVar493) {
+      var tmpVar494 = _arrayWithHolesOrIterator(tmpVar493, 2);
+      var tmpVar495 = tmpVar494[0];
+      var tmpVar496 = tmpVar494[1];
+      return [tmpVar495.toLowerCase(), tmpVar496];
     }));
-    var _0x5c0bcb = _0x2ff6dd["set-cookie"];
-    if (Array.isArray(_0x5c0bcb)) {
-      return _0x5c0bcb.map(function (_0x72924c) {
-        return _0x72924c.split(";")[0];
+    var tmpVar497 = tmpVar492["set-cookie"];
+    if (Array.isArray(tmpVar497)) {
+      return tmpVar497.map(function (tmpVar498) {
+        return tmpVar498.split(";")[0];
       }).join(";");
     } else {
-      return (_0x5c0bcb == null || (_0x4f43a9 = _0x5c0bcb.split(",")) === null || _0x4f43a9 === undefined || (_0x4f43a9 = _0x4f43a9.map(function (_0x4ae622) {
-        return _0x4ae622.split(";")[0];
-      })) === null || _0x4f43a9 === undefined ? undefined : _0x4f43a9.join(";")) || _0x5c0bcb;
+      return (tmpVar497 == null || (tmpVar490 = tmpVar497.split(",")) === null || tmpVar490 === undefined || (tmpVar490 = tmpVar490.map(function (tmpVar499) {
+        return tmpVar499.split(";")[0];
+      })) === null || tmpVar490 === undefined ? undefined : tmpVar490.join(";")) || tmpVar497;
     }
   }
-  function _0x4b899f(_0x3cf81d, _0x32bba7) {
-    var _0x2d3ac6 = _0x4d66d7(_0x3cf81d);
-    var _0x4d750f = _0x4d66d7(_0x32bba7);
-    return Object.entries(Object.assign(_0x2d3ac6, _0x4d750f)).map(function (_0x1077d3) {
-      var _0x461bc4 = _0x2570ae(_0x1077d3, 2);
-      var _0x3862b9 = _0x461bc4[0];
-      var _0x557c05 = _0x461bc4[1];
-      return `${_0x3862b9}=${_0x557c05}`;
+  function mergeCookieStrings(tmpVar500, tmpVar501) {
+    var tmpVar502 = parseCookieToObject(tmpVar500);
+    var tmpVar503 = parseCookieToObject(tmpVar501);
+    return Object.entries(Object.assign(tmpVar502, tmpVar503)).map(function (tmpVar504) {
+      var tmpVar505 = _slicedToArray(tmpVar504, 2);
+      var tmpVar506 = tmpVar505[0];
+      var tmpVar507 = tmpVar505[1];
+      return `${tmpVar506}=${tmpVar507}`;
     }).join("; ");
   }
-  _0x56c73a.debug(`Cookie: ${_0x4a7700}`);
-  _0x44708d(_0x4ab11a().mark(function _0x532996() {
-    return _0x4ab11a().wrap(function (_0x316bef) {
+  Logger.debug(`Cookie: ${currentCookie}`);
+  _asyncToGenerator(_regeneratorRuntime().mark(function helperFn36() {
+    return _regeneratorRuntime().wrap(function (tmpVar508) {
       while (true) {
-        switch (_0x316bef.prev = _0x316bef.next) {
+        switch (tmpVar508.prev = tmpVar508.next) {
           case 0:
             if (globalThis === null || globalThis === undefined || !globalThis.$request) {
-              _0x316bef.next = 4;
+              tmpVar508.next = 4;
               break;
             }
-            _0x140e1c();
-            _0x316bef.next = 6;
+            captureCookieFromRequest();
+            tmpVar508.next = 6;
             break;
           case 4:
-            _0x316bef.next = 6;
-            return _0x4155c3();
+            tmpVar508.next = 6;
+            return runMainTask();
           case 6:
           case "end":
-            return _0x316bef.stop();
+            return tmpVar508.stop();
         }
       }
-    }, _0x532996);
-  }))().catch(function (_0x2092b9) {
-    return _0x56c73a.error(_0x2092b9);
-  }).finally(function (_0x232cf = {}) {
-    switch (_0x21940b) {
+    }, helperFn36);
+  }))().catch(function (tmpVar509) {
+    return Logger.error(tmpVar509);
+  }).finally(function (tmpVar510 = {}) {
+    switch (runtimeEnv) {
       case "Surge":
-        if (_0x232cf.policy) {
-          _0x2c098a.set(_0x232cf, "headers.X-Surge-Policy", _0x232cf.policy);
+        if (tmpVar510.policy) {
+          PathUtils.set(tmpVar510, "headers.X-Surge-Policy", tmpVar510.policy);
         }
-        _0x56c73a.log("🚩 执行结束!", "🕛 " + (new Date().getTime() / 1000 - $script.startTime) + " 秒");
-        $done(_0x232cf);
+        Logger.log("🚩 执行结束!", "🕛 " + (new Date().getTime() / 1000 - $script.startTime) + " 秒");
+        $done(tmpVar510);
         break;
       case "Loon":
-        if (_0x232cf.policy) {
-          _0x232cf.node = _0x232cf.policy;
+        if (tmpVar510.policy) {
+          tmpVar510.node = tmpVar510.policy;
         }
-        _0x56c73a.log("🚩 执行结束!", "🕛 " + (new Date() - $script.startTime) / 1000 + " 秒");
-        $done(_0x232cf);
+        Logger.log("🚩 执行结束!", "🕛 " + (new Date() - $script.startTime) / 1000 + " 秒");
+        $done(tmpVar510);
         break;
       case "Stash":
-        if (_0x232cf.policy) {
-          _0x2c098a.set(_0x232cf, "headers.X-Stash-Selected-Proxy", encodeURI(_0x232cf.policy));
+        if (tmpVar510.policy) {
+          PathUtils.set(tmpVar510, "headers.X-Stash-Selected-Proxy", encodeURI(tmpVar510.policy));
         }
-        _0x56c73a.log("🚩 执行结束!", "🕛 " + (new Date() - $script.startTime) / 1000 + " 秒");
-        $done(_0x232cf);
+        Logger.log("🚩 执行结束!", "🕛 " + (new Date() - $script.startTime) / 1000 + " 秒");
+        $done(tmpVar510);
         break;
       case "Egern":
       case "Shadowrocket":
       default:
-        _0x56c73a.log("🚩 执行结束!");
-        $done(_0x232cf);
+        Logger.log("🚩 执行结束!");
+        $done(tmpVar510);
         break;
       case "Quantumult X":
-        if (_0x232cf.policy) {
-          _0x2c098a.set(_0x232cf, "opts.policy", _0x232cf.policy);
+        if (tmpVar510.policy) {
+          PathUtils.set(tmpVar510, "opts.policy", tmpVar510.policy);
         }
-        _0x232cf["auto-redirect"] = undefined;
-        _0x232cf["auto-cookie"] = undefined;
-        _0x232cf["binary-mode"] = undefined;
-        _0x232cf.charset = undefined;
-        _0x232cf.host = undefined;
-        _0x232cf.insecure = undefined;
-        _0x232cf.method = undefined;
-        _0x232cf.ok = undefined;
-        _0x232cf.opt = undefined;
-        _0x232cf.path = undefined;
-        _0x232cf.policy = undefined;
-        _0x232cf["policy-descriptor"] = undefined;
-        _0x232cf.scheme = undefined;
-        _0x232cf.sessionIndex = undefined;
-        _0x232cf.statusCode = undefined;
-        _0x232cf.timeout = undefined;
-        switch (typeof _0x232cf.status) {
+        tmpVar510["auto-redirect"] = undefined;
+        tmpVar510["auto-cookie"] = undefined;
+        tmpVar510["binary-mode"] = undefined;
+        tmpVar510.charset = undefined;
+        tmpVar510.host = undefined;
+        tmpVar510.insecure = undefined;
+        tmpVar510.method = undefined;
+        tmpVar510.ok = undefined;
+        tmpVar510.opt = undefined;
+        tmpVar510.path = undefined;
+        tmpVar510.policy = undefined;
+        tmpVar510["policy-descriptor"] = undefined;
+        tmpVar510.scheme = undefined;
+        tmpVar510.sessionIndex = undefined;
+        tmpVar510.statusCode = undefined;
+        tmpVar510.timeout = undefined;
+        switch (typeof tmpVar510.status) {
           case "number":
-            _0x232cf.status = _0x4a834b[_0x232cf.status];
+            tmpVar510.status = HTTP_STATUS_LINES[tmpVar510.status];
             break;
           case "string":
           case "undefined":
             break;
           default:
-            _0x232cf.status = undefined;
+            tmpVar510.status = undefined;
         }
-        if (_0x232cf.body instanceof ArrayBuffer) {
-          _0x232cf.bodyBytes = _0x232cf.body;
-          _0x232cf.body = undefined;
-        } else if (ArrayBuffer.isView(_0x232cf.body)) {
-          _0x232cf.bodyBytes = _0x232cf.body.buffer.slice(_0x232cf.body.byteOffset, _0x232cf.body.byteLength + _0x232cf.body.byteOffset);
-          _0x232cf.body = undefined;
-        } else if (_0x232cf.body) {
-          _0x232cf.bodyBytes = undefined;
+        if (tmpVar510.body instanceof ArrayBuffer) {
+          tmpVar510.bodyBytes = tmpVar510.body;
+          tmpVar510.body = undefined;
+        } else if (ArrayBuffer.isView(tmpVar510.body)) {
+          tmpVar510.bodyBytes = tmpVar510.body.buffer.slice(tmpVar510.body.byteOffset, tmpVar510.body.byteLength + tmpVar510.body.byteOffset);
+          tmpVar510.body = undefined;
+        } else if (tmpVar510.body) {
+          tmpVar510.bodyBytes = undefined;
         }
-        _0x56c73a.log("🚩 执行结束!");
-        $done(_0x232cf);
+        Logger.log("🚩 执行结束!");
+        $done(tmpVar510);
         break;
       case "Node.js":
-        _0x56c73a.log("🚩 执行结束!");
+        Logger.log("🚩 执行结束!");
         process.exit(1);
     }
   });
