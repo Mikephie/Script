@@ -68,19 +68,19 @@ hostname = %APPEND% www.52pojie.cn
   'use strict';
 
   const runtimeEnv = (() => {
-    const tmpVar1 = Object.keys(globalThis);
+    const local1 = Object.keys(globalThis);
     switch (true) {
-      case tmpVar1.includes("$task"):
+      case local1.includes("$task"):
         return "Quantumult X";
-      case tmpVar1.includes("$loon"):
+      case local1.includes("$loon"):
         return "Loon";
-      case tmpVar1.includes("$rocket"):
+      case local1.includes("$rocket"):
         return "Shadowrocket";
       case typeof module != "undefined":
         return "Node.js";
-      case tmpVar1.includes("Egern"):
+      case local1.includes("Egern"):
         return "Egern";
-      case tmpVar1.includes("$environment"):
+      case local1.includes("$environment"):
         if ($environment["surge-version"]) {
           return "Surge";
         } else if ($environment["stash-version"]) {
@@ -97,33 +97,33 @@ hostname = %APPEND% www.52pojie.cn
     static #t = [];
     static #r = new Map([]);
     static clear = () => {};
-    static count = (tmpVar2 = "default") => {
-      switch (Logger.#e.has(tmpVar2)) {
+    static count = (arg1 = "default") => {
+      switch (Logger.#e.has(arg1)) {
         case true:
-          Logger.#e.set(tmpVar2, Logger.#e.get(tmpVar2) + 1);
+          Logger.#e.set(arg1, Logger.#e.get(arg1) + 1);
           break;
         case false:
-          Logger.#e.set(tmpVar2, 0);
+          Logger.#e.set(arg1, 0);
       }
-      Logger.log(tmpVar2 + ": " + Logger.#e.get(tmpVar2));
+      Logger.log(arg1 + ": " + Logger.#e.get(arg1));
     };
-    static countReset = (tmpVar3 = "default") => {
-      switch (Logger.#e.has(tmpVar3)) {
+    static countReset = (arg2 = "default") => {
+      switch (Logger.#e.has(arg2)) {
         case true:
-          Logger.#e.set(tmpVar3, 0);
-          Logger.log(tmpVar3 + ": " + Logger.#e.get(tmpVar3));
+          Logger.#e.set(arg2, 0);
+          Logger.log(arg2 + ": " + Logger.#e.get(arg2));
           break;
         case false:
-          Logger.warn("Counter \"" + tmpVar3 + "\" doesn’t exist");
+          Logger.warn("Counter \"" + arg2 + "\" doesn’t exist");
       }
     };
-    static debug = (...tmpVar4) => {
+    static debug = (...arg3) => {
       if (!(Logger.#o < 4)) {
-        tmpVar4 = tmpVar4.map(tmpVar5 => "🅱️ " + tmpVar5);
-        Logger.log(...tmpVar4);
+        arg3 = arg3.map(item1 => "🅱️ " + item1);
+        Logger.log(...arg3);
       }
     };
-    static error(...tmpVar6) {
+    static error(...value1) {
       if (!(Logger.#o < 1)) {
         switch (runtimeEnv) {
           case "Surge":
@@ -133,21 +133,21 @@ hostname = %APPEND% www.52pojie.cn
           case "Shadowrocket":
           case "Quantumult X":
           default:
-            tmpVar6 = tmpVar6.map(tmpVar7 => "❌ " + tmpVar7);
+            value1 = value1.map(item2 => "❌ " + item2);
             break;
           case "Node.js":
-            tmpVar6 = tmpVar6.map(tmpVar8 => "❌ " + tmpVar8.stack);
+            value1 = value1.map(item3 => "❌ " + item3.stack);
         }
-        Logger.log(...tmpVar6);
+        Logger.log(...value1);
       }
     }
-    static exception = (...tmpVar9) => Logger.error(...tmpVar9);
-    static group = tmpVar10 => Logger.#t.unshift(tmpVar10);
+    static exception = (...arg4) => Logger.error(...arg4);
+    static group = item4 => Logger.#t.unshift(item4);
     static groupEnd = () => Logger.#t.shift();
-    static info(...tmpVar11) {
+    static info(...value2) {
       if (!(Logger.#o < 3)) {
-        tmpVar11 = tmpVar11.map(tmpVar12 => "ℹ️ " + tmpVar12);
-        Logger.log(...tmpVar11);
+        value2 = value2.map(item5 => "ℹ️ " + item5);
+        Logger.log(...value2);
       }
     }
     static #o = 2;
@@ -168,17 +168,17 @@ hostname = %APPEND% www.52pojie.cn
           return "ALL";
       }
     }
-    static set logLevel(tmpVar13) {
-      switch (typeof tmpVar13) {
+    static set logLevel(value3) {
+      switch (typeof value3) {
         case "string":
-          tmpVar13 = tmpVar13.toLowerCase();
+          value3 = value3.toLowerCase();
           break;
         case "number":
           break;
         default:
-          tmpVar13 = "warn";
+          value3 = "warn";
       }
-      switch (tmpVar13) {
+      switch (value3) {
         case 0:
         case "off":
           Logger.#o = 0;
@@ -206,94 +206,94 @@ hostname = %APPEND% www.52pojie.cn
           Logger.#o = 5;
       }
     }
-    static log = (...tmpVar14) => {
+    static log = (...arg5) => {
       if (Logger.#o !== 0) {
-        tmpVar14 = tmpVar14.map(tmpVar15 => {
-          switch (typeof tmpVar15) {
+        arg5 = arg5.map(item6 => {
+          switch (typeof item6) {
             case "object":
-              tmpVar15 = JSON.stringify(tmpVar15);
+              item6 = JSON.stringify(item6);
               break;
             case "bigint":
             case "number":
             case "boolean":
             case "string":
-              tmpVar15 = tmpVar15.toString();
+              item6 = item6.toString();
           }
-          return tmpVar15;
+          return item6;
         });
-        Logger.#t.forEach(tmpVar16 => {
-          tmpVar14 = tmpVar14.map(tmpVar17 => "  " + tmpVar17);
-          tmpVar14.unshift("▼ " + tmpVar16 + ":");
+        Logger.#t.forEach(item7 => {
+          arg5 = arg5.map(item8 => "  " + item8);
+          arg5.unshift("▼ " + item7 + ":");
         });
-        tmpVar14 = ["", ...tmpVar14];
-        console.log(tmpVar14.join("\n"));
+        arg5 = ["", ...arg5];
+        console.log(arg5.join("\n"));
       }
     };
-    static time = (tmpVar18 = "default") => Logger.#r.set(tmpVar18, Date.now());
-    static timeEnd = (tmpVar19 = "default") => Logger.#r.delete(tmpVar19);
-    static timeLog = (tmpVar20 = "default") => {
-      const tmpVar21 = Logger.#r.get(tmpVar20);
-      if (tmpVar21) {
-        Logger.log(tmpVar20 + ": " + (Date.now() - tmpVar21) + "ms");
+    static time = (arg6 = "default") => Logger.#r.set(arg6, Date.now());
+    static timeEnd = (arg7 = "default") => Logger.#r.delete(arg7);
+    static timeLog = (arg8 = "default") => {
+      const local2 = Logger.#r.get(arg8);
+      if (local2) {
+        Logger.log(arg8 + ": " + (Date.now() - local2) + "ms");
       } else {
-        Logger.warn("Timer \"" + tmpVar20 + "\" doesn’t exist");
+        Logger.warn("Timer \"" + arg8 + "\" doesn’t exist");
       }
     };
-    static warn(...tmpVar22) {
+    static warn(...value4) {
       if (!(Logger.#o < 2)) {
-        tmpVar22 = tmpVar22.map(tmpVar23 => "⚠️ " + tmpVar23);
-        Logger.log(...tmpVar22);
+        value4 = value4.map(item9 => "⚠️ " + item9);
+        Logger.log(...value4);
       }
     }
   }
   class PathUtils {
-    static get(tmpVar24 = {}, tmpVar25 = "", tmpVar26 = undefined) {
-      if (!Array.isArray(tmpVar25)) {
-        tmpVar25 = PathUtils.toPath(tmpVar25);
+    static get(value5 = {}, value6 = "", value7 = undefined) {
+      if (!Array.isArray(value6)) {
+        value6 = PathUtils.toPath(value6);
       }
-      const tmpVar27 = tmpVar25.reduce((tmpVar28, tmpVar29) => Object(tmpVar28)[tmpVar29], tmpVar24);
-      if (tmpVar27 === undefined) {
-        return tmpVar26;
+      const local3 = value6.reduce((arg9, arg10) => Object(arg9)[arg10], value5);
+      if (local3 === undefined) {
+        return value7;
       } else {
-        return tmpVar27;
+        return local3;
       }
     }
-    static set(tmpVar30, tmpVar31, tmpVar32) {
-      if (!Array.isArray(tmpVar31)) {
-        tmpVar31 = PathUtils.toPath(tmpVar31);
+    static set(value8, value9, value10) {
+      if (!Array.isArray(value9)) {
+        value9 = PathUtils.toPath(value9);
       }
-      tmpVar31.slice(0, -1).reduce((tmpVar33, tmpVar34, tmpVar35) => Object(tmpVar33[tmpVar34]) === tmpVar33[tmpVar34] ? tmpVar33[tmpVar34] : tmpVar33[tmpVar34] = /^\d+$/.test(tmpVar31[tmpVar35 + 1]) ? [] : {}, tmpVar30)[tmpVar31[tmpVar31.length - 1]] = tmpVar32;
-      return tmpVar30;
+      value9.slice(0, -1).reduce((arg11, arg12, arg13) => Object(arg11[arg12]) === arg11[arg12] ? arg11[arg12] : arg11[arg12] = /^\d+$/.test(value9[arg13 + 1]) ? [] : {}, value8)[value9[value9.length - 1]] = value10;
+      return value8;
     }
-    static unset(tmpVar36 = {}, tmpVar37 = "") {
-      if (!Array.isArray(tmpVar37)) {
-        tmpVar37 = PathUtils.toPath(tmpVar37);
+    static unset(value11 = {}, value12 = "") {
+      if (!Array.isArray(value12)) {
+        value12 = PathUtils.toPath(value12);
       }
-      const tmpVar38 = tmpVar37.reduce((tmpVar39, tmpVar40, tmpVar41) => tmpVar41 === tmpVar37.length - 1 ? (delete tmpVar39[tmpVar40], true) : Object(tmpVar39)[tmpVar40], tmpVar36);
-      return tmpVar38;
+      const local4 = value12.reduce((arg14, arg15, arg16) => arg16 === value12.length - 1 ? (delete arg14[arg15], true) : Object(arg14)[arg15], value11);
+      return local4;
     }
-    static toPath(tmpVar42) {
-      return tmpVar42.replace(/\[(\d+)\]/g, ".$1").split(".").filter(Boolean);
+    static toPath(value13) {
+      return value13.replace(/\[(\d+)\]/g, ".$1").split(".").filter(Boolean);
     }
-    static escape(tmpVar43) {
-      const tmpVar44 = {
+    static escape(value14) {
+      const local5 = {
         "&": "&amp;",
         "<": "&lt;",
         ">": "&gt;",
         "\"": "&quot;",
         "'": "&#39;"
       };
-      return tmpVar43.replace(/[&<>"']/g, tmpVar45 => tmpVar44[tmpVar45]);
+      return value14.replace(/[&<>"']/g, item10 => local5[item10]);
     }
-    static unescape(tmpVar46) {
-      const tmpVar47 = {
+    static unescape(value15) {
+      const local6 = {
         "&amp;": "&",
         "&lt;": "<",
         "&gt;": ">",
         "&quot;": "\"",
         "&#39;": "'"
       };
-      return tmpVar46.replace(/&amp;|&lt;|&gt;|&quot;|&#39;/g, tmpVar48 => tmpVar47[tmpVar48]);
+      return value15.replace(/&amp;|&lt;|&gt;|&quot;|&#39;/g, item11 => local6[item11]);
     }
   }
   const HTTP_STATUS_LINES = {
@@ -358,7 +358,7 @@ hostname = %APPEND% www.52pojie.cn
     "510": "HTTP/1.1 510 Not Extended",
     "511": "HTTP/1.1 511 Network Authentication Required"
   };
-  function showSystemNotification(tmpVar49 = "ℹ️ " + runtimeEnv + " 通知", tmpVar50 = "", tmpVar51 = "", tmpVar52 = {}) {
+  function showSystemNotification(arg17 = "ℹ️ " + runtimeEnv + " 通知", arg18 = "", arg19 = "", arg20 = {}) {
     switch (runtimeEnv) {
       case "Surge":
       case "Loon":
@@ -366,17 +366,17 @@ hostname = %APPEND% www.52pojie.cn
       case "Egern":
       case "Shadowrocket":
       default:
-        $notification.post(tmpVar49, tmpVar50, tmpVar51, normalizeNotificationParams(tmpVar52));
+        $notification.post(arg17, arg18, arg19, normalizeNotificationParams(arg20));
         break;
       case "Quantumult X":
-        $notify(tmpVar49, tmpVar50, tmpVar51, normalizeNotificationParams(tmpVar52));
+        $notify(arg17, arg18, arg19, normalizeNotificationParams(arg20));
       case "Node.js":
     }
-    Logger.log("==============📣系统通知📣==============", tmpVar49, tmpVar50, tmpVar51, JSON.stringify(normalizeNotificationParams(tmpVar52), null, 2));
+    Logger.log("==============📣系统通知📣==============", arg17, arg18, arg19, JSON.stringify(normalizeNotificationParams(arg20), null, 2));
   }
-  const normalizeNotificationParams = tmpVar53 => {
-    const tmpVar54 = {};
-    switch (typeof tmpVar53) {
+  const normalizeNotificationParams = item12 => {
+    const local7 = {};
+    switch (typeof item12) {
       case undefined:
         break;
       case "string":
@@ -387,133 +387,133 @@ hostname = %APPEND% www.52pojie.cn
           case "Stash":
           case "Egern":
           default:
-            tmpVar54.url = tmpVar53;
+            local7.url = item12;
             break;
           case "Loon":
           case "Shadowrocket":
-            tmpVar54.openUrl = tmpVar53;
+            local7.openUrl = item12;
             break;
           case "Quantumult X":
-            tmpVar54["open-url"] = tmpVar53;
+            local7["open-url"] = item12;
           case "Node.js":
         }
         break;
       case "object":
         {
-          const tmpVar55 = tmpVar53.open || tmpVar53["open-url"] || tmpVar53.url || tmpVar53.openUrl;
-          const tmpVar56 = tmpVar53.copy || tmpVar53["update-pasteboard"] || tmpVar53.updatePasteboard;
-          const tmpVar57 = tmpVar53.media || tmpVar53["media-url"] || tmpVar53.mediaUrl;
+          const local8 = item12.open || item12["open-url"] || item12.url || item12.openUrl;
+          const local9 = item12.copy || item12["update-pasteboard"] || item12.updatePasteboard;
+          const local10 = item12.media || item12["media-url"] || item12.mediaUrl;
           switch (runtimeEnv) {
             case "Surge":
             case "Stash":
             case "Egern":
             case "Shadowrocket":
             default:
-              if (tmpVar55) {
-                tmpVar54.action = "open-url";
-                tmpVar54.url = tmpVar55;
+              if (local8) {
+                local7.action = "open-url";
+                local7.url = local8;
               }
-              if (tmpVar56) {
-                tmpVar54.action = "clipboard";
-                tmpVar54.text = tmpVar56;
+              if (local9) {
+                local7.action = "clipboard";
+                local7.text = local9;
               }
-              if (tmpVar57) {
+              if (local10) {
                 switch (true) {
-                  case tmpVar57.startsWith("http"):
-                    tmpVar54["media-url"] = tmpVar57;
+                  case local10.startsWith("http"):
+                    local7["media-url"] = local10;
                     break;
-                  case tmpVar57.startsWith("data:"):
+                  case local10.startsWith("data:"):
                     {
-                      const tmpVar58 = /^data:(?<MIME>\w+\/\w+);base64,(?<Base64>.+)/;
+                      const local11 = /^data:(?<MIME>\w+\/\w+);base64,(?<Base64>.+)/;
                       const {
-                        MIME: tmpVar59,
-                        Base64: tmpVar60
-                      } = tmpVar57.match(tmpVar58).groups;
-                      tmpVar54["media-base64"] = tmpVar60;
-                      tmpVar54["media-base64-mime"] = tmpVar53.mime || tmpVar59;
+                        MIME: value16,
+                        Base64: value17
+                      } = local10.match(local11).groups;
+                      local7["media-base64"] = value17;
+                      local7["media-base64-mime"] = item12.mime || value16;
                       break;
                     }
                   default:
-                    tmpVar54["media-base64"] = tmpVar57;
+                    local7["media-base64"] = local10;
                     switch (true) {
-                      case tmpVar57.startsWith("CiVQREYt"):
-                      case tmpVar57.startsWith("JVBERi0"):
-                        tmpVar54["media-base64-mime"] = "application/pdf";
+                      case local10.startsWith("CiVQREYt"):
+                      case local10.startsWith("JVBERi0"):
+                        local7["media-base64-mime"] = "application/pdf";
                         break;
-                      case tmpVar57.startsWith("R0lGODdh"):
-                      case tmpVar57.startsWith("R0lGODlh"):
-                        tmpVar54["media-base64-mime"] = "image/gif";
+                      case local10.startsWith("R0lGODdh"):
+                      case local10.startsWith("R0lGODlh"):
+                        local7["media-base64-mime"] = "image/gif";
                         break;
-                      case tmpVar57.startsWith("iVBORw0KGgo"):
-                        tmpVar54["media-base64-mime"] = "image/png";
+                      case local10.startsWith("iVBORw0KGgo"):
+                        local7["media-base64-mime"] = "image/png";
                         break;
-                      case tmpVar57.startsWith("/9j/"):
-                        tmpVar54["media-base64-mime"] = "image/jpg";
+                      case local10.startsWith("/9j/"):
+                        local7["media-base64-mime"] = "image/jpg";
                         break;
-                      case tmpVar57.startsWith("Qk02U"):
-                        tmpVar54["media-base64-mime"] = "image/bmp";
+                      case local10.startsWith("Qk02U"):
+                        local7["media-base64-mime"] = "image/bmp";
                     }
                 }
               }
-              if (tmpVar53["auto-dismiss"]) {
-                tmpVar54["auto-dismiss"] = tmpVar53["auto-dismiss"];
+              if (item12["auto-dismiss"]) {
+                local7["auto-dismiss"] = item12["auto-dismiss"];
               }
-              if (tmpVar53.sound) {
-                tmpVar54.sound = tmpVar53.sound;
+              if (item12.sound) {
+                local7.sound = item12.sound;
               }
               break;
             case "Loon":
-              if (tmpVar55) {
-                tmpVar54.openUrl = tmpVar55;
+              if (local8) {
+                local7.openUrl = local8;
               }
-              if (tmpVar57?.startsWith("http")) {
-                tmpVar54.mediaUrl = tmpVar57;
+              if (local10?.startsWith("http")) {
+                local7.mediaUrl = local10;
               }
               break;
             case "Quantumult X":
-              if (tmpVar55) {
-                tmpVar54["open-url"] = tmpVar55;
+              if (local8) {
+                local7["open-url"] = local8;
               }
-              if (tmpVar57?.startsWith("http")) {
-                tmpVar54["media-url"] = tmpVar57;
+              if (local10?.startsWith("http")) {
+                local7["media-url"] = local10;
               }
-              if (tmpVar56) {
-                tmpVar54["update-pasteboard"] = tmpVar56;
+              if (local9) {
+                local7["update-pasteboard"] = local9;
               }
             case "Node.js":
           }
           break;
         }
       default:
-        Logger.error("不支持的通知参数类型: " + typeof tmpVar53, "");
+        Logger.error("不支持的通知参数类型: " + typeof item12, "");
     }
-    return tmpVar54;
+    return local7;
   };
-  async function request(tmpVar61, tmpVar62) {
-    switch (tmpVar61.constructor) {
+  async function request(arg21, arg22) {
+    switch (arg21.constructor) {
       case Object:
-        tmpVar61 = {
-          ...tmpVar62,
-          ...tmpVar61
+        arg21 = {
+          ...arg22,
+          ...arg21
         };
         break;
       case String:
-        tmpVar61 = {
-          ...tmpVar62,
-          url: tmpVar61
+        arg21 = {
+          ...arg22,
+          url: arg21
         };
     }
-    if (!tmpVar61.method) {
-      tmpVar61.method = "GET";
-      if (tmpVar61.body ?? tmpVar61.bodyBytes) {
-        tmpVar61.method = "POST";
+    if (!arg21.method) {
+      arg21.method = "GET";
+      if (arg21.body ?? arg21.bodyBytes) {
+        arg21.method = "POST";
       }
     }
-    delete tmpVar61.headers?.Host;
-    delete tmpVar61.headers?.[":authority"];
-    delete tmpVar61.headers?.["Content-Length"];
-    delete tmpVar61.headers?.["content-length"];
-    const tmpVar63 = tmpVar61.method.toLocaleLowerCase();
+    delete arg21.headers?.Host;
+    delete arg21.headers?.[":authority"];
+    delete arg21.headers?.["Content-Length"];
+    delete arg21.headers?.["content-length"];
+    const local12 = arg21.method.toLocaleLowerCase();
     switch (runtimeEnv) {
       case "Loon":
       case "Surge":
@@ -521,38 +521,38 @@ hostname = %APPEND% www.52pojie.cn
       case "Egern":
       case "Shadowrocket":
       default:
-        if (tmpVar61.timeout) {
-          tmpVar61.timeout = Number.parseInt(tmpVar61.timeout, 10);
+        if (arg21.timeout) {
+          arg21.timeout = Number.parseInt(arg21.timeout, 10);
           switch (runtimeEnv) {
             case "Loon":
             case "Shadowrocket":
             case "Stash":
             case "Egern":
             default:
-              tmpVar61.timeout = tmpVar61.timeout / 1000;
+              arg21.timeout = arg21.timeout / 1000;
             case "Surge":
           }
         }
-        if (tmpVar61.policy) {
+        if (arg21.policy) {
           switch (runtimeEnv) {
             case "Loon":
-              tmpVar61.node = tmpVar61.policy;
+              arg21.node = arg21.policy;
               break;
             case "Stash":
-              PathUtils.set(tmpVar61, "headers.X-Stash-Selected-Proxy", encodeURI(tmpVar61.policy));
+              PathUtils.set(arg21, "headers.X-Stash-Selected-Proxy", encodeURI(arg21.policy));
               break;
             case "Shadowrocket":
-              PathUtils.set(tmpVar61, "headers.X-Surge-Proxy", tmpVar61.policy);
+              PathUtils.set(arg21, "headers.X-Surge-Proxy", arg21.policy);
           }
         }
-        if (typeof tmpVar61.redirection == "boolean") {
-          tmpVar61["auto-redirect"] = tmpVar61.redirection;
+        if (typeof arg21.redirection == "boolean") {
+          arg21["auto-redirect"] = arg21.redirection;
         }
-        if (tmpVar61.bodyBytes && !tmpVar61.body) {
-          tmpVar61.body = tmpVar61.bodyBytes;
-          tmpVar61.bodyBytes = undefined;
+        if (arg21.bodyBytes && !arg21.body) {
+          arg21.body = arg21.bodyBytes;
+          arg21.bodyBytes = undefined;
         }
-        switch ((tmpVar61.headers?.Accept || tmpVar61.headers?.accept)?.split(";")?.[0]) {
+        switch ((arg21.headers?.Accept || arg21.headers?.accept)?.split(";")?.[0]) {
           case "application/protobuf":
           case "application/x-protobuf":
           case "application/vnd.google.protobuf":
@@ -560,45 +560,45 @@ hostname = %APPEND% www.52pojie.cn
           case "application/grpc":
           case "application/grpc+proto":
           case "application/octet-stream":
-            tmpVar61["binary-mode"] = true;
+            arg21["binary-mode"] = true;
         }
-        return await new Promise((tmpVar64, tmpVar65) => {
-          $httpClient[tmpVar63](tmpVar61, (tmpVar66, tmpVar67, tmpVar68) => {
-            if (tmpVar66) {
-              tmpVar65(tmpVar66);
+        return await new Promise((arg23, arg24) => {
+          $httpClient[local12](arg21, (arg25, arg26, arg27) => {
+            if (arg25) {
+              arg24(arg25);
             } else {
-              tmpVar67.ok = /^2\d\d$/.test(tmpVar67.status);
-              tmpVar67.statusCode = tmpVar67.status;
-              if (tmpVar68) {
-                tmpVar67.body = tmpVar68;
-                if (tmpVar61["binary-mode"] == 1) {
-                  tmpVar67.bodyBytes = tmpVar68;
+              arg26.ok = /^2\d\d$/.test(arg26.status);
+              arg26.statusCode = arg26.status;
+              if (arg27) {
+                arg26.body = arg27;
+                if (arg21["binary-mode"] == 1) {
+                  arg26.bodyBytes = arg27;
                 }
               }
-              tmpVar64(tmpVar67);
+              arg23(arg26);
             }
           });
         });
       case "Quantumult X":
-        if (tmpVar61.policy) {
-          PathUtils.set(tmpVar61, "opts.policy", tmpVar61.policy);
+        if (arg21.policy) {
+          PathUtils.set(arg21, "opts.policy", arg21.policy);
         }
-        if (typeof tmpVar61["auto-redirect"] == "boolean") {
-          PathUtils.set(tmpVar61, "opts.redirection", tmpVar61["auto-redirect"]);
+        if (typeof arg21["auto-redirect"] == "boolean") {
+          PathUtils.set(arg21, "opts.redirection", arg21["auto-redirect"]);
         }
-        if (tmpVar61.body instanceof ArrayBuffer) {
-          tmpVar61.bodyBytes = tmpVar61.body;
-          tmpVar61.body = undefined;
-        } else if (ArrayBuffer.isView(tmpVar61.body)) {
-          tmpVar61.bodyBytes = tmpVar61.body.buffer.slice(tmpVar61.body.byteOffset, tmpVar61.body.byteLength + tmpVar61.body.byteOffset);
-          tmpVar61.body = undefined;
-        } else if (tmpVar61.body) {
-          tmpVar61.bodyBytes = undefined;
+        if (arg21.body instanceof ArrayBuffer) {
+          arg21.bodyBytes = arg21.body;
+          arg21.body = undefined;
+        } else if (ArrayBuffer.isView(arg21.body)) {
+          arg21.bodyBytes = arg21.body.buffer.slice(arg21.body.byteOffset, arg21.body.byteLength + arg21.body.byteOffset);
+          arg21.body = undefined;
+        } else if (arg21.body) {
+          arg21.bodyBytes = undefined;
         }
-        return await $task.fetch(tmpVar61).then(tmpVar69 => {
-          tmpVar69.ok = /^2\d\d$/.test(tmpVar69.statusCode);
-          tmpVar69.status = tmpVar69.statusCode;
-          switch ((tmpVar69.headers?.["Content-Type"] ?? tmpVar69.headers?.["content-type"])?.split(";")?.[0]) {
+        return await $task.fetch(arg21).then(item13 => {
+          item13.ok = /^2\d\d$/.test(item13.statusCode);
+          item13.status = item13.statusCode;
+          switch ((item13.headers?.["Content-Type"] ?? item13.headers?.["content-type"])?.split(";")?.[0]) {
             case "application/protobuf":
             case "application/x-protobuf":
             case "application/vnd.google.protobuf":
@@ -606,46 +606,46 @@ hostname = %APPEND% www.52pojie.cn
             case "application/grpc":
             case "application/grpc+proto":
             case "application/octet-stream":
-              tmpVar69.body = tmpVar69.bodyBytes;
+              item13.body = item13.bodyBytes;
           }
-          tmpVar69.bodyBytes = undefined;
-          return tmpVar69;
-        }, tmpVar70 => Promise.reject(tmpVar70.error));
+          item13.bodyBytes = undefined;
+          return item13;
+        }, item14 => Promise.reject(item14.error));
       case "Node.js":
         {
-          const tmpVar71 = require("iconv-lite");
-          const tmpVar72 = globalThis.got ? globalThis.got : require("got");
-          const tmpVar73 = globalThis.cktough ? globalThis.cktough : require("tough-cookie");
-          const tmpVar74 = globalThis.ckjar ? globalThis.ckjar : new tmpVar73.CookieJar();
-          if (tmpVar61) {
-            tmpVar61.headers = tmpVar61.headers ? tmpVar61.headers : {};
-            if (tmpVar61.headers.Cookie === undefined && tmpVar61.cookieJar === undefined) {
-              tmpVar61.cookieJar = tmpVar74;
+          const local13 = require("iconv-lite");
+          const local14 = globalThis.got ? globalThis.got : require("got");
+          const local15 = globalThis.cktough ? globalThis.cktough : require("tough-cookie");
+          const local16 = globalThis.ckjar ? globalThis.ckjar : new local15.CookieJar();
+          if (arg21) {
+            arg21.headers = arg21.headers ? arg21.headers : {};
+            if (arg21.headers.Cookie === undefined && arg21.cookieJar === undefined) {
+              arg21.cookieJar = local16;
             }
           }
           const {
-            url: tmpVar75,
-            ...tmpVar76
-          } = tmpVar61;
-          return await tmpVar72[tmpVar63](tmpVar75, tmpVar76).on("redirect", (tmpVar77, tmpVar78) => {
+            url: value18,
+            ...value19
+          } = arg21;
+          return await local14[local12](value18, value19).on("redirect", (arg28, arg29) => {
             try {
-              if (tmpVar77.headers["set-cookie"]) {
-                const tmpVar79 = tmpVar77.headers["set-cookie"].map(tmpVar73.Cookie.parse).toString();
-                if (tmpVar79) {
-                  tmpVar74.setCookieSync(tmpVar79, null);
+              if (arg28.headers["set-cookie"]) {
+                const local17 = arg28.headers["set-cookie"].map(local15.Cookie.parse).toString();
+                if (local17) {
+                  local16.setCookieSync(local17, null);
                 }
-                tmpVar78.cookieJar = tmpVar74;
+                arg29.cookieJar = local16;
               }
-            } catch (tmpVar80) {
-              Logger.error(tmpVar80);
+            } catch (value20) {
+              Logger.error(value20);
             }
-          }).then(tmpVar81 => {
-            tmpVar81.statusCode = tmpVar81.status;
-            tmpVar81.body = tmpVar71.decode(tmpVar81.rawBody, "utf-8");
-            tmpVar81.bodyBytes = tmpVar81.rawBody;
-            tmpVar81.ok = /^2\d\d$/.test(tmpVar81.statusCode) || !tmpVar81.statusCode && tmpVar81.statusMessage === "OK";
-            return tmpVar81;
-          }, tmpVar82 => Promise.reject(tmpVar82.message));
+          }).then(item15 => {
+            item15.statusCode = item15.status;
+            item15.body = local13.decode(item15.rawBody, "utf-8");
+            item15.bodyBytes = item15.rawBody;
+            item15.ok = /^2\d\d$/.test(item15.statusCode) || !item15.statusCode && item15.statusMessage === "OK";
+            return item15;
+          }, item16 => Promise.reject(item16.message));
         }
     }
   }
@@ -653,24 +653,24 @@ hostname = %APPEND% www.52pojie.cn
     static data = null;
     static dataFile = "box.dat";
     static #a = /^@(?<key>[^.]+)(?:\.(?<path>.*))?$/;
-    static getItem(tmpVar83, tmpVar84 = null) {
-      let tmpVar85 = tmpVar84;
-      switch (tmpVar83.startsWith("@")) {
+    static getItem(value21, value22 = null) {
+      let local18 = value22;
+      switch (value21.startsWith("@")) {
         case true:
           {
             const {
-              key: tmpVar86,
-              path: tmpVar87
-            } = tmpVar83.match(PersistStore.#a)?.groups;
-            tmpVar83 = tmpVar86;
-            let tmpVar88 = PersistStore.getItem(tmpVar83, {});
-            if (typeof tmpVar88 != "object") {
-              tmpVar88 = {};
+              key: value23,
+              path: value24
+            } = value21.match(PersistStore.#a)?.groups;
+            value21 = value23;
+            let local19 = PersistStore.getItem(value21, {});
+            if (typeof local19 != "object") {
+              local19 = {};
             }
-            tmpVar85 = PathUtils.get(tmpVar88, tmpVar87);
+            local18 = PathUtils.get(local19, value24);
             try {
-              tmpVar85 = JSON.parse(tmpVar85);
-            } catch (tmpVar89) {}
+              local18 = JSON.parse(local18);
+            } catch (value25) {}
             break;
           }
         default:
@@ -680,45 +680,45 @@ hostname = %APPEND% www.52pojie.cn
             case "Stash":
             case "Egern":
             case "Shadowrocket":
-              tmpVar85 = $persistentStore.read(tmpVar83);
+              local18 = $persistentStore.read(value21);
               break;
             case "Quantumult X":
-              tmpVar85 = $prefs.valueForKey(tmpVar83);
+              local18 = $prefs.valueForKey(value21);
               break;
             case "Node.js":
               PersistStore.data = PersistStore.#n(PersistStore.dataFile);
-              tmpVar85 = PersistStore.data?.[tmpVar83];
+              local18 = PersistStore.data?.[value21];
               break;
             default:
-              tmpVar85 = PersistStore.data?.[tmpVar83] || null;
+              local18 = PersistStore.data?.[value21] || null;
           }
           try {
-            tmpVar85 = JSON.parse(tmpVar85);
-          } catch (tmpVar90) {}
+            local18 = JSON.parse(local18);
+          } catch (value26) {}
       }
-      return tmpVar85 ?? tmpVar84;
+      return local18 ?? value22;
     }
-    static setItem(tmpVar91 = new String(), tmpVar92 = new String()) {
-      let tmpVar93 = false;
-      if (typeof tmpVar92 == "object") {
-        tmpVar92 = JSON.stringify(tmpVar92);
+    static setItem(value27 = new String(), value28 = new String()) {
+      let local20 = false;
+      if (typeof value28 == "object") {
+        value28 = JSON.stringify(value28);
       } else {
-        tmpVar92 = String(tmpVar92);
+        value28 = String(value28);
       }
-      switch (tmpVar91.startsWith("@")) {
+      switch (value27.startsWith("@")) {
         case true:
           {
             const {
-              key: tmpVar94,
-              path: tmpVar95
-            } = tmpVar91.match(PersistStore.#a)?.groups;
-            tmpVar91 = tmpVar94;
-            let tmpVar96 = PersistStore.getItem(tmpVar91, {});
-            if (typeof tmpVar96 != "object") {
-              tmpVar96 = {};
+              key: value29,
+              path: value30
+            } = value27.match(PersistStore.#a)?.groups;
+            value27 = value29;
+            let local21 = PersistStore.getItem(value27, {});
+            if (typeof local21 != "object") {
+              local21 = {};
             }
-            PathUtils.set(tmpVar96, tmpVar95, tmpVar92);
-            tmpVar93 = PersistStore.setItem(tmpVar91, tmpVar96);
+            PathUtils.set(local21, value30, value28);
+            local20 = PersistStore.setItem(value27, local21);
             break;
           }
         default:
@@ -728,39 +728,39 @@ hostname = %APPEND% www.52pojie.cn
             case "Stash":
             case "Egern":
             case "Shadowrocket":
-              tmpVar93 = $persistentStore.write(tmpVar92, tmpVar91);
+              local20 = $persistentStore.write(value28, value27);
               break;
             case "Quantumult X":
-              tmpVar93 = $prefs.setValueForKey(tmpVar92, tmpVar91);
+              local20 = $prefs.setValueForKey(value28, value27);
               break;
             case "Node.js":
               PersistStore.data = PersistStore.#n(PersistStore.dataFile);
-              PersistStore.data[tmpVar91] = tmpVar92;
+              PersistStore.data[value27] = value28;
               PersistStore.#i(PersistStore.dataFile);
-              tmpVar93 = true;
+              local20 = true;
               break;
             default:
-              tmpVar93 = PersistStore.data?.[tmpVar91] || null;
+              local20 = PersistStore.data?.[value27] || null;
           }
       }
-      return tmpVar93;
+      return local20;
     }
-    static removeItem(tmpVar97) {
-      let tmpVar98 = false;
-      switch (tmpVar97.startsWith("@")) {
+    static removeItem(value31) {
+      let local22 = false;
+      switch (value31.startsWith("@")) {
         case true:
           {
             const {
-              key: tmpVar99,
-              path: tmpVar100
-            } = tmpVar97.match(PersistStore.#a)?.groups;
-            tmpVar97 = tmpVar99;
-            let tmpVar101 = PersistStore.getItem(tmpVar97);
-            if (typeof tmpVar101 != "object") {
-              tmpVar101 = {};
+              key: value32,
+              path: value33
+            } = value31.match(PersistStore.#a)?.groups;
+            value31 = value32;
+            let local23 = PersistStore.getItem(value31);
+            if (typeof local23 != "object") {
+              local23 = {};
             }
-            keyValue = PathUtils.unset(tmpVar101, tmpVar100);
-            tmpVar98 = PersistStore.setItem(tmpVar97, tmpVar101);
+            keyValue = PathUtils.unset(local23, value33);
+            local22 = PersistStore.setItem(value31, local23);
             break;
           }
         default:
@@ -772,16 +772,16 @@ hostname = %APPEND% www.52pojie.cn
             case "Shadowrocket":
             case "Node.js":
             default:
-              tmpVar98 = false;
+              local22 = false;
               break;
             case "Quantumult X":
-              tmpVar98 = $prefs.removeValueForKey(tmpVar97);
+              local22 = $prefs.removeValueForKey(value31);
           }
       }
-      return tmpVar98;
+      return local22;
     }
     static clear() {
-      let tmpVar102 = false;
+      let local24 = false;
       switch (runtimeEnv) {
         case "Surge":
         case "Loon":
@@ -790,1056 +790,1106 @@ hostname = %APPEND% www.52pojie.cn
         case "Shadowrocket":
         case "Node.js":
         default:
-          tmpVar102 = false;
+          local24 = false;
           break;
         case "Quantumult X":
-          tmpVar102 = $prefs.removeAllValues();
+          local24 = $prefs.removeAllValues();
       }
-      return tmpVar102;
+      return local24;
     }
-    static #n = tmpVar103 => {
+    static #n = item17 => {
       if (runtimeEnv !== "Node.js") {
         return {};
       }
       {
         this.fs = this.fs ? this.fs : require("node:fs");
         this.path = this.path ? this.path : require("node:path");
-        const tmpVar104 = this.path.resolve(tmpVar103);
-        const tmpVar105 = this.path.resolve(process.cwd(), tmpVar103);
-        const tmpVar106 = this.fs.existsSync(tmpVar104);
-        const tmpVar107 = !tmpVar106 && this.fs.existsSync(tmpVar105);
-        if (!tmpVar106 && !tmpVar107) {
+        const local25 = this.path.resolve(item17);
+        const local26 = this.path.resolve(process.cwd(), item17);
+        const local27 = this.fs.existsSync(local25);
+        const local28 = !local27 && this.fs.existsSync(local26);
+        if (!local27 && !local28) {
           return {};
         }
         {
-          const tmpVar108 = tmpVar106 ? tmpVar104 : tmpVar105;
+          const local29 = local27 ? local25 : local26;
           try {
-            return JSON.parse(this.fs.readFileSync(tmpVar108));
-          } catch (tmpVar109) {
+            return JSON.parse(this.fs.readFileSync(local29));
+          } catch (value34) {
             return {};
           }
         }
       }
     };
-    static #i = (tmpVar110 = this.dataFile) => {
+    static #i = (arg30 = this.dataFile) => {
       if (runtimeEnv === "Node.js") {
         this.fs = this.fs ? this.fs : require("node:fs");
         this.path = this.path ? this.path : require("node:path");
-        const tmpVar111 = this.path.resolve(tmpVar110);
-        const tmpVar112 = this.path.resolve(process.cwd(), tmpVar110);
-        const tmpVar113 = this.fs.existsSync(tmpVar111);
-        const tmpVar114 = !tmpVar113 && this.fs.existsSync(tmpVar112);
-        const tmpVar115 = JSON.stringify(this.data);
-        if (tmpVar113) {
-          this.fs.writeFileSync(tmpVar111, tmpVar115);
-        } else if (tmpVar114) {
-          this.fs.writeFileSync(tmpVar112, tmpVar115);
+        const local30 = this.path.resolve(arg30);
+        const local31 = this.path.resolve(process.cwd(), arg30);
+        const local32 = this.fs.existsSync(local30);
+        const local33 = !local32 && this.fs.existsSync(local31);
+        const local34 = JSON.stringify(this.data);
+        if (local32) {
+          this.fs.writeFileSync(local30, local34);
+        } else if (local33) {
+          this.fs.writeFileSync(local31, local34);
         } else {
-          this.fs.writeFileSync(tmpVar111, tmpVar115);
+          this.fs.writeFileSync(local30, local34);
         }
       }
     };
   }
-  function _arrayWithHolesOrIterator(tmpVar116, tmpVar117) {
-    return function (tmpVar118) {
-      if (Array.isArray(tmpVar118)) {
-        return tmpVar118;
+  function _arrayWithHolesOrIterator(arg31, arg32) {
+    return function (value35) {
+      if (Array.isArray(value35)) {
+        return value35;
       }
-    }(tmpVar116) || function (tmpVar119, tmpVar120) {
-      var tmpVar121 = tmpVar119 == null ? null : typeof Symbol != "undefined" && tmpVar119[Symbol.iterator] || tmpVar119["@@iterator"];
-      if (tmpVar121 != null) {
-        var tmpVar122;
-        var tmpVar123;
-        var tmpVar124;
-        var tmpVar125;
-        var tmpVar126 = [];
-        var tmpVar127 = true;
-        var tmpVar128 = false;
+    }(arg31) || function (value36, value37) {
+      var local35 = value36 == null ? null : typeof Symbol != "undefined" && value36[Symbol.iterator] || value36["@@iterator"];
+      if (local35 != null) {
+        var local36;
+        var local37;
+        var local38;
+        var local39;
+        var local40 = [];
+        var local41 = true;
+        var local42 = false;
         try {
-          tmpVar124 = (tmpVar121 = tmpVar121.call(tmpVar119)).next;
-          if (tmpVar120 === 0) {
-            if (Object(tmpVar121) !== tmpVar121) {
+          local38 = (local35 = local35.call(value36)).next;
+          if (value37 === 0) {
+            if (Object(local35) !== local35) {
               return;
             }
-            tmpVar127 = false;
+            local41 = false;
           } else {
-            for (; !(tmpVar127 = (tmpVar122 = tmpVar124.call(tmpVar121)).done) && (tmpVar126.push(tmpVar122.value), tmpVar126.length !== tmpVar120); tmpVar127 = true);
+            for (; !(local41 = (local36 = local38.call(local35)).done) && (local40.push(local36.value), local40.length !== value37); local41 = true);
           }
-        } catch (tmpVar129) {
-          tmpVar128 = true;
-          tmpVar123 = tmpVar129;
+        } catch (value38) {
+          local42 = true;
+          local37 = value38;
         } finally {
           try {
-            if (!tmpVar127 && tmpVar121.return != null && (tmpVar125 = tmpVar121.return(), Object(tmpVar125) !== tmpVar125)) {
+            if (!local41 && local35.return != null && (local39 = local35.return(), Object(local39) !== local39)) {
               return;
             }
           } finally {
-            if (tmpVar128) {
-              throw tmpVar123;
+            if (local42) {
+              throw local37;
             }
           }
         }
-        return tmpVar126;
+        return local40;
       }
-    }(tmpVar116, tmpVar117) || function (tmpVar130, tmpVar131) {
-      if (tmpVar130) {
-        if (typeof tmpVar130 == "string") {
-          return _arrayLikeToArray(tmpVar130, tmpVar131);
+    }(arg31, arg32) || function (value39, value40) {
+      if (value39) {
+        if (typeof value39 == "string") {
+          return _arrayLikeToArray(value39, value40);
         }
-        var tmpVar132 = {}.toString.call(tmpVar130).slice(8, -1);
-        if (tmpVar132 === "Object" && tmpVar130.constructor) {
-          tmpVar132 = tmpVar130.constructor.name;
+        var local43 = {}.toString.call(value39).slice(8, -1);
+        if (local43 === "Object" && value39.constructor) {
+          local43 = value39.constructor.name;
         }
-        if (tmpVar132 === "Map" || tmpVar132 === "Set") {
-          return Array.from(tmpVar130);
-        } else if (tmpVar132 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(tmpVar132)) {
-          return _arrayLikeToArray(tmpVar130, tmpVar131);
+        if (local43 === "Map" || local43 === "Set") {
+          return Array.from(value39);
+        } else if (local43 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(local43)) {
+          return _arrayLikeToArray(value39, value40);
         } else {
           return undefined;
         }
       }
-    }(tmpVar116, tmpVar117) || function () {
+    }(arg31, arg32) || function () {
       throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
     }();
   }
-  function _arrayLikeToArray(tmpVar133, tmpVar134) {
-    if (tmpVar134 == null || tmpVar134 > tmpVar133.length) {
-      tmpVar134 = tmpVar133.length;
+  function _arrayLikeToArray(arg33, arg34) {
+    if (arg34 == null || arg34 > arg33.length) {
+      arg34 = arg33.length;
     }
-    for (var tmpVar135 = 0, tmpVar136 = Array(tmpVar134); tmpVar135 < tmpVar134; tmpVar135++) {
-      tmpVar136[tmpVar135] = tmpVar133[tmpVar135];
+    for (var index1 = 0, value41 = Array(arg34); index1 < arg34; index1++) {
+      value41[index1] = arg33[index1];
     }
-    return tmpVar136;
+    return value41;
   }
-  function safeJSONStringify(tmpVar137) {
-    if (typeof tmpVar137 == "string") {
-      return tmpVar137;
+  function safeJSONStringify(arg35) {
+    if (typeof arg35 == "string") {
+      return arg35;
     }
     try {
-      for (var tmpVar138 = arguments.length, tmpVar139 = new Array(tmpVar138 > 1 ? tmpVar138 - 1 : 0), tmpVar140 = 1; tmpVar140 < tmpVar138; tmpVar140++) {
-        tmpVar139[tmpVar140 - 1] = arguments[tmpVar140];
+      for (var index2 = arguments.length, value42 = new Array(index2 > 1 ? index2 - 1 : 0), value43 = 1; value43 < index2; value43++) {
+        value42[value43 - 1] = arguments[value43];
       }
-      return JSON.stringify.apply(JSON, [tmpVar137].concat(tmpVar139));
-    } catch (tmpVar141) {
-      return tmpVar137;
+      return JSON.stringify.apply(JSON, [arg35].concat(value42));
+    } catch (value44) {
+      return arg35;
     }
   }
-  function joinUrl(tmpVar142, tmpVar143) {
-    if (tmpVar143) {
-      return tmpVar142.replace(/\/+$/, "") + "/" + tmpVar143.replace(/^\/+/, "");
+  function joinUrl(arg36, arg37) {
+    if (arg37) {
+      return arg36.replace(/\/+$/, "") + "/" + arg37.replace(/^\/+/, "");
     } else {
-      return tmpVar142;
+      return arg36;
     }
   }
-  function _typeofSymbolSafe(tmpVar144) {
-    _typeofSymbolSafe = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (tmpVar145) {
-      return typeof tmpVar145;
-    } : function (tmpVar146) {
-      if (tmpVar146 && typeof Symbol == "function" && tmpVar146.constructor === Symbol && tmpVar146 !== Symbol.prototype) {
+  function _typeofSymbolSafe(arg38) {
+    _typeofSymbolSafe = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (value45) {
+      return typeof value45;
+    } : function (value46) {
+      if (value46 && typeof Symbol == "function" && value46.constructor === Symbol && value46 !== Symbol.prototype) {
         return "symbol";
       } else {
-        return typeof tmpVar146;
+        return typeof value46;
       }
     };
-    return _typeofSymbolSafe(tmpVar144);
+    return _typeofSymbolSafe(arg38);
   }
-  function buildVerifyPayload(tmpVar147) {
-    var tmpVar148 = tmpVar147.LZ;
-    var tmpVar149 = tmpVar147.LJ;
-    var tmpVar150 = tmpVar147.LE;
-    if (tmpVar148 && tmpVar149 && tmpVar150) {
-      var tmpVar151 = {
-        name: "PDF Viewer",
-        description: "Portable Document Format",
-        filename: "internal-pdf-viewer",
-        mimetypes: [Array]
-      };
-      var tmpVar152 = {
-        name: "Chrome PDF Viewer",
-        description: "Portable Document Format",
-        filename: "internal-pdf-viewer",
-        mimetypes: [Array]
-      };
-      var tmpVar153 = {
-        name: "Chromium PDF Viewer",
-        description: "Portable Document Format",
-        filename: "internal-pdf-viewer",
-        mimetypes: [Array]
-      };
-      var tmpVar154 = {
-        name: "Microsoft Edge PDF Viewer",
-        description: "Portable Document Format",
-        filename: "internal-pdf-viewer",
-        mimetypes: [Array]
-      };
-      var tmpVar155 = {
-        name: "WebKit built-in PDF",
-        description: "Portable Document Format",
-        filename: "internal-pdf-viewer",
-        mimetypes: [Array]
-      };
-      var tmpVar156 = {
-        details: [tmpVar151, tmpVar152, tmpVar153, tmpVar154, tmpVar155],
-        names: ["Chrome PDF Viewer", "Chromium PDF Viewer", "Microsoft Edge PDF Viewer", "PDF Viewer", "WebKit built-in PDF"],
-        fp: "9772d5556d57fcc8177f76029bfd92ef"
-      };
-      var tmpVar157 = {
-        key: "plugins",
-        value: tmpVar156
-      };
-      var tmpVar158 = {
-        screenResolution: [1707, 1067],
-        availableScreenResolution: [1707, 1027],
-        colorDepth: 24,
-        availTop: 0,
-        availLeft: 0,
-        isExtended: false,
-        pixelDepth: 24,
-        top: undefined,
-        left: undefined,
-        orientation: {
-          angle: 0,
-          type: "landscape-primary"
-        }
-      };
-      var tmpVar159 = {
-        key: "screenObject",
-        value: tmpVar158
-      };
-      var tmpVar160 = {
-        locale: "zh-CN",
-        calendar: "gregory",
-        numberingSystem: "latn",
-        timeZone: "Asia/Shanghai",
-        year: "numeric",
-        month: "numeric",
-        day: "numeric",
-        timezoneOffset: -480
-      };
-      var tmpVar161 = {
-        key: "intlObject",
-        value: tmpVar160
-      };
-      function helperFn1(tmpVar162, tmpVar163) {
-        tmpVar162 = [tmpVar162[0] >>> 16, tmpVar162[0] & 65535, tmpVar162[1] >>> 16, tmpVar162[1] & 65535];
-        tmpVar163 = [tmpVar163[0] >>> 16, tmpVar163[0] & 65535, tmpVar163[1] >>> 16, tmpVar163[1] & 65535];
-        var tmpVar164 = [0, 0, 0, 0];
-        tmpVar164[3] += tmpVar162[3] + tmpVar163[3];
-        tmpVar164[2] += tmpVar164[3] >>> 16;
-        tmpVar164[3] &= 65535;
-        tmpVar164[2] += tmpVar162[2] + tmpVar163[2];
-        tmpVar164[1] += tmpVar164[2] >>> 16;
-        tmpVar164[2] &= 65535;
-        tmpVar164[1] += tmpVar162[1] + tmpVar163[1];
-        tmpVar164[0] += tmpVar164[1] >>> 16;
-        tmpVar164[1] &= 65535;
-        tmpVar164[0] += tmpVar162[0] + tmpVar163[0];
-        tmpVar164[0] &= 65535;
-        return [tmpVar164[0] << 16 | tmpVar164[1], tmpVar164[2] << 16 | tmpVar164[3]];
-      }
-      function helperFn2(tmpVar165, tmpVar166) {
-        tmpVar165 = [tmpVar165[0] >>> 16, tmpVar165[0] & 65535, tmpVar165[1] >>> 16, tmpVar165[1] & 65535];
-        tmpVar166 = [tmpVar166[0] >>> 16, tmpVar166[0] & 65535, tmpVar166[1] >>> 16, tmpVar166[1] & 65535];
-        var tmpVar167 = [0, 0, 0, 0];
-        tmpVar167[3] += tmpVar165[3] * tmpVar166[3];
-        tmpVar167[2] += tmpVar167[3] >>> 16;
-        tmpVar167[3] &= 65535;
-        tmpVar167[2] += tmpVar165[2] * tmpVar166[3];
-        tmpVar167[1] += tmpVar167[2] >>> 16;
-        tmpVar167[2] &= 65535;
-        tmpVar167[2] += tmpVar165[3] * tmpVar166[2];
-        tmpVar167[1] += tmpVar167[2] >>> 16;
-        tmpVar167[2] &= 65535;
-        tmpVar167[1] += tmpVar165[1] * tmpVar166[3];
-        tmpVar167[0] += tmpVar167[1] >>> 16;
-        tmpVar167[1] &= 65535;
-        tmpVar167[1] += tmpVar165[2] * tmpVar166[2];
-        tmpVar167[0] += tmpVar167[1] >>> 16;
-        tmpVar167[1] &= 65535;
-        tmpVar167[1] += tmpVar165[3] * tmpVar166[1];
-        tmpVar167[0] += tmpVar167[1] >>> 16;
-        tmpVar167[1] &= 65535;
-        tmpVar167[0] += tmpVar165[0] * tmpVar166[3] + tmpVar165[1] * tmpVar166[2] + tmpVar165[2] * tmpVar166[1] + tmpVar165[3] * tmpVar166[0];
-        tmpVar167[0] &= 65535;
-        return [tmpVar167[0] << 16 | tmpVar167[1], tmpVar167[2] << 16 | tmpVar167[3]];
-      }
-      function helperFn3(tmpVar168, tmpVar169) {
-        if ((tmpVar169 %= 64) == 32) {
-          return [tmpVar168[1], tmpVar168[0]];
-        } else if (tmpVar169 < 32) {
-          return [tmpVar168[0] << tmpVar169 | tmpVar168[1] >>> 32 - tmpVar169, tmpVar168[1] << tmpVar169 | tmpVar168[0] >>> 32 - tmpVar169];
-        } else {
-          tmpVar169 -= 32;
-          return [tmpVar168[1] << tmpVar169 | tmpVar168[0] >>> 32 - tmpVar169, tmpVar168[0] << tmpVar169 | tmpVar168[1] >>> 32 - tmpVar169];
-        }
-      }
-      function helperFn4(tmpVar170, tmpVar171) {
-        if ((tmpVar171 %= 64) == 0) {
-          return tmpVar170;
-        } else if (tmpVar171 < 32) {
-          return [tmpVar170[0] << tmpVar171 | tmpVar170[1] >>> 32 - tmpVar171, tmpVar170[1] << tmpVar171];
-        } else {
-          return [tmpVar170[1] << tmpVar171 - 32, 0];
-        }
-      }
-      function helperFn5(tmpVar172, tmpVar173) {
-        return [tmpVar172[0] ^ tmpVar173[0], tmpVar172[1] ^ tmpVar173[1]];
-      }
-      function helperFn6(tmpVar174) {
-        tmpVar174 = helperFn5(tmpVar174, [0, tmpVar174[0] >>> 1]);
-        tmpVar174 = helperFn2(tmpVar174, [4283543511, 3981806797]);
-        tmpVar174 = helperFn5(tmpVar174, [0, tmpVar174[0] >>> 1]);
-        tmpVar174 = helperFn2(tmpVar174, [3301882366, 444984403]);
-        return helperFn5(tmpVar174, [0, tmpVar174[0] >>> 1]);
-      }
-      function helperFn7(tmpVar175, tmpVar176) {
-        tmpVar176 = tmpVar176 || 0;
-        var tmpVar177 = (tmpVar175 = tmpVar175 || "").length % 16;
-        for (var tmpVar178 = tmpVar175.length - tmpVar177, tmpVar179 = [0, tmpVar176], tmpVar180 = [0, tmpVar176], tmpVar181 = [0, 0], tmpVar182 = [0, 0], tmpVar183 = [2277735313, 289559509], tmpVar184 = [1291169091, 658871167], tmpVar185 = 0; tmpVar185 < tmpVar178; tmpVar185 += 16) {
-          tmpVar181 = [tmpVar175.charCodeAt(tmpVar185 + 4) & 255 | (tmpVar175.charCodeAt(tmpVar185 + 5) & 255) << 8 | (tmpVar175.charCodeAt(tmpVar185 + 6) & 255) << 16 | (tmpVar175.charCodeAt(tmpVar185 + 7) & 255) << 24, tmpVar175.charCodeAt(tmpVar185) & 255 | (tmpVar175.charCodeAt(tmpVar185 + 1) & 255) << 8 | (tmpVar175.charCodeAt(tmpVar185 + 2) & 255) << 16 | (tmpVar175.charCodeAt(tmpVar185 + 3) & 255) << 24];
-          tmpVar182 = [tmpVar175.charCodeAt(tmpVar185 + 12) & 255 | (tmpVar175.charCodeAt(tmpVar185 + 13) & 255) << 8 | (tmpVar175.charCodeAt(tmpVar185 + 14) & 255) << 16 | (tmpVar175.charCodeAt(tmpVar185 + 15) & 255) << 24, tmpVar175.charCodeAt(tmpVar185 + 8) & 255 | (tmpVar175.charCodeAt(tmpVar185 + 9) & 255) << 8 | (tmpVar175.charCodeAt(tmpVar185 + 10) & 255) << 16 | (tmpVar175.charCodeAt(tmpVar185 + 11) & 255) << 24];
-          tmpVar181 = helperFn2(tmpVar181, tmpVar183);
-          tmpVar181 = helperFn3(tmpVar181, 31);
-          tmpVar181 = helperFn2(tmpVar181, tmpVar184);
-          tmpVar179 = helperFn5(tmpVar179, tmpVar181);
-          tmpVar179 = helperFn3(tmpVar179, 27);
-          tmpVar179 = helperFn1(tmpVar179, tmpVar180);
-          tmpVar179 = helperFn1(helperFn2(tmpVar179, [0, 5]), [0, 1390208809]);
-          tmpVar182 = helperFn2(tmpVar182, tmpVar184);
-          tmpVar182 = helperFn3(tmpVar182, 33);
-          tmpVar182 = helperFn2(tmpVar182, tmpVar183);
-          tmpVar180 = helperFn5(tmpVar180, tmpVar182);
-          tmpVar180 = helperFn3(tmpVar180, 31);
-          tmpVar180 = helperFn1(tmpVar180, tmpVar179);
-          tmpVar180 = helperFn1(helperFn2(tmpVar180, [0, 5]), [0, 944331445]);
-        }
-        tmpVar181 = [0, 0];
-        tmpVar182 = [0, 0];
-        switch (tmpVar177) {
-          case 15:
-            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 14)], 48));
-          case 14:
-            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 13)], 40));
-          case 13:
-            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 12)], 32));
-          case 12:
-            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 11)], 24));
-          case 11:
-            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 10)], 16));
-          case 10:
-            tmpVar182 = helperFn5(tmpVar182, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 9)], 8));
-          case 9:
-            tmpVar182 = helperFn5(tmpVar182, [0, tmpVar175.charCodeAt(tmpVar185 + 8)]);
-            tmpVar182 = helperFn2(tmpVar182, tmpVar184);
-            tmpVar182 = helperFn3(tmpVar182, 33);
-            tmpVar182 = helperFn2(tmpVar182, tmpVar183);
-            tmpVar180 = helperFn5(tmpVar180, tmpVar182);
-          case 8:
-            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 7)], 56));
-          case 7:
-            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 6)], 48));
-          case 6:
-            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 5)], 40));
-          case 5:
-            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 4)], 32));
-          case 4:
-            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 3)], 24));
-          case 3:
-            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 2)], 16));
-          case 2:
-            tmpVar181 = helperFn5(tmpVar181, helperFn4([0, tmpVar175.charCodeAt(tmpVar185 + 1)], 8));
-          case 1:
-            tmpVar181 = helperFn5(tmpVar181, [0, tmpVar175.charCodeAt(tmpVar185)]);
-            tmpVar181 = helperFn2(tmpVar181, tmpVar183);
-            tmpVar181 = helperFn3(tmpVar181, 31);
-            tmpVar181 = helperFn2(tmpVar181, tmpVar184);
-            tmpVar179 = helperFn5(tmpVar179, tmpVar181);
-        }
-        tmpVar179 = helperFn5(tmpVar179, [0, tmpVar175.length]);
-        tmpVar180 = helperFn5(tmpVar180, [0, tmpVar175.length]);
-        tmpVar179 = helperFn1(tmpVar179, tmpVar180);
-        tmpVar180 = helperFn1(tmpVar180, tmpVar179);
-        tmpVar179 = helperFn6(tmpVar179);
-        tmpVar180 = helperFn6(tmpVar180);
-        tmpVar179 = helperFn1(tmpVar179, tmpVar180);
-        tmpVar180 = helperFn1(tmpVar180, tmpVar179);
-        return ("00000000" + (tmpVar179[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (tmpVar179[1] >>> 0).toString(16)).slice(-8) + ("00000000" + (tmpVar180[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (tmpVar180[1] >>> 0).toString(16)).slice(-8);
-      }
-      var tmpVar186 = {
-        ancestorOrigins: {},
-        href: "https://www.52pojie.cn//",
-        origin: "https://www.52pojie.cn",
-        protocol: "https:",
-        host: "www.52pojie.cn",
-        hostname: "www.52pojie.cn",
-        port: "",
-        pathname: "//",
-        search: "",
-        hash: ""
-      };
-      var tmpVar187 = {
-        fp_infos: function (tmpVar188) {
-          var tmpVar189 = {
-            errors: {}
-          };
-          for (var tmpVar190 in tmpVar188) {
-            var tmpVar191 = tmpVar188[tmpVar190];
-            var tmpVar192 = tmpVar191.key;
-            var tmpVar193 = tmpVar191.value;
-            if (typeof tmpVar193 == "string" && tmpVar193.indexOf("Error: ") != -1) {
-              tmpVar189.errors[tmpVar192] = tmpVar193;
-            } else {
-              tmpVar189[tmpVar192] = tmpVar193;
-            }
-          }
-          var tmpVar194 = new Date();
-          tmpVar189.dateTime = {
-            timestamp: tmpVar194.getTime()
-          };
-          tmpVar189.fp = function (tmpVar195, tmpVar196) {
-            var tmpVar197 = [tmpVar195.plugins && tmpVar195.plugins.fp, tmpVar195.fonts && tmpVar195.fonts.fp, tmpVar195.screenObject.colorDepth, tmpVar195.intlObject, tmpVar195.deviceInfos, tmpVar195.touchSupport, tmpVar195.navigatorObject.platform, tmpVar195.navigatorObject.vendor, tmpVar195.storageObject, tmpVar195.functions, tmpVar195.audio, _typeofSymbolSafe(tmpVar195.webGL) == "object" ? tmpVar195.webGL.fp : undefined, _typeofSymbolSafe(tmpVar195.canvas) == "object" ? tmpVar195.canvas.fp : undefined];
-            for (var tmpVar198 in tmpVar197) {
-              if (tmpVar197[tmpVar198] === undefined) {
-                tmpVar197[tmpVar198] = "";
-              }
-            }
-            return tmpVar196(tmpVar197.toString(), 31);
-          }(tmpVar189, helperFn7);
-          tmpVar189.protocol = tmpVar186.protocol.replace(":", "");
-          (function () {
-            var tmpVar199 = tmpVar189.dateTime.timestamp % 10 || 10;
-            for (var tmpVar200 in tmpVar189) {
-              var tmpVar201 = tmpVar189[tmpVar200];
-              if (_typeofSymbolSafe(tmpVar201) == "object") {
-                var tmpVar202 = 0;
-                for (var tmpVar203 in tmpVar201) {
-                  var tmpVar204 = tmpVar201[tmpVar203];
-                  tmpVar202 += typeof tmpVar204 == "number" ? parseInt(tmpVar204) : typeof tmpVar204 == "string" ? tmpVar204.length : tmpVar199;
-                }
-                if (tmpVar202) {
-                  tmpVar189[tmpVar200].verify = tmpVar202 * tmpVar199;
-                }
-              }
-            }
-          })();
-          return tmpVar189;
-        }([tmpVar157, {
-          key: "fonts",
-          value: {
-            names: ["Arial", "Arial Black", "Arial Narrow", "Calibri", "Cambria", "Cambria Math", "Comic Sans MS", "Consolas", "Courier", "Courier New", "Georgia", "Helvetica", "Impact", "Lucida Console", "Lucida Sans Unicode", "Microsoft Sans Serif", "MS Gothic", "MS PGothic", "MS Sans Serif", "MS Serif", "Palatino Linotype", "Segoe Print", "Segoe Script", "Segoe UI", "Segoe UI Light", "Segoe UI Semibold", "Segoe UI Symbol", "Tahoma", "Times", "Times New Roman", "Trebuchet MS", "Verdana", "Wingdings"],
-            fp: "f730c0cc627b3b3d7db9f459836db692"
-          }
-        }, tmpVar159, tmpVar161, {
-          key: "touchSupport",
-          value: [0, false, false]
-        }, {
-          key: "audio",
-          value: "124.04347527516074"
-        }, {
-          key: "webdriver",
-          value: false
-        }, {
-          key: "webGL",
-          value: {
-            webgl_version: "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
-            webgl_vendor_and_renderer: "Google Inc. (Intel)~ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-            webgl_unmasked_renderer: "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-            webgl_unmasked_vendor: "Google Inc. (Intel)",
-            webgl_aliased_point_size_range: [1, 1024],
-            webgl_fragment_shader_medium_int_precision_rangeMax: 30,
-            webgl_fragment_shader_medium_int_precision_rangeMin: 31,
-            fp: "d8094cf352a36fe0b99dbff3c6db2c58"
-          }
-        }, {
-          key: "canvas",
-          value: {
-            canvas_winding: true,
-            fp: "5fbf2146755f8f4c0e9d76a387926c42"
-          }
-        }, {
-          key: "deviceInfos",
-          value: {
-            deviceMemory: 8,
-            hardwareConcurrency: 16
-          }
-        }, {
-          key: "storageObject",
-          value: {
-            localStorage: true,
-            openDatabase: false,
-            indexedDb: true,
-            sessionStorage: true,
-            addBehavior: false
-          }
-        }, {
-          key: "navigatorObject",
-          value: {
-            userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
-            platform: "Win32",
-            vendor: "Google Inc.",
-            language: "zh-CN",
-            languages: ["zh-CN", "zh"],
-            productSub: "20030107"
-          }
-        }, {
-          key: "functions",
-          value: {
-            eval_tostring_length: 33
-          }
-        }]),
-        answer: function () {
-          var tmpVar205 = 0;
-          var tmpVar206 = 1;
-          for (var tmpVar207 = 0; tmpVar207 < tmpVar148.length; tmpVar207++) {
-            tmpVar205 = (tmpVar205 + tmpVar148.charCodeAt(tmpVar207)) * 2;
-            tmpVar206 = (tmpVar206 + tmpVar207 + 1) * 2;
-          }
-          tmpVar205 *= tmpVar149;
-          return "WZWS_CONFIRM_PREFIX_LABEL" + (tmpVar205 + tmpVar206);
-        }(),
-        hostname: tmpVar186.hostname,
-        scheme: tmpVar186.protocol.replace(":", "")
-      };
-      return function (tmpVar208) {
-        var tmpVar209;
-        var tmpVar210;
-        var tmpVar211;
-        var tmpVar212;
-        var tmpVar213;
-        var tmpVar214;
-        var tmpVar215 = tmpVar150;
-        tmpVar211 = tmpVar208.length;
-        tmpVar210 = 0;
-        tmpVar209 = "";
-        while (tmpVar210 < tmpVar211) {
-          tmpVar212 = tmpVar208.charCodeAt(tmpVar210++) & 255;
-          if (tmpVar210 == tmpVar211) {
-            tmpVar209 += tmpVar215.charAt(tmpVar212 >> 2);
-            tmpVar209 += tmpVar215.charAt((tmpVar212 & 3) << 4);
-            tmpVar209 += "==";
-            break;
-          }
-          tmpVar213 = tmpVar208.charCodeAt(tmpVar210++);
-          if (tmpVar210 == tmpVar211) {
-            tmpVar209 += tmpVar215.charAt(tmpVar212 >> 2);
-            tmpVar209 += tmpVar215.charAt((tmpVar212 & 3) << 4 | (tmpVar213 & 240) >> 4);
-            tmpVar209 += tmpVar215.charAt((tmpVar213 & 15) << 2);
-            tmpVar209 += "=";
-            break;
-          }
-          tmpVar214 = tmpVar208.charCodeAt(tmpVar210++);
-          tmpVar209 += tmpVar215.charAt(tmpVar212 >> 2);
-          tmpVar209 += tmpVar215.charAt((tmpVar212 & 3) << 4 | (tmpVar213 & 240) >> 4);
-          tmpVar209 += tmpVar215.charAt((tmpVar213 & 15) << 2 | (tmpVar214 & 192) >> 6);
-          tmpVar209 += tmpVar215.charAt(tmpVar214 & 63);
-        }
-        return tmpVar209;
-      }(JSON.stringify(tmpVar187));
+  function add64(leftPair, rightPair) {
+    leftPair = [leftPair[0] >>> 16, leftPair[0] & 65535, leftPair[1] >>> 16, leftPair[1] & 65535];
+    rightPair = [rightPair[0] >>> 16, rightPair[0] & 65535, rightPair[1] >>> 16, rightPair[1] & 65535];
+    var result = [0, 0, 0, 0];
+    result[3] += leftPair[3] + rightPair[3];
+    result[2] += result[3] >>> 16;
+    result[3] &= 65535;
+    result[2] += leftPair[2] + rightPair[2];
+    result[1] += result[2] >>> 16;
+    result[2] &= 65535;
+    result[1] += leftPair[1] + rightPair[1];
+    result[0] += result[1] >>> 16;
+    result[1] &= 65535;
+    result[0] += leftPair[0] + rightPair[0];
+    result[0] &= 65535;
+    return [result[0] << 16 | result[1], result[2] << 16 | result[3]];
+  }
+
+  function multiply64(leftPair, rightPair) {
+    leftPair = [leftPair[0] >>> 16, leftPair[0] & 65535, leftPair[1] >>> 16, leftPair[1] & 65535];
+    rightPair = [rightPair[0] >>> 16, rightPair[0] & 65535, rightPair[1] >>> 16, rightPair[1] & 65535];
+    var result = [0, 0, 0, 0];
+    result[3] += leftPair[3] * rightPair[3];
+    result[2] += result[3] >>> 16;
+    result[3] &= 65535;
+    result[2] += leftPair[2] * rightPair[3];
+    result[1] += result[2] >>> 16;
+    result[2] &= 65535;
+    result[2] += leftPair[3] * rightPair[2];
+    result[1] += result[2] >>> 16;
+    result[2] &= 65535;
+    result[1] += leftPair[1] * rightPair[3];
+    result[0] += result[1] >>> 16;
+    result[1] &= 65535;
+    result[1] += leftPair[2] * rightPair[2];
+    result[0] += result[1] >>> 16;
+    result[1] &= 65535;
+    result[1] += leftPair[3] * rightPair[1];
+    result[0] += result[1] >>> 16;
+    result[1] &= 65535;
+    result[0] += leftPair[0] * rightPair[3] + leftPair[1] * rightPair[2] + leftPair[2] * rightPair[1] + leftPair[3] * rightPair[0];
+    result[0] &= 65535;
+    return [result[0] << 16 | result[1], result[2] << 16 | result[3]];
+  }
+
+  function rotateLeft64(pair, shift) {
+    if ((shift %= 64) == 32) {
+      return [pair[1], pair[0]];
+    } else if (shift < 32) {
+      return [pair[0] << shift | pair[1] >>> 32 - shift, pair[1] << shift | pair[0] >>> 32 - shift];
+    } else {
+      shift -= 32;
+      return [pair[1] << shift | pair[0] >>> 32 - shift, pair[0] << shift | pair[1] >>> 32 - shift];
     }
   }
-  function _typeofArgumentSafe(tmpVar216) {
-    _typeofArgumentSafe = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (tmpVar217) {
-      return typeof tmpVar217;
-    } : function (tmpVar218) {
-      if (tmpVar218 && typeof Symbol == "function" && tmpVar218.constructor === Symbol && tmpVar218 !== Symbol.prototype) {
-        return "symbol";
-      } else {
-        return typeof tmpVar218;
+
+  function leftShift64(pair, shift) {
+    if ((shift %= 64) == 0) {
+      return pair;
+    } else if (shift < 32) {
+      return [pair[0] << shift | pair[1] >>> 32 - shift, pair[1] << shift];
+    } else {
+      return [pair[1] << shift - 32, 0];
+    }
+  }
+
+  function xor64(leftPair, rightPair) {
+    return [leftPair[0] ^ rightPair[0], leftPair[1] ^ rightPair[1]];
+  }
+
+  function fmix64(hashPair) {
+    hashPair = xor64(hashPair, [0, hashPair[0] >>> 1]);
+    hashPair = multiply64(hashPair, [4283543511, 3981806797]);
+    hashPair = xor64(hashPair, [0, hashPair[0] >>> 1]);
+    hashPair = multiply64(hashPair, [3301882366, 444984403]);
+    return xor64(hashPair, [0, hashPair[0] >>> 1]);
+  }
+
+  function murmurHash128(input, seed) {
+    seed = seed || 0;
+    var remainder = (input = input || "").length % 16;
+    var bytes = input.length - remainder;
+    var h1 = [0, seed];
+    var h2 = [0, seed];
+    var k1 = [0, 0];
+    var k2 = [0, 0];
+    var c1 = [2277735313, 289559509];
+    var c2 = [1291169091, 658871167];
+
+    for (var offset = 0; offset < bytes; offset += 16) {
+      k1 = [input.charCodeAt(offset + 4) & 255 | (input.charCodeAt(offset + 5) & 255) << 8 | (input.charCodeAt(offset + 6) & 255) << 16 | (input.charCodeAt(offset + 7) & 255) << 24, input.charCodeAt(offset) & 255 | (input.charCodeAt(offset + 1) & 255) << 8 | (input.charCodeAt(offset + 2) & 255) << 16 | (input.charCodeAt(offset + 3) & 255) << 24];
+      k2 = [input.charCodeAt(offset + 12) & 255 | (input.charCodeAt(offset + 13) & 255) << 8 | (input.charCodeAt(offset + 14) & 255) << 16 | (input.charCodeAt(offset + 15) & 255) << 24, input.charCodeAt(offset + 8) & 255 | (input.charCodeAt(offset + 9) & 255) << 8 | (input.charCodeAt(offset + 10) & 255) << 16 | (input.charCodeAt(offset + 11) & 255) << 24];
+      k1 = multiply64(k1, c1);
+      k1 = rotateLeft64(k1, 31);
+      k1 = multiply64(k1, c2);
+      h1 = xor64(h1, k1);
+      h1 = rotateLeft64(h1, 27);
+      h1 = add64(h1, h2);
+      h1 = add64(multiply64(h1, [0, 5]), [0, 1390208809]);
+      k2 = multiply64(k2, c2);
+      k2 = rotateLeft64(k2, 33);
+      k2 = multiply64(k2, c1);
+      h2 = xor64(h2, k2);
+      h2 = rotateLeft64(h2, 31);
+      h2 = add64(h2, h1);
+      h2 = add64(multiply64(h2, [0, 5]), [0, 944331445]);
+    }
+
+    k1 = [0, 0];
+    k2 = [0, 0];
+    switch (remainder) {
+      case 15:
+        k2 = xor64(k2, leftShift64([0, input.charCodeAt(offset + 14)], 48));
+      case 14:
+        k2 = xor64(k2, leftShift64([0, input.charCodeAt(offset + 13)], 40));
+      case 13:
+        k2 = xor64(k2, leftShift64([0, input.charCodeAt(offset + 12)], 32));
+      case 12:
+        k2 = xor64(k2, leftShift64([0, input.charCodeAt(offset + 11)], 24));
+      case 11:
+        k2 = xor64(k2, leftShift64([0, input.charCodeAt(offset + 10)], 16));
+      case 10:
+        k2 = xor64(k2, leftShift64([0, input.charCodeAt(offset + 9)], 8));
+      case 9:
+        k2 = xor64(k2, [0, input.charCodeAt(offset + 8)]);
+        k2 = multiply64(k2, c2);
+        k2 = rotateLeft64(k2, 33);
+        k2 = multiply64(k2, c1);
+        h2 = xor64(h2, k2);
+      case 8:
+        k1 = xor64(k1, leftShift64([0, input.charCodeAt(offset + 7)], 56));
+      case 7:
+        k1 = xor64(k1, leftShift64([0, input.charCodeAt(offset + 6)], 48));
+      case 6:
+        k1 = xor64(k1, leftShift64([0, input.charCodeAt(offset + 5)], 40));
+      case 5:
+        k1 = xor64(k1, leftShift64([0, input.charCodeAt(offset + 4)], 32));
+      case 4:
+        k1 = xor64(k1, leftShift64([0, input.charCodeAt(offset + 3)], 24));
+      case 3:
+        k1 = xor64(k1, leftShift64([0, input.charCodeAt(offset + 2)], 16));
+      case 2:
+        k1 = xor64(k1, leftShift64([0, input.charCodeAt(offset + 1)], 8));
+      case 1:
+        k1 = xor64(k1, [0, input.charCodeAt(offset)]);
+        k1 = multiply64(k1, c1);
+        k1 = rotateLeft64(k1, 31);
+        k1 = multiply64(k1, c2);
+        h1 = xor64(h1, k1);
+    }
+
+    h1 = xor64(h1, [0, input.length]);
+    h2 = xor64(h2, [0, input.length]);
+    h1 = add64(h1, h2);
+    h2 = add64(h2, h1);
+    h1 = fmix64(h1);
+    h2 = fmix64(h2);
+    h1 = add64(h1, h2);
+    h2 = add64(h2, h1);
+
+    return ("00000000" + (h1[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (h1[1] >>> 0).toString(16)).slice(-8) + ("00000000" + (h2[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (h2[1] >>> 0).toString(16)).slice(-8);
+  }
+
+  function encodeWithAlphabet(rawText, alphabet) {
+    var length = rawText.length;
+    var index = 0;
+    var encoded = "";
+    while (index < length) {
+      var firstByte = rawText.charCodeAt(index++) & 255;
+      if (index == length) {
+        encoded += alphabet.charAt(firstByte >> 2);
+        encoded += alphabet.charAt((firstByte & 3) << 4);
+        encoded += "==";
+        break;
+      }
+      var secondByte = rawText.charCodeAt(index++);
+      if (index == length) {
+        encoded += alphabet.charAt(firstByte >> 2);
+        encoded += alphabet.charAt((firstByte & 3) << 4 | (secondByte & 240) >> 4);
+        encoded += alphabet.charAt((secondByte & 15) << 2);
+        encoded += "=";
+        break;
+      }
+      var thirdByte = rawText.charCodeAt(index++);
+      encoded += alphabet.charAt(firstByte >> 2);
+      encoded += alphabet.charAt((firstByte & 3) << 4 | (secondByte & 240) >> 4);
+      encoded += alphabet.charAt((secondByte & 15) << 2 | (thirdByte & 192) >> 6);
+      encoded += alphabet.charAt(thirdByte & 63);
+    }
+    return encoded;
+  }
+
+  function calculateAnswer(lengthToken, multiplierToken) {
+    var sum = 0;
+    var multiplier = 1;
+    for (var i = 0; i < lengthToken.length; i++) {
+      sum = (sum + lengthToken.charCodeAt(i)) * 2;
+      multiplier = (multiplier + i + 1) * 2;
+    }
+    sum *= multiplierToken;
+    return "WZWS_CONFIRM_PREFIX_LABEL" + (sum + multiplier);
+  }
+
+  function collectFingerprintData() {
+    const locationInfo = {
+      ancestorOrigins: {},
+      href: "https://www.52pojie.cn//",
+      origin: "https://www.52pojie.cn",
+      protocol: "https:",
+      host: "www.52pojie.cn",
+      hostname: "www.52pojie.cn",
+      port: "",
+      pathname: "//",
+      search: "",
+      hash: ""
+    };
+
+    const pdfViewer = {
+      name: "PDF Viewer",
+      description: "Portable Document Format",
+      filename: "internal-pdf-viewer",
+      mimetypes: [Array]
+    };
+    const chromePdfViewer = {
+      name: "Chrome PDF Viewer",
+      description: "Portable Document Format",
+      filename: "internal-pdf-viewer",
+      mimetypes: [Array]
+    };
+    const chromiumPdfViewer = {
+      name: "Chromium PDF Viewer",
+      description: "Portable Document Format",
+      filename: "internal-pdf-viewer",
+      mimetypes: [Array]
+    };
+    const edgePdfViewer = {
+      name: "Microsoft Edge PDF Viewer",
+      description: "Portable Document Format",
+      filename: "internal-pdf-viewer",
+      mimetypes: [Array]
+    };
+    const webkitPdfViewer = {
+      name: "WebKit built-in PDF",
+      description: "Portable Document Format",
+      filename: "internal-pdf-viewer",
+      mimetypes: [Array]
+    };
+
+    const plugins = {
+      details: [pdfViewer, chromePdfViewer, chromiumPdfViewer, edgePdfViewer, webkitPdfViewer],
+      names: ["Chrome PDF Viewer", "Chromium PDF Viewer", "Microsoft Edge PDF Viewer", "PDF Viewer", "WebKit built-in PDF"],
+      fp: "9772d5556d57fcc8177f76029bfd92ef"
+    };
+
+    const screenObject = {
+      screenResolution: [1707, 1067],
+      availableScreenResolution: [1707, 1027],
+      colorDepth: 24,
+      availTop: 0,
+      availLeft: 0,
+      isExtended: false,
+      pixelDepth: 24,
+      top: undefined,
+      left: undefined,
+      orientation: {
+        angle: 0,
+        type: "landscape-primary"
       }
     };
-    return _typeofArgumentSafe(tmpVar216);
+
+    const intlObject = {
+      locale: "zh-CN",
+      calendar: "gregory",
+      numberingSystem: "latn",
+      timeZone: "Asia/Shanghai",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      timezoneOffset: -480
+    };
+
+    const entries = [{
+      key: "plugins",
+      value: plugins
+    }, {
+      key: "fonts",
+      value: {
+        names: ["Arial", "Arial Black", "Arial Narrow", "Calibri", "Cambria", "Cambria Math", "Comic Sans MS", "Consolas", "Courier", "Courier New", "Georgia", "Helvetica", "Impact", "Lucida Console", "Lucida Sans Unicode", "Microsoft Sans Serif", "MS Gothic", "MS PGothic", "MS Sans Serif", "MS Serif", "Palatino Linotype", "Segoe Print", "Segoe Script", "Segoe UI", "Segoe UI Light", "Segoe UI Semibold", "Segoe UI Symbol", "Tahoma", "Times", "Times New Roman", "Trebuchet MS", "Verdana", "Wingdings"],
+        fp: "f730c0cc627b3b3d7db9f459836db692"
+      }
+    }, {
+      key: "screenObject",
+      value: screenObject
+    }, {
+      key: "intlObject",
+      value: intlObject
+    }, {
+      key: "touchSupport",
+      value: [0, false, false]
+    }, {
+      key: "audio",
+      value: "124.04347527516074"
+    }, {
+      key: "webdriver",
+      value: false
+    }, {
+      key: "webGL",
+      value: {
+        webgl_version: "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+        webgl_vendor_and_renderer: "Google Inc. (Intel)~ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        webgl_unmasked_renderer: "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x000046A6) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        webgl_unmasked_vendor: "Google Inc. (Intel)",
+        webgl_aliased_point_size_range: [1, 1024],
+        webgl_fragment_shader_medium_int_precision_rangeMax: 30,
+        webgl_fragment_shader_medium_int_precision_rangeMin: 31,
+        fp: "d8094cf352a36fe0b99dbff3c6db2c58"
+      }
+    }, {
+      key: "canvas",
+      value: {
+        canvas_winding: true,
+        fp: "5fbf2146755f8f4c0e9d76a387926c42"
+      }
+    }, {
+      key: "deviceInfos",
+      value: {
+        deviceMemory: 8,
+        hardwareConcurrency: 16
+      }
+    }, {
+      key: "storageObject",
+      value: {
+        localStorage: true,
+        openDatabase: false,
+        indexedDb: true,
+        sessionStorage: true,
+        addBehavior: false
+      }
+    }, {
+      key: "navigatorObject",
+      value: {
+        userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
+        platform: "Win32",
+        vendor: "Google Inc.",
+        language: "zh-CN",
+        languages: ["zh-CN", "zh"],
+        productSub: "20030107"
+      }
+    }, {
+      key: "functions",
+      value: {
+        eval_tostring_length: 33
+      }
+    }];
+
+    return {
+      locationInfo,
+      entries
+    };
   }
-  var scriptArgs = typeof $argument != "undefined" ? (typeof $argument == "undefined" ? "undefined" : _typeofArgumentSafe($argument)) == "object" ? $argument : Object.fromEntries($argument.split("&").map(function (tmpVar219) {
-    return tmpVar219.split("=");
+
+  function computeFingerprint(fingerprintInfo) {
+    const selectedFeatures = [fingerprintInfo.plugins && fingerprintInfo.plugins.fp, fingerprintInfo.fonts && fingerprintInfo.fonts.fp, fingerprintInfo.screenObject.colorDepth, fingerprintInfo.intlObject, fingerprintInfo.deviceInfos, fingerprintInfo.touchSupport, fingerprintInfo.navigatorObject.platform, fingerprintInfo.navigatorObject.vendor, fingerprintInfo.storageObject, fingerprintInfo.functions, fingerprintInfo.audio, typeof fingerprintInfo.webGL == "object" ? fingerprintInfo.webGL.fp : undefined, typeof fingerprintInfo.canvas == "object" ? fingerprintInfo.canvas.fp : undefined];
+    for (var i in selectedFeatures) {
+      if (selectedFeatures[i] === undefined) {
+        selectedFeatures[i] = "";
+      }
+    }
+    return murmurHash128(selectedFeatures.toString(), 31);
+  }
+
+  function computeFingerprintInfos(entries, locationInfo) {
+    const fpInfos = {
+      errors: {}
+    };
+
+    for (const item of entries) {
+      const key = item.key;
+      const value = item.value;
+      if (typeof value == "string" && value.indexOf("Error: ") != -1) {
+        fpInfos.errors[key] = value;
+      } else {
+        fpInfos[key] = value;
+      }
+    }
+
+    const now = new Date();
+    fpInfos.dateTime = {
+      timestamp: now.getTime()
+    };
+    fpInfos.fp = computeFingerprint(fpInfos);
+    fpInfos.protocol = locationInfo.protocol.replace(":", "");
+
+    const verifySeed = fpInfos.dateTime.timestamp % 10 || 10;
+    for (const sectionKey in fpInfos) {
+      const sectionValue = fpInfos[sectionKey];
+      if (_typeofSymbolSafe(sectionValue) == "object") {
+        let sectionScore = 0;
+        for (const subKey in sectionValue) {
+          const subValue = sectionValue[subKey];
+          sectionScore += typeof subValue == "number" ? parseInt(subValue) : typeof subValue == "string" ? subValue.length : verifySeed;
+        }
+        if (sectionScore) {
+          fpInfos[sectionKey].verify = sectionScore * verifySeed;
+        }
+      }
+    }
+
+    return fpInfos;
+  }
+
+  function constructVerifyObject(lengthToken, multiplierToken, locationInfo, fpInfos) {
+    return {
+      fp_infos: fpInfos,
+      answer: calculateAnswer(lengthToken, multiplierToken),
+      hostname: locationInfo.hostname,
+      scheme: locationInfo.protocol.replace(":", "")
+    };
+  }
+
+  function buildVerifyPayload(verifyParams) {
+    var lengthToken = verifyParams.LZ;
+    var multiplierToken = verifyParams.LJ;
+    var alphabet = verifyParams.LE;
+
+    if (!(lengthToken && multiplierToken && alphabet)) {
+      return;
+    }
+
+    // 1) 指纹收集
+    const {
+      locationInfo,
+      entries
+    } = collectFingerprintData();
+
+    // 2) fp 计算
+    const fpInfos = computeFingerprintInfos(entries, locationInfo);
+
+    // 3) verify 构造
+    const verifyObject = constructVerifyObject(lengthToken, multiplierToken, locationInfo, fpInfos);
+
+    return encodeWithAlphabet(JSON.stringify(verifyObject), alphabet);
+  }
+
+  function _typeofArgumentSafe(arg39) {
+    _typeofArgumentSafe = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (value47) {
+      return typeof value47;
+    } : function (value48) {
+      if (value48 && typeof Symbol == "function" && value48.constructor === Symbol && value48 !== Symbol.prototype) {
+        return "symbol";
+      } else {
+        return typeof value48;
+      }
+    };
+    return _typeofArgumentSafe(arg39);
+  }
+  var scriptArgs = typeof $argument != "undefined" ? (typeof $argument == "undefined" ? "undefined" : _typeofArgumentSafe($argument)) == "object" ? $argument : Object.fromEntries($argument.split("&").map(function (value49) {
+    return value49.split("=");
   })) : {};
-  function _typeofValueSafe(tmpVar220) {
-    _typeofValueSafe = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (tmpVar221) {
-      return typeof tmpVar221;
-    } : function (tmpVar222) {
-      if (tmpVar222 && typeof Symbol == "function" && tmpVar222.constructor === Symbol && tmpVar222 !== Symbol.prototype) {
+  function _typeofValueSafe(arg40) {
+    _typeofValueSafe = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function (value50) {
+      return typeof value50;
+    } : function (value51) {
+      if (value51 && typeof Symbol == "function" && value51.constructor === Symbol && value51 !== Symbol.prototype) {
         return "symbol";
       } else {
-        return typeof tmpVar222;
+        return typeof value51;
       }
     };
-    return _typeofValueSafe(tmpVar220);
+    return _typeofValueSafe(arg40);
   }
-  function _ownKeys(tmpVar223, tmpVar224) {
-    var tmpVar225 = Object.keys(tmpVar223);
+  function _ownKeys(arg41, arg42) {
+    var local44 = Object.keys(arg41);
     if (Object.getOwnPropertySymbols) {
-      var tmpVar226 = Object.getOwnPropertySymbols(tmpVar223);
-      if (tmpVar224) {
-        tmpVar226 = tmpVar226.filter(function (tmpVar227) {
-          return Object.getOwnPropertyDescriptor(tmpVar223, tmpVar227).enumerable;
+      var local45 = Object.getOwnPropertySymbols(arg41);
+      if (arg42) {
+        local45 = local45.filter(function (value52) {
+          return Object.getOwnPropertyDescriptor(arg41, value52).enumerable;
         });
       }
-      tmpVar225.push.apply(tmpVar225, tmpVar226);
+      local44.push.apply(local44, local45);
     }
-    return tmpVar225;
+    return local44;
   }
-  function _objectSpread(tmpVar228) {
-    for (var tmpVar229 = 1; tmpVar229 < arguments.length; tmpVar229++) {
-      var tmpVar230 = arguments[tmpVar229] ?? {};
-      if (tmpVar229 % 2) {
-        _ownKeys(Object(tmpVar230), true).forEach(function (tmpVar231) {
-          _defineProperty(tmpVar228, tmpVar231, tmpVar230[tmpVar231]);
+  function _objectSpread(arg43) {
+    for (var index3 = 1; index3 < arguments.length; index3++) {
+      var local46 = arguments[index3] ?? {};
+      if (index3 % 2) {
+        _ownKeys(Object(local46), true).forEach(function (value53) {
+          _defineProperty(arg43, value53, local46[value53]);
         });
       } else if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(tmpVar228, Object.getOwnPropertyDescriptors(tmpVar230));
+        Object.defineProperties(arg43, Object.getOwnPropertyDescriptors(local46));
       } else {
-        _ownKeys(Object(tmpVar230)).forEach(function (tmpVar232) {
-          Object.defineProperty(tmpVar228, tmpVar232, Object.getOwnPropertyDescriptor(tmpVar230, tmpVar232));
+        _ownKeys(Object(local46)).forEach(function (value54) {
+          Object.defineProperty(arg43, value54, Object.getOwnPropertyDescriptor(local46, value54));
         });
       }
     }
-    return tmpVar228;
+    return arg43;
   }
-  function _defineProperty(tmpVar233, tmpVar234, tmpVar235) {
-    if ((tmpVar234 = function (tmpVar236) {
-      var tmpVar237 = function (tmpVar238, tmpVar239) {
-        if (_typeofValueSafe(tmpVar238) != "object" || !tmpVar238) {
-          return tmpVar238;
+  function _defineProperty(arg44, arg45, arg46) {
+    if ((arg45 = function (value55) {
+      var local47 = function (value56, value57) {
+        if (_typeofValueSafe(value56) != "object" || !value56) {
+          return value56;
         }
-        var tmpVar240 = tmpVar238[Symbol.toPrimitive];
-        if (tmpVar240 !== undefined) {
-          var tmpVar241 = tmpVar240.call(tmpVar238, tmpVar239 || "default");
-          if (_typeofValueSafe(tmpVar241) != "object") {
-            return tmpVar241;
+        var local48 = value56[Symbol.toPrimitive];
+        if (local48 !== undefined) {
+          var local49 = local48.call(value56, value57 || "default");
+          if (_typeofValueSafe(local49) != "object") {
+            return local49;
           }
           throw new TypeError("@@toPrimitive must return a primitive value.");
         }
-        return (tmpVar239 === "string" ? String : Number)(tmpVar238);
-      }(tmpVar236, "string");
-      if (_typeofValueSafe(tmpVar237) == "symbol") {
-        return tmpVar237;
+        return (value57 === "string" ? String : Number)(value56);
+      }(value55, "string");
+      if (_typeofValueSafe(local47) == "symbol") {
+        return local47;
       } else {
-        return tmpVar237 + "";
+        return local47 + "";
       }
-    }(tmpVar234)) in tmpVar233) {
-      Object.defineProperty(tmpVar233, tmpVar234, {
-        value: tmpVar235,
+    }(arg45)) in arg44) {
+      Object.defineProperty(arg44, arg45, {
+        value: arg46,
         enumerable: true,
         configurable: true,
         writable: true
       });
     } else {
-      tmpVar233[tmpVar234] = tmpVar235;
+      arg44[arg45] = arg46;
     }
-    return tmpVar233;
+    return arg44;
   }
-  function _slicedToArray(tmpVar242, tmpVar243) {
-    return function (tmpVar244) {
-      if (Array.isArray(tmpVar244)) {
-        return tmpVar244;
+  function _slicedToArray(arg47, arg48) {
+    return function (value58) {
+      if (Array.isArray(value58)) {
+        return value58;
       }
-    }(tmpVar242) || function (tmpVar245, tmpVar246) {
-      var tmpVar247 = tmpVar245 == null ? null : typeof Symbol != "undefined" && tmpVar245[Symbol.iterator] || tmpVar245["@@iterator"];
-      if (tmpVar247 != null) {
-        var tmpVar248;
-        var tmpVar249;
-        var tmpVar250;
-        var tmpVar251;
-        var tmpVar252 = [];
-        var tmpVar253 = true;
-        var tmpVar254 = false;
+    }(arg47) || function (value59, value60) {
+      var local50 = value59 == null ? null : typeof Symbol != "undefined" && value59[Symbol.iterator] || value59["@@iterator"];
+      if (local50 != null) {
+        var local51;
+        var local52;
+        var local53;
+        var local54;
+        var local55 = [];
+        var local56 = true;
+        var local57 = false;
         try {
-          tmpVar250 = (tmpVar247 = tmpVar247.call(tmpVar245)).next;
-          if (tmpVar246 === 0) {
-            if (Object(tmpVar247) !== tmpVar247) {
+          local53 = (local50 = local50.call(value59)).next;
+          if (value60 === 0) {
+            if (Object(local50) !== local50) {
               return;
             }
-            tmpVar253 = false;
+            local56 = false;
           } else {
-            for (; !(tmpVar253 = (tmpVar248 = tmpVar250.call(tmpVar247)).done) && (tmpVar252.push(tmpVar248.value), tmpVar252.length !== tmpVar246); tmpVar253 = true);
+            for (; !(local56 = (local51 = local53.call(local50)).done) && (local55.push(local51.value), local55.length !== value60); local56 = true);
           }
-        } catch (tmpVar255) {
-          tmpVar254 = true;
-          tmpVar249 = tmpVar255;
+        } catch (value61) {
+          local57 = true;
+          local52 = value61;
         } finally {
           try {
-            if (!tmpVar253 && tmpVar247.return != null && (tmpVar251 = tmpVar247.return(), Object(tmpVar251) !== tmpVar251)) {
+            if (!local56 && local50.return != null && (local54 = local50.return(), Object(local54) !== local54)) {
               return;
             }
           } finally {
-            if (tmpVar254) {
-              throw tmpVar249;
+            if (local57) {
+              throw local52;
             }
           }
         }
-        return tmpVar252;
+        return local55;
       }
-    }(tmpVar242, tmpVar243) || function (tmpVar256, tmpVar257) {
-      if (tmpVar256) {
-        if (typeof tmpVar256 == "string") {
-          return _arrayLikeToArrayLoose(tmpVar256, tmpVar257);
+    }(arg47, arg48) || function (value62, value63) {
+      if (value62) {
+        if (typeof value62 == "string") {
+          return _arrayLikeToArrayLoose(value62, value63);
         }
-        var tmpVar258 = {}.toString.call(tmpVar256).slice(8, -1);
-        if (tmpVar258 === "Object" && tmpVar256.constructor) {
-          tmpVar258 = tmpVar256.constructor.name;
+        var local58 = {}.toString.call(value62).slice(8, -1);
+        if (local58 === "Object" && value62.constructor) {
+          local58 = value62.constructor.name;
         }
-        if (tmpVar258 === "Map" || tmpVar258 === "Set") {
-          return Array.from(tmpVar256);
-        } else if (tmpVar258 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(tmpVar258)) {
-          return _arrayLikeToArrayLoose(tmpVar256, tmpVar257);
+        if (local58 === "Map" || local58 === "Set") {
+          return Array.from(value62);
+        } else if (local58 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(local58)) {
+          return _arrayLikeToArrayLoose(value62, value63);
         } else {
           return undefined;
         }
       }
-    }(tmpVar242, tmpVar243) || function () {
+    }(arg47, arg48) || function () {
       throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
     }();
   }
-  function _arrayLikeToArrayLoose(tmpVar259, tmpVar260) {
-    if (tmpVar260 == null || tmpVar260 > tmpVar259.length) {
-      tmpVar260 = tmpVar259.length;
+  function _arrayLikeToArrayLoose(arg49, arg50) {
+    if (arg50 == null || arg50 > arg49.length) {
+      arg50 = arg49.length;
     }
-    for (var tmpVar261 = 0, tmpVar262 = Array(tmpVar260); tmpVar261 < tmpVar260; tmpVar261++) {
-      tmpVar262[tmpVar261] = tmpVar259[tmpVar261];
+    for (var index4 = 0, value64 = Array(arg50); index4 < arg50; index4++) {
+      value64[index4] = arg49[index4];
     }
-    return tmpVar262;
+    return value64;
   }
   function _regeneratorRuntime() {
     _regeneratorRuntime = function () {
-      return tmpVar263;
+      return local59;
     };
-    var tmpVar264;
-    var tmpVar263 = {};
-    var tmpVar265 = Object.prototype;
-    var tmpVar266 = tmpVar265.hasOwnProperty;
-    var tmpVar267 = Object.defineProperty || function (tmpVar268, tmpVar269, tmpVar270) {
-      tmpVar268[tmpVar269] = tmpVar270.value;
+    var local60;
+    var local59 = {};
+    var local61 = Object.prototype;
+    var local62 = local61.hasOwnProperty;
+    var local63 = Object.defineProperty || function (value65, value66, value67) {
+      value65[value66] = value67.value;
     };
-    var tmpVar271 = typeof Symbol == "function" ? Symbol : {};
-    var tmpVar272 = tmpVar271.iterator || "@@iterator";
-    var tmpVar273 = tmpVar271.asyncIterator || "@@asyncIterator";
-    var tmpVar274 = tmpVar271.toStringTag || "@@toStringTag";
-    function helperFn8(tmpVar275, tmpVar276, tmpVar277) {
-      var tmpVar278 = {
-        value: tmpVar277,
+    var local64 = typeof Symbol == "function" ? Symbol : {};
+    var local65 = local64.iterator || "@@iterator";
+    var local66 = local64.asyncIterator || "@@asyncIterator";
+    var local67 = local64.toStringTag || "@@toStringTag";
+    function helperFn8(arg51, arg52, arg53) {
+      var local68 = {
+        value: arg53,
         enumerable: true,
         configurable: true,
         writable: true
       };
-      Object.defineProperty(tmpVar275, tmpVar276, tmpVar278);
-      return tmpVar275[tmpVar276];
+      Object.defineProperty(arg51, arg52, local68);
+      return arg51[arg52];
     }
     try {
       helperFn8({}, "");
-    } catch (tmpVar279) {
-      helperFn8 = function (tmpVar280, tmpVar281, tmpVar282) {
-        return tmpVar280[tmpVar281] = tmpVar282;
+    } catch (value68) {
+      helperFn8 = function (value69, value70, value71) {
+        return value69[value70] = value71;
       };
     }
-    function helperFn9(tmpVar283, tmpVar284, tmpVar285, tmpVar286) {
-      var tmpVar287 = tmpVar284 && tmpVar284.prototype instanceof helperFn10 ? tmpVar284 : helperFn10;
-      var tmpVar288 = Object.create(tmpVar287.prototype);
-      var tmpVar289 = new helperFn11(tmpVar286 || []);
-      tmpVar267(tmpVar288, "_invoke", {
-        value: helperFn12(tmpVar283, tmpVar285, tmpVar289)
+    function helperFn9(arg54, arg55, arg56, arg57) {
+      var local69 = arg55 && arg55.prototype instanceof helperFn10 ? arg55 : helperFn10;
+      var local70 = Object.create(local69.prototype);
+      var local71 = new helperFn11(arg57 || []);
+      local63(local70, "_invoke", {
+        value: helperFn12(arg54, arg56, local71)
       });
-      return tmpVar288;
+      return local70;
     }
-    function helperFn13(tmpVar290, tmpVar291, tmpVar292) {
+    function helperFn13(arg58, arg59, arg60) {
       try {
         return {
           type: "normal",
-          arg: tmpVar290.call(tmpVar291, tmpVar292)
+          arg: arg58.call(arg59, arg60)
         };
-      } catch (tmpVar293) {
-        var tmpVar294 = {
+      } catch (value72) {
+        var local72 = {
           type: "throw",
-          arg: tmpVar293
+          arg: value72
         };
-        return tmpVar294;
+        return local72;
       }
     }
-    tmpVar263.wrap = helperFn9;
-    var tmpVar295 = "suspendedStart";
-    var tmpVar296 = "suspendedYield";
-    var tmpVar297 = "executing";
-    var tmpVar298 = "completed";
-    var tmpVar299 = {};
+    local59.wrap = helperFn9;
+    var local73 = "suspendedStart";
+    var local74 = "suspendedYield";
+    var local75 = "executing";
+    var local76 = "completed";
+    var local77 = {};
     function helperFn10() {}
     function helperFn14() {}
     function helperFn15() {}
-    var tmpVar300 = {};
-    helperFn8(tmpVar300, tmpVar272, function () {
+    var local78 = {};
+    helperFn8(local78, local65, function () {
       return this;
     });
-    var tmpVar301 = Object.getPrototypeOf;
-    var tmpVar302 = tmpVar301 && tmpVar301(tmpVar301(helperFn16([])));
-    if (tmpVar302 && tmpVar302 !== tmpVar265 && tmpVar266.call(tmpVar302, tmpVar272)) {
-      tmpVar300 = tmpVar302;
+    var local79 = Object.getPrototypeOf;
+    var local80 = local79 && local79(local79(helperFn16([])));
+    if (local80 && local80 !== local61 && local62.call(local80, local65)) {
+      local78 = local80;
     }
-    var tmpVar303 = helperFn15.prototype = helperFn10.prototype = Object.create(tmpVar300);
-    function helperFn17(tmpVar304) {
-      ["next", "throw", "return"].forEach(function (tmpVar305) {
-        helperFn8(tmpVar304, tmpVar305, function (tmpVar306) {
-          return this._invoke(tmpVar305, tmpVar306);
+    var local81 = helperFn15.prototype = helperFn10.prototype = Object.create(local78);
+    function helperFn17(arg61) {
+      ["next", "throw", "return"].forEach(function (value73) {
+        helperFn8(arg61, value73, function (value74) {
+          return this._invoke(value73, value74);
         });
       });
     }
-    function helperFn18(tmpVar307, tmpVar308) {
-      function helperFn19(tmpVar309, tmpVar310, tmpVar311, tmpVar312) {
-        var tmpVar313 = helperFn13(tmpVar307[tmpVar309], tmpVar307, tmpVar310);
-        if (tmpVar313.type !== "throw") {
-          var tmpVar314 = tmpVar313.arg;
-          var tmpVar315 = tmpVar314.value;
-          if (tmpVar315 && _typeofValueSafe(tmpVar315) == "object" && tmpVar266.call(tmpVar315, "__await")) {
-            return tmpVar308.resolve(tmpVar315.__await).then(function (tmpVar316) {
-              helperFn19("next", tmpVar316, tmpVar311, tmpVar312);
-            }, function (tmpVar317) {
-              helperFn19("throw", tmpVar317, tmpVar311, tmpVar312);
+    function helperFn18(arg62, arg63) {
+      function helperFn19(arg64, arg65, arg66, arg67) {
+        var local82 = helperFn13(arg62[arg64], arg62, arg65);
+        if (local82.type !== "throw") {
+          var local83 = local82.arg;
+          var local84 = local83.value;
+          if (local84 && _typeofValueSafe(local84) == "object" && local62.call(local84, "__await")) {
+            return arg63.resolve(local84.__await).then(function (value75) {
+              helperFn19("next", value75, arg66, arg67);
+            }, function (value76) {
+              helperFn19("throw", value76, arg66, arg67);
             });
           } else {
-            return tmpVar308.resolve(tmpVar315).then(function (tmpVar318) {
-              tmpVar314.value = tmpVar318;
-              tmpVar311(tmpVar314);
-            }, function (tmpVar319) {
-              return helperFn19("throw", tmpVar319, tmpVar311, tmpVar312);
+            return arg63.resolve(local84).then(function (value77) {
+              local83.value = value77;
+              arg66(local83);
+            }, function (value78) {
+              return helperFn19("throw", value78, arg66, arg67);
             });
           }
         }
-        tmpVar312(tmpVar313.arg);
+        arg67(local82.arg);
       }
-      var tmpVar320;
-      tmpVar267(this, "_invoke", {
-        value: function (tmpVar321, tmpVar322) {
+      var local85;
+      local63(this, "_invoke", {
+        value: function (value79, value80) {
           function helperFn20() {
-            return new tmpVar308(function (tmpVar323, tmpVar324) {
-              helperFn19(tmpVar321, tmpVar322, tmpVar323, tmpVar324);
+            return new arg63(function (value81, value82) {
+              helperFn19(value79, value80, value81, value82);
             });
           }
-          return tmpVar320 = tmpVar320 ? tmpVar320.then(helperFn20, helperFn20) : helperFn20();
+          return local85 = local85 ? local85.then(helperFn20, helperFn20) : helperFn20();
         }
       });
     }
-    function helperFn12(tmpVar325, tmpVar326, tmpVar327) {
-      var tmpVar328 = tmpVar295;
-      return function (tmpVar329, tmpVar330) {
-        if (tmpVar328 === tmpVar297) {
+    function helperFn12(arg68, arg69, arg70) {
+      var local86 = local73;
+      return function (value83, value84) {
+        if (local86 === local75) {
           throw Error("Generator is already running");
         }
-        if (tmpVar328 === tmpVar298) {
-          if (tmpVar329 === "throw") {
-            throw tmpVar330;
+        if (local86 === local76) {
+          if (value83 === "throw") {
+            throw value84;
           }
-          var tmpVar331 = {
-            value: tmpVar264,
+          var local87 = {
+            value: local60,
             done: true
           };
-          return tmpVar331;
+          return local87;
         }
-        tmpVar327.method = tmpVar329;
-        tmpVar327.arg = tmpVar330;
+        arg70.method = value83;
+        arg70.arg = value84;
         while (true) {
-          var tmpVar332 = tmpVar327.delegate;
-          if (tmpVar332) {
-            var tmpVar333 = helperFn21(tmpVar332, tmpVar327);
-            if (tmpVar333) {
-              if (tmpVar333 === tmpVar299) {
+          var local88 = arg70.delegate;
+          if (local88) {
+            var local89 = helperFn21(local88, arg70);
+            if (local89) {
+              if (local89 === local77) {
                 continue;
               }
-              return tmpVar333;
+              return local89;
             }
           }
-          if (tmpVar327.method === "next") {
-            tmpVar327.sent = tmpVar327._sent = tmpVar327.arg;
-          } else if (tmpVar327.method === "throw") {
-            if (tmpVar328 === tmpVar295) {
-              tmpVar328 = tmpVar298;
-              throw tmpVar327.arg;
+          if (arg70.method === "next") {
+            arg70.sent = arg70._sent = arg70.arg;
+          } else if (arg70.method === "throw") {
+            if (local86 === local73) {
+              local86 = local76;
+              throw arg70.arg;
             }
-            tmpVar327.dispatchException(tmpVar327.arg);
-          } else if (tmpVar327.method === "return") {
-            tmpVar327.abrupt("return", tmpVar327.arg);
+            arg70.dispatchException(arg70.arg);
+          } else if (arg70.method === "return") {
+            arg70.abrupt("return", arg70.arg);
           }
-          tmpVar328 = tmpVar297;
-          var tmpVar334 = helperFn13(tmpVar325, tmpVar326, tmpVar327);
-          if (tmpVar334.type === "normal") {
-            tmpVar328 = tmpVar327.done ? tmpVar298 : tmpVar296;
-            if (tmpVar334.arg === tmpVar299) {
+          local86 = local75;
+          var local90 = helperFn13(arg68, arg69, arg70);
+          if (local90.type === "normal") {
+            local86 = arg70.done ? local76 : local74;
+            if (local90.arg === local77) {
               continue;
             }
-            var tmpVar335 = {
-              value: tmpVar334.arg,
-              done: tmpVar327.done
+            var local91 = {
+              value: local90.arg,
+              done: arg70.done
             };
-            return tmpVar335;
+            return local91;
           }
-          if (tmpVar334.type === "throw") {
-            tmpVar328 = tmpVar298;
-            tmpVar327.method = "throw";
-            tmpVar327.arg = tmpVar334.arg;
+          if (local90.type === "throw") {
+            local86 = local76;
+            arg70.method = "throw";
+            arg70.arg = local90.arg;
           }
         }
       };
     }
-    function helperFn21(tmpVar336, tmpVar337) {
-      var tmpVar338 = tmpVar337.method;
-      var tmpVar339 = tmpVar336.iterator[tmpVar338];
-      if (tmpVar339 === tmpVar264) {
-        tmpVar337.delegate = null;
-        if (tmpVar338 !== "throw" || !tmpVar336.iterator.return || !(tmpVar337.method = "return", tmpVar337.arg = tmpVar264, helperFn21(tmpVar336, tmpVar337), tmpVar337.method === "throw")) {
-          if (tmpVar338 !== "return") {
-            tmpVar337.method = "throw";
-            tmpVar337.arg = new TypeError("The iterator does not provide a '" + tmpVar338 + "' method");
+    function helperFn21(arg71, arg72) {
+      var local92 = arg72.method;
+      var local93 = arg71.iterator[local92];
+      if (local93 === local60) {
+        arg72.delegate = null;
+        if (local92 !== "throw" || !arg71.iterator.return || !(arg72.method = "return", arg72.arg = local60, helperFn21(arg71, arg72), arg72.method === "throw")) {
+          if (local92 !== "return") {
+            arg72.method = "throw";
+            arg72.arg = new TypeError("The iterator does not provide a '" + local92 + "' method");
           }
         }
-        return tmpVar299;
+        return local77;
       }
-      var tmpVar340 = helperFn13(tmpVar339, tmpVar336.iterator, tmpVar337.arg);
-      if (tmpVar340.type === "throw") {
-        tmpVar337.method = "throw";
-        tmpVar337.arg = tmpVar340.arg;
-        tmpVar337.delegate = null;
-        return tmpVar299;
+      var local94 = helperFn13(local93, arg71.iterator, arg72.arg);
+      if (local94.type === "throw") {
+        arg72.method = "throw";
+        arg72.arg = local94.arg;
+        arg72.delegate = null;
+        return local77;
       }
-      var tmpVar341 = tmpVar340.arg;
-      if (tmpVar341) {
-        if (tmpVar341.done) {
-          tmpVar337[tmpVar336.resultName] = tmpVar341.value;
-          tmpVar337.next = tmpVar336.nextLoc;
-          if (tmpVar337.method !== "return") {
-            tmpVar337.method = "next";
-            tmpVar337.arg = tmpVar264;
+      var local95 = local94.arg;
+      if (local95) {
+        if (local95.done) {
+          arg72[arg71.resultName] = local95.value;
+          arg72.next = arg71.nextLoc;
+          if (arg72.method !== "return") {
+            arg72.method = "next";
+            arg72.arg = local60;
           }
-          tmpVar337.delegate = null;
-          return tmpVar299;
+          arg72.delegate = null;
+          return local77;
         } else {
-          return tmpVar341;
+          return local95;
         }
       } else {
-        tmpVar337.method = "throw";
-        tmpVar337.arg = new TypeError("iterator result is not an object");
-        tmpVar337.delegate = null;
-        return tmpVar299;
+        arg72.method = "throw";
+        arg72.arg = new TypeError("iterator result is not an object");
+        arg72.delegate = null;
+        return local77;
       }
     }
-    function helperFn22(tmpVar342) {
-      var tmpVar343 = {
-        tryLoc: tmpVar342[0]
+    function helperFn22(arg73) {
+      var local96 = {
+        tryLoc: arg73[0]
       };
-      var tmpVar344 = tmpVar343;
-      if (1 in tmpVar342) {
-        tmpVar344.catchLoc = tmpVar342[1];
+      var local97 = local96;
+      if (1 in arg73) {
+        local97.catchLoc = arg73[1];
       }
-      if (2 in tmpVar342) {
-        tmpVar344.finallyLoc = tmpVar342[2];
-        tmpVar344.afterLoc = tmpVar342[3];
+      if (2 in arg73) {
+        local97.finallyLoc = arg73[2];
+        local97.afterLoc = arg73[3];
       }
-      this.tryEntries.push(tmpVar344);
+      this.tryEntries.push(local97);
     }
-    function helperFn23(tmpVar345) {
-      var tmpVar346 = tmpVar345.completion || {};
-      tmpVar346.type = "normal";
-      delete tmpVar346.arg;
-      tmpVar345.completion = tmpVar346;
+    function helperFn23(arg74) {
+      var local98 = arg74.completion || {};
+      local98.type = "normal";
+      delete local98.arg;
+      arg74.completion = local98;
     }
-    function helperFn11(tmpVar347) {
+    function helperFn11(arg75) {
       this.tryEntries = [{
         tryLoc: "root"
       }];
-      tmpVar347.forEach(helperFn22, this);
+      arg75.forEach(helperFn22, this);
       this.reset(true);
     }
-    function helperFn16(tmpVar348) {
-      if (tmpVar348 || tmpVar348 === "") {
-        var tmpVar349 = tmpVar348[tmpVar272];
-        if (tmpVar349) {
-          return tmpVar349.call(tmpVar348);
+    function helperFn16(arg76) {
+      if (arg76 || arg76 === "") {
+        var local99 = arg76[local65];
+        if (local99) {
+          return local99.call(arg76);
         }
-        if (typeof tmpVar348.next == "function") {
-          return tmpVar348;
+        if (typeof arg76.next == "function") {
+          return arg76;
         }
-        if (!isNaN(tmpVar348.length)) {
-          var tmpVar350 = -1;
-          var tmpVar351 = function helperFn24() {
-            while (++tmpVar350 < tmpVar348.length) {
-              if (tmpVar266.call(tmpVar348, tmpVar350)) {
-                helperFn24.value = tmpVar348[tmpVar350];
+        if (!isNaN(arg76.length)) {
+          var local100 = -1;
+          var local101 = function helperFn24() {
+            while (++local100 < arg76.length) {
+              if (local62.call(arg76, local100)) {
+                helperFn24.value = arg76[local100];
                 helperFn24.done = false;
                 return helperFn24;
               }
             }
-            helperFn24.value = tmpVar264;
+            helperFn24.value = local60;
             helperFn24.done = true;
             return helperFn24;
           };
-          return tmpVar351.next = tmpVar351;
+          return local101.next = local101;
         }
       }
-      throw new TypeError(_typeofValueSafe(tmpVar348) + " is not iterable");
+      throw new TypeError(_typeofValueSafe(arg76) + " is not iterable");
     }
     helperFn14.prototype = helperFn15;
-    tmpVar267(tmpVar303, "constructor", {
+    local63(local81, "constructor", {
       value: helperFn15,
       configurable: true
     });
-    tmpVar267(helperFn15, "constructor", {
+    local63(helperFn15, "constructor", {
       value: helperFn14,
       configurable: true
     });
-    helperFn14.displayName = helperFn8(helperFn15, tmpVar274, "GeneratorFunction");
-    tmpVar263.isGeneratorFunction = function (tmpVar352) {
-      var tmpVar353 = typeof tmpVar352 == "function" && tmpVar352.constructor;
-      return !!tmpVar353 && (tmpVar353 === helperFn14 || (tmpVar353.displayName || tmpVar353.name) === "GeneratorFunction");
+    helperFn14.displayName = helperFn8(helperFn15, local67, "GeneratorFunction");
+    local59.isGeneratorFunction = function (value85) {
+      var local102 = typeof value85 == "function" && value85.constructor;
+      return !!local102 && (local102 === helperFn14 || (local102.displayName || local102.name) === "GeneratorFunction");
     };
-    tmpVar263.mark = function (tmpVar354) {
+    local59.mark = function (value86) {
       if (Object.setPrototypeOf) {
-        Object.setPrototypeOf(tmpVar354, helperFn15);
+        Object.setPrototypeOf(value86, helperFn15);
       } else {
-        tmpVar354.__proto__ = helperFn15;
-        helperFn8(tmpVar354, tmpVar274, "GeneratorFunction");
+        value86.__proto__ = helperFn15;
+        helperFn8(value86, local67, "GeneratorFunction");
       }
-      tmpVar354.prototype = Object.create(tmpVar303);
-      return tmpVar354;
+      value86.prototype = Object.create(local81);
+      return value86;
     };
-    tmpVar263.awrap = function (tmpVar355) {
-      var tmpVar356 = {
-        __await: tmpVar355
+    local59.awrap = function (value87) {
+      var local103 = {
+        __await: value87
       };
-      return tmpVar356;
+      return local103;
     };
     helperFn17(helperFn18.prototype);
-    helperFn8(helperFn18.prototype, tmpVar273, function () {
+    helperFn8(helperFn18.prototype, local66, function () {
       return this;
     });
-    tmpVar263.AsyncIterator = helperFn18;
-    tmpVar263.async = function (tmpVar357, tmpVar358, tmpVar359, tmpVar360, tmpVar361 = Promise) {
-      var tmpVar362 = new helperFn18(helperFn9(tmpVar357, tmpVar358, tmpVar359, tmpVar360), tmpVar361);
-      if (tmpVar263.isGeneratorFunction(tmpVar358)) {
-        return tmpVar362;
+    local59.AsyncIterator = helperFn18;
+    local59.async = function (value88, value89, value90, value91, value92 = Promise) {
+      var local104 = new helperFn18(helperFn9(value88, value89, value90, value91), value92);
+      if (local59.isGeneratorFunction(value89)) {
+        return local104;
       } else {
-        return tmpVar362.next().then(function (tmpVar363) {
-          if (tmpVar363.done) {
-            return tmpVar363.value;
+        return local104.next().then(function (value93) {
+          if (value93.done) {
+            return value93.value;
           } else {
-            return tmpVar362.next();
+            return local104.next();
           }
         });
       }
     };
-    helperFn17(tmpVar303);
-    helperFn8(tmpVar303, tmpVar274, "Generator");
-    helperFn8(tmpVar303, tmpVar272, function () {
+    helperFn17(local81);
+    helperFn8(local81, local67, "Generator");
+    helperFn8(local81, local65, function () {
       return this;
     });
-    helperFn8(tmpVar303, "toString", function () {
+    helperFn8(local81, "toString", function () {
       return "[object Generator]";
     });
-    tmpVar263.keys = function (tmpVar364) {
-      var tmpVar365 = Object(tmpVar364);
-      var tmpVar366 = [];
-      for (var tmpVar367 in tmpVar365) {
-        tmpVar366.push(tmpVar367);
+    local59.keys = function (value94) {
+      var local105 = Object(value94);
+      var local106 = [];
+      for (var key1 in local105) {
+        local106.push(key1);
       }
-      tmpVar366.reverse();
+      local106.reverse();
       return function helperFn25() {
-        while (tmpVar366.length) {
-          var tmpVar368 = tmpVar366.pop();
-          if (tmpVar368 in tmpVar365) {
-            helperFn25.value = tmpVar368;
+        while (local106.length) {
+          var local107 = local106.pop();
+          if (local107 in local105) {
+            helperFn25.value = local107;
             helperFn25.done = false;
             return helperFn25;
           }
@@ -1848,180 +1898,180 @@ hostname = %APPEND% www.52pojie.cn
         return helperFn25;
       };
     };
-    tmpVar263.values = helperFn16;
+    local59.values = helperFn16;
     helperFn11.prototype = {
       constructor: helperFn11,
-      reset: function (tmpVar369) {
+      reset: function (value95) {
         this.prev = 0;
         this.next = 0;
-        this.sent = this._sent = tmpVar264;
+        this.sent = this._sent = local60;
         this.done = false;
         this.delegate = null;
         this.method = "next";
-        this.arg = tmpVar264;
+        this.arg = local60;
         this.tryEntries.forEach(helperFn23);
-        if (!tmpVar369) {
-          for (var tmpVar370 in this) {
-            if (tmpVar370.charAt(0) === "t" && tmpVar266.call(this, tmpVar370) && !isNaN(+tmpVar370.slice(1))) {
-              this[tmpVar370] = tmpVar264;
+        if (!value95) {
+          for (var key2 in this) {
+            if (key2.charAt(0) === "t" && local62.call(this, key2) && !isNaN(+key2.slice(1))) {
+              this[key2] = local60;
             }
           }
         }
       },
       stop: function () {
         this.done = true;
-        var tmpVar371 = this.tryEntries[0].completion;
-        if (tmpVar371.type === "throw") {
-          throw tmpVar371.arg;
+        var local108 = this.tryEntries[0].completion;
+        if (local108.type === "throw") {
+          throw local108.arg;
         }
         return this.rval;
       },
-      dispatchException: function (tmpVar372) {
+      dispatchException: function (value96) {
         if (this.done) {
-          throw tmpVar372;
+          throw value96;
         }
-        var tmpVar373 = this;
-        function helperFn26(tmpVar374, tmpVar375) {
-          tmpVar376.type = "throw";
-          tmpVar376.arg = tmpVar372;
-          tmpVar373.next = tmpVar374;
-          if (tmpVar375) {
-            tmpVar373.method = "next";
-            tmpVar373.arg = tmpVar264;
+        var local109 = this;
+        function helperFn26(arg77, arg78) {
+          local110.type = "throw";
+          local110.arg = value96;
+          local109.next = arg77;
+          if (arg78) {
+            local109.method = "next";
+            local109.arg = local60;
           }
-          return !!tmpVar375;
+          return !!arg78;
         }
-        for (var tmpVar377 = this.tryEntries.length - 1; tmpVar377 >= 0; --tmpVar377) {
-          var tmpVar378 = this.tryEntries[tmpVar377];
-          var tmpVar376 = tmpVar378.completion;
-          if (tmpVar378.tryLoc === "root") {
+        for (var index5 = this.tryEntries.length - 1; index5 >= 0; --index5) {
+          var local111 = this.tryEntries[index5];
+          var local110 = local111.completion;
+          if (local111.tryLoc === "root") {
             return helperFn26("end");
           }
-          if (tmpVar378.tryLoc <= this.prev) {
-            var tmpVar379 = tmpVar266.call(tmpVar378, "catchLoc");
-            var tmpVar380 = tmpVar266.call(tmpVar378, "finallyLoc");
-            if (tmpVar379 && tmpVar380) {
-              if (this.prev < tmpVar378.catchLoc) {
-                return helperFn26(tmpVar378.catchLoc, true);
+          if (local111.tryLoc <= this.prev) {
+            var local112 = local62.call(local111, "catchLoc");
+            var local113 = local62.call(local111, "finallyLoc");
+            if (local112 && local113) {
+              if (this.prev < local111.catchLoc) {
+                return helperFn26(local111.catchLoc, true);
               }
-              if (this.prev < tmpVar378.finallyLoc) {
-                return helperFn26(tmpVar378.finallyLoc);
+              if (this.prev < local111.finallyLoc) {
+                return helperFn26(local111.finallyLoc);
               }
-            } else if (tmpVar379) {
-              if (this.prev < tmpVar378.catchLoc) {
-                return helperFn26(tmpVar378.catchLoc, true);
+            } else if (local112) {
+              if (this.prev < local111.catchLoc) {
+                return helperFn26(local111.catchLoc, true);
               }
             } else {
-              if (!tmpVar380) {
+              if (!local113) {
                 throw Error("try statement without catch or finally");
               }
-              if (this.prev < tmpVar378.finallyLoc) {
-                return helperFn26(tmpVar378.finallyLoc);
+              if (this.prev < local111.finallyLoc) {
+                return helperFn26(local111.finallyLoc);
               }
             }
           }
         }
       },
-      abrupt: function (tmpVar381, tmpVar382) {
-        for (var tmpVar383 = this.tryEntries.length - 1; tmpVar383 >= 0; --tmpVar383) {
-          var tmpVar384 = this.tryEntries[tmpVar383];
-          if (tmpVar384.tryLoc <= this.prev && tmpVar266.call(tmpVar384, "finallyLoc") && this.prev < tmpVar384.finallyLoc) {
-            var tmpVar385 = tmpVar384;
+      abrupt: function (value97, value98) {
+        for (var index6 = this.tryEntries.length - 1; index6 >= 0; --index6) {
+          var local114 = this.tryEntries[index6];
+          if (local114.tryLoc <= this.prev && local62.call(local114, "finallyLoc") && this.prev < local114.finallyLoc) {
+            var local115 = local114;
             break;
           }
         }
-        if (tmpVar385 && (tmpVar381 === "break" || tmpVar381 === "continue") && tmpVar385.tryLoc <= tmpVar382 && tmpVar382 <= tmpVar385.finallyLoc) {
-          tmpVar385 = null;
+        if (local115 && (value97 === "break" || value97 === "continue") && local115.tryLoc <= value98 && value98 <= local115.finallyLoc) {
+          local115 = null;
         }
-        var tmpVar386 = tmpVar385 ? tmpVar385.completion : {};
-        tmpVar386.type = tmpVar381;
-        tmpVar386.arg = tmpVar382;
-        if (tmpVar385) {
+        var local116 = local115 ? local115.completion : {};
+        local116.type = value97;
+        local116.arg = value98;
+        if (local115) {
           this.method = "next";
-          this.next = tmpVar385.finallyLoc;
-          return tmpVar299;
+          this.next = local115.finallyLoc;
+          return local77;
         } else {
-          return this.complete(tmpVar386);
+          return this.complete(local116);
         }
       },
-      complete: function (tmpVar387, tmpVar388) {
-        if (tmpVar387.type === "throw") {
-          throw tmpVar387.arg;
+      complete: function (value99, value100) {
+        if (value99.type === "throw") {
+          throw value99.arg;
         }
-        if (tmpVar387.type === "break" || tmpVar387.type === "continue") {
-          this.next = tmpVar387.arg;
-        } else if (tmpVar387.type === "return") {
-          this.rval = this.arg = tmpVar387.arg;
+        if (value99.type === "break" || value99.type === "continue") {
+          this.next = value99.arg;
+        } else if (value99.type === "return") {
+          this.rval = this.arg = value99.arg;
           this.method = "return";
           this.next = "end";
-        } else if (tmpVar387.type === "normal" && tmpVar388) {
-          this.next = tmpVar388;
+        } else if (value99.type === "normal" && value100) {
+          this.next = value100;
         }
-        return tmpVar299;
+        return local77;
       },
-      finish: function (tmpVar389) {
-        for (var tmpVar390 = this.tryEntries.length - 1; tmpVar390 >= 0; --tmpVar390) {
-          var tmpVar391 = this.tryEntries[tmpVar390];
-          if (tmpVar391.finallyLoc === tmpVar389) {
-            this.complete(tmpVar391.completion, tmpVar391.afterLoc);
-            helperFn23(tmpVar391);
-            return tmpVar299;
+      finish: function (value101) {
+        for (var index7 = this.tryEntries.length - 1; index7 >= 0; --index7) {
+          var local117 = this.tryEntries[index7];
+          if (local117.finallyLoc === value101) {
+            this.complete(local117.completion, local117.afterLoc);
+            helperFn23(local117);
+            return local77;
           }
         }
       },
-      catch: function (tmpVar392) {
-        for (var tmpVar393 = this.tryEntries.length - 1; tmpVar393 >= 0; --tmpVar393) {
-          var tmpVar394 = this.tryEntries[tmpVar393];
-          if (tmpVar394.tryLoc === tmpVar392) {
-            var tmpVar395 = tmpVar394.completion;
-            if (tmpVar395.type === "throw") {
-              var tmpVar396 = tmpVar395.arg;
-              helperFn23(tmpVar394);
+      catch: function (value102) {
+        for (var index8 = this.tryEntries.length - 1; index8 >= 0; --index8) {
+          var local118 = this.tryEntries[index8];
+          if (local118.tryLoc === value102) {
+            var local119 = local118.completion;
+            if (local119.type === "throw") {
+              var local120 = local119.arg;
+              helperFn23(local118);
             }
-            return tmpVar396;
+            return local120;
           }
         }
         throw Error("illegal catch attempt");
       },
-      delegateYield: function (tmpVar397, tmpVar398, tmpVar399) {
+      delegateYield: function (value103, value104, value105) {
         this.delegate = {
-          iterator: helperFn16(tmpVar397),
-          resultName: tmpVar398,
-          nextLoc: tmpVar399
+          iterator: helperFn16(value103),
+          resultName: value104,
+          nextLoc: value105
         };
         if (this.method === "next") {
-          this.arg = tmpVar264;
+          this.arg = local60;
         }
-        return tmpVar299;
+        return local77;
       }
     };
-    return tmpVar263;
+    return local59;
   }
-  function _asyncGeneratorStep(tmpVar400, tmpVar401, tmpVar402, tmpVar403, tmpVar404, tmpVar405, tmpVar406) {
+  function _asyncGeneratorStep(arg79, arg80, arg81, arg82, arg83, arg84, arg85) {
     try {
-      var tmpVar407 = tmpVar400[tmpVar405](tmpVar406);
-      var tmpVar408 = tmpVar407.value;
-    } catch (tmpVar409) {
-      tmpVar402(tmpVar409);
+      var local121 = arg79[arg84](arg85);
+      var local122 = local121.value;
+    } catch (value106) {
+      arg81(value106);
       return;
     }
-    if (tmpVar407.done) {
-      tmpVar401(tmpVar408);
+    if (local121.done) {
+      arg80(local122);
     } else {
-      Promise.resolve(tmpVar408).then(tmpVar403, tmpVar404);
+      Promise.resolve(local122).then(arg82, arg83);
     }
   }
-  function _asyncToGenerator(tmpVar410) {
+  function _asyncToGenerator(arg86) {
     return function () {
-      var tmpVar411 = this;
-      var tmpVar412 = arguments;
-      return new Promise(function (tmpVar413, tmpVar414) {
-        var tmpVar415 = tmpVar410.apply(tmpVar411, tmpVar412);
-        function helperFn27(tmpVar416) {
-          _asyncGeneratorStep(tmpVar415, tmpVar413, tmpVar414, helperFn27, helperFn28, "next", tmpVar416);
+      var local123 = this;
+      var local124 = arguments;
+      return new Promise(function (value107, value108) {
+        var local125 = arg86.apply(local123, local124);
+        function helperFn27(arg87) {
+          _asyncGeneratorStep(local125, value107, value108, helperFn27, helperFn28, "next", arg87);
         }
-        function helperFn28(tmpVar417) {
-          _asyncGeneratorStep(tmpVar415, tmpVar413, tmpVar414, helperFn27, helperFn28, "throw", tmpVar417);
+        function helperFn28(arg88) {
+          _asyncGeneratorStep(local125, value107, value108, helperFn27, helperFn28, "throw", arg88);
         }
         helperFn27(undefined);
       });
@@ -2059,589 +2109,381 @@ hostname = %APPEND% www.52pojie.cn
   var barkPushKey = isNodeEnv() ? process.env.WUAI_BARK_KEY : PersistStore.getItem("wuai_bark_key");
   Logger.debug(barkPushKey ? "Bark密钥: " + barkPushKey : "未开启Bark推送");
   var currentCookie = isNodeEnv() ? process.env.WUAI_COOKIE : PersistStore.getItem("wuai_cookie");
-  function runMainTask() {
-    return runMainTaskAsync.apply(this, arguments);
+  async function runMainTask() {
+    if (!currentCookie) {
+      await pushNotification(notifyTitle, "", "未填写/未获取Cookie!!");
+      return;
+    }
+
+    if (!currentCookie.includes("auth=")) {
+      await pushNotification(notifyTitle, "", "Cookie关键授权字段缺失, 需重新获取!!");
+      return;
+    }
+
+    currentCookie = normalizeCookieFields(currentCookie);
+
+    await fetchUserProfile();
+    if (!PathUtils.get(globalThis, "user.id")) {
+      await pushNotification(notifyTitle, "❌ 获取用户信息失败", "Cookie失效 ‼️‼️");
+      return;
+    }
+
+    await fetchVerifyParams();
+    if (!globalThis.verifyBody) {
+      await pushNotification(notifyTitle, "❌ 获取混淆参数失败", "请等待修复!!");
+      return;
+    }
+
+    const verifyPassed = await validateVerifyPayload();
+    if (!verifyPassed) {
+      await pushNotification(notifyTitle, "❌ 参数校验失败", "请等待修复!!");
+      return;
+    }
+
+    await executeSignIn();
+    await pushNotification(notifyTitle, `${globalThis.user.name}[${`${globalThis.user.id}`.replace(/(\d{3})\d+(\d{2})/, "$1****$2")}]`, globalThis.msgBody);
   }
-  function runMainTaskAsync() {
-    runMainTaskAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn29() {
-      var tmpVar418;
-      return _regeneratorRuntime().wrap(function (tmpVar419) {
-        while (true) {
-          switch (tmpVar419.prev = tmpVar419.next) {
-            case 0:
-              if (currentCookie) {
-                tmpVar419.next = 4;
-                break;
-              }
-              tmpVar419.next = 3;
-              return pushNotification(notifyTitle, "", "未填写/未获取Cookie!!");
-            case 3:
-            case 7:
-            case 14:
-            case 20:
-            case 27:
-              return tmpVar419.abrupt("return");
-            case 4:
-              if (currentCookie.includes("auth=")) {
-                tmpVar419.next = 8;
-                break;
-              }
-              tmpVar419.next = 7;
-              return pushNotification(notifyTitle, "", "Cookie关键授权字段缺失, 需重新获取!!");
-            case 8:
-              currentCookie = normalizeCookieFields(currentCookie);
-              tmpVar419.next = 11;
-              return fetchUserProfile();
-            case 11:
-              if (PathUtils.get(globalThis, "user.id")) {
-                tmpVar419.next = 15;
-                break;
-              }
-              tmpVar419.next = 14;
-              return pushNotification(notifyTitle, "❌ 获取用户信息失败", "Cookie失效 ‼️‼️");
-            case 15:
-              tmpVar419.next = 17;
-              return fetchVerifyParams();
-            case 17:
-              if (globalThis.verifyBody) {
-                tmpVar419.next = 21;
-                break;
-              }
-              tmpVar419.next = 20;
-              return pushNotification(notifyTitle, "❌ 获取混淆参数失败", "请等待修复!!");
-            case 21:
-              tmpVar419.next = 23;
-              return validateVerifyPayload();
-            case 23:
-              tmpVar418 = tmpVar419.sent;
-              if (tmpVar418) {
-                tmpVar419.next = 28;
-                break;
-              }
-              tmpVar419.next = 27;
-              return pushNotification(notifyTitle, "❌ 参数校验失败", "请等待修复!!");
-            case 28:
-              tmpVar419.next = 30;
-              return executeSignIn();
-            case 30:
-              tmpVar419.next = 32;
-              return pushNotification(notifyTitle, `${globalThis.user.name}[${`${globalThis.user.id}`.replace(/(\d{3})\d+(\d{2})/, "$1****$2")}]`, globalThis.msgBody);
-            case 32:
-            case "end":
-              return tmpVar419.stop();
-          }
-        }
-      }, helperFn29);
-    }));
-    return runMainTaskAsync.apply(this, arguments);
+
+  async function fetchUserProfile() {
+    const headers = {
+      Cookie: currentCookie
+    };
+    const requestOptions = {
+      url: joinUrl(siteBaseUrl, "/home.php?mod=spacecp&ac=credit&showcredit=1"),
+      headers: Object.assign(defaultHeaders, headers)
+    };
+
+    const response = await request(requestOptions);
+    if (!response.ok) {
+      Logger.error("获取个人信息失败", response.body || "");
+      return;
+    }
+
+    const bodyText = response.body;
+    if (bodyText.match(/(ÏÈµÇÂ¼|\u9700\u8981\u5148\u767b\u5f55|�Ҫ�ȵ�¼���ܼ�)/)) {
+      await pushNotification(notifyTitle, "", "Cookie失效 ‼️‼️");
+      throw new Error("Cookie失效 ‼️‼️");
+    }
+
+    const userMatch = /<strong[^>]*><a[^>]*href="[^"]*uid=(\d+)"[^>]*>([^<]*)<\/a><\/strong>/i.exec(bodyText);
+    const [, userId, userName] = _slicedToArray(userMatch, 3);
+
+    PathUtils.set(globalThis, "user.id", userId, "");
+    PathUtils.set(globalThis, "user.name", userName, "");
+    Logger.log(`用户信息: ${userId} - ${userName}`);
   }
-  function fetchUserProfile() {
-    return fetchUserProfileAsync.apply(this, arguments);
+
+  async function fetchVerifyParams() {
+    const headers = {
+      Cookie: currentCookie
+    };
+    const requestOptions = {
+      url: joinUrl(siteBaseUrl, "/home.php?mod=task&do=apply&id=2&referer=%2F"),
+      headers: Object.assign(defaultHeaders, headers)
+    };
+
+    const response = await request(requestOptions);
+    if (!response.ok) {
+      Logger.error("获取混淆参数失败", response.body || "");
+      return;
+    }
+
+    currentCookie = mergeCookieStrings(currentCookie, extractSetCookieHeader(response));
+    Logger.debug(`[混淆接口]更新Cookie: ${currentCookie}`);
+
+    const lengthToken = /(?:LZ|ZL)\s*=\s*['"]([0-9]{5,6})['"]/.exec(response.body)?.[1];
+    if (!lengthToken) {
+      throw new Error("[LZ] 长度参数获取失败");
+    }
+
+    const multiplierToken = /(?:LJ|ZR)\s*=\s*['"]([0-9]{5,6})['"]/.exec(response.body)?.[1];
+    if (!multiplierToken) {
+      throw new Error("[LJ] 乘数因子获取失败");
+    }
+
+    const alphabet = /(?:Zn|LE)\s*=\s*['"]([0-9a-zA-Z\/+.-]+={0,2})['"];/.exec(response.body)?.[1];
+    if (!alphabet) {
+      throw new Error("[LE] 加密参数获取失败");
+    }
+
+    const verifyParams = {
+      LZ: lengthToken,
+      LJ: multiplierToken,
+      LE: alphabet
+    };
+
+    Logger.group("[请求参数]");
+    Logger.debug(`[LZ] 长度参数: ${verifyParams.LZ}`, `[LJ] 乘数因子: ${verifyParams.LJ}`, `[LE] 加密参数: ${verifyParams.LE}`);
+    Logger.groupEnd();
+
+    globalThis.verifyBody = buildVerifyPayload(verifyParams);
+    Logger.debug(`[verifyBody] 加密结果: ${globalThis.verifyBody}`);
   }
-  function fetchUserProfileAsync() {
-    fetchUserProfileAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn30() {
-      var tmpVar420;
-      var tmpVar421;
-      var tmpVar422;
-      var tmpVar423;
-      var tmpVar424;
-      var tmpVar425;
-      var tmpVar426;
-      return _regeneratorRuntime().wrap(function (tmpVar427) {
-        while (true) {
-          switch (tmpVar427.prev = tmpVar427.next) {
-            case 0:
-              var tmpVar428 = {
-                Cookie: currentCookie
-              };
-              tmpVar420 = {
-                url: joinUrl(siteBaseUrl, "/home.php?mod=spacecp&ac=credit&showcredit=1"),
-                headers: Object.assign(defaultHeaders, tmpVar428)
-              };
-              tmpVar427.next = 3;
-              return request(tmpVar420);
-            case 3:
-              tmpVar421 = tmpVar427.sent;
-              if (!tmpVar421.ok) {
-                tmpVar427.next = 16;
-                break;
-              }
-              tmpVar422 = tmpVar421.body;
-              if (!tmpVar422.match(/(ÏÈµÇÂ¼|\u9700\u8981\u5148\u767b\u5f55|�Ҫ�ȵ�¼���ܼ�)/)) {
-                tmpVar427.next = 10;
-                break;
-              }
-              tmpVar427.next = 9;
-              return pushNotification(notifyTitle, "", "Cookie失效 ‼️‼️");
-            case 9:
-              throw new Error("Cookie失效 ‼️‼️");
-            case 10:
-              tmpVar423 = /<strong[^>]*><a[^>]*href="[^"]*uid=(\d+)"[^>]*>([^<]*)<\/a><\/strong>/i.exec(tmpVar422);
-              tmpVar424 = _slicedToArray(tmpVar423, 3);
-              tmpVar425 = tmpVar424[1];
-              tmpVar426 = tmpVar424[2];
-              PathUtils.set(globalThis, "user.id", tmpVar425, "");
-              PathUtils.set(globalThis, "user.name", tmpVar426, "");
-              Logger.log(`用户信息: ${tmpVar425} - ${tmpVar426}`);
-              tmpVar427.next = 17;
-              break;
-            case 16:
-              Logger.error("获取个人信息失败", tmpVar421.body || "");
-            case 17:
-            case "end":
-              return tmpVar427.stop();
-          }
-        }
-      }, helperFn30);
-    }));
-    return fetchUserProfileAsync.apply(this, arguments);
+
+  async function validateVerifyPayload() {
+    const headers = {
+      Cookie: currentCookie
+    };
+    const requestOptions = {
+      url: joinUrl(siteBaseUrl, "/waf_zw_verify"),
+      headers: Object.assign(defaultHeaders, headers),
+      body: globalThis.verifyBody
+    };
+
+    const response = await request(requestOptions);
+    if (!response.ok) {
+      Logger.error("参数校验失败", response.body || "");
+      return false;
+    }
+
+    currentCookie = mergeCookieStrings(currentCookie, extractSetCookieHeader(response));
+    Logger.debug("🎉 参数校验接口通过!!");
+    return true;
   }
-  function fetchVerifyParams() {
-    return fetchVerifyParamsAsync.apply(this, arguments);
+
+  async function executeSignIn() {
+    const headers = {
+      Cookie: currentCookie
+    };
+    const requestOptions = {
+      url: joinUrl(siteBaseUrl, "/home.php?mod=task&do=apply&id=2&referer=%2Fforum.php"),
+      headers: Object.assign(defaultHeaders, headers)
+    };
+
+    const response = await request(requestOptions);
+    const bodyText = response.body;
+    const now = new Date();
+
+    if (bodyText.match(/(ÒÑÍê³É|\u606d\u559c\u60a8|��̳΢�š��ᰮ�ƽ�)/)) {
+      globalThis.msgBody = now.getMonth() + 1 + "月" + now.getDate() + "日, 签到成功 🎉";
+    } else if (bodyText.match(/(ÄúÒÑ|\u4e0b\u671f\u518d\u6765|>��Ǹ������)/)) {
+      globalThis.msgBody = now.getMonth() + 1 + "月" + now.getDate() + "日, 已签过 ⚠️";
+    } else if (bodyText.match(/(ÏÈµÇÂ¼|\u9700\u8981\u5148\u767b\u5f55|�Ҫ�ȵ�¼���ܼ�)/)) {
+      globalThis.msgBody = "签到失败, Cookie失效 ‼️‼️";
+    } else if (response.statusCode == 403) {
+      globalThis.msgBody = "服务器暂停签到 ⚠️";
+    } else {
+      globalThis.msgBody = "脚本待更新 ‼️‼️";
+    }
   }
-  function fetchVerifyParamsAsync() {
-    fetchVerifyParamsAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn31() {
-      var tmpVar429;
-      var tmpVar430;
-      var tmpVar431;
-      var tmpVar432;
-      var tmpVar433;
-      var tmpVar434;
-      return _regeneratorRuntime().wrap(function (tmpVar435) {
-        while (true) {
-          switch (tmpVar435.prev = tmpVar435.next) {
-            case 0:
-              var tmpVar436 = {
-                Cookie: currentCookie
-              };
-              tmpVar429 = {
-                url: joinUrl(siteBaseUrl, "/home.php?mod=task&do=apply&id=2&referer=%2F"),
-                headers: Object.assign(defaultHeaders, tmpVar436)
-              };
-              tmpVar435.next = 3;
-              return request(tmpVar429);
-            case 3:
-              tmpVar430 = tmpVar435.sent;
-              if (!tmpVar430.ok) {
-                tmpVar435.next = 24;
-                break;
-              }
-              currentCookie = mergeCookieStrings(currentCookie, extractSetCookieHeader(tmpVar430));
-              Logger.debug(`[混淆接口]更新Cookie: ${currentCookie}`);
-              tmpVar431 = /(?:LZ|ZL)\s*=\s*['"]([0-9]{5,6})['"]/.exec(tmpVar430.body)?.[1];
-              if (tmpVar431) {
-                tmpVar435.next = 10;
-                break;
-              }
-              throw new Error("[LZ] 长度参数获取失败");
-            case 10:
-              tmpVar432 = /(?:LJ|ZR)\s*=\s*['"]([0-9]{5,6})['"]/.exec(tmpVar430.body)?.[1];
-              if (tmpVar432) {
-                tmpVar435.next = 13;
-                break;
-              }
-              throw new Error("[LJ] 乘数因子获取失败");
-            case 13:
-              tmpVar433 = /(?:Zn|LE)\s*=\s*['"]([0-9a-zA-Z\/+.-]+={0,2})['"];/.exec(tmpVar430.body)?.[1];
-              if (tmpVar433) {
-                tmpVar435.next = 16;
-                break;
-              }
-              throw new Error("[LE] 加密参数获取失败");
-            case 16:
-              var tmpVar437 = {
-                LZ: tmpVar431,
-                LJ: tmpVar432,
-                LE: tmpVar433
-              };
-              tmpVar434 = tmpVar437;
-              Logger.group("[请求参数]");
-              Logger.debug(`[LZ] 长度参数: ${tmpVar434.LZ}`, `[LJ] 乘数因子: ${tmpVar434.LJ}`, `[LE] 加密参数: ${tmpVar434.LE}`);
-              Logger.groupEnd();
-              globalThis.verifyBody = buildVerifyPayload(tmpVar434);
-              Logger.debug(`[verifyBody] 加密结果: ${globalThis.verifyBody}`);
-              tmpVar435.next = 25;
-              break;
-            case 24:
-              Logger.error("获取混淆参数失败", tmpVar430.body || "");
-            case 25:
-            case "end":
-              return tmpVar435.stop();
-          }
-        }
-      }, helperFn31);
-    }));
-    return fetchVerifyParamsAsync.apply(this, arguments);
-  }
-  function validateVerifyPayload() {
-    return validateVerifyPayloadAsync.apply(this, arguments);
-  }
-  function validateVerifyPayloadAsync() {
-    validateVerifyPayloadAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn32() {
-      var tmpVar438;
-      var tmpVar439;
-      return _regeneratorRuntime().wrap(function (tmpVar440) {
-        while (true) {
-          switch (tmpVar440.prev = tmpVar440.next) {
-            case 0:
-              var tmpVar441 = {
-                Cookie: currentCookie
-              };
-              tmpVar438 = {
-                url: joinUrl(siteBaseUrl, "/waf_zw_verify"),
-                headers: Object.assign(defaultHeaders, tmpVar441),
-                body: globalThis.verifyBody
-              };
-              tmpVar440.next = 3;
-              return request(tmpVar438);
-            case 3:
-              tmpVar439 = tmpVar440.sent;
-              if (!tmpVar439.ok) {
-                tmpVar440.next = 10;
-                break;
-              }
-              currentCookie = mergeCookieStrings(currentCookie, extractSetCookieHeader(tmpVar439));
-              Logger.debug("🎉 参数校验接口通过!!");
-              return tmpVar440.abrupt("return", true);
-            case 10:
-              Logger.error("参数校验失败", tmpVar439.body || "");
-            case 11:
-            case "end":
-              return tmpVar440.stop();
-          }
-        }
-      }, helperFn32);
-    }));
-    return validateVerifyPayloadAsync.apply(this, arguments);
-  }
-  function executeSignIn() {
-    return executeSignInAsync.apply(this, arguments);
-  }
-  function executeSignInAsync() {
-    executeSignInAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn33() {
-      var tmpVar442;
-      var tmpVar443;
-      var tmpVar444;
-      var tmpVar445;
-      var tmpVar446;
-      return _regeneratorRuntime().wrap(function (tmpVar447) {
-        while (true) {
-          switch (tmpVar447.prev = tmpVar447.next) {
-            case 0:
-              var tmpVar448 = {
-                Cookie: currentCookie
-              };
-              tmpVar442 = {
-                url: joinUrl(siteBaseUrl, "/home.php?mod=task&do=apply&id=2&referer=%2Fforum.php"),
-                headers: Object.assign(defaultHeaders, tmpVar448)
-              };
-              tmpVar447.next = 3;
-              return request(tmpVar442);
-            case 3:
-              tmpVar443 = tmpVar447.sent;
-              tmpVar444 = globalThis;
-              tmpVar445 = tmpVar443.body;
-              tmpVar446 = new Date();
-              if (tmpVar445.match(/(ÒÑÍê³É|\u606d\u559c\u60a8|��̳΢�š��ᰮ�ƽ�)/)) {
-                tmpVar444.msgBody = tmpVar446.getMonth() + 1 + "月" + tmpVar446.getDate() + "日, 签到成功 🎉";
-              } else if (tmpVar445.match(/(ÄúÒÑ|\u4e0b\u671f\u518d\u6765|>��Ǹ������)/)) {
-                tmpVar444.msgBody = tmpVar446.getMonth() + 1 + "月" + tmpVar446.getDate() + "日, 已签过 ⚠️";
-              } else if (tmpVar445.match(/(ÏÈµÇÂ¼|\u9700\u8981\u5148\u767b\u5f55|�Ҫ�ȵ�¼���ܼ�)/)) {
-                tmpVar444.msgBody = "签到失败, Cookie失效 ‼️‼️";
-              } else if (tmpVar443.statusCode == 403) {
-                tmpVar444.msgBody = "服务器暂停签到 ⚠️";
-              } else {
-                tmpVar444.msgBody = "脚本待更新 ‼️‼️";
-              }
-            case 8:
-            case "end":
-              return tmpVar447.stop();
-          }
-        }
-      }, helperFn33);
-    }));
-    return executeSignInAsync.apply(this, arguments);
-  }
-  function normalizeCookieFields(tmpVar449) {
-    var tmpVar450;
-    var tmpVar451;
-    if (!tmpVar449) {
+
+  function normalizeCookieFields(cookieString) {
+    var normalizedCookie;
+    var saltKeyCookie;
+    if (!cookieString) {
       showSystemNotification(notifyTitle, "❌ 获取Cookie失败", "Cookie为空, 不进行初始化");
       throw new Error("Cookie为空, 不进行初始化");
     }
-    tmpVar449 = parseCookieToObject(tmpVar449);
-    if ((tmpVar450 = tmpVar449) === null || tmpVar450 === undefined || !tmpVar450.htVC_2132_auth) {
+
+    cookieString = parseCookieToObject(cookieString);
+    if ((normalizedCookie = cookieString) === null || normalizedCookie === undefined || !normalizedCookie.htVC_2132_auth) {
       throw new Error("获取Cookie失败, 关键值[auth]缺失");
     }
-    if ((tmpVar451 = tmpVar449) === null || tmpVar451 === undefined || !tmpVar451.htVC_2132_saltkey) {
+    if ((saltKeyCookie = cookieString) === null || saltKeyCookie === undefined || !saltKeyCookie.htVC_2132_saltkey) {
       throw new Error("获取Cookie失败, 关键值[saltkey]缺失");
     }
-    return `htVC_2132_auth=${tmpVar449.htVC_2132_auth}; htVC_2132_saltkey=${tmpVar449.htVC_2132_saltkey};`;
+
+    return `htVC_2132_auth=${cookieString.htVC_2132_auth}; htVC_2132_saltkey=${cookieString.htVC_2132_saltkey};`;
   }
-  function parseCookieToObject(tmpVar452) {
-    return tmpVar452.split(";").reduce(function (tmpVar453, tmpVar454) {
-      var tmpVar455 = tmpVar454.split("=").map(function (tmpVar456) {
-        return tmpVar456.trim();
+
+  function parseCookieToObject(cookieString) {
+    return cookieString.split(";").reduce(function (cookieMap, cookieItem) {
+      var cookiePair = cookieItem.split("=").map(function (text) {
+        return text.trim();
       });
-      var tmpVar457 = _slicedToArray(tmpVar455, 2);
-      var tmpVar458 = tmpVar457[0];
-      var tmpVar459 = tmpVar457[1];
-      if (tmpVar458 && tmpVar459) {
-        tmpVar453[tmpVar458] = tmpVar459;
+      var [cookieKey, cookieValue] = _slicedToArray(cookiePair, 2);
+      if (cookieKey && cookieValue) {
+        cookieMap[cookieKey] = cookieValue;
       }
-      return tmpVar453;
+      return cookieMap;
     }, {});
   }
+
   function captureCookieFromRequest() {
-    var tmpVar460 = normalizeCookieFields($request.headers.Cookie ?? $request.headers.cookie ?? "");
-    if (!tmpVar460 || !tmpVar460.includes("auth=")) {
+    var normalizedCookie = normalizeCookieFields($request.headers.Cookie ?? $request.headers.cookie ?? "");
+    if (!normalizedCookie || !normalizedCookie.includes("auth=")) {
       showSystemNotification(notifyTitle, "❌ 获取Cookie失败", "请检查Cookie是否正确");
       throw new Error("请检查Cookie是否正确");
     }
-    PersistStore.setItem("wuai_cookie", tmpVar460);
-    Logger.debug(`Cookie: ${tmpVar460}`);
+
+    PersistStore.setItem("wuai_cookie", normalizedCookie);
+    Logger.debug(`Cookie: ${normalizedCookie}`);
     showSystemNotification(notifyTitle, "", "写入Cookie成功 🎉");
   }
-  function pushNotification(tmpVar461, tmpVar462, tmpVar463, tmpVar464) {
-    return pushNotificationAsync.apply(this, arguments);
-  }
-  function pushNotificationAsync() {
-    pushNotificationAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn34(tmpVar465, tmpVar466, tmpVar467, tmpVar468) {
-      return _regeneratorRuntime().wrap(function (tmpVar469) {
-        while (true) {
-          switch (tmpVar469.prev = tmpVar469.next) {
-            case 0:
-              if (!barkPushKey) {
-                tmpVar469.next = 5;
-                break;
-              }
-              tmpVar469.next = 3;
-              return pushByBark(tmpVar465, tmpVar466, tmpVar467, tmpVar468);
-            case 3:
-              tmpVar469.next = 6;
-              break;
-            case 5:
-              showSystemNotification(tmpVar465, tmpVar466, tmpVar467, tmpVar468);
-            case 6:
-            case "end":
-              return tmpVar469.stop();
-          }
-        }
-      }, helperFn34);
-    }));
-    return pushNotificationAsync.apply(this, arguments);
-  }
-  function pushByBark(tmpVar470, tmpVar471, tmpVar472) {
-    return pushByBarkAsync.apply(this, arguments);
-  }
-  function pushByBarkAsync() {
-    pushByBarkAsync = _asyncToGenerator(_regeneratorRuntime().mark(function helperFn35(tmpVar473, tmpVar474, tmpVar475) {
-      var tmpVar476;
-      var tmpVar477;
-      var tmpVar478;
-      var tmpVar479;
-      var tmpVar480;
-      var tmpVar481;
-      var tmpVar482;
-      var tmpVar483;
-      var tmpVar484;
-      var tmpVar485 = arguments;
-      return _regeneratorRuntime().wrap(function (tmpVar486) {
-        while (true) {
-          switch (tmpVar486.prev = tmpVar486.next) {
-            case 0:
-              var tmpVar487 = {
-                "content-type": "application/json; charset=utf-8"
-              };
-              tmpVar476 = tmpVar485.length > 3 && tmpVar485[3] !== undefined ? tmpVar485[3] : {};
-              tmpVar477 = (tmpVar476 == null ? undefined : tmpVar476["open-url"]) || (tmpVar476 == null ? undefined : tmpVar476.openUrl) || (tmpVar476 == null ? undefined : tmpVar476.$open) || (tmpVar476 == null ? undefined : tmpVar476.url) || "";
-              tmpVar478 = (tmpVar476 == null ? undefined : tmpVar476["update-pasteboard"]) || (tmpVar476 == null ? undefined : tmpVar476.updatePasteboard) || (tmpVar476 == null ? undefined : tmpVar476.$copy) || (tmpVar476 == null ? undefined : tmpVar476.copy) || "";
-              tmpVar479 = (tmpVar476 == null ? undefined : tmpVar476["media-url"]) || (tmpVar476 == null ? undefined : tmpVar476.mediaUrl) || (tmpVar476 == null ? undefined : tmpVar476.$media) || "";
-              ["open-url", "openUrl", "$open", "url", "update-pasteboard", "updatePasteboard", "$copy", "copy", "media-url", "mediaUrl", "$media"].forEach(function (tmpVar488) {
-                return delete tmpVar476[tmpVar488];
-              });
-              if (tmpVar474) {
-                tmpVar475 = tmpVar474 + "\n" + tmpVar475;
-              }
-              tmpVar480 = _objectSpread(_objectSpread({}, tmpVar476), {}, {
-                url: tmpVar477,
-                copy: tmpVar478,
-                icon: tmpVar479,
-                title: tmpVar473,
-                body: tmpVar475
-              });
-              tmpVar481 = {
-                url: "https://api.day.app/" + barkPushKey,
-                headers: tmpVar487,
-                body: safeJSONStringify(tmpVar480)
-              };
-              tmpVar482 = 0;
-            case 9:
-              if (!(tmpVar482 < 3)) {
-                tmpVar486.next = 27;
-                break;
-              }
-              Logger.info(`Bark第${tmpVar482 + 1}次推送尝试`);
-              tmpVar486.next = 13;
-              return request(tmpVar481);
-            case 13:
-              tmpVar483 = tmpVar486.sent;
-              if (!tmpVar483.ok) {
-                tmpVar486.next = 23;
-                break;
-              }
-              tmpVar484 = ["=========📣推送成功📣=========", tmpVar473, tmpVar475];
-              if (tmpVar477) {
-                tmpVar484.push(`跳转链接: ${tmpVar477}`);
-              }
-              if (tmpVar478) {
-                tmpVar484.push(`复制内容: ${tmpVar478}`);
-              }
-              if (tmpVar479) {
-                tmpVar484.push(`媒体链接: ${tmpVar479}`);
-              }
-              Logger.log.apply(Logger, tmpVar484);
-              return tmpVar486.abrupt("break", 27);
-            case 23:
-              Logger.warn("Bark推送失败", tmpVar483.body || "");
-            case 24:
-              tmpVar482++;
-              tmpVar486.next = 9;
-              break;
-            case 27:
-            case "end":
-              return tmpVar486.stop();
-          }
-        }
-      }, helperFn35);
-    }));
-    return pushByBarkAsync.apply(this, arguments);
-  }
-  function extractSetCookieHeader(tmpVar489) {
-    var tmpVar490;
-    var tmpVar491;
-    tmpVar491 = tmpVar489.headers;
-    var tmpVar492 = Object.fromEntries(Object.entries(tmpVar491).map(function (tmpVar493) {
-      var tmpVar494 = _arrayWithHolesOrIterator(tmpVar493, 2);
-      var tmpVar495 = tmpVar494[0];
-      var tmpVar496 = tmpVar494[1];
-      return [tmpVar495.toLowerCase(), tmpVar496];
-    }));
-    var tmpVar497 = tmpVar492["set-cookie"];
-    if (Array.isArray(tmpVar497)) {
-      return tmpVar497.map(function (tmpVar498) {
-        return tmpVar498.split(";")[0];
-      }).join(";");
+
+  async function pushNotification(title, subtitle, body, options) {
+    if (barkPushKey) {
+      await pushByBark(title, subtitle, body, options);
     } else {
-      return (tmpVar497 == null || (tmpVar490 = tmpVar497.split(",")) === null || tmpVar490 === undefined || (tmpVar490 = tmpVar490.map(function (tmpVar499) {
-        return tmpVar499.split(";")[0];
-      })) === null || tmpVar490 === undefined ? undefined : tmpVar490.join(";")) || tmpVar497;
+      showSystemNotification(title, subtitle, body, options);
     }
   }
-  function mergeCookieStrings(tmpVar500, tmpVar501) {
-    var tmpVar502 = parseCookieToObject(tmpVar500);
-    var tmpVar503 = parseCookieToObject(tmpVar501);
-    return Object.entries(Object.assign(tmpVar502, tmpVar503)).map(function (tmpVar504) {
-      var tmpVar505 = _slicedToArray(tmpVar504, 2);
-      var tmpVar506 = tmpVar505[0];
-      var tmpVar507 = tmpVar505[1];
-      return `${tmpVar506}=${tmpVar507}`;
+
+  async function pushByBark(title, subtitle, body, options = {}) {
+    const headers = {
+      "content-type": "application/json; charset=utf-8"
+    };
+
+    const openUrl = options?.["open-url"] || options?.openUrl || options?.$open || options?.url || "";
+    const copyText = options?.["update-pasteboard"] || options?.updatePasteboard || options?.$copy || options?.copy || "";
+    const mediaUrl = options?.["media-url"] || options?.mediaUrl || options?.$media || "";
+
+    ["open-url", "openUrl", "$open", "url", "update-pasteboard", "updatePasteboard", "$copy", "copy", "media-url", "mediaUrl", "$media"].forEach(function (field) {
+      delete options[field];
+    });
+
+    if (subtitle) {
+      body = subtitle + "\n" + body;
+    }
+
+    const barkPayload = _objectSpread(_objectSpread({}, options), {}, {
+      url: openUrl,
+      copy: copyText,
+      icon: mediaUrl,
+      title,
+      body
+    });
+
+    const barkRequestOptions = {
+      url: "https://api.day.app/" + barkPushKey,
+      headers,
+      body: safeJSONStringify(barkPayload)
+    };
+
+    for (let retry = 0; retry < 3; retry++) {
+      Logger.info(`Bark第${retry + 1}次推送尝试`);
+      const response = await request(barkRequestOptions);
+      if (!response.ok) {
+        Logger.warn("Bark推送失败", response.body || "");
+        continue;
+      }
+
+      const logLines = ["=========📣推送成功📣=========", title, body];
+      if (openUrl) {
+        logLines.push(`跳转链接: ${openUrl}`);
+      }
+      if (copyText) {
+        logLines.push(`复制内容: ${copyText}`);
+      }
+      if (mediaUrl) {
+        logLines.push(`媒体链接: ${mediaUrl}`);
+      }
+      Logger.log.apply(Logger, logLines);
+      break;
+    }
+  }
+
+  function extractSetCookieHeader(response) {
+    var splitCookies;
+    var responseHeaders;
+    responseHeaders = response.headers;
+    var normalizedHeaders = Object.fromEntries(Object.entries(responseHeaders).map(function (headerPair) {
+      var parsedHeaderPair = _arrayWithHolesOrIterator(headerPair, 2);
+      var headerName = parsedHeaderPair[0];
+      var headerValue = parsedHeaderPair[1];
+      return [headerName.toLowerCase(), headerValue];
+    }));
+    var setCookieHeader = normalizedHeaders["set-cookie"];
+    if (Array.isArray(setCookieHeader)) {
+      return setCookieHeader.map(function (cookieLine) {
+        return cookieLine.split(";")[0];
+      }).join(";");
+    } else {
+      return (setCookieHeader == null || (splitCookies = setCookieHeader.split(",")) === null || splitCookies === undefined || (splitCookies = splitCookies.map(function (cookieLine) {
+        return cookieLine.split(";")[0];
+      })) === null || splitCookies === undefined ? undefined : splitCookies.join(";")) || setCookieHeader;
+    }
+  }
+
+  function mergeCookieStrings(currentCookieString, incomingCookieString) {
+    var currentCookieMap = parseCookieToObject(currentCookieString);
+    var incomingCookieMap = parseCookieToObject(incomingCookieString);
+    return Object.entries(Object.assign(currentCookieMap, incomingCookieMap)).map(function (cookieEntry) {
+      var parsedCookieEntry = _slicedToArray(cookieEntry, 2);
+      var cookieKey = parsedCookieEntry[0];
+      var cookieValue = parsedCookieEntry[1];
+      return `${cookieKey}=${cookieValue}`;
     }).join("; ");
   }
   Logger.debug(`Cookie: ${currentCookie}`);
-  _asyncToGenerator(_regeneratorRuntime().mark(function helperFn36() {
-    return _regeneratorRuntime().wrap(function (tmpVar508) {
-      while (true) {
-        switch (tmpVar508.prev = tmpVar508.next) {
-          case 0:
-            if (globalThis === null || globalThis === undefined || !globalThis.$request) {
-              tmpVar508.next = 4;
-              break;
-            }
-            captureCookieFromRequest();
-            tmpVar508.next = 6;
-            break;
-          case 4:
-            tmpVar508.next = 6;
-            return runMainTask();
-          case 6:
-          case "end":
-            return tmpVar508.stop();
-        }
-      }
-    }, helperFn36);
-  }))().catch(function (tmpVar509) {
-    return Logger.error(tmpVar509);
-  }).finally(function (tmpVar510 = {}) {
+  (async () => {
+    if (globalThis && globalThis.$request) {
+      captureCookieFromRequest();
+    } else {
+      await runMainTask();
+    }
+  })().catch(function (error) {
+    return Logger.error(error);
+  }).finally(function (donePayload = {}) {
     switch (runtimeEnv) {
       case "Surge":
-        if (tmpVar510.policy) {
-          PathUtils.set(tmpVar510, "headers.X-Surge-Policy", tmpVar510.policy);
+        if (donePayload.policy) {
+          PathUtils.set(donePayload, "headers.X-Surge-Policy", donePayload.policy);
         }
         Logger.log("🚩 执行结束!", "🕛 " + (new Date().getTime() / 1000 - $script.startTime) + " 秒");
-        $done(tmpVar510);
+        $done(donePayload);
         break;
       case "Loon":
-        if (tmpVar510.policy) {
-          tmpVar510.node = tmpVar510.policy;
+        if (donePayload.policy) {
+          donePayload.node = donePayload.policy;
         }
         Logger.log("🚩 执行结束!", "🕛 " + (new Date() - $script.startTime) / 1000 + " 秒");
-        $done(tmpVar510);
+        $done(donePayload);
         break;
       case "Stash":
-        if (tmpVar510.policy) {
-          PathUtils.set(tmpVar510, "headers.X-Stash-Selected-Proxy", encodeURI(tmpVar510.policy));
+        if (donePayload.policy) {
+          PathUtils.set(donePayload, "headers.X-Stash-Selected-Proxy", encodeURI(donePayload.policy));
         }
         Logger.log("🚩 执行结束!", "🕛 " + (new Date() - $script.startTime) / 1000 + " 秒");
-        $done(tmpVar510);
+        $done(donePayload);
         break;
       case "Egern":
       case "Shadowrocket":
       default:
         Logger.log("🚩 执行结束!");
-        $done(tmpVar510);
+        $done(donePayload);
         break;
       case "Quantumult X":
-        if (tmpVar510.policy) {
-          PathUtils.set(tmpVar510, "opts.policy", tmpVar510.policy);
+        if (donePayload.policy) {
+          PathUtils.set(donePayload, "opts.policy", donePayload.policy);
         }
-        tmpVar510["auto-redirect"] = undefined;
-        tmpVar510["auto-cookie"] = undefined;
-        tmpVar510["binary-mode"] = undefined;
-        tmpVar510.charset = undefined;
-        tmpVar510.host = undefined;
-        tmpVar510.insecure = undefined;
-        tmpVar510.method = undefined;
-        tmpVar510.ok = undefined;
-        tmpVar510.opt = undefined;
-        tmpVar510.path = undefined;
-        tmpVar510.policy = undefined;
-        tmpVar510["policy-descriptor"] = undefined;
-        tmpVar510.scheme = undefined;
-        tmpVar510.sessionIndex = undefined;
-        tmpVar510.statusCode = undefined;
-        tmpVar510.timeout = undefined;
-        switch (typeof tmpVar510.status) {
+        donePayload["auto-redirect"] = undefined;
+        donePayload["auto-cookie"] = undefined;
+        donePayload["binary-mode"] = undefined;
+        donePayload.charset = undefined;
+        donePayload.host = undefined;
+        donePayload.insecure = undefined;
+        donePayload.method = undefined;
+        donePayload.ok = undefined;
+        donePayload.opt = undefined;
+        donePayload.path = undefined;
+        donePayload.policy = undefined;
+        donePayload["policy-descriptor"] = undefined;
+        donePayload.scheme = undefined;
+        donePayload.sessionIndex = undefined;
+        donePayload.statusCode = undefined;
+        donePayload.timeout = undefined;
+        switch (typeof donePayload.status) {
           case "number":
-            tmpVar510.status = HTTP_STATUS_LINES[tmpVar510.status];
+            donePayload.status = HTTP_STATUS_LINES[donePayload.status];
             break;
           case "string":
           case "undefined":
             break;
           default:
-            tmpVar510.status = undefined;
+            donePayload.status = undefined;
         }
-        if (tmpVar510.body instanceof ArrayBuffer) {
-          tmpVar510.bodyBytes = tmpVar510.body;
-          tmpVar510.body = undefined;
-        } else if (ArrayBuffer.isView(tmpVar510.body)) {
-          tmpVar510.bodyBytes = tmpVar510.body.buffer.slice(tmpVar510.body.byteOffset, tmpVar510.body.byteLength + tmpVar510.body.byteOffset);
-          tmpVar510.body = undefined;
-        } else if (tmpVar510.body) {
-          tmpVar510.bodyBytes = undefined;
+        if (donePayload.body instanceof ArrayBuffer) {
+          donePayload.bodyBytes = donePayload.body;
+          donePayload.body = undefined;
+        } else if (ArrayBuffer.isView(donePayload.body)) {
+          donePayload.bodyBytes = donePayload.body.buffer.slice(donePayload.body.byteOffset, donePayload.body.byteLength + donePayload.body.byteOffset);
+          donePayload.body = undefined;
+        } else if (donePayload.body) {
+          donePayload.bodyBytes = undefined;
         }
         Logger.log("🚩 执行结束!");
-        $done(tmpVar510);
+        $done(donePayload);
         break;
       case "Node.js":
         Logger.log("🚩 执行结束!");
