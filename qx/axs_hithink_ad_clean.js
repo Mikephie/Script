@@ -1,17 +1,16 @@
 let body = $response.body || "";
 
 try {
-  let obj = JSON.parse(body);
+  const obj = JSON.parse(body);
 
   if (obj.content) {
-    for (const key of Object.keys(obj.content)) {
-      const item = obj.content[key];
+    for (const k of Object.keys(obj.content)) {
+      const item = obj.content[k];
+      if (!item || typeof item !== "object") continue;
 
-      if (item && typeof item === "object") {
-        if ("data" in item) item.data = "[]";
-        if ("op" in item) item.op = "0";
-        if ("timeInterval" in item) item.timeInterval = 999999;
-      }
+      if ("data" in item) item.data = "[]";
+      if ("op" in item) item.op = "0";
+      if ("timeInterval" in item) item.timeInterval = 999999;
     }
   }
 
