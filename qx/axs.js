@@ -6,13 +6,6 @@
 #!icon=https://raw.githubusercontent.com/Mikephie/icons/main/icon/axs.png
 𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
 
-
-[rewrite_local]
-^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/(?:InfoPage|MessageBoardWeb)\/.* url script-response-body https://raw.githubusercontent.com/Mikephie/Script/refs/heads/main/qx/axs_popup_silent_close.js
-
-#!name=AXS + Moovit Ad Test
-#!desc=AXS InfoPage 静默兜底；Moovit 首页 banner/广告 SDK 测试
-
 [rewrite_local]
 # AXS 上游首页广告 banner，必须先清
 ^https:\/\/prod-smarket\.hithink\.sg\/hexinifs\/rs\/cms\/ad\/overseaHomePage.* url script-response-body https://raw.githubusercontent.com/Mikephie/Script/refs/heads/main/qx/axs_hithink_ad_clean.js
