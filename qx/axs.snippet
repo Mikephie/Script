@@ -3,10 +3,10 @@
 
 [rewrite_local]
 # AXS InfoPage 弹窗自动关闭，避免 reject 后白框
-^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/InfoPage\/.* url script-response-body https://raw.githubusercontent.com/你的用户名/你的仓库/main/axs_infopage_autoclose.js
+^https:\/\/m-station\.axs\.com\.sg\/AXSMobile\/InfoPage\/.* url script-response-body https://raw.githubusercontent.com/Mikephie/Script/refs/heads/main/qx/axs_infopage_autoclose.js
 
 # AXS / hithink 首页广告配置清空
-^https:\/\/prod-smarket\.hithink\.sg\/hexinifs\/rs\/cms\/ad\/overseaHomePage.* url script-response-body https://raw.githubusercontent.com/你的用户名/你的仓库/main/axs_hithink_ad_clean.js
+^https:\/\/prod-smarket\.hithink\.sg\/hexinifs\/rs\/cms\/ad\/overseaHomePage.* url script-response-body https://raw.githubusercontent.com/Mikephie/Script/refs/heads/main/qx/axs_hithink_ad_clean.js
 
 [mitm]
 hostname = m-station.axs.com.sg, prod-smarket.hithink.sg
